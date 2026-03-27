@@ -3,7 +3,7 @@ name: Auto-Evolve Website
 on:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch: # 手動啟動按鈕
+  workflow_dispatch:
 
 jobs:
   evolve:
@@ -13,17 +13,17 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4 # 建議使用最新的 v4
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5 # 這裡是關鍵！修正了路徑
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
-   - name: Install Dependencies
+      - name: Install Dependencies
         run: |
           pip install google-generativeai
-          
+
       - name: Run Evolve Script
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
