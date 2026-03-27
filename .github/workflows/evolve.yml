@@ -20,10 +20,10 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Dependencies
+   - name: Install Dependencies
         run: |
-          pip install -r requirements.txt
-
+          pip install google-generativeai
+          
       - name: Run Evolve Script
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
