@@ -1,0 +1,40 @@
+name: Auto-Evolve Website
+
+on:
+  schedule:
+    # 每天凌晨 00:00 (UTC時間，約台灣時間早上8點) 自動執行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允許手動觸發
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 賦予 Push 程式碼的權限
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/workflows/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Evolve Script
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          python evolve.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'Chimera-Bot'
+          git config --global user.email 'chimera@bot.com'
+          git add index.html
+          git commit -m "Build: Project Chimera - Generation Evolved" || echo "No changes to commit"
+          git push
