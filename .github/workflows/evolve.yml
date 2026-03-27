@@ -2,22 +2,21 @@ name: Auto-Evolve Website
 
 on:
   schedule:
-    # 每天凌晨 00:00 (UTC時間，約台灣時間早上8點) 自動執行
     - cron: '0 0 * * *'
-  workflow_dispatch: # 允許手動觸發
+  workflow_dispatch: # 手動啟動按鈕
 
 jobs:
   evolve:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 賦予 Push 程式碼的權限
+      contents: write
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # 建議使用最新的 v4
 
       - name: Set up Python
-        uses: actions/workflows/setup-python@v4
+        uses: actions/setup-python@v5 # 這裡是關鍵！修正了路徑
         with:
           python-version: '3.9'
 
