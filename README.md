@@ -1,4 +1,4 @@
-# 🧬 Project Chimera (奇美拉計劃)
+# 🧬 Project Chimera 
 
 > **這是一個會自我演化的網頁。** > 透過 GitHub Actions 與 Gemini AI，每天（或手動）對自己的基因（HTML）進行突變。
 
