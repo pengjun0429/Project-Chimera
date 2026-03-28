@@ -10,24 +10,24 @@ if not GOOGLE_API_KEY:
 
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
-print("🔍 正在掃描你的 API Key 可用的模型清單...")
+print("🔍 正在嘗試列出所有模型資訊...")
 
 try:
-    # 這裡直接呼叫清單功能
-    models_found = []
-    for m in client.models.list():
-        # 檢查是否支援生成內容
-        if 'generateContent' in m.supported_methods:
-            models_found.append(m.name)
-            print(f"✅ 發現可用模型: {m.name}")
-
-    if not models_found:
-        print("⚠️ 警告：這組 API Key 找不到任何可用的生成模型。")
-        print("請檢查：1. API Key 是否複製完整 2. 是否在 Google AI Studio 啟用了 Gemini API。")
+    # 獲取模型清單
+    models = list(client.models.list())
+    
+    if not models:
+        print("⚠️ 警告：這組 API Key 沒看到任何模型。")
     else:
-        print("\n💡 診斷建議：")
-        print(f"請在 evolve.py 中將 model 設定為上面清單中的其中一個（例如 '{models_found[0]}'）。")
-
+        print(f"✅ 成功找到 {len(models)} 個模型！")
+        for i, m in enumerate(models):
+            # 印出模型名稱和它擁有的屬性，讓我們檢查
+            print(f"--- 模型 {i+1} ---")
+            print(f"名稱 (Name): {m.name}")
+            # 如果是第一筆，印出它的所有欄位名稱供偵錯
+            if i == 0:
+                print(f"可用欄位: {dir(m)}")
+                
 except Exception as e:
-    print(f"💥 偵察失敗，詳細錯誤: {e}")
+    print(f"💥 診斷再次失敗，詳細錯誤: {e}")
     sys.exit(1)
