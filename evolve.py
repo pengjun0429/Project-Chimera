@@ -1,5 +1,5 @@
 import os
-import google.generativeai as genai
+from google import genai
 import re
 import sys
 
@@ -9,31 +9,17 @@ if not GOOGLE_API_KEY:
     print("❌ 錯誤：找不到 GOOGLE_API_KEY。")
     sys.exit(1)
 
-genai.configure(api_key=GOOGLE_API_KEY)
+# 改用全新的 Client 語法
+client = genai.Client(api_key=GOOGLE_API_KEY)
 
-# 2. 自動嘗試不同的模型名稱格式 (解決 404 問題)
-model_names = [
-    'gemini-1.5-flash',
-    'models/gemini-1.5-flash',
-    'gemini-1.5-flash-latest',
-    'models/gemini-pro'
-]
-
-model = None
-for name in model_names:
-    try:
-        print(f"正在嘗試模型: {name}...")
-        test_model = genai.GenerativeModel(name)
-        # 進行一個超微型測試，確認模型是否可用
-        test_model.generate_content("Hi", generation_config={"max_output_tokens": 1})
-        model = test_model
-        print(f"✅ 成功連線至模型: {name}")
-        break
-    except Exception as e:
-        print(f"⚠️ 模型 {name} 無法使用: {e}")
-
-if not model:
-    print("❌ 錯誤：所有模型嘗試都失敗了。請檢查 API Key 是否正確。")
+# 2. 診斷：列出可用模型 (如果失敗可以看原因)
+try:
+    print("🔍 正在檢查可用模型...")
+    for m in client.models.list():
+        if 'generateContent' in m.supported_methods:
+            print(f"可用模型: {m.name}")
+except Exception as e:
+    print(f"❌ 無法列出模型，API Key 可能有問題: {e}")
     sys.exit(1)
 
 # 3. 讀取並進化
@@ -48,7 +34,13 @@ except Exception as e:
 prompt = f"你是一個網頁進化 AI。請將以下 HTML 加入炫酷的 CSS 動畫或 JS 功能並回傳完整代碼：\n{current_html}"
 
 try:
-    response = model.generate_content(prompt)
+    print("🚀 正在嘗試進化...")
+    # 使用最新的模型名稱格式
+    response = client.models.generate_content(
+        model='gemini-1.5-flash', 
+        contents=prompt
+    )
+    
     new_html = response.text.strip()
     new_html = re.sub(r'^```html\s*', '', new_html)
     new_html = re.sub(r'\s*```$', '', new_html)
@@ -57,5 +49,5 @@ try:
         f.write(new_html)
     print("✨ 進化完成！基因已更新。")
 except Exception as e:
-    print(f"💥 進化過程發生錯誤: {e}")
+    print(f"💥 進化失敗: {e}")
     sys.exit(1)
