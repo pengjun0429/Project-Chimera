@@ -8,10 +8,14 @@ if not GOOGLE_API_KEY:
     print("Error: GOOGLE_API_KEY not found.")
     exit(1)
 
+# ... 前面的設定不變 ...
+
 genai.configure(api_key=GOOGLE_API_KEY)
 
-# 這裡改用目前最推薦的模型：gemini-1.5-flash
-model = genai.GenerativeModel('gemini-1.5-flash')
+# 修正模型名稱，加上 -latest 確保對接到正確的 API 端點
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
+
+# ... 後面的邏輯不變 ...
 
 # 2. 讀取目前的 HTML 檔案
 HTML_FILE = 'index.html'
