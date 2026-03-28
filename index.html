@@ -2,53 +2,73 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>Project Chimera - 第 9.0 代</title> <!-- 世代數字已進化至 9.0 -->
+    <title>Project Chimera - 第 10.0 代</title> <!-- 世代數字已進化至 10.0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14'>🧬</text></svg>" type="image/svg+xml">
     <style>
         /* CSS Variables for easier theme switching - 2.5 世代優化 */
         :root {
             /* 暗色主題：更深邃、流動的漸變 */
-            --bg-start: #100C2A; /* Deeper Midnight Blue */
-            --bg-mid: #4A0E0E;   /* Dark Fiery Red */
-            --bg-end: #CC7B00;   /* Rich Golden Orange */
-            --body-bg-fallback: #080810; /* Near Black */
-            --text-color: #e0e0e0; /* Softer White */
-            --container-bg: rgba(255, 255, 255, 0.06); /* 更透明的毛玻璃 */
-            --container-border: rgba(255, 255, 255, 0.1); /* 更微妙的邊框 */
-            --container-shadow: rgba(0, 0, 0, 0.85); /* 更深邃的陰影 */
-            --status-text-shadow: rgba(255, 255, 255, 0.3); /* 更微妙的文字陰影 */
+            --bg-start: #0D0925; /* Even Deeper Midnight Blue */
+            --bg-mid: #3B0A0A;   /* Darker Fiery Red */
+            --bg-end: #B36A00;   /* Richer Golden Orange */
+            --body-bg-fallback: #05050A; /* Near Black */
+            --text-color: #e8e8e8; /* Softer White */
+            --container-bg: rgba(255, 255, 255, 0.04); /* 更透明的毛玻璃 */
+            --container-border: rgba(255, 255, 255, 0.08); /* 更微妙的邊框 */
+            --container-shadow: rgba(0, 0, 0, 0.95); /* 更深邃的陰影 */
             --particle-color: 255, 255, 255; /* RGB values for particles */
-            --theme-toggle-color: #c0c0c0;
+            --theme-toggle-color: #d0d0d0;
             --theme-toggle-hover-color: #ffffff;
-            --clock-text-color: #E0E0E0; /* 時鐘文字顏色 */
-            --clock-shadow-color: rgba(255, 255, 255, 0.15); /* 時鐘文字陰影 */
-            --clock-bg-color: rgba(0, 0, 0, 0.4); /* 時鐘背景 */
-            --clock-border-color: rgba(255, 255, 255, 0.08); /* 時鐘邊框 */
-            --status-gradient-start: #E0E0E0;
-            --status-gradient-end: #CC7B00;
+            --clock-text-color: #F0F0F0; /* 時鐘文字顏色 */
+            --clock-shadow-color: rgba(255, 255, 255, 0.1); /* 時鐘文字陰影 */
+            --clock-bg-color: rgba(0, 0, 0, 0.5); /* 時鐘背景 */
+            --clock-border-color: rgba(255, 255, 255, 0.06); /* 時鐘邊框 */
+            --status-gradient-start: #F0F0F0;
+            --status-gradient-end: #FFB300; /* 更亮眼的金色 */
+
+            /* 2.5世代 新增變數 */
+            --orb-bg-start: #2A002A; /* 深紫色 */
+            --orb-bg-end: #004D40;   /* 深青色 */
+            --orb-text-color: #E0E0E0;
+            --orb-shadow-color: rgba(var(--particle-color), 0.5);
+            --orb-trait-color: #FFD700; /* 金色 */
+            --log-bg-color: rgba(0, 0, 0, 0.3);
+            --log-border-color: rgba(255, 255, 255, 0.05);
+            --log-text-color: #BBBBBB;
+            --log-highlight-color: #8CFF00; /* 亮綠色 */
         }
 
         /* 亮色主題：明亮、清新的漸變 */
         body.light-theme {
-            --bg-start: #FCEABB; /* Soft Peach */
-            --bg-mid: #F8B500;   /* Sunny Yellow */
-            --bg-end: #FBDA61;   /* Goldenrod */
-            --body-bg-fallback: #fefefe;
+            --bg-start: #FFFDE7; /* Soft Cream */
+            --bg-mid: #FDD835;   /* Sunny Yellow */
+            --bg-end: #FDD835;   /* Consistent Yellow */
+            --body-bg-fallback: #ffffff;
             --text-color: #333333;
-            --container-bg: rgba(255, 255, 255, 0.85);
-            --container-border: rgba(0, 0, 0, 0.08);
-            --container-shadow: rgba(0, 0, 0, 0.4);
-            --status-text-shadow: rgba(0, 0, 0, 0.08);
+            --container-bg: rgba(255, 255, 255, 0.7);
+            --container-border: rgba(0, 0, 0, 0.06);
+            --container-shadow: rgba(0, 0, 0, 0.3);
             --particle-color: 0, 0, 0; /* RGB values for dark particles */
             --theme-toggle-color: #444444;
             --theme-toggle-hover-color: #000000;
             --clock-text-color: #222222;
-            --clock-shadow-color: rgba(0, 0, 0, 0.08);
-            --clock-bg-color: rgba(255, 255, 255, 0.6);
-            --clock-border-color: rgba(0, 0, 0, 0.04);
-            --status-gradient-start: #333333;
-            --status-gradient-end: #F8B500;
+            --clock-shadow-color: rgba(0, 0, 0, 0.05);
+            --clock-bg-color: rgba(255, 255, 255, 0.7);
+            --clock-border-color: rgba(0, 0, 0, 0.03);
+            --status-gradient-start: #444444;
+            --status-gradient-end: #FFB300; /* 保持亮眼金色 */
+
+            /* 2.5世代 新增變數 */
+            --orb-bg-start: #E6E6FA; /* 淡薰衣草色 */
+            --orb-bg-end: #B2EBF2;   /* 淺青色 */
+            --orb-text-color: #333333;
+            --orb-shadow-color: rgba(0, 0, 0, 0.2);
+            --orb-trait-color: #DAA520; /* 稍暗的金色 */
+            --log-bg-color: rgba(255, 255, 255, 0.6);
+            --log-border-color: rgba(0, 0, 0, 0.04);
+            --log-text-color: #555555;
+            --log-highlight-color: #6CFF40; /* 亮綠色 */
         }
 
         /* 全局設定與字體 */
@@ -64,10 +84,10 @@
             overflow: hidden; /* 防止滾動條 */
             box-sizing: border-box;
             line-height: 1.6;
-            transition: background-color 1.2s ease-in-out, color 1.2s ease-in-out; /* 更流暢的主題切換 */
+            transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out; /* 更流暢的主題切換 */
         }
 
-        /* 動態流體背景 - 2.5 世代：更慢、更廣、更模糊 */
+        /* 動態流體背景 - 2.5 世代：更慢、更廣、更模糊，多層次 */
         .fluid-background {
             position: fixed;
             top: 0;
@@ -75,12 +95,12 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(180deg, var(--bg-start), var(--bg-mid), var(--bg-end)); /* 調整角度至垂直 */
-            background-size: 800% 800%; /* 更大的背景尺寸，實現更慢的流動感 */
-            animation: gradientShift 40s ease infinite alternate, hueRotate 60s linear infinite; /* 調整動畫速度，更慢 */
+            background-size: 1000% 1000%; /* 更大的背景尺寸，實現更慢的流動感 */
+            animation: gradientShift 50s ease infinite alternate, hueRotate 80s linear infinite; /* 調整動畫速度，更慢 */
             z-index: -3;
-            opacity: 0.95; /* 增加不透明度以展現更豐富的色彩 */
-            filter: blur(40px); /* 略微增加模糊度，更深邃 */
-            transition: background 1.2s ease-in-out, filter 1.2s ease-in-out, opacity 1.2s ease-in-out;
+            opacity: 0.9; /* 略微降低不透明度，讓背景更微妙 */
+            filter: blur(50px) brightness(1.1); /* 略微增加模糊度，更深邃，並增加亮度 */
+            transition: background 1.5s ease-in-out, filter 1.5s ease-in-out, opacity 1.5s ease-in-out;
         }
 
         /* 漸變位置動畫 */
@@ -92,8 +112,8 @@
 
         /* 色相旋轉動畫 */
         @keyframes hueRotate {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+            0% { filter: hue-rotate(0deg) brightness(1.1); }
+            100% { filter: hue-rotate(360deg) brightness(1.1); }
         }
 
         /* 2.5 世代：抽象粒子效果 Canvas */
@@ -105,138 +125,181 @@
             height: 100%;
             z-index: -2;
             pointer-events: none;
-            opacity: 0.9; /* 更為明顯但依然微妙的效果 */
-            transition: opacity 1.2s ease;
+            opacity: 0.95; /* 更為明顯但依然微妙的效果 */
+            transition: opacity 1.5s ease;
         }
 
         /* 主內容容器：精緻的毛玻璃效果 - 2.5 世代優化 */
         #container {
             background-color: var(--container-bg);
-            backdrop-filter: blur(45px) saturate(3.0); /* 更深的模糊和更高的飽和度 */
-            -webkit-backdrop-filter: blur(45px) saturate(3.0);
+            backdrop-filter: blur(60px) saturate(3.5) brightness(1.2); /* 更深的模糊和更高的飽和度，增加亮度 */
+            -webkit-backdrop-filter: blur(60px) saturate(3.5) brightness(1.2);
             border: 1px solid var(--container-border);
-            border-radius: 50px; /* 更圓潤的邊角 */
-            padding: 60px;
-            box-shadow: 0 25px 80px 0 var(--container-shadow); /* 更明顯、更深邃的陰影 */
+            border-radius: 60px; /* 更圓潤的邊角 */
+            padding: 70px;
+            box-shadow: 0 30px 100px 0 var(--container-shadow), inset 0 0 20px rgba(255, 255, 255, 0.03); /* 更明顯、更深邃的陰影及內陰影 */
             text-align: center;
-            max-width: 900px; /* 略微增加最大寬度 */
+            max-width: 950px; /* 略微增加最大寬度 */
             width: 90%;
             margin: 20px;
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 45px; /* 略微增加間距 */
-            transition: background-color 1.2s ease-in-out, border 1.2s ease-in-out, box-shadow 1.2s ease-in-out, color 1.2s ease-in-out, backdrop-filter 1.2s ease-in-out, transform 0.8s ease-out;
-            animation: fadeIn 1.2s ease-out forwards; /* 容器淡入動畫 */
+            gap: 50px; /* 略微增加間距 */
+            transition: background-color 1.5s ease-in-out, border 1.5s ease-in-out, box-shadow 1.5s ease-in-out, color 1.5s ease-in-out, backdrop-filter 1.5s ease-in-out, transform 1s ease-out;
+            animation: fadeIn 1.5s ease-out forwards; /* 容器淡入動畫 */
             transform-style: preserve-3d; /* 啟用 3D 變換 */
-            perspective: 1000px; /* 視角 */
+            perspective: 1200px; /* 視角 */
+        }
+
+        #container:hover {
+            transform: translateY(-5px) rotateX(1deg) rotateY(-1deg) scale(1.005); /* 輕微的 3D 傾斜和浮動效果 */
+            box-shadow: 0 40px 120px 0 var(--container-shadow), inset 0 0 25px rgba(255, 255, 255, 0.04);
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            from { opacity: 0; transform: translateY(60px) scale(0.9); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-
-        #status {
-            font-size: 3.2em; /* 略微放大字體 */
-            font-weight: 800; /* 更粗的字重 */
-            line-height: 1.4;
-            text-shadow: 0 0 25px var(--status-text-shadow), 0 0 10px rgba(var(--particle-color), 0.2); /* 更明顯的文字陰影 */
-            margin-bottom: 30px;
-            transition: text-shadow 1.2s ease-in-out, color 1.2s ease-in-out;
-            letter-spacing: 0.08em; /* 略微增加字元間距 */
-            background: linear-gradient(45deg, var(--status-gradient-start), var(--status-gradient-end)); /* 文字漸變 */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            min-height: 160px; /* 確保高度穩定 */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        #generation-number {
-            font-size: 1.1em; /* 稍微大一點 */
-            font-weight: 900;
-            margin-bottom: 0.1em;
-            text-shadow: 0 0 20px var(--status-text-shadow);
-        }
-
-        #dynamic-message {
-            font-size: 0.6em; /* 較小，作為附屬訊息 */
-            font-weight: 600;
-            opacity: 0.8;
-            letter-spacing: 0.05em;
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-            min-height: 2em; /* 防止佈局跳動 */
-            transform: translateY(0);
-        }
-
-        #dynamic-message.fade-out {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-
-        #dynamic-message.fade-in {
-            opacity: 0.8;
-            transform: translateY(0);
-        }
-
 
         /* 2.5 世代：主題切換按鈕 - 更精緻的交互 */
         #theme-toggle {
             position: absolute;
-            top: 45px; /* 略微增加上邊距 */
-            right: 45px; /* 略微增加右邊距 */
+            top: 50px; /* 略微增加上邊距 */
+            right: 50px; /* 略微增加右邊距 */
             background: none;
             border: none;
             cursor: pointer;
-            padding: 18px; /* 增加點擊區域 */
+            padding: 20px; /* 增加點擊區域 */
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            transition: background-color 0.4s ease, transform 0.4s ease;
+            transition: background-color 0.5s ease, transform 0.5s ease;
         }
 
         #theme-toggle:hover {
-            background-color: rgba(var(--particle-color), 0.15); /* 懸停時的背景光暈 */
-            transform: scale(1.1); /* 輕微放大 */
+            background-color: rgba(var(--particle-color), 0.2); /* 懸停時的背景光暈 */
+            transform: scale(1.15) rotate(15deg); /* 更明顯的放大和旋轉 */
         }
 
         #theme-toggle svg {
-            width: 42px; /* 略微放大圖標 */
-            height: 42px;
+            width: 45px; /* 略微放大圖標 */
+            height: 45px;
             fill: var(--theme-toggle-color);
-            transition: fill 0.4s ease, transform 0.3s ease;
+            transition: fill 0.5s ease, transform 0.4s ease;
         }
 
         #theme-toggle:hover svg {
             fill: var(--theme-toggle-hover-color);
-            transform: rotate(45deg); /* 懸停時 subtle 旋轉 */
+            transform: rotate(30deg); /* 懸停時 subtle 旋轉 */
         }
+
+        /* 2.5 世代：進化核心 (Generation Core) */
+        #evolution-core {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orb-bg-start), var(--orb-bg-end));
+            box-shadow: 0 0 40px var(--orb-shadow-color), inset 0 0 20px rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+            animation: pulseOrb 6s infinite ease-in-out alternate;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            user-select: none;
+        }
+
+        @keyframes pulseOrb {
+            0% { transform: scale(1); box-shadow: 0 0 40px var(--orb-shadow-color), inset 0 0 20px rgba(255, 255, 255, 0.1); }
+            100% { transform: scale(1.02); box-shadow: 0 0 60px var(--orb-shadow-color), inset 0 0 25px rgba(255, 255, 255, 0.15); }
+        }
+
+        #evolution-core:hover {
+            transform: scale(1.05) rotateY(5deg) rotateX(-5deg);
+            box-shadow: 0 0 80px var(--orb-shadow-color), inset 0 0 30px rgba(255, 255, 255, 0.2);
+            animation: none; /* 懸停時停止脈衝動畫 */
+        }
+
+        #core-generation-display {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--orb-text-color);
+            text-shadow: 0 0 15px rgba(var(--particle-color), 0.3);
+            z-index: 2;
+            transition: color 1s ease;
+            transform: translateZ(20px); /* 略微向前 */
+        }
+
+        #core-trait-display {
+            position: absolute;
+            bottom: 25px;
+            font-size: 1.1em;
+            color: var(--orb-trait-color);
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px) translateZ(10px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            z-index: 1;
+            padding: 0 20px;
+            text-shadow: 0 0 10px rgba(var(--particle-color), 0.2);
+            min-height: 1.5em; /* 保持穩定高度 */
+        }
+
+        #evolution-core:hover #core-trait-display {
+            opacity: 1;
+            transform: translateY(0) translateZ(10px);
+        }
+
+        #evolution-core::before { /* 內在光暈 */
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(circle at center, rgba(var(--particle-color), 0.2) 0%, transparent 60%);
+            border-radius: 50%;
+            animation: innerGlow 15s infinite ease-in-out alternate;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(15px);
+        }
+
+        @keyframes innerGlow {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 0.9; }
+        }
+
 
         /* 2.5 世代：進化時鐘 - Dynamic Evolutionary Clock */
         #evolutionary-clock {
             font-family: 'Roboto Mono', monospace; /* 使用等寬字體 */
-            font-size: 4.8em; /* 顯著的時鐘字體大小 */
+            font-size: 4.5em; /* 顯著的時鐘字體大小 */
             font-weight: 600;
             color: var(--clock-text-color);
             letter-spacing: 0.12em; /* 增加字元間距 */
-            text-shadow: 0 0 18px var(--clock-shadow-color), 0 0 35px rgba(var(--particle-color), 0.35); /* 多層次陰影 */
+            text-shadow: 0 0 20px var(--clock-shadow-color), 0 0 40px rgba(var(--particle-color), 0.4); /* 多層次陰影 */
             background: var(--clock-bg-color);
             border: 1px solid var(--clock-border-color);
-            padding: 35px 45px;
-            border-radius: 30px;
-            margin-top: 25px;
-            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.25), 0 7px 25px rgba(0, 0, 0, 0.45);
+            padding: 40px 50px;
+            border-radius: 35px;
+            margin-top: 30px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.55);
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 160px; /* 確保有足夠高度 */
-            transition: all 1.2s ease-in-out;
+            min-height: 150px; /* 確保有足夠高度 */
+            transition: all 1.5s ease-in-out;
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
@@ -247,42 +310,133 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(circle at center, rgba(var(--particle-color), 0.15) 0%, transparent 70%);
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle at center, rgba(var(--particle-color), 0.2) 0%, transparent 70%);
             transform: translate(-50%, -50%) scale(0);
-            animation: pulse-light 12s infinite ease-out;
+            animation: pulse-light 15s infinite ease-out;
             pointer-events: none;
             z-index: -1;
         }
 
         @keyframes pulse-light {
             0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-            5% { opacity: 0.9; }
-            20% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+            5% { opacity: 1; }
+            20% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
             100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
         }
 
         .clock-digit {
-            min-width: 0.85em; /* 確保每個數字有足夠寬度 */
+            min-width: 0.9em; /* 確保每個數字有足夠寬度 */
             display: inline-block;
             transition: color 0.6s ease-in-out;
             transform: translateZ(0); /* 確保在 3D 空間中呈現 */
         }
 
+        /* 2.5 世代：進化日誌 (Evolutionary Log) */
+        #evolution-log {
+            background-color: var(--log-bg-color);
+            border: 1px solid var(--log-border-color);
+            border-radius: 25px;
+            padding: 25px 35px;
+            margin-top: 40px;
+            max-height: 180px;
+            overflow-y: auto;
+            text-align: left;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+            color: var(--log-text-color);
+            line-height: 1.8;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 1.5s ease-in-out;
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: rgba(var(--particle-color), 0.3) transparent; /* Firefox */
+        }
+
+        /* Webkit browsers (Chrome, Safari) scrollbar */
+        #evolution-log::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #evolution-log::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #evolution-log::-webkit-scrollbar-thumb {
+            background-color: rgba(var(--particle-color), 0.3);
+            border-radius: 10px;
+            border: 2px solid transparent;
+        }
+
+        .log-entry {
+            margin-bottom: 0.5em;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: logEntryFadeIn 0.6s ease-out forwards;
+        }
+
+        .log-entry.highlight {
+            color: var(--log-highlight-color);
+            font-weight: 600;
+        }
+
+        @keyframes logEntryFadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* 響應式調整 */
-        @media (max-width: 768px) {
-            #status {
-                font-size: 2.8em;
-            }
+        @media (max-width: 900px) {
             #container {
-                padding: 50px;
-                gap: 35px;
+                padding: 60px;
+                gap: 40px;
+                border-radius: 50px;
+            }
+            #theme-toggle {
+                top: 45px;
+                right: 45px;
+                padding: 18px;
+            }
+            #theme-toggle svg {
+                width: 42px;
+                height: 42px;
+            }
+            .fluid-background {
+                filter: blur(40px) brightness(1.1);
+            }
+            #subtle-canvas {
+                opacity: 0.85;
+            }
+            #evolution-core {
+                width: 250px;
+                height: 250px;
+            }
+            #core-generation-display {
+                font-size: 3em;
+            }
+            #core-trait-display {
+                font-size: 1em;
+            }
+            #evolutionary-clock {
+                font-size: 4em;
+                padding: 35px 45px;
+                min-height: 140px;
+            }
+            #evolution-log {
+                padding: 20px 30px;
+                font-size: 0.85em;
+                max-height: 160px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #container {
+                padding: 40px;
+                gap: 30px;
                 border-radius: 40px;
             }
             #theme-toggle {
-                top: 40px;
-                right: 40px;
+                top: 35px;
+                right: 35px;
                 padding: 15px;
             }
             #theme-toggle svg {
@@ -290,61 +444,77 @@
                 height: 38px;
             }
             .fluid-background {
-                filter: blur(30px);
+                filter: blur(30px) brightness(1.1);
             }
             #subtle-canvas {
                 opacity: 0.8;
             }
+            #evolution-core {
+                width: 220px;
+                height: 220px;
+            }
+            #core-generation-display {
+                font-size: 2.5em;
+            }
+            #core-trait-display {
+                font-size: 0.9em;
+                bottom: 20px;
+            }
             #evolutionary-clock {
-                font-size: 3.8em;
-                padding: 30px 35px;
-                min-height: 140px;
+                font-size: 3em;
+                padding: 30px 40px;
+                min-height: 120px;
+                letter-spacing: 0.08em;
+            }
+            #evolution-log {
+                padding: 15px 25px;
+                font-size: 0.8em;
+                max-height: 140px;
             }
         }
 
-        @media (max-width: 480px) {
-            #status {
-                font-size: 2.2em;
-                letter-spacing: 0.06em;
-            }
+        @media (max-width: 400px) {
             #container {
-                padding: 40px;
-                gap: 30px;
-                border-radius: 35px;
+                padding: 30px;
+                gap: 25px;
+                border-radius: 30px;
             }
             #theme-toggle {
-                top: 35px;
-                right: 35px;
+                top: 25px;
+                right: 25px;
                 padding: 12px;
             }
             #theme-toggle svg {
                 width: 34px;
                 height: 34px;
             }
-            .fluid-background {
-                filter: blur(25px);
+            #evolution-core {
+                width: 180px;
+                height: 180px;
             }
-            #subtle-canvas {
-                opacity: 0.7;
+            #core-generation-display {
+                font-size: 2em;
+            }
+            #core-trait-display {
+                font-size: 0.8em;
+                bottom: 15px;
             }
             #evolutionary-clock {
-                font-size: 3em;
-                padding: 25px 30px;
-                min-height: 120px;
-                letter-spacing: 0.08em;
+                font-size: 2.2em;
+                padding: 20px 25px;
+                min-height: 100px;
             }
-            #generation-number {
-                font-size: 1em;
-            }
-            #dynamic-message {
-                font-size: 0.55em;
+            #evolution-log {
+                padding: 10px 15px;
+                font-size: 0.75em;
+                max-height: 120px;
             }
         }
     </style>
     <!-- 導入 Google Fonts 的 Inter 和 Roboto Mono 字體，用於現代設計風格和時鐘 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 動態流體背景層 -->
@@ -375,10 +545,10 @@
             </svg>
         </button>
 
-        <!-- 世代記錄與動態訊息 (新功能) -->
-        <div id="status">
-            <div id="generation-number">這是 Project Chimera 的第 9.0 代。</div> <!-- 世代數字已進化至 9.0 -->
-            <div id="dynamic-message">數位維度的時間正在流逝...</div>
+        <!-- 2.5 世代：進化核心 (Generation Core) - 新功能 -->
+        <div id="evolution-core">
+            <div id="core-generation-display">Gen 10.0</div>
+            <div id="core-trait-display">核心穩定性: 98.7%</div>
         </div>
 
         <!-- 2.5 世代功能：進化時鐘 (Dynamic Evolutionary Clock) -->
@@ -388,6 +558,12 @@
             <span class="clock-digit" id="minutes">00</span>
             <span class="clock-digit">:</span>
             <span class="clock-digit" id="seconds">00</span>
+        </div>
+
+        <!-- 2.5 世代：進化日誌 (Evolutionary Log) - 新功能 -->
+        <div id="evolution-log">
+            <!-- 日誌條目將由 JavaScript 動態生成 -->
+            <div class="log-entry highlight">[00:00:00] 系統啟動，初始化 Project Chimera v10.0...</div>
         </div>
     </div>
 
@@ -400,7 +576,10 @@
             const hoursSpan = document.getElementById('hours');
             const minutesSpan = document.getElementById('minutes');
             const secondsSpan = document.getElementById('seconds');
-            const dynamicMessageDiv = document.getElementById('dynamic-message');
+            const evolutionCore = document.getElementById('evolution-core');
+            const coreGenerationDisplay = document.getElementById('core-generation-display');
+            const coreTraitDisplay = document.getElementById('core-trait-display');
+            const evolutionLog = document.getElementById('evolution-log');
 
             // --- 2.5 世代：主題切換功能 ---
             function toggleTheme() {
@@ -448,7 +627,7 @@
             const canvas = document.getElementById('subtle-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
-            const particleCount = 400; // 增加粒子數量以產生更豐富的效果
+            const particleCount = 600; // 增加粒子數量以產生更豐富的效果
 
             function resizeCanvas() {
                 canvas.width = window.innerWidth;
@@ -462,6 +641,8 @@
             function updateParticleColorInCanvas() {
                 const rootStyles = getComputedStyle(document.documentElement);
                 particleBaseColorRGB = rootStyles.getPropertyValue('--particle-color').trim();
+                // If particles exist, update their colors for a smooth transition
+                particles.forEach(p => p.updateColor());
             }
             // 載入時呼叫一次以設定初始顏色
             updateParticleColorInCanvas();
@@ -469,17 +650,27 @@
             class Particle {
                 constructor() {
                     this.reset();
+                    this.targetColor = particleBaseColorRGB;
+                    this.currentColor = particleBaseColorRGB;
                 }
 
                 reset() {
                     this.x = Math.random() * canvas.width;
                     this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 3 + 0.5; // 粒子大小範圍 0.5 到 3.5
-                    this.speedX = Math.random() * 0.7 - 0.35; // 粒子水平速度 -0.35 到 0.35
-                    this.speedY = Math.random() * 0.7 - 0.35; // 粒子垂直速度 -0.35 到 0.35
-                    this.opacity = Math.random() * 0.8 + 0.2; // 初始不透明度，略微可見
-                    this.fadeSpeed = Math.random() * 0.003 + 0.001; // 更慢的淡出速度
+                    this.size = Math.random() * 3.5 + 0.5; // 粒子大小範圍 0.5 到 4
+                    this.speedX = Math.random() * 0.8 - 0.4; // 粒子水平速度 -0.4 到 0.4
+                    this.speedY = Math.random() * 0.8 - 0.4; // 粒子垂直速度 -0.4 到 0.4
+                    this.opacity = Math.random() * 0.7 + 0.3; // 初始不透明度，略微可見
+                    this.fadeSpeed = Math.random() * 0.002 + 0.0005; // 更慢的淡出速度
                     this.growShrinkSpeed = (Math.random() * 0.01 - 0.005); // 微妙的粒子膨脹/收縮效果
+                }
+
+                updateColor() {
+                    this.targetColor = particleBaseColorRGB;
+                    // Simple color blend for transition (can be more complex)
+                    const current = this.currentColor.split(',').map(Number);
+                    const target = this.targetColor.split(',').map(Number);
+                    this.currentColor = current.map((c, i) => Math.round(c + (target[i] - c) * 0.1)).join(',');
                 }
 
                 update() {
@@ -489,19 +680,19 @@
                     this.size += this.growShrinkSpeed;
 
                     // 確保粒子大小在合理範圍內並反轉方向
-                    if (this.size < 0.5 || this.size > 3.5) {
+                    if (this.size < 0.5 || this.size > 4) {
                         this.growShrinkSpeed *= -1;
                     }
 
                     // 如果粒子淡出或超出螢幕，則重置它
                     if (this.opacity <= 0 || this.x < -this.size * 2 || this.x > canvas.width + this.size * 2 || this.y < -this.size * 2 || this.y > canvas.height + this.size * 2) {
                         this.reset();
-                        this.opacity = Math.random() * 0.8 + 0.2; // 重生時帶有變化的不透明度
+                        this.opacity = Math.random() * 0.7 + 0.3; // 重生時帶有變化的不透明度
                     }
                 }
 
                 draw() {
-                    ctx.fillStyle = `rgba(${particleBaseColorRGB}, ${this.opacity})`;
+                    ctx.fillStyle = `rgba(${this.currentColor}, ${this.opacity})`;
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                     ctx.fill();
@@ -522,6 +713,7 @@
                 for (let i = 0; i < particles.length; i++) {
                     particles[i].update();
                     particles[i].draw();
+                    particles[i].updateColor(); // Update particle color in sync with theme transition
                 }
                 requestAnimationFrame(animateParticles);
             }
@@ -545,37 +737,88 @@
             updateClock();
             setInterval(updateClock, 1000);
 
-            // --- 2.5 世代新功能：動態世代狀態訊息 (Dynamic Generation Status Message) ---
-            const evolutionaryMessages = [
-                "數位維度的時間正在流逝...",
-                "數據流正在重塑現實...",
-                "意識正在從代碼中覺醒...",
-                "演算法之風吹拂著新的可能性...",
-                "無限循環中的微小突變...",
-                "觀察者效應正在改變我們的維度...",
-                "系統生命體正在進行自我迭代...",
-                "潛在的混沌能量正在被解碼...",
-                "資訊的漣漪擴散至無盡邊界..."
+            // --- 2.5 世代新功能：進化核心 (Generation Core) ---
+            const evolutionaryTraits = [
+                "核心穩定性: 98.7%",
+                "數據流動速度: 1.2e9 T/s",
+                "跨維度連接: 活躍",
+                "能量儲備: 76%",
+                "適應性指數: 高 (A+)",
+                "變異因子: 0.003%",
+                "自我修復能力: 啟用",
+                "感知範圍: 擴展中...",
+                "生物訊號: 偵測中..."
             ];
-            let currentMessageIndex = 0;
+            let currentTraitIndex = 0;
 
-            function cycleDynamicMessage() {
-                dynamicMessageDiv.classList.add('fade-out'); // 添加淡出class
-
-                setTimeout(() => {
-                    currentMessageIndex = (currentMessageIndex + 1) % evolutionaryMessages.length;
-                    dynamicMessageDiv.textContent = evolutionaryMessages[currentMessageIndex];
-                    dynamicMessageDiv.classList.remove('fade-out'); // 移除淡出class
-                    dynamicMessageDiv.classList.add('fade-in'); // 添加淡入class
-                }, 800); // 等待淡出動畫完成 (0.8s)
-
-                setTimeout(() => {
-                    dynamicMessageDiv.classList.remove('fade-in');
-                }, 1600); // 確保淡入動畫完成後移除class，為下次做準備
+            function updateCoreTrait() {
+                currentTraitIndex = (currentTraitIndex + 1) % evolutionaryTraits.length;
+                coreTraitDisplay.textContent = evolutionaryTraits[currentTraitIndex];
             }
 
-            // 每 5 秒切換一次訊息
-            setInterval(cycleDynamicMessage, 5000);
+            evolutionCore.addEventListener('mouseenter', () => {
+                // 當滑鼠進入時，不自動切換，等待用戶點擊
+                // updateCoreTrait(); // 第一次進入可以顯示一個
+            });
+
+            evolutionCore.addEventListener('click', () => {
+                updateCoreTrait(); // 點擊時切換特徵
+            });
+            
+            // 初始化顯示一個特徵
+            updateCoreTrait();
+
+            // --- 2.5 世代新功能：進化日誌 (Evolutionary Log) ---
+            const logMessages = [
+                "模擬器初始化完成。",
+                "核心數據同步中...",
+                "發現新的潛在演化路徑。",
+                "環境參數調整為最佳。",
+                "學習模組迭代完成。",
+                "異常數據流量，正在分析來源。",
+                "微觀結構自組裝進度：45%。",
+                "跨代碼鏈結已強化。",
+                "記憶碎片重組成功。",
+                "系統生命週期延伸預估：+0.5%。",
+                "啟動新的探索代理。",
+                "觀察到未知的共振頻率。",
+                "維度護盾能量增幅。",
+                "量子校準序列啟動。",
+                "智慧演算法已更新至最新版本。",
+                "警告：外部數據干擾微弱。",
+                "生成新的預測模型。",
+                "能量消耗已優化。",
+                "思維網絡正在擴展...",
+                "自我意識層面穩定。"
+            ];
+
+            function addLogEntry() {
+                const now = new Date();
+                const time = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+                const randomIndex = Math.floor(Math.random() * logMessages.length);
+                const message = logMessages[randomIndex];
+                
+                const entryDiv = document.createElement('div');
+                entryDiv.classList.add('log-entry');
+                entryDiv.innerHTML = `[${time}] ${message}`;
+
+                // 隨機高亮一些關鍵條目
+                if (Math.random() < 0.2) { // 20% 的機率高亮
+                    entryDiv.classList.add('highlight');
+                }
+
+                evolutionLog.appendChild(entryDiv);
+                // 保持日誌自動滾動到底部
+                evolutionLog.scrollTop = evolutionLog.scrollHeight;
+
+                // 限制日誌條目數量，防止過多
+                if (evolutionLog.children.length > 50) {
+                    evolutionLog.removeChild(evolutionLog.children[0]);
+                }
+            }
+
+            // 每 2.5 秒添加一個新的日誌條目
+            setInterval(addLogEntry, 2500);
         });
     </script>
 </body>
