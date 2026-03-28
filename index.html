@@ -183,6 +183,13 @@
             box-shadow: 0 2px 10px var(--button-shadow);
         }
 
+        #generate-proverb:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: translateY(0);
+            box-shadow: 0 4px 15px var(--button-shadow);
+        }
+
         /* 2.5 世代：主題切換按鈕 */
         #theme-toggle {
             position: absolute;
@@ -379,8 +386,9 @@
             // 按鈕點擊時產生新箴言
             generateButton.addEventListener('click', displayRandomProverb);
 
-            // 頁面載入時先顯示一條箴言
-            displayRandomProverb();
+            // 頁面載入時先顯示一條箴言 (如果需要)
+            // displayRandomProverb(); // 為了保持原始「點擊下方按鈕...」的提示，此處不自動觸發
+
 
             // --- 2.5 世代：主題切換功能 ---
             function toggleTheme() {
@@ -411,11 +419,11 @@
                 body.classList.remove('light-theme');
                 moonIcon.style.display = 'block';
                 sunIcon.style.display = 'none';
-            } else if (!prefersDark) { // Default to light if no preference and system prefers light
+            } else if (!prefersDark && savedTheme === null) { // Default to light if no saved preference and system prefers light
                 body.classList.add('light-theme');
                 moonIcon.style.display = 'none';
                 sunIcon.style.display = 'block';
-            } else { // Default to dark (system prefers dark or no preference detected)
+            } else { // Default to dark (system prefers dark or no preference detected/saved dark)
                 body.classList.remove('light-theme');
                 moonIcon.style.display = 'block';
                 sunIcon.style.display = 'none';
