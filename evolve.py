@@ -60,7 +60,7 @@ try:
         f.write(new_html)
 
    
-    print("✨ 進化成功！第"??" 代奇美拉已誕生。")
+    print("✨ 進化成功！第?代奇美拉已誕生。")
 
 except Exception as e:
     print(f"💥 進化崩潰: {e}")
