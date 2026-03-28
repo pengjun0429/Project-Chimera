@@ -2,14 +2,15 @@ name: Auto-Evolve Website
 
 on:
   schedule:
+    # 每天凌晨 00:00 (UTC)，約台灣時間早上 8 點自動執行
     - cron: '0 0 * * *'
-  workflow_dispatch:
+  workflow_dispatch: # 允許「使用者」手動點擊按鈕觸發進化
 
 jobs:
   evolve:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # 必備：允許機器人將進化後的代碼 Push 回 Repo
 
     steps:
       - name: Checkout Code
@@ -18,11 +19,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.11' # 升級至 3.11 以支援最新的 Google AI SDK
 
       - name: Install Dependencies
         run: |
-          pip install google-generativeai
+          pip install google-genai
+          # 安裝最新的官方 Google GenAI 套件
 
       - name: Run Evolve Script
         env:
@@ -35,5 +37,6 @@ jobs:
           git config --global user.name 'Chimera-Bot'
           git config --global user.email 'chimera@bot.com'
           git add index.html
-          git commit -m "Build: Project Chimera - Generation Evolved" || echo "No changes to commit"
+          # 只有在檔案有變動時才 Commit，避免重複 Push 報錯
+          git commit -m "🧬 Build: Project Chimera - Generation Evolved" || echo "No changes to commit"
           git push
