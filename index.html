@@ -2,13 +2,219 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>進化中...</title>
+    <title>Project Chimera - 第 1 代</title>
     <style>
-        body { background-color: #1a1a1a; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        #status { font-size: 2em; text-align: center; }
+        /* 全局設定與字體 */
+        body {
+            background-color: #1a1a1a; /* 後備背景色 */
+            color: #e0e0e0; /* 基礎文字顏色 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 2026年流行的現代無襯線字體 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* 確保內容撐滿視窗高度 */
+            margin: 0;
+            overflow: hidden; /* 防止動態背景導致滾動條 */
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        /* 2026年流行設計風格：動態流體背景 */
+        .fluid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 使用多重漸變色，創造流動感 */
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2, #FF007F); /* 深紫、電光紫、亮粉 */
+            background-size: 400% 400%; /* 讓漸變尺寸遠大於視窗，產生平滑移動感 */
+            animation: gradientShift 15s ease infinite alternate, hueRotate 20s linear infinite;
+            z-index: -1; /* 置於內容下方 */
+            opacity: 0.7; /* 略微透明，讓內容更突出 */
+            filter: blur(10px); /* 輕微模糊，增加夢幻感 */
+        }
+
+        /* 漸變位置動畫 */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 色相旋轉動畫 */
+        @keyframes hueRotate {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        /* 主內容容器：精緻的毛玻璃效果 */
+        #container {
+            background-color: rgba(255, 255, 255, 0.15); /* 輕微透明的白色背景 */
+            backdrop-filter: blur(15px) saturate(1.8); /* 強力模糊與色彩飽和度提升 */
+            -webkit-backdrop-filter: blur(15px) saturate(1.8); /* 支援Safari */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* 半透明邊框 */
+            border-radius: 20px; /* 大圓角設計 */
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4); /* 柔和但深邃的陰影 */
+            text-align: center;
+            max-width: 600px;
+            width: 90%; /* 響應式寬度 */
+            margin: 20px;
+            position: relative; /* 確保位於流體背景之上 */
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* 元素間距 */
+        }
+
+        #status {
+            font-size: 2.2em;
+            font-weight: 600;
+            line-height: 1.3;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 文字發光效果 */
+            margin-bottom: 10px;
+        }
+
+        /* 互動元件：箴言顯示區 */
+        #proverb-display {
+            font-size: 1.3em;
+            min-height: 3em; /* 確保高度一致，防止內容切換時佈局跳動 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.08); /* 內部淺色毛玻璃效果 */
+            border-radius: 10px;
+            font-style: italic; /* 斜體箴言 */
+            color: #c9c9c9;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); /* 內陰影效果 */
+            transition: all 0.3s ease-in-out;
+            margin-bottom: 5px;
+        }
+
+        /* 互動元件：按鈕樣式 */
+        #generate-proverb {
+            background-image: linear-gradient(45deg, #FF007F, #8E2DE2); /* 漸變按鈕背景 */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px; /* 字體間距 */
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #generate-proverb:hover {
+            background-image: linear-gradient(45deg, #f72c91, #a745f0); /* hover時顏色變淺 */
+            transform: translateY(-2px); /* 輕微上浮效果 */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #generate-proverb:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            #status {
+                font-size: 1.8em;
+            }
+            #proverb-display {
+                font-size: 1.1em;
+            }
+            #generate-proverb {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+            #container {
+                padding: 30px;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #status {
+                font-size: 1.5em;
+            }
+            #proverb-display {
+                font-size: 1em;
+                padding: 10px;
+            }
+            #generate-proverb {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
+            #container {
+                padding: 20px;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="status">這是 Project Chimera 的第 0 代。<br>等待第一次進化...</div>
+    <!-- 動態流體背景層 -->
+    <div class="fluid-background"></div>
+
+    <!-- 主內容容器 -->
+    <div id="container">
+        <!-- 世代記錄：數字加 1 -->
+        <div id="status">這是 Project Chimera 的第 1 代。<br>智慧正在結晶...</div>
+
+        <!-- 功能：隨機格言產生器 -->
+        <div id="proverb-display">點擊下方按鈕獲取一條智慧箴言</div>
+        <button id="generate-proverb">獲取箴言</button>
+    </div>
+
+    <script>
+        const proverbs = [
+            "欲戴王冠，必承其重。",
+            "羅馬不是一天造成的。",
+            "一鳥在手勝過二鳥在林。",
+            "凡事起頭難。",
+            "知識就是力量。",
+            "時間就是金錢。",
+            "習慣成自然。",
+            "滴水穿石。",
+            "三個臭皮匠，勝過一個諸葛亮。",
+            "活到老，學到老。",
+            "機會只敲一次門。",
+            "成功是百分之九十九的汗水加百分之一的靈感。",
+            "知人者智，自知者明。",
+            "千里之行，始於足下。",
+            "學而不思則罔，思而不學則殆。",
+            "溫故而知新。",
+            "不積跬步，無以至千里；不積小流，無以成江海。",
+            "良藥苦口利於病，忠言逆耳利於行。",
+            "書中自有黃金屋，書中自有顏如玉。",
+            "人無遠慮，必有近憂。",
+            "己所不欲，勿施於人。",
+            "工欲善其事，必先利其器。",
+            "失敗為成功之母。",
+            "逆境是磨練人的最高學府。",
+            "機會總是留給有準備的人。"
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const proverbDisplay = document.getElementById('proverb-display');
+            const generateButton = document.getElementById('generate-proverb');
+
+            // 隨機選擇並顯示一條箴言
+            function displayRandomProverb() {
+                const randomIndex = Math.floor(Math.random() * proverbs.length);
+                proverbDisplay.textContent = proverbs[randomIndex];
+            }
+
+            // 按鈕點擊時產生新箴言
+            generateButton.addEventListener('click', displayRandomProverb);
+
+            // 頁面載入時先顯示一條箴言
+            displayRandomProverb();
+        });
+    </script>
 </body>
 </html>
