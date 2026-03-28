@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>Project Chimera - 第 2.5 代</title>
+    <title>Project Chimera - 第 3.0 代</title> <!-- 世代數字已進化至 3.0 -->
     <style>
         /* CSS Variables for easier theme switching */
         :root {
@@ -31,9 +31,9 @@
 
         /* Light Theme */
         body.light-theme {
-            --bg-start: #2196F3; /* Blue */
-            --bg-mid: #03A9F4;   /* Light Blue */
-            --bg-end: #8BC34A;   /* Light Green */
+            --bg-start: #A1FFCE; /* Light Green */
+            --bg-mid: #FAFFD1;   /* Light Yellow */
+            --bg-end: #C5E9F3;   /* Sky Blue */
             --body-bg-fallback: #f0f0f0;
             --text-color: #333333;
             --container-bg: rgba(255, 255, 255, 0.7);
@@ -42,10 +42,10 @@
             --proverb-bg: rgba(0, 0, 0, 0.05);
             --proverb-text-color: #555555;
             --proverb-inner-shadow: rgba(0, 0, 0, 0.1);
-            --button-gradient-start: #8BC34A;
-            --button-gradient-end: #2196F3;
-            --button-hover-gradient-start: #9CCC65;
-            --button-hover-gradient-end: #64B5F6;
+            --button-gradient-start: #2196F3; /* Blue */
+            --button-gradient-end: #8BC34A;   /* Light Green */
+            --button-hover-gradient-start: #64B5F6;
+            --button-hover-gradient-end: #9CCC65;
             --button-shadow: rgba(0, 0, 0, 0.1);
             --button-hover-shadow: rgba(0, 0, 0, 0.2);
             --status-text-shadow: rgba(0, 0, 0, 0.2);
@@ -58,7 +58,7 @@
         body {
             background-color: var(--body-bg-fallback);
             color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 導入更現代的 Inter 字體 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,7 +67,7 @@
             overflow: hidden;
             box-sizing: border-box;
             line-height: 1.6;
-            transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for body bg and text */
+            transition: background-color 0.8s ease, color 0.8s ease; /* 更流暢的過渡效果 */
         }
 
         /* 動態流體背景 */
@@ -79,11 +79,11 @@
             height: 100%;
             background: linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
             background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite alternate, hueRotate 20s linear infinite;
-            z-index: -2; /* Placed furthest back */
-            opacity: 0.7;
-            filter: blur(10px);
-            transition: background 0.5s ease, filter 0.5s ease; /* Smooth transition for background */
+            animation: gradientShift 20s ease infinite alternate, hueRotate 30s linear infinite; /* 調整動畫速度 */
+            z-index: -3; /* 放置在最底層 */
+            opacity: 0.8; /* 略微增加不透明度以展現更豐富的色彩 */
+            filter: blur(15px); /* 略微增加模糊度 */
+            transition: background 0.8s ease, filter 0.8s ease, opacity 0.8s ease; /* 平滑過渡 */
         }
 
         /* 漸變位置動畫 */
@@ -99,61 +99,71 @@
             100% { filter: hue-rotate(360deg); }
         }
 
-        /* 2.5 世代：微妙的抽象粒子效果 */
+        /* 3.0 世代：抽象粒子效果 */
         #subtle-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Between fluid background and container */
-            pointer-events: none; /* Allow clicks to pass through */
+            z-index: -2; /* 位於流體背景與容器之間 */
+            pointer-events: none; /* 允許點擊穿透 */
+            opacity: 0.7; /* 更為微妙的效果 */
+            transition: opacity 0.8s ease;
         }
 
         /* 主內容容器：精緻的毛玻璃效果 */
         #container {
             background-color: var(--container-bg);
-            backdrop-filter: blur(15px) saturate(1.8);
-            -webkit-backdrop-filter: blur(15px) saturate(1.8);
+            backdrop-filter: blur(20px) saturate(1.8); /* 略微增加模糊度 */
+            -webkit-backdrop-filter: blur(20px) saturate(1.8);
             border: 1px solid var(--container-border);
-            border-radius: 20px;
+            border-radius: 25px; /* 更圓潤的邊角 */
             padding: 40px;
-            box-shadow: 0 8px 32px 0 var(--container-shadow);
+            box-shadow: 0 10px 40px 0 var(--container-shadow); /* 更明顯的陰影 */
             text-align: center;
-            max-width: 600px;
+            max-width: 650px; /* 略微增加最大寬度 */
             width: 90%;
             margin: 20px;
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+            gap: 28px; /* 略微增加間距 */
+            transition: background-color 0.8s ease, border 0.8s ease, box-shadow 0.8s ease, color 0.8s ease, backdrop-filter 0.8s ease;
+            animation: fadeIn 1s ease-out forwards; /* 容器淡入動畫 */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         #status {
-            font-size: 2.2em;
-            font-weight: 600;
-            line-height: 1.3;
-            text-shadow: 0 0 10px var(--status-text-shadow);
-            margin-bottom: 10px;
-            transition: text-shadow 0.5s ease, color 0.5s ease;
+            font-size: 2.4em; /* 略微放大字體 */
+            font-weight: 700; /* 更粗的字重 */
+            line-height: 1.4;
+            text-shadow: 0 0 12px var(--status-text-shadow); /* 更明顯的文字陰影 */
+            margin-bottom: 15px;
+            transition: text-shadow 0.8s ease, color 0.8s ease;
+            letter-spacing: 0.05em; /* 略微增加字元間距 */
         }
 
         /* 互動元件：箴言顯示區 */
         #proverb-display {
-            font-size: 1.3em;
-            min-height: 3em;
+            font-size: 1.4em; /* 略微放大字體 */
+            min-height: 3.5em; /* 增加最小高度以容納更長的箴言 */
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 20px;
             background-color: var(--proverb-bg);
-            border-radius: 10px;
+            border-radius: 12px;
             font-style: italic;
             color: var(--proverb-text-color);
-            box-shadow: inset 0 0 8px var(--proverb-inner-shadow);
-            transition: all 0.3s ease-in-out;
-            margin-bottom: 5px;
+            box-shadow: inset 0 0 10px var(--proverb-inner-shadow); /* 更明顯的內陰影 */
+            transition: all 0.5s ease-in-out;
+            margin-bottom: 8px;
+            letter-spacing: 0.02em;
         }
 
         /* 互動元件：按鈕樣式 */
@@ -161,128 +171,148 @@
             background-image: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
             color: #fff;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 10px;
+            padding: 18px 35px; /* 增加內邊距 */
+            font-size: 1.2em; /* 增加字體大小 */
+            border-radius: 12px; /* 略微增加圓角 */
             cursor: pointer;
             outline: none;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* 更具彈性的過渡效果 */
+            letter-spacing: 1.5px; /* 增加字元間距 */
             font-weight: bold;
-            box-shadow: 0 4px 15px var(--button-shadow);
+            box-shadow: 0 6px 20px var(--button-shadow); /* 更明顯的陰影 */
         }
 
         #generate-proverb:hover {
             background-image: linear-gradient(45deg, var(--button-hover-gradient-start), var(--button-hover-gradient-end));
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px var(--button-hover-shadow);
+            transform: translateY(-3px) scale(1.02); /* 懸停時略微上浮和縮放 */
+            box-shadow: 0 8px 25px var(--button-hover-shadow);
         }
 
         #generate-proverb:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 10px var(--button-shadow);
+            transform: translateY(0) scale(0.98); /* 點擊時略微下沉和縮小 */
+            box-shadow: 0 3px 12px var(--button-shadow);
         }
 
         #generate-proverb:disabled {
-            opacity: 0.6;
+            opacity: 0.5; /* 禁用狀態更明顯 */
             cursor: not-allowed;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
             box-shadow: 0 4px 15px var(--button-shadow);
+            background-image: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end)); /* 保持基礎漸變但調暗 */
         }
 
-        /* 2.5 世代：主題切換按鈕 */
+        /* 3.0 世代：主題切換按鈕 */
         #theme-toggle {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 25px; /* 略微增加上邊距 */
+            right: 25px; /* 略微增加右邊距 */
             background: none;
             border: none;
             cursor: pointer;
-            padding: 5px;
+            padding: 8px; /* 增加點擊區域 */
             z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #theme-toggle svg {
-            width: 28px;
-            height: 28px;
+            width: 30px; /* 略微放大圖標 */
+            height: 30px;
             fill: var(--theme-toggle-color);
-            transition: fill 0.3s ease;
+            transition: fill 0.4s ease, transform 0.3s ease; /* 增加 hover 轉換 */
         }
 
         #theme-toggle:hover svg {
             fill: var(--theme-toggle-hover-color);
+            transform: rotate(15deg) scale(1.1); /* 懸停時 subtle 旋轉和縮放 */
         }
 
 
         /* 響應式調整 */
         @media (max-width: 768px) {
             #status {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             #proverb-display {
+                font-size: 1.2em;
+                min-height: 3em;
+            }
+            #generate-proverb {
                 font-size: 1.1em;
+                padding: 15px 30px;
+            }
+            #container {
+                padding: 35px;
+                gap: 25px;
+            }
+            #theme-toggle {
+                top: 20px;
+                right: 20px;
+                padding: 6px;
+            }
+            #theme-toggle svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #status {
+                font-size: 1.6em;
+            }
+            #proverb-display {
+                font-size: 1em;
+                min-height: 2.5em;
+                padding: 15px;
             }
             #generate-proverb {
                 font-size: 1em;
                 padding: 12px 25px;
             }
             #container {
-                padding: 30px;
+                padding: 25px;
                 gap: 20px;
+                border-radius: 20px;
             }
             #theme-toggle {
                 top: 15px;
                 right: 15px;
+                padding: 4px;
             }
             #theme-toggle svg {
-                width: 24px;
-                height: 24px;
+                width: 22px;
+                height: 22px;
             }
-        }
-
-        @media (max-width: 480px) {
-            #status {
-                font-size: 1.5em;
+            .fluid-background {
+                filter: blur(10px); /* 在小螢幕上減少模糊 */
             }
-            #proverb-display {
-                font-size: 1em;
-                padding: 10px;
-            }
-            #generate-proverb {
-                font-size: 0.9em;
-                padding: 10px 20px;
-            }
-            #container {
-                padding: 20px;
-                gap: 15px;
-            }
-            #theme-toggle {
-                top: 10px;
-                right: 10px;
-            }
-            #theme-toggle svg {
-                width: 20px;
-                height: 20px;
+            #subtle-canvas {
+                opacity: 0.5; /* 在小螢幕上粒子效果更為微妙 */
             }
         }
     </style>
+    <!-- 導入 Google Fonts 的 Inter 字體，用於現代設計風格 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 動態流體背景層 -->
     <div class="fluid-background"></div>
 
-    <!-- 2.5 世代： subtle canvas for abstract particles -->
+    <!-- 3.0 世代：微妙的抽象粒子效果 Canvas -->
     <canvas id="subtle-canvas"></canvas>
 
     <!-- 主內容容器 -->
     <div id="container">
-        <!-- 2.5 世代：主題切換按鈕 -->
+        <!-- 3.0 世代：主題切換按鈕 -->
         <button id="theme-toggle" aria-label="Toggle theme">
-            <!-- Moon icon (default dark theme) -->
+            <!-- 月亮圖標 (預設暗色主題) -->
             <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
-            <!-- Sun icon (light theme) -->
+            <!-- 太陽圖標 (亮色主題) -->
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
                 <circle cx="12" cy="12" r="5"></circle>
                 <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -297,7 +327,7 @@
         </button>
 
         <!-- 世代記錄：數字加 1 -->
-        <div id="status">這是 Project Chimera 的第 2.5 代。<br>智慧正在結晶，意識正在蔓延...</div>
+        <div id="status">這是 Project Chimera 的第 3.0 代。<br>智慧正在結晶，意識正在蔓延...</div> <!-- 世代數字已進化至 3.0 -->
 
         <!-- 功能：隨機格言產生器 -->
         <div id="proverb-display">點擊下方按鈕獲取一條智慧箴言</div>
@@ -330,7 +360,11 @@
             "工欲善其事，必先利其器。",
             "失敗為成功之母。",
             "逆境是磨練人的最高學府。",
-            "機會總是留給有準備的人。"
+            "機會總是留給有準備的人。",
+            "沒有完美的計劃，只有不斷完善的行動。", // 3.0 世代新增箴言
+            "創新是進步的靈魂，而非僅是改變的形式。", // 3.0 世代新增箴言
+            "真正的智慧在於知道自己所知甚少。", // 3.0 世代新增箴言
+            "每一次挑戰都是一次進化的機會。" // 3.0 世代新增箴言
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -344,11 +378,11 @@
             let isTyping = false;
             let currentProverbIndex = -1;
 
-            // --- 2.5 世代：箴言打字效果 ---
+            // --- 3.0 世代：箴言打字效果與思考動畫 ---
             function typeWriterEffect(element, text, speed, callback) {
                 isTyping = true;
                 let i = 0;
-                element.textContent = ''; // Clear content first
+                element.textContent = ''; // 清空內容
                 function type() {
                     if (i < text.length) {
                         element.textContent += text.charAt(i);
@@ -364,33 +398,30 @@
 
             // 隨機選擇並顯示一條箴言 (帶思考和打字效果)
             function displayRandomProverb() {
-                if (isTyping) return; // Prevent multiple clicks during typing
+                if (isTyping) return; // 打字過程中防止重複點擊
 
-                proverbDisplay.textContent = "智慧正在解析中..."; // 思考中...
-                generateButton.disabled = true; // Disable button during thought process
+                proverbDisplay.textContent = "智慧正在解析中..."; // 顯示思考狀態
+                generateButton.disabled = true; // 思考過程中禁用按鈕
 
                 setTimeout(() => {
                     let randomIndex;
                     do {
                         randomIndex = Math.floor(Math.random() * proverbs.length);
-                    } while (randomIndex === currentProverbIndex && proverbs.length > 1); // Avoid repeating the same proverb immediately
+                    } while (randomIndex === currentProverbIndex && proverbs.length > 1); // 避免立即重複同一條箴言
                     currentProverbIndex = randomIndex;
 
                     const selectedProverb = proverbs[randomIndex];
-                    typeWriterEffect(proverbDisplay, selectedProverb, 50, () => { // Typing speed 50ms per char
-                        generateButton.disabled = false; // Re-enable button after typing
+                    typeWriterEffect(proverbDisplay, selectedProverb, 60, () => { // 打字速度 60ms/字
+                        generateButton.disabled = false; // 打字結束後啟用按鈕
                     });
-                }, 800); // Simulate thinking time (800ms)
+                }, 1000); // 模擬思考時間 (1000ms)
             }
 
             // 按鈕點擊時產生新箴言
             generateButton.addEventListener('click', displayRandomProverb);
 
-            // 頁面載入時先顯示一條箴言 (如果需要)
-            // displayRandomProverb(); // 為了保持原始「點擊下方按鈕...」的提示，此處不自動觸發
 
-
-            // --- 2.5 世代：主題切換功能 ---
+            // --- 3.0 世代：主題切換功能 ---
             function toggleTheme() {
                 if (body.classList.contains('light-theme')) {
                     body.classList.remove('light-theme');
@@ -419,22 +450,22 @@
                 body.classList.remove('light-theme');
                 moonIcon.style.display = 'block';
                 sunIcon.style.display = 'none';
-            } else if (!prefersDark && savedTheme === null) { // Default to light if no saved preference and system prefers light
+            } else if (!prefersDark && savedTheme === null) { // 如果沒有保存的偏好且系統偏好亮色主題
                 body.classList.add('light-theme');
                 moonIcon.style.display = 'none';
                 sunIcon.style.display = 'block';
-            } else { // Default to dark (system prefers dark or no preference detected/saved dark)
+            } else { // 預設為暗色主題 (系統偏好暗色或無偏好)
                 body.classList.remove('light-theme');
                 moonIcon.style.display = 'block';
                 sunIcon.style.display = 'none';
             }
 
 
-            // --- 2.5 世代：Canvas 抽象粒子效果 ---
+            // --- 3.0 世代：Canvas 抽象粒子效果 ---
             const canvas = document.getElementById('subtle-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
-            const particleCount = 100;
+            const particleCount = 150; // 增加粒子數量
 
             function resizeCanvas() {
                 canvas.width = window.innerWidth;
@@ -451,22 +482,29 @@
                 reset() {
                     this.x = Math.random() * canvas.width;
                     this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 2 + 1; // 1 to 3
-                    this.speedX = Math.random() * 0.5 - 0.25; // -0.25 to 0.25
-                    this.speedY = Math.random() * 0.5 - 0.25; // -0.25 to 0.25
-                    this.opacity = Math.random(); // Initial random opacity
-                    this.fadeSpeed = Math.random() * 0.005 + 0.001; // Slower fade
+                    this.size = Math.random() * 2.5 + 0.5; // 粒子大小範圍 0.5 到 3
+                    this.speedX = Math.random() * 0.7 - 0.35; // 粒子水平速度 -0.35 到 0.35
+                    this.speedY = Math.random() * 0.7 - 0.35; // 粒子垂直速度 -0.35 到 0.35
+                    this.opacity = Math.random() * 0.8 + 0.2; // 初始不透明度，略微可見
+                    this.fadeSpeed = Math.random() * 0.003 + 0.0005; // 更慢的淡出速度
+                    this.growShrinkSpeed = Math.random() * 0.02 - 0.01; // 微妙的粒子膨脹/收縮效果
                 }
 
                 update() {
                     this.x += this.speedX;
                     this.y += this.speedY;
                     this.opacity -= this.fadeSpeed;
+                    this.size += this.growShrinkSpeed;
 
-                    // If particle fades out or goes off screen, reset it
-                    if (this.opacity <= 0 || this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    // 確保粒子大小在合理範圍內
+                    if (this.size < 0.5 || this.size > 3) {
+                        this.growShrinkSpeed *= -1;
+                    }
+
+                    // 如果粒子淡出或超出螢幕，則重置它
+                    if (this.opacity <= 0 || this.x < -this.size || this.x > canvas.width + this.size || this.y < -this.size || this.y > canvas.height + this.size) {
                         this.reset();
-                        this.opacity = 1; // Respawn fully visible
+                        this.opacity = Math.random() * 0.8 + 0.2; // 重生時帶有變化的不透明度
                     }
                 }
 
@@ -485,12 +523,13 @@
             }
 
             function animateParticles() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.globalCompositeOperation = 'lighter'; // Makes particles glow
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除畫布
 
-                // Get current particle base color from CSS variable for dynamic theming
+                // 從 CSS 變量獲取當前粒子基礎顏色，實現動態主題切換
                 const rootStyles = getComputedStyle(document.documentElement);
                 const particleBaseColorRGB = rootStyles.getPropertyValue('--particle-color').trim();
+
+                ctx.globalCompositeOperation = 'lighter'; // 讓粒子發光並融合
 
                 for (let i = 0; i < particles.length; i++) {
                     particles[i].update();
