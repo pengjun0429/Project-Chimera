@@ -58,8 +58,10 @@ try:
     # 4. 寫回檔案
     with open(HTML_FILE, 'w', encoding='utf-8') as f:
         f.write(new_html)
-        
-    print("✨ 進化成功！第 1 代奇美拉已誕生。")
+
+    times=5.5
+    times=times+1
+    print("✨ 進化成功！第" + times " 代奇美拉已誕生。")
 
 except Exception as e:
     print(f"💥 進化崩潰: {e}")
