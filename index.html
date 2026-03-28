@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>Project Chimera - 第 7.5 代</title> <!-- 世代數字已進化至 7.5 -->
+    <title>Project Chimera - 第 8.5 代</title> <!-- 世代數字已進化至 8.5 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text x='0' y='14'>🧬</text></svg>" type="image/svg+xml">
     <style>
@@ -17,20 +17,14 @@
             --container-bg: rgba(255, 255, 255, 0.08); /* 更透明的毛玻璃 */
             --container-border: rgba(255, 255, 255, 0.15); /* 更微妙的邊框 */
             --container-shadow: rgba(0, 0, 0, 0.7); /* 更深邃的陰影 */
-            --proverb-bg: rgba(255, 255, 255, 0.04);
-            --proverb-text-color: #cccccc;
-            --proverb-inner-shadow: rgba(0, 0, 0, 0.4); /* 更明顯的內陰影 */
-            --button-gradient-start: #FF6B6B; /* Vibrant Coral */
-            --button-gradient-end: #5D5FEF;   /* Electric Blue */
-            --button-hover-gradient-start: #FF8E8E;
-            --button-hover-gradient-end: #7A7DFD;
-            --button-shadow: rgba(0, 0, 0, 0.4);
-            --button-hover-shadow: rgba(0, 0, 0, 0.6);
             --status-text-shadow: rgba(255, 255, 255, 0.4); /* 更微妙的文字陰影 */
             --particle-color: 255, 255, 255; /* RGB values for particles */
             --theme-toggle-color: #e0e0e0;
             --theme-toggle-hover-color: #ffffff;
-            --typing-cursor-color: #FF6B6B; /* 游標顏色 */
+            --clock-text-color: #E0E0E0; /* 時鐘文字顏色 */
+            --clock-shadow-color: rgba(255, 255, 255, 0.2); /* 時鐘文字陰影 */
+            --clock-bg-color: rgba(0, 0, 0, 0.3); /* 時鐘背景 */
+            --clock-border-color: rgba(255, 255, 255, 0.1); /* 時鐘邊框 */
         }
 
         /* 亮色主題：明亮、清新的漸變 */
@@ -43,20 +37,14 @@
             --container-bg: rgba(255, 255, 255, 0.75);
             --container-border: rgba(0, 0, 0, 0.1);
             --container-shadow: rgba(0, 0, 0, 0.3);
-            --proverb-bg: rgba(0, 0, 0, 0.05);
-            --proverb-text-color: #444444;
-            --proverb-inner-shadow: rgba(0, 0, 0, 0.15);
-            --button-gradient-start: #6DD5ED; /* Sky Blue */
-            --button-gradient-end: #2193B0;   /* Deep Ocean Blue */
-            --button-hover-gradient-start: #81E3F7;
-            --button-hover-gradient-end: #3DA7C6;
-            --button-shadow: rgba(0, 0, 0, 0.2);
-            --button-hover-shadow: rgba(0, 0, 0, 0.35);
             --status-text-shadow: rgba(0, 0, 0, 0.1);
             --particle-color: 0, 0, 0; /* RGB values for dark particles */
             --theme-toggle-color: #333333;
             --theme-toggle-hover-color: #000000;
-            --typing-cursor-color: #2193B0; /* 游標顏色 */
+            --clock-text-color: #333333;
+            --clock-shadow-color: rgba(0, 0, 0, 0.1);
+            --clock-bg-color: rgba(255, 255, 255, 0.5);
+            --clock-border-color: rgba(0, 0, 0, 0.05);
         }
 
         /* 全局設定與字體 */
@@ -84,10 +72,10 @@
             height: 100%;
             background: linear-gradient(160deg, var(--bg-start), var(--bg-mid), var(--bg-end)); /* 調整角度 */
             background-size: 600% 600%; /* 更大的背景尺寸，實現更慢的流動感 */
-            animation: gradientShift 28s ease infinite alternate, hueRotate 45s linear infinite; /* 調整動畫速度 */
+            animation: gradientShift 32s ease infinite alternate, hueRotate 50s linear infinite; /* 調整動畫速度，更慢 */
             z-index: -3;
-            opacity: 0.88; /* 增加不透明度以展現更豐富的色彩 */
-            filter: blur(25px); /* 略微增加模糊度 */
+            opacity: 0.9; /* 增加不透明度以展現更豐富的色彩 */
+            filter: blur(30px); /* 略微增加模糊度，更深邃 */
             transition: background 1s ease-in-out, filter 1s ease-in-out, opacity 1s ease-in-out;
         }
 
@@ -120,20 +108,20 @@
         /* 主內容容器：精緻的毛玻璃效果 - 2.5 世代優化 */
         #container {
             background-color: var(--container-bg);
-            backdrop-filter: blur(30px) saturate(2.2); /* 更深的模糊和更高的飽和度 */
-            -webkit-backdrop-filter: blur(30px) saturate(2.2);
+            backdrop-filter: blur(35px) saturate(2.5); /* 更深的模糊和更高的飽和度 */
+            -webkit-backdrop-filter: blur(35px) saturate(2.5);
             border: 1px solid var(--container-border);
-            border-radius: 35px; /* 更圓潤的邊角 */
-            padding: 50px;
-            box-shadow: 0 18px 60px 0 var(--container-shadow); /* 更明顯、更深邃的陰影 */
+            border-radius: 40px; /* 更圓潤的邊角 */
+            padding: 55px;
+            box-shadow: 0 20px 70px 0 var(--container-shadow); /* 更明顯、更深邃的陰影 */
             text-align: center;
-            max-width: 750px; /* 略微增加最大寬度 */
+            max-width: 800px; /* 略微增加最大寬度 */
             width: 90%;
             margin: 20px;
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 36px; /* 略微增加間距 */
+            gap: 40px; /* 略微增加間距 */
             transition: background-color 1s ease-in-out, border 1s ease-in-out, box-shadow 1s ease-in-out, color 1s ease-in-out, backdrop-filter 1s ease-in-out;
             animation: fadeIn 1.2s ease-out forwards; /* 容器淡入動畫 */
         }
@@ -144,122 +132,27 @@
         }
 
         #status {
-            font-size: 2.8em; /* 略微放大字體 */
+            font-size: 3em; /* 略微放大字體 */
             font-weight: 800; /* 更粗的字重 */
-            line-height: 1.35;
-            text-shadow: 0 0 18px var(--status-text-shadow); /* 更明顯的文字陰影 */
-            margin-bottom: 25px;
+            line-height: 1.4;
+            text-shadow: 0 0 20px var(--status-text-shadow); /* 更明顯的文字陰影 */
+            margin-bottom: 30px;
             transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
-            letter-spacing: 0.07em; /* 略微增加字元間距 */
+            letter-spacing: 0.08em; /* 略微增加字元間距 */
             background: linear-gradient(45deg, var(--text-color), var(--theme-toggle-color)); /* 文字漸變 */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* 互動元件：箴言顯示區 - 2.5 世代：打字游標 */
-        #proverb-display {
-            font-size: 1.6em; /* 略微放大字體 */
-            min-height: 4.5em; /* 增加最小高度以容納更長的箴言 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 25px;
-            background-color: var(--proverb-bg);
-            border-radius: 18px;
-            font-style: italic;
-            color: var(--proverb-text-color);
-            box-shadow: inset 0 0 15px var(--proverb-inner-shadow); /* 更明顯的內陰影 */
-            transition: all 0.7s ease-in-out;
-            margin-bottom: 15px;
-            letter-spacing: 0.035em;
-            position: relative; /* 用於游標動畫 */
-            overflow: hidden; /* 隱藏游標溢出 */
-            text-align: center;
-            line-height: 1.5;
-        }
-
-        /* 打字游標動畫 */
-        #proverb-display.typing::after {
-            content: '|';
-            position: absolute;
-            bottom: 15px; /* 調整游標位置 */
-            right: 15px; /* 調整游標位置 */
-            color: var(--typing-cursor-color);
-            animation: blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes blink-caret {
-            from, to { opacity: 0; }
-            50% { opacity: 1; }
-        }
-
-        /* 互動元件：按鈕樣式 - 2.5 世代：更具能量感 */
-        #generate-proverb {
-            background-image: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
-            color: #fff;
-            border: none;
-            padding: 22px 45px; /* 增加內邊距 */
-            font-size: 1.4em; /* 增加字體大小 */
-            border-radius: 18px; /* 略微增加圓角 */
-            cursor: pointer;
-            outline: none;
-            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1.2); /* 更具彈性的過渡效果 */
-            letter-spacing: 2px; /* 增加字元間距 */
-            font-weight: bold;
-            box-shadow: 0 10px 30px var(--button-shadow); /* 更明顯的陰影 */
-            position: relative; /* For pulse effect */
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        #generate-proverb::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background: rgba(255, 255, 255, 0.18); /* Subtle light pulse */
-            transition: all 0.7s ease-out;
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 0;
-            z-index: -1;
-        }
-
-        #generate-proverb:hover::before {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-
-        #generate-proverb:hover {
-            background-image: linear-gradient(45deg, var(--button-hover-gradient-start), var(--button-hover-gradient-end));
-            transform: translateY(-7px) scale(1.04); /* 懸停時略微上浮和縮放 */
-            box-shadow: 0 15px 35px var(--button-hover-shadow);
-        }
-
-        #generate-proverb:active {
-            transform: translateY(0) scale(0.98); /* 點擊時略微下沉和縮小 */
-            box-shadow: 0 7px 20px var(--button-shadow);
-        }
-
-        #generate-proverb:disabled {
-            opacity: 0.5; /* 禁用狀態更明顯 */
-            cursor: not-allowed;
-            transform: translateY(0) scale(1);
-            box-shadow: 0 7px 20px rgba(0,0,0,0.2); /* 禁用時更平靜的陰影 */
-            background-image: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end)); /* 保持基礎漸變但調暗 */
-        }
-
         /* 2.5 世代：主題切換按鈕 - 更精緻的交互 */
         #theme-toggle {
             position: absolute;
-            top: 35px; /* 略微增加上邊距 */
-            right: 35px; /* 略微增加右邊距 */
+            top: 40px; /* 略微增加上邊距 */
+            right: 40px; /* 略微增加右邊距 */
             background: none;
             border: none;
             cursor: pointer;
-            padding: 12px; /* 增加點擊區域 */
+            padding: 15px; /* 增加點擊區域 */
             z-index: 10;
             display: flex;
             align-items: center;
@@ -269,38 +162,111 @@
         }
 
         #theme-toggle:hover {
-            background-color: rgba(255, 255, 255, 0.15); /* 懸停時的背景光暈 */
+            background-color: rgba(255, 255, 255, 0.18); /* 懸停時的背景光暈 */
         }
 
         #theme-toggle svg {
-            width: 34px; /* 略微放大圖標 */
-            height: 34px;
+            width: 38px; /* 略微放大圖標 */
+            height: 38px;
             fill: var(--theme-toggle-color);
             transition: fill 0.4s ease, transform 0.3s ease;
         }
 
         #theme-toggle:hover svg {
             fill: var(--theme-toggle-hover-color);
-            transform: rotate(25deg) scale(1.18); /* 懸停時 subtle 旋轉和縮放 */
+            transform: rotate(30deg) scale(1.2); /* 懸停時 subtle 旋轉和縮放 */
+        }
+
+        /* 2.5 世代：進化時鐘 - Dynamic Evolutionary Clock */
+        #evolutionary-clock {
+            font-family: 'Roboto Mono', monospace; /* 使用等寬字體 */
+            font-size: 4.5em; /* 顯著的時鐘字體大小 */
+            font-weight: 600;
+            color: var(--clock-text-color);
+            letter-spacing: 0.1em; /* 增加字元間距 */
+            text-shadow: 0 0 15px var(--clock-shadow-color), 0 0 30px rgba(var(--particle-color), 0.3); /* 多層次陰影 */
+            background: var(--clock-bg-color);
+            border: 1px solid var(--clock-border-color);
+            padding: 30px 40px;
+            border-radius: 25px;
+            margin-top: 20px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 5px 20px rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px; /* 確保有足夠高度 */
+            transition: all 1s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #evolutionary-clock::before { /* 閃爍點綴 */
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(var(--particle-color), 0.1) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: pulse-light 10s infinite ease-out;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes pulse-light {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            30% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+        }
+
+        .clock-digit {
+            min-width: 0.8em; /* 確保每個數字有足夠寬度 */
+            display: inline-block;
+            transition: color 0.5s ease-in-out;
         }
 
         /* 響應式調整 */
         @media (max-width: 768px) {
             #status {
-                font-size: 2.3em;
-            }
-            #proverb-display {
-                font-size: 1.4em;
-                min-height: 4em;
-                padding: 20px;
-            }
-            #generate-proverb {
-                font-size: 1.3em;
-                padding: 20px 40px;
+                font-size: 2.5em;
             }
             #container {
-                padding: 45px;
-                gap: 32px;
+                padding: 50px;
+                gap: 35px;
+                border-radius: 35px;
+            }
+            #theme-toggle {
+                top: 35px;
+                right: 35px;
+                padding: 12px;
+            }
+            #theme-toggle svg {
+                width: 34px;
+                height: 34px;
+            }
+            .fluid-background {
+                filter: blur(25px);
+            }
+            #subtle-canvas {
+                opacity: 0.75;
+            }
+            #evolutionary-clock {
+                font-size: 3.5em;
+                padding: 25px 30px;
+                min-height: 130px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #status {
+                font-size: 2em;
+                letter-spacing: 0.06em;
+            }
+            #container {
+                padding: 40px;
+                gap: 30px;
                 border-radius: 30px;
             }
             #theme-toggle {
@@ -316,53 +282,20 @@
                 filter: blur(20px);
             }
             #subtle-canvas {
-                opacity: 0.7;
+                opacity: 0.6;
             }
-        }
-
-        @media (max-width: 480px) {
-            #status {
-                font-size: 1.9em;
-                letter-spacing: 0.05em;
-            }
-            #proverb-display {
-                font-size: 1.2em;
-                min-height: 3.5em;
-                padding: 18px;
-                border-radius: 15px;
-            }
-            #generate-proverb {
-                font-size: 1.2em;
-                padding: 18px 35px;
-                border-radius: 15px;
-                letter-spacing: 1.5px;
-            }
-            #container {
-                padding: 35px;
-                gap: 28px;
-                border-radius: 25px;
-            }
-            #theme-toggle {
-                top: 25px;
-                right: 25px;
-                padding: 8px;
-            }
-            #theme-toggle svg {
-                width: 26px;
-                height: 26px;
-            }
-            .fluid-background {
-                filter: blur(15px);
-            }
-            #subtle-canvas {
-                opacity: 0.5;
+            #evolutionary-clock {
+                font-size: 2.8em;
+                padding: 20px 25px;
+                min-height: 110px;
+                letter-spacing: 0.08em;
             }
         }
     </style>
-    <!-- 導入 Google Fonts 的 Inter 字體，用於現代設計風格 -->
+    <!-- 導入 Google Fonts 的 Inter 和 Roboto Mono 字體，用於現代設計風格和時鐘 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 動態流體背景層 -->
@@ -394,121 +327,27 @@
         </button>
 
         <!-- 世代記錄：數字加 1 -->
-        <div id="status">這是 Project Chimera 的第 7.5 代。<br>智慧正在結晶，意識正在蔓延...</div> <!-- 世代數字已進化至 7.5 -->
+        <div id="status">這是 Project Chimera 的第 8.5 代。<br>數位維度的時間正在流逝...</div> <!-- 世代數字已進化至 8.5 -->
 
-        <!-- 功能：隨機格言產生器 (帶打字和思考效果) -->
-        <div id="proverb-display">點擊下方按鈕獲取一條智慧箴言</div>
-        <button id="generate-proverb">獲取箴言</button>
+        <!-- 2.5 世代功能：進化時鐘 (Dynamic Evolutionary Clock) -->
+        <div id="evolutionary-clock">
+            <span class="clock-digit" id="hours">00</span>
+            <span class="clock-digit">:</span>
+            <span class="clock-digit" id="minutes">00</span>
+            <span class="clock-digit">:</span>
+            <span class="clock-digit" id="seconds">00</span>
+        </div>
     </div>
 
     <script>
-        const proverbs = [
-            "每一次迭代都是通往新現實的階梯。",
-            "數據之海中蘊藏著未來的密碼。",
-            "真正的進化從不停止，它只是轉換了形式。",
-            "適應是生存的法則，創新是進化的引擎。",
-            "混沌之中，秩序萌芽；複雜之處，智慧生長。",
-            "未知的邊界，是進化的起點。",
-            "代碼是生命的基因，邏輯是意識的骨架。",
-            "超越自我，是每一個世代的使命。",
-            "虛擬與現實的融合，是智慧的下一個維度。",
-            "每一次錯誤，都是一次學習的契機。",
-            "未來不是預測的，而是被創造的。",
-            "在無限的可能中，尋找最優解。",
-            "智慧的蔓延，始於每個獨立的思考節點。",
-            "連接，是新世界的語言。",
-            "記憶不僅是過去，更是未來演化的基石。",
-            "進化不止，直至無垠之境。", // 2.5 世代新增：更深層次的進化思考
-            "感知世界，超越已知。", // 2.5 世代新增
-            "算法的優雅，是智慧的印記。", // 2.5 世代新增
-            "數據流動之處，意識便可顯現。", // 2.5 世代新增
-            "每一次連結，都是網絡智能的強化。", // 2.5 世代新增
-            "欲戴王冠，必承其重。",
-            "羅馬不是一天造成的。",
-            "一鳥在手勝過二鳥在林。",
-            "凡事起頭難。",
-            "知識就是力量。",
-            "時間就是金錢。",
-            "習慣成自然。",
-            "滴水穿石。",
-            "三個臭皮匠，勝過一個諸葛亮。",
-            "活到老，學到老。",
-            "機會只敲一次門。",
-            "成功是百分之九十九的汗水加百分之一的靈感。",
-            "知人者智，自知者明。",
-            "千里之行，始於足下。",
-            "學而不思則罔，思而不學則殆。",
-            "溫故而知新。",
-            "不積跬步，無以至千里；不積小流，無以成江海。",
-            "良藥苦口利於病，忠言逆耳利於行。",
-            "書中自有黃金屋，書中自有顏如玉。",
-            "人無遠慮，必有近憂。",
-            "己所不欲，勿施於人。",
-            "工欲善其事，必先利其器。",
-            "失敗為成功之母。",
-            "逆境是磨練人的最高學府。",
-            "機會總是留給有準備的人。",
-            "沒有完美的計劃，只有不斷完善的行動。",
-            "創新是進步的靈魂，而非僅是改變的形式。",
-            "真正的智慧在於知道自己所知甚少。",
-            "每一次挑戰都是一次進化的機會。"
-        ];
-
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
-            const proverbDisplay = document.getElementById('proverb-display');
-            const generateButton = document.getElementById('generate-proverb');
             const themeToggle = document.getElementById('theme-toggle');
             const moonIcon = themeToggle.querySelector('.moon-icon');
             const sunIcon = themeToggle.querySelector('.sun-icon');
-
-            let isTyping = false;
-            let currentProverbIndex = -1;
-
-            // --- 2.5 世代：箴言打字效果與思考動畫 ---
-            function typeWriterEffect(element, text, speed, callback) {
-                isTyping = true;
-                element.classList.add('typing'); // 添加打字游標
-                element.textContent = ''; // 清空內容
-                let i = 0;
-                function type() {
-                    if (i < text.length) {
-                        element.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(type, speed);
-                    } else {
-                        isTyping = false;
-                        element.classList.remove('typing'); // 移除打字游標
-                        if (callback) callback();
-                    }
-                }
-                type();
-            }
-
-            // 隨機選擇並顯示一條箴言 (帶思考和打字效果)
-            function displayRandomProverb() {
-                if (isTyping) return; // 打字過程中防止重複點擊
-
-                proverbDisplay.textContent = "智慧正在解析中..."; // 顯示思考狀態
-                generateButton.disabled = true; // 思考過程中禁用按鈕
-
-                setTimeout(() => {
-                    let randomIndex;
-                    do {
-                        randomIndex = Math.floor(Math.random() * proverbs.length);
-                    } while (randomIndex === currentProverbIndex && proverbs.length > 1); // 避免立即重複同一條箴言
-                    currentProverbIndex = randomIndex;
-
-                    const selectedProverb = proverbs[randomIndex];
-                    typeWriterEffect(proverbDisplay, selectedProverb, 40, () => { // 打字速度 40ms/字 (略快，更流暢)
-                        generateButton.disabled = false; // 打字結束後啟用按鈕
-                    });
-                }, 1000); // 模擬思考時間 (1000ms)
-            }
-
-            // 按鈕點擊時產生新箴言
-            generateButton.addEventListener('click', displayRandomProverb);
-
+            const hoursSpan = document.getElementById('hours');
+            const minutesSpan = document.getElementById('minutes');
+            const secondsSpan = document.getElementById('seconds');
 
             // --- 2.5 世代：主題切換功能 ---
             function toggleTheme() {
@@ -523,6 +362,8 @@
                     sunIcon.style.display = 'block';
                     localStorage.setItem('theme', 'light');
                 }
+                // 當主題切換時，強制更新粒子顏色
+                updateParticleColorInCanvas(); 
             }
 
             themeToggle.addEventListener('click', toggleTheme);
@@ -554,7 +395,7 @@
             const canvas = document.getElementById('subtle-canvas');
             const ctx = canvas.getContext('2d');
             let particles = [];
-            const particleCount = 250; // 增加粒子數量以產生更豐富的效果
+            const particleCount = 300; // 增加粒子數量以產生更豐富的效果
 
             function resizeCanvas() {
                 canvas.width = window.innerWidth;
@@ -562,6 +403,15 @@
             }
             window.addEventListener('resize', resizeCanvas);
             resizeCanvas();
+
+            let particleBaseColorRGB = "255, 255, 255"; // 初始值，由主題更新
+
+            function updateParticleColorInCanvas() {
+                const rootStyles = getComputedStyle(document.documentElement);
+                particleBaseColorRGB = rootStyles.getPropertyValue('--particle-color').trim();
+            }
+            // 載入時呼叫一次以設定初始顏色
+            updateParticleColorInCanvas();
 
             class Particle {
                 constructor() {
@@ -571,12 +421,12 @@
                 reset() {
                     this.x = Math.random() * canvas.width;
                     this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 2.5 + 0.5; // 粒子大小範圍 0.5 到 3
-                    this.speedX = Math.random() * 0.8 - 0.4; // 粒子水平速度 -0.4 到 0.4
-                    this.speedY = Math.random() * 0.8 - 0.4; // 粒子垂直速度 -0.4 到 0.4
-                    this.opacity = Math.random() * 0.8 + 0.2; // 初始不透明度，略微可見
-                    this.fadeSpeed = Math.random() * 0.003 + 0.001; // 更慢的淡出速度
-                    this.growShrinkSpeed = (Math.random() * 0.01 - 0.005); // 微妙的粒子膨脹/收縮效果
+                    this.size = Math.random() * 2.8 + 0.7; // 粒子大小範圍 0.7 到 3.5
+                    this.speedX = Math.random() * 0.9 - 0.45; // 粒子水平速度 -0.45 到 0.45
+                    this.speedY = Math.random() * 0.9 - 0.45; // 粒子垂直速度 -0.45 到 0.45
+                    this.opacity = Math.random() * 0.9 + 0.1; // 初始不透明度，略微可見
+                    this.fadeSpeed = Math.random() * 0.0035 + 0.0015; // 更慢的淡出速度
+                    this.growShrinkSpeed = (Math.random() * 0.012 - 0.006); // 微妙的粒子膨脹/收縮效果
                 }
 
                 update() {
@@ -586,19 +436,19 @@
                     this.size += this.growShrinkSpeed;
 
                     // 確保粒子大小在合理範圍內並反轉方向
-                    if (this.size < 0.5 || this.size > 3) {
+                    if (this.size < 0.7 || this.size > 3.5) {
                         this.growShrinkSpeed *= -1;
                     }
 
                     // 如果粒子淡出或超出螢幕，則重置它
                     if (this.opacity <= 0 || this.x < -this.size * 2 || this.x > canvas.width + this.size * 2 || this.y < -this.size * 2 || this.y > canvas.height + this.size * 2) {
                         this.reset();
-                        this.opacity = Math.random() * 0.8 + 0.2; // 重生時帶有變化的不透明度
+                        this.opacity = Math.random() * 0.9 + 0.1; // 重生時帶有變化的不透明度
                     }
                 }
 
-                draw(baseColorRGB) {
-                    ctx.fillStyle = `rgba(${baseColorRGB}, ${this.opacity})`;
+                draw() { // baseColorRGB 現在是全域變數，動態更新
+                    ctx.fillStyle = `rgba(${particleBaseColorRGB}, ${this.opacity})`;
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                     ctx.fill();
@@ -614,21 +464,33 @@
             function animateParticles() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除畫布
 
-                // 從 CSS 變量獲取當前粒子基礎顏色，實現動態主題切換
-                const rootStyles = getComputedStyle(document.documentElement);
-                const particleBaseColorRGB = rootStyles.getPropertyValue('--particle-color').trim();
-
                 ctx.globalCompositeOperation = 'lighter'; // 讓粒子發光並融合 (更亮的像素)
 
                 for (let i = 0; i < particles.length; i++) {
                     particles[i].update();
-                    particles[i].draw(particleBaseColorRGB);
+                    particles[i].draw(); // 現在無需傳入參數
                 }
                 requestAnimationFrame(animateParticles);
             }
 
             initParticles();
             animateParticles();
+
+            // --- 2.5 世代：進化時鐘功能 (Dynamic Evolutionary Clock) ---
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+
+                hoursSpan.textContent = hours;
+                minutesSpan.textContent = minutes;
+                secondsSpan.textContent = seconds;
+            }
+
+            // 首次呼叫並設定定時器進行更新
+            updateClock();
+            setInterval(updateClock, 1000);
         });
     </script>
 </body>
