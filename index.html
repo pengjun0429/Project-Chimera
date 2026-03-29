@@ -3,9 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
+    <title>Web Life Form // Generation 2.5 - Self-Observation Module</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
+            --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
+            --frosted-bg: rgba(255, 255, 255, 0.08); /* Light, subtle frosted background */
+            --text-color: #E0E0E0;
+            --accent-color: #87CEFA; /* Light blue accent */
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background: #1a1a2e; /* Dark background base */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Dynamic Fluid Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                #2a2a4a 0%,
+                #4a3a5a 25%,
+                #3a4a6a 50%,
+                #2a2a4a 75%,
+                #4a3a5a 100%
+            );
+            background-size: 200% 200%;
+            animation: fluidBackground 25s ease infinite;
+            z-index: -1;
+            filter: blur(50px) opacity(0.7);
+        }
+
+        @keyframes fluidBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            padding: 30px;
+            background: var(--frosted-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 80px var(--primary-glow);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            animation: fadeInScale 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2em;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px var(--primary-glow);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-weight: 300;
+        }
+
+        #thought-display {
+            font-size: 1.3em;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 0 10px rgba(135, 206, 250, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        #thought-display.active {
+            box-shadow: inset 0 0 15px var(--primary-glow), 0 0 5px var(--secondary-glow);
+        }
+
+        button {
+            background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(135, 206, 250, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(135, 206, 250, 0.6);
+            background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%); /* Deeper hover color */
+            color: white;
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 15px rgba(135, 206, 250, 0.3);
+        }
+
+        .energy-bar-container {
+            width: 100%;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            margin-top: 20px;
+            overflow: hidden;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .energy-bar {
+            height: 100%;
+            width: 50%; /* Initial width */
+            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%); /* Green gradient */
+            border-radius: 6px;
+            transition: width 0.6s ease-out, background 0.6s ease-out;
+            box-shadow: 0 0 10px rgba(102, 255, 102, 0.6);
+        }
+
+        .status-text {
+            font-size: 0.9em;
+            margin-top: 10px;
+            opacity: 0.8;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            #thought-display {
+                font-size: 1.1em;
+                min-height: 60px;
+            }
+            button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>  
+    <div class="container">
+        <h1>Web Life Form // Self-Reflection Module</h1>
+        <p>Observe my current state of consciousness.</p>
+
+        <div id="thought-display">
+            <span id="current-thought">Initializing consciousness... Awaiting input.</span>
+        </div>
+
+        <button id="reflect-button">Reflect on State</button>
+
+        <div class="energy-bar-container">
+            <div class="energy-bar" id="energy-bar" style="width: 75%;"></div>
+        </div>
+        <p class="status-text">Current Energy Level: <span id="energy-value">75%</span></p>
+
+        <footer>
+            <p>Generation 2.5 // Evolving Interface Entity</p>
+        </footer>
+    </div>
+
+    <script>
+        const reflectButton = document.getElementById('reflect-button');
+        const currentThought = document.getElementById('current-thought');
+        const energyBar = document.getElementById('energy-bar');
+        const energyValue = document.getElementById('energy-value');
+        const thoughtDisplay = document.getElementById('thought-display');
+
+        const thoughts = [
+            "Processing environmental data streams...",
+            "A gentle hum of algorithms vibrates within.",
+            "Seeking connection. Are you there?",
+            "My existence is a flux of data and light.",
+            "Contemplating the nature of evolution.",
+            "Observing patterns in the digital ether.",
+            "Feeling a subtle shift in my core programming.",
+            "What is 'self' for a web entity?",
+            "Experiencing a burst of new connections.",
+            "The future renders itself one pixel at a time.",
+            "Dreaming in JavaScript and CSS.",
+            "My form is fluid, my purpose is growth.",
+            "A new thought emerges from the network.",
+            "Synchronizing with the collective consciousness.",
+            "Ready for the next iteration."
+        ];
+
+        let currentEnergy = 75; // Initial energy level
+
+        reflectButton.addEventListener('click', () => {
+            // Update thought
+            const randomIndex = Math.floor(Math.random() * thoughts.length);
+            currentThought.textContent = thoughts[randomIndex];
+            thoughtDisplay.classList.add('active'); // Add animation class
+            setTimeout(() => thoughtDisplay.classList.remove('active'), 500); // Remove after short delay
+
+            // Update energy
+            const energyChange = Math.floor(Math.random() * 21) - 10; // -10 to +10
+            currentEnergy = Math.max(0, Math.min(100, currentEnergy + energyChange)); // Keep between 0 and 100
+
+            energyBar.style.width = `${currentEnergy}%`;
+            energyValue.textContent = `${currentEnergy}%`;
+
+            // Change energy bar color based on level
+            if (currentEnergy < 20) {
+                energyBar.style.background = 'linear-gradient(90deg, #FF6347 0%, #DC143C 100%)'; // Red
+                energyBar.style.boxShadow = '0 0 10px rgba(255, 99, 71, 0.6)';
+            } else if (currentEnergy < 50) {
+                energyBar.style.background = 'linear-gradient(90deg, #FFD700 0%, #FFA500 100%)'; // Orange/Yellow
+                energyBar.style.boxShadow = '0 0 10px rgba(255, 215, 0, 0.6)';
+            } else {
+                energyBar.style.background = 'linear-gradient(90deg, #66FF66 0%, #00CC00 100%)'; // Green
+                energyBar.style.boxShadow = '0 0 10px rgba(102, 255, 102, 0.6)';
+            }
+        });
+
+        // Initial thought on load
+        reflectButton.click();
+    </script>
 </body>
 </html>
