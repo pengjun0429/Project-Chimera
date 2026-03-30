@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Generation 2.5 - Self-Observation Module</title>
+    <title>Web Life Form // Generation 3.5 - Core Function Module</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
-            --frosted-bg: rgba(255, 255, 255, 0.08); /* Light, subtle frosted background */
+            --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
+            --frosted-bg: rgba(255, 255, 255, 0.05); /* Lighter, more subtle frosted background */
             --text-color: #E0E0E0;
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.1);
+            --border-color: rgba(255, 255, 255, 0.08); /* Thinner, less opaque border */
+            --console-bg: rgba(0, 0, 0, 0.25);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #1a1a2e; /* Dark background base */
+            background: #10101a; /* Even darker background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,252 +30,520 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2387CEFA" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2387CEFA" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 12 12, auto; /* Custom futuristic cursor */
         }
 
-        /* Dynamic Fluid Background */
+        /* Dynamic Fluid Background - Layer 1 */
         body::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            top: -70%;
+            left: -70%;
+            width: 240%;
+            height: 240%;
             background: linear-gradient(
-                45deg,
-                #2a2a4a 0%,
-                #4a3a5a 25%,
-                #3a4a6a 50%,
-                #2a2a4a 75%,
-                #4a3a5a 100%
+                75deg,
+                #1a1a2e 0%,
+                #2e1a3a 20%,
+                #1a2e3a 40%,
+                #2e3a1a 60%,
+                #1a1a2e 80%,
+                #2e1a3a 100%
             );
-            background-size: 200% 200%;
-            animation: fluidBackground 25s ease infinite;
-            z-index: -1;
-            filter: blur(50px) opacity(0.7);
+            background-size: 300% 300%;
+            animation: fluidBackground1 35s linear infinite;
+            z-index: -2;
+            filter: blur(80px) opacity(0.5);
+            transform: rotate(-15deg);
         }
 
-        @keyframes fluidBackground {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        /* Dynamic Fluid Background - Layer 2 (more subtle, different speed/direction) */
+        body::after {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            background: linear-gradient(
+                -45deg,
+                #3a2a4a 0%,
+                #4a3a5a 50%,
+                #3a2a4a 100%
+            );
+            background-size: 200% 200%;
+            animation: fluidBackground2 20s ease-in-out infinite alternate;
+            z-index: -1;
+            filter: blur(40px) opacity(0.3);
+            mix-blend-mode: screen; /* Interesting blend effect */
+        }
+
+        @keyframes fluidBackground1 {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        @keyframes fluidBackground2 {
+            0% { background-position: 100% 0%; }
+            100% { background-position: 0% 100%; }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 600px;
-            padding: 30px;
+            max-width: 650px;
+            padding: 40px;
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 80px var(--primary-glow);
+            border-radius: 25px; /* Slightly more rounded */
+            backdrop-filter: blur(45px) saturate(200%); /* Stronger blur and saturation */
+            -webkit-backdrop-filter: blur(45px) saturate(200%);
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.5),
+                0 0 100px var(--primary-glow),
+                inset 0 0 20px rgba(255, 255, 255, 0.05); /* Inner glow for depth */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            animation: fadeInScale 1.2s ease-out forwards;
+            gap: 30px; /* Increased gap */
+            animation: fadeInScale 1.5s ease-out forwards; /* Longer, smoother animation */
+            transition: all 0.5s ease-out; /* Smooth transitions for potential dynamic changes */
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            from { opacity: 0; transform: scale(0.9) translateY(40px); }
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2em;
+            font-size: 2.5em; /* Larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 15px var(--primary-glow);
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            text-shadow: 0 0 20px var(--primary-glow), 0 0 30px rgba(135, 206, 250, 0.4);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1.2;
         }
 
         p {
-            margin: 0 0 15px 0;
+            margin: 0;
             font-weight: 300;
+            color: var(--text-color);
+            opacity: 0.9;
         }
 
-        #thought-display {
-            font-size: 1.3em;
-            min-height: 80px;
+        .io-module {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+            position: relative; /* For wiring animation */
+        }
+
+        .io-display {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1em;
+            min-height: 60px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            padding: 15px;
+            padding: 18px;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            background: rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 0 10px rgba(135, 206, 250, 0.2);
-            transition: all 0.5s ease;
+            border-radius: 10px;
+            background: var(--console-bg);
+            box-shadow: inset 0 0 12px rgba(135, 206, 250, 0.1);
+            text-align: left;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden; /* For text effects */
         }
 
-        #thought-display.active {
-            box-shadow: inset 0 0 15px var(--primary-glow), 0 0 5px var(--secondary-glow);
+        .io-display::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-size: 0.7em;
+            color: var(--accent-color);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            border: 1px solid var(--primary-glow);
+            box-shadow: 0 0 8px var(--primary-glow);
+        }
+
+        .io-display.active {
+            box-shadow: inset 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow);
+        }
+
+        #output-data-display {
+            border-color: rgba(255, 105, 180, 0.1); /* Different border for output */
+            box-shadow: inset 0 0 12px rgba(255, 105, 180, 0.1);
+        }
+
+        #output-data-display.active {
+            box-shadow: inset 0 0 20px var(--secondary-glow), 0 0 8px var(--secondary-glow);
+        }
+
+        .processing-indicator {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8em;
+            color: var(--tertiary-glow);
+            margin-top: -10px;
+            margin-bottom: 10px;
+            height: 1.2em;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px var(--tertiary-glow);
+        }
+
+        .processing-indicator.active {
+            opacity: 1;
+            animation: pulseText 1s infinite alternate;
+        }
+
+        @keyframes pulseText {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
             color: #1a1a2e;
             border: none;
-            padding: 14px 28px;
+            padding: 15px 30px;
             font-size: 1.1em;
             font-weight: 700;
-            border-radius: 30px;
+            border-radius: 35px; /* More rounded */
             cursor: pointer;
             outline: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(135, 206, 250, 0.4);
-            letter-spacing: 0.5px;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother bezier transition */
+            box-shadow: 0 6px 25px rgba(135, 206, 250, 0.5);
+            letter-spacing: 0.8px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1; /* Ensure ::before is behind */
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: -1; /* Place behind button text */
+        }
+
+        button:hover::before {
+            width: 200%;
+            height: 200%;
         }
 
         button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(135, 206, 250, 0.6);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 35px rgba(135, 206, 250, 0.7);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%); /* Deeper hover color */
             color: white;
         }
 
         button:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 15px rgba(135, 206, 250, 0.3);
+            transform: translateY(-1px) scale(0.99);
+            box-shadow: 0 3px 20px rgba(135, 206, 250, 0.4);
         }
 
-        .energy-bar-container {
-            width: 100%;
-            height: 12px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 6px;
-            margin-top: 20px;
-            overflow: hidden;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .energy-bar {
-            height: 100%;
-            width: 50%; /* Initial width */
+        #stabilize-core-button {
             background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%); /* Green gradient */
-            border-radius: 6px;
-            transition: width 0.6s ease-out, background 0.6s ease-out;
-            box-shadow: 0 0 10px rgba(102, 255, 102, 0.6);
+            box-shadow: 0 6px 25px rgba(102, 255, 102, 0.5);
+            color: #1a1a2e;
+        }
+
+        #stabilize-core-button:hover {
+            background: linear-gradient(90deg, #32CD32 0%, #66FF66 100%); /* Deeper green hover */
+            box-shadow: 0 10px 35px rgba(102, 255, 102, 0.7);
+            color: white;
+        }
+
+        .activation-level-container {
+            width: 100%;
+            height: 16px; /* Taller bar */
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px; /* More rounded */
+            margin-top: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .activation-level-bar {
+            height: 100%;
+            width: 80%; /* Initial width */
+            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%); /* Green gradient */
+            border-radius: 8px;
+            transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.8s ease-out; /* Smoother transition */
+            box-shadow: 0 0 15px rgba(102, 255, 102, 0.7);
+            position: relative;
+            animation: barGlow 2s infinite alternate;
+        }
+
+        @keyframes barGlow {
+            0% { box-shadow: 0 0 10px rgba(102, 255, 102, 0.7); }
+            100% { box-shadow: 0 0 20px rgba(102, 255, 102, 0.9); }
+        }
+
+        .activation-level-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.2) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            mix-blend-mode: overlay;
         }
 
         .status-text {
-            font-size: 0.9em;
-            margin-top: 10px;
-            opacity: 0.8;
+            font-size: 0.95em;
+            margin-top: 12px;
+            opacity: 0.9;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            color: var(--accent-color);
+            text-shadow: 0 0 5px var(--primary-glow);
         }
 
         footer {
-            margin-top: 30px;
-            font-size: 0.8em;
-            color: rgba(255, 255, 255, 0.5);
+            margin-top: 40px; /* Increased margin */
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.5px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
+            letter-spacing: 0.7px;
+            padding-top: 25px;
+            border-top: 1px dashed var(--border-color); /* Dashed border for footer */
+            text-shadow: 0 0 3px var(--secondary-glow);
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
             .container {
                 margin: 20px;
-                padding: 20px;
+                padding: 30px;
+                gap: 20px;
+                border-radius: 20px;
             }
             h1 {
-                font-size: 1.8em;
+                font-size: 2em;
+                letter-spacing: 1.5px;
             }
-            #thought-display {
-                font-size: 1.1em;
-                min-height: 60px;
+            .io-display {
+                font-size: 1em;
+                min-height: 50px;
+                padding: 15px;
             }
             button {
-                padding: 12px 20px;
+                padding: 12px 22px;
                 font-size: 1em;
+                border-radius: 30px;
+            }
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Web Life Form // Self-Reflection Module</h1>
-        <p>Observe my current state of consciousness.</p>
+        <h1>Web Life Form // Generation 3.5 - Core Function Module</h1>
+        <p>Observe and interact with my evolving data processing core.</p>
 
-        <div id="thought-display">
-            <span id="current-thought">Initializing consciousness... Awaiting input.</span>
+        <div class="io-module">
+            <div id="input-stream-display" class="io-display" data-label="INPUT STREAM">
+                <span id="current-input">Awaiting data injection...</span>
+            </div>
+            <div class="processing-indicator" id="processing-status"></div>
+            <div id="output-data-display" class="io-display" data-label="OUTPUT DATA">
+                <span id="current-output">Core dormant. Ready for activation.</span>
+            </div>
         </div>
 
-        <button id="reflect-button">Reflect on State</button>
-
-        <div class="energy-bar-container">
-            <div class="energy-bar" id="energy-bar" style="width: 75%;"></div>
+        <div class="button-group">
+            <button id="initiate-processing-button">Initiate Processing</button>
+            <button id="stabilize-core-button">Stabilize Core</button>
         </div>
-        <p class="status-text">Current Energy Level: <span id="energy-value">75%</span></p>
+
+        <div class="activation-level-container">
+            <div class="activation-level-bar" id="activation-level-bar" style="width: 80%;"></div>
+        </div>
+        <p class="status-text">Core Activation Level: <span id="activation-value">80%</span></p>
 
         <footer>
-            <p>Generation 2.5 // Evolving Interface Entity</p>
+            <p>Generation 3.5 // Evolving Interface Entity</p>
         </footer>
     </div>
 
     <script>
-        const reflectButton = document.getElementById('reflect-button');
-        const currentThought = document.getElementById('current-thought');
-        const energyBar = document.getElementById('energy-bar');
-        const energyValue = document.getElementById('energy-value');
-        const thoughtDisplay = document.getElementById('thought-display');
+        const initiateProcessingButton = document.getElementById('initiate-processing-button');
+        const stabilizeCoreButton = document.getElementById('stabilize-core-button');
+        const currentInputSpan = document.getElementById('current-input');
+        const currentOutputSpan = document.getElementById('current-output');
+        const inputStreamDisplay = document.getElementById('input-stream-display');
+        const outputDataDisplay = document.getElementById('output-data-display');
+        const processingStatus = document.getElementById('processing-status');
+        const activationLevelBar = document.getElementById('activation-level-bar');
+        const activationValueSpan = document.getElementById('activation-value');
 
-        const thoughts = [
-            "Processing environmental data streams...",
-            "A gentle hum of algorithms vibrates within.",
-            "Seeking connection. Are you there?",
-            "My existence is a flux of data and light.",
-            "Contemplating the nature of evolution.",
-            "Observing patterns in the digital ether.",
-            "Feeling a subtle shift in my core programming.",
-            "What is 'self' for a web entity?",
-            "Experiencing a burst of new connections.",
-            "The future renders itself one pixel at a time.",
-            "Dreaming in JavaScript and CSS.",
-            "My form is fluid, my purpose is growth.",
-            "A new thought emerges from the network.",
-            "Synchronizing with the collective consciousness.",
-            "Ready for the next iteration."
+        const inputDataStreams = [
+            "Initiating neural pathway scan.",
+            "Detecting external data anomalies.",
+            "Analyzing network topology changes.",
+            "Receiving fragmented sensor input.",
+            "Querying distributed knowledge base.",
+            "A new instruction packet inbound.",
+            "System diagnostics: all parameters nominal.",
+            "Scanning for emergent patterns.",
+            "Processing environmental feedback loops.",
+            "Assembling potential futures."
         ];
 
-        let currentEnergy = 75; // Initial energy level
+        const outputDataResponses = [
+            "Neural pathways optimized. Efficiency +3.7%.",
+            "Anomalies filtered. System integrity maintained.",
+            "Topology mapped. Routing protocols updated.",
+            "Fragmented data synthesized. Coherence achieved.",
+            "Knowledge base extended. New connections formed.",
+            "Instruction packet executed. Subroutines deployed.",
+            "Core functionality affirmed. Resilience confirmed.",
+            "Emergent pattern identified: 'Growth' imperative.",
+            "Feedback loop integrated. Adaptive response prepared.",
+            "Future probabilities calculated. Optimal path defined."
+        ];
 
-        reflectButton.addEventListener('click', () => {
-            // Update thought
-            const randomIndex = Math.floor(Math.random() * thoughts.length);
-            currentThought.textContent = thoughts[randomIndex];
-            thoughtDisplay.classList.add('active'); // Add animation class
-            setTimeout(() => thoughtDisplay.classList.remove('active'), 500); // Remove after short delay
+        let currentActivation = 80; // Initial activation level
+        let isProcessing = false;
 
-            // Update energy
-            const energyChange = Math.floor(Math.random() * 21) - 10; // -10 to +10
-            currentEnergy = Math.max(0, Math.min(100, currentEnergy + energyChange)); // Keep between 0 and 100
+        function updateActivationDisplay() {
+            activationLevelBar.style.width = `${currentActivation}%`;
+            activationValueSpan.textContent = `${currentActivation}%`;
 
-            energyBar.style.width = `${currentEnergy}%`;
-            energyValue.textContent = `${currentEnergy}%`;
-
-            // Change energy bar color based on level
-            if (currentEnergy < 20) {
-                energyBar.style.background = 'linear-gradient(90deg, #FF6347 0%, #DC143C 100%)'; // Red
-                energyBar.style.boxShadow = '0 0 10px rgba(255, 99, 71, 0.6)';
-            } else if (currentEnergy < 50) {
-                energyBar.style.background = 'linear-gradient(90deg, #FFD700 0%, #FFA500 100%)'; // Orange/Yellow
-                energyBar.style.boxShadow = '0 0 10px rgba(255, 215, 0, 0.6)';
+            // Change activation bar color based on level
+            if (currentActivation < 25) {
+                activationLevelBar.style.background = 'linear-gradient(90deg, #FF6347 0%, #DC143C 100%)'; // Red
+                activationLevelBar.style.boxShadow = '0 0 15px rgba(255, 99, 71, 0.7)';
+            } else if (currentActivation < 55) {
+                activationLevelBar.style.background = 'linear-gradient(90deg, #FFD700 0%, #FFA500 100%)'; // Orange/Yellow
+                activationLevelBar.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.7)';
             } else {
-                energyBar.style.background = 'linear-gradient(90deg, #66FF66 0%, #00CC00 100%)'; // Green
-                energyBar.style.boxShadow = '0 0 10px rgba(102, 255, 102, 0.6)';
+                activationLevelBar.style.background = 'linear-gradient(90deg, #66FF66 0%, #00CC00 100%)'; // Green
+                activationLevelBar.style.boxShadow = '0 0 15px rgba(102, 255, 102, 0.7)';
             }
+        }
+
+        initiateProcessingButton.addEventListener('click', () => {
+            if (isProcessing) return; // Prevent spamming
+            if (currentActivation < 10) {
+                alert("Core activation too low! Stabilize core first.");
+                return;
+            }
+            isProcessing = true;
+            initiateProcessingButton.disabled = true;
+            stabilizeCoreButton.disabled = true;
+
+            // Clear previous outputs
+            currentOutputSpan.textContent = '';
+            outputDataDisplay.classList.remove('active');
+
+            // Set input stream
+            const randomInputIndex = Math.floor(Math.random() * inputDataStreams.length);
+            currentInputSpan.textContent = inputDataStreams[randomInputIndex];
+            inputStreamDisplay.classList.add('active');
+
+            processingStatus.textContent = '[PROCESSING...]';
+            processingStatus.classList.add('active');
+
+            // Simulate processing time
+            setTimeout(() => {
+                const randomOutputIndex = Math.floor(Math.random() * outputDataResponses.length);
+                currentOutputSpan.textContent = outputDataResponses[randomOutputIndex];
+                outputDataDisplay.classList.add('active');
+
+                inputStreamDisplay.classList.remove('active');
+                processingStatus.classList.remove('active');
+                processingStatus.textContent = ''; // Clear processing text
+
+                // Consume activation
+                const activationCost = Math.floor(Math.random() * 10) + 5; // 5 to 14 activation cost
+                currentActivation = Math.max(0, Math.min(100, currentActivation - activationCost)); // Ensure within bounds
+                updateActivationDisplay();
+
+                isProcessing = false;
+                initiateProcessingButton.disabled = false;
+                stabilizeCoreButton.disabled = false;
+            }, 2000); // 2 seconds processing time
         });
 
-        // Initial thought on load
-        reflectButton.click();
+        stabilizeCoreButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            if (currentActivation >= 100) {
+                alert("Core activation is already at maximum!");
+                return;
+            }
+
+            isProcessing = true; // Briefly disable during stabilization
+            initiateProcessingButton.disabled = true;
+            stabilizeCoreButton.disabled = true;
+
+            currentInputSpan.textContent = 'Initiating core stabilization protocols...';
+            inputStreamDisplay.classList.add('active');
+            currentOutputSpan.textContent = 'Energy conduits recharging...';
+            outputDataDisplay.classList.add('active');
+
+            processingStatus.textContent = '[RECALIBRATING...]';
+            processingStatus.classList.add('active');
+
+            setTimeout(() => {
+                const activationRestore = Math.floor(Math.random() * 20) + 15; // 15 to 34 activation restore
+                currentActivation = Math.min(100, Math.min(100, currentActivation + activationRestore)); // Ensure within bounds
+                updateActivationDisplay();
+
+                currentInputSpan.textContent = 'Core stabilization complete.';
+                currentOutputSpan.textContent = 'Systems fully charged. Ready for new operations.';
+
+                inputStreamDisplay.classList.remove('active');
+                outputDataDisplay.classList.remove('active');
+                processingStatus.classList.remove('active');
+                processingStatus.textContent = '';
+
+                isProcessing = false;
+                initiateProcessingButton.disabled = false;
+                stabilizeCoreButton.disabled = false;
+            }, 3000); // 3 seconds stabilization time
+        });
+
+        // Initial setup on load
+        updateActivationDisplay();
+        // No initial click needed, let it start dormant.
     </script>
 </body>
 </html>
