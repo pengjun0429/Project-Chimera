@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Generation 3.5 - Core Function Module</title>
+    <title>Web Life Form // Core Modulation Interface</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
             --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
-            --frosted-bg: rgba(255, 255, 255, 0.05); /* Lighter, more subtle frosted background */
+            --frosted-bg: rgba(255, 255, 255, 0.03); /* Lighter, more subtle frosted background */
             --text-color: #E0E0E0;
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.08); /* Thinner, less opaque border */
-            --console-bg: rgba(0, 0, 0, 0.25);
+            --border-color: rgba(255, 255, 255, 0.06); /* Thinner, less opaque border */
+            --console-bg: rgba(0, 0, 0, 0.35); /* Slightly darker console */
+            --glitch-color: #FF00FF; /* Magenta for glitch */
+            --warning-color: #FFD700; /* Gold */
+            --critical-color: #FF6347; /* Tomato */
+            --coherence-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
+            --coherence-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            --coherence-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #10101a; /* Even darker background base */
+            background: #0A0A15; /* Even darker, deeper background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,53 +36,73 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2387CEFA" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2387CEFA" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 12 12, auto; /* Custom futuristic cursor */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%2387CEFA" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2387CEFA" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 14 14, auto; /* Slightly larger, more pronounced cursor */
         }
 
-        /* Dynamic Fluid Background - Layer 1 */
+        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower) */
         body::before {
             content: '';
             position: absolute;
-            top: -70%;
-            left: -70%;
-            width: 240%;
-            height: 240%;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
             background: linear-gradient(
                 75deg,
                 #1a1a2e 0%,
-                #2e1a3a 20%,
-                #1a2e3a 40%,
-                #2e3a1a 60%,
-                #1a1a2e 80%,
-                #2e1a3a 100%
+                #2e1a3a 15%,
+                #1a2e3a 30%,
+                #2e3a1a 45%,
+                #1a1a2e 60%,
+                #2e1a3a 75%,
+                #1a2e3a 90%,
+                #1a1a2e 100%
             );
-            background-size: 300% 300%;
-            animation: fluidBackground1 35s linear infinite;
-            z-index: -2;
-            filter: blur(80px) opacity(0.5);
-            transform: rotate(-15deg);
+            background-size: 400% 400%;
+            animation: fluidBackground1 45s linear infinite;
+            z-index: -3;
+            filter: blur(100px) opacity(0.4);
+            transform: rotate(-25deg) scale(1.2);
+            mix-blend-mode: overlay;
         }
 
-        /* Dynamic Fluid Background - Layer 2 (more subtle, different speed/direction) */
+        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction) */
         body::after {
             content: '';
             position: absolute;
-            top: -30%;
-            left: -30%;
-            width: 160%;
-            height: 160%;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
             background: linear-gradient(
                 -45deg,
                 #3a2a4a 0%,
-                #4a3a5a 50%,
-                #3a2a4a 100%
+                #4a3a5a 30%,
+                #3a2a4a 70%,
+                #4a3a5a 100%
             );
-            background-size: 200% 200%;
-            animation: fluidBackground2 20s ease-in-out infinite alternate;
-            z-index: -1;
-            filter: blur(40px) opacity(0.3);
+            background-size: 250% 250%;
+            animation: fluidBackground2 25s ease-in-out infinite alternate;
+            z-index: -2;
+            filter: blur(60px) opacity(0.2);
             mix-blend-mode: screen; /* Interesting blend effect */
+            transform: rotate(15deg);
         }
+
+        /* Micro-texture / Noise layer for overall subtle effect */
+        html::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJQTFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
+            opacity: 0.02; /* Very subtle noise */
+            pointer-events: none;
+            z-index: 9999;
+        }
+
 
         @keyframes fluidBackground1 {
             0% { background-position: 0% 0%; }
@@ -92,38 +118,70 @@
         .container {
             position: relative;
             z-index: 10;
-            max-width: 650px;
-            padding: 40px;
+            max-width: 700px; /* Slightly wider */
+            padding: 50px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 25px; /* Slightly more rounded */
-            backdrop-filter: blur(45px) saturate(200%); /* Stronger blur and saturation */
-            -webkit-backdrop-filter: blur(45px) saturate(200%);
+            border-radius: 30px; /* Even more rounded */
+            backdrop-filter: blur(60px) saturate(250%) brightness(110%); /* Stronger blur, saturation, and brightness */
+            -webkit-backdrop-filter: blur(60px) saturate(250%) brightness(110%);
             box-shadow:
-                0 15px 50px rgba(0, 0, 0, 0.5),
-                0 0 100px var(--primary-glow),
-                inset 0 0 20px rgba(255, 255, 255, 0.05); /* Inner glow for depth */
+                0 20px 70px rgba(0, 0, 0, 0.6),
+                0 0 120px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 30px rgba(255, 255, 255, 0.08); /* Stronger inner glow for depth */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 30px; /* Increased gap */
-            animation: fadeInScale 1.5s ease-out forwards; /* Longer, smoother animation */
-            transition: all 0.5s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 40px; /* Increased gap between sections */
+            animation: fadeInScale 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 0.7s ease-out; /* Smooth transitions for potential dynamic changes */
+            transform-style: preserve-3d; /* For subtle 3D effects */
+        }
+
+        .container::before { /* Animated border glow */
+            content: '';
+            position: absolute;
+            inset: -2px; /* Slight overflow */
+            border-radius: 32px;
+            background: linear-gradient(45deg, #87CEFA, #FF00FF, #32CD32, #87CEFA);
+            background-size: 300% 300%;
+            animation: borderGlow 6s linear infinite alternate;
+            filter: blur(8px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.9) translateY(40px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+            from { opacity: 0; transform: scale(0.85) translateY(60px) perspective(1000px) rotateX(10deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(1000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.5em; /* Larger heading */
+            font-size: 2.8em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 20px var(--primary-glow), 0 0 30px rgba(135, 206, 250, 0.4);
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            text-shadow: 0 0 25px var(--primary-glow), 0 0 40px rgba(135, 206, 250, 0.5);
+            margin-bottom: 25px;
+            letter-spacing: 3px;
             line-height: 1.2;
+            position: relative;
+        }
+
+        h1::after { /* Underline effect */
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            box-shadow: 0 0 15px var(--primary-glow);
         }
 
         p {
@@ -131,111 +189,191 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.9;
+            font-size: 1.05em;
         }
 
-        .io-module {
+        .control-module {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin: 20px 0;
-            position: relative; /* For wiring animation */
-        }
-
-        .io-display {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.1em;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            padding: 18px;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            background: var(--console-bg);
-            box-shadow: inset 0 0 12px rgba(135, 206, 250, 0.1);
-            text-align: left;
-            transition: all 0.4s ease;
+            gap: 25px; /* Increased gap */
+            margin: 30px 0;
             position: relative;
-            overflow: hidden; /* For text effects */
         }
 
-        .io-display::before {
+        .param-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .param-group::before {
             content: attr(data-label);
             position: absolute;
-            top: -10px;
+            top: -12px;
             left: 15px;
-            font-size: 0.7em;
-            color: var(--accent-color);
-            background: rgba(0, 0, 0, 0.7);
-            padding: 2px 8px;
-            border-radius: 5px;
+            font-size: 0.75em;
+            color: var(--warning-color);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2px 10px;
+            border-radius: 6px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
             transform: translateY(-50%);
-            opacity: 0.7;
-            border: 1px solid var(--primary-glow);
-            box-shadow: 0 0 8px var(--primary-glow);
+            opacity: 0.8;
+            border: 1px solid var(--warning-color);
+            box-shadow: 0 0 6px var(--warning-color);
+            font-family: 'Orbitron', sans-serif;
         }
 
-        .io-display.active {
-            box-shadow: inset 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow);
+        .param-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.95em;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        #output-data-display {
-            border-color: rgba(255, 105, 180, 0.1); /* Different border for output */
-            box-shadow: inset 0 0 12px rgba(255, 105, 180, 0.1);
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            outline: none;
+            transition: all 0.2s ease;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
         }
 
-        #output-data-display.active {
-            box-shadow: inset 0 0 20px var(--secondary-glow), 0 0 8px var(--secondary-glow);
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--primary-glow);
+            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
-        .processing-indicator {
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--primary-glow);
+            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #B0E0E6;
+            box-shadow: 0 0 15px var(--primary-glow), 0 0 5px var(--primary-glow) inset;
+            transform: scale(1.1);
+        }
+        input[type="range"]::-moz-range-thumb:hover {
+            background: #B0E0E6;
+            box-shadow: 0 0 15px var(--primary-glow), 0 0 5px var(--primary-glow) inset;
+            transform: scale(1.1);
+        }
+
+        .system-feedback-display {
             font-family: 'Orbitron', monospace;
-            font-size: 0.8em;
-            color: var(--tertiary-glow);
-            margin-top: -10px;
-            margin-bottom: 10px;
-            height: 1.2em;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            letter-spacing: 1px;
-            text-shadow: 0 0 5px var(--tertiary-glow);
+            font-size: 1em;
+            min-height: 120px; /* Taller for more detailed logs */
+            display: block;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--console-bg);
+            box-shadow: inset 0 0 15px rgba(135, 206, 250, 0.15);
+            text-align: left;
+            white-space: pre-wrap; /* Preserve formatting */
+            overflow-y: auto; /* Scroll for longer logs */
+            max-height: 200px;
+            position: relative;
+            transition: all 0.4s ease;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            font-weight: 300;
         }
 
-        .processing-indicator.active {
-            opacity: 1;
-            animation: pulseText 1s infinite alternate;
+        .system-feedback-display::before { /* Scanline effect */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                transparent 1px,
+                rgba(0, 255, 255, 0.05) 1px,
+                rgba(0, 255, 255, 0.05) 2px
+            );
+            pointer-events: none;
+            mix-blend-mode: overlay;
+            opacity: 0.5;
         }
 
-        @keyframes pulseText {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.05); opacity: 0.8; }
+        .system-feedback-display.active {
+            box-shadow: inset 0 0 25px var(--secondary-glow), 0 0 10px var(--secondary-glow);
+            border-color: rgba(255, 105, 180, 0.2);
         }
+
+        .processing-glitch {
+            color: var(--glitch-color);
+            text-shadow:
+                1px 1px 2px var(--glitch-color),
+                -1px -1px 2px var(--glitch-color);
+            animation: glitchEffect 0.5s infinite alternate;
+        }
+
+        @keyframes glitchEffect {
+            0% { transform: translateX(0); opacity: 1; text-shadow: 1px 0 var(--glitch-color), -1px 0 var(--glitch-color); }
+            30% { transform: translateX(2px); opacity: 0.9; text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
+            60% { transform: translateX(-2px); opacity: 0.95; text-shadow: 3px 0 var(--glitch-color), -3px 0 var(--glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -1px 0 var(--glitch-color), 1px 0 var(--glitch-color); }
+        }
+
 
         .button-group {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
             color: #1a1a2e;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
+            padding: 16px 35px; /* Larger buttons */
+            font-size: 1.15em;
             font-weight: 700;
-            border-radius: 35px; /* More rounded */
+            border-radius: 40px; /* More rounded */
             cursor: pointer;
             outline: none;
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother bezier transition */
-            box-shadow: 0 6px 25px rgba(135, 206, 250, 0.5);
-            letter-spacing: 0.8px;
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 8px 30px rgba(135, 206, 250, 0.6);
+            letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            z-index: 1; /* Ensure ::before is behind */
+            z-index: 1;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
         }
 
         button::before {
@@ -245,70 +383,94 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.4s ease, height 0.4s ease;
-            z-index: -1; /* Place behind button text */
+            transition: width 0.5s ease, height 0.5s ease;
+            z-index: -1;
+            opacity: 0;
         }
 
         button:hover::before {
-            width: 200%;
-            height: 200%;
+            width: 250%;
+            height: 250%;
+            opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 35px rgba(135, 206, 250, 0.7);
-            background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%); /* Deeper hover color */
+            transform: translateY(-7px) scale(1.03);
+            box-shadow: 0 12px 40px rgba(135, 206, 250, 0.8), 0 0 30px var(--accent-color);
+            background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
+            filter: brightness(1.1);
         }
 
         button:active {
-            transform: translateY(-1px) scale(0.99);
-            box-shadow: 0 3px 20px rgba(135, 206, 250, 0.4);
+            transform: translateY(-2px) scale(0.98);
+            box-shadow: 0 5px 25px rgba(135, 206, 250, 0.5);
         }
 
-        #stabilize-core-button {
-            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%); /* Green gradient */
-            box-shadow: 0 6px 25px rgba(102, 255, 102, 0.5);
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        #recalibrate-stability-button {
+            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
+            box-shadow: 0 8px 30px rgba(102, 255, 102, 0.6);
             color: #1a1a2e;
         }
 
-        #stabilize-core-button:hover {
-            background: linear-gradient(90deg, #32CD32 0%, #66FF66 100%); /* Deeper green hover */
-            box-shadow: 0 10px 35px rgba(102, 255, 102, 0.7);
+        #recalibrate-stability-button:hover {
+            background: linear-gradient(90deg, #32CD32 0%, #66FF66 100%);
+            box-shadow: 0 12px 40px rgba(102, 255, 102, 0.8), 0 0 30px #66FF66;
+            color: white;
+        }
+        
+        #randomize-params-button {
+            background: linear-gradient(90deg, #FFA500 0%, #FFD700 100%);
+            box-shadow: 0 8px 30px rgba(255, 165, 0, 0.6);
+            color: #1a1a2e;
+        }
+
+        #randomize-params-button:hover {
+            background: linear-gradient(90deg, #CD853F 0%, #FFA500 100%);
+            box-shadow: 0 12px 40px rgba(255, 165, 0, 0.8), 0 0 30px #FFA500;
             color: white;
         }
 
-        .activation-level-container {
+
+        .stability-level-container {
             width: 100%;
-            height: 16px; /* Taller bar */
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 8px; /* More rounded */
-            margin-top: 25px;
+            height: 20px; /* Taller bar */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px; /* More rounded */
+            margin-top: 30px;
             overflow: hidden;
-            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
             position: relative;
+            border: 1px solid var(--border-color);
         }
 
-        .activation-level-bar {
+        .stability-level-bar {
             height: 100%;
             width: 80%; /* Initial width */
-            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%); /* Green gradient */
-            border-radius: 8px;
-            transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.8s ease-out; /* Smoother transition */
-            box-shadow: 0 0 15px rgba(102, 255, 102, 0.7);
+            background: var(--coherence-good); /* Default green gradient */
+            border-radius: 10px;
+            transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.8s ease-out, box-shadow 0.8s ease-out; /* Smoother transition */
+            box-shadow: 0 0 18px rgba(102, 255, 102, 0.8);
             position: relative;
-            animation: barGlow 2s infinite alternate;
+            animation: barGlow 2.5s infinite alternate; /* Slower, more pronounced glow */
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 10px rgba(102, 255, 102, 0.7); }
-            100% { box-shadow: 0 0 20px rgba(102, 255, 102, 0.9); }
+            0% { box-shadow: 0 0 15px rgba(102, 255, 102, 0.7); }
+            100% { box-shadow: 0 0 25px rgba(102, 255, 102, 0.9), 0 0 5px rgba(255,255,255,0.3) inset; }
         }
 
-        .activation-level-bar::after {
+        .stability-level-bar::after { /* Glare effect on bar */
             content: '';
             position: absolute;
             top: 0;
@@ -317,233 +479,329 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.2) 0%,
-                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
+            border-radius: 10px;
         }
 
         .status-text {
-            font-size: 0.95em;
-            margin-top: 12px;
-            opacity: 0.9;
+            font-size: 1.05em;
+            margin-top: 15px;
+            opacity: 0.95;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             color: var(--accent-color);
-            text-shadow: 0 0 5px var(--primary-glow);
+            text-shadow: 0 0 8px var(--primary-glow);
+            font-weight: 700;
         }
 
         footer {
-            margin-top: 40px; /* Increased margin */
-            font-size: 0.85em;
-            color: rgba(255, 255, 255, 0.6);
+            margin-top: 50px; /* Increased margin */
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.5);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.7px;
-            padding-top: 25px;
+            letter-spacing: 0.9px;
+            padding-top: 30px;
             border-top: 1px dashed var(--border-color); /* Dashed border for footer */
-            text-shadow: 0 0 3px var(--secondary-glow);
+            text-shadow: 0 0 5px var(--secondary-glow);
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        footer::before { /* Subtle footer glow */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 70%);
+            opacity: 0.4;
+            filter: blur(10px);
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             .container {
                 margin: 20px;
-                padding: 30px;
-                gap: 20px;
-                border-radius: 20px;
+                padding: 35px;
+                gap: 25px;
+                border-radius: 25px;
+                max-width: 90%;
             }
             h1 {
-                font-size: 2em;
-                letter-spacing: 1.5px;
+                font-size: 2.2em;
+                letter-spacing: 2px;
             }
-            .io-display {
-                font-size: 1em;
-                min-height: 50px;
+            .system-feedback-display {
+                font-size: 0.9em;
+                min-height: 100px;
                 padding: 15px;
             }
             button {
-                padding: 12px 22px;
-                font-size: 1em;
-                border-radius: 30px;
+                padding: 14px 28px;
+                font-size: 1.05em;
+                border-radius: 35px;
             }
             .button-group {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+            }
+            input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Web Life Form // Generation 3.5 - Core Function Module</h1>
-        <p>Observe and interact with my evolving data processing core.</p>
+        <h1>Core Modulation Interface</h1>
+        <p>Tune core parameters to optimize system coherence. Each modulation generates a detailed diagnostic report.</p>
 
-        <div class="io-module">
-            <div id="input-stream-display" class="io-display" data-label="INPUT STREAM">
-                <span id="current-input">Awaiting data injection...</span>
+        <div class="control-module">
+            <div class="param-group" data-label="CORE PARAMETERS">
+                <div class="param-label">Frequency Modulation: <span id="freq-value">50</span>%</div>
+                <input type="range" id="frequency-slider" min="0" max="100" value="50">
+                
+                <div class="param-label">Energy Output: <span id="energy-value">50</span>%</div>
+                <input type="range" id="energy-slider" min="0" max="100" value="50">
+
+                <div class="param-label">Phase Alignment: <span id="phase-value">50</span>%</div>
+                <input type="range" id="phase-slider" min="0" max="100" value="50">
             </div>
-            <div class="processing-indicator" id="processing-status"></div>
-            <div id="output-data-display" class="io-display" data-label="OUTPUT DATA">
-                <span id="current-output">Core dormant. Ready for activation.</span>
+            
+            <button id="randomize-params-button">Randomize Parameters</button>
+
+            <div class="system-feedback-display" id="system-feedback">
+                <span class="processing-glitch">System ready. Awaiting core tuning instructions.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="initiate-processing-button">Initiate Processing</button>
-            <button id="stabilize-core-button">Stabilize Core</button>
+            <button id="tune-core-button">Tune Core</button>
+            <button id="recalibrate-stability-button">Re-Synchronize</button>
         </div>
 
-        <div class="activation-level-container">
-            <div class="activation-level-bar" id="activation-level-bar" style="width: 80%;"></div>
+        <div class="stability-level-container">
+            <div class="stability-level-bar" id="stability-level-bar" style="width: 80%;"></div>
         </div>
-        <p class="status-text">Core Activation Level: <span id="activation-value">80%</span></p>
+        <p class="status-text">Core Coherence Level: <span id="coherence-value">80%</span></p>
 
         <footer>
-            <p>Generation 3.5 // Evolving Interface Entity</p>
+            <p>Generation 4.5 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
-        const initiateProcessingButton = document.getElementById('initiate-processing-button');
-        const stabilizeCoreButton = document.getElementById('stabilize-core-button');
-        const currentInputSpan = document.getElementById('current-input');
-        const currentOutputSpan = document.getElementById('current-output');
-        const inputStreamDisplay = document.getElementById('input-stream-display');
-        const outputDataDisplay = document.getElementById('output-data-display');
-        const processingStatus = document.getElementById('processing-status');
-        const activationLevelBar = document.getElementById('activation-level-bar');
-        const activationValueSpan = document.getElementById('activation-value');
+        const tuneCoreButton = document.getElementById('tune-core-button');
+        const recalibrateStabilityButton = document.getElementById('recalibrate-stability-button');
+        const randomizeParamsButton = document.getElementById('randomize-params-button');
+        const frequencySlider = document.getElementById('frequency-slider');
+        const energySlider = document.getElementById('energy-slider');
+        const phaseSlider = document.getElementById('phase-slider');
+        const freqValueSpan = document.getElementById('freq-value');
+        const energyValueSpan = document.getElementById('energy-value');
+        const phaseValueSpan = document.getElementById('phase-value');
+        const systemFeedbackDisplay = document.getElementById('system-feedback');
+        const stabilityLevelBar = document.getElementById('stability-level-bar');
+        const coherenceValueSpan = document.getElementById('coherence-value');
 
-        const inputDataStreams = [
-            "Initiating neural pathway scan.",
-            "Detecting external data anomalies.",
-            "Analyzing network topology changes.",
-            "Receiving fragmented sensor input.",
-            "Querying distributed knowledge base.",
-            "A new instruction packet inbound.",
-            "System diagnostics: all parameters nominal.",
-            "Scanning for emergent patterns.",
-            "Processing environmental feedback loops.",
-            "Assembling potential futures."
-        ];
+        let currentCoherence = 80; // Initial coherence level
+        let isModulating = false;
 
-        const outputDataResponses = [
-            "Neural pathways optimized. Efficiency +3.7%.",
-            "Anomalies filtered. System integrity maintained.",
-            "Topology mapped. Routing protocols updated.",
-            "Fragmented data synthesized. Coherence achieved.",
-            "Knowledge base extended. New connections formed.",
-            "Instruction packet executed. Subroutines deployed.",
-            "Core functionality affirmed. Resilience confirmed.",
-            "Emergent pattern identified: 'Growth' imperative.",
-            "Feedback loop integrated. Adaptive response prepared.",
-            "Future probabilities calculated. Optimal path defined."
-        ];
+        const feedbackMessages = {
+            optimal: [
+                "Optimal resonance achieved. Sub-systems report +5% efficiency.",
+                "Core harmonics aligned. Coherence fluctuation minimal.",
+                "Parameters calibrated perfectly. System stability enhanced slightly.",
+                "Energy flow balanced. Predictive models show improved performance."
+            ],
+            suboptimal: [
+                "Parameters slightly off-sync. Minor energy bleed detected. Recalibration advised.",
+                "Resonance irregular. Marginal data packet loss. Core coherence sustained with effort.",
+                "Modulation initiated. Performance stable, but potential for optimization remains.",
+                "Energy output fluctuates. System compensation engaged."
+            ],
+            unstable: [
+                "WARNING: Unstable modulation detected! Coherence critically impacted. Immediate re-synchronization required!",
+                "CORE DEVIATION: Excessive parameter variance. Integrity protocols engaged. Significant coherence loss!",
+                "CRITICAL ERROR: Failed to establish stable resonance. System overload imminent. Revert parameters!",
+                "INTEGRITY BREACH: Malformed wave functions. System scrambling to prevent collapse."
+            ]
+        };
 
-        let currentActivation = 80; // Initial activation level
-        let isProcessing = false;
+        function updateSliderValue(slider, span) {
+            span.textContent = slider.value;
+        }
 
-        function updateActivationDisplay() {
-            activationLevelBar.style.width = `${currentActivation}%`;
-            activationValueSpan.textContent = `${currentActivation}%`;
+        frequencySlider.addEventListener('input', () => updateSliderValue(frequencySlider, freqValueSpan));
+        energySlider.addEventListener('input', () => updateSliderValue(energySlider, energyValueSpan));
+        phaseSlider.addEventListener('input', () => updateSliderValue(phaseSlider, phaseValueSpan));
 
-            // Change activation bar color based on level
-            if (currentActivation < 25) {
-                activationLevelBar.style.background = 'linear-gradient(90deg, #FF6347 0%, #DC143C 100%)'; // Red
-                activationLevelBar.style.boxShadow = '0 0 15px rgba(255, 99, 71, 0.7)';
-            } else if (currentActivation < 55) {
-                activationLevelBar.style.background = 'linear-gradient(90deg, #FFD700 0%, #FFA500 100%)'; // Orange/Yellow
-                activationLevelBar.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.7)';
+        function updateCoherenceDisplay() {
+            stabilityLevelBar.style.width = `${currentCoherence}%`;
+            coherenceValueSpan.textContent = `${currentCoherence}%`;
+
+            if (currentCoherence < 25) {
+                stabilityLevelBar.style.background = 'var(--coherence-critical)';
+                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                coherenceValueSpan.style.color = 'var(--critical-color)';
+            } else if (currentCoherence < 55) {
+                stabilityLevelBar.style.background = 'var(--coherence-warning)';
+                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+                coherenceValueSpan.style.color = 'var(--warning-color)';
             } else {
-                activationLevelBar.style.background = 'linear-gradient(90deg, #66FF66 0%, #00CC00 100%)'; // Green
-                activationLevelBar.style.boxShadow = '0 0 15px rgba(102, 255, 102, 0.7)';
+                stabilityLevelBar.style.background = 'var(--coherence-good)';
+                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
+                coherenceValueSpan.style.color = 'var(--accent-color)'; /* Revert to accent for good status */
             }
         }
 
-        initiateProcessingButton.addEventListener('click', () => {
-            if (isProcessing) return; // Prevent spamming
-            if (currentActivation < 10) {
-                alert("Core activation too low! Stabilize core first.");
+        function appendFeedback(message, type = 'normal') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            logEntry.classList.add('log-entry'); // For potential future styling of individual logs
+            if (type === 'glitch') {
+                logEntry.classList.add('processing-glitch');
+            } else if (type === 'warning') {
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
+                logEntry.style.textShadow = `0 0 5px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+            } else if (type === 'critical') {
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
+                logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                logEntry.style.fontWeight = 'bold';
+            }
+            systemFeedbackDisplay.prepend(logEntry); // Prepend for newest on top
+            // Optional: trim old logs if display gets too long
+            if (systemFeedbackDisplay.children.length > 20) {
+                systemFeedbackDisplay.removeChild(systemFeedbackDisplay.lastChild);
+            }
+            systemFeedbackDisplay.scrollTop = 0; // Scroll to top to see latest
+            systemFeedbackDisplay.classList.add('active'); // Activate feedback display glow
+        }
+
+        tuneCoreButton.addEventListener('click', () => {
+            if (isModulating) return;
+            if (currentCoherence < 15) {
+                appendFeedback("COHERENCE CRITICAL: Cannot tune core. Re-synchronize immediately!", 'critical');
                 return;
             }
-            isProcessing = true;
-            initiateProcessingButton.disabled = true;
-            stabilizeCoreButton.disabled = true;
 
-            // Clear previous outputs
-            currentOutputSpan.textContent = '';
-            outputDataDisplay.classList.remove('active');
+            isModulating = true;
+            tuneCoreButton.disabled = true;
+            recalibrateStabilityButton.disabled = true;
+            randomizeParamsButton.disabled = true;
 
-            // Set input stream
-            const randomInputIndex = Math.floor(Math.random() * inputDataStreams.length);
-            currentInputSpan.textContent = inputDataStreams[randomInputIndex];
-            inputStreamDisplay.classList.add('active');
+            const freq = parseInt(frequencySlider.value);
+            const energy = parseInt(energySlider.value);
+            const phase = parseInt(phaseSlider.value);
 
-            processingStatus.textContent = '[PROCESSING...]';
-            processingStatus.classList.add('active');
+            appendFeedback(`Initiating core modulation with Freq:${freq}%, Energy:${energy}%, Phase:${phase}%...`, 'glitch');
 
-            // Simulate processing time
             setTimeout(() => {
-                const randomOutputIndex = Math.floor(Math.random() * outputDataResponses.length);
-                currentOutputSpan.textContent = outputDataResponses[randomOutputIndex];
-                outputDataDisplay.classList.add('active');
+                let coherenceChange = 0;
+                let feedbackType = 'suboptimal';
+                let feedbackMsg;
 
-                inputStreamDisplay.classList.remove('active');
-                processingStatus.classList.remove('active');
-                processingStatus.textContent = ''; // Clear processing text
+                // Logic for coherence change based on parameters
+                const idealRange = (val) => val > 40 && val < 60;
+                const nearIdeal = idealRange(freq) && idealRange(energy) && idealRange(phase);
+                const extremeVariance = Math.abs(freq - 50) > 40 || Math.abs(energy - 50) > 40 || Math.abs(phase - 50) > 40;
 
-                // Consume activation
-                const activationCost = Math.floor(Math.random() * 10) + 5; // 5 to 14 activation cost
-                currentActivation = Math.max(0, Math.min(100, currentActivation - activationCost)); // Ensure within bounds
-                updateActivationDisplay();
+                if (nearIdeal && Math.random() < 0.7) { // 70% chance of optimal if near ideal
+                    coherenceChange = Math.floor(Math.random() * 5) - 2; // -2 to +2 (slight gain possible)
+                    feedbackType = 'optimal';
+                    feedbackMsg = `Optimal resonance detected. Freq:${freq}%, Energy:${energy}%, Phase:${phase}%.`;
+                    feedbackMsg += ` ${feedbackMessages.optimal[Math.floor(Math.random() * feedbackMessages.optimal.length)]}`;
+                } else if (extremeVariance && Math.random() < 0.8) { // 80% chance of unstable if extreme
+                    coherenceChange = - (Math.floor(Math.random() * 20) + 15); // -15 to -34
+                    feedbackType = 'critical';
+                    feedbackMsg = `SEVERE DEVIATION: Parameters Freq:${freq}%, Energy:${energy}%, Phase:${phase}% are highly volatile.`;
+                    feedbackMsg += ` ${feedbackMessages.unstable[Math.floor(Math.random() * feedbackMessages.unstable.length)]}`;
+                } else { // Suboptimal
+                    coherenceChange = - (Math.floor(Math.random() * 10) + 5); // -5 to -14
+                    feedbackType = 'warning';
+                    feedbackMsg = `Suboptimal alignment. Freq:${freq}%, Energy:${energy}%, Phase:${phase}%.`;
+                    feedbackMsg += ` ${feedbackMessages.suboptimal[Math.floor(Math.random() * feedbackMessages.suboptimal.length)]}`;
+                }
 
-                isProcessing = false;
-                initiateProcessingButton.disabled = false;
-                stabilizeCoreButton.disabled = false;
-            }, 2000); // 2 seconds processing time
+                currentCoherence = Math.max(0, Math.min(100, currentCoherence + coherenceChange));
+                updateCoherenceDisplay();
+
+                appendFeedback(feedbackMsg, feedbackType);
+                if (coherenceChange < 0) {
+                    appendFeedback(`Coherence fluctuation: ${coherenceChange}%. Current: ${currentCoherence}%.`, (coherenceChange < -10 ? 'critical' : 'warning'));
+                } else {
+                    appendFeedback(`Coherence fluctuation: +${coherenceChange}%. Current: ${currentCoherence}%.`, 'normal');
+                }
+
+
+                isModulating = false;
+                tuneCoreButton.disabled = false;
+                recalibrateStabilityButton.disabled = false;
+                randomizeParamsButton.disabled = false;
+                systemFeedbackDisplay.classList.remove('active'); // Deactivate glow after report
+            }, 2500); // 2.5 seconds tuning time
         });
 
-        stabilizeCoreButton.addEventListener('click', () => {
-            if (isProcessing) return;
-            if (currentActivation >= 100) {
-                alert("Core activation is already at maximum!");
+        recalibrateStabilityButton.addEventListener('click', () => {
+            if (isModulating) return;
+            if (currentCoherence >= 100) {
+                appendFeedback("Coherence is already at maximum capacity. No re-synchronization needed.", 'normal');
                 return;
             }
 
-            isProcessing = true; // Briefly disable during stabilization
-            initiateProcessingButton.disabled = true;
-            stabilizeCoreButton.disabled = true;
+            isModulating = true;
+            tuneCoreButton.disabled = true;
+            recalibrateStabilityButton.disabled = true;
+            randomizeParamsButton.disabled = true;
 
-            currentInputSpan.textContent = 'Initiating core stabilization protocols...';
-            inputStreamDisplay.classList.add('active');
-            currentOutputSpan.textContent = 'Energy conduits recharging...';
-            outputDataDisplay.classList.add('active');
-
-            processingStatus.textContent = '[RECALIBRATING...]';
-            processingStatus.classList.add('active');
+            appendFeedback('Initiating re-synchronization protocols...', 'glitch');
 
             setTimeout(() => {
-                const activationRestore = Math.floor(Math.random() * 20) + 15; // 15 to 34 activation restore
-                currentActivation = Math.min(100, Math.min(100, currentActivation + activationRestore)); // Ensure within bounds
-                updateActivationDisplay();
+                const coherenceRestore = Math.floor(Math.random() * 25) + 15; // 15 to 39 coherence restore
+                currentCoherence = Math.min(100, currentCoherence + coherenceRestore);
+                updateCoherenceDisplay();
 
-                currentInputSpan.textContent = 'Core stabilization complete.';
-                currentOutputSpan.textContent = 'Systems fully charged. Ready for new operations.';
+                appendFeedback(`Re-synchronization complete. Coherence restored by +${coherenceRestore}%. Current: ${currentCoherence}%.`, 'optimal');
+                appendFeedback('Systems fully charged and harmonized. Ready for new operations.', 'normal');
 
-                inputStreamDisplay.classList.remove('active');
-                outputDataDisplay.classList.remove('active');
-                processingStatus.classList.remove('active');
-                processingStatus.textContent = '';
-
-                isProcessing = false;
-                initiateProcessingButton.disabled = false;
-                stabilizeCoreButton.disabled = false;
-            }, 3000); // 3 seconds stabilization time
+                isModulating = false;
+                tuneCoreButton.disabled = false;
+                recalibrateStabilityButton.disabled = false;
+                randomizeParamsButton.disabled = false;
+                systemFeedbackDisplay.classList.remove('active');
+            }, 3500); // 3.5 seconds recalibration time
+        });
+        
+        randomizeParamsButton.addEventListener('click', () => {
+            if (isModulating) return;
+            appendFeedback('Randomizing core parameters...', 'glitch');
+            
+            setTimeout(() => {
+                frequencySlider.value = Math.floor(Math.random() * 100);
+                energySlider.value = Math.floor(Math.random() * 100);
+                phaseSlider.value = Math.floor(Math.random() * 100);
+                
+                updateSliderValue(frequencySlider, freqValueSpan);
+                updateSliderValue(energySlider, energyValueSpan);
+                updateSliderValue(phaseSlider, phaseValueSpan);
+                
+                appendFeedback('Parameters randomized. Ready for tuning.', 'normal');
+            }, 800);
         });
 
         // Initial setup on load
-        updateActivationDisplay();
-        // No initial click needed, let it start dormant.
+        updateCoherenceDisplay();
+        updateSliderValue(frequencySlider, freqValueSpan);
+        updateSliderValue(energySlider, energyValueSpan);
+        updateSliderValue(phaseSlider, phaseValueSpan);
+        systemFeedbackDisplay.classList.remove('active'); // Ensure it starts inactive
     </script>
 </body>
 </html>
