@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Core Modulation Interface</title>
+    <title>Web Life Form // Adaptive Protocol Interface</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
             --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
-            --frosted-bg: rgba(255, 255, 255, 0.03); /* Lighter, more subtle frosted background */
-            --text-color: #E0E0E0;
+            --frosted-bg: rgba(255, 255, 255, 0.04); /* Slightly less opaque frosted background */
+            --text-color: #E8E8E8; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.06); /* Thinner, less opaque border */
-            --console-bg: rgba(0, 0, 0, 0.35); /* Slightly darker console */
+            --border-color: rgba(255, 255, 255, 0.08); /* Slightly more visible border */
+            --console-bg: rgba(0, 0, 0, 0.45); /* Darker console */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
             --coherence-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
             --coherence-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
             --coherence-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
+
+            --data-stream-bg: rgba(10, 20, 30, 0.9); /* Dark blue for data stream */
+            --data-stream-text: #00FFFF; /* Cyan for data */
+            --protocol-status-bg: rgba(20, 50, 70, 0.7);
+            --protocol-status-glow: rgba(0, 200, 255, 0.5);
         }
 
         body {
@@ -36,57 +41,61 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="%2387CEFA" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2387CEFA" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 14 14, auto; /* Slightly larger, more pronounced cursor */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 16 16, auto; /* Cyan crosshair cursor */
         }
 
-        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower) */
+        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors) */
         body::before {
             content: '';
             position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
+            top: -150%;
+            left: -150%;
+            width: 400%;
+            height: 400%;
             background: linear-gradient(
-                75deg,
-                #1a1a2e 0%,
-                #2e1a3a 15%,
-                #1a2e3a 30%,
-                #2e3a1a 45%,
-                #1a1a2e 60%,
-                #2e1a3a 75%,
-                #1a2e3a 90%,
-                #1a1a2e 100%
+                90deg,
+                #100d20 0%,
+                #200d25 10%,
+                #150e2a 20%,
+                #251a35 30%,
+                #100d20 40%,
+                #200d25 50%,
+                #150e2a 60%,
+                #251a35 70%,
+                #100d20 80%,
+                #200d25 90%,
+                #100d20 100%
             );
-            background-size: 400% 400%;
-            animation: fluidBackground1 45s linear infinite;
+            background-size: 600% 600%;
+            animation: fluidBackground1 60s linear infinite alternate, rotateBackground 120s linear infinite;
             z-index: -3;
-            filter: blur(100px) opacity(0.4);
-            transform: rotate(-25deg) scale(1.2);
-            mix-blend-mode: overlay;
+            filter: blur(150px) opacity(0.5);
+            transform: rotate(-35deg) scale(1.5);
+            mix-blend-mode: color-dodge; /* More aggressive blend */
         }
 
-        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction) */
+        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors) */
         body::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            top: -70%;
+            left: -70%;
+            width: 240%;
+            height: 240%;
             background: linear-gradient(
-                -45deg,
-                #3a2a4a 0%,
-                #4a3a5a 30%,
-                #3a2a4a 70%,
-                #4a3a5a 100%
+                -75deg,
+                rgba(135, 206, 250, 0.15) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.1) 25%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.1) 50%, /* tertiary glow accent */
+                rgba(135, 206, 250, 0.15) 75%,
+                rgba(255, 105, 180, 0.1) 100%
             );
-            background-size: 250% 250%;
-            animation: fluidBackground2 25s ease-in-out infinite alternate;
+            background-size: 300% 300%;
+            animation: fluidBackground2 30s ease-in-out infinite, rotateBackgroundReversed 90s linear infinite;
             z-index: -2;
-            filter: blur(60px) opacity(0.2);
-            mix-blend-mode: screen; /* Interesting blend effect */
-            transform: rotate(15deg);
+            filter: blur(80px) opacity(0.3);
+            mix-blend-mode: screen;
+            transform: rotate(20deg);
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -98,7 +107,7 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJQTFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.02; /* Very subtle noise */
+            opacity: 0.03; /* Slightly more subtle noise */
             pointer-events: none;
             z-index: 9999;
         }
@@ -115,40 +124,50 @@
             100% { background-position: 0% 100%; }
         }
 
+        @keyframes rotateBackground {
+            from { transform: rotate(-35deg) scale(1.5); }
+            to { transform: rotate(325deg) scale(1.5); }
+        }
+
+        @keyframes rotateBackgroundReversed {
+            from { transform: rotate(20deg); }
+            to { transform: rotate(-340deg); }
+        }
+
         .container {
             position: relative;
             z-index: 10;
-            max-width: 700px; /* Slightly wider */
-            padding: 50px; /* More padding */
+            max-width: 750px; /* Wider for more content */
+            padding: 60px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 30px; /* Even more rounded */
-            backdrop-filter: blur(60px) saturate(250%) brightness(110%); /* Stronger blur, saturation, and brightness */
-            -webkit-backdrop-filter: blur(60px) saturate(250%) brightness(110%);
+            border-radius: 40px; /* Even more rounded */
+            backdrop-filter: blur(80px) saturate(300%) brightness(120%); /* Stronger blur, saturation, and brightness */
+            -webkit-backdrop-filter: blur(80px) saturate(300%) brightness(120%);
             box-shadow:
-                0 20px 70px rgba(0, 0, 0, 0.6),
-                0 0 120px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 30px rgba(255, 255, 255, 0.08); /* Stronger inner glow for depth */
+                0 30px 100px rgba(0, 0, 0, 0.8), /* Deeper shadow */
+                0 0 150px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 40px rgba(255, 255, 255, 0.1); /* Stronger inner glow for depth */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 40px; /* Increased gap between sections */
-            animation: fadeInScale 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 0.7s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 45px; /* Increased gap between sections */
+            animation: fadeInScale 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 0.8s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -2px; /* Slight overflow */
-            border-radius: 32px;
-            background: linear-gradient(45deg, #87CEFA, #FF00FF, #32CD32, #87CEFA);
-            background-size: 300% 300%;
-            animation: borderGlow 6s linear infinite alternate;
-            filter: blur(8px);
+            inset: -4px; /* More overflow */
+            border-radius: 42px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF); /* More vibrant border glow colors */
+            background-size: 400% 400%;
+            animation: borderGlow 8s linear infinite alternate;
+            filter: blur(10px);
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.6; /* Stronger glow */
         }
 
         @keyframes borderGlow {
@@ -157,45 +176,47 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.85) translateY(60px) perspective(1000px) rotateX(10deg); }
+            from { opacity: 0; transform: scale(0.8) translateY(80px) perspective(1000px) rotateX(15deg); }
             to { opacity: 1; transform: scale(1) translateY(0) perspective(1000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.8em; /* Even larger heading */
+            font-size: 3.2em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 25px var(--primary-glow), 0 0 40px rgba(135, 206, 250, 0.5);
-            margin-bottom: 25px;
-            letter-spacing: 3px;
+            text-shadow: 0 0 30px var(--primary-glow), 0 0 50px rgba(135, 206, 250, 0.6);
+            margin-bottom: 30px;
+            letter-spacing: 4px;
             line-height: 1.2;
             position: relative;
+            transform: translateZ(20px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80%;
-            height: 2px;
+            width: 90%;
+            height: 3px;
             background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
-            box-shadow: 0 0 15px var(--primary-glow);
+            box-shadow: 0 0 20px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.9;
-            font-size: 1.05em;
+            opacity: 0.95;
+            font-size: 1.1em;
+            transform: translateZ(10px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 25px; /* Increased gap */
+            gap: 30px; /* Increased gap */
             margin: 30px 0;
             position: relative;
         }
@@ -203,113 +224,159 @@
         .param-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
             text-align: left;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
             position: relative;
+            transform: translateZ(10px);
         }
 
         .param-group::before {
             content: attr(data-label);
             position: absolute;
-            top: -12px;
-            left: 15px;
-            font-size: 0.75em;
+            top: -15px;
+            left: 20px;
+            font-size: 0.85em;
             color: var(--warning-color);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 2px 10px;
-            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 4px 12px;
+            border-radius: 8px;
             font-weight: 700;
-            letter-spacing: 0.6px;
-            transform: translateY(-50%);
-            opacity: 0.8;
+            letter-spacing: 0.8px;
+            transform: translateY(-50%) translateZ(5px);
+            opacity: 0.9;
             border: 1px solid var(--warning-color);
-            box-shadow: 0 0 6px var(--warning-color);
+            box-shadow: 0 0 8px var(--warning-color);
             font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.95em;
-            color: var(--accent-color);
-            letter-spacing: 0.5px;
+            font-size: 1.05em;
+            color: var(--data-stream-text); /* Cyan for protocol data */
+            letter-spacing: 0.7px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 6px;
+            height: 16px; /* Taller slider */
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
             outline: none;
-            transition: all 0.2s ease;
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+            transform: translateZ(2px);
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 24px;
-            height: 24px;
+            width: 28px; /* Larger thumb */
+            height: 28px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 10px var(--primary-glow);
-            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 12px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 10px var(--primary-glow);
-            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 12px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #B0E0E6;
-            box-shadow: 0 0 15px var(--primary-glow), 0 0 5px var(--primary-glow) inset;
-            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow) inset;
+            transform: scale(1.15);
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #B0E0E6;
-            box-shadow: 0 0 15px var(--primary-glow), 0 0 5px var(--primary-glow) inset;
-            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow) inset;
+            transform: scale(1.15);
         }
 
-        .system-feedback-display {
+        /* Active Protocol Status Display */
+        .protocol-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1em;
-            min-height: 120px; /* Taller for more detailed logs */
+            font-size: 1.1em;
+            padding: 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--protocol-status-bg);
+            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.15);
+            text-align: left;
+            position: relative;
+            transition: all 0.4s ease;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: var(--data-stream-text);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            font-weight: 400;
+            transform: translateZ(10px);
+        }
+
+        .protocol-status-display::before {
+            content: 'ACTIVE PROTOCOL';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 0.8em;
+            color: var(--data-stream-text);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            transform: translateY(-50%) translateZ(5px);
+            opacity: 0.9;
+            border: 1px solid var(--data-stream-text);
+            box-shadow: 0 0 8px var(--data-stream-text);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Data Stream Monitor - Replaces System Feedback Display */
+        .data-stream-monitor {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95em;
+            min-height: 150px; /* Taller for more detailed logs */
             display: block;
             padding: 20px;
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            background: var(--console-bg);
-            box-shadow: inset 0 0 15px rgba(135, 206, 250, 0.15);
+            background: var(--data-stream-bg);
+            box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.15);
             text-align: left;
-            white-space: pre-wrap; /* Preserve formatting */
             overflow-y: auto; /* Scroll for longer logs */
-            max-height: 200px;
+            max-height: 250px;
             position: relative;
             transition: all 0.4s ease;
             line-height: 1.4;
             letter-spacing: 0.5px;
             font-weight: 300;
+            color: var(--data-stream-text);
+            transform: translateZ(15px);
         }
 
-        .system-feedback-display::before { /* Scanline effect */
+        .data-stream-monitor::before { /* Scanline effect */
             content: '';
             position: absolute;
             top: 0;
@@ -320,17 +387,27 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.05) 1px,
-                rgba(0, 255, 255, 0.05) 2px
+                rgba(0, 255, 255, 0.08) 1px,
+                rgba(0, 255, 255, 0.08) 2px
             );
             pointer-events: none;
             mix-blend-mode: overlay;
-            opacity: 0.5;
+            opacity: 0.6;
         }
 
-        .system-feedback-display.active {
-            box-shadow: inset 0 0 25px var(--secondary-glow), 0 0 10px var(--secondary-glow);
-            border-color: rgba(255, 105, 180, 0.2);
+        .data-stream-monitor.active {
+            box-shadow: inset 0 0 30px var(--secondary-glow), 0 0 15px var(--secondary-glow);
+            border-color: rgba(255, 105, 180, 0.3);
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+            animation: fadeInLog 0.5s ease-out;
+        }
+
+        @keyframes fadeInLog {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .processing-glitch {
@@ -351,24 +428,25 @@
 
         .button-group {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 35px;
+            transform: translateZ(15px);
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
-            color: #1a1a2e;
+            color: #0A0A15;
             border: none;
-            padding: 16px 35px; /* Larger buttons */
-            font-size: 1.15em;
+            padding: 18px 40px; /* Larger buttons */
+            font-size: 1.2em;
             font-weight: 700;
-            border-radius: 40px; /* More rounded */
+            border-radius: 45px; /* More rounded */
             cursor: pointer;
             outline: none;
             transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 8px 30px rgba(135, 206, 250, 0.6);
-            letter-spacing: 1px;
+            box-shadow: 0 10px 35px rgba(135, 206, 250, 0.7);
+            letter-spacing: 1.5px;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -383,7 +461,7 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.35);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: width 0.5s ease, height 0.5s ease;
@@ -392,82 +470,96 @@
         }
 
         button:hover::before {
-            width: 250%;
-            height: 250%;
+            width: 280%;
+            height: 280%;
             opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-7px) scale(1.03);
-            box-shadow: 0 12px 40px rgba(135, 206, 250, 0.8), 0 0 30px var(--accent-color);
+            transform: translateY(-9px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(135, 206, 250, 0.9), 0 0 35px var(--accent-color);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.1);
+            filter: brightness(1.2);
         }
 
         button:active {
-            transform: translateY(-2px) scale(0.98);
-            box-shadow: 0 5px 25px rgba(135, 206, 250, 0.5);
+            transform: translateY(-4px) scale(0.99);
+            box-shadow: 0 7px 30px rgba(135, 206, 250, 0.6);
         }
 
         button:disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
+            filter: grayscale(1);
+        }
+
+        #process-data-button {
+            background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
+            box-shadow: 0 10px 35px rgba(0, 255, 255, 0.7);
+            color: #1a1a2e;
+        }
+
+        #process-data-button:hover {
+            background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
+            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.9), 0 0 35px #00FFFF;
+            color: white;
+        }
+        
+        #reconfigure-protocol-button {
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            box-shadow: 0 10px 35px rgba(255, 215, 0, 0.7);
+            color: #1a1a2e;
+        }
+
+        #reconfigure-protocol-button:hover {
+            background: linear-gradient(90deg, #CD853F 0%, #FFD700 100%);
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.9), 0 0 35px #FFD700;
+            color: white;
         }
 
         #recalibrate-stability-button {
             background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
-            box-shadow: 0 8px 30px rgba(102, 255, 102, 0.6);
+            box-shadow: 0 10px 35px rgba(102, 255, 102, 0.7);
             color: #1a1a2e;
         }
 
         #recalibrate-stability-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #66FF66 100%);
-            box-shadow: 0 12px 40px rgba(102, 255, 102, 0.8), 0 0 30px #66FF66;
-            color: white;
-        }
-        
-        #randomize-params-button {
-            background: linear-gradient(90deg, #FFA500 0%, #FFD700 100%);
-            box-shadow: 0 8px 30px rgba(255, 165, 0, 0.6);
-            color: #1a1a2e;
-        }
-
-        #randomize-params-button:hover {
-            background: linear-gradient(90deg, #CD853F 0%, #FFA500 100%);
-            box-shadow: 0 12px 40px rgba(255, 165, 0, 0.8), 0 0 30px #FFA500;
+            box-shadow: 0 15px 50px rgba(102, 255, 102, 0.9), 0 0 35px #66FF66;
             color: white;
         }
 
 
         .stability-level-container {
             width: 100%;
-            height: 20px; /* Taller bar */
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px; /* More rounded */
-            margin-top: 30px;
+            height: 25px; /* Taller bar */
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px; /* More rounded */
+            margin-top: 35px;
             overflow: hidden;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8);
             position: relative;
             border: 1px solid var(--border-color);
+            transform: translateZ(10px);
         }
 
         .stability-level-bar {
             height: 100%;
             width: 80%; /* Initial width */
             background: var(--coherence-good); /* Default green gradient */
-            border-radius: 10px;
-            transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.8s ease-out, box-shadow 0.8s ease-out; /* Smoother transition */
-            box-shadow: 0 0 18px rgba(102, 255, 102, 0.8);
+            border-radius: 12px;
+            transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 1s ease-out, box-shadow 1s ease-out; /* Smoother transition */
+            box-shadow: 0 0 20px rgba(102, 255, 102, 0.9);
             position: relative;
-            animation: barGlow 2.5s infinite alternate; /* Slower, more pronounced glow */
+            animation: barGlow 3s infinite alternate; /* Slower, more pronounced glow */
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 15px rgba(102, 255, 102, 0.7); }
-            100% { box-shadow: 0 0 25px rgba(102, 255, 102, 0.9), 0 0 5px rgba(255,255,255,0.3) inset; }
+            0% { box-shadow: 0 0 18px rgba(102, 255, 102, 0.8); }
+            100% { box-shadow: 0 0 30px rgba(102, 255, 102, 1), 0 0 8px rgba(255,255,255,0.4) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -479,36 +571,38 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.15) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         .status-text {
-            font-size: 1.05em;
-            margin-top: 15px;
-            opacity: 0.95;
+            font-size: 1.15em;
+            margin-top: 18px;
+            opacity: 0.98;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             color: var(--accent-color);
-            text-shadow: 0 0 8px var(--primary-glow);
+            text-shadow: 0 0 10px var(--primary-glow);
             font-weight: 700;
+            transform: translateZ(10px);
         }
 
         footer {
-            margin-top: 50px; /* Increased margin */
-            font-size: 0.8em;
-            color: rgba(255, 255, 255, 0.5);
+            margin-top: 60px; /* Increased margin */
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 0.9px;
-            padding-top: 30px;
+            letter-spacing: 1px;
+            padding-top: 35px;
             border-top: 1px dashed var(--border-color); /* Dashed border for footer */
-            text-shadow: 0 0 5px var(--secondary-glow);
+            text-shadow: 0 0 6px var(--secondary-glow);
             position: relative;
             line-height: 1.5;
+            transform: translateZ(5px);
         }
         
         footer::before { /* Subtle footer glow */
@@ -517,73 +611,76 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60%;
+            width: 70%;
             height: 1px;
             background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 70%);
-            opacity: 0.4;
-            filter: blur(10px);
+            opacity: 0.5;
+            filter: blur(12px);
         }
 
         @media (max-width: 768px) {
             .container {
                 margin: 20px;
-                padding: 35px;
-                gap: 25px;
-                border-radius: 25px;
-                max-width: 90%;
+                padding: 40px;
+                gap: 30px;
+                border-radius: 30px;
+                max-width: 95%;
             }
             h1 {
-                font-size: 2.2em;
-                letter-spacing: 2px;
+                font-size: 2.5em;
+                letter-spacing: 3px;
             }
-            .system-feedback-display {
-                font-size: 0.9em;
-                min-height: 100px;
+            .data-stream-monitor {
+                font-size: 0.85em;
+                min-height: 120px;
                 padding: 15px;
             }
             button {
-                padding: 14px 28px;
-                font-size: 1.05em;
-                border-radius: 35px;
+                padding: 16px 30px;
+                font-size: 1.1em;
+                border-radius: 40px;
+                letter-spacing: 1px;
             }
             .button-group {
                 flex-direction: column;
-                gap: 15px;
+                gap: 20px;
             }
             input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
+            }
+            .protocol-status-display {
+                font-size: 1em;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Core Modulation Interface</h1>
-        <p>Tune core parameters to optimize system coherence. Each modulation generates a detailed diagnostic report.</p>
+        <h1>Adaptive Protocol Interface</h1>
+        <p>Engage with the adaptive protocol interface. Adjust algorithm parameters to optimize data streams and maintain core coherence.</p>
 
         <div class="control-module">
-            <div class="param-group" data-label="CORE PARAMETERS">
-                <div class="param-label">Frequency Modulation: <span id="freq-value">50</span>%</div>
-                <input type="range" id="frequency-slider" min="0" max="100" value="50">
-                
-                <div class="param-label">Energy Output: <span id="energy-value">50</span>%</div>
-                <input type="range" id="energy-slider" min="0" max="100" value="50">
+            <div class="param-group" data-label="ALGORITHM ADJUSTMENT">
+                <div class="param-label">Optimization Algorithm Dial: <span id="algo-dial-value">50</span>%</div>
+                <input type="range" id="algorithm-dial" min="0" max="100" value="50">
+            </div>
 
-                <div class="param-label">Phase Alignment: <span id="phase-value">50</span>%</div>
-                <input type="range" id="phase-slider" min="0" max="100" value="50">
+            <div class="protocol-status-display" id="protocol-status">
+                <p><strong>Protocol ID:</strong> <span id="protocol-id">GENERATING...</span></p>
+                <p><strong>Target Coherence Signature:</strong> <span id="target-signature">UNKNOWN</span></p>
             </div>
             
-            <button id="randomize-params-button">Randomize Parameters</button>
-
-            <div class="system-feedback-display" id="system-feedback">
-                <span class="processing-glitch">System ready. Awaiting core tuning instructions.</span>
+            <div class="data-stream-monitor" id="data-stream-monitor">
+                <span class="processing-glitch">System ready. Awaiting protocol configuration.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="tune-core-button">Tune Core</button>
-            <button id="recalibrate-stability-button">Re-Synchronize</button>
+            <button id="reconfigure-protocol-button">Reconfigure Protocol</button>
+            <button id="process-data-button">Execute Optimization</button>
+            <button id="recalibrate-stability-button">Re-Synchronize Core</button>
         </div>
 
         <div class="stability-level-container">
@@ -592,45 +689,46 @@
         <p class="status-text">Core Coherence Level: <span id="coherence-value">80%</span></p>
 
         <footer>
-            <p>Generation 4.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 5.5 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
-        const tuneCoreButton = document.getElementById('tune-core-button');
+        const algorithmDial = document.getElementById('algorithm-dial');
+        const algoDialValueSpan = document.getElementById('algo-dial-value');
+        const reconfigureProtocolButton = document.getElementById('reconfigure-protocol-button');
+        const processDataButton = document.getElementById('process-data-button');
         const recalibrateStabilityButton = document.getElementById('recalibrate-stability-button');
-        const randomizeParamsButton = document.getElementById('randomize-params-button');
-        const frequencySlider = document.getElementById('frequency-slider');
-        const energySlider = document.getElementById('energy-slider');
-        const phaseSlider = document.getElementById('phase-slider');
-        const freqValueSpan = document.getElementById('freq-value');
-        const energyValueSpan = document.getElementById('energy-value');
-        const phaseValueSpan = document.getElementById('phase-value');
-        const systemFeedbackDisplay = document.getElementById('system-feedback');
+        const protocolStatusDisplay = document.getElementById('protocol-status');
+        const protocolIDSpan = document.getElementById('protocol-id');
+        const targetSignatureSpan = document.getElementById('target-signature');
+        const dataStreamMonitor = document.getElementById('data-stream-monitor');
         const stabilityLevelBar = document.getElementById('stability-level-bar');
         const coherenceValueSpan = document.getElementById('coherence-value');
 
-        let currentCoherence = 80; // Initial coherence level
-        let isModulating = false;
+        let currentCoherence = 80;
+        let isProcessing = false;
+        let targetAlgorithmValue = 50; // Hidden target value for optimization
+        let currentProtocolID = "N/A";
 
-        const feedbackMessages = {
+        const optimizationMessages = {
             optimal: [
-                "Optimal resonance achieved. Sub-systems report +5% efficiency.",
-                "Core harmonics aligned. Coherence fluctuation minimal.",
-                "Parameters calibrated perfectly. System stability enhanced slightly.",
-                "Energy flow balanced. Predictive models show improved performance."
+                "PROTOCOL OPTIMIZED: Data integrity 100%. Efficiency peak.",
+                "COHERENCE BOOST: Algorithm match perfect. Systems operating above nominal.",
+                "STREAM HARMONIZED: Minimal data loss, maximum throughput.",
+                "ADAPTIVE SUCCESS: Core resonance achieved. Predictive models updated."
             ],
             suboptimal: [
-                "Parameters slightly off-sync. Minor energy bleed detected. Recalibration advised.",
-                "Resonance irregular. Marginal data packet loss. Core coherence sustained with effort.",
-                "Modulation initiated. Performance stable, but potential for optimization remains.",
-                "Energy output fluctuates. System compensation engaged."
+                "PROCESSING WARNING: Minor deviation detected. Data integrity ~85%.",
+                "ALIGNMENT FLUCTUATION: Algorithm close, but not optimal. Some data packets rerouted.",
+                "PARTIAL OPTIMIZATION: Acceptable performance, but efficiency gain limited.",
+                "SUB-CRITICAL: Algorithm drift detected. Monitoring required."
             ],
             unstable: [
-                "WARNING: Unstable modulation detected! Coherence critically impacted. Immediate re-synchronization required!",
-                "CORE DEVIATION: Excessive parameter variance. Integrity protocols engaged. Significant coherence loss!",
-                "CRITICAL ERROR: Failed to establish stable resonance. System overload imminent. Revert parameters!",
-                "INTEGRITY BREACH: Malformed wave functions. System scrambling to prevent collapse."
+                "CRITICAL ERROR: Algorithm mismatch! Data stream integrity compromised! Core coherence rapidly decaying!",
+                "PROTOCOL BREACH: Severe processing errors. Emergency data dump initiated. Reconfigure immediately!",
+                "SYSTEM OVERLOAD: Unstable algorithm input. Cascading failures detected. CORE COLLAPSE IMMINENT!",
+                "CATASTROPHIC FAILURE: Algorithm failed to converge. All parameters highly unstable."
             ]
         };
 
@@ -638,9 +736,16 @@
             span.textContent = slider.value;
         }
 
-        frequencySlider.addEventListener('input', () => updateSliderValue(frequencySlider, freqValueSpan));
-        energySlider.addEventListener('input', () => updateSliderValue(energySlider, energyValueSpan));
-        phaseSlider.addEventListener('input', () => updateSliderValue(phaseSlider, phaseValueSpan));
+        algorithmDial.addEventListener('input', () => updateSliderValue(algorithmDial, algoDialValueSpan));
+
+        function generateProtocolID() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < 8; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
 
         function updateCoherenceDisplay() {
             stabilityLevelBar.style.width = `${currentCoherence}%`;
@@ -648,160 +753,175 @@
 
             if (currentCoherence < 25) {
                 stabilityLevelBar.style.background = 'var(--coherence-critical)';
-                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
                 coherenceValueSpan.style.color = 'var(--critical-color)';
             } else if (currentCoherence < 55) {
                 stabilityLevelBar.style.background = 'var(--coherence-warning)';
-                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+                stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
                 coherenceValueSpan.style.color = 'var(--warning-color)';
             } else {
                 stabilityLevelBar.style.background = 'var(--coherence-good)';
-                stabilityLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
-                coherenceValueSpan.style.color = 'var(--accent-color)'; /* Revert to accent for good status */
+                stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
+                coherenceValueSpan.style.color = 'var(--accent-color)';
             }
         }
 
-        function appendFeedback(message, type = 'normal') {
+        function logDataStreamEntry(message, type = 'normal') {
             const timestamp = new Date().toLocaleTimeString();
             const logEntry = document.createElement('div');
             logEntry.textContent = `[${timestamp}] ${message}`;
-            logEntry.classList.add('log-entry'); // For potential future styling of individual logs
+            logEntry.classList.add('log-entry');
             if (type === 'glitch') {
                 logEntry.classList.add('processing-glitch');
             } else if (type === 'warning') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-                logEntry.style.textShadow = `0 0 5px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+                logEntry.style.textShadow = `0 0 6px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
             } else if (type === 'critical') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-                logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
                 logEntry.style.fontWeight = 'bold';
+            } else if (type === 'optimal') {
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
+                logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
             }
-            systemFeedbackDisplay.prepend(logEntry); // Prepend for newest on top
-            // Optional: trim old logs if display gets too long
-            if (systemFeedbackDisplay.children.length > 20) {
-                systemFeedbackDisplay.removeChild(systemFeedbackDisplay.lastChild);
+            dataStreamMonitor.prepend(logEntry);
+            if (dataStreamMonitor.children.length > 25) {
+                dataStreamMonitor.removeChild(dataStreamMonitor.lastChild);
             }
-            systemFeedbackDisplay.scrollTop = 0; // Scroll to top to see latest
-            systemFeedbackDisplay.classList.add('active'); // Activate feedback display glow
+            dataStreamMonitor.scrollTop = 0;
+            dataStreamMonitor.classList.add('active'); // Activate feedback display glow
+            clearTimeout(dataStreamMonitor.activeTimeout);
+            dataStreamMonitor.activeTimeout = setTimeout(() => {
+                dataStreamMonitor.classList.remove('active');
+            }, 1000); // Deactivate glow after a short period
         }
 
-        tuneCoreButton.addEventListener('click', () => {
-            if (isModulating) return;
-            if (currentCoherence < 15) {
-                appendFeedback("COHERENCE CRITICAL: Cannot tune core. Re-synchronize immediately!", 'critical');
+        reconfigureProtocolButton.addEventListener('click', () => {
+            if (isProcessing) return;
+
+            isProcessing = true;
+            processDataButton.disabled = true;
+            recalibrateStabilityButton.disabled = true;
+            reconfigureProtocolButton.disabled = true;
+
+            logDataStreamEntry('Initiating protocol reconfiguration...', 'glitch');
+
+            setTimeout(() => {
+                currentProtocolID = generateProtocolID();
+                targetAlgorithmValue = Math.floor(Math.random() * 80) + 10; // Target between 10-90
+                protocolIDSpan.textContent = currentProtocolID;
+                targetSignatureSpan.textContent = `[CONFIDENTIAL] -- RND-${Math.floor(Math.random() * 999)} // EST. RANGE: ±${Math.floor(Math.random() * 10) + 5}%`; // Obfuscate target
+                
+                logDataStreamEntry(`New protocol "${currentProtocolID}" deployed. Analyze signature for optimal tuning.`, 'normal');
+
+                isProcessing = false;
+                processDataButton.disabled = false;
+                recalibrateStabilityButton.disabled = false;
+                reconfigureProtocolButton.disabled = false;
+            }, 1500);
+        });
+
+        processDataButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            if (currentProtocolID === "N/A" || targetSignatureSpan.textContent === "UNKNOWN") {
+                logDataStreamEntry("ERROR: No active protocol. Please reconfigure protocol first.", 'critical');
+                return;
+            }
+            if (currentCoherence < 10) {
+                logDataStreamEntry("COHERENCE CRITICAL: Cannot execute optimization. Re-synchronize immediately!", 'critical');
                 return;
             }
 
-            isModulating = true;
-            tuneCoreButton.disabled = true;
+            isProcessing = true;
+            processDataButton.disabled = true;
             recalibrateStabilityButton.disabled = true;
-            randomizeParamsButton.disabled = true;
+            reconfigureProtocolButton.disabled = true;
 
-            const freq = parseInt(frequencySlider.value);
-            const energy = parseInt(energySlider.value);
-            const phase = parseInt(phaseSlider.value);
-
-            appendFeedback(`Initiating core modulation with Freq:${freq}%, Energy:${energy}%, Phase:${phase}%...`, 'glitch');
+            const dialValue = parseInt(algorithmDial.value);
+            logDataStreamEntry(`Executing optimization for protocol "${currentProtocolID}" with dial value: ${dialValue}%...`, 'glitch');
 
             setTimeout(() => {
                 let coherenceChange = 0;
                 let feedbackType = 'suboptimal';
                 let feedbackMsg;
+                let dataIntegrity = 0;
+                let errorRate = 0;
 
-                // Logic for coherence change based on parameters
-                const idealRange = (val) => val > 40 && val < 60;
-                const nearIdeal = idealRange(freq) && idealRange(energy) && idealRange(phase);
-                const extremeVariance = Math.abs(freq - 50) > 40 || Math.abs(energy - 50) > 40 || Math.abs(phase - 50) > 40;
+                const deviation = Math.abs(dialValue - targetAlgorithmValue);
+                let efficiency = 100 - (deviation * 2); // Larger deviation penalizes more
 
-                if (nearIdeal && Math.random() < 0.7) { // 70% chance of optimal if near ideal
-                    coherenceChange = Math.floor(Math.random() * 5) - 2; // -2 to +2 (slight gain possible)
+                efficiency = Math.max(0, Math.min(100, efficiency + (Math.random() * 10 - 5))); // Add some randomness
+
+                if (efficiency >= 90) { // Optimal performance
+                    coherenceChange = Math.floor(Math.random() * 6) + 3; // +3 to +8
                     feedbackType = 'optimal';
-                    feedbackMsg = `Optimal resonance detected. Freq:${freq}%, Energy:${energy}%, Phase:${phase}%.`;
-                    feedbackMsg += ` ${feedbackMessages.optimal[Math.floor(Math.random() * feedbackMessages.optimal.length)]}`;
-                } else if (extremeVariance && Math.random() < 0.8) { // 80% chance of unstable if extreme
-                    coherenceChange = - (Math.floor(Math.random() * 20) + 15); // -15 to -34
-                    feedbackType = 'critical';
-                    feedbackMsg = `SEVERE DEVIATION: Parameters Freq:${freq}%, Energy:${energy}%, Phase:${phase}% are highly volatile.`;
-                    feedbackMsg += ` ${feedbackMessages.unstable[Math.floor(Math.random() * feedbackMessages.unstable.length)]}`;
-                } else { // Suboptimal
-                    coherenceChange = - (Math.floor(Math.random() * 10) + 5); // -5 to -14
+                    feedbackMsg = optimizationMessages.optimal[Math.floor(Math.random() * optimizationMessages.optimal.length)];
+                    dataIntegrity = Math.min(100, 95 + Math.floor(Math.random() * 5));
+                    errorRate = Math.max(0, Math.floor(Math.random() * 2));
+                } else if (efficiency >= 60) { // Suboptimal performance
+                    coherenceChange = Math.floor(Math.random() * 5) - 3; // -3 to +2
                     feedbackType = 'warning';
-                    feedbackMsg = `Suboptimal alignment. Freq:${freq}%, Energy:${energy}%, Phase:${phase}%.`;
-                    feedbackMsg += ` ${feedbackMessages.suboptimal[Math.floor(Math.random() * feedbackMessages.suboptimal.length)]}`;
+                    feedbackMsg = optimizationMessages.suboptimal[Math.floor(Math.random() * optimizationMessages.suboptimal.length)];
+                    dataIntegrity = Math.min(90, 70 + Math.floor(Math.random() * 20));
+                    errorRate = Math.floor(Math.random() * 10) + 2;
+                } else { // Unstable/critical
+                    coherenceChange = - (Math.floor(Math.random() * 25) + 10); // -10 to -34
+                    feedbackType = 'critical';
+                    feedbackMsg = optimizationMessages.unstable[Math.floor(Math.random() * optimizationMessages.unstable.length)];
+                    dataIntegrity = Math.max(0, Math.floor(Math.random() * 40));
+                    errorRate = Math.floor(Math.random() * 25) + 15;
                 }
 
                 currentCoherence = Math.max(0, Math.min(100, currentCoherence + coherenceChange));
                 updateCoherenceDisplay();
 
-                appendFeedback(feedbackMsg, feedbackType);
-                if (coherenceChange < 0) {
-                    appendFeedback(`Coherence fluctuation: ${coherenceChange}%. Current: ${currentCoherence}%.`, (coherenceChange < -10 ? 'critical' : 'warning'));
-                } else {
-                    appendFeedback(`Coherence fluctuation: +${coherenceChange}%. Current: ${currentCoherence}%.`, 'normal');
-                }
+                logDataStreamEntry(feedbackMsg, feedbackType);
+                logDataStreamEntry(`PROTOCOL ${currentProtocolID} REPORT: Efficiency: ${efficiency.toFixed(1)}% | Data Integrity: ${dataIntegrity.toFixed(1)}% | Error Rate: ${errorRate.toFixed(1)}%`, (efficiency < 60 ? 'critical' : (efficiency < 90 ? 'warning' : 'optimal')));
+                logDataStreamEntry(`CORE COHERENCE: ${coherenceChange > 0 ? '+' : ''}${coherenceChange}%. Current level: ${currentCoherence}%.`, (coherenceChange < -10 ? 'critical' : (coherenceChange < 0 ? 'warning' : 'optimal')));
 
-
-                isModulating = false;
-                tuneCoreButton.disabled = false;
+                isProcessing = false;
+                processDataButton.disabled = false;
                 recalibrateStabilityButton.disabled = false;
-                randomizeParamsButton.disabled = false;
-                systemFeedbackDisplay.classList.remove('active'); // Deactivate glow after report
-            }, 2500); // 2.5 seconds tuning time
+                reconfigureProtocolButton.disabled = false;
+            }, 3000); // 3 seconds processing time
         });
 
         recalibrateStabilityButton.addEventListener('click', () => {
-            if (isModulating) return;
+            if (isProcessing) return;
             if (currentCoherence >= 100) {
-                appendFeedback("Coherence is already at maximum capacity. No re-synchronization needed.", 'normal');
+                logDataStreamEntry("Coherence is already at maximum capacity. No re-synchronization needed.", 'optimal');
                 return;
             }
 
-            isModulating = true;
-            tuneCoreButton.disabled = true;
+            isProcessing = true;
+            processDataButton.disabled = true;
             recalibrateStabilityButton.disabled = true;
-            randomizeParamsButton.disabled = true;
+            reconfigureProtocolButton.disabled = true;
 
-            appendFeedback('Initiating re-synchronization protocols...', 'glitch');
+            logDataStreamEntry('Initiating core re-synchronization protocols...', 'glitch');
 
             setTimeout(() => {
-                const coherenceRestore = Math.floor(Math.random() * 25) + 15; // 15 to 39 coherence restore
+                const coherenceRestore = Math.floor(Math.random() * 30) + 10; // 10 to 39 coherence restore
                 currentCoherence = Math.min(100, currentCoherence + coherenceRestore);
                 updateCoherenceDisplay();
 
-                appendFeedback(`Re-synchronization complete. Coherence restored by +${coherenceRestore}%. Current: ${currentCoherence}%.`, 'optimal');
-                appendFeedback('Systems fully charged and harmonized. Ready for new operations.', 'normal');
+                logDataStreamEntry(`Re-synchronization complete. Coherence restored by +${coherenceRestore}%. Current: ${currentCoherence}%.`, 'optimal');
+                logDataStreamEntry('Systems fully charged and harmonized. Ready for new operations.', 'normal');
 
-                isModulating = false;
-                tuneCoreButton.disabled = false;
+                isProcessing = false;
+                processDataButton.disabled = false;
                 recalibrateStabilityButton.disabled = false;
-                randomizeParamsButton.disabled = false;
-                systemFeedbackDisplay.classList.remove('active');
+                reconfigureProtocolButton.disabled = false;
             }, 3500); // 3.5 seconds recalibration time
         });
         
-        randomizeParamsButton.addEventListener('click', () => {
-            if (isModulating) return;
-            appendFeedback('Randomizing core parameters...', 'glitch');
-            
-            setTimeout(() => {
-                frequencySlider.value = Math.floor(Math.random() * 100);
-                energySlider.value = Math.floor(Math.random() * 100);
-                phaseSlider.value = Math.floor(Math.random() * 100);
-                
-                updateSliderValue(frequencySlider, freqValueSpan);
-                updateSliderValue(energySlider, energyValueSpan);
-                updateSliderValue(phaseSlider, phaseValueSpan);
-                
-                appendFeedback('Parameters randomized. Ready for tuning.', 'normal');
-            }, 800);
-        });
-
         // Initial setup on load
         updateCoherenceDisplay();
-        updateSliderValue(frequencySlider, freqValueSpan);
-        updateSliderValue(energySlider, energyValueSpan);
-        updateSliderValue(phaseSlider, phaseValueSpan);
-        systemFeedbackDisplay.classList.remove('active'); // Ensure it starts inactive
+        updateSliderValue(algorithmDial, algoDialValueSpan);
+        logDataStreamEntry('System online. Awaiting initial protocol configuration.', 'normal');
+        protocolIDSpan.textContent = "IDLE";
+        targetSignatureSpan.textContent = "NO PROTOCOL ACTIVE";
+        dataStreamMonitor.classList.remove('active'); // Ensure it starts inactive
     </script>
 </body>
 </html>
