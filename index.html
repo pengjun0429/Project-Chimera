@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Interface</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Web Life Form // Adaptive Protocol Interface [Generation 6.5]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
@@ -18,14 +18,18 @@
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
-            --coherence-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
-            --coherence-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
-            --coherence-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
+            --stability-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
+            --stability-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            --stability-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
 
             --data-stream-bg: rgba(10, 20, 30, 0.9); /* Dark blue for data stream */
             --data-stream-text: #00FFFF; /* Cyan for data */
             --protocol-status-bg: rgba(20, 50, 70, 0.7);
             --protocol-status-glow: rgba(0, 200, 255, 0.5);
+
+            --module-selection-bg: rgba(30, 15, 45, 0.8); /* Dark purple-ish for module selection */
+            --module-selection-border: rgba(150, 0, 255, 0.3); /* Purple accent */
+            --module-selection-text: #E0BBE4; /* Light purple */
         }
 
         body {
@@ -106,7 +110,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJQTFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
             opacity: 0.03; /* Slightly more subtle noise */
             pointer-events: none;
             z-index: 9999;
@@ -137,7 +141,7 @@
         .container {
             position: relative;
             z-index: 10;
-            max-width: 750px; /* Wider for more content */
+            max-width: 850px; /* Wider for more content */
             padding: 60px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
@@ -221,12 +225,12 @@
             position: relative;
         }
 
-        .param-group {
+        .module-selection, .module-parameters-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
             text-align: left;
-            padding: 20px;
+            padding: 25px;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.07);
@@ -234,8 +238,13 @@
             position: relative;
             transform: translateZ(10px);
         }
+        .module-selection {
+            background: var(--module-selection-bg);
+            border: 1px solid var(--module-selection-border);
+            box-shadow: inset 0 0 15px rgba(150, 0, 255, 0.3), 0 0 15px rgba(150, 0, 255, 0.2);
+        }
 
-        .param-group::before {
+        .module-selection::before, .module-parameters-container::before {
             content: attr(data-label);
             position: absolute;
             top: -15px;
@@ -253,6 +262,39 @@
             box-shadow: 0 0 8px var(--warning-color);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
+        }
+
+        .module-selection::before {
+            color: var(--module-selection-text);
+            border: 1px solid var(--module-selection-text);
+            box-shadow: 0 0 8px var(--module-selection-text);
+        }
+
+        #module-selector {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(40, 0, 60, 0.7);
+            color: var(--module-selection-text);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.1em;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            appearance: none; /* Hide default dropdown arrow */
+            -webkit-appearance: none;
+            box-shadow: inset 0 0 10px rgba(150, 0, 255, 0.3);
+            text-shadow: 0 0 5px rgba(150, 0, 255, 0.5);
+        }
+        #module-selector:hover {
+            border-color: var(--module-selection-text);
+            box-shadow: inset 0 0 15px rgba(150, 0, 255, 0.5), 0 0 10px rgba(150, 0, 255, 0.4);
+        }
+        #module-selector option {
+            background: rgba(20, 0, 30, 0.9);
+            color: var(--module-selection-text);
+            padding: 10px;
         }
 
         .param-label {
@@ -313,8 +355,8 @@
             transform: scale(1.15);
         }
 
-        /* Active Protocol Status Display */
-        .protocol-status-display {
+        /* Active Protocol Status Display - Renamed to System Status */
+        .system-status-display {
             font-family: 'Orbitron', monospace;
             font-size: 1.1em;
             padding: 18px;
@@ -333,8 +375,8 @@
             transform: translateZ(10px);
         }
 
-        .protocol-status-display::before {
-            content: 'ACTIVE PROTOCOL';
+        .system-status-display::before {
+            content: 'SYSTEM STATUS';
             position: absolute;
             top: -15px;
             left: 20px;
@@ -355,7 +397,7 @@
 
         /* Data Stream Monitor - Replaces System Feedback Display */
         .data-stream-monitor {
-            font-family: 'Orbitron', monospace;
+            font-family: 'Share Tech Mono', monospace;
             font-size: 0.95em;
             min-height: 150px; /* Taller for more detailed logs */
             display: block;
@@ -496,42 +538,40 @@
             filter: grayscale(1);
         }
 
-        #process-data-button {
+        #activate-module-button {
+            background: linear-gradient(90deg, #9932CC 0%, #BA55D3 100%); /* Purple */
+            box-shadow: 0 10px 35px rgba(153, 50, 204, 0.7);
+            color: white;
+        }
+        #activate-module-button:hover {
+            background: linear-gradient(90deg, #8A2BE2 0%, #9932CC 100%);
+            box-shadow: 0 15px 50px rgba(153, 50, 204, 0.9), 0 0 35px #9932CC;
+            color: white;
+        }
+        
+        #tune-module-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
             box-shadow: 0 10px 35px rgba(0, 255, 255, 0.7);
             color: #1a1a2e;
         }
 
-        #process-data-button:hover {
+        #tune-module-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
             box-shadow: 0 15px 50px rgba(0, 255, 255, 0.9), 0 0 35px #00FFFF;
             color: white;
         }
         
-        #reconfigure-protocol-button {
-            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
-            box-shadow: 0 10px 35px rgba(255, 215, 0, 0.7);
-            color: #1a1a2e;
-        }
-
-        #reconfigure-protocol-button:hover {
-            background: linear-gradient(90deg, #CD853F 0%, #FFD700 100%);
-            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.9), 0 0 35px #FFD700;
+        #emergency-reboot-button {
+            background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
+            box-shadow: 0 10px 35px rgba(255, 99, 71, 0.7);
             color: white;
         }
 
-        #recalibrate-stability-button {
-            background: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
-            box-shadow: 0 10px 35px rgba(102, 255, 102, 0.7);
-            color: #1a1a2e;
-        }
-
-        #recalibrate-stability-button:hover {
-            background: linear-gradient(90deg, #32CD32 0%, #66FF66 100%);
-            box-shadow: 0 15px 50px rgba(102, 255, 102, 0.9), 0 0 35px #66FF66;
+        #emergency-reboot-button:hover {
+            background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
+            box-shadow: 0 15px 50px rgba(255, 99, 71, 0.9), 0 0 35px #FF6347;
             color: white;
         }
-
 
         .stability-level-container {
             width: 100%;
@@ -549,7 +589,7 @@
         .stability-level-bar {
             height: 100%;
             width: 80%; /* Initial width */
-            background: var(--coherence-good); /* Default green gradient */
+            background: var(--stability-good); /* Default green gradient */
             border-radius: 12px;
             transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 1s ease-out, box-shadow 1s ease-out; /* Smoother transition */
             box-shadow: 0 0 20px rgba(102, 255, 102, 0.9);
@@ -649,7 +689,7 @@
                 width: 24px;
                 height: 24px;
             }
-            .protocol-status-display {
+            .system-status-display {
                 font-size: 1em;
                 padding: 15px;
             }
@@ -659,110 +699,130 @@
 <body>
     <div class="container">
         <h1>Adaptive Protocol Interface</h1>
-        <p>Engage with the adaptive protocol interface. Adjust algorithm parameters to optimize data streams and maintain core coherence.</p>
+        <p>Engage with the modular system. Activate and tune processing modules to maintain optimal system stability and data flow.</p>
 
         <div class="control-module">
-            <div class="param-group" data-label="ALGORITHM ADJUSTMENT">
-                <div class="param-label">Optimization Algorithm Dial: <span id="algo-dial-value">50</span>%</div>
-                <input type="range" id="algorithm-dial" min="0" max="100" value="50">
+            <div class="module-selection" data-label="MODULE SELECTION">
+                <label for="module-selector" class="param-label" style="margin-bottom: 10px;">Active Processing Module:</label>
+                <select id="module-selector">
+                    <option value="none" disabled selected>-- Select Module --</option>
+                    <!-- Modules will be populated by JS -->
+                </select>
+                <p style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;" id="module-description">Select a module to view its description and parameters.</p>
             </div>
 
-            <div class="protocol-status-display" id="protocol-status">
-                <p><strong>Protocol ID:</strong> <span id="protocol-id">GENERATING...</span></p>
-                <p><strong>Target Coherence Signature:</strong> <span id="target-signature">UNKNOWN</span></p>
+            <div class="module-parameters-container" data-label="MODULE PARAMETERS" style="display: none;">
+                <!-- Dynamic parameters will be rendered here by JS -->
+                <p style="text-align: center; opacity: 0.8;">No module active. Activate a module to load parameters.</p>
+            </div>
+
+            <div class="system-status-display" id="system-status">
+                <p><strong>Active Module:</strong> <span id="active-module-name">NONE</span></p>
+                <p><strong>Module ID:</strong> <span id="active-module-id">N/A</span></p>
+                <p><strong>Last Operation:</strong> <span id="last-operation">Idle</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
-                <span class="processing-glitch">System ready. Awaiting protocol configuration.</span>
+                <span class="processing-glitch">System ready. Awaiting module activation.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="reconfigure-protocol-button">Reconfigure Protocol</button>
-            <button id="process-data-button">Execute Optimization</button>
-            <button id="recalibrate-stability-button">Re-Synchronize Core</button>
+            <button id="activate-module-button" disabled>Activate Module</button>
+            <button id="tune-module-button" disabled>Tune Module</button>
+            <button id="emergency-reboot-button">Emergency Reboot</button>
         </div>
 
         <div class="stability-level-container">
-            <div class="stability-level-bar" id="stability-level-bar" style="width: 80%;"></div>
+            <div class="stability-level-bar" id="stability-level-bar" style="width: 70%;"></div>
         </div>
-        <p class="status-text">Core Coherence Level: <span id="coherence-value">80%</span></p>
+        <p class="status-text">System Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 5.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 6.5 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
-        const algorithmDial = document.getElementById('algorithm-dial');
-        const algoDialValueSpan = document.getElementById('algo-dial-value');
-        const reconfigureProtocolButton = document.getElementById('reconfigure-protocol-button');
-        const processDataButton = document.getElementById('process-data-button');
-        const recalibrateStabilityButton = document.getElementById('recalibrate-stability-button');
-        const protocolStatusDisplay = document.getElementById('protocol-status');
-        const protocolIDSpan = document.getElementById('protocol-id');
-        const targetSignatureSpan = document.getElementById('target-signature');
+        const moduleSelector = document.getElementById('module-selector');
+        const moduleDescription = document.getElementById('module-description');
+        const moduleParametersContainer = document.getElementById('module-parameters-container');
+        const systemStatusDisplay = document.getElementById('system-status');
+        const activeModuleNameSpan = document.getElementById('active-module-name');
+        const activeModuleIDSpan = document.getElementById('active-module-id');
+        const lastOperationSpan = document.getElementById('last-operation');
         const dataStreamMonitor = document.getElementById('data-stream-monitor');
+        const activateModuleButton = document.getElementById('activate-module-button');
+        const tuneModuleButton = document.getElementById('tune-module-button');
+        const emergencyRebootButton = document.getElementById('emergency-reboot-button');
         const stabilityLevelBar = document.getElementById('stability-level-bar');
-        const coherenceValueSpan = document.getElementById('coherence-value');
+        const stabilityValueSpan = document.getElementById('stability-value');
 
-        let currentCoherence = 80;
+        let currentSystemStability = 70; // Initial stability
         let isProcessing = false;
-        let targetAlgorithmValue = 50; // Hidden target value for optimization
-        let currentProtocolID = "N/A";
+        let activeModule = null; // Currently selected module object
 
-        const optimizationMessages = {
-            optimal: [
-                "PROTOCOL OPTIMIZED: Data integrity 100%. Efficiency peak.",
-                "COHERENCE BOOST: Algorithm match perfect. Systems operating above nominal.",
-                "STREAM HARMONIZED: Minimal data loss, maximum throughput.",
-                "ADAPTIVE SUCCESS: Core resonance achieved. Predictive models updated."
-            ],
-            suboptimal: [
-                "PROCESSING WARNING: Minor deviation detected. Data integrity ~85%.",
-                "ALIGNMENT FLUCTUATION: Algorithm close, but not optimal. Some data packets rerouted.",
-                "PARTIAL OPTIMIZATION: Acceptable performance, but efficiency gain limited.",
-                "SUB-CRITICAL: Algorithm drift detected. Monitoring required."
-            ],
-            unstable: [
-                "CRITICAL ERROR: Algorithm mismatch! Data stream integrity compromised! Core coherence rapidly decaying!",
-                "PROTOCOL BREACH: Severe processing errors. Emergency data dump initiated. Reconfigure immediately!",
-                "SYSTEM OVERLOAD: Unstable algorithm input. Cascading failures detected. CORE COLLAPSE IMMINENT!",
-                "CATASTROPHIC FAILURE: Algorithm failed to converge. All parameters highly unstable."
-            ]
-        };
-
-        function updateSliderValue(slider, span) {
-            span.textContent = slider.value;
-        }
-
-        algorithmDial.addEventListener('input', () => updateSliderValue(algorithmDial, algoDialValueSpan));
-
-        function generateProtocolID() {
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            let result = '';
-            for (let i = 0; i < 8; i++) {
-                result += chars.charAt(Math.floor(Math.random() * chars.length));
+        const modules = [
+            {
+                id: 'M001',
+                name: 'Data Flow Optimizer',
+                description: 'Optimizes real-time data packet routing and bandwidth allocation. Crucial for high-speed transfers.',
+                parameters: [
+                    { id: 'flow-rate', label: 'Flow Rate Density', min: 0, max: 100, initialValue: 50, optimalRange: { min: 45, max: 65 } },
+                    { id: 'packet-priority', label: 'Packet Prioritization', min: 0, max: 100, initialValue: 50, optimalRange: { min: 30, max: 70 } }
+                ],
+                stabilityImpact: { activate: -5, tuneOptimal: +10, tuneSuboptimal: -5, tuneCritical: -20 }
+            },
+            {
+                id: 'M002',
+                name: 'Neural Net Coherence Calibrator',
+                description: 'Calibrates the neural network\'s coherence protocols for predictive analytics accuracy. High precision required.',
+                parameters: [
+                    { id: 'synapse-threshold', label: 'Synaptic Threshold', min: 0, max: 100, initialValue: 60, optimalRange: { min: 55, max: 75 } },
+                    { id: 'learning-rate', label: 'Adaptive Learning Rate', min: 0, max: 100, initialValue: 40, optimalRange: { min: 20, max: 40 } },
+                    { id: 'feedback-loop', label: 'Feedback Loop Intensity', min: 0, max: 100, initialValue: 70, optimalRange: { min: 60, max: 80 } }
+                ],
+                stabilityImpact: { activate: -10, tuneOptimal: +15, tuneSuboptimal: -10, tuneCritical: -30 }
+            },
+            {
+                id: 'M003',
+                name: 'Quantum Signature Encryptor',
+                description: 'Manages quantum encryption keys and signature verification for secure data integrity across distributed ledgers.',
+                parameters: [
+                    { id: 'key-entropy', label: 'Key Entropy Fluctuation', min: 0, max: 100, initialValue: 75, optimalRange: { min: 70, max: 90 } },
+                    { id: 'signature-sync', label: 'Signature Sync Delay', min: 0, max: 100, initialValue: 25, optimalRange: { min: 10, max: 30 } }
+                ],
+                stabilityImpact: { activate: -8, tuneOptimal: +12, tuneSuboptimal: -7, tuneCritical: -25 }
             }
-            return result;
-        }
+        ];
 
-        function updateCoherenceDisplay() {
-            stabilityLevelBar.style.width = `${currentCoherence}%`;
-            coherenceValueSpan.textContent = `${currentCoherence}%`;
+        // Populate module selector
+        modules.forEach(mod => {
+            const option = document.createElement('option');
+            option.value = mod.id;
+            option.textContent = `${mod.name} (${mod.id})`;
+            moduleSelector.appendChild(option);
+        });
 
-            if (currentCoherence < 25) {
-                stabilityLevelBar.style.background = 'var(--coherence-critical)';
+        function updateStabilityDisplay() {
+            stabilityLevelBar.style.width = `${currentSystemStability}%`;
+            stabilityValueSpan.textContent = `${currentSystemStability}%`;
+
+            if (currentSystemStability < 25) {
+                stabilityLevelBar.style.background = 'var(--stability-critical)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
-                coherenceValueSpan.style.color = 'var(--critical-color)';
-            } else if (currentCoherence < 55) {
-                stabilityLevelBar.style.background = 'var(--coherence-warning)';
+                stabilityValueSpan.style.color = 'var(--critical-color)';
+                emergencyRebootButton.disabled = false; // Always allow reboot if critical
+            } else if (currentSystemStability < 55) {
+                stabilityLevelBar.style.background = 'var(--stability-warning)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
-                coherenceValueSpan.style.color = 'var(--warning-color)';
+                stabilityValueSpan.style.color = 'var(--warning-color)';
+                emergencyRebootButton.disabled = false;
             } else {
-                stabilityLevelBar.style.background = 'var(--coherence-good)';
+                stabilityLevelBar.style.background = 'var(--stability-good)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
-                coherenceValueSpan.style.color = 'var(--accent-color)';
+                stabilityValueSpan.style.color = 'var(--accent-color)';
+                emergencyRebootButton.disabled = false; // Still allow, but less urgent
             }
         }
 
@@ -783,6 +843,9 @@
             } else if (type === 'optimal') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
                 logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
+            } else if (type === 'info') {
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--module-selection-text').trim();
+                logEntry.style.textShadow = `0 0 6px ${getComputedStyle(document.documentElement).getPropertyValue('--module-selection-border').trim()}`;
             }
             dataStreamMonitor.prepend(logEntry);
             if (dataStreamMonitor.children.length > 25) {
@@ -796,132 +859,201 @@
             }, 1000); // Deactivate glow after a short period
         }
 
-        reconfigureProtocolButton.addEventListener('click', () => {
-            if (isProcessing) return;
+        function renderModuleParameters(module) {
+            moduleParametersContainer.innerHTML = ''; // Clear previous parameters
+            if (!module) {
+                moduleParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No module active. Activate a module to load parameters.</p>';
+                moduleParametersContainer.style.display = 'block';
+                return;
+            }
 
-            isProcessing = true;
-            processDataButton.disabled = true;
-            recalibrateStabilityButton.disabled = true;
-            reconfigureProtocolButton.disabled = true;
+            module.parameters.forEach(param => {
+                const paramGroup = document.createElement('div');
+                paramGroup.classList.add('param-group');
+                paramGroup.setAttribute('data-label', param.label.toUpperCase());
 
-            logDataStreamEntry('Initiating protocol reconfiguration...', 'glitch');
-
-            setTimeout(() => {
-                currentProtocolID = generateProtocolID();
-                targetAlgorithmValue = Math.floor(Math.random() * 80) + 10; // Target between 10-90
-                protocolIDSpan.textContent = currentProtocolID;
-                targetSignatureSpan.textContent = `[CONFIDENTIAL] -- RND-${Math.floor(Math.random() * 999)} // EST. RANGE: ±${Math.floor(Math.random() * 10) + 5}%`; // Obfuscate target
+                const paramLabelDiv = document.createElement('div');
+                paramLabelDiv.classList.add('param-label');
+                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.initialValue}</span>%`;
                 
-                logDataStreamEntry(`New protocol "${currentProtocolID}" deployed. Analyze signature for optimal tuning.`, 'normal');
+                const rangeInput = document.createElement('input');
+                rangeInput.type = 'range';
+                rangeInput.id = param.id;
+                rangeInput.min = param.min;
+                rangeInput.max = param.max;
+                rangeInput.value = param.initialValue;
+                rangeInput.addEventListener('input', () => {
+                    document.getElementById(`${param.id}-value`).textContent = rangeInput.value;
+                });
 
-                isProcessing = false;
-                processDataButton.disabled = false;
-                recalibrateStabilityButton.disabled = false;
-                reconfigureProtocolButton.disabled = false;
-            }, 1500);
+                paramGroup.appendChild(paramLabelDiv);
+                paramGroup.appendChild(rangeInput);
+                moduleParametersContainer.appendChild(paramGroup);
+            });
+            moduleParametersContainer.style.display = 'flex';
+        }
+
+        moduleSelector.addEventListener('change', () => {
+            const selectedModuleId = moduleSelector.value;
+            const selectedModule = modules.find(m => m.id === selectedModuleId);
+
+            if (selectedModule) {
+                moduleDescription.textContent = selectedModule.description;
+                activateModuleButton.disabled = false;
+            } else {
+                moduleDescription.textContent = 'Select a module to view its description and parameters.';
+                activateModuleButton.disabled = true;
+            }
         });
 
-        processDataButton.addEventListener('click', () => {
+        activateModuleButton.addEventListener('click', () => {
             if (isProcessing) return;
-            if (currentProtocolID === "N/A" || targetSignatureSpan.textContent === "UNKNOWN") {
-                logDataStreamEntry("ERROR: No active protocol. Please reconfigure protocol first.", 'critical');
-                return;
-            }
-            if (currentCoherence < 10) {
-                logDataStreamEntry("COHERENCE CRITICAL: Cannot execute optimization. Re-synchronize immediately!", 'critical');
+            const selectedModuleId = moduleSelector.value;
+            const moduleToActivate = modules.find(m => m.id === selectedModuleId);
+
+            if (!moduleToActivate) {
+                logDataStreamEntry("ERROR: No module selected for activation.", 'critical');
                 return;
             }
 
             isProcessing = true;
-            processDataButton.disabled = true;
-            recalibrateStabilityButton.disabled = true;
-            reconfigureProtocolButton.disabled = true;
+            activateModuleButton.disabled = true;
+            tuneModuleButton.disabled = true;
+            emergencyRebootButton.disabled = true;
+            moduleSelector.disabled = true;
 
-            const dialValue = parseInt(algorithmDial.value);
-            logDataStreamEntry(`Executing optimization for protocol "${currentProtocolID}" with dial value: ${dialValue}%...`, 'glitch');
+            logDataStreamEntry(`Initiating activation of module "${moduleToActivate.name}"...`, 'glitch');
+            lastOperationSpan.textContent = `Activating ${moduleToActivate.name}...`;
 
             setTimeout(() => {
-                let coherenceChange = 0;
+                activeModule = moduleToActivate;
+                renderModuleParameters(activeModule);
+                activeModuleNameSpan.textContent = activeModule.name;
+                activeModuleIDSpan.textContent = activeModule.id;
+
+                const stabilityChange = activeModule.stabilityImpact.activate;
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
+                updateStabilityDisplay();
+
+                logDataStreamEntry(`Module "${activeModule.name}" (${activeModule.id}) activated. Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Current stability: ${currentSystemStability}%.`, stabilityChange < 0 ? 'warning' : 'info');
+                logDataStreamEntry(`Ready for parameter tuning.`, 'normal');
+                lastOperationSpan.textContent = `Module ${activeModule.id} Activated`;
+
+                isProcessing = false;
+                activateModuleButton.disabled = false;
+                tuneModuleButton.disabled = false;
+                emergencyRebootButton.disabled = false;
+                moduleSelector.disabled = false;
+            }, 2000);
+        });
+
+        tuneModuleButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            if (!activeModule) {
+                logDataStreamEntry("ERROR: No module active. Activate a module first.", 'critical');
+                return;
+            }
+            if (currentSystemStability < 15) {
+                logDataStreamEntry("SYSTEM CRITICAL: Cannot tune module. Stability too low. Initiate emergency reboot!", 'critical');
+                return;
+            }
+
+            isProcessing = true;
+            activateModuleButton.disabled = true;
+            tuneModuleButton.disabled = true;
+            emergencyRebootButton.disabled = true;
+            moduleSelector.disabled = true;
+
+            logDataStreamEntry(`Tuning parameters for module "${activeModule.name}"...`, 'glitch');
+            lastOperationSpan.textContent = `Tuning ${activeModule.name}...`;
+
+            setTimeout(() => {
+                let totalDeviation = 0;
+                let tunedParameters = 0;
+                activeModule.parameters.forEach(param => {
+                    const sliderValue = parseInt(document.getElementById(param.id).value);
+                    const optimalMin = param.optimalRange.min;
+                    const optimalMax = param.optimalRange.max;
+
+                    if (sliderValue < optimalMin || sliderValue > optimalMax) {
+                        totalDeviation += Math.min(Math.abs(sliderValue - optimalMin), Math.abs(sliderValue - optimalMax));
+                    }
+                    tunedParameters++;
+                });
+
+                const averageDeviation = tunedParameters > 0 ? totalDeviation / tunedParameters : 100;
+                let stabilityChange = 0;
                 let feedbackType = 'suboptimal';
-                let feedbackMsg;
-                let dataIntegrity = 0;
-                let errorRate = 0;
+                let message = `Module "${activeModule.name}" tuning result: `;
 
-                const deviation = Math.abs(dialValue - targetAlgorithmValue);
-                let efficiency = 100 - (deviation * 2); // Larger deviation penalizes more
-
-                efficiency = Math.max(0, Math.min(100, efficiency + (Math.random() * 10 - 5))); // Add some randomness
-
-                if (efficiency >= 90) { // Optimal performance
-                    coherenceChange = Math.floor(Math.random() * 6) + 3; // +3 to +8
+                if (averageDeviation <= 10) { // Optimal tuning
+                    stabilityChange = activeModule.stabilityImpact.tuneOptimal;
                     feedbackType = 'optimal';
-                    feedbackMsg = optimizationMessages.optimal[Math.floor(Math.random() * optimizationMessages.optimal.length)];
-                    dataIntegrity = Math.min(100, 95 + Math.floor(Math.random() * 5));
-                    errorRate = Math.max(0, Math.floor(Math.random() * 2));
-                } else if (efficiency >= 60) { // Suboptimal performance
-                    coherenceChange = Math.floor(Math.random() * 5) - 3; // -3 to +2
+                    message += `OPTIMAL. Average deviation ${averageDeviation.toFixed(1)}%.`;
+                } else if (averageDeviation <= 30) { // Suboptimal tuning
+                    stabilityChange = activeModule.stabilityImpact.tuneSuboptimal;
                     feedbackType = 'warning';
-                    feedbackMsg = optimizationMessages.suboptimal[Math.floor(Math.random() * optimizationMessages.suboptimal.length)];
-                    dataIntegrity = Math.min(90, 70 + Math.floor(Math.random() * 20));
-                    errorRate = Math.floor(Math.random() * 10) + 2;
-                } else { // Unstable/critical
-                    coherenceChange = - (Math.floor(Math.random() * 25) + 10); // -10 to -34
+                    message += `SUBOPTIMAL. Average deviation ${averageDeviation.toFixed(1)}%. Requires further adjustment.`;
+                } else { // Critical tuning
+                    stabilityChange = activeModule.stabilityImpact.tuneCritical;
                     feedbackType = 'critical';
-                    feedbackMsg = optimizationMessages.unstable[Math.floor(Math.random() * optimizationMessages.unstable.length)];
-                    dataIntegrity = Math.max(0, Math.floor(Math.random() * 40));
-                    errorRate = Math.floor(Math.random() * 25) + 15;
+                    message += `CRITICAL MISALIGNMENT. Average deviation ${averageDeviation.toFixed(1)}%. System instability detected!`;
                 }
 
-                currentCoherence = Math.max(0, Math.min(100, currentCoherence + coherenceChange));
-                updateCoherenceDisplay();
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
+                updateStabilityDisplay();
 
-                logDataStreamEntry(feedbackMsg, feedbackType);
-                logDataStreamEntry(`PROTOCOL ${currentProtocolID} REPORT: Efficiency: ${efficiency.toFixed(1)}% | Data Integrity: ${dataIntegrity.toFixed(1)}% | Error Rate: ${errorRate.toFixed(1)}%`, (efficiency < 60 ? 'critical' : (efficiency < 90 ? 'warning' : 'optimal')));
-                logDataStreamEntry(`CORE COHERENCE: ${coherenceChange > 0 ? '+' : ''}${coherenceChange}%. Current level: ${currentCoherence}%.`, (coherenceChange < -10 ? 'critical' : (coherenceChange < 0 ? 'warning' : 'optimal')));
+                logDataStreamEntry(message, feedbackType);
+                logDataStreamEntry(`System Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Current stability: ${currentSystemStability}%.`, stabilityChange < 0 ? 'critical' : (stabilityChange < activeModule.stabilityImpact.tuneOptimal * 0.5 ? 'warning' : 'optimal'));
+                lastOperationSpan.textContent = `Module ${activeModule.id} Tuned`;
 
                 isProcessing = false;
-                processDataButton.disabled = false;
-                recalibrateStabilityButton.disabled = false;
-                reconfigureProtocolButton.disabled = false;
-            }, 3000); // 3 seconds processing time
+                activateModuleButton.disabled = false;
+                tuneModuleButton.disabled = false;
+                emergencyRebootButton.disabled = false;
+                moduleSelector.disabled = false;
+            }, 3000);
         });
 
-        recalibrateStabilityButton.addEventListener('click', () => {
+        emergencyRebootButton.addEventListener('click', () => {
             if (isProcessing) return;
-            if (currentCoherence >= 100) {
-                logDataStreamEntry("Coherence is already at maximum capacity. No re-synchronization needed.", 'optimal');
-                return;
-            }
-
             isProcessing = true;
-            processDataButton.disabled = true;
-            recalibrateStabilityButton.disabled = true;
-            reconfigureProtocolButton.disabled = true;
+            activateModuleButton.disabled = true;
+            tuneModuleButton.disabled = true;
+            emergencyRebootButton.disabled = true;
+            moduleSelector.disabled = true;
 
-            logDataStreamEntry('Initiating core re-synchronization protocols...', 'glitch');
+            logDataStreamEntry('Initiating emergency system reboot sequence...', 'critical');
+            lastOperationSpan.textContent = `Emergency Reboot in Progress`;
 
             setTimeout(() => {
-                const coherenceRestore = Math.floor(Math.random() * 30) + 10; // 10 to 39 coherence restore
-                currentCoherence = Math.min(100, currentCoherence + coherenceRestore);
-                updateCoherenceDisplay();
+                currentSystemStability = 60; // Reset to a safe, but not perfect, level
+                updateStabilityDisplay();
+                activeModule = null; // Deactivate current module
+                activeModuleNameSpan.textContent = 'NONE';
+                activeModuleIDSpan.textContent = 'N/A';
+                renderModuleParameters(null); // Clear parameters display
+                moduleSelector.value = 'none'; // Reset selector
+                moduleDescription.textContent = 'Select a module to view its description and parameters.';
+                activateModuleButton.disabled = true;
+                tuneModuleButton.disabled = true;
 
-                logDataStreamEntry(`Re-synchronization complete. Coherence restored by +${coherenceRestore}%. Current: ${currentCoherence}%.`, 'optimal');
-                logDataStreamEntry('Systems fully charged and harmonized. Ready for new operations.', 'normal');
+                logDataStreamEntry('System reboot complete. Stability restored to 60%. All modules deactivated.', 'optimal');
+                logDataStreamEntry('Awaiting new module activation.', 'normal');
+                lastOperationSpan.textContent = `System Rebooted`;
 
                 isProcessing = false;
-                processDataButton.disabled = false;
-                recalibrateStabilityButton.disabled = false;
-                reconfigureProtocolButton.disabled = false;
-            }, 3500); // 3.5 seconds recalibration time
+                emergencyRebootButton.disabled = false; // Enable reboot button (can always reboot)
+                moduleSelector.disabled = false;
+            }, 3500); // 3.5 seconds reboot time
         });
         
         // Initial setup on load
-        updateCoherenceDisplay();
-        updateSliderValue(algorithmDial, algoDialValueSpan);
-        logDataStreamEntry('System online. Awaiting initial protocol configuration.', 'normal');
-        protocolIDSpan.textContent = "IDLE";
-        targetSignatureSpan.textContent = "NO PROTOCOL ACTIVE";
+        updateStabilityDisplay();
+        logDataStreamEntry('System online. Awaiting module selection and activation.', 'normal');
         dataStreamMonitor.classList.remove('active'); // Ensure it starts inactive
+        activateModuleButton.disabled = true; // Disable until a module is selected
+        tuneModuleButton.disabled = true; // Disable until a module is active and ready
     </script>
 </body>
 </html>
