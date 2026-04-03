@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Interface [Generation 6.5]</title>
+    <title>Web Life Form // Adaptive Protocol Nexus [Generation 7.0]</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
             --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
-            --frosted-bg: rgba(255, 255, 255, 0.04); /* Slightly less opaque frosted background */
-            --text-color: #E8E8E8; /* Lighter text for contrast */
+            --frosted-bg: rgba(255, 255, 255, 0.03); /* Slightly less opaque frosted background, more transparent */
+            --text-color: #E0E0E0; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.08); /* Slightly more visible border */
-            --console-bg: rgba(0, 0, 0, 0.45); /* Darker console */
+            --border-color: rgba(255, 255, 255, 0.06); /* Slightly more visible border */
+            --console-bg: rgba(0, 0, 0, 0.55); /* Darker console */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
@@ -22,21 +22,25 @@
             --stability-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
             --stability-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
 
-            --data-stream-bg: rgba(10, 20, 30, 0.9); /* Dark blue for data stream */
+            --data-stream-bg: rgba(10, 20, 30, 0.95); /* Dark blue for data stream */
             --data-stream-text: #00FFFF; /* Cyan for data */
-            --protocol-status-bg: rgba(20, 50, 70, 0.7);
-            --protocol-status-glow: rgba(0, 200, 255, 0.5);
+            --protocol-status-bg: rgba(20, 50, 70, 0.8);
+            --protocol-status-glow: rgba(0, 200, 255, 0.6);
 
-            --module-selection-bg: rgba(30, 15, 45, 0.8); /* Dark purple-ish for module selection */
-            --module-selection-border: rgba(150, 0, 255, 0.3); /* Purple accent */
+            --module-selection-bg: rgba(30, 15, 45, 0.85); /* Dark purple-ish for module selection */
+            --module-selection-border: rgba(150, 0, 255, 0.4); /* Purple accent */
             --module-selection-text: #E0BBE4; /* Light purple */
+
+            --energy-color: linear-gradient(90deg, #FFFF00 0%, #FFCC00 100%); /* Yellow for energy */
+            --data-flow-color: linear-gradient(90deg, #00FF00 0%, #00CC00 100%); /* Green for data flow */
+            --resource-bg: rgba(0, 0, 0, 0.7);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #0A0A15; /* Even darker, deeper background base */
+            background: #05050C; /* Even darker, deeper background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,11 +74,11 @@
                 #200d25 90%,
                 #100d20 100%
             );
-            background-size: 600% 600%;
-            animation: fluidBackground1 60s linear infinite alternate, rotateBackground 120s linear infinite;
+            background-size: 800% 800%; /* Larger background size for smoother movement */
+            animation: fluidBackground1 90s linear infinite alternate, rotateBackground 150s linear infinite; /* Slower animations */
             z-index: -3;
-            filter: blur(150px) opacity(0.5);
-            transform: rotate(-35deg) scale(1.5);
+            filter: blur(180px) opacity(0.6); /* More blur, slightly more opaque */
+            transform: rotate(-45deg) scale(1.8); /* Larger scale, more rotation */
             mix-blend-mode: color-dodge; /* More aggressive blend */
         }
 
@@ -88,18 +92,18 @@
             height: 240%;
             background: linear-gradient(
                 -75deg,
-                rgba(135, 206, 250, 0.15) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.1) 25%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.1) 50%, /* tertiary glow accent */
-                rgba(135, 206, 250, 0.15) 75%,
-                rgba(255, 105, 180, 0.1) 100%
+                rgba(135, 206, 250, 0.2) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.15) 25%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.15) 50%, /* tertiary glow accent */
+                rgba(135, 206, 250, 0.2) 75%,
+                rgba(255, 105, 180, 0.15) 100%
             );
-            background-size: 300% 300%;
-            animation: fluidBackground2 30s ease-in-out infinite, rotateBackgroundReversed 90s linear infinite;
+            background-size: 400% 400%; /* Larger background size for smoother movement */
+            animation: fluidBackground2 45s ease-in-out infinite, rotateBackgroundReversed 110s linear infinite; /* Slower animations */
             z-index: -2;
-            filter: blur(80px) opacity(0.3);
+            filter: blur(100px) opacity(0.4); /* More blur, slightly more opaque */
             mix-blend-mode: screen;
-            transform: rotate(20deg);
+            transform: rotate(30deg) scale(1.2); /* More rotation, slight scale */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -111,7 +115,7 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.03; /* Slightly more subtle noise */
+            opacity: 0.05; /* Slightly more noticeable noise */
             pointer-events: none;
             z-index: 9999;
         }
@@ -129,49 +133,49 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-35deg) scale(1.5); }
-            to { transform: rotate(325deg) scale(1.5); }
+            from { transform: rotate(-45deg) scale(1.8); }
+            to { transform: rotate(315deg) scale(1.8); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(20deg); }
-            to { transform: rotate(-340deg); }
+            from { transform: rotate(30deg) scale(1.2); }
+            to { transform: rotate(-330deg) scale(1.2); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 850px; /* Wider for more content */
-            padding: 60px; /* More padding */
+            max-width: 900px; /* Even wider for more content */
+            padding: 70px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 40px; /* Even more rounded */
-            backdrop-filter: blur(80px) saturate(300%) brightness(120%); /* Stronger blur, saturation, and brightness */
-            -webkit-backdrop-filter: blur(80px) saturate(300%) brightness(120%);
+            border-radius: 50px; /* Even more rounded */
+            backdrop-filter: blur(100px) saturate(400%) brightness(130%); /* Stronger blur, saturation, and brightness */
+            -webkit-backdrop-filter: blur(100px) saturate(400%) brightness(130%);
             box-shadow:
-                0 30px 100px rgba(0, 0, 0, 0.8), /* Deeper shadow */
-                0 0 150px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 40px rgba(255, 255, 255, 0.1); /* Stronger inner glow for depth */
+                0 40px 150px rgba(0, 0, 0, 0.9), /* Deeper shadow */
+                0 0 200px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 50px rgba(255, 255, 255, 0.15); /* Stronger inner glow for depth */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 45px; /* Increased gap between sections */
-            animation: fadeInScale 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 0.8s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 50px; /* Increased gap between sections */
+            animation: fadeInScale 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 0.9s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -4px; /* More overflow */
-            border-radius: 42px;
+            inset: -5px; /* More overflow */
+            border-radius: 52px;
             background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF); /* More vibrant border glow colors */
-            background-size: 400% 400%;
-            animation: borderGlow 8s linear infinite alternate;
-            filter: blur(10px);
+            background-size: 500% 500%; /* Larger background for smoother animation */
+            animation: borderGlow 10s linear infinite alternate; /* Slower animation */
+            filter: blur(15px); /* Stronger blur */
             z-index: -1;
-            opacity: 0.6; /* Stronger glow */
+            opacity: 0.7; /* Stronger glow */
         }
 
         @keyframes borderGlow {
@@ -180,52 +184,136 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.8) translateY(80px) perspective(1000px) rotateX(15deg); }
+            from { opacity: 0; transform: scale(0.7) translateY(100px) perspective(1000px) rotateX(20deg); }
             to { opacity: 1; transform: scale(1) translateY(0) perspective(1000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2em; /* Even larger heading */
+            font-size: 3.5em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 30px var(--primary-glow), 0 0 50px rgba(135, 206, 250, 0.6);
-            margin-bottom: 30px;
-            letter-spacing: 4px;
+            text-shadow: 0 0 35px var(--primary-glow), 0 0 60px rgba(135, 206, 250, 0.7);
+            margin-bottom: 35px;
+            letter-spacing: 5px;
             line-height: 1.2;
             position: relative;
-            transform: translateZ(20px); /* Lift heading slightly in 3D space */
+            transform: translateZ(25px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
-            height: 3px;
+            width: 95%;
+            height: 4px; /* Thicker underline */
             background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
-            box-shadow: 0 0 20px var(--primary-glow);
+            box-shadow: 0 0 25px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.95;
-            font-size: 1.1em;
-            transform: translateZ(10px);
+            opacity: 0.98;
+            font-size: 1.15em;
+            transform: translateZ(12px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 30px; /* Increased gap */
+            gap: 40px; /* Increased gap */
             margin: 30px 0;
             position: relative;
         }
 
-        .module-selection, .module-parameters-container {
+        /* New Resource Display Styles */
+        .resource-display-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+            transform: translateZ(15px);
+        }
+
+        .energy-reserve-display, .data-flow-display {
+            background: var(--module-selection-bg);
+            border: 1px solid var(--module-selection-border);
+            border-radius: 15px;
+            padding: 20px 25px;
+            box-shadow: inset 0 0 15px rgba(150, 0, 255, 0.3), 0 0 15px rgba(150, 0, 255, 0.2);
+            position: relative;
+            text-align: left;
+        }
+        .energy-reserve-display p, .data-flow-display p {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05em;
+            color: var(--module-selection-text);
+            text-shadow: 0 0 8px rgba(150, 0, 255, 0.5);
+            margin-bottom: 10px;
+        }
+        .energy-reserve-display::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 0.8em;
+            color: var(--energy-color);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            transform: translateY(-50%) translateZ(5px);
+            opacity: 0.9;
+            border: 1px solid rgba(255, 255, 0, 0.7);
+            box-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+        .data-flow-display::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 0.8em;
+            color: var(--data-flow-color);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            transform: translateY(-50%) translateZ(5px);
+            opacity: 0.9;
+            border: 1px solid rgba(0, 255, 0, 0.7);
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .resource-level-bar-container {
+            width: 100%;
+            height: 18px;
+            background: var(--resource-bg);
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+        }
+        .resource-level-bar {
+            height: 100%;
+            width: 100%;
+            background: var(--stability-good); /* default, will be overridden by JS */
+            border-radius: 9px;
+            transition: width 1s ease-out, background 0.8s ease-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        #energy-level-bar { background: var(--energy-color); box-shadow: 0 0 10px rgba(255, 255, 0, 0.7); }
+        #data-flow-level-bar { background: var(--data-flow-color); box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); }
+
+
+        .protocol-fragment-discovery, .deployed-protocol-parameters {
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -238,13 +326,13 @@
             position: relative;
             transform: translateZ(10px);
         }
-        .module-selection {
+        .protocol-fragment-discovery {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
             box-shadow: inset 0 0 15px rgba(150, 0, 255, 0.3), 0 0 15px rgba(150, 0, 255, 0.2);
         }
 
-        .module-selection::before, .module-parameters-container::before {
+        .protocol-fragment-discovery::before, .deployed-protocol-parameters::before {
             content: attr(data-label);
             position: absolute;
             top: -15px;
@@ -264,13 +352,13 @@
             text-transform: uppercase;
         }
 
-        .module-selection::before {
+        .protocol-fragment-discovery::before {
             color: var(--module-selection-text);
             border: 1px solid var(--module-selection-text);
             box-shadow: 0 0 8px var(--module-selection-text);
         }
 
-        #module-selector {
+        #fragment-selector {
             width: 100%;
             padding: 12px 18px;
             border-radius: 10px;
@@ -287,11 +375,11 @@
             box-shadow: inset 0 0 10px rgba(150, 0, 255, 0.3);
             text-shadow: 0 0 5px rgba(150, 0, 255, 0.5);
         }
-        #module-selector:hover {
+        #fragment-selector:hover {
             border-color: var(--module-selection-text);
             box-shadow: inset 0 0 15px rgba(150, 0, 255, 0.5), 0 0 10px rgba(150, 0, 255, 0.4);
         }
-        #module-selector option {
+        #fragment-selector option {
             background: rgba(20, 0, 30, 0.9);
             color: var(--module-selection-text);
             padding: 10px;
@@ -311,68 +399,68 @@
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 16px; /* Taller slider */
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
+            height: 18px; /* Taller slider */
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 9px;
             outline: none;
             transition: all 0.3s ease;
-            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+            box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.8);
             transform: translateZ(2px);
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 28px; /* Larger thumb */
-            height: 28px;
+            width: 30px; /* Larger thumb */
+            height: 30px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 12px var(--primary-glow);
+            box-shadow: 0 0 15px var(--primary-glow);
             transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.4); /* Thicker border */
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 12px var(--primary-glow);
+            box-shadow: 0 0 15px var(--primary-glow);
             transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.4);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #B0E0E6;
-            box-shadow: 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow) inset;
-            transform: scale(1.15);
+            box-shadow: 0 0 25px var(--primary-glow), 0 0 10px var(--primary-glow) inset;
+            transform: scale(1.18);
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #B0E0E6;
-            box-shadow: 0 0 20px var(--primary-glow), 0 0 8px var(--primary-glow) inset;
-            transform: scale(1.15);
+            box-shadow: 0 0 25px var(--primary-glow), 0 0 10px var(--primary-glow) inset;
+            transform: scale(1.18);
         }
 
         /* Active Protocol Status Display - Renamed to System Status */
         .system-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1.1em;
-            padding: 18px;
+            font-size: 1.15em;
+            padding: 20px;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 15px;
             background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.15);
+            box-shadow: inset 0 0 18px rgba(0, 255, 255, 0.2);
             text-align: left;
             position: relative;
             transition: all 0.4s ease;
             line-height: 1.5;
             letter-spacing: 0.8px;
             color: var(--data-stream-text);
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
             font-weight: 400;
-            transform: translateZ(10px);
+            transform: translateZ(12px);
         }
 
         .system-status-display::before {
@@ -398,24 +486,24 @@
         /* Data Stream Monitor - Replaces System Feedback Display */
         .data-stream-monitor {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 0.95em;
-            min-height: 150px; /* Taller for more detailed logs */
+            font-size: 1em; /* Slightly larger */
+            min-height: 180px; /* Taller for more detailed logs */
             display: block;
-            padding: 20px;
+            padding: 25px;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 15px;
             background: var(--data-stream-bg);
-            box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.15);
+            box-shadow: inset 0 0 25px rgba(0, 255, 255, 0.2);
             text-align: left;
             overflow-y: auto; /* Scroll for longer logs */
-            max-height: 250px;
+            max-height: 300px; /* Increased max height */
             position: relative;
             transition: all 0.4s ease;
-            line-height: 1.4;
-            letter-spacing: 0.5px;
+            line-height: 1.5;
+            letter-spacing: 0.6px;
             font-weight: 300;
             color: var(--data-stream-text);
-            transform: translateZ(15px);
+            transform: translateZ(18px);
         }
 
         .data-stream-monitor::before { /* Scanline effect */
@@ -429,51 +517,52 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.08) 1px,
-                rgba(0, 255, 255, 0.08) 2px
+                rgba(0, 255, 255, 0.1) 1px, /* Stronger scanlines */
+                rgba(0, 255, 255, 0.1) 3px /* Thicker scanlines */
             );
             pointer-events: none;
             mix-blend-mode: overlay;
-            opacity: 0.6;
+            opacity: 0.7; /* Stronger opacity */
         }
 
         .data-stream-monitor.active {
-            box-shadow: inset 0 0 30px var(--secondary-glow), 0 0 15px var(--secondary-glow);
-            border-color: rgba(255, 105, 180, 0.3);
+            box-shadow: inset 0 0 35px var(--secondary-glow), 0 0 20px var(--secondary-glow);
+            border-color: rgba(255, 105, 180, 0.4);
         }
 
         .log-entry {
-            margin-bottom: 5px;
-            animation: fadeInLog 0.5s ease-out;
+            margin-bottom: 7px; /* Increased margin */
+            animation: fadeInLog 0.6s ease-out; /* Slower fade in */
         }
 
         @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .processing-glitch {
             color: var(--glitch-color);
             text-shadow:
-                1px 1px 2px var(--glitch-color),
-                -1px -1px 2px var(--glitch-color);
-            animation: glitchEffect 0.5s infinite alternate;
+                1px 1px 3px var(--glitch-color), /* Stronger shadow */
+                -1px -1px 3px var(--glitch-color);
+            animation: glitchEffect 0.4s infinite alternate; /* Faster glitch for urgency */
         }
 
         @keyframes glitchEffect {
             0% { transform: translateX(0); opacity: 1; text-shadow: 1px 0 var(--glitch-color), -1px 0 var(--glitch-color); }
-            30% { transform: translateX(2px); opacity: 0.9; text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
-            60% { transform: translateX(-2px); opacity: 0.95; text-shadow: 3px 0 var(--glitch-color), -3px 0 var(--glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -1px 0 var(--glitch-color), 1px 0 var(--glitch-color); }
+            30% { transform: translateX(3px); opacity: 0.8; text-shadow: -3px 0 var(--glitch-color), 3px 0 var(--glitch-color); }
+            60% { transform: translateX(-3px); opacity: 0.9; text-shadow: 4px 0 var(--glitch-color), -4px 0 var(--glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
         }
 
 
         .button-group {
             display: flex;
-            gap: 25px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 20px; /* Adjusted gap */
             justify-content: center;
-            margin-top: 35px;
-            transform: translateZ(15px);
+            margin-top: 40px;
+            transform: translateZ(18px);
         }
 
         button {
@@ -518,88 +607,112 @@
         }
 
         button:hover {
-            transform: translateY(-9px) scale(1.05);
-            box-shadow: 0 15px 50px rgba(135, 206, 250, 0.9), 0 0 35px var(--accent-color);
+            transform: translateY(-10px) scale(1.06); /* More pronounced lift */
+            box-shadow: 0 18px 60px rgba(135, 206, 250, 0.95), 0 0 40px var(--accent-color); /* Stronger shadow */
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.2);
+            filter: brightness(1.25); /* More brightness */
         }
 
         button:active {
-            transform: translateY(-4px) scale(0.99);
-            box-shadow: 0 7px 30px rgba(135, 206, 250, 0.6);
+            transform: translateY(-5px) scale(0.98); /* Deeper press */
+            box-shadow: 0 8px 35px rgba(135, 206, 250, 0.65);
         }
 
         button:disabled {
-            opacity: 0.5;
+            opacity: 0.4; /* More faded when disabled */
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
             filter: grayscale(1);
+            background: linear-gradient(90deg, #333 0%, #555 100%) !important;
+            color: #aaa !important;
         }
 
-        #activate-module-button {
+        #scan-fragments-button {
+            background: linear-gradient(90deg, #FFCC00 0%, #FFFF00 100%); /* Yellow */
+            box-shadow: 0 10px 35px rgba(255, 204, 0, 0.7);
+            color: #1a1a2e;
+        }
+        #scan-fragments-button:hover {
+            background: linear-gradient(90deg, #FFCC00 0%, #FFD700 100%);
+            box-shadow: 0 18px 60px rgba(255, 204, 0, 0.95), 0 0 40px #FFCC00;
+            color: #0A0A15;
+        }
+
+        #synthesize-protocol-button {
             background: linear-gradient(90deg, #9932CC 0%, #BA55D3 100%); /* Purple */
             box-shadow: 0 10px 35px rgba(153, 50, 204, 0.7);
             color: white;
         }
-        #activate-module-button:hover {
+        #synthesize-protocol-button:hover {
             background: linear-gradient(90deg, #8A2BE2 0%, #9932CC 100%);
-            box-shadow: 0 15px 50px rgba(153, 50, 204, 0.9), 0 0 35px #9932CC;
+            box-shadow: 0 18px 60px rgba(153, 50, 204, 0.95), 0 0 40px #9932CC;
             color: white;
         }
         
-        #tune-module-button {
+        #deploy-protocol-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
             box-shadow: 0 10px 35px rgba(0, 255, 255, 0.7);
             color: #1a1a2e;
         }
 
-        #tune-module-button:hover {
+        #deploy-protocol-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.9), 0 0 35px #00FFFF;
+            box-shadow: 0 18px 60px rgba(0, 255, 255, 0.95), 0 0 40px #00FFFF;
+            color: white;
+        }
+
+        #optimize-parameters-button {
+            background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
+            box-shadow: 0 10px 35px rgba(0, 255, 0, 0.7);
+            color: #1a1a2e;
+        }
+        #optimize-parameters-button:hover {
+            background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
+            box-shadow: 0 18px 60px rgba(0, 255, 0, 0.95), 0 0 40px #00FF00;
             color: white;
         }
         
-        #emergency-reboot-button {
+        #recalibrate-core-button {
             background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
             box-shadow: 0 10px 35px rgba(255, 99, 71, 0.7);
             color: white;
         }
 
-        #emergency-reboot-button:hover {
+        #recalibrate-core-button:hover {
             background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
-            box-shadow: 0 15px 50px rgba(255, 99, 71, 0.9), 0 0 35px #FF6347;
+            box-shadow: 0 18px 60px rgba(255, 99, 71, 0.95), 0 0 40px #FF6347;
             color: white;
         }
 
         .stability-level-container {
             width: 100%;
-            height: 25px; /* Taller bar */
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 12px; /* More rounded */
-            margin-top: 35px;
+            height: 28px; /* Taller bar */
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 14px; /* More rounded */
+            margin-top: 40px;
             overflow: hidden;
-            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.85);
             position: relative;
             border: 1px solid var(--border-color);
-            transform: translateZ(10px);
+            transform: translateZ(12px);
         }
 
         .stability-level-bar {
             height: 100%;
             width: 80%; /* Initial width */
             background: var(--stability-good); /* Default green gradient */
-            border-radius: 12px;
-            transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 1s ease-out, box-shadow 1s ease-out; /* Smoother transition */
-            box-shadow: 0 0 20px rgba(102, 255, 102, 0.9);
+            border-radius: 14px;
+            transition: width 1.4s cubic-bezier(0.2, 0.8, 0.2, 1), background 1.2s ease-out, box-shadow 1.2s ease-out; /* Smoother transition */
+            box-shadow: 0 0 25px rgba(102, 255, 102, 0.9);
             position: relative;
-            animation: barGlow 3s infinite alternate; /* Slower, more pronounced glow */
+            animation: barGlow 3.5s infinite alternate; /* Slower, more pronounced glow */
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 18px rgba(102, 255, 102, 0.8); }
-            100% { box-shadow: 0 0 30px rgba(102, 255, 102, 1), 0 0 8px rgba(255,255,255,0.4) inset; }
+            0% { box-shadow: 0 0 20px rgba(102, 255, 102, 0.8); }
+            100% { box-shadow: 0 0 35px rgba(102, 255, 102, 1), 0 0 10px rgba(255,255,255,0.4) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -611,38 +724,38 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.4) 0%,
-                rgba(255, 255, 255, 0.15) 50%,
+                rgba(255, 255, 255, 0.5) 0%, /* Stronger glare */
+                rgba(255, 255, 255, 0.2) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 12px;
+            border-radius: 14px;
         }
 
         .status-text {
-            font-size: 1.15em;
-            margin-top: 18px;
-            opacity: 0.98;
+            font-size: 1.2em;
+            margin-top: 20px;
+            opacity: 0.99;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             color: var(--accent-color);
-            text-shadow: 0 0 10px var(--primary-glow);
+            text-shadow: 0 0 12px var(--primary-glow);
             font-weight: 700;
-            transform: translateZ(10px);
+            transform: translateZ(12px);
         }
 
         footer {
-            margin-top: 60px; /* Increased margin */
-            font-size: 0.85em;
-            color: rgba(255, 255, 255, 0.6);
+            margin-top: 70px; /* Increased margin */
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.7);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
-            padding-top: 35px;
+            letter-spacing: 1.2px;
+            padding-top: 40px;
             border-top: 1px dashed var(--border-color); /* Dashed border for footer */
-            text-shadow: 0 0 6px var(--secondary-glow);
+            text-shadow: 0 0 8px var(--secondary-glow);
             position: relative;
-            line-height: 1.5;
-            transform: translateZ(5px);
+            line-height: 1.6;
+            transform: translateZ(7px);
         }
         
         footer::before { /* Subtle footer glow */
@@ -651,29 +764,29 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 70%;
+            width: 80%; /* Wider glow */
             height: 1px;
             background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 70%);
-            opacity: 0.5;
-            filter: blur(12px);
+            opacity: 0.6; /* Stronger opacity */
+            filter: blur(15px); /* Stronger blur */
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) { /* Adjusted max-width for container */
             .container {
                 margin: 20px;
-                padding: 40px;
-                gap: 30px;
-                border-radius: 30px;
+                padding: 50px;
+                gap: 35px;
+                border-radius: 40px;
                 max-width: 95%;
             }
             h1 {
-                font-size: 2.5em;
-                letter-spacing: 3px;
+                font-size: 2.8em;
+                letter-spacing: 3.5px;
             }
             .data-stream-monitor {
-                font-size: 0.85em;
-                min-height: 120px;
-                padding: 15px;
+                font-size: 0.9em;
+                min-height: 150px;
+                padding: 20px;
             }
             button {
                 padding: 16px 30px;
@@ -682,127 +795,160 @@
                 letter-spacing: 1px;
             }
             .button-group {
-                flex-direction: column;
-                gap: 20px;
+                flex-direction: column; /* Stack buttons vertically */
+                gap: 15px;
             }
             input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 24px;
-                height: 24px;
+                width: 26px;
+                height: 26px;
             }
             .system-status-display {
-                font-size: 1em;
-                padding: 15px;
+                font-size: 1.05em;
+                padding: 18px;
+            }
+            .resource-display-container {
+                grid-template-columns: 1fr; /* Stack resource displays vertically */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Adaptive Protocol Interface</h1>
-        <p>Engage with the modular system. Activate and tune processing modules to maintain optimal system stability and data flow.</p>
+        <h1>Adaptive Protocol Nexus</h1>
+        <p>Engage with the core systems. Scan for emergent fragments, synthesize advanced protocols, and optimize their parameters to sustain vital system metrics.</p>
 
         <div class="control-module">
-            <div class="module-selection" data-label="MODULE SELECTION">
-                <label for="module-selector" class="param-label" style="margin-bottom: 10px;">Active Processing Module:</label>
-                <select id="module-selector">
-                    <option value="none" disabled selected>-- Select Module --</option>
-                    <!-- Modules will be populated by JS -->
-                </select>
-                <p style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;" id="module-description">Select a module to view its description and parameters.</p>
+            <!-- New: Resource Display -->
+            <div class="resource-display-container">
+                <div class="energy-reserve-display" data-label="ENERGY RESERVE">
+                    <p><strong>Current:</strong> <span id="energy-value">100</span> units</p>
+                    <div class="resource-level-bar-container">
+                        <div class="resource-level-bar" id="energy-level-bar" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="data-flow-display" data-label="DATA FLOW INDEX">
+                    <p><strong>Current:</strong> <span id="data-flow-value">50</span> Mbps</p>
+                    <div class="resource-level-bar-container">
+                        <div class="resource-level-bar" id="data-flow-level-bar" style="width: 50%;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="module-parameters-container" data-label="MODULE PARAMETERS" style="display: none;">
+            <div class="protocol-fragment-discovery" data-label="PROTOCOL FRAGMENT DISCOVERY">
+                <label for="fragment-selector" class="param-label" style="margin-bottom: 10px;">Discovered Fragments:</label>
+                <select id="fragment-selector">
+                    <option value="none" disabled selected>-- Initiate Scan Below --</option>
+                </select>
+                <p style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;" id="fragment-description">Scan for protocol fragments. Select a discovered fragment to synthesize a new operational protocol.</p>
+            </div>
+
+            <div class="deployed-protocol-parameters" data-label="DEPLOYED PROTOCOL PARAMETERS" style="display: none;">
                 <!-- Dynamic parameters will be rendered here by JS -->
-                <p style="text-align: center; opacity: 0.8;">No module active. Activate a module to load parameters.</p>
+                <p style="text-align: center; opacity: 0.8;">No protocol deployed. Synthesize and deploy a protocol to load parameters.</p>
             </div>
 
             <div class="system-status-display" id="system-status">
-                <p><strong>Active Module:</strong> <span id="active-module-name">NONE</span></p>
-                <p><strong>Module ID:</strong> <span id="active-module-id">N/A</span></p>
-                <p><strong>Last Operation:</strong> <span id="last-operation">Idle</span></p>
+                <p><strong>Deployed Protocol:</strong> <span id="deployed-protocol-name">NONE</span></p>
+                <p><strong>Protocol ID:</strong> <span id="deployed-protocol-id">N/A</span></p>
+                <p><strong>Status:</strong> <span id="system-status-text">Idle. Initiate Fragment Scan.</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
-                <span class="processing-glitch">System ready. Awaiting module activation.</span>
+                <span class="processing-glitch">System ready. Awaiting command input.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="activate-module-button" disabled>Activate Module</button>
-            <button id="tune-module-button" disabled>Tune Module</button>
-            <button id="emergency-reboot-button">Emergency Reboot</button>
+            <button id="scan-fragments-button">Scan for Fragments</button>
+            <button id="synthesize-protocol-button" disabled>Synthesize Protocol</button>
+            <button id="deploy-protocol-button" disabled>Deploy Protocol</button>
+            <button id="optimize-parameters-button" disabled>Optimize Parameters</button>
+            <button id="recalibrate-core-button">Recalibrate Core</button>
         </div>
 
         <div class="stability-level-container">
             <div class="stability-level-bar" id="stability-level-bar" style="width: 70%;"></div>
         </div>
-        <p class="status-text">System Stability Index: <span id="stability-value">70%</span></p>
+        <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 6.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 7.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
-        const moduleSelector = document.getElementById('module-selector');
-        const moduleDescription = document.getElementById('module-description');
-        const moduleParametersContainer = document.getElementById('module-parameters-container');
+        const fragmentSelector = document.getElementById('fragment-selector');
+        const fragmentDescription = document.getElementById('fragment-description');
+        const deployedProtocolParametersContainer = document.getElementById('deployed-protocol-parameters');
         const systemStatusDisplay = document.getElementById('system-status');
-        const activeModuleNameSpan = document.getElementById('active-module-name');
-        const activeModuleIDSpan = document.getElementById('active-module-id');
-        const lastOperationSpan = document.getElementById('last-operation');
+        const deployedProtocolNameSpan = document.getElementById('deployed-protocol-name');
+        const deployedProtocolIDSpan = document.getElementById('deployed-protocol-id');
+        const systemStatusTextSpan = document.getElementById('system-status-text'); // Changed from lastOperationSpan
         const dataStreamMonitor = document.getElementById('data-stream-monitor');
-        const activateModuleButton = document.getElementById('activate-module-button');
-        const tuneModuleButton = document.getElementById('tune-module-button');
-        const emergencyRebootButton = document.getElementById('emergency-reboot-button');
+
+        const scanFragmentsButton = document.getElementById('scan-fragments-button');
+        const synthesizeProtocolButton = document.getElementById('synthesize-protocol-button');
+        const deployProtocolButton = document.getElementById('deploy-protocol-button');
+        const optimizeParametersButton = document.getElementById('optimize-parameters-button');
+        const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
+
         const stabilityLevelBar = document.getElementById('stability-level-bar');
         const stabilityValueSpan = document.getElementById('stability-value');
+        const energyLevelBar = document.getElementById('energy-level-bar');
+        const energyValueSpan = document.getElementById('energy-value');
+        const dataFlowLevelBar = document.getElementById('data-flow-level-bar');
+        const dataFlowValueSpan = document.getElementById('data-flow-value');
 
         let currentSystemStability = 70; // Initial stability
-        let isProcessing = false;
-        let activeModule = null; // Currently selected module object
+        let currentEnergy = 100; // New: Energy resource
+        let currentDataFlow = 50; // New: Data Flow metric
 
-        const modules = [
+        let isProcessing = false;
+        let availableFragments = []; // Discovered fragments (like old modules)
+        let synthesizedProtocol = null; // A protocol instance created from a fragment
+        let deployedProtocol = null; // The currently active protocol instance
+
+        const fragmentTemplates = [ // These are templates for fragments to be discovered
             {
-                id: 'M001',
-                name: 'Data Flow Optimizer',
-                description: 'Optimizes real-time data packet routing and bandwidth allocation. Crucial for high-speed transfers.',
-                parameters: [
-                    { id: 'flow-rate', label: 'Flow Rate Density', min: 0, max: 100, initialValue: 50, optimalRange: { min: 45, max: 65 } },
-                    { id: 'packet-priority', label: 'Packet Prioritization', min: 0, max: 100, initialValue: 50, optimalRange: { min: 30, max: 70 } }
+                id: 'F001',
+                name: 'Neural Sub-Processor',
+                description: 'A core fragment for enhancing local neural processing speed and accuracy. Low energy cost, moderate impact.',
+                params: [
+                    { id: 'neuro-sync', label: 'Neural Sync Frequency', min: 0, max: 100, initialValue: 50, optimalRange: { min: 45, max: 65 } },
+                    { id: 'data-cache', label: 'Data Cache Buffer', min: 0, max: 100, initialValue: 50, optimalRange: { min: 30, max: 70 } }
                 ],
-                stabilityImpact: { activate: -5, tuneOptimal: +10, tuneSuboptimal: -5, tuneCritical: -20 }
+                impact: { scanCost: 10, synthesizeCost: 15, deployStability: -5, deployDataFlow: +10, optimizeStability: { optimal: +10, suboptimal: -5, critical: -15 }, optimizeDataFlow: { optimal: +15, suboptimal: +0, critical: -10 } }
             },
             {
-                id: 'M002',
-                name: 'Neural Net Coherence Calibrator',
-                description: 'Calibrates the neural network\'s coherence protocols for predictive analytics accuracy. High precision required.',
-                parameters: [
-                    { id: 'synapse-threshold', label: 'Synaptic Threshold', min: 0, max: 100, initialValue: 60, optimalRange: { min: 55, max: 75 } },
-                    { id: 'learning-rate', label: 'Adaptive Learning Rate', min: 0, max: 100, initialValue: 40, optimalRange: { min: 20, max: 40 } },
-                    { id: 'feedback-loop', label: 'Feedback Loop Intensity', min: 0, max: 100, initialValue: 70, optimalRange: { min: 60, max: 80 } }
+                id: 'F002',
+                name: 'Quantum Harmonizer Array',
+                description: 'A delicate fragment for stabilizing quantum entanglement links. High precision, higher energy cost.',
+                params: [
+                    { id: 'entangle-freq', label: 'Entanglement Frequency', min: 0, max: 100, initialValue: 60, optimalRange: { min: 55, max: 75 } },
+                    { id: 'phase-shift', label: 'Phase Shift Variance', min: 0, max: 100, initialValue: 40, optimalRange: { min: 20, max: 40 } },
+                    { id: 'harmonic-res', label: 'Harmonic Resonance', min: 0, max: 100, initialValue: 70, optimalRange: { min: 60, max: 80 } }
                 ],
-                stabilityImpact: { activate: -10, tuneOptimal: +15, tuneSuboptimal: -10, tuneCritical: -30 }
+                impact: { scanCost: 20, synthesizeCost: 25, deployStability: -10, deployDataFlow: +5, optimizeStability: { optimal: +15, suboptimal: -10, critical: -25 }, optimizeDataFlow: { optimal: +10, suboptimal: -5, critical: -15 } }
             },
             {
-                id: 'M003',
-                name: 'Quantum Signature Encryptor',
-                description: 'Manages quantum encryption keys and signature verification for secure data integrity across distributed ledgers.',
-                parameters: [
-                    { id: 'key-entropy', label: 'Key Entropy Fluctuation', min: 0, max: 100, initialValue: 75, optimalRange: { min: 70, max: 90 } },
-                    { id: 'signature-sync', label: 'Signature Sync Delay', min: 0, max: 100, initialValue: 25, optimalRange: { min: 10, max: 30 } }
+                id: 'F003',
+                name: 'Chronon Data Conduit',
+                description: 'Advanced fragment enabling temporal data stream compression and decompression. Potentially unstable.',
+                params: [
+                    { id: 'temporal-ratio', label: 'Temporal Compression Ratio', min: 0, max: 100, initialValue: 75, optimalRange: { min: 70, max: 90 } },
+                    { id: 'sync-latency', label: 'Sync Latency Offset', min: 0, max: 100, initialValue: 25, optimalRange: { min: 10, max: 30 } }
                 ],
-                stabilityImpact: { activate: -8, tuneOptimal: +12, tuneSuboptimal: -7, tuneCritical: -25 }
+                impact: { scanCost: 15, synthesizeCost: 20, deployStability: -8, deployDataFlow: +12, optimizeStability: { optimal: +12, suboptimal: -7, critical: -20 }, optimizeDataFlow: { optimal: +20, suboptimal: -5, critical: -10 } }
             }
         ];
 
-        // Populate module selector
-        modules.forEach(mod => {
-            const option = document.createElement('option');
-            option.value = mod.id;
-            option.textContent = `${mod.name} (${mod.id})`;
-            moduleSelector.appendChild(option);
-        });
+        // --- Utility Functions ---
+        function updateAllDisplays() {
+            updateStabilityDisplay();
+            updateEnergyDisplay();
+            updateDataFlowDisplay();
+            updateButtonStates();
+        }
 
         function updateStabilityDisplay() {
             stabilityLevelBar.style.width = `${currentSystemStability}%`;
@@ -812,18 +958,31 @@
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
                 stabilityValueSpan.style.color = 'var(--critical-color)';
-                emergencyRebootButton.disabled = false; // Always allow reboot if critical
             } else if (currentSystemStability < 55) {
                 stabilityLevelBar.style.background = 'var(--stability-warning)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
                 stabilityValueSpan.style.color = 'var(--warning-color)';
-                emergencyRebootButton.disabled = false;
             } else {
                 stabilityLevelBar.style.background = 'var(--stability-good)';
                 stabilityLevelBar.style.boxShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 5px rgba(255,255,255,0.2)`;
                 stabilityValueSpan.style.color = 'var(--accent-color)';
-                emergencyRebootButton.disabled = false; // Still allow, but less urgent
             }
+        }
+
+        function updateEnergyDisplay() {
+            energyLevelBar.style.width = `${currentEnergy}%`;
+            energyValueSpan.textContent = `${currentEnergy}`;
+            energyLevelBar.style.background = `linear-gradient(90deg, ${currentEnergy < 30 ? '#FF0000' : (currentEnergy < 60 ? '#FFCC00' : '#FFFF00')} 0%, ${currentEnergy < 30 ? '#CC0000' : (currentEnergy < 60 ? '#FFA500' : '#FFD700')} 100%)`;
+            energyLevelBar.style.boxShadow = `0 0 10px ${currentEnergy < 30 ? 'rgba(255,0,0,0.7)' : (currentEnergy < 60 ? 'rgba(255,204,0,0.7)' : 'rgba(255,255,0,0.7)')}`;
+            energyValueSpan.style.color = currentEnergy < 30 ? getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim() : (currentEnergy < 60 ? getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim() : getComputedStyle(document.documentElement).getPropertyValue('--energy-color').split(',')[0].replace('linear-gradient(90deg, ', '').trim());
+        }
+
+        function updateDataFlowDisplay() {
+            dataFlowLevelBar.style.width = `${currentDataFlow}%`;
+            dataFlowValueSpan.textContent = `${currentDataFlow}`;
+            dataFlowLevelBar.style.background = `linear-gradient(90deg, ${currentDataFlow < 30 ? '#FF6347' : (currentDataFlow < 60 ? '#00FFFF' : '#00FF00')} 0%, ${currentDataFlow < 30 ? '#DC143C' : (currentDataFlow < 60 ? '#00BFFF' : '#00CC00')} 100%)`;
+            dataFlowLevelBar.style.boxShadow = `0 0 10px ${currentDataFlow < 30 ? 'rgba(255,99,71,0.7)' : (currentDataFlow < 60 ? 'rgba(0,255,255,0.7)' : 'rgba(0,255,0,0.7)')}`;
+            dataFlowValueSpan.style.color = currentDataFlow < 30 ? getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim() : (currentDataFlow < 60 ? getComputedStyle(document.documentElement).getPropertyValue('--data-stream-text').trim() : getComputedStyle(document.documentElement).getPropertyValue('--data-flow-color').split(',')[0].replace('linear-gradient(90deg, ', '').trim());
         }
 
         function logDataStreamEntry(message, type = 'normal') {
@@ -859,118 +1018,217 @@
             }, 1000); // Deactivate glow after a short period
         }
 
-        function renderModuleParameters(module) {
-            moduleParametersContainer.innerHTML = ''; // Clear previous parameters
-            if (!module) {
-                moduleParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No module active. Activate a module to load parameters.</p>';
-                moduleParametersContainer.style.display = 'block';
+        function renderProtocolParameters(protocol) {
+            deployedProtocolParametersContainer.innerHTML = ''; // Clear previous parameters
+            if (!protocol) {
+                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol deployed. Synthesize and deploy a protocol to load parameters.</p>';
+                deployedProtocolParametersContainer.style.display = 'block';
                 return;
             }
 
-            module.parameters.forEach(param => {
+            protocol.params.forEach(param => {
                 const paramGroup = document.createElement('div');
                 paramGroup.classList.add('param-group');
                 paramGroup.setAttribute('data-label', param.label.toUpperCase());
 
                 const paramLabelDiv = document.createElement('div');
                 paramLabelDiv.classList.add('param-label');
-                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.initialValue}</span>%`;
+                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>%`; // Use 'value' from protocol instance
                 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
                 rangeInput.id = param.id;
                 rangeInput.min = param.min;
                 rangeInput.max = param.max;
-                rangeInput.value = param.initialValue;
+                rangeInput.value = param.value; // Use 'value' from protocol instance
                 rangeInput.addEventListener('input', () => {
                     document.getElementById(`${param.id}-value`).textContent = rangeInput.value;
+                    // Update the value in the deployedProtocol object directly
+                    const p = deployedProtocol.params.find(dp => dp.id === param.id);
+                    if (p) p.value = parseInt(rangeInput.value);
                 });
 
                 paramGroup.appendChild(paramLabelDiv);
                 paramGroup.appendChild(rangeInput);
-                moduleParametersContainer.appendChild(paramGroup);
+                deployedProtocolParametersContainer.appendChild(paramGroup);
             });
-            moduleParametersContainer.style.display = 'flex';
+            deployedProtocolParametersContainer.style.display = 'flex';
         }
 
-        moduleSelector.addEventListener('change', () => {
-            const selectedModuleId = moduleSelector.value;
-            const selectedModule = modules.find(m => m.id === selectedModuleId);
+        function updateButtonStates() {
+            scanFragmentsButton.disabled = isProcessing || currentEnergy < 10; // Can't scan if no energy
+            synthesizeProtocolButton.disabled = isProcessing || !fragmentSelector.value || fragmentSelector.value === 'none' || currentEnergy < (availableFragments.find(f => f.id === fragmentSelector.value)?.impact.synthesizeCost || 9999);
+            deployProtocolButton.disabled = isProcessing || !synthesizedProtocol || deployedProtocol === synthesizedProtocol;
+            optimizeParametersButton.disabled = isProcessing || !deployedProtocol;
+            recalibrateCoreButton.disabled = isProcessing; // Recalibrate is always available but disabled during other ops
+        }
 
-            if (selectedModule) {
-                moduleDescription.textContent = selectedModule.description;
-                activateModuleButton.disabled = false;
+        // --- Event Listeners ---
+        fragmentSelector.addEventListener('change', () => {
+            const selectedFragmentId = fragmentSelector.value;
+            const selectedFragment = availableFragments.find(f => f.id === selectedFragmentId);
+
+            if (selectedFragment) {
+                fragmentDescription.textContent = selectedFragment.description;
+                synthesizeProtocolButton.disabled = isProcessing || currentEnergy < selectedFragment.impact.synthesizeCost;
             } else {
-                moduleDescription.textContent = 'Select a module to view its description and parameters.';
-                activateModuleButton.disabled = true;
+                fragmentDescription.textContent = 'Scan to discover new protocol fragments and their properties.';
+                synthesizeProtocolButton.disabled = true;
             }
+            updateButtonStates();
         });
 
-        activateModuleButton.addEventListener('click', () => {
+        scanFragmentsButton.addEventListener('click', () => {
             if (isProcessing) return;
-            const selectedModuleId = moduleSelector.value;
-            const moduleToActivate = modules.find(m => m.id === selectedModuleId);
-
-            if (!moduleToActivate) {
-                logDataStreamEntry("ERROR: No module selected for activation.", 'critical');
+            const scanCost = 10 + Math.floor(Math.random() * 5); // Dynamic scan cost
+            if (currentEnergy < scanCost) {
+                logDataStreamEntry(`Insufficient energy for scan (Cost: ${scanCost}). Current: ${currentEnergy}.`, 'critical');
                 return;
             }
 
             isProcessing = true;
-            activateModuleButton.disabled = true;
-            tuneModuleButton.disabled = true;
-            emergencyRebootButton.disabled = true;
-            moduleSelector.disabled = true;
+            updateButtonStates();
+            fragmentSelector.disabled = true;
 
-            logDataStreamEntry(`Initiating activation of module "${moduleToActivate.name}"...`, 'glitch');
-            lastOperationSpan.textContent = `Activating ${moduleToActivate.name}...`;
+            logDataStreamEntry(`Initiating fragment scan (Cost: ${scanCost} units)...`, 'glitch');
+            systemStatusTextSpan.textContent = `Scanning for Fragments...`;
+            currentEnergy = Math.max(0, currentEnergy - scanCost);
+            updateEnergyDisplay();
 
             setTimeout(() => {
-                activeModule = moduleToActivate;
-                renderModuleParameters(activeModule);
-                activeModuleNameSpan.textContent = activeModule.name;
-                activeModuleIDSpan.textContent = activeModule.id;
+                const newFragmentIndex = Math.floor(Math.random() * fragmentTemplates.length);
+                const discoveredFragment = JSON.parse(JSON.stringify(fragmentTemplates[newFragmentIndex])); // Deep copy
+                discoveredFragment.id = `P${(availableFragments.length + 1).toString().padStart(3, '0')}`; // Unique ID for discovered instance
 
-                const stabilityChange = activeModule.stabilityImpact.activate;
-                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
-                updateStabilityDisplay();
+                // Check if this type of fragment is already discovered by name
+                if (!availableFragments.some(f => f.name === discoveredFragment.name)) {
+                    availableFragments.push(discoveredFragment);
 
-                logDataStreamEntry(`Module "${activeModule.name}" (${activeModule.id}) activated. Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Current stability: ${currentSystemStability}%.`, stabilityChange < 0 ? 'warning' : 'info');
-                logDataStreamEntry(`Ready for parameter tuning.`, 'normal');
-                lastOperationSpan.textContent = `Module ${activeModule.id} Activated`;
+                    const option = document.createElement('option');
+                    option.value = discoveredFragment.id;
+                    option.textContent = `${discoveredFragment.name} (${discoveredFragment.id})`;
+                    fragmentSelector.appendChild(option);
+
+                    logDataStreamEntry(`New Protocol Fragment Discovered: "${discoveredFragment.name}" (${discoveredFragment.id}).`, 'optimal');
+                    fragmentSelector.value = discoveredFragment.id; // Select the newly discovered fragment
+                    fragmentDescription.textContent = discoveredFragment.description;
+                } else {
+                    logDataStreamEntry(`Fragment scan completed. No new unique fragments detected.`, 'info');
+                    if (availableFragments.length > 0) {
+                         fragmentSelector.value = availableFragments[0].id; // Select first available
+                         fragmentDescription.textContent = availableFragments[0].description;
+                    }
+                }
+                
+                systemStatusTextSpan.textContent = `Scan Complete.`;
+                isProcessing = false;
+                fragmentSelector.disabled = false;
+                updateButtonStates();
+            }, 2500); // Shorter scan time
+        });
+
+        synthesizeProtocolButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            const selectedFragmentId = fragmentSelector.value;
+            const fragmentToSynthesize = availableFragments.find(f => f.id === selectedFragmentId);
+
+            if (!fragmentToSynthesize) {
+                logDataStreamEntry("ERROR: No protocol fragment selected for synthesis.", 'critical');
+                return;
+            }
+
+            const synthesizeCost = fragmentToSynthesize.impact.synthesizeCost;
+            if (currentEnergy < synthesizeCost) {
+                logDataStreamEntry(`Insufficient energy for synthesis (Cost: ${synthesizeCost}). Current: ${currentEnergy}.`, 'critical');
+                return;
+            }
+
+            isProcessing = true;
+            updateButtonStates();
+            fragmentSelector.disabled = true;
+
+            logDataStreamEntry(`Initiating synthesis of protocol "${fragmentToSynthesize.name}" (Cost: ${synthesizeCost} units)...`, 'glitch');
+            systemStatusTextSpan.textContent = `Synthesizing Protocol...`;
+            currentEnergy = Math.max(0, currentEnergy - synthesizeCost);
+            updateEnergyDisplay();
+
+            setTimeout(() => {
+                synthesizedProtocol = JSON.parse(JSON.stringify(fragmentToSynthesize)); // Deep copy to make it an instance
+                synthesizedProtocol.id = `P-${Math.random().toString(36).substr(2, 4).toUpperCase()}`; // Generate a unique instance ID
+
+                logDataStreamEntry(`Protocol "${synthesizedProtocol.name}" (${synthesizedProtocol.id}) synthesized and ready for deployment.`, 'optimal');
+                systemStatusTextSpan.textContent = `Protocol Synthesized.`;
+                
+                isProcessing = false;
+                fragmentSelector.disabled = false;
+                updateButtonStates();
+            }, 3000);
+        });
+
+        deployProtocolButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            if (!synthesizedProtocol) {
+                logDataStreamEntry("ERROR: No protocol synthesized for deployment.", 'critical');
+                return;
+            }
+
+            isProcessing = true;
+            updateButtonStates();
+            fragmentSelector.disabled = true;
+
+            logDataStreamEntry(`Deploying protocol "${synthesizedProtocol.name}" (${synthesizedProtocol.id})...`, 'glitch');
+            systemStatusTextSpan.textContent = `Deploying Protocol...`;
+
+            setTimeout(() => {
+                deployedProtocol = synthesizedProtocol;
+                renderProtocolParameters(deployedProtocol);
+                deployedProtocolNameSpan.textContent = deployedProtocol.name;
+                deployedProtocolIDSpan.textContent = deployedProtocol.id;
+
+                // Apply initial impact from deployment
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + deployedProtocol.impact.deployStability));
+                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + deployedProtocol.impact.deployDataFlow));
+                updateAllDisplays();
+
+                logDataStreamEntry(`Protocol "${deployedProtocol.name}" deployed. Stability: ${deployedProtocol.impact.deployStability > 0 ? '+' : ''}${deployedProtocol.impact.deployStability}%, Data Flow: ${deployedProtocol.impact.deployDataFlow > 0 ? '+' : ''}${deployedProtocol.impact.deployDataFlow}%.`, 'info');
+                logDataStreamEntry(`Ready for parameter optimization.`, 'normal');
+                systemStatusTextSpan.textContent = `Protocol Deployed.`;
 
                 isProcessing = false;
-                activateModuleButton.disabled = false;
-                tuneModuleButton.disabled = false;
-                emergencyRebootButton.disabled = false;
-                moduleSelector.disabled = false;
+                fragmentSelector.disabled = false;
+                updateButtonStates();
             }, 2000);
         });
 
-        tuneModuleButton.addEventListener('click', () => {
+        optimizeParametersButton.addEventListener('click', () => {
             if (isProcessing) return;
-            if (!activeModule) {
-                logDataStreamEntry("ERROR: No module active. Activate a module first.", 'critical');
+            if (!deployedProtocol) {
+                logDataStreamEntry("ERROR: No protocol deployed. Deploy a protocol first.", 'critical');
                 return;
             }
-            if (currentSystemStability < 15) {
-                logDataStreamEntry("SYSTEM CRITICAL: Cannot tune module. Stability too low. Initiate emergency reboot!", 'critical');
+            if (currentSystemStability < 15 || currentDataFlow < 15) {
+                logDataStreamEntry("SYSTEM CRITICAL: Cannot optimize parameters. Core metrics too low. Initiate recalibration!", 'critical');
+                return;
+            }
+            const optimizeCost = 5 + Math.floor(Math.random() * 5);
+            if (currentEnergy < optimizeCost) {
+                logDataStreamEntry(`Insufficient energy for optimization (Cost: ${optimizeCost}). Current: ${currentEnergy}.`, 'critical');
                 return;
             }
 
             isProcessing = true;
-            activateModuleButton.disabled = true;
-            tuneModuleButton.disabled = true;
-            emergencyRebootButton.disabled = true;
-            moduleSelector.disabled = true;
+            updateButtonStates();
+            fragmentSelector.disabled = true;
+            currentEnergy = Math.max(0, currentEnergy - optimizeCost);
+            updateEnergyDisplay();
 
-            logDataStreamEntry(`Tuning parameters for module "${activeModule.name}"...`, 'glitch');
-            lastOperationSpan.textContent = `Tuning ${activeModule.name}...`;
+            logDataStreamEntry(`Optimizing parameters for protocol "${deployedProtocol.name}" (Cost: ${optimizeCost} units)...`, 'glitch');
+            systemStatusTextSpan.textContent = `Optimizing Protocol...`;
 
             setTimeout(() => {
                 let totalDeviation = 0;
                 let tunedParameters = 0;
-                activeModule.parameters.forEach(param => {
+                deployedProtocol.params.forEach(param => {
                     const sliderValue = parseInt(document.getElementById(param.id).value);
                     const optimalMin = param.optimalRange.min;
                     const optimalMax = param.optimalRange.max;
@@ -983,77 +1241,90 @@
 
                 const averageDeviation = tunedParameters > 0 ? totalDeviation / tunedParameters : 100;
                 let stabilityChange = 0;
+                let dataFlowChange = 0;
                 let feedbackType = 'suboptimal';
-                let message = `Module "${activeModule.name}" tuning result: `;
+                let message = `Protocol "${deployedProtocol.name}" optimization result: `;
 
                 if (averageDeviation <= 10) { // Optimal tuning
-                    stabilityChange = activeModule.stabilityImpact.tuneOptimal;
+                    stabilityChange = deployedProtocol.impact.optimizeStability.optimal;
+                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.optimal;
                     feedbackType = 'optimal';
                     message += `OPTIMAL. Average deviation ${averageDeviation.toFixed(1)}%.`;
                 } else if (averageDeviation <= 30) { // Suboptimal tuning
-                    stabilityChange = activeModule.stabilityImpact.tuneSuboptimal;
+                    stabilityChange = deployedProtocol.impact.optimizeStability.suboptimal;
+                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.suboptimal;
                     feedbackType = 'warning';
                     message += `SUBOPTIMAL. Average deviation ${averageDeviation.toFixed(1)}%. Requires further adjustment.`;
                 } else { // Critical tuning
-                    stabilityChange = activeModule.stabilityImpact.tuneCritical;
+                    stabilityChange = deployedProtocol.impact.optimizeStability.critical;
+                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.critical;
                     feedbackType = 'critical';
                     message += `CRITICAL MISALIGNMENT. Average deviation ${averageDeviation.toFixed(1)}%. System instability detected!`;
                 }
 
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
-                updateStabilityDisplay();
+                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + dataFlowChange));
+                updateAllDisplays();
 
                 logDataStreamEntry(message, feedbackType);
-                logDataStreamEntry(`System Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Current stability: ${currentSystemStability}%.`, stabilityChange < 0 ? 'critical' : (stabilityChange < activeModule.stabilityImpact.tuneOptimal * 0.5 ? 'warning' : 'optimal'));
-                lastOperationSpan.textContent = `Module ${activeModule.id} Tuned`;
+                logDataStreamEntry(`Core Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Data Flow impact: ${dataFlowChange > 0 ? '+' : ''}${dataFlowChange}%. Current Stability: ${currentSystemStability}%, Data Flow: ${currentDataFlow}%.`, stabilityChange < 0 || dataFlowChange < 0 ? 'critical' : (feedbackType === 'warning' ? 'warning' : 'optimal'));
+                systemStatusTextSpan.textContent = `Protocol Optimized.`;
 
                 isProcessing = false;
-                activateModuleButton.disabled = false;
-                tuneModuleButton.disabled = false;
-                emergencyRebootButton.disabled = false;
-                moduleSelector.disabled = false;
+                fragmentSelector.disabled = false;
+                updateButtonStates();
             }, 3000);
         });
 
-        emergencyRebootButton.addEventListener('click', () => {
+        recalibrateCoreButton.addEventListener('click', () => {
             if (isProcessing) return;
             isProcessing = true;
-            activateModuleButton.disabled = true;
-            tuneModuleButton.disabled = true;
-            emergencyRebootButton.disabled = true;
-            moduleSelector.disabled = true;
+            updateButtonStates();
+            fragmentSelector.disabled = true;
 
-            logDataStreamEntry('Initiating emergency system reboot sequence...', 'critical');
-            lastOperationSpan.textContent = `Emergency Reboot in Progress`;
+            logDataStreamEntry('Initiating core system recalibration sequence...', 'critical');
+            systemStatusTextSpan.textContent = `Core Recalibration in Progress`;
 
             setTimeout(() => {
-                currentSystemStability = 60; // Reset to a safe, but not perfect, level
-                updateStabilityDisplay();
-                activeModule = null; // Deactivate current module
-                activeModuleNameSpan.textContent = 'NONE';
-                activeModuleIDSpan.textContent = 'N/A';
-                renderModuleParameters(null); // Clear parameters display
-                moduleSelector.value = 'none'; // Reset selector
-                moduleDescription.textContent = 'Select a module to view its description and parameters.';
-                activateModuleButton.disabled = true;
-                tuneModuleButton.disabled = true;
+                currentSystemStability = 70; // Reset to a safe, but not perfect, level
+                currentEnergy = 80; // Recalibration also consumes/resets energy
+                currentDataFlow = 40; // Data flow also resets
 
-                logDataStreamEntry('System reboot complete. Stability restored to 60%. All modules deactivated.', 'optimal');
-                logDataStreamEntry('Awaiting new module activation.', 'normal');
-                lastOperationSpan.textContent = `System Rebooted`;
+                updateAllDisplays();
+                deployedProtocol = null; // Deactivate current protocol
+                synthesizedProtocol = null; // Clear synthesized protocol
+                deployedProtocolNameSpan.textContent = 'NONE';
+                deployedProtocolIDSpan.textContent = 'N/A';
+                renderProtocolParameters(null); // Clear parameters display
+                fragmentSelector.value = 'none'; // Reset selector
+                fragmentDescription.textContent = 'Scan to discover new protocol fragments and their properties.';
+                
+                // Clear available fragments for a 'fresh start' on recalibration, or keep them
+                // For a hard reset, clear them: availableFragments = []; while(fragmentSelector.options.length > 1) { fragmentSelector.remove(1); }
+                // For a softer reset, just reset selection and state:
+                if (availableFragments.length > 0) {
+                    fragmentSelector.value = 'none';
+                    fragmentDescription.textContent = 'Scan to discover new protocol fragments and their properties.';
+                } else {
+                    fragmentSelector.innerHTML = '<option value="none" disabled selected>-- Initiate Scan Below --</option>';
+                }
+
+
+                logDataStreamEntry('Core system recalibration complete. Stability restored to 70%, Energy to 80 units, Data Flow to 40Mbps. All protocols deactivated.', 'optimal');
+                logDataStreamEntry('Awaiting new fragment scan.', 'normal');
+                systemStatusTextSpan.textContent = `System Recalibrated.`;
 
                 isProcessing = false;
-                emergencyRebootButton.disabled = false; // Enable reboot button (can always reboot)
-                moduleSelector.disabled = false;
-            }, 3500); // 3.5 seconds reboot time
+                fragmentSelector.disabled = false;
+                updateButtonStates();
+            }, 3500); // 3.5 seconds recalibration time
         });
         
         // Initial setup on load
-        updateStabilityDisplay();
-        logDataStreamEntry('System online. Awaiting module selection and activation.', 'normal');
+        updateAllDisplays();
+        logDataStreamEntry('System online. Initiate fragment scan to begin operations.', 'normal');
         dataStreamMonitor.classList.remove('active'); // Ensure it starts inactive
-        activateModuleButton.disabled = true; // Disable until a module is selected
-        tuneModuleButton.disabled = true; // Disable until a module is active and ready
+        
     </script>
 </body>
 </html>
