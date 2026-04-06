@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus [Generation 9.0]</title>
+    <title>Web Life Form // Adaptive Protocol Nexus [Generation 10.0]</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
             --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
-            --frosted-bg: rgba(255, 255, 255, 0.04); /* Slightly less opaque frosted background, more transparent */
+            --frosted-bg: rgba(255, 255, 255, 0.03); /* More transparent frosted background */
             --text-color: #E0E0E0; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
             --border-color: rgba(255, 255, 255, 0.08); /* Slightly more visible border */
@@ -40,13 +40,19 @@
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
             --resource-bg: rgba(0, 0, 0, 0.7);
+
+            /* New 2.5 Gen Colors */
+            --receptor-bg: rgba(15, 30, 45, 0.9); /* Dark blue-grey for receptors */
+            --receptor-border: rgba(0, 191, 255, 0.4); /* Deep sky blue accent */
+            --receptor-text: #B0E0E6; /* Powder blue */
+            --formulate-btn-glow: rgba(255, 20, 147, 0.8); /* Deep Pink */
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #03030A; /* Even darker, deeper background base */
+            background: #000005; /* Even darker, deeper background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,58 +64,54 @@
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/></svg>') 16 16, auto; /* Cyan crosshair cursor */
         }
 
-        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors) */
+        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation) */
         body::before {
             content: '';
             position: absolute;
-            top: -150%;
-            left: -150%;
-            width: 400%;
-            height: 400%;
+            top: -180%;
+            left: -180%;
+            width: 460%;
+            height: 460%;
             background: linear-gradient(
-                90deg,
-                #0d0b1a 0%,
-                #1a0b1d 10%,
-                #100c22 20%,
-                #1d152a 30%,
-                #0d0b1a 40%,
-                #1a0b1d 50%,
-                #100c22 60%,
-                #1d152a 70%,
-                #0d0b1a 80%,
-                #1a0b1d 90%,
-                #0d0b1a 100%
+                75deg,
+                #05030f 0%,
+                #100512 15%,
+                #080415 30%,
+                #12081c 45%,
+                #05030f 60%,
+                #100512 75%,
+                #05030f 100%
             );
-            background-size: 800% 800%; /* Larger background size for smoother movement */
-            animation: fluidBackground1 100s linear infinite alternate, rotateBackground 180s linear infinite; /* Slower animations */
+            background-size: 800% 800%;
+            animation: fluidBackground1 120s linear infinite alternate, rotateBackground 240s linear infinite;
             z-index: -3;
-            filter: blur(200px) opacity(0.7); /* More blur, slightly more opaque */
-            transform: rotate(-55deg) scale(2.0); /* Larger scale, more rotation */
-            mix-blend-mode: color-dodge; /* More aggressive blend */
+            filter: blur(250px) opacity(0.8); /* More blur, more opaque */
+            transform: rotate(-65deg) scale(2.2);
+            mix-blend-mode: color-dodge;
         }
 
-        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors) */
+        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors, more diffuse) */
         body::after {
             content: '';
             position: absolute;
-            top: -70%;
-            left: -70%;
-            width: 240%;
-            height: 240%;
+            top: -80%;
+            left: -80%;
+            width: 260%;
+            height: 260%;
             background: linear-gradient(
-                -75deg,
-                rgba(135, 206, 250, 0.25) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.2) 25%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.2) 50%, /* tertiary glow accent */
-                rgba(135, 206, 250, 0.25) 75%,
-                rgba(255, 105, 180, 0.2) 100%
+                -85deg,
+                rgba(135, 206, 250, 0.2) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.15) 25%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.15) 50%, /* tertiary glow accent */
+                rgba(135, 206, 250, 0.2) 75%,
+                rgba(255, 105, 180, 0.15) 100%
             );
-            background-size: 400% 400%; /* Larger background size for smoother movement */
-            animation: fluidBackground2 55s ease-in-out infinite, rotateBackgroundReversed 130s linear infinite; /* Slower animations */
+            background-size: 500% 500%;
+            animation: fluidBackground2 65s ease-in-out infinite, rotateBackgroundReversed 150s linear infinite;
             z-index: -2;
-            filter: blur(120px) opacity(0.5); /* More blur, slightly more opaque */
+            filter: blur(150px) opacity(0.6); /* More blur, more opaque */
             mix-blend-mode: screen;
-            transform: rotate(40deg) scale(1.3); /* More rotation, slight scale */
+            transform: rotate(50deg) scale(1.5);
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -121,11 +123,10 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.07; /* Slightly more noticeable noise */
+            opacity: 0.09; /* Slightly more noticeable noise */
             pointer-events: none;
             z-index: 9999;
         }
-
 
         @keyframes fluidBackground1 {
             0% { background-position: 0% 0%; }
@@ -139,49 +140,49 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-55deg) scale(2.0); }
-            to { transform: rotate(305deg) scale(2.0); }
+            from { transform: rotate(-65deg) scale(2.2); }
+            to { transform: rotate(295deg) scale(2.2); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(40deg) scale(1.3); }
-            to { transform: rotate(-320deg) scale(1.3); }
+            from { transform: rotate(50deg) scale(1.5); }
+            to { transform: rotate(-310deg) scale(1.5); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 950px; /* Even wider for more content */
-            padding: 80px; /* More padding */
+            max-width: 1000px; /* Even wider for more content */
+            padding: 90px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 55px; /* Even more rounded */
-            backdrop-filter: blur(120px) saturate(450%) brightness(140%); /* Stronger blur, saturation, and brightness */
-            -webkit-backdrop-filter: blur(120px) saturate(450%) brightness(140%);
+            border-radius: 65px; /* Even more rounded */
+            backdrop-filter: blur(150px) saturate(500%) brightness(150%); /* Stronger blur, saturation, and brightness */
+            -webkit-backdrop-filter: blur(150px) saturate(500%) brightness(150%);
             box-shadow:
-                0 50px 200px rgba(0, 0, 0, 0.95), /* Deeper shadow */
-                0 0 250px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 60px rgba(255, 255, 255, 0.2); /* Stronger inner glow for depth */
+                0 60px 220px rgba(0, 0, 0, 0.98), /* Deeper shadow */
+                0 0 280px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 70px rgba(255, 255, 255, 0.25); /* Stronger inner glow for depth */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 60px; /* Increased gap between sections */
-            animation: fadeInScale 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 1.0s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 70px; /* Increased gap between sections */
+            animation: fadeInScale 3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 1.2s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -7px; /* More overflow */
-            border-radius: 57px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF); /* More vibrant border glow colors */
-            background-size: 600% 600%; /* Larger background for smoother animation */
-            animation: borderGlow 12s linear infinite alternate; /* Slower animation */
-            filter: blur(20px); /* Stronger blur */
+            inset: -9px; /* More overflow */
+            border-radius: 67px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF, #8A2BE2); /* More vibrant border glow colors */
+            background-size: 700% 700%; /* Larger background for smoother animation */
+            animation: borderGlow 15s linear infinite alternate; /* Slower animation */
+            filter: blur(25px); /* Stronger blur */
             z-index: -1;
-            opacity: 0.8; /* Stronger glow */
+            opacity: 0.9; /* Stronger glow */
         }
 
         @keyframes borderGlow {
@@ -190,32 +191,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.65) translateY(120px) perspective(1200px) rotateX(25deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(1200px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.6) translateY(150px) perspective(1500px) rotateX(30deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(1500px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.8em; /* Even larger heading */
+            font-size: 4.2em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 40px var(--primary-glow), 0 0 70px rgba(135, 206, 250, 0.8);
-            margin-bottom: 40px;
-            letter-spacing: 6px;
+            text-shadow: 0 0 50px var(--primary-glow), 0 0 80px rgba(135, 206, 250, 0.9);
+            margin-bottom: 45px;
+            letter-spacing: 7px;
             line-height: 1.2;
             position: relative;
-            transform: translateZ(30px); /* Lift heading slightly in 3D space */
+            transform: translateZ(35px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -25px;
+            bottom: -30px;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            height: 5px; /* Thicker underline */
+            height: 6px; /* Thicker underline */
             background: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
-            box-shadow: 0 0 30px var(--primary-glow);
+            box-shadow: 0 0 35px var(--primary-glow);
         }
 
         p {
@@ -223,36 +224,88 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.98;
-            font-size: 1.15em;
-            transform: translateZ(15px);
+            font-size: 1.2em;
+            transform: translateZ(18px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 45px; /* Increased gap */
-            margin: 35px 0;
+            gap: 50px; /* Increased gap */
+            margin: 40px 0;
             position: relative;
         }
 
-        /* New Resource Display Styles */
+        /* New Environmental Receptors styles */
+        .environmental-receptor-module, .formulated-protocol-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+            padding: 30px;
+            background: var(--receptor-bg);
+            border-radius: 20px;
+            border: 1px solid var(--receptor-border);
+            box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.4), 0 0 20px rgba(0, 191, 255, 0.3);
+            position: relative;
+            transform: translateZ(15px);
+            overflow: hidden;
+        }
+
+        .environmental-receptor-module::before, .formulated-protocol-details::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 0.95em;
+            color: var(--receptor-text);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 6px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            transform: translateY(-50%) translateZ(8px);
+            opacity: 0.98;
+            border: 1px solid var(--receptor-text);
+            box-shadow: 0 0 12px var(--receptor-text);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .receptor-group, .param-group {
+            margin-bottom: 18px;
+        }
+
+        .param-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15em;
+            color: var(--data-stream-text);
+            letter-spacing: 0.9px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-shadow: 0 0 13px rgba(0, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        /* Resource Display Styles */
         .resource-display-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
-            transform: translateZ(18px);
+            gap: 35px;
+            margin-bottom: 35px;
+            transform: translateZ(20px);
         }
 
         .energy-reserve-display, .data-flow-display {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            border-radius: 18px;
-            padding: 22px 28px;
-            box-shadow: inset 0 0 18px rgba(150, 0, 255, 0.4), 0 0 18px rgba(150, 0, 255, 0.3);
+            border-radius: 20px;
+            padding: 25px 30px;
+            box-shadow: inset 0 0 20px rgba(150, 0, 255, 0.5), 0 0 20px rgba(150, 0, 255, 0.4);
             position: relative;
             text-align: left;
-            overflow: hidden; /* For inner effects */
+            overflow: hidden;
         }
         .energy-reserve-display::after, .data-flow-display::after {
             content: '';
@@ -261,247 +314,154 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.05) 0%, transparent 70%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.06) 0%, transparent 70%);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.1em;
+            font-size: 1.15em;
             color: var(--module-selection-text);
-            text-shadow: 0 0 10px rgba(150, 0, 255, 0.6);
-            margin-bottom: 12px;
+            text-shadow: 0 0 12px rgba(150, 0, 255, 0.7);
+            margin-bottom: 15px;
         }
         .energy-reserve-display::before {
             content: attr(data-label);
             position: absolute;
-            top: -18px;
-            left: 25px;
-            font-size: 0.85em;
-            color: var(--energy-color-high); /* Default yellow */
+            top: -20px;
+            left: 30px;
+            font-size: 0.9em;
+            color: var(--energy-color-high);
             background: rgba(0, 0, 0, 0.9);
-            padding: 5px 14px;
-            border-radius: 9px;
+            padding: 6px 16px;
+            border-radius: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
-            transform: translateY(-50%) translateZ(6px);
-            opacity: 0.95;
-            border: 1px solid rgba(255, 255, 0, 0.8);
-            box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+            letter-spacing: 1.2px;
+            transform: translateY(-50%) translateZ(8px);
+            opacity: 0.98;
+            border: 1px solid rgba(255, 255, 0, 0.9);
+            box-shadow: 0 0 12px rgba(255, 255, 0, 0.9);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
             position: absolute;
-            top: -18px;
-            left: 25px;
-            font-size: 0.85em;
-            color: var(--data-flow-color-high); /* Default green */
+            top: -20px;
+            left: 30px;
+            font-size: 0.9em;
+            color: var(--data-flow-color-high);
             background: rgba(0, 0, 0, 0.9);
-            padding: 5px 14px;
-            border-radius: 9px;
+            padding: 6px 16px;
+            border-radius: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
-            transform: translateY(-50%) translateZ(6px);
-            opacity: 0.95;
-            border: 1px solid rgba(0, 255, 0, 0.8);
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            letter-spacing: 1.2px;
+            transform: translateY(-50%) translateZ(8px);
+            opacity: 0.98;
+            border: 1px solid rgba(0, 255, 0, 0.9);
+            box-shadow: 0 0 12px rgba(0, 255, 0, 0.9);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .resource-level-bar-container {
             width: 100%;
-            height: 20px;
+            height: 22px;
             background: var(--resource-bg);
-            border-radius: 10px;
+            border-radius: 11px;
             overflow: hidden;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255,255,255,0.06);
         }
         .resource-level-bar {
             height: 100%;
             width: 100%;
-            background: var(--stability-good); /* default, will be overridden by JS */
-            border-radius: 10px;
-            transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1), background 1.0s ease-out, box-shadow 1.0s ease-out;
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+            background: var(--stability-good);
+            border-radius: 11px;
+            transition: width 1.3s cubic-bezier(0.25, 1, 0.5, 1), background 1.1s ease-out, box-shadow 1.1s ease-out;
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
         }
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 12px rgba(255, 255, 0, 0.8); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 12px rgba(0, 255, 0, 0.8); }
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 14px rgba(255, 255, 0, 0.9); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 14px rgba(0, 255, 0, 0.9); }
 
-
-        .protocol-fragment-discovery, .deployed-protocol-parameters {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            text-align: left;
-            padding: 28px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
-            position: relative;
-            transform: translateZ(12px);
-            overflow: hidden;
-        }
-        .protocol-fragment-discovery::after, .deployed-protocol-parameters::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at bottom right, rgba(255,255,255,0.04) 0%, transparent 70%);
-            mix-blend-mode: overlay;
-            pointer-events: none;
-        }
-        .protocol-fragment-discovery {
+        .deployed-protocol-parameters {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            box-shadow: inset 0 0 18px rgba(150, 0, 255, 0.4), 0 0 18px rgba(150, 0, 255, 0.3);
+            box-shadow: inset 0 0 20px rgba(150, 0, 255, 0.5), 0 0 20px rgba(150, 0, 255, 0.4);
         }
-
-        .protocol-fragment-discovery::before, .deployed-protocol-parameters::before {
-            content: attr(data-label);
-            position: absolute;
-            top: -18px;
-            left: 25px;
-            font-size: 0.9em;
-            color: var(--warning-color);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 5px 14px;
-            border-radius: 9px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transform: translateY(-50%) translateZ(6px);
-            opacity: 0.95;
-            border: 1px solid var(--warning-color);
-            box-shadow: 0 0 10px var(--warning-color);
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-        }
-
-        .protocol-fragment-discovery::before {
+        .deployed-protocol-parameters::before {
             color: var(--module-selection-text);
             border: 1px solid var(--module-selection-text);
-            box-shadow: 0 0 10px var(--module-selection-text);
+            box-shadow: 0 0 12px var(--module-selection-text);
         }
 
-        #fragment-selector {
-            width: 100%;
-            padding: 14px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            background: rgba(40, 0, 60, 0.8);
-            color: var(--module-selection-text);
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.15em;
-            cursor: pointer;
-            outline: none;
-            transition: all 0.3s ease;
-            appearance: none; /* Hide default dropdown arrow */
-            -webkit-appearance: none;
-            box-shadow: inset 0 0 12px rgba(150, 0, 255, 0.4);
-            text-shadow: 0 0 6px rgba(150, 0, 255, 0.6);
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23E0BBE4%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.4c-6.1%200-11.6%203.4-13.2%208.7C1.9%2073.7%200%2079%200%2084.7s2.5%2010.5%206.8%2014.2l128%20127.9c4.2%204.3%209.7%206.5%2015.5%206.5s11.2-2.2%2015.5-6.5L287%2099c4.3-3.7%206.8-9%206.8-14.7c0-5.4-2.2-10.7-6.8-14.9z%22%2F%3E%3C%2Fsvg%3E');
-            background-repeat: no-repeat;
-            background-position: right 1em top 50%;
-            background-size: 0.9em auto;
-        }
-        #fragment-selector:hover {
-            border-color: var(--module-selection-text);
-            box-shadow: inset 0 0 18px rgba(150, 0, 255, 0.6), 0 0 12px rgba(150, 0, 255, 0.5);
-        }
-        #fragment-selector option {
-            background: rgba(20, 0, 30, 0.95);
-            color: var(--module-selection-text);
-            padding: 12px;
-            font-size: 1em;
-        }
-
-        .param-label {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.1em;
-            color: var(--data-stream-text); /* Cyan for protocol data */
-            letter-spacing: 0.8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
-            margin-bottom: 8px; /* Added margin */
-        }
-        .param-group {
-            margin-bottom: 15px;
-        }
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 20px; /* Taller slider */
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.22);
+            border-radius: 11px;
             outline: none;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.85);
-            transform: translateZ(3px);
-            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.35s ease;
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
+            transform: translateZ(4px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 32px; /* Larger thumb */
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 18px var(--primary-glow);
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 5px solid rgba(255, 255, 255, 0.5); /* Thicker border */
+            box-shadow: 0 0 20px var(--primary-glow);
+            transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+            border: 6px solid rgba(255, 255, 255, 0.6);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 18px var(--primary-glow);
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px var(--primary-glow);
+            transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+            border: 6px solid rgba(255, 255, 255, 0.6);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
-            background: #B0E0E6;
-            box-shadow: 0 0 30px var(--primary-glow), 0 0 12px var(--primary-glow) inset;
-            transform: scale(1.2);
+            background: #A0D0E0;
+            box-shadow: 0 0 35px var(--primary-glow), 0 0 15px var(--primary-glow) inset;
+            transform: scale(1.25);
         }
         input[type="range"]::-moz-range-thumb:hover {
-            background: #B0E0E6;
-            box-shadow: 0 0 30px var(--primary-glow), 0 0 12px var(--primary-glow) inset;
-            transform: scale(1.2);
+            background: #A0D0E0;
+            box-shadow: 0 0 35px var(--primary-glow), 0 0 15px var(--primary-glow) inset;
+            transform: scale(1.25);
         }
 
-        /* Active Protocol Status Display - Renamed to System Status */
+        /* Active Protocol Status Display */
         .system-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1.2em;
-            padding: 22px;
+            font-size: 1.25em;
+            padding: 25px;
             border: 1px solid var(--border-color);
-            border-radius: 18px;
+            border-radius: 20px;
             background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.25);
+            box-shadow: inset 0 0 22px rgba(0, 255, 255, 0.3);
             text-align: left;
             position: relative;
-            transition: all 0.4s ease;
-            line-height: 1.6;
-            letter-spacing: 0.9px;
+            transition: all 0.45s ease;
+            line-height: 1.65;
+            letter-spacing: 1px;
             color: var(--data-stream-text);
-            text-shadow: 0 0 14px rgba(0, 255, 255, 0.7);
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
             font-weight: 400;
-            transform: translateZ(15px);
+            transform: translateZ(18px);
             overflow: hidden;
         }
         .system-status-display::after {
@@ -511,7 +471,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(0,255,255,0.05), transparent);
+            background: linear-gradient(45deg, rgba(0,255,255,0.06), transparent);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
@@ -519,44 +479,44 @@
         .system-status-display::before {
             content: 'SYSTEM STATUS';
             position: absolute;
-            top: -18px;
-            left: 25px;
-            font-size: 0.85em;
+            top: -20px;
+            left: 30px;
+            font-size: 0.9em;
             color: var(--data-stream-text);
             background: rgba(0, 0, 0, 0.9);
-            padding: 5px 14px;
-            border-radius: 9px;
+            padding: 6px 16px;
+            border-radius: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
-            transform: translateY(-50%) translateZ(6px);
-            opacity: 0.95;
+            letter-spacing: 1.2px;
+            transform: translateY(-50%) translateZ(8px);
+            opacity: 0.98;
             border: 1px solid var(--data-stream-text);
-            box-shadow: 0 0 10px var(--data-stream-text);
+            box-shadow: 0 0 12px var(--data-stream-text);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
-        /* Data Stream Monitor - Replaces System Feedback Display */
+        /* Data Stream Monitor */
         .data-stream-monitor {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.05em; /* Slightly larger */
-            min-height: 200px; /* Taller for more detailed logs */
+            font-size: 1.1em;
+            min-height: 220px;
             display: block;
-            padding: 28px;
+            padding: 30px;
             border: 1px solid var(--border-color);
-            border-radius: 18px;
+            border-radius: 20px;
             background: var(--data-stream-bg);
-            box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.25);
+            box-shadow: inset 0 0 35px rgba(0, 255, 255, 0.3);
             text-align: left;
-            overflow-y: auto; /* Scroll for longer logs */
-            max-height: 350px; /* Increased max height */
+            overflow-y: auto;
+            max-height: 400px;
             position: relative;
-            transition: all 0.4s ease;
-            line-height: 1.6;
-            letter-spacing: 0.7px;
+            transition: all 0.45s ease;
+            line-height: 1.7;
+            letter-spacing: 0.8px;
             font-weight: 300;
             color: var(--data-stream-text);
-            transform: translateZ(20px);
+            transform: translateZ(22px);
         }
 
         .data-stream-monitor::before { /* Scanline effect */
@@ -570,68 +530,67 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.15) 1px, /* Stronger scanlines */
-                rgba(0, 255, 255, 0.15) 3px /* Thicker scanlines */
+                rgba(0, 255, 255, 0.18) 1px,
+                rgba(0, 255, 255, 0.18) 4px
             );
             pointer-events: none;
             mix-blend-mode: overlay;
-            opacity: 0.8; /* Stronger opacity */
+            opacity: 0.9;
         }
 
         .data-stream-monitor.active {
-            box-shadow: inset 0 0 40px var(--secondary-glow), 0 0 25px var(--secondary-glow);
-            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: inset 0 0 45px var(--secondary-glow), 0 0 30px var(--secondary-glow);
+            border-color: rgba(255, 105, 180, 0.6);
         }
 
         .log-entry {
-            margin-bottom: 8px; /* Increased margin */
-            animation: fadeInLog 0.7s ease-out; /* Slower fade in */
+            margin-bottom: 10px;
+            animation: fadeInLog 0.8s ease-out;
         }
 
         @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(18px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .processing-glitch {
             color: var(--glitch-color);
             text-shadow:
-                1px 1px 4px var(--glitch-color), /* Stronger shadow */
-                -1px -1px 4px var(--glitch-color);
-            animation: glitchEffect 0.35s infinite alternate; /* Faster glitch for urgency */
+                1px 1px 5px var(--glitch-color),
+                -1px -1px 5px var(--glitch-color);
+            animation: glitchEffect 0.3s infinite alternate;
         }
 
         @keyframes glitchEffect {
             0% { transform: translateX(0); opacity: 1; text-shadow: 1px 0 var(--glitch-color), -1px 0 var(--glitch-color); }
-            25% { transform: translateX(4px); opacity: 0.7; text-shadow: -4px 0 var(--glitch-color), 4px 0 var(--glitch-color); }
-            50% { transform: translateX(-4px); opacity: 0.9; text-shadow: 5px 0 var(--glitch-color), -5px 0 var(--glitch-color); }
-            75% { transform: translateX(2px); opacity: 0.8; text-shadow: -3px 0 var(--glitch-color), 3px 0 var(--glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
+            25% { transform: translateX(5px); opacity: 0.6; text-shadow: -5px 0 var(--glitch-color), 5px 0 var(--glitch-color); }
+            50% { transform: translateX(-5px); opacity: 0.8; text-shadow: 6px 0 var(--glitch-color), -6px 0 var(--glitch-color); }
+            75% { transform: translateX(3px); opacity: 0.7; text-shadow: -4px 0 var(--glitch-color), 4px 0 var(--glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -3px 0 var(--glitch-color), 3px 0 var(--glitch-color); }
         }
-
 
         .button-group {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            gap: 25px; /* Adjusted gap */
+            flex-wrap: wrap;
+            gap: 30px;
             justify-content: center;
-            margin-top: 45px;
-            transform: translateZ(20px);
+            margin-top: 50px;
+            transform: translateZ(22px);
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
-            color: #0A0A15;
+            color: #050510;
             border: none;
-            padding: 20px 45px; /* Larger buttons */
-            font-size: 1.25em;
+            padding: 22px 50px;
+            font-size: 1.3em;
             font-weight: 700;
-            border-radius: 50px; /* More rounded */
+            border-radius: 55px;
             cursor: pointer;
             outline: none;
-            transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 12px 40px rgba(135, 206, 250, 0.8);
-            letter-spacing: 1.8px;
+            transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 14px 45px rgba(135, 206, 250, 0.85);
+            letter-spacing: 2px;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -646,35 +605,35 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.45);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
+            transition: width 0.7s ease, height 0.7s ease;
             z-index: -1;
             opacity: 0;
         }
 
         button:hover::before {
-            width: 300%;
-            height: 300%;
+            width: 350%;
+            height: 350%;
             opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-12px) scale(1.08); /* More pronounced lift */
-            box-shadow: 0 20px 70px rgba(135, 206, 250, 0.99), 0 0 45px var(--accent-color); /* Stronger shadow */
+            transform: translateY(-15px) scale(1.1);
+            box-shadow: 0 25px 75px rgba(135, 206, 250, 1), 0 0 50px var(--accent-color);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.3); /* More brightness */
+            filter: brightness(1.4);
         }
 
         button:active {
-            transform: translateY(-6px) scale(0.97); /* Deeper press */
-            box-shadow: 0 10px 40px rgba(135, 206, 250, 0.7);
+            transform: translateY(-8px) scale(0.96);
+            box-shadow: 0 12px 45px rgba(135, 206, 250, 0.8);
         }
 
         button:disabled {
-            opacity: 0.35; /* More faded when disabled */
+            opacity: 0.3;
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
@@ -683,90 +642,89 @@
             color: #aaa !important;
         }
 
-        #scan-fragments-button {
-            background: linear-gradient(90deg, #FFCC00 0%, #FFFF00 100%); /* Yellow */
-            box-shadow: 0 12px 40px rgba(255, 204, 0, 0.8);
-            color: #1a1a2e;
+        #formulate-protocol-button {
+            background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%); /* Deep Pink */
+            box-shadow: 0 14px 45px var(--formulate-btn-glow);
+            color: white;
         }
-        #scan-fragments-button:hover {
-            background: linear-gradient(90deg, #FFCC00 0%, #FFD700 100%);
-            box-shadow: 0 20px 70px rgba(255, 204, 0, 0.99), 0 0 45px #FFCC00;
-            color: #0A0A15;
+        #formulate-protocol-button:hover {
+            background: linear-gradient(90deg, #C71585 0%, #FF1493 100%);
+            box-shadow: 0 25px 75px var(--formulate-btn-glow), 0 0 50px var(--formulate-btn-glow);
+            color: white;
         }
 
-        #synthesize-protocol-button {
-            background: linear-gradient(90deg, #9932CC 0%, #BA55D3 100%); /* Purple */
-            box-shadow: 0 12px 40px rgba(153, 50, 204, 0.8);
-            color: white;
-        }
-        #synthesize-protocol-button:hover {
-            background: linear-gradient(90deg, #8A2BE2 0%, #9932CC 100%);
-            box-shadow: 0 20px 70px rgba(153, 50, 204, 0.99), 0 0 45px #9932CC;
-            color: white;
-        }
-        
-        #deploy-protocol-button {
+        #integrate-protocol-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
-            box-shadow: 0 12px 40px rgba(0, 255, 255, 0.8);
-            color: #1a1a2e;
+            box-shadow: 0 14px 45px rgba(0, 255, 255, 0.85);
+            color: #050510;
         }
-
-        #deploy-protocol-button:hover {
+        #integrate-protocol-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 20px 70px rgba(0, 255, 255, 0.99), 0 0 45px #00FFFF;
+            box-shadow: 0 25px 75px rgba(0, 255, 255, 1), 0 0 50px #00FFFF;
             color: white;
         }
 
-        #optimize-parameters-button {
+        #tune-active-protocol-button {
             background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 12px 40px rgba(0, 255, 0, 0.8);
-            color: #1a1a2e;
+            box-shadow: 0 14px 45px rgba(0, 255, 0, 0.85);
+            color: #050510;
         }
-        #optimize-parameters-button:hover {
+        #tune-active-protocol-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 20px 70px rgba(0, 255, 0, 0.99), 0 0 45px #00FF00;
+            box-shadow: 0 25px 75px rgba(0, 255, 0, 1), 0 0 50px #00FF00;
+            color: white;
+        }
+
+        #deactivate-protocol-button {
+            background: linear-gradient(90deg, #800080 0%, #9400D3 100%); /* Purple */
+            box-shadow: 0 14px 45px rgba(128, 0, 128, 0.85);
+            color: white;
+        }
+        #deactivate-protocol-button:hover {
+            background: linear-gradient(90deg, #9400D3 0%, #800080 100%);
+            box-shadow: 0 25px 75px rgba(128, 0, 128, 1), 0 0 50px #800080;
             color: white;
         }
         
         #recalibrate-core-button {
             background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
-            box-shadow: 0 12px 40px rgba(255, 99, 71, 0.8);
+            box-shadow: 0 14px 45px rgba(255, 99, 71, 0.85);
             color: white;
         }
 
         #recalibrate-core-button:hover {
             background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
-            box-shadow: 0 20px 70px rgba(255, 99, 71, 0.99), 0 0 45px #FF6347;
+            box-shadow: 0 25px 75px rgba(255, 99, 71, 1), 0 0 50px #FF6347;
             color: white;
         }
 
         .stability-level-container {
             width: 100%;
-            height: 30px; /* Taller bar */
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px; /* More rounded */
-            margin-top: 45px;
+            height: 35px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 18px;
+            margin-top: 50px;
             overflow: hidden;
-            box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.9);
+            box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.95);
             position: relative;
             border: 1px solid var(--border-color);
-            transform: translateZ(15px);
+            transform: translateZ(18px);
         }
 
         .stability-level-bar {
             height: 100%;
-            width: 80%; /* Initial width */
-            background: var(--stability-good); /* Default green gradient */
-            border-radius: 15px;
-            transition: width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), background 1.3s ease-out, box-shadow 1.3s ease-out; /* Smoother transition */
-            box-shadow: 0 0 28px rgba(102, 255, 102, 0.95);
+            width: 70%;
+            background: var(--stability-good);
+            border-radius: 18px;
+            transition: width 1.7s cubic-bezier(0.2, 0.8, 0.2, 1), background 1.5s ease-out, box-shadow 1.5s ease-out;
+            box-shadow: 0 0 30px rgba(102, 255, 102, 0.98);
             position: relative;
-            animation: barGlow 4s infinite alternate; /* Slower, more pronounced glow */
+            animation: barGlow 5s infinite alternate;
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 25px rgba(102, 255, 102, 0.85); }
-            100% { box-shadow: 0 0 40px rgba(102, 255, 102, 1), 0 0 12px rgba(255,255,255,0.5) inset; }
+            0% { box-shadow: 0 0 28px rgba(102, 255, 102, 0.9); }
+            100% { box-shadow: 0 0 45px rgba(102, 255, 102, 1), 0 0 15px rgba(255,255,255,0.6) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -778,91 +736,91 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.6) 0%, /* Stronger glare */
-                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.7) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 15px;
+            border-radius: 18px;
         }
 
         .status-text {
-            font-size: 1.25em;
-            margin-top: 22px;
+            font-size: 1.3em;
+            margin-top: 25px;
             opacity: 0.99;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1.8px;
+            letter-spacing: 2px;
             color: var(--accent-color);
-            text-shadow: 0 0 14px var(--primary-glow);
+            text-shadow: 0 0 15px var(--primary-glow);
             font-weight: 700;
-            transform: translateZ(15px);
+            transform: translateZ(18px);
         }
 
         footer {
-            margin-top: 80px; /* Increased margin */
-            font-size: 0.95em;
-            color: rgba(255, 255, 255, 0.75);
+            margin-top: 90px;
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.8);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1.4px;
-            padding-top: 45px;
-            border-top: 1px dashed var(--border-color); /* Dashed border for footer */
-            text-shadow: 0 0 10px var(--secondary-glow);
+            letter-spacing: 1.5px;
+            padding-top: 50px;
+            border-top: 1px dashed var(--border-color);
+            text-shadow: 0 0 12px var(--secondary-glow);
             position: relative;
-            line-height: 1.7;
-            transform: translateZ(9px);
+            line-height: 1.8;
+            transform: translateZ(10px);
         }
         
-        footer::before { /* Subtle footer glow */
+        footer::before {
             content: '';
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 85%; /* Wider glow */
+            width: 90%;
             height: 1px;
-            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 75%);
-            opacity: 0.7; /* Stronger opacity */
-            filter: blur(18px); /* Stronger blur */
+            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 80%);
+            opacity: 0.8;
+            filter: blur(20px);
         }
 
-        @media (max-width: 900px) { /* Adjusted max-width for container */
+        @media (max-width: 900px) {
             .container {
-                margin: 25px;
+                margin: 30px;
                 padding: 60px;
-                gap: 40px;
-                border-radius: 45px;
+                gap: 50px;
+                border-radius: 55px;
                 max-width: 98%;
             }
             h1 {
-                font-size: 3em;
-                letter-spacing: 4px;
+                font-size: 3.2em;
+                letter-spacing: 5px;
             }
             .data-stream-monitor {
-                font-size: 0.95em;
-                min-height: 180px;
-                padding: 22px;
+                font-size: 1em;
+                min-height: 200px;
+                padding: 25px;
             }
             button {
-                padding: 18px 35px;
-                font-size: 1.15em;
-                border-radius: 45px;
-                letter-spacing: 1.2px;
+                padding: 20px 40px;
+                font-size: 1.2em;
+                border-radius: 50px;
+                letter-spacing: 1.5px;
             }
             .button-group {
-                flex-direction: column; /* Stack buttons vertically */
-                gap: 18px;
+                flex-direction: column;
+                gap: 20px;
             }
             input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 28px;
-                height: 28px;
+                width: 30px;
+                height: 30px;
             }
             .system-status-display {
-                font-size: 1.1em;
-                padding: 20px;
+                font-size: 1.15em;
+                padding: 22px;
             }
             .resource-display-container {
-                grid-template-columns: 1fr; /* Stack resource displays vertically */
-                gap: 20px;
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
         }
     </style>
@@ -870,10 +828,10 @@
 <body>
     <div class="container">
         <h1>Adaptive Protocol Nexus</h1>
-        <p>Engage with the core systems. Scan for emergent fragments, synthesize advanced protocols, and optimize their parameters to sustain vital system metrics.</p>
+        <p>Tune environmental data receptors to formulate new protocols. Integrate them into the core system and refine parameters to maintain optimal operational stability.</p>
 
         <div class="control-module">
-            <!-- New: Resource Display -->
+            <!-- Resource Display -->
             <div class="resource-display-container">
                 <div class="energy-reserve-display" data-label="ENERGY RESERVE">
                     <p><strong>Current:</strong> <span id="energy-value">100</span> units</p>
@@ -889,35 +847,44 @@
                 </div>
             </div>
 
-            <div class="protocol-fragment-discovery" data-label="PROTOCOL FRAGMENT DISCOVERY">
-                <label for="fragment-selector" class="param-label" style="margin-bottom: 12px;">Discovered Fragments:</label>
-                <select id="fragment-selector">
-                    <option value="none" disabled selected>-- Initiate Scan Below --</option>
-                </select>
-                <p style="font-size: 0.95em; opacity: 0.8; margin-top: 12px;" id="fragment-description">Scan for protocol fragments. Select a discovered fragment to synthesize a new operational protocol.</p>
+            <!-- New: Environmental Data Receptors -->
+            <div class="environmental-receptor-module" data-label="ENVIRONMENTAL DATA RECEPTORS">
+                <p style="font-size: 1em; opacity: 0.9; margin-bottom: 15px; color: var(--receptor-text);">Adjust the receptors below to influence the next protocol formulation. Higher values often yield more complex but potent protocols.</p>
+                <div id="environmental-receptors-container">
+                    <!-- Receptors will be dynamically rendered here -->
+                </div>
             </div>
 
-            <div class="deployed-protocol-parameters" data-label="DEPLOYED PROTOCOL PARAMETERS" style="display: none;">
-                <!-- Dynamic parameters will be rendered here by JS -->
-                <p style="text-align: center; opacity: 0.8;">No protocol deployed. Synthesize and deploy a protocol to load parameters.</p>
+            <!-- New: Formulated Protocol Details -->
+            <div class="formulated-protocol-details" data-label="FORMULATED PROTOCOL DETAILS" style="display: none;">
+                <p><strong>Protocol Name:</strong> <span id="formulated-protocol-name">N/A</span></p>
+                <p><strong>Protocol ID:</strong> <span id="formulated-protocol-id">N/A</span></p>
+                <p><strong>Complexity:</strong> <span id="formulated-protocol-complexity">N/A</span></p>
+                <p><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
+                <p style="font-size: 0.95em; opacity: 0.8; margin-top: 15px;" id="formulated-protocol-description">Tune environmental receptors and formulate a protocol to see its details here.</p>
+            </div>
+
+            <!-- Deployed Protocol Parameters (now for tuning ACTIVE protocols) -->
+            <div class="deployed-protocol-parameters" data-label="ACTIVE PROTOCOL TUNING" style="display: none;">
+                <p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>
             </div>
 
             <div class="system-status-display" id="system-status">
-                <p><strong>Deployed Protocol:</strong> <span id="deployed-protocol-name">NONE</span></p>
-                <p><strong>Protocol ID:</strong> <span id="deployed-protocol-id">N/A</span></p>
-                <p><strong>Status:</strong> <span id="system-status-text">Idle. Initiate Fragment Scan.</span></p>
+                <p><strong>Active Protocol:</strong> <span id="active-protocol-name">NONE</span></p>
+                <p><strong>Protocol ID:</strong> <span id="active-protocol-id">N/A</span></p>
+                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Tune Receptors & Formulate.</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
-                <span class="processing-glitch">System ready. Awaiting command input.</span>
+                <span class="processing-glitch">System ready. Awaiting environmental data input.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="scan-fragments-button">Scan for Fragments</button>
-            <button id="synthesize-protocol-button" disabled>Synthesize Protocol</button>
-            <button id="deploy-protocol-button" disabled>Deploy Protocol</button>
-            <button id="optimize-parameters-button" disabled>Optimize Parameters</button>
+            <button id="formulate-protocol-button">Formulate Protocol</button>
+            <button id="integrate-protocol-button" disabled>Integrate Protocol</button>
+            <button id="tune-active-protocol-button" disabled>Tune Active Protocol</button>
+            <button id="deactivate-protocol-button" disabled>Deactivate Protocol</button>
             <button id="recalibrate-core-button">Recalibrate Core</button>
         </div>
 
@@ -927,24 +894,29 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 9.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 10.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
-        const fragmentSelector = document.getElementById('fragment-selector');
-        const fragmentDescription = document.getElementById('fragment-description');
+        const environmentalReceptorsContainer = document.getElementById('environmental-receptors-container');
+        const formulatedProtocolDetailsContainer = document.getElementById('formulated-protocol-details');
+        const formulatedProtocolNameSpan = document.getElementById('formulated-protocol-name');
+        const formulatedProtocolIDSpan = document.getElementById('formulated-protocol-id');
+        const formulatedProtocolComplexitySpan = document.getElementById('formulated-protocol-complexity');
+        const formulatedProtocolStabilityRiskSpan = document.getElementById('formulated-protocol-stability-risk');
+        const formulatedProtocolDescription = document.getElementById('formulated-protocol-description');
         const deployedProtocolParametersContainer = document.getElementById('deployed-protocol-parameters');
         const systemStatusDisplay = document.getElementById('system-status');
-        const deployedProtocolNameSpan = document.getElementById('deployed-protocol-name');
-        const deployedProtocolIDSpan = document.getElementById('deployed-protocol-id');
+        const activeProtocolNameSpan = document.getElementById('active-protocol-name');
+        const activeProtocolIDSpan = document.getElementById('active-protocol-id');
         const systemStatusTextSpan = document.getElementById('system-status-text');
         const dataStreamMonitor = document.getElementById('data-stream-monitor');
 
-        const scanFragmentsButton = document.getElementById('scan-fragments-button');
-        const synthesizeProtocolButton = document.getElementById('synthesize-protocol-button');
-        const deployProtocolButton = document.getElementById('deploy-protocol-button');
-        const optimizeParametersButton = document.getElementById('optimize-parameters-button');
+        const formulateProtocolButton = document.getElementById('formulate-protocol-button');
+        const integrateProtocolButton = document.getElementById('integrate-protocol-button');
+        const tuneActiveProtocolButton = document.getElementById('tune-active-protocol-button');
+        const deactivateProtocolButton = document.getElementById('deactivate-protocol-button');
         const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
 
         const stabilityLevelBar = document.getElementById('stability-level-bar');
@@ -959,63 +931,13 @@
         let currentDataFlow = 50;
 
         let isProcessing = false;
-        let availableFragments = [];
-        let synthesizedProtocol = null;
-        let deployedProtocol = null;
+        let formulatedProtocol = null;
+        let activeProtocol = null;
 
-        const fragmentTemplates = [
-            {
-                id: 'F001',
-                name: 'Neural Sub-Processor',
-                description: 'A core fragment for enhancing local neural processing speed and accuracy. Low energy cost, moderate impact.',
-                params: [
-                    { id: 'neuro-sync', label: 'Neural Sync Frequency', min: 0, max: 100, initialValue: 50, optimalRange: { min: 45, max: 65 } },
-                    { id: 'data-cache', label: 'Data Cache Buffer', min: 0, max: 100, initialValue: 50, optimalRange: { min: 30, max: 70 } }
-                ],
-                impact: { scanCost: 10, synthesizeCost: 15, deployStability: -5, deployDataFlow: +10, optimizeStability: { optimal: +10, suboptimal: -5, critical: -15 }, optimizeDataFlow: { optimal: +15, suboptimal: +0, critical: -10 } }
-            },
-            {
-                id: 'F002',
-                name: 'Quantum Harmonizer Array',
-                description: 'A delicate fragment for stabilizing quantum entanglement links. High precision, higher energy cost.',
-                params: [
-                    { id: 'entangle-freq', label: 'Entanglement Frequency', min: 0, max: 100, initialValue: 60, optimalRange: { min: 55, max: 75 } },
-                    { id: 'phase-shift', label: 'Phase Shift Variance', min: 0, max: 100, initialValue: 40, optimalRange: { min: 20, max: 40 } },
-                    { id: 'harmonic-res', label: 'Harmonic Resonance', min: 0, max: 100, initialValue: 70, optimalRange: { min: 60, max: 80 } }
-                ],
-                impact: { scanCost: 20, synthesizeCost: 25, deployStability: -10, deployDataFlow: +5, optimizeStability: { optimal: +15, suboptimal: -10, critical: -25 }, optimizeDataFlow: { optimal: +10, suboptimal: -5, critical: -15 } }
-            },
-            {
-                id: 'F003',
-                name: 'Chronon Data Conduit',
-                description: 'Advanced fragment enabling temporal data stream compression and decompression. Potentially unstable.',
-                params: [
-                    { id: 'temporal-ratio', label: 'Temporal Compression Ratio', min: 0, max: 100, initialValue: 75, optimalRange: { min: 70, max: 90 } },
-                    { id: 'sync-latency', label: 'Sync Latency Offset', min: 0, max: 100, initialValue: 25, optimalRange: { min: 10, max: 30 } }
-                ],
-                impact: { scanCost: 15, synthesizeCost: 20, deployStability: -8, deployDataFlow: +12, optimizeStability: { optimal: +12, suboptimal: -7, critical: -20 }, optimizeDataFlow: { optimal: +20, suboptimal: -5, critical: -10 } }
-            },
-            {
-                id: 'F004',
-                name: 'Resonance Dampener Node',
-                description: 'Mitigates system feedback loops, crucial for high-load operations. Increases energy efficiency.',
-                params: [
-                    { id: 'dampening-coeff', label: 'Dampening Coefficient', min: 0, max: 100, initialValue: 30, optimalRange: { min: 20, max: 40 } },
-                    { id: 'freq-absorp', label: 'Frequency Absorption', min: 0, max: 100, initialValue: 60, optimalRange: { min: 50, max: 70 } }
-                ],
-                impact: { scanCost: 12, synthesizeCost: 18, deployStability: +5, deployDataFlow: -5, optimizeStability: { optimal: +18, suboptimal: +0, critical: -10 }, optimizeDataFlow: { optimal: +5, suboptimal: -8, critical: -18 } }
-            },
-            {
-                id: 'F005',
-                name: 'Hyper-Thread Allocator',
-                description: 'Optimizes parallel processing for massive data sets. High data throughput potential, but risks stability if misconfigured.',
-                params: [
-                    { id: 'thread-priority', label: 'Thread Priority Balance', min: 0, max: 100, initialValue: 70, optimalRange: { min: 65, max: 85 } },
-                    { id: 'load-balance', label: 'Load Distribution Index', min: 0, max: 100, initialValue: 50, optimalRange: { min: 40, max: 60 } },
-                    { id: 'coherence-factor', label: 'Coherence Factor', min: 0, max: 100, initialValue: 80, optimalRange: { min: 75, max: 95 } }
-                ],
-                impact: { scanCost: 25, synthesizeCost: 30, deployStability: -15, deployDataFlow: +20, optimizeStability: { optimal: +20, suboptimal: -10, critical: -30 }, optimizeDataFlow: { optimal: +25, suboptimal: +5, critical: -15 } }
-            }
+        const environmentalReceptors = [
+            { id: 'flux-modulator', label: 'Flux Modulator', min: 0, max: 100, currentValue: 50, energyCost: 2 },
+            { id: 'nexus-gain', label: 'Nexus Gain', min: 0, max: 100, currentValue: 50, energyCost: 3 },
+            { id: 'temporal-bias', label: 'Temporal Bias', min: 0, max: 100, currentValue: 50, energyCost: 1 }
         ];
 
         // --- Utility Functions ---
@@ -1027,7 +949,7 @@
         }
 
         function updateStabilityDisplay() {
-            currentSystemStability = Math.max(0, Math.min(100, currentSystemStability)); // Ensure bounds
+            currentSystemStability = Math.max(0, Math.min(100, currentSystemStability));
             stabilityLevelBar.style.width = `${currentSystemStability}%`;
             stabilityValueSpan.textContent = `${currentSystemStability}%`;
 
@@ -1047,7 +969,7 @@
         }
 
         function updateEnergyDisplay() {
-            currentEnergy = Math.max(0, Math.min(100, currentEnergy)); // Ensure bounds
+            currentEnergy = Math.max(0, Math.min(100, currentEnergy));
             energyLevelBar.style.width = `${currentEnergy}%`;
             energyValueSpan.textContent = `${currentEnergy}`;
             
@@ -1067,7 +989,7 @@
         }
 
         function updateDataFlowDisplay() {
-            currentDataFlow = Math.max(0, Math.min(100, currentDataFlow)); // Ensure bounds
+            currentDataFlow = Math.max(0, Math.min(100, currentDataFlow));
             dataFlowLevelBar.style.width = `${currentDataFlow}%`;
             dataFlowValueSpan.textContent = `${currentDataFlow}`;
 
@@ -1119,36 +1041,62 @@
             }, 1200);
         }
 
-        function renderProtocolParameters(protocol) {
+        function renderEnvironmentalReceptors() {
+            environmentalReceptorsContainer.innerHTML = '';
+            environmentalReceptors.forEach(receptor => {
+                const receptorGroup = document.createElement('div');
+                receptorGroup.classList.add('receptor-group');
+
+                const receptorLabelDiv = document.createElement('div');
+                receptorLabelDiv.classList.add('param-label'); // Re-use styling
+                receptorLabelDiv.innerHTML = `${receptor.label}: <span id="${receptor.id}-value">${receptor.currentValue}</span>% (Cost: ${receptor.energyCost} E-units)`;
+
+                const rangeInput = document.createElement('input');
+                rangeInput.type = 'range';
+                rangeInput.id = receptor.id;
+                rangeInput.min = receptor.min;
+                rangeInput.max = receptor.max;
+                rangeInput.value = receptor.currentValue;
+                
+                rangeInput.addEventListener('input', () => {
+                    document.getElementById(`${receptor.id}-value`).textContent = rangeInput.value;
+                    receptor.currentValue = parseInt(rangeInput.value); // Update internal state
+                    updateButtonStates(); // Re-evaluate costs/disables on receptor change
+                });
+
+                receptorGroup.appendChild(receptorLabelDiv);
+                receptorGroup.appendChild(rangeInput);
+                environmentalReceptorsContainer.appendChild(receptorGroup);
+            });
+        }
+
+        function renderProtocolTuningParameters(protocol) {
             deployedProtocolParametersContainer.innerHTML = '';
             if (!protocol) {
-                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol deployed. Synthesize and deploy a protocol to load parameters.</p>';
+                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
                 deployedProtocolParametersContainer.style.display = 'block';
                 return;
             }
 
-            protocol.params.forEach(param => {
+            protocol.tuningParams.forEach(param => {
                 const paramGroup = document.createElement('div');
                 paramGroup.classList.add('param-group');
-                // Removed data-label attribute for paramGroup as it's not being styled by CSS in this iteration.
-                // Keeping the styling logic for the label inside the paramLabelDiv.
 
                 const paramLabelDiv = document.createElement('div');
                 paramLabelDiv.classList.add('param-label');
-                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.initialValue}</span>%`; // Use initialValue for display
+                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>%`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
                 rangeInput.id = param.id;
                 rangeInput.min = param.min;
                 rangeInput.max = param.max;
-                rangeInput.value = param.initialValue; // Set initial value for slider
+                rangeInput.value = param.value;
                 
                 rangeInput.addEventListener('input', () => {
                     document.getElementById(`${param.id}-value`).textContent = rangeInput.value;
-                    // Update the value in the deployedProtocol object directly
-                    const p = deployedProtocol.params.find(dp => dp.id === param.id);
-                    if (p) p.value = parseInt(rangeInput.value); // Store current slider value in deployedProtocol
+                    const p = activeProtocol.tuningParams.find(dp => dp.id === param.id);
+                    if (p) p.value = parseInt(rangeInput.value);
                 });
 
                 paramGroup.appendChild(paramLabelDiv);
@@ -1159,239 +1107,255 @@
         }
 
         function updateButtonStates() {
-            const selectedFragmentId = fragmentSelector.value;
-            const selectedFragment = availableFragments.find(f => f.id === selectedFragmentId);
+            const totalReceptorCost = environmentalReceptors.reduce((sum, r) => sum + r.energyCost, 0);
 
-            scanFragmentsButton.disabled = isProcessing || currentEnergy < 10;
-            synthesizeProtocolButton.disabled = isProcessing || !selectedFragment || selectedFragmentId === 'none' || currentEnergy < (selectedFragment ? selectedFragment.impact.synthesizeCost : 999); // Use 999 if no fragment selected
-            deployProtocolButton.disabled = isProcessing || !synthesizedProtocol || (deployedProtocol && deployedProtocol.id === synthesizedProtocol.id);
-            optimizeParametersButton.disabled = isProcessing || !deployedProtocol || currentEnergy < 5; // Optimization also costs energy
+            formulateProtocolButton.disabled = isProcessing || currentEnergy < totalReceptorCost;
+            integrateProtocolButton.disabled = isProcessing || !formulatedProtocol || activeProtocol === formulatedProtocol;
+            tuneActiveProtocolButton.disabled = isProcessing || !activeProtocol || currentEnergy < 10; // Tuning costs energy
+            deactivateProtocolButton.disabled = isProcessing || !activeProtocol;
             recalibrateCoreButton.disabled = isProcessing;
 
-            // Critical state disables all but recalibrate
+            // Critical state disables most buttons, except recalibrate
             if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15) {
-                if (!isProcessing) { // Don't override processing state if already doing something
-                    scanFragmentsButton.disabled = true;
-                    synthesizeProtocolButton.disabled = true;
-                    deployProtocolButton.disabled = true;
-                    optimizeParametersButton.disabled = true;
+                if (!isProcessing) {
+                    formulateProtocolButton.disabled = true;
+                    integrateProtocolButton.disabled = true;
+                    tuneActiveProtocolButton.disabled = true;
+                    deactivateProtocolButton.disabled = true;
                 }
-                recalibrateCoreButton.disabled = isProcessing; // Recalibrate is always available unless busy
+                recalibrateCoreButton.disabled = isProcessing;
                 if (!isProcessing) {
                     logDataStreamEntry("SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!", 'critical');
                 }
             }
         }
 
-        // --- Event Listeners ---
-        fragmentSelector.addEventListener('change', () => {
-            const selectedFragmentId = fragmentSelector.value;
-            const selectedFragment = availableFragments.find(f => f.id === selectedFragmentId);
+        // --- Core Game Logic ---
+        function generateProtocolName(receptorValues) {
+            const prefixes = ['Adaptive', 'Quantum', 'Neural', 'Temporal', 'Resonance', 'Hyperflux'];
+            const suffixes = ['Nexus', 'Matrix', 'Conduit', 'Harmonizer', 'Processor', 'Allocator'];
+            const types = ['Protocol', 'System', 'Link', 'Framework'];
 
-            if (selectedFragment) {
-                fragmentDescription.textContent = selectedFragment.description;
-            } else {
-                fragmentDescription.textContent = 'Scan to discover new protocol fragments and their properties.';
-            }
-            updateButtonStates();
-        });
+            let avg = receptorValues.reduce((a, b) => a + b, 0) / receptorValues.length;
 
-        scanFragmentsButton.addEventListener('click', () => {
-            if (isProcessing) return;
-            const scanCost = 10 + Math.floor(Math.random() * 5);
-            if (currentEnergy < scanCost) {
-                logDataStreamEntry(`Insufficient energy for scan (Cost: ${scanCost}). Current: ${currentEnergy} units.`, 'critical');
-                return;
-            }
+            let name = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ';
+            if (avg > 70) name += 'Advanced ';
+            if (avg < 30) name += 'Basic ';
+            name += suffixes[Math.floor(Math.random() * suffixes.length)] + ' ';
+            name += types[Math.floor(Math.random() * types.length)];
+            return name;
+        }
 
-            isProcessing = true;
-            updateButtonStates();
-            fragmentSelector.disabled = true;
+        function generateProtocolDescription(protocol) {
+            let desc = `A dynamically generated protocol (${protocol.id}) focusing on ${protocol.name.toLowerCase().includes('neural') ? 'cognitive processing' : protocol.name.toLowerCase().includes('quantum') ? 'quantum state management' : 'inter-system data routing'}. `;
+            if (protocol.complexity > 70) desc += 'Highly complex, demanding precise calibration. ';
+            else if (protocol.complexity < 30) desc += 'Simple architecture, robust against minor fluctuations. ';
 
-            logDataStreamEntry(`Initiating fragment scan (Cost: ${scanCost} units)...`, 'glitch');
-            systemStatusTextSpan.textContent = `Scanning for Fragments...`;
-            currentEnergy = Math.max(0, currentEnergy - scanCost);
-            updateEnergyDisplay();
+            if (protocol.stabilityRisk > 70) desc += 'Integration poses significant stability risks. ';
+            else if (protocol.stabilityRisk < 30) desc += 'Low inherent stability risk. ';
 
-            setTimeout(() => {
-                const newFragmentIndex = Math.floor(Math.random() * fragmentTemplates.length);
-                const discoveredTemplate = fragmentTemplates[newFragmentIndex];
+            desc += `Impact: Stability ${protocol.impact.stability > 0 ? '+' : ''}${protocol.impact.stability}%, Data Flow ${protocol.impact.dataFlow > 0 ? '+' : ''}${protocol.impact.dataFlow}%.`;
+            return desc;
+        }
 
-                // Create a unique ID for the discovered instance
-                const uniqueIdSuffix = Math.random().toString(36).substr(2, 4).toUpperCase();
-                const newFragmentInstance = JSON.parse(JSON.stringify(discoveredTemplate)); // Deep copy
-                newFragmentInstance.id = `${discoveredTemplate.id}-${uniqueIdSuffix}`;
+        function formulateNewProtocol() {
+            const receptorValues = environmentalReceptors.map(r => r.currentValue);
+            const avgReceptorValue = receptorValues.reduce((sum, val) => sum + val, 0) / environmentalReceptors.length;
+
+            const protocolName = generateProtocolName(receptorValues);
+            const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+
+            // Dynamic complexity and stability risk based on receptor values
+            const complexity = Math.round(avgReceptorValue * 0.8 + Math.random() * 20); // Higher avg = more complex
+            const stabilityRisk = Math.round(Math.abs(50 - avgReceptorValue) * 1.5 + Math.random() * 30); // Deviation from 50 = more risk
+
+            // Impact of integration, more complex/risky protocols have higher potential impacts
+            const impactStability = Math.round(5 - stabilityRisk / 15 + Math.random() * 10 - 5);
+            const impactDataFlow = Math.round(avgReceptorValue / 10 + complexity / 20 + Math.random() * 10 - 5);
+
+            // Generate tuning parameters dynamically based on complexity
+            const numTuningParams = Math.min(3, 1 + Math.floor(complexity / 40));
+            const tuningParams = [];
+            for (let i = 0; i < numTuningParams; i++) {
+                const paramId = `tun-${protocolId}-${i}`;
+                const baseValue = Math.round(avgReceptorValue * (0.5 + i * 0.1) + Math.random() * 30 - 15);
+                const optimalRangeWidth = Math.max(10, 40 - complexity / 2); // Narrower range for complex protocols
+                const optimalMin = Math.max(0, baseValue - Math.floor(optimalRangeWidth / 2));
+                const optimalMax = Math.min(100, baseValue + Math.ceil(optimalRangeWidth / 2));
+                const initialValue = Math.round((optimalMin + optimalMax) / 2); // Start in optimal range
                 
-                // For a truly "new" fragment, check by template name.
-                // If we want multiple instances of the *same template* to be discoverable, remove this check.
-                // Current logic allows multiple instances of the same *template* to be discovered, but each gets a unique ID.
-                availableFragments.push(newFragmentInstance);
-
-                const option = document.createElement('option');
-                option.value = newFragmentInstance.id;
-                option.textContent = `${newFragmentInstance.name} (${newFragmentInstance.id})`;
-                fragmentSelector.appendChild(option);
-
-                logDataStreamEntry(`New Protocol Fragment Discovered: "${newFragmentInstance.name}" (${newFragmentInstance.id}).`, 'optimal');
-                fragmentSelector.value = newFragmentInstance.id;
-                fragmentDescription.textContent = newFragmentInstance.description;
-                
-                systemStatusTextSpan.textContent = `Scan Complete.`;
-                isProcessing = false;
-                fragmentSelector.disabled = false;
-                updateButtonStates();
-            }, 2500);
-        });
-
-        synthesizeProtocolButton.addEventListener('click', () => {
-            if (isProcessing) return;
-            const selectedFragmentId = fragmentSelector.value;
-            const fragmentToSynthesize = availableFragments.find(f => f.id === selectedFragmentId);
-
-            if (!fragmentToSynthesize) {
-                logDataStreamEntry("ERROR: No protocol fragment selected for synthesis.", 'critical');
-                return;
-            }
-
-            const synthesizeCost = fragmentToSynthesize.impact.synthesizeCost;
-            if (currentEnergy < synthesizeCost) {
-                logDataStreamEntry(`Insufficient energy for synthesis (Cost: ${synthesizeCost}). Current: ${currentEnergy} units.`, 'critical');
-                return;
-            }
-
-            isProcessing = true;
-            updateButtonStates();
-            fragmentSelector.disabled = true;
-
-            logDataStreamEntry(`Initiating synthesis of protocol "${fragmentToSynthesize.name}" (${fragmentToSynthesize.id}) (Cost: ${synthesizeCost} units)...`, 'glitch');
-            systemStatusTextSpan.textContent = `Synthesizing Protocol...`;
-            currentEnergy = Math.max(0, currentEnergy - synthesizeCost);
-            updateEnergyDisplay();
-
-            setTimeout(() => {
-                // Deep copy to ensure synthesizedProtocol is a separate instance with its own mutable parameter values
-                synthesizedProtocol = JSON.parse(JSON.stringify(fragmentToSynthesize)); 
-                // Ensure initial parameter values are set for the instance, this is crucial for the sliders
-                synthesizedProtocol.params.forEach(param => {
-                    param.value = param.initialValue;
+                const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping'];
+                tuningParams.push({
+                    id: paramId,
+                    label: paramNames[i % paramNames.length],
+                    min: 0,
+                    max: 100,
+                    value: initialValue, // Current slider value
+                    initialValue: initialValue, // Original generated value
+                    optimalRange: { min: optimalMin, max: optimalMax }
                 });
+            }
 
-                logDataStreamEntry(`Protocol "${synthesizedProtocol.name}" synthesized and ready for deployment.`, 'optimal');
-                systemStatusTextSpan.textContent = `Protocol Synthesized.`;
+            const newProtocol = {
+                id: protocolId,
+                name: protocolName,
+                complexity: complexity,
+                stabilityRisk: stabilityRisk,
+                impact: { stability: impactStability, dataFlow: impactDataFlow },
+                tuningParams: tuningParams,
+                lastTuningScore: 0 // To track success of last tune attempt
+            };
+            newProtocol.description = generateProtocolDescription(newProtocol);
+            return newProtocol;
+        }
+
+        // --- Event Listeners ---
+        formulateProtocolButton.addEventListener('click', () => {
+            if (isProcessing) return;
+
+            const totalReceptorCost = environmentalReceptors.reduce((sum, r) => sum + r.energyCost, 0);
+            if (currentEnergy < totalReceptorCost) {
+                logDataStreamEntry(`Insufficient energy for formulation (Cost: ${totalReceptorCost}). Current: ${currentEnergy} units.`, 'critical');
+                return;
+            }
+
+            isProcessing = true;
+            updateButtonStates();
+            environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+
+            logDataStreamEntry(`Initiating protocol formulation based on receptor data (Cost: ${totalReceptorCost} units)...`, 'glitch');
+            systemStatusTextSpan.textContent = `Formulating Protocol...`;
+            currentEnergy = Math.max(0, currentEnergy - totalReceptorCost);
+            updateEnergyDisplay();
+
+            setTimeout(() => {
+                formulatedProtocol = formulateNewProtocol();
+                formulatedProtocolNameSpan.textContent = formulatedProtocol.name;
+                formulatedProtocolIDSpan.textContent = formulatedProtocol.id;
+                formulatedProtocolComplexitySpan.textContent = `${formulatedProtocol.complexity}%`;
+                formulatedProtocolStabilityRiskSpan.textContent = `${formulatedProtocol.stabilityRisk}%`;
+                formulatedProtocolDescription.textContent = formulatedProtocol.description;
+                formulatedProtocolDetailsContainer.style.display = 'flex'; // Show details
+
+                logDataStreamEntry(`New Protocol "${formulatedProtocol.name}" formulated. Ready for integration.`, 'optimal');
+                systemStatusTextSpan.textContent = `Protocol Formulated.`;
                 
                 isProcessing = false;
-                fragmentSelector.disabled = false;
+                environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
                 updateButtonStates();
             }, 3000);
         });
 
-        deployProtocolButton.addEventListener('click', () => {
+        integrateProtocolButton.addEventListener('click', () => {
             if (isProcessing) return;
-            if (!synthesizedProtocol) {
-                logDataStreamEntry("ERROR: No protocol synthesized for deployment.", 'critical');
-                return;
-            }
-            if (deployedProtocol && deployedProtocol.id === synthesizedProtocol.id) {
-                logDataStreamEntry(`Protocol "${synthesizedProtocol.name}" is already deployed.`, 'info');
+            if (!formulatedProtocol) {
+                logDataStreamEntry("ERROR: No protocol formulated for integration.", 'critical');
                 return;
             }
 
             isProcessing = true;
             updateButtonStates();
-            fragmentSelector.disabled = true;
+            environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
-            logDataStreamEntry(`Deploying protocol "${synthesizedProtocol.name}" (${synthesizedProtocol.id})...`, 'glitch');
-            systemStatusTextSpan.textContent = `Deploying Protocol...`;
+            logDataStreamEntry(`Integrating protocol "${formulatedProtocol.name}" (${formulatedProtocol.id})...`, 'glitch');
+            systemStatusTextSpan.textContent = `Integrating Protocol...`;
 
             setTimeout(() => {
-                deployedProtocol = synthesizedProtocol;
-                renderProtocolParameters(deployedProtocol);
-                deployedProtocolNameSpan.textContent = deployedProtocol.name;
-                deployedProtocolIDSpan.textContent = deployedProtocol.id;
+                activeProtocol = formulatedProtocol;
+                renderProtocolTuningParameters(activeProtocol);
+                activeProtocolNameSpan.textContent = activeProtocol.name;
+                activeProtocolIDSpan.textContent = activeProtocol.id;
 
-                // Apply initial impact from deployment
-                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + deployedProtocol.impact.deployStability));
-                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + deployedProtocol.impact.deployDataFlow));
+                // Apply initial impact from integration
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + activeProtocol.impact.stability));
+                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + activeProtocol.impact.dataFlow));
                 updateAllDisplays();
 
-                logDataStreamEntry(`Protocol "${deployedProtocol.name}" deployed. Stability: ${deployedProtocol.impact.deployStability > 0 ? '+' : ''}${deployedProtocol.impact.deployStability}%, Data Flow: ${deployedProtocol.impact.deployDataFlow > 0 ? '+' : ''}${deployedProtocol.impact.deployDataFlow}%.`, 'info');
-                logDataStreamEntry(`Ready for parameter optimization.`, 'normal');
-                systemStatusTextSpan.textContent = `Protocol Deployed.`;
+                logDataStreamEntry(`Protocol "${activeProtocol.name}" integrated. Stability: ${activeProtocol.impact.stability > 0 ? '+' : ''}${activeProtocol.impact.stability}%, Data Flow: ${activeProtocol.impact.dataFlow > 0 ? '+' : ''}${activeProtocol.impact.dataFlow}%.`, 'info');
+                logDataStreamEntry(`Ready for active protocol tuning.`, 'normal');
+                systemStatusTextSpan.textContent = `Protocol Active.`;
 
                 isProcessing = false;
-                fragmentSelector.disabled = false;
+                environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
                 updateButtonStates();
-            }, 2000);
+            }, 2500);
         });
 
-        optimizeParametersButton.addEventListener('click', () => {
+        tuneActiveProtocolButton.addEventListener('click', () => {
             if (isProcessing) return;
-            if (!deployedProtocol) {
-                logDataStreamEntry("ERROR: No protocol deployed. Deploy a protocol first.", 'critical');
+            if (!activeProtocol) {
+                logDataStreamEntry("ERROR: No protocol active to tune. Integrate a protocol first.", 'critical');
                 return;
             }
             if (currentSystemStability < 15 || currentDataFlow < 15 || currentEnergy < 10) {
-                logDataStreamEntry("SYSTEM WARNING: Core metrics too low for safe optimization. Energy, Stability, or Data Flow near critical. Recalibrate recommended!", 'warning');
+                logDataStreamEntry("SYSTEM WARNING: Core metrics too low for safe tuning. Energy, Stability, or Data Flow near critical. Recalibrate recommended!", 'warning');
                 return;
             }
-            const optimizeCost = 5 + Math.floor(Math.random() * 5);
-            if (currentEnergy < optimizeCost) {
-                logDataStreamEntry(`Insufficient energy for optimization (Cost: ${optimizeCost}). Current: ${currentEnergy} units.`, 'critical');
+            const tuneCost = 10 + Math.floor(activeProtocol.complexity / 10);
+            if (currentEnergy < tuneCost) {
+                logDataStreamEntry(`Insufficient energy for tuning (Cost: ${tuneCost}). Current: ${currentEnergy} units.`, 'critical');
                 return;
             }
 
             isProcessing = true;
             updateButtonStates();
-            fragmentSelector.disabled = true;
-            currentEnergy = Math.max(0, currentEnergy - optimizeCost);
+            environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+            deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+
+            currentEnergy = Math.max(0, currentEnergy - tuneCost);
             updateEnergyDisplay();
 
-            logDataStreamEntry(`Optimizing parameters for protocol "${deployedProtocol.name}" (Cost: ${optimizeCost} units)...`, 'glitch');
-            systemStatusTextSpan.textContent = `Optimizing Protocol...`;
+            logDataStreamEntry(`Tuning active protocol "${activeProtocol.name}" (Cost: ${tuneCost} units)...`, 'glitch');
+            systemStatusTextSpan.textContent = `Tuning Active Protocol...`;
 
             setTimeout(() => {
-                let totalDeviationScore = 0; // Cumulative deviation
+                let totalDeviationScore = 0;
                 let tunedParameters = 0;
 
-                deployedProtocol.params.forEach(param => {
+                activeProtocol.tuningParams.forEach(param => {
                     const sliderElement = document.getElementById(param.id);
-                    if (!sliderElement) return; // Skip if slider element doesn't exist (shouldn't happen)
+                    if (!sliderElement) return;
 
                     const sliderValue = parseInt(sliderElement.value);
                     const optimalMin = param.optimalRange.min;
                     const optimalMax = param.optimalRange.max;
 
-                    // Calculate deviation from the optimal range
                     let deviation = 0;
                     if (sliderValue < optimalMin) {
                         deviation = optimalMin - sliderValue;
                     } else if (sliderValue > optimalMax) {
                         deviation = sliderValue - optimalMax;
                     }
-                    totalDeviationScore += Math.abs(deviation); // Use absolute deviation
+                    totalDeviationScore += Math.abs(deviation);
                     tunedParameters++;
                 });
 
-                const averageDeviation = tunedParameters > 0 ? totalDeviationScore / tunedParameters : 100; // Default to high deviation if no params
+                const averageDeviation = tunedParameters > 0 ? totalDeviationScore / tunedParameters : 100;
 
                 let stabilityChange = 0;
                 let dataFlowChange = 0;
                 let feedbackType = 'suboptimal';
-                let message = `Protocol "${deployedProtocol.name}" optimization result: `;
+                let message = `Protocol "${activeProtocol.name}" tuning result: `;
 
-                if (averageDeviation <= 10) { // Optimal tuning
-                    stabilityChange = deployedProtocol.impact.optimizeStability.optimal;
-                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.optimal;
+                // Impact of tuning depends on deviation AND protocol characteristics
+                const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
+                const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
+
+                if (averageDeviation <= 8) { // Optimal tuning
+                    stabilityChange = Math.round(baseStabilityGain + Math.random() * 5);
+                    dataFlowChange = Math.round(baseDataFlowGain + Math.random() * 5);
                     feedbackType = 'optimal';
                     message += `OPTIMAL. Average parameter deviation ${averageDeviation.toFixed(1)}%.`;
-                } else if (averageDeviation <= 30) { // Suboptimal tuning
-                    stabilityChange = deployedProtocol.impact.optimizeStability.suboptimal;
-                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.suboptimal;
+                } else if (averageDeviation <= 25) { // Suboptimal tuning
+                    stabilityChange = Math.round(baseStabilityGain / 2 - Math.random() * 5);
+                    dataFlowChange = Math.round(baseDataFlowGain / 2 - Math.random() * 5);
+                    if (stabilityChange < 0) stabilityChange = 0; // Avoid negative impact on suboptimal if risk is low
+                    if (dataFlowChange < 0) dataFlowChange = 0;
                     feedbackType = 'warning';
                     message += `SUBOPTIMAL. Average parameter deviation ${averageDeviation.toFixed(1)}%. Requires further adjustment.`;
                 } else { // Critical tuning
-                    stabilityChange = deployedProtocol.impact.optimizeStability.critical;
-                    dataFlowChange = deployedProtocol.impact.optimizeDataFlow.critical;
+                    stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
+                    dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
                     feedbackType = 'critical';
                     message += `CRITICAL MISALIGNMENT. Average parameter deviation ${averageDeviation.toFixed(1)}%. System instability detected!`;
                 }
@@ -1400,21 +1364,65 @@
                 currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + dataFlowChange));
                 updateAllDisplays();
 
+                activeProtocol.lastTuningScore = averageDeviation; // Store for dynamic fluctuations
+
                 logDataStreamEntry(message, feedbackType);
                 logDataStreamEntry(`Core Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Data Flow impact: ${dataFlowChange > 0 ? '+' : ''}${dataFlowChange}%. Current Stability: ${currentSystemStability}%, Data Flow: ${currentDataFlow}%.`, stabilityChange < 0 || dataFlowChange < 0 ? 'critical' : (feedbackType === 'warning' ? 'warning' : 'optimal'));
-                systemStatusTextSpan.textContent = `Protocol Optimized.`;
+                systemStatusTextSpan.textContent = `Protocol Tuned.`;
 
                 isProcessing = false;
-                fragmentSelector.disabled = false;
+                environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
+                deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
                 updateButtonStates();
-            }, 3000);
+            }, 3500);
+        });
+
+        deactivateProtocolButton.addEventListener('click', () => {
+            if (isProcessing) return;
+            if (!activeProtocol) {
+                logDataStreamEntry("ERROR: No protocol active to deactivate.", 'critical');
+                return;
+            }
+
+            isProcessing = true;
+            updateButtonStates();
+            environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+            deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+
+            logDataStreamEntry(`Deactivating protocol "${activeProtocol.name}" (${activeProtocol.id})...`, 'warning');
+            systemStatusTextSpan.textContent = `Deactivating Protocol...`;
+
+            setTimeout(() => {
+                // Minor stability/data flow hit on deactivation, or recovery
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 5));
+                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow - 2));
+                updateAllDisplays();
+
+                logDataStreamEntry(`Protocol "${activeProtocol.name}" deactivated. System settling.`, 'info');
+                logDataStreamEntry('No active protocol. Formulate and integrate a new one.', 'normal');
+                
+                activeProtocol = null;
+                formulatedProtocol = null; // Clear formulated as well, usually a fresh start is implied
+                activeProtocolNameSpan.textContent = 'NONE';
+                activeProtocolIDSpan.textContent = 'N/A';
+                formulatedProtocolDetailsContainer.style.display = 'none';
+                deployedProtocolParametersContainer.style.display = 'none'; // Hide tuning params
+                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>'; // Reset message
+                systemStatusTextSpan.textContent = `System Idle. Tune Receptors & Formulate.`;
+
+                isProcessing = false;
+                environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
+                deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
+                updateButtonStates();
+            }, 2000);
         });
 
         recalibrateCoreButton.addEventListener('click', () => {
             if (isProcessing) return;
             isProcessing = true;
             updateButtonStates();
-            fragmentSelector.disabled = true;
+            environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
+            deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
             logDataStreamEntry('Initiating core system recalibration sequence...', 'critical');
             systemStatusTextSpan.textContent = `Core Recalibration in Progress`;
@@ -1425,30 +1433,93 @@
                 currentDataFlow = 40;
 
                 updateAllDisplays();
-                deployedProtocol = null;
-                synthesizedProtocol = null;
-                deployedProtocolNameSpan.textContent = 'NONE';
-                deployedProtocolIDSpan.textContent = 'N/A';
-                renderProtocolParameters(null);
+                activeProtocol = null;
+                formulatedProtocol = null;
+                activeProtocolNameSpan.textContent = 'NONE';
+                activeProtocolIDSpan.textContent = 'N/A';
+                formulatedProtocolDetailsContainer.style.display = 'none';
+                deployedProtocolParametersContainer.style.display = 'none';
+                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
                 
-                // Reset fragment selector, keeping discovered fragments but clearing selection
-                fragmentSelector.value = 'none';
-                fragmentDescription.textContent = 'Scan to discover new protocol fragments and their properties.';
-                
-                logDataStreamEntry('Core system recalibration complete. Stability restored to 70%, Energy to 80 units, Data Flow to 40Mbps. All protocols deactivated.', 'optimal');
-                logDataStreamEntry('Awaiting new fragment scan.', 'normal');
+                environmentalReceptors.forEach(r => {
+                    r.currentValue = 50; // Reset receptors to default
+                    const slider = document.getElementById(r.id);
+                    if (slider) {
+                        slider.value = 50;
+                        document.getElementById(`${r.id}-value`).textContent = 50;
+                    }
+                });
+
+                logDataStreamEntry('Core system recalibration complete. Stability restored to 70%, Energy to 80 units, Data Flow to 40Mbps. All protocols deactivated and receptors reset.', 'optimal');
+                logDataStreamEntry('Awaiting new protocol formulation.', 'normal');
                 systemStatusTextSpan.textContent = `System Recalibrated.`;
 
                 isProcessing = false;
-                fragmentSelector.disabled = false;
+                environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
+                deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
                 updateButtonStates();
-            }, 3500);
+            }, 4000);
         });
-        
+
+        // --- Dynamic System Fluctuation ---
+        let fluctuationInterval;
+        function startDynamicFluctuations() {
+            if (fluctuationInterval) clearInterval(fluctuationInterval);
+
+            fluctuationInterval = setInterval(() => {
+                if (isProcessing) return; // Don't fluctuate during user action
+
+                let stabilityChange = 0;
+                let energyChange = -1; // Constant energy drain
+                let dataFlowChange = 0;
+
+                if (activeProtocol) {
+                    const stabilityRiskFactor = activeProtocol.stabilityRisk / 100;
+                    const complexityFactor = activeProtocol.complexity / 100;
+                    const tuningDeviationFactor = activeProtocol.lastTuningScore / 100; // 0 for perfect, 1 for worst
+
+                    // Protocols consume more energy
+                    energyChange -= Math.round(2 + complexityFactor * 3);
+
+                    // Stability fluctuates more based on risk and tuning quality
+                    stabilityChange = (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor);
+                    if (tuningDeviationFactor > 0.5) stabilityChange -= Math.random() * 5; // Penalty for bad tuning
+
+                    // Data flow fluctuates based on complexity
+                    dataFlowChange = (Math.random() - 0.5) * 3 * complexityFactor;
+                } else {
+                    // Slight recovery if idle, but also slow decay
+                    stabilityChange = (Math.random() - 0.5) * 2;
+                    energyChange = -2; // Slightly higher idle drain
+                    dataFlowChange = (Math.random() - 0.5) * 1;
+                }
+
+                currentSystemStability = Math.round(currentSystemStability + stabilityChange);
+                currentEnergy = Math.round(currentEnergy + energyChange);
+                currentDataFlow = Math.round(currentDataFlow + dataFlowChange);
+
+                // Check for critical states
+                if (currentEnergy <= 0) {
+                    logDataStreamEntry("CRITICAL: Energy reserves depleted! System shutdown imminent.", 'critical');
+                    // Potentially trigger emergency recalibration or game over
+                    recalibrateCoreButton.click();
+                } else if (currentSystemStability <= 10) {
+                    logDataStreamEntry("CRITICAL: Core stability dangerously low! Initiate recalibration!", 'critical');
+                } else if (currentDataFlow <= 10) {
+                    logDataStreamEntry("WARNING: Data flow critically low! System performance degraded.", 'warning');
+                }
+
+                updateAllDisplays();
+            }, 8000); // Fluctuates every 8 seconds
+        }
+
+
         // Initial setup on load
+        renderEnvironmentalReceptors();
         updateAllDisplays();
-        logDataStreamEntry('System online. Initiate fragment scan to begin operations.', 'normal');
+        logDataStreamEntry('System online. Environmental receptors active. Tune them to formulate new operational protocols.', 'normal');
         dataStreamMonitor.classList.remove('active');
+        startDynamicFluctuations();
         
     </script>
 </body>
