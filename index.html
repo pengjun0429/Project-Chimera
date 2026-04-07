@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus [Generation 10.0]</title>
+    <title>Web Life Form // Adaptive Protocol Nexus [Generation 11.0]</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,6 +46,12 @@
             --receptor-border: rgba(0, 191, 255, 0.4); /* Deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
             --formulate-btn-glow: rgba(255, 20, 147, 0.8); /* Deep Pink */
+
+            /* New 2.5 Gen resource: Raw Data */
+            --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
+            --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold */
+            --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%); /* Blue-grey */
+            --raw-data-text: #F06292;
         }
 
         body {
@@ -103,7 +109,7 @@
                 rgba(135, 206, 250, 0.2) 0%, /* primary glow accent */
                 rgba(255, 105, 180, 0.15) 25%, /* secondary glow accent */
                 rgba(50, 205, 50, 0.15) 50%, /* tertiary glow accent */
-                rgba(135, 206, 250, 0.2) 75%,
+                rgba(0, 191, 255, 0.15) 75%, /* deep sky blue from receptor */
                 rgba(255, 105, 180, 0.15) 100%
             );
             background-size: 500% 500%;
@@ -122,7 +128,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5YcllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
             opacity: 0.09; /* Slightly more noticeable noise */
             pointer-events: none;
             z-index: 9999;
@@ -236,8 +242,8 @@
             position: relative;
         }
 
-        /* New Environmental Receptors styles */
-        .environmental-receptor-module, .formulated-protocol-details {
+        /* Environmental Receptors & Formulated Protocol Details */
+        .environmental-receptor-module, .formulated-protocol-details, .deployed-protocol-parameters {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -252,7 +258,7 @@
             overflow: hidden;
         }
 
-        .environmental-receptor-module::before, .formulated-protocol-details::before {
+        .environmental-receptor-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before {
             content: attr(data-label);
             position: absolute;
             top: -20px;
@@ -282,22 +288,30 @@
             color: var(--data-stream-text);
             letter-spacing: 0.9px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* Stack label and sub-info */
+            align-items: flex-start; /* Align text to left */
             text-shadow: 0 0 13px rgba(0, 255, 255, 0.7);
             margin-bottom: 10px;
         }
+        .param-label > span { /* For sub-info like Energy Drain / Raw Data Rate */
+            font-size: 0.85em;
+            opacity: 0.7;
+            color: var(--receptor-text);
+            margin-top: 5px;
+            text-shadow: none; /* Clear text shadow for sub-info */
+        }
+
 
         /* Resource Display Styles */
         .resource-display-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 columns for energy, data flow, raw data */
             gap: 35px;
             margin-bottom: 35px;
             transform: translateZ(20px);
         }
 
-        .energy-reserve-display, .data-flow-display {
+        .energy-reserve-display, .data-flow-display, .raw-data-reserve-display {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
             border-radius: 20px;
@@ -307,7 +321,7 @@
             text-align: left;
             overflow: hidden;
         }
-        .energy-reserve-display::after, .data-flow-display::after {
+        .energy-reserve-display::after, .data-flow-display::after, .raw-data-reserve-display::after {
             content: '';
             position: absolute;
             top: 0;
@@ -318,51 +332,40 @@
             mix-blend-mode: overlay;
             pointer-events: none;
         }
-        .energy-reserve-display p, .data-flow-display p {
+        .energy-reserve-display p, .data-flow-display p, .raw-data-reserve-display p {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.15em;
             color: var(--module-selection-text);
             text-shadow: 0 0 12px rgba(150, 0, 255, 0.7);
             margin-bottom: 15px;
         }
+
+        /* Specific resource display labels and colors */
         .energy-reserve-display::before {
             content: attr(data-label);
-            position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 0.9em;
             color: var(--energy-color-high);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 6px 16px;
-            border-radius: 10px;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            transform: translateY(-50%) translateZ(8px);
-            opacity: 0.98;
             border: 1px solid rgba(255, 255, 0, 0.9);
             box-shadow: 0 0 12px rgba(255, 255, 0, 0.9);
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
+            /* Inherit other styles from common selector */
+            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
-            position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 0.9em;
             color: var(--data-flow-color-high);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 6px 16px;
-            border-radius: 10px;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            transform: translateY(-50%) translateZ(8px);
-            opacity: 0.98;
             border: 1px solid rgba(0, 255, 0, 0.9);
             box-shadow: 0 0 12px rgba(0, 255, 0, 0.9);
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
+            /* Inherit other styles from common selector */
+            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
+        .raw-data-reserve-display::before {
+            content: attr(data-label);
+            color: var(--raw-data-text);
+            border: 1px solid var(--raw-data-text);
+            box-shadow: 0 0 12px var(--raw-data-text);
+            /* Inherit other styles from common selector */
+            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+        }
+
 
         .resource-level-bar-container {
             width: 100%;
@@ -376,24 +379,15 @@
         .resource-level-bar {
             height: 100%;
             width: 100%;
-            background: var(--stability-good);
+            background: var(--stability-good); /* Default */
             border-radius: 11px;
             transition: width 1.3s cubic-bezier(0.25, 1, 0.5, 1), background 1.1s ease-out, box-shadow 1.1s ease-out;
-            box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.5); /* Default */
         }
+        /* Specific resource bar initial styles (updated by JS) */
         #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 14px rgba(255, 255, 0, 0.9); }
         #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 14px rgba(0, 255, 0, 0.9); }
-
-        .deployed-protocol-parameters {
-            background: var(--module-selection-bg);
-            border: 1px solid var(--module-selection-border);
-            box-shadow: inset 0 0 20px rgba(150, 0, 255, 0.5), 0 0 20px rgba(150, 0, 255, 0.4);
-        }
-        .deployed-protocol-parameters::before {
-            color: var(--module-selection-text);
-            border: 1px solid var(--module-selection-text);
-            box-shadow: 0 0 12px var(--module-selection-text);
-        }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 14px var(--raw-data-text); }
 
 
         input[type="range"] {
@@ -819,8 +813,11 @@
                 padding: 22px;
             }
             .resource-display-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Stack vertically on smaller screens */
                 gap: 25px;
+            }
+            .param-label {
+                align-items: center; /* Center align for smaller screens */
             }
         }
     </style>
@@ -828,7 +825,7 @@
 <body>
     <div class="container">
         <h1>Adaptive Protocol Nexus</h1>
-        <p>Tune environmental data receptors to formulate new protocols. Integrate them into the core system and refine parameters to maintain optimal operational stability.</p>
+        <p>Tune environmental data receptors to gather Raw Data. Use collected data to formulate advanced protocols, then integrate and refine them to optimize system performance and stability.</p>
 
         <div class="control-module">
             <!-- Resource Display -->
@@ -837,6 +834,12 @@
                     <p><strong>Current:</strong> <span id="energy-value">100</span> units</p>
                     <div class="resource-level-bar-container">
                         <div class="resource-level-bar" id="energy-level-bar" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="raw-data-reserve-display" data-label="RAW DATA BUFFER">
+                    <p><strong>Collected:</strong> <span id="raw-data-value">0</span> packets</p>
+                    <div class="resource-level-bar-container">
+                        <div class="resource-level-bar" id="raw-data-level-bar" style="width: 0%;"></div>
                     </div>
                 </div>
                 <div class="data-flow-display" data-label="DATA FLOW INDEX">
@@ -849,7 +852,7 @@
 
             <!-- New: Environmental Data Receptors -->
             <div class="environmental-receptor-module" data-label="ENVIRONMENTAL DATA RECEPTORS">
-                <p style="font-size: 1em; opacity: 0.9; margin-bottom: 15px; color: var(--receptor-text);">Adjust the receptors below to influence the next protocol formulation. Higher values often yield more complex but potent protocols.</p>
+                <p style="font-size: 1em; opacity: 0.9; margin-bottom: 15px; color: var(--receptor-text);">Adjust receptor sensitivities. Higher sensitivity gathers more Raw Data but increases Energy drain. Imbalanced settings may lead to unstable protocol formulations.</p>
                 <div id="environmental-receptors-container">
                     <!-- Receptors will be dynamically rendered here -->
                 </div>
@@ -859,9 +862,11 @@
             <div class="formulated-protocol-details" data-label="FORMULATED PROTOCOL DETAILS" style="display: none;">
                 <p><strong>Protocol Name:</strong> <span id="formulated-protocol-name">N/A</span></p>
                 <p><strong>Protocol ID:</strong> <span id="formulated-protocol-id">N/A</span></p>
+                <p><strong>Archetype:</strong> <span id="formulated-protocol-archetype">N/A</span></p>
                 <p><strong>Complexity:</strong> <span id="formulated-protocol-complexity">N/A</span></p>
                 <p><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
-                <p style="font-size: 0.95em; opacity: 0.8; margin-top: 15px;" id="formulated-protocol-description">Tune environmental receptors and formulate a protocol to see its details here.</p>
+                <p><strong>Raw Data Cost:</strong> <span id="formulated-protocol-raw-data-cost">N/A</span></p>
+                <p style="font-size: 0.95em; opacity: 0.8; margin-top: 15px;" id="formulated-protocol-description">Gather Raw Data and formulate a protocol to see its details here.</p>
             </div>
 
             <!-- Deployed Protocol Parameters (now for tuning ACTIVE protocols) -->
@@ -872,11 +877,11 @@
             <div class="system-status-display" id="system-status">
                 <p><strong>Active Protocol:</strong> <span id="active-protocol-name">NONE</span></p>
                 <p><strong>Protocol ID:</strong> <span id="active-protocol-id">N/A</span></p>
-                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Tune Receptors & Formulate.</span></p>
+                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Adjust Receptors to collect Raw Data.</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
-                <span class="processing-glitch">System ready. Awaiting environmental data input.</span>
+                <span class="processing-glitch">System ready. Awaiting environmental data collection.</span>
             </div>
         </div>
 
@@ -894,7 +899,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 10.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 11.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -903,8 +908,10 @@
         const formulatedProtocolDetailsContainer = document.getElementById('formulated-protocol-details');
         const formulatedProtocolNameSpan = document.getElementById('formulated-protocol-name');
         const formulatedProtocolIDSpan = document.getElementById('formulated-protocol-id');
+        const formulatedProtocolArchetypeSpan = document.getElementById('formulated-protocol-archetype'); // New
         const formulatedProtocolComplexitySpan = document.getElementById('formulated-protocol-complexity');
         const formulatedProtocolStabilityRiskSpan = document.getElementById('formulated-protocol-stability-risk');
+        const formulatedProtocolRawDataCostSpan = document.getElementById('formulated-protocol-raw-data-cost'); // New
         const formulatedProtocolDescription = document.getElementById('formulated-protocol-description');
         const deployedProtocolParametersContainer = document.getElementById('deployed-protocol-parameters');
         const systemStatusDisplay = document.getElementById('system-status');
@@ -923,27 +930,37 @@
         const stabilityValueSpan = document.getElementById('stability-value');
         const energyLevelBar = document.getElementById('energy-level-bar');
         const energyValueSpan = document.getElementById('energy-value');
+        const rawDataLevelBar = document.getElementById('raw-data-level-bar'); // New
+        const rawDataValueSpan = document.getElementById('raw-data-value'); // New
         const dataFlowLevelBar = document.getElementById('data-flow-level-bar');
         const dataFlowValueSpan = document.getElementById('data-flow-value');
 
         let currentSystemStability = 70;
-        let currentEnergy = 100;
-        let currentDataFlow = 50;
+        let currentEnergy = 100; // Max 100
+        let currentRawData = 0; // Max 500
+        let currentDataFlow = 50; // Max 100
 
         let isProcessing = false;
         let formulatedProtocol = null;
         let activeProtocol = null;
 
+        // Environmental Receptors now have sensitivity, passive drain, and data rate
         const environmentalReceptors = [
-            { id: 'flux-modulator', label: 'Flux Modulator', min: 0, max: 100, currentValue: 50, energyCost: 2 },
-            { id: 'nexus-gain', label: 'Nexus Gain', min: 0, max: 100, currentValue: 50, energyCost: 3 },
-            { id: 'temporal-bias', label: 'Temporal Bias', min: 0, max: 100, currentValue: 50, energyCost: 1 }
+            { id: 'flux-modulator', label: 'Flux Modulator', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.05, baseRawDataRate: 0.1 },
+            { id: 'nexus-gain', label: 'Nexus Gain', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.08, baseRawDataRate: 0.15 },
+            { id: 'temporal-bias', label: 'Temporal Bias', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.04, baseRawDataRate: 0.08 },
+            { id: 'spectrum-harmonizer', label: 'Spectrum Harmonizer', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.07, baseRawDataRate: 0.12 }
         ];
+
+        const MAX_ENERGY = 100;
+        const MAX_RAW_DATA = 500;
+        const MAX_DATA_FLOW = 100;
 
         // --- Utility Functions ---
         function updateAllDisplays() {
             updateStabilityDisplay();
             updateEnergyDisplay();
+            updateRawDataDisplay();
             updateDataFlowDisplay();
             updateButtonStates();
         }
@@ -956,20 +973,20 @@
             if (currentSystemStability < 25) {
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
                 stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
-                stabilityValueSpan.style.color = 'var(--critical-color)';
+                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentSystemStability < 55) {
                 stabilityLevelBar.style.background = 'var(--stability-warning)';
                 stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
-                stabilityValueSpan.style.color = 'var(--warning-color)';
+                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 stabilityLevelBar.style.background = 'var(--stability-good)';
                 stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
-                stabilityValueSpan.style.color = 'var(--accent-color)';
+                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
             }
         }
 
         function updateEnergyDisplay() {
-            currentEnergy = Math.max(0, Math.min(100, currentEnergy));
+            currentEnergy = Math.max(0, Math.min(MAX_ENERGY, currentEnergy));
             energyLevelBar.style.width = `${currentEnergy}%`;
             energyValueSpan.textContent = `${currentEnergy}`;
             
@@ -988,8 +1005,28 @@
             }
         }
 
+        function updateRawDataDisplay() {
+            currentRawData = Math.max(0, Math.min(MAX_RAW_DATA, currentRawData));
+            rawDataLevelBar.style.width = `${(currentRawData / MAX_RAW_DATA) * 100}%`;
+            rawDataValueSpan.textContent = `${currentRawData}`;
+            
+            if (currentRawData < MAX_RAW_DATA * 0.2) {
+                rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
+                rawDataLevelBar.style.boxShadow = `0 0 15px rgba(120,144,156,0.8)`;
+                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-color-low').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
+            } else if (currentRawData < MAX_RAW_DATA * 0.6) {
+                rawDataLevelBar.style.background = 'var(--raw-data-color-medium)';
+                rawDataLevelBar.style.boxShadow = `0 0 15px rgba(255,215,0,0.8)`;
+                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
+            } else {
+                rawDataLevelBar.style.background = 'var(--raw-data-color-high)';
+                rawDataLevelBar.style.boxShadow = `0 0 15px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
+            }
+        }
+
         function updateDataFlowDisplay() {
-            currentDataFlow = Math.max(0, Math.min(100, currentDataFlow));
+            currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow));
             dataFlowLevelBar.style.width = `${currentDataFlow}%`;
             dataFlowValueSpan.textContent = `${currentDataFlow}`;
 
@@ -1028,6 +1065,9 @@
             } else if (type === 'info') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--module-selection-text').trim();
                 logEntry.style.textShadow = `0 0 7px ${getComputedStyle(document.documentElement).getPropertyValue('--module-selection-border').trim()}`;
+            } else if (type === 'rawdata') { // New log type for raw data collection
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
+                logEntry.style.textShadow = `0 0 7px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
             }
             dataStreamMonitor.prepend(logEntry); // Newest on top
             if (dataStreamMonitor.children.length > 30) { // Keep log concise
@@ -1049,18 +1089,20 @@
 
                 const receptorLabelDiv = document.createElement('div');
                 receptorLabelDiv.classList.add('param-label'); // Re-use styling
-                receptorLabelDiv.innerHTML = `${receptor.label}: <span id="${receptor.id}-value">${receptor.currentValue}</span>% (Cost: ${receptor.energyCost} E-units)`;
+                receptorLabelDiv.innerHTML = `${receptor.label} (Sensitivity): <span id="${receptor.id}-sensitivity-value">${receptor.sensitivity}</span>% <br> <span style="font-size: 0.8em; opacity: 0.7; color: var(--receptor-text);">Energy Drain: <span id="${receptor.id}-drain-value">${(receptor.baseEnergyDrain * receptor.sensitivity / 10).toFixed(2)}</span>/s | Raw Data Rate: <span id="${receptor.id}-raw-rate">${(receptor.baseRawDataRate * receptor.sensitivity / 10).toFixed(2)}</span>/s</span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
                 rangeInput.id = receptor.id;
                 rangeInput.min = receptor.min;
                 rangeInput.max = receptor.max;
-                rangeInput.value = receptor.currentValue;
+                rangeInput.value = receptor.sensitivity;
                 
                 rangeInput.addEventListener('input', () => {
-                    document.getElementById(`${receptor.id}-value`).textContent = rangeInput.value;
-                    receptor.currentValue = parseInt(rangeInput.value); // Update internal state
+                    document.getElementById(`${receptor.id}-sensitivity-value`).textContent = rangeInput.value;
+                    receptor.sensitivity = parseInt(rangeInput.value); // Update internal state
+                    document.getElementById(`${receptor.id}-drain-value`).textContent = (receptor.baseEnergyDrain * receptor.sensitivity / 10).toFixed(2);
+                    document.getElementById(`${receptor.id}-raw-rate`).textContent = (receptor.baseRawDataRate * receptor.sensitivity / 10).toFixed(2);
                     updateButtonStates(); // Re-evaluate costs/disables on receptor change
                 });
 
@@ -1084,7 +1126,7 @@
 
                 const paramLabelDiv = document.createElement('div');
                 paramLabelDiv.classList.add('param-label');
-                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>%`;
+                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>% <span style="font-size: 0.8em; opacity: 0.6; color: var(--receptor-text);">(Optimal: ${param.optimalRange.min}-${param.optimalRange.max}%)</span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
@@ -1107,23 +1149,34 @@
         }
 
         function updateButtonStates() {
-            const totalReceptorCost = environmentalReceptors.reduce((sum, r) => sum + r.energyCost, 0);
+            const FORMULATION_ENERGY_COST = 10;
+            const INTEGRATION_ENERGY_COST = 5;
+            const TUNE_BASE_ENERGY_COST = 8;
+            const RECALIBRATE_ENERGY_COST = 20;
 
-            formulateProtocolButton.disabled = isProcessing || currentEnergy < totalReceptorCost;
-            integrateProtocolButton.disabled = isProcessing || !formulatedProtocol || activeProtocol === formulatedProtocol;
-            tuneActiveProtocolButton.disabled = isProcessing || !activeProtocol || currentEnergy < 10; // Tuning costs energy
+            let totalRawDataNeededForFormulation = 0;
+            if (formulatedProtocol) {
+                totalRawDataNeededForFormulation = formulatedProtocol.rawDataCost;
+            } else { // Estimate for disabling formulate button based on an average scenario
+                 totalRawDataNeededForFormulation = 50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5;
+            }
+            totalRawDataNeededForFormulation = Math.round(totalRawDataNeededForFormulation); // Round it for comparison
+
+            formulateProtocolButton.disabled = isProcessing || currentEnergy < FORMULATION_ENERGY_COST || currentRawData < totalRawDataNeededForFormulation;
+            integrateProtocolButton.disabled = isProcessing || !formulatedProtocol || activeProtocol !== null || currentEnergy < INTEGRATION_ENERGY_COST;
+            tuneActiveProtocolButton.disabled = isProcessing || !activeProtocol || currentEnergy < TUNE_BASE_ENERGY_COST; // Tuning costs energy
             deactivateProtocolButton.disabled = isProcessing || !activeProtocol;
-            recalibrateCoreButton.disabled = isProcessing;
+            recalibrateCoreButton.disabled = isProcessing || currentEnergy < RECALIBRATE_ENERGY_COST;
 
-            // Critical state disables most buttons, except recalibrate
-            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15) {
+            // Critical state disables most buttons, except recalibrate if energy permits
+            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentRawData < totalRawDataNeededForFormulation / 2) {
                 if (!isProcessing) {
                     formulateProtocolButton.disabled = true;
                     integrateProtocolButton.disabled = true;
                     tuneActiveProtocolButton.disabled = true;
                     deactivateProtocolButton.disabled = true;
                 }
-                recalibrateCoreButton.disabled = isProcessing;
+                recalibrateCoreButton.disabled = isProcessing || currentEnergy < RECALIBRATE_ENERGY_COST;
                 if (!isProcessing) {
                     logDataStreamEntry("SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!", 'critical');
                 }
@@ -1131,51 +1184,73 @@
         }
 
         // --- Core Game Logic ---
-        function generateProtocolName(receptorValues) {
-            const prefixes = ['Adaptive', 'Quantum', 'Neural', 'Temporal', 'Resonance', 'Hyperflux'];
-            const suffixes = ['Nexus', 'Matrix', 'Conduit', 'Harmonizer', 'Processor', 'Allocator'];
-            const types = ['Protocol', 'System', 'Link', 'Framework'];
+        function getReceptorArchetype(receptorValues) {
+            const sorted = [...receptorValues].sort((a, b) => b.sensitivity - a.sensitivity);
+            const topReceptor = sorted[0];
 
-            let avg = receptorValues.reduce((a, b) => a + b, 0) / receptorValues.length;
+            if (topReceptor.id === 'flux-modulator') return 'Adaptive Flux';
+            if (topReceptor.id === 'nexus-gain') return 'System Nexus';
+            if (topReceptor.id === 'temporal-bias') return 'Temporal Sync';
+            if (topReceptor.id === 'spectrum-harmonizer') return 'Spectrum Optimization';
+            return 'General Purpose';
+        }
 
-            let name = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ';
-            if (avg > 70) name += 'Advanced ';
-            if (avg < 30) name += 'Basic ';
-            name += suffixes[Math.floor(Math.random() * suffixes.length)] + ' ';
-            name += types[Math.floor(Math.random() * types.length)];
-            return name;
+        function generateProtocolName(archetype) {
+            const prefixes = {
+                'Adaptive Flux': ['Dynamic', 'Reactive', 'Flux-Driven', 'Modular'],
+                'System Nexus': ['Core', 'Integrated', 'Centralized', 'Distributed'],
+                'Temporal Sync': ['Chronal', 'Phase-Locked', 'Synchronous', 'Asynchronous'],
+                'Spectrum Optimization': ['Spectral', 'Harmonic', 'Wavelength', 'Resonant'],
+                'General Purpose': ['Basic', 'Universal', 'Standard', 'Generic']
+            };
+            const suffixes = ['Protocol', 'System', 'Link', 'Matrix', 'Engine', 'Framework'];
+
+            const selectedPrefixes = prefixes[archetype] || prefixes['General Purpose'];
+            return `${selectedPrefixes[Math.floor(Math.random() * selectedPrefixes.length)]} ${archetype} ${suffixes[Math.floor(Math.random() * suffixes.length)]}`;
         }
 
         function generateProtocolDescription(protocol) {
-            let desc = `A dynamically generated protocol (${protocol.id}) focusing on ${protocol.name.toLowerCase().includes('neural') ? 'cognitive processing' : protocol.name.toLowerCase().includes('quantum') ? 'quantum state management' : 'inter-system data routing'}. `;
-            if (protocol.complexity > 70) desc += 'Highly complex, demanding precise calibration. ';
-            else if (protocol.complexity < 30) desc += 'Simple architecture, robust against minor fluctuations. ';
+            let desc = `A dynamically formulated ${protocol.archetype} protocol (${protocol.id}). `;
+            if (protocol.complexity > 70) desc += 'Highly intricate, designed for advanced system states and demanding precise calibration. ';
+            else if (protocol.complexity < 30) desc += 'Straightforward structure, offers baseline adjustments and robust performance. ';
 
-            if (protocol.stabilityRisk > 70) desc += 'Integration poses significant stability risks. ';
-            else if (protocol.stabilityRisk < 30) desc += 'Low inherent stability risk. ';
+            if (protocol.stabilityRisk > 60) desc += 'Deployment carries a significant inherent stability risk, requiring careful monitoring. ';
+            else if (protocol.stabilityRisk < 20) desc += 'Low inherent stability risk, suitable for exploratory integration. ';
 
-            desc += `Impact: Stability ${protocol.impact.stability > 0 ? '+' : ''}${protocol.impact.stability}%, Data Flow ${protocol.impact.dataFlow > 0 ? '+' : ''}${protocol.impact.dataFlow}%.`;
+            desc += `Estimated Impact: Stability ${protocol.impact.stability > 0 ? '+' : ''}${protocol.impact.stability}%, Data Flow ${protocol.impact.dataFlow > 0 ? '+' : ''}${protocol.impact.dataFlow}%. Raw Data Cost: ${protocol.rawDataCost} packets.`;
             return desc;
         }
 
         function formulateNewProtocol() {
-            const receptorValues = environmentalReceptors.map(r => r.currentValue);
-            const avgReceptorValue = receptorValues.reduce((sum, val) => sum + val, 0) / environmentalReceptors.length;
+            const FORMULATION_RAW_DATA_BASE_COST = 50;
+            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 0.5;
 
-            const protocolName = generateProtocolName(receptorValues);
+            const receptorValues = environmentalReceptors.map(r => r.sensitivity);
+            const avgReceptorValue = receptorValues.reduce((sum, val) => sum + val, 0) / environmentalReceptors.length;
+            const receptorVariance = receptorValues.reduce((sum, val) => sum + Math.pow(val - avgReceptorValue, 2), 0) / environmentalReceptors.length;
+
+            const archetype = getReceptorArchetype(environmentalReceptors);
+            const protocolName = generateProtocolName(archetype);
             const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
 
-            // Dynamic complexity and stability risk based on receptor values
-            const complexity = Math.round(avgReceptorValue * 0.8 + Math.random() * 20); // Higher avg = more complex
-            const stabilityRisk = Math.round(Math.abs(50 - avgReceptorValue) * 1.5 + Math.random() * 30); // Deviation from 50 = more risk
+            // Dynamic complexity: Higher avg sensitivity = more complex
+            const complexity = Math.round(avgReceptorValue * 0.7 + Math.random() * 30);
+            
+            // Dynamic stability risk: Higher variance = more risk, also high complexity adds risk
+            const stabilityRisk = Math.round(receptorVariance * 0.8 + complexity * 0.2 + Math.random() * 20);
+
+            // Raw data cost: Base + scaled by complexity
+            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 30);
 
             // Impact of integration, more complex/risky protocols have higher potential impacts
-            const impactStability = Math.round(5 - stabilityRisk / 15 + Math.random() * 10 - 5);
-            const impactDataFlow = Math.round(avgReceptorValue / 10 + complexity / 20 + Math.random() * 10 - 5);
+            const impactStability = Math.round(10 - stabilityRisk / 10 + Math.random() * 5 - 2); // Can be negative
+            const impactDataFlow = Math.round(avgReceptorValue / 10 + complexity / 20 + Math.random() * 8 - 4); // Can be negative
 
             // Generate tuning parameters dynamically based on complexity
-            const numTuningParams = Math.min(3, 1 + Math.floor(complexity / 40));
+            const numTuningParams = Math.min(4, 2 + Math.floor(complexity / 30));
             const tuningParams = [];
+            const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment'];
+
             for (let i = 0; i < numTuningParams; i++) {
                 const paramId = `tun-${protocolId}-${i}`;
                 const baseValue = Math.round(avgReceptorValue * (0.5 + i * 0.1) + Math.random() * 30 - 15);
@@ -1184,14 +1259,12 @@
                 const optimalMax = Math.min(100, baseValue + Math.ceil(optimalRangeWidth / 2));
                 const initialValue = Math.round((optimalMin + optimalMax) / 2); // Start in optimal range
                 
-                const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping'];
                 tuningParams.push({
                     id: paramId,
                     label: paramNames[i % paramNames.length],
                     min: 0,
                     max: 100,
                     value: initialValue, // Current slider value
-                    initialValue: initialValue, // Original generated value
                     optimalRange: { min: optimalMin, max: optimalMax }
                 });
             }
@@ -1199,8 +1272,10 @@
             const newProtocol = {
                 id: protocolId,
                 name: protocolName,
+                archetype: archetype,
                 complexity: complexity,
                 stabilityRisk: stabilityRisk,
+                rawDataCost: rawDataCost,
                 impact: { stability: impactStability, dataFlow: impactDataFlow },
                 tuningParams: tuningParams,
                 lastTuningScore: 0 // To track success of last tune attempt
@@ -1213,31 +1288,45 @@
         formulateProtocolButton.addEventListener('click', () => {
             if (isProcessing) return;
 
-            const totalReceptorCost = environmentalReceptors.reduce((sum, r) => sum + r.energyCost, 0);
-            if (currentEnergy < totalReceptorCost) {
-                logDataStreamEntry(`Insufficient energy for formulation (Cost: ${totalReceptorCost}). Current: ${currentEnergy} units.`, 'critical');
+            const FORMULATION_ENERGY_COST = 10;
+            if (currentEnergy < FORMULATION_ENERGY_COST) {
+                logDataStreamEntry(`Insufficient Energy for formulation (Cost: ${FORMULATION_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
                 return;
             }
+            // Temporarily calculate an estimated raw data cost for the formulate button to check against currentRawData
+            // This estimate is used when `formulatedProtocol` is null (no protocol formulated yet)
+            const estimatedRawDataCost = formulatedProtocol ? formulatedProtocol.rawDataCost : Math.round(50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5);
+
+            if (currentRawData < estimatedRawDataCost) {
+                logDataStreamEntry(`Insufficient Raw Data for formulation (Needed: ${estimatedRawDataCost}). Current: ${currentRawData} packets.`, 'critical');
+                return;
+            }
+
 
             isProcessing = true;
             updateButtonStates();
             environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
-            logDataStreamEntry(`Initiating protocol formulation based on receptor data (Cost: ${totalReceptorCost} units)...`, 'glitch');
+            logDataStreamEntry(`Initiating protocol formulation based on receptor data (Energy Cost: ${FORMULATION_ENERGY_COST} units)...`, 'glitch');
             systemStatusTextSpan.textContent = `Formulating Protocol...`;
-            currentEnergy = Math.max(0, currentEnergy - totalReceptorCost);
+            currentEnergy -= FORMULATION_ENERGY_COST;
             updateEnergyDisplay();
 
             setTimeout(() => {
                 formulatedProtocol = formulateNewProtocol();
+                currentRawData -= formulatedProtocol.rawDataCost; // Consume raw data after formulation
+                updateRawDataDisplay();
+
                 formulatedProtocolNameSpan.textContent = formulatedProtocol.name;
                 formulatedProtocolIDSpan.textContent = formulatedProtocol.id;
+                formulatedProtocolArchetypeSpan.textContent = formulatedProtocol.archetype;
                 formulatedProtocolComplexitySpan.textContent = `${formulatedProtocol.complexity}%`;
                 formulatedProtocolStabilityRiskSpan.textContent = `${formulatedProtocol.stabilityRisk}%`;
+                formulatedProtocolRawDataCostSpan.textContent = `${formulatedProtocol.rawDataCost} packets`;
                 formulatedProtocolDescription.textContent = formulatedProtocol.description;
                 formulatedProtocolDetailsContainer.style.display = 'flex'; // Show details
 
-                logDataStreamEntry(`New Protocol "${formulatedProtocol.name}" formulated. Ready for integration.`, 'optimal');
+                logDataStreamEntry(`New Protocol "${formulatedProtocol.name}" formulated. Raw Data consumed: ${formulatedProtocol.rawDataCost}. Ready for integration.`, 'optimal');
                 systemStatusTextSpan.textContent = `Protocol Formulated.`;
                 
                 isProcessing = false;
@@ -1252,13 +1341,25 @@
                 logDataStreamEntry("ERROR: No protocol formulated for integration.", 'critical');
                 return;
             }
+            if (activeProtocol !== null) {
+                logDataStreamEntry("ERROR: A protocol is already active. Deactivate it first.", 'warning');
+                return;
+            }
+
+            const INTEGRATION_ENERGY_COST = 5;
+            if (currentEnergy < INTEGRATION_ENERGY_COST) {
+                logDataStreamEntry(`Insufficient Energy for integration (Cost: ${INTEGRATION_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                return;
+            }
 
             isProcessing = true;
             updateButtonStates();
             environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
-            logDataStreamEntry(`Integrating protocol "${formulatedProtocol.name}" (${formulatedProtocol.id})...`, 'glitch');
+            logDataStreamEntry(`Integrating protocol "${formulatedProtocol.name}" (${formulatedProtocol.id}) (Energy Cost: ${INTEGRATION_ENERGY_COST} units)...`, 'glitch');
             systemStatusTextSpan.textContent = `Integrating Protocol...`;
+            currentEnergy -= INTEGRATION_ENERGY_COST;
+            updateEnergyDisplay();
 
             setTimeout(() => {
                 activeProtocol = formulatedProtocol;
@@ -1268,7 +1369,7 @@
 
                 // Apply initial impact from integration
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + activeProtocol.impact.stability));
-                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + activeProtocol.impact.dataFlow));
+                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow + activeProtocol.impact.dataFlow));
                 updateAllDisplays();
 
                 logDataStreamEntry(`Protocol "${activeProtocol.name}" integrated. Stability: ${activeProtocol.impact.stability > 0 ? '+' : ''}${activeProtocol.impact.stability}%, Data Flow: ${activeProtocol.impact.dataFlow > 0 ? '+' : ''}${activeProtocol.impact.dataFlow}%.`, 'info');
@@ -1287,13 +1388,12 @@
                 logDataStreamEntry("ERROR: No protocol active to tune. Integrate a protocol first.", 'critical');
                 return;
             }
-            if (currentSystemStability < 15 || currentDataFlow < 15 || currentEnergy < 10) {
-                logDataStreamEntry("SYSTEM WARNING: Core metrics too low for safe tuning. Energy, Stability, or Data Flow near critical. Recalibrate recommended!", 'warning');
-                return;
-            }
-            const tuneCost = 10 + Math.floor(activeProtocol.complexity / 10);
+            
+            const TUNE_BASE_ENERGY_COST = 8;
+            const tuneCost = TUNE_BASE_ENERGY_COST + Math.floor(activeProtocol.complexity / 15);
+
             if (currentEnergy < tuneCost) {
-                logDataStreamEntry(`Insufficient energy for tuning (Cost: ${tuneCost}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for tuning (Cost: ${tuneCost}). Current: ${currentEnergy} units.`, 'critical');
                 return;
             }
 
@@ -1302,15 +1402,16 @@
             environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
             deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
-            currentEnergy = Math.max(0, currentEnergy - tuneCost);
+            currentEnergy -= tuneCost;
             updateEnergyDisplay();
 
-            logDataStreamEntry(`Tuning active protocol "${activeProtocol.name}" (Cost: ${tuneCost} units)...`, 'glitch');
+            logDataStreamEntry(`Tuning active protocol "${activeProtocol.name}" (Energy Cost: ${tuneCost} units)...`, 'glitch');
             systemStatusTextSpan.textContent = `Tuning Active Protocol...`;
 
             setTimeout(() => {
                 let totalDeviationScore = 0;
                 let tunedParameters = 0;
+                let optimalCount = 0;
 
                 activeProtocol.tuningParams.forEach(param => {
                     const sliderElement = document.getElementById(param.id);
@@ -1325,43 +1426,46 @@
                         deviation = optimalMin - sliderValue;
                     } else if (sliderValue > optimalMax) {
                         deviation = sliderValue - optimalMax;
+                    } else {
+                        optimalCount++;
                     }
                     totalDeviationScore += Math.abs(deviation);
                     tunedParameters++;
                 });
 
                 const averageDeviation = tunedParameters > 0 ? totalDeviationScore / tunedParameters : 100;
+                const optimalPercentage = tunedParameters > 0 ? (optimalCount / tunedParameters) * 100 : 0;
 
                 let stabilityChange = 0;
                 let dataFlowChange = 0;
                 let feedbackType = 'suboptimal';
                 let message = `Protocol "${activeProtocol.name}" tuning result: `;
 
-                // Impact of tuning depends on deviation AND protocol characteristics
+                // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
                 const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
                 const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
 
-                if (averageDeviation <= 8) { // Optimal tuning
-                    stabilityChange = Math.round(baseStabilityGain + Math.random() * 5);
-                    dataFlowChange = Math.round(baseDataFlowGain + Math.random() * 5);
+                if (optimalPercentage >= 75) { // Optimal tuning
+                    stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
+                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
                     feedbackType = 'optimal';
-                    message += `OPTIMAL. Average parameter deviation ${averageDeviation.toFixed(1)}%.`;
-                } else if (averageDeviation <= 25) { // Suboptimal tuning
-                    stabilityChange = Math.round(baseStabilityGain / 2 - Math.random() * 5);
-                    dataFlowChange = Math.round(baseDataFlowGain / 2 - Math.random() * 5);
-                    if (stabilityChange < 0) stabilityChange = 0; // Avoid negative impact on suboptimal if risk is low
+                    message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
+                } else if (optimalPercentage >= 30) { // Suboptimal tuning
+                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
+                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
+                    if (stabilityChange < 0) stabilityChange = 0; 
                     if (dataFlowChange < 0) dataFlowChange = 0;
                     feedbackType = 'warning';
-                    message += `SUBOPTIMAL. Average parameter deviation ${averageDeviation.toFixed(1)}%. Requires further adjustment.`;
+                    message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
                 } else { // Critical tuning
                     stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
                     dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
                     feedbackType = 'critical';
-                    message += `CRITICAL MISALIGNMENT. Average parameter deviation ${averageDeviation.toFixed(1)}%. System instability detected!`;
+                    message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
                 }
 
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
-                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow + dataFlowChange));
+                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow + dataFlowChange));
                 updateAllDisplays();
 
                 activeProtocol.lastTuningScore = averageDeviation; // Store for dynamic fluctuations
@@ -1395,20 +1499,21 @@
             setTimeout(() => {
                 // Minor stability/data flow hit on deactivation, or recovery
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 5));
-                currentDataFlow = Math.max(0, Math.min(100, currentDataFlow - 2));
+                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow - 2));
+                currentEnergy = Math.min(MAX_ENERGY, currentEnergy + 10); // Recover some energy
                 updateAllDisplays();
 
-                logDataStreamEntry(`Protocol "${activeProtocol.name}" deactivated. System settling.`, 'info');
+                logDataStreamEntry(`Protocol "${activeProtocol.name}" deactivated. System settling. Energy restored.`, 'info');
                 logDataStreamEntry('No active protocol. Formulate and integrate a new one.', 'normal');
                 
                 activeProtocol = null;
-                formulatedProtocol = null; // Clear formulated as well, usually a fresh start is implied
+                formulatedProtocol = null; // Clear formulated as well, for a fresh start
                 activeProtocolNameSpan.textContent = 'NONE';
                 activeProtocolIDSpan.textContent = 'N/A';
                 formulatedProtocolDetailsContainer.style.display = 'none';
                 deployedProtocolParametersContainer.style.display = 'none'; // Hide tuning params
                 deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>'; // Reset message
-                systemStatusTextSpan.textContent = `System Idle. Tune Receptors & Formulate.`;
+                systemStatusTextSpan.textContent = `System Idle. Adjust Receptors to collect Raw Data.`;
 
                 isProcessing = false;
                 environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = false);
@@ -1419,18 +1524,28 @@
 
         recalibrateCoreButton.addEventListener('click', () => {
             if (isProcessing) return;
+            const RECALIBRATE_ENERGY_COST = 20;
+            if (currentEnergy < RECALIBRATE_ENERGY_COST) {
+                logDataStreamEntry(`Insufficient Energy for core recalibration (Cost: ${RECALIBRATE_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                return;
+            }
+
             isProcessing = true;
             updateButtonStates();
             environmentalReceptorsContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
             deployedProtocolParametersContainer.querySelectorAll('input[type="range"]').forEach(slider => slider.disabled = true);
 
-            logDataStreamEntry('Initiating core system recalibration sequence...', 'critical');
+            currentEnergy -= RECALIBRATE_ENERGY_COST;
+            updateEnergyDisplay();
+
+            logDataStreamEntry('Initiating core system recalibration sequence (Energy Cost: 20 units)...', 'critical');
             systemStatusTextSpan.textContent = `Core Recalibration in Progress`;
 
             setTimeout(() => {
-                currentSystemStability = 70;
-                currentEnergy = 80;
-                currentDataFlow = 40;
+                currentSystemStability = 75; // Slightly better base stability after recalibration
+                currentEnergy = 90; // Higher energy post-recalibration
+                currentDataFlow = 45; // Slightly higher data flow
+                currentRawData = 0; // Raw data is cleared during recalibration
 
                 updateAllDisplays();
                 activeProtocol = null;
@@ -1442,16 +1557,18 @@
                 deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.8;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
                 
                 environmentalReceptors.forEach(r => {
-                    r.currentValue = 50; // Reset receptors to default
+                    r.sensitivity = 50; // Reset receptors to default
                     const slider = document.getElementById(r.id);
                     if (slider) {
                         slider.value = 50;
-                        document.getElementById(`${r.id}-value`).textContent = 50;
+                        document.getElementById(`${r.id}-sensitivity-value`).textContent = 50;
+                        document.getElementById(`${r.id}-drain-value`).textContent = (r.baseEnergyDrain * r.sensitivity / 10).toFixed(2);
+                        document.getElementById(`${r.id}-raw-rate`).textContent = (r.baseRawDataRate * r.sensitivity / 10).toFixed(2);
                     }
                 });
 
-                logDataStreamEntry('Core system recalibration complete. Stability restored to 70%, Energy to 80 units, Data Flow to 40Mbps. All protocols deactivated and receptors reset.', 'optimal');
-                logDataStreamEntry('Awaiting new protocol formulation.', 'normal');
+                logDataStreamEntry('Core system recalibration complete. Stability restored to 75%, Energy to 90 units, Data Flow to 45Mbps. All protocols deactivated and receptors reset.', 'optimal');
+                logDataStreamEntry('Raw Data buffer cleared. Awaiting new protocol formulation.', 'normal');
                 systemStatusTextSpan.textContent = `System Recalibrated.`;
 
                 isProcessing = false;
@@ -1461,65 +1578,92 @@
             }, 4000);
         });
 
-        // --- Dynamic System Fluctuation ---
-        let fluctuationInterval;
-        function startDynamicFluctuations() {
-            if (fluctuationInterval) clearInterval(fluctuationInterval);
+        // --- Dynamic System Update Loop (replacing fluctuations) ---
+        let systemUpdateInterval;
+        function startSystemUpdateLoop() {
+            if (systemUpdateInterval) clearInterval(systemUpdateInterval);
 
-            fluctuationInterval = setInterval(() => {
-                if (isProcessing) return; // Don't fluctuate during user action
+            systemUpdateInterval = setInterval(() => {
+                if (isProcessing) return; // Don't update during user initiated action
 
-                let stabilityChange = 0;
-                let energyChange = -1; // Constant energy drain
-                let dataFlowChange = 0;
+                let energyDelta = -0.5; // Base energy drain per tick
+                let rawDataDelta = 0;
+                let stabilityDelta = (Math.random() - 0.5) * 0.5; // Minor base fluctuations
+                let dataFlowDelta = (Math.random() - 0.5) * 0.3;
 
+                // Receptor passive effects
+                environmentalReceptors.forEach(r => {
+                    const scaledSensitivity = r.sensitivity / 100; // Normalize 0-1
+                    energyDelta -= (r.baseEnergyDrain * scaledSensitivity * 10); // More drain at higher sensitivity
+                    rawDataDelta += (r.baseRawDataRate * scaledSensitivity * 10); // More raw data at higher sensitivity
+                });
+
+                // Active Protocol effects
                 if (activeProtocol) {
                     const stabilityRiskFactor = activeProtocol.stabilityRisk / 100;
                     const complexityFactor = activeProtocol.complexity / 100;
                     const tuningDeviationFactor = activeProtocol.lastTuningScore / 100; // 0 for perfect, 1 for worst
 
-                    // Protocols consume more energy
-                    energyChange -= Math.round(2 + complexityFactor * 3);
+                    // Protocols introduce more energy drain based on complexity
+                    energyDelta -= (2 + complexityFactor * 3);
 
-                    // Stability fluctuates more based on risk and tuning quality
-                    stabilityChange = (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor);
-                    if (tuningDeviationFactor > 0.5) stabilityChange -= Math.random() * 5; // Penalty for bad tuning
+                    // Stability fluctuations based on risk and tuning quality
+                    stabilityDelta += (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor);
+                    if (tuningDeviationFactor > 0.5) stabilityDelta -= Math.random() * 5; // Penalty for bad tuning
 
-                    // Data flow fluctuates based on complexity
-                    dataFlowChange = (Math.random() - 0.5) * 3 * complexityFactor;
+                    // Data flow fluctuations based on complexity
+                    dataFlowDelta += (Math.random() - 0.5) * 3 * complexityFactor;
+
+                    // Small passive stability drain if not perfectly tuned
+                    if (tuningDeviationFactor > 0.1) stabilityDelta -= 0.5;
                 } else {
-                    // Slight recovery if idle, but also slow decay
-                    stabilityChange = (Math.random() - 0.5) * 2;
-                    energyChange = -2; // Slightly higher idle drain
-                    dataFlowChange = (Math.random() - 0.5) * 1;
+                    // Slight energy recovery if idle (less drain than when active protocols/receptors are at max)
+                    energyDelta += 0.5; // Mitigate idle drain slightly
+                    // When idle, stability and data flow might slowly decay if not being actively managed by protocols
+                    stabilityDelta -= 0.1;
+                    dataFlowDelta -= 0.1;
                 }
 
-                currentSystemStability = Math.round(currentSystemStability + stabilityChange);
-                currentEnergy = Math.round(currentEnergy + energyChange);
-                currentDataFlow = Math.round(currentDataFlow + dataFlowChange);
+                currentSystemStability += stabilityDelta;
+                currentEnergy += energyDelta;
+                currentRawData += rawDataDelta;
+                currentDataFlow += dataFlowDelta;
+
+                // Log raw data collection if significant
+                if (rawDataDelta > 1 && currentRawData < MAX_RAW_DATA) {
+                    // Log only if a significant amount is collected and not full
+                    const totalRawDataCollectedRate = environmentalReceptors.reduce((sum, r) => sum + (r.baseRawDataRate * (r.sensitivity / 10)), 0);
+                    if (totalRawDataCollectedRate > 0.5) { // Only log if actively collecting
+                       logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${currentRawData.toFixed(0)}.`, 'rawdata');
+                    }
+                }
 
                 // Check for critical states
                 if (currentEnergy <= 0) {
-                    logDataStreamEntry("CRITICAL: Energy reserves depleted! System shutdown imminent.", 'critical');
-                    // Potentially trigger emergency recalibration or game over
-                    recalibrateCoreButton.click();
+                    logDataStreamEntry("CRITICAL: Energy reserves depleted! System shutdown imminent. Recalibrating...", 'critical');
+                    recalibrateCoreButton.click(); // Force recalibration
+                    return; // Stop current tick processing
                 } else if (currentSystemStability <= 10) {
                     logDataStreamEntry("CRITICAL: Core stability dangerously low! Initiate recalibration!", 'critical');
                 } else if (currentDataFlow <= 10) {
                     logDataStreamEntry("WARNING: Data flow critically low! System performance degraded.", 'warning');
+                } else if (currentRawData >= MAX_RAW_DATA) {
+                    if (currentRawData - rawDataDelta < MAX_RAW_DATA) { // Only log when it just became full
+                        logDataStreamEntry("INFO: Raw Data buffer full. Formulate a protocol to utilize gathered data.", 'rawdata');
+                    }
                 }
 
                 updateAllDisplays();
-            }, 8000); // Fluctuates every 8 seconds
+            }, 5000); // Updates every 5 seconds (was 8s)
         }
 
 
         // Initial setup on load
         renderEnvironmentalReceptors();
         updateAllDisplays();
-        logDataStreamEntry('System online. Environmental receptors active. Tune them to formulate new operational protocols.', 'normal');
+        logDataStreamEntry('System online. Environmental receptors active. Adjust sensitivity to gather Raw Data.', 'normal');
         dataStreamMonitor.classList.remove('active');
-        startDynamicFluctuations();
+        startSystemUpdateLoop();
         
     </script>
 </body>
