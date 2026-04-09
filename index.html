@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus [Generation 12.0]</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 12.5</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -951,7 +951,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 12.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 12.5 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1496,32 +1496,33 @@
                 const optimalPercentage = tunedParameters > 0 ? (optimalCount / tunedParameters) * 100 : 0;
 
                 let stabilityChange = 0;
-                let dataFlowChange = 0;
-                let feedbackType = 'suboptimal';
-                let message = `Protocol "${activeProtocol.name}" tuning result: `;
+    let dataFlowChange = 0;
+    let feedbackType = 'suboptimal';
+    let message = `Protocol "${activeProtocol.name}" tuning result: `;
 
-                // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
-                const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
-                const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
+    // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
+    const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
+    const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
 
-                if (optimalPercentage >= 75) { // Optimal tuning
-                    stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
-                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
-                    feedbackType = 'optimal';
-                    message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
-                } else if (optimalPercentage >= 30) { // Suboptimal tuning
-                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
-                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
-                    if (stabilityChange < 0) stabilityChange = 0; 
-                    if (dataFlowChange < 0) dataFlowChange = 0;
-                    feedbackType = 'warning';
-                    message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
-                } else { // Critical tuning
-                    stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
-                    dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
-                    feedbackType = 'critical';
-                    message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
-                }
+    if (optimalPercentage >= 75) { // Optimal tuning
+        stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
+        dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
+        feedbackType = 'optimal';
+        message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
+    } else if (optimalPercentage >= 30) { // Suboptimal tuning
+        stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
+        dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
+        if (stabilityChange < 0) stabilityChange = 0; 
+        if (dataFlowChange < 0) dataFlowChange = 0;
+        feedbackType = 'warning';
+        message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
+    } else { // Critical tuning
+        stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
+        dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
+        feedbackType = 'critical';
+        message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
+    }
+
 
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
                 currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow + dataFlowChange));
