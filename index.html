@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 12.5</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 15.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -951,7 +951,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 12.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 15.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1025,7 +1025,7 @@
         function updateStabilityDisplay() {
             currentSystemStability = Math.max(0, Math.min(100, currentSystemStability));
             stabilityLevelBar.style.width = `${currentSystemStability}%`;
-            stabilityValueSpan.textContent = `${currentSystemStability}%`;
+            stabilityValueSpan.textContent = `${Math.round(currentSystemStability)}%`;
 
             if (currentSystemStability < 25) {
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
@@ -1045,7 +1045,7 @@
         function updateEnergyDisplay() {
             currentEnergy = Math.max(0, Math.min(MAX_ENERGY, currentEnergy));
             energyLevelBar.style.width = `${currentEnergy}%`;
-            energyValueSpan.textContent = `${currentEnergy}`;
+            energyValueSpan.textContent = `${Math.round(currentEnergy)}`;
             
             if (currentEnergy < 30) {
                 energyLevelBar.style.background = 'var(--energy-color-low)';
@@ -1065,7 +1065,7 @@
         function updateRawDataDisplay() {
             currentRawData = Math.max(0, Math.min(MAX_RAW_DATA, currentRawData));
             rawDataLevelBar.style.width = `${(currentRawData / MAX_RAW_DATA) * 100}%`;
-            rawDataValueSpan.textContent = `${currentRawData}`;
+            rawDataValueSpan.textContent = `${Math.round(currentRawData)}`;
             
             if (currentRawData < MAX_RAW_DATA * 0.2) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
@@ -1085,7 +1085,7 @@
         function updateDataFlowDisplay() {
             currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow));
             dataFlowLevelBar.style.width = `${currentDataFlow}%`;
-            dataFlowValueSpan.textContent = `${currentDataFlow}`;
+            dataFlowValueSpan.textContent = `${Math.round(currentDataFlow)}`;
 
             if (currentDataFlow < 30) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-low)';
@@ -1351,13 +1351,13 @@
 
             const FORMULATION_ENERGY_COST = 10;
             if (currentEnergy < FORMULATION_ENERGY_COST) {
-                logDataStreamEntry(`Insufficient Energy for formulation (Cost: ${FORMULATION_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for formulation (Cost: ${FORMULATION_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
             const estimatedRawDataCost = formulatedProtocol ? formulatedProtocol.rawDataCost : Math.round(50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5);
 
             if (currentRawData < estimatedRawDataCost) {
-                logDataStreamEntry(`Insufficient Raw Data for formulation (Needed: ${estimatedRawDataCost}). Current: ${currentRawData} packets.`, 'critical');
+                logDataStreamEntry(`Insufficient Raw Data for formulation (Needed: ${Math.round(estimatedRawDataCost)}). Current: ${Math.round(currentRawData)} packets.`, 'critical');
                 return;
             }
 
@@ -1407,7 +1407,7 @@
 
             const INTEGRATION_ENERGY_COST = 5;
             if (currentEnergy < INTEGRATION_ENERGY_COST) {
-                logDataStreamEntry(`Insufficient Energy for integration (Cost: ${INTEGRATION_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for integration (Cost: ${INTEGRATION_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
 
@@ -1452,7 +1452,7 @@
             const tuneCost = TUNE_BASE_ENERGY_COST + Math.floor(activeProtocol.complexity / 15);
 
             if (currentEnergy < tuneCost) {
-                logDataStreamEntry(`Insufficient Energy for tuning (Cost: ${tuneCost}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for tuning (Cost: ${tuneCost}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
 
@@ -1496,32 +1496,32 @@
                 const optimalPercentage = tunedParameters > 0 ? (optimalCount / tunedParameters) * 100 : 0;
 
                 let stabilityChange = 0;
-    let dataFlowChange = 0;
-    let feedbackType = 'suboptimal';
-    let message = `Protocol "${activeProtocol.name}" tuning result: `;
+                let dataFlowChange = 0;
+                let feedbackType = 'suboptimal';
+                let message = `Protocol "${activeProtocol.name}" tuning result: `;
 
-    // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
-    const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
-    const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
+                // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
+                const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
+                const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
 
-    if (optimalPercentage >= 75) { // Optimal tuning
-        stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
-        dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
-        feedbackType = 'optimal';
-        message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
-    } else if (optimalPercentage >= 30) { // Suboptimal tuning
-        stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
-        dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
-        if (stabilityChange < 0) stabilityChange = 0; 
-        if (dataFlowChange < 0) dataFlowChange = 0;
-        feedbackType = 'warning';
-        message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
-    } else { // Critical tuning
-        stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
-        dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
-        feedbackType = 'critical';
-        message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
-    }
+                if (optimalPercentage >= 75) { // Optimal tuning
+                    stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
+                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
+                    feedbackType = 'optimal';
+                    message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
+                } else if (optimalPercentage >= 30) { // Suboptimal tuning
+                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
+                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
+                    if (stabilityChange < 0) stabilityChange = 0; 
+                    if (dataFlowChange < 0) dataFlowChange = 0;
+                    feedbackType = 'warning';
+                    message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
+                } else { // Critical tuning
+                    stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
+                    dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
+                    feedbackType = 'critical';
+                    message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
+                }
 
 
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
@@ -1531,7 +1531,7 @@
                 activeProtocol.lastTuningScore = averageDeviation; // Store for dynamic fluctuations
 
                 logDataStreamEntry(message, feedbackType);
-                logDataStreamEntry(`Core Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Data Flow impact: ${dataFlowChange > 0 ? '+' : ''}${dataFlowChange}%. Current Stability: ${currentSystemStability}%, Data Flow: ${currentDataFlow}%.`, stabilityChange < 0 || dataFlowChange < 0 ? 'critical' : (feedbackType === 'warning' ? 'warning' : 'optimal'));
+                logDataStreamEntry(`Core Stability impact: ${stabilityChange > 0 ? '+' : ''}${stabilityChange}%. Data Flow impact: ${dataFlowChange > 0 ? '+' : ''}${dataFlowChange}%. Current Stability: ${Math.round(currentSystemStability)}%, Data Flow: ${Math.round(currentDataFlow)}%.`, stabilityChange < 0 || dataFlowChange < 0 ? 'critical' : (feedbackType === 'warning' ? 'warning' : 'optimal'));
                 systemStatusTextSpan.textContent = `Protocol Tuned.`;
 
                 isProcessing = false;
@@ -1586,7 +1586,7 @@
             if (isProcessing) return;
             const RECALIBRATE_ENERGY_COST = 20;
             if (currentEnergy < RECALIBRATE_ENERGY_COST) {
-                logDataStreamEntry(`Insufficient Energy for core recalibration (Cost: ${RECALIBRATE_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for core recalibration (Cost: ${RECALIBRATE_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
 
@@ -1645,11 +1645,11 @@
             const OPTIMIZE_RECEPTORS_RAW_DATA_COST = 80;
 
             if (currentEnergy < OPTIMIZE_RECEPTORS_ENERGY_COST) {
-                logDataStreamEntry(`Insufficient Energy for Receptor Matrix Optimization (Cost: ${OPTIMIZE_RECEPTORS_ENERGY_COST}). Current: ${currentEnergy} units.`, 'critical');
+                logDataStreamEntry(`Insufficient Energy for Receptor Matrix Optimization (Cost: ${OPTIMIZE_RECEPTORS_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
             if (currentRawData < OPTIMIZE_RECEPTORS_RAW_DATA_COST) {
-                logDataStreamEntry(`Insufficient Raw Data for Receptor Matrix Optimization (Needed: ${OPTIMIZE_RECEPTORS_RAW_DATA_COST}). Current: ${currentRawData} packets.`, 'critical');
+                logDataStreamEntry(`Insufficient Raw Data for Receptor Matrix Optimization (Needed: ${OPTIMIZE_RECEPTORS_RAW_DATA_COST}). Current: ${Math.round(currentRawData)} packets.`, 'critical');
                 return;
             }
 
@@ -1756,7 +1756,7 @@
                     // Log only if a significant amount is collected and not full
                     const totalRawDataCollectedRate = environmentalReceptors.reduce((sum, r) => sum + (r.baseRawDataRate * (r.sensitivity / 10)), 0);
                     if (totalRawDataCollectedRate > 0.5) { // Only log if actively collecting
-                       logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${currentRawData.toFixed(0)}.`, 'rawdata');
+                       logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${Math.round(currentRawData)}.`, 'rawdata');
                     }
                 }
 
