@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 15.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 16.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -951,7 +951,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 15.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 16.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1146,7 +1146,7 @@
 
                 const receptorLabelDiv = document.createElement('div');
                 receptorLabelDiv.classList.add('param-label'); // Re-use styling
-                receptorLabelDiv.innerHTML = `${receptor.label} (Sensitivity): <span id="${receptor.id}-sensitivity-value">${receptor.sensitivity}</span>% <br> <span style="font-size: 0.8em; opacity: 0.7; color: var(--receptor-text);">Energy Drain: <span id="${receptor.id}-drain-value">${(receptor.baseEnergyDrain * receptor.sensitivity / 10).toFixed(2)}</span>/s | Raw Data Rate: <span id="${receptor.id}-raw-rate">${(receptor.baseRawDataRate * receptor.sensitivity / 10).toFixed(2)}</span>/s</span>`;
+                receptorLabelDiv.innerHTML = `${receptor.label}: <span id="${receptor.id}-sensitivity-value">${receptor.sensitivity}</span>% <br> <span style="font-size: 0.8em; opacity: 0.7; color: var(--receptor-text);">Energy Drain: <span id="${receptor.id}-drain-value">${(receptor.baseEnergyDrain * receptor.sensitivity / 10).toFixed(2)}</span>/s | Raw Data Rate: <span id="${receptor.id}-raw-rate">${(receptor.baseRawDataRate * receptor.sensitivity / 10).toFixed(2)}</span>/s</span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
@@ -1217,7 +1217,7 @@
             if (formulatedProtocol) {
                 totalRawDataNeededForFormulation = formulatedProtocol.rawDataCost;
             } else { // Estimate for disabling formulate button based on an average scenario
-                 totalRawDataNeededForFormulation = 50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5;
+                 totalRawDataNeededForFormulation = Math.round(50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5);
             }
             totalRawDataNeededForFormulation = Math.round(totalRawDataNeededForFormulation); // Round it for comparison
 
@@ -1229,7 +1229,7 @@
             optimizeReceptorsButton.disabled = isProcessing || currentEnergy < OPTIMIZE_RECEPTORS_ENERGY_COST || currentRawData < OPTIMIZE_RECEPTORS_RAW_DATA_COST; // NEW
 
             // Critical state disables most buttons, except recalibrate if energy permits
-            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentRawData < totalRawDataNeededForFormulation / 2) {
+            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || (activeProtocol === null && currentRawData < totalRawDataNeededForFormulation / 2)) {
                 if (!isProcessing) {
                     formulateProtocolButton.disabled = true;
                     integrateProtocolButton.disabled = true;
