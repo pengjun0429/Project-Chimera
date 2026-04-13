@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 16.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 17.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
+            /* Core Theme Colors */
             --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
             --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
             --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
@@ -18,19 +19,25 @@
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
+
+            /* Stability Bar Colors */
             --stability-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
             --stability-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
             --stability-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
 
+            /* Data Stream & Protocol Status */
             --data-stream-bg: rgba(10, 20, 30, 0.95); /* Dark blue for data stream */
             --data-stream-text: #00FFFF; /* Cyan for data */
             --protocol-status-bg: rgba(20, 50, 70, 0.8);
             --protocol-status-glow: rgba(0, 200, 255, 0.6);
 
+            /* Resource & Module Selection (Re-purposed for Resource Displays) */
             --module-selection-bg: rgba(30, 15, 45, 0.9); /* Dark purple-ish for module selection */
             --module-selection-border: rgba(150, 0, 255, 0.4); /* Purple accent */
             --module-selection-text: #E0BBE4; /* Light purple */
+            --resource-bg: rgba(0, 0, 0, 0.7); /* Background for resource bars */
 
+            /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFF00 0%, #FFCC00 100%); /* Yellow for energy */
             --energy-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold for warning */
             --energy-color-low: linear-gradient(90deg, #FF0000 0%, #CC0000 100%); /* Red for critical */
@@ -39,22 +46,21 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            --resource-bg: rgba(0, 0, 0, 0.7);
-
-            /* New 2.5 Gen Colors */
+            /* New 2.5 Gen / Gen 17.0 Colors */
             --receptor-bg: rgba(15, 30, 45, 0.9); /* Dark blue-grey for receptors */
             --receptor-border: rgba(0, 191, 255, 0.4); /* Deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
-            --formulate-btn-glow: rgba(255, 20, 147, 0.8); /* Deep Pink */
+            --formulate-btn-glow: rgba(255, 20, 147, 0.8); /* Deep Pink for Formulate button */
 
             /* New 2.5 Gen resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
             --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold */
             --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%); /* Blue-grey */
-            --raw-data-text: #F06292;
+            --raw-data-text: #F06292; /* Text color for raw data */
 
             /* New 2.5 Gen button: Optimize Receptors */
             --optimize-btn-glow: rgba(106, 90, 205, 0.85); /* Slate Blue Glow */
+            --tune-btn-glow: rgba(0, 255, 0, 0.85); /* Green Glow for Tune */
         }
 
         body {
@@ -698,12 +704,12 @@
 
         #tune-active-protocol-button {
             background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 14px 45px rgba(0, 255, 0, 0.85);
+            box-shadow: 0 14px 45px var(--tune-btn-glow);
             color: #050510;
         }
         #tune-active-protocol-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 25px 75px rgba(0, 255, 0, 1), 0 0 50px #00FF00;
+            box-shadow: 0 25px 75px var(--tune-btn-glow), 0 0 50px var(--tune-btn-glow);
             color: white;
         }
 
@@ -951,7 +957,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 16.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 17.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1238,7 +1244,7 @@
                     optimizeReceptorsButton.disabled = true; // Also disable optimize
                 }
                 recalibrateCoreButton.disabled = isProcessing || currentEnergy < RECALIBRATE_ENERGY_COST;
-                if (!isProcessing) {
+                if (!isProcessing && systemStatusTextSpan.textContent !== "SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!") {
                     logDataStreamEntry("SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!", 'critical');
                 }
             }
@@ -1294,8 +1300,8 @@
             const protocolName = generateProtocolName(archetype);
             const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
 
-            // Dynamic complexity: Higher avg sensitivity = more complex
-            const complexity = Math.round(avgReceptorValue * 0.7 + Math.random() * 30);
+            // Dynamic complexity: Higher avg sensitivity = more complex. Higher variance = less "clean" data, but perhaps new complexity types.
+            const complexity = Math.round(avgReceptorValue * 0.7 + receptorVariance * 0.1 + Math.random() * 30);
             
             // Dynamic stability risk: Higher variance = more risk, also high complexity adds risk
             const stabilityRisk = Math.round(receptorVariance * 0.8 + complexity * 0.2 + Math.random() * 20);
@@ -1303,8 +1309,9 @@
             // Raw data cost: Base + scaled by complexity
             const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 30);
 
-            // Impact of integration, more complex/risky protocols have higher potential impacts
-            const impactStability = Math.round(10 - stabilityRisk / 10 + Math.random() * 5 - 2); // Can be negative
+            // Impact of integration, more complex/risky protocols have higher potential impacts (both positive and negative)
+            // Higher complexity and lower stability risk can lead to better potential
+            const impactStability = Math.round(10 - stabilityRisk / 10 + (complexity / 20) + Math.random() * 5 - 2); // Can be negative
             const impactDataFlow = Math.round(avgReceptorValue / 10 + complexity / 20 + Math.random() * 8 - 4); // Can be negative
 
             // Generate tuning parameters dynamically based on complexity
@@ -1354,7 +1361,9 @@
                 logDataStreamEntry(`Insufficient Energy for formulation (Cost: ${FORMULATION_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
-            const estimatedRawDataCost = formulatedProtocol ? formulatedProtocol.rawDataCost : Math.round(50 + environmentalReceptors.reduce((sum, r) => sum + r.sensitivity, 0) / environmentalReceptors.length * 0.5);
+            // Temporarily calculate estimated cost for check
+            const estimatedProtocol = formulateNewProtocol(); 
+            const estimatedRawDataCost = estimatedProtocol.rawDataCost;
 
             if (currentRawData < estimatedRawDataCost) {
                 logDataStreamEntry(`Insufficient Raw Data for formulation (Needed: ${Math.round(estimatedRawDataCost)}). Current: ${Math.round(currentRawData)} packets.`, 'critical');
@@ -1372,7 +1381,7 @@
             updateEnergyDisplay();
 
             setTimeout(() => {
-                formulatedProtocol = formulateNewProtocol();
+                formulatedProtocol = formulateNewProtocol(); // Generate the actual protocol
                 currentRawData -= formulatedProtocol.rawDataCost; // Consume raw data after formulation
                 updateRawDataDisplay();
 
@@ -1492,7 +1501,7 @@
                     tunedParameters++;
                 });
 
-                const averageDeviation = tunedParameters > 0 ? totalDeviationScore / tunedParameters : 100;
+                const averageDeviation = tunedParameters > 0 ? totalDeviationScore / tunedParameters : 100; // If no params, assume worst deviation
                 const optimalPercentage = tunedParameters > 0 ? (optimalCount / tunedParameters) * 100 : 0;
 
                 let stabilityChange = 0;
@@ -1504,25 +1513,24 @@
                 const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
                 const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
 
-                if (optimalPercentage >= 75) { // Optimal tuning
-                    stabilityChange = Math.round(baseStabilityGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5); // Minor bonus for very low deviation
-                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100-averageDeviation)/1000) + Math.random() * 5);
+                if (optimalPercentage >= 75) { // Optimal tuning (75% or more params in optimal range)
+                    stabilityChange = Math.round(baseStabilityGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 5); // Minor bonus for very low average deviation
+                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 5);
                     feedbackType = 'optimal';
                     message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
-                } else if (optimalPercentage >= 30) { // Suboptimal tuning
-                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage/100) - Math.random() * 5);
-                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage/100) - Math.random() * 5);
-                    if (stabilityChange < 0) stabilityChange = 0; 
+                } else if (optimalPercentage >= 30) { // Suboptimal tuning (30-74% params in optimal range)
+                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage / 100) - Math.random() * 5);
+                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage / 100) - Math.random() * 5);
+                    if (stabilityChange < 0) stabilityChange = 0; // Prevent negative impact if tuning is just slightly off
                     if (dataFlowChange < 0) dataFlowChange = 0;
                     feedbackType = 'warning';
                     message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
-                } else { // Critical tuning
+                } else { // Critical tuning (less than 30% params in optimal range)
                     stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
                     dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
                     feedbackType = 'critical';
                     message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
                 }
-
 
                 currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + stabilityChange));
                 currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow + dataFlowChange));
@@ -1558,8 +1566,8 @@
 
             setTimeout(() => {
                 // Minor stability/data flow hit on deactivation, or recovery
-                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 5));
-                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow - 2));
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 5 + Math.random() * 5)); // Some variability
+                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow - 2 + Math.random() * 3));
                 currentEnergy = Math.min(MAX_ENERGY, currentEnergy + 10); // Recover some energy
                 updateAllDisplays();
 
@@ -1669,7 +1677,7 @@
                 let totalSensitivityChange = 0;
                 environmentalReceptors.forEach(r => {
                     const oldSensitivity = r.sensitivity;
-                    const newSensitivity = 65 + Math.floor(Math.random() * 10); // Between 65-75%
+                    const newSensitivity = 65 + Math.floor(Math.random() * 10); // Between 65-75% for optimized
                     r.sensitivity = newSensitivity;
                     totalSensitivityChange += Math.abs(newSensitivity - oldSensitivity);
 
@@ -1714,11 +1722,15 @@
                 let dataFlowDelta = (Math.random() - 0.5) * 0.3;
 
                 // Receptor passive effects
+                let totalReceptorEnergyDrainRate = 0;
+                let totalReceptorRawDataRate = 0;
                 environmentalReceptors.forEach(r => {
                     const scaledSensitivity = r.sensitivity / 100; // Normalize 0-1
-                    energyDelta -= (r.baseEnergyDrain * scaledSensitivity * 10); // More drain at higher sensitivity
-                    rawDataDelta += (r.baseRawDataRate * scaledSensitivity * 10); // More raw data at higher sensitivity
+                    totalReceptorEnergyDrainRate += (r.baseEnergyDrain * scaledSensitivity * 10); // More drain at higher sensitivity
+                    totalReceptorRawDataRate += (r.baseRawDataRate * scaledSensitivity * 10); // More raw data at higher sensitivity
                 });
+                energyDelta -= totalReceptorEnergyDrainRate / 10; // Divide by 10 for a more reasonable per-tick drain
+                rawDataDelta += totalReceptorRawDataRate / 10; // Divide by 10 for a more reasonable per-tick collection
 
                 // Active Protocol effects
                 if (activeProtocol) {
@@ -1727,23 +1739,23 @@
                     const tuningDeviationFactor = activeProtocol.lastTuningScore / 100; // 0 for perfect, 1 for worst
 
                     // Protocols introduce more energy drain based on complexity
-                    energyDelta -= (2 + complexityFactor * 3);
-
+                    energyDelta -= (2 + complexityFactor * 3) / 10; // Divide by 10 for per-tick
+                    
                     // Stability fluctuations based on risk and tuning quality
-                    stabilityDelta += (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor);
-                    if (tuningDeviationFactor > 0.5) stabilityDelta -= Math.random() * 5; // Penalty for bad tuning
+                    stabilityDelta += (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor) / 10;
+                    if (tuningDeviationFactor > 0.5) stabilityDelta -= Math.random() * 5 / 10; // Penalty for bad tuning
 
                     // Data flow fluctuations based on complexity
-                    dataFlowDelta += (Math.random() - 0.5) * 3 * complexityFactor;
+                    dataFlowDelta += (Math.random() - 0.5) * 3 * complexityFactor / 10;
 
                     // Small passive stability drain if not perfectly tuned
-                    if (tuningDeviationFactor > 0.1) stabilityDelta -= 0.5;
+                    if (tuningDeviationFactor > 0.1) stabilityDelta -= 0.5 / 10;
                 } else {
                     // Slight energy recovery if idle (less drain than when active protocols/receptors are at max)
-                    energyDelta += 0.5; // Mitigate idle drain slightly
+                    energyDelta += 0.5 / 10; // Mitigate idle drain slightly
                     // When idle, stability and data flow might slowly decay if not being actively managed by protocols
-                    stabilityDelta -= 0.1;
-                    dataFlowDelta -= 0.1;
+                    stabilityDelta -= 0.1 / 10;
+                    dataFlowDelta -= 0.1 / 10;
                 }
 
                 currentSystemStability += stabilityDelta;
@@ -1752,12 +1764,8 @@
                 currentDataFlow += dataFlowDelta;
 
                 // Log raw data collection if significant
-                if (rawDataDelta > 1 && currentRawData < MAX_RAW_DATA) {
-                    // Log only if a significant amount is collected and not full
-                    const totalRawDataCollectedRate = environmentalReceptors.reduce((sum, r) => sum + (r.baseRawDataRate * (r.sensitivity / 10)), 0);
-                    if (totalRawDataCollectedRate > 0.5) { // Only log if actively collecting
-                       logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${Math.round(currentRawData)}.`, 'rawdata');
-                    }
+                if (rawDataDelta > 0.5 && currentRawData < MAX_RAW_DATA) { // Only log if actively collecting and not full
+                    logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${Math.round(currentRawData)}.`, 'rawdata');
                 }
 
                 // Check for critical states
@@ -1776,7 +1784,7 @@
                 }
 
                 updateAllDisplays();
-            }, 5000); // Updates every 5 seconds
+            }, 500); // Updates every 0.5 seconds for more granular changes and logging
         }
 
 
