@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 19.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 20.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             /* Core Theme Colors */
-            --primary-glow: rgba(135, 206, 250, 0.7); /* Sky blue glow */
-            --secondary-glow: rgba(255, 105, 180, 0.5); /* Hot pink glow */
-            --tertiary-glow: rgba(50, 205, 50, 0.6); /* Lime green glow */
-            --frosted-bg: rgba(255, 255, 255, 0.03); /* More transparent frosted background */
+            --primary-glow: rgba(135, 206, 250, 0.75); /* Sky blue glow */
+            --secondary-glow: rgba(255, 105, 180, 0.55); /* Hot pink glow */
+            --tertiary-glow: rgba(50, 205, 50, 0.65); /* Lime green glow */
+            --frosted-bg: rgba(255, 255, 255, 0.04); /* More transparent frosted background */
             --text-color: #E0E0E0; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.08); /* Slightly more visible border */
-            --console-bg: rgba(0, 0, 0, 0.6); /* Darker console */
+            --border-color: rgba(255, 255, 255, 0.1); /* Slightly more visible border */
+            --console-bg: rgba(0, 0, 0, 0.7); /* Darker console */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
@@ -26,16 +26,16 @@
             --stability-critical: linear-gradient(90deg, #FF6347 0%, #DC143C 100%);
 
             /* Data Stream & Protocol Status */
-            --data-stream-bg: rgba(10, 20, 30, 0.95); /* Dark blue for data stream */
+            --data-stream-bg: rgba(10, 20, 30, 0.96); /* Dark blue for data stream */
             --data-stream-text: #00FFFF; /* Cyan for data */
-            --protocol-status-bg: rgba(20, 50, 70, 0.8);
-            --protocol-status-glow: rgba(0, 200, 255, 0.6);
+            --protocol-status-bg: rgba(20, 50, 70, 0.85);
+            --protocol-status-glow: rgba(0, 200, 255, 0.65);
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
-            --module-selection-bg: rgba(30, 15, 45, 0.9); /* Dark purple-ish for module selection */
-            --module-selection-border: rgba(150, 0, 255, 0.4); /* Purple accent */
+            --module-selection-bg: rgba(30, 15, 45, 0.95); /* Dark purple-ish for module selection */
+            --module-selection-border: rgba(150, 0, 255, 0.5); /* Purple accent */
             --module-selection-text: #E0BBE4; /* Light purple */
-            --resource-bg: rgba(0, 0, 0, 0.7); /* Background for resource bars */
+            --resource-bg: rgba(0, 0, 0, 0.75); /* Background for resource bars */
 
             /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFF00 0%, #FFCC00 100%); /* Yellow for energy */
@@ -46,11 +46,11 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* New 2.5 Gen / Gen 19.0 Colors */
-            --receptor-bg: rgba(15, 30, 45, 0.9); /* Dark blue-grey for receptors */
-            --receptor-border: rgba(0, 191, 255, 0.4); /* Deep sky blue accent */
+            /* New 2.5 Gen / Gen 20.0 Colors */
+            --receptor-bg: rgba(15, 30, 45, 0.95); /* Dark blue-grey for receptors */
+            --receptor-border: rgba(0, 191, 255, 0.5); /* Deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
-            --formulate-btn-glow: rgba(255, 20, 147, 0.8); /* Deep Pink for Formulate button */
+            --formulate-btn-glow: rgba(255, 20, 147, 0.9); /* Deep Pink for Formulate button */
 
             /* New 2.5 Gen resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
@@ -59,15 +59,21 @@
             --raw-data-text: #F06292; /* Text color for raw data */
 
             /* New 2.5 Gen button: Optimize Receptors */
-            --optimize-btn-glow: rgba(106, 90, 205, 0.85); /* Slate Blue Glow */
-            --tune-btn-glow: rgba(0, 255, 0, 0.85); /* Green Glow for Tune */
+            --optimize-btn-glow: rgba(106, 90, 205, 0.9); /* Slate Blue Glow */
+            --tune-btn-glow: rgba(0, 255, 0, 0.9); /* Green Glow for Tune */
+
+            /* NEW for Gen 20.0 - Enhanced UI elements */
+            --event-color: #FFA500; /* Orange for events */
+            --event-text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+            --info-color: #9370DB; /* Medium Purple for info */
+            --info-text-shadow: 0 0 8px rgba(147, 112, 219, 0.7);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #000005; /* Even darker, deeper background base */
+            background: #000008; /* Even darker, deeper background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -83,25 +89,27 @@
         body::before {
             content: '';
             position: absolute;
-            top: -180%;
-            left: -180%;
-            width: 460%;
-            height: 460%;
+            top: -200%;
+            left: -200%;
+            width: 500%;
+            height: 500%;
             background: linear-gradient(
-                75deg,
-                #05030f 0%,
-                #100512 15%,
-                #080415 30%,
-                #12081c 45%,
-                #05030f 60%,
-                #100512 75%,
-                #05030f 100%
+                85deg,
+                #03010a 0%,
+                #0a020d 12%,
+                #050210 25%,
+                #0d0415 38%,
+                #03010a 50%,
+                #0a020d 62%,
+                #050210 75%,
+                #0d0415 88%,
+                #03010a 100%
             );
-            background-size: 800% 800%;
-            animation: fluidBackground1 140s linear infinite alternate, rotateBackground 280s linear infinite; /* Longer animations */
+            background-size: 900% 900%;
+            animation: fluidBackground1 180s linear infinite alternate, rotateBackground 320s linear infinite; /* Longer animations */
             z-index: -3;
-            filter: blur(280px) opacity(0.9); /* Stronger blur, more opaque */
-            transform: rotate(-65deg) scale(2.2);
+            filter: blur(350px) opacity(0.95); /* Stronger blur, more opaque */
+            transform: rotate(-70deg) scale(2.5);
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -109,24 +117,25 @@
         body::after {
             content: '';
             position: absolute;
-            top: -80%;
-            left: -80%;
-            width: 260%;
-            height: 260%;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
             background: linear-gradient(
-                -85deg,
-                rgba(135, 206, 250, 0.2) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.15) 25%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.15) 50%, /* tertiary glow accent */
-                rgba(0, 191, 255, 0.15) 75%, /* deep sky blue from receptor */
-                rgba(255, 105, 180, 0.15) 100%
+                -95deg,
+                rgba(135, 206, 250, 0.25) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.2) 20%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.2) 40%, /* tertiary glow accent */
+                rgba(0, 191, 255, 0.2) 60%, /* deep sky blue from receptor */
+                rgba(255, 105, 180, 0.2) 80%,
+                rgba(135, 206, 250, 0.25) 100%
             );
-            background-size: 500% 500%;
-            animation: fluidBackground2 75s ease-in-out infinite, rotateBackgroundReversed 180s linear infinite; /* Longer animations */
+            background-size: 600% 600%;
+            animation: fluidBackground2 90s ease-in-out infinite, rotateBackgroundReversed 200s linear infinite; /* Longer animations */
             z-index: -2;
-            filter: blur(180px) opacity(0.7); /* Stronger blur, more opaque */
+            filter: blur(220px) opacity(0.8); /* Stronger blur, more opaque */
             mix-blend-mode: soft-light; /* Softer accenting */
-            transform: rotate(50deg) scale(1.5);
+            transform: rotate(55deg) scale(1.7);
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -137,8 +146,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.12; /* Slightly more noticeable noise */
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2ZmdHdhcmUBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
+            opacity: 0.15; /* Slightly more noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
@@ -156,50 +165,50 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-65deg) scale(2.2); }
-            to { transform: rotate(295deg) scale(2.2); }
+            from { transform: rotate(-70deg) scale(2.5); }
+            to { transform: rotate(290deg) scale(2.5); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(50deg) scale(1.5); }
-            to { transform: rotate(-310deg) scale(1.5); }
+            from { transform: rotate(55deg) scale(1.7); }
+            to { transform: rotate(-305deg) scale(1.7); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1000px; /* Even wider for more content */
-            padding: 90px; /* More padding */
+            max-width: 1100px; /* Even wider for more content */
+            padding: 100px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 65px; /* Even more rounded */
-            backdrop-filter: blur(150px) saturate(500%) brightness(150%); /* Stronger blur, saturation, and brightness */
-            -webkit-backdrop-filter: blur(150px) saturate(500%) brightness(150%);
+            border-radius: 75px; /* Even more rounded */
+            backdrop-filter: blur(180px) saturate(600%) brightness(180%); /* Stronger blur, saturation, and brightness */
+            -webkit-backdrop-filter: blur(180px) saturate(600%) brightness(180%);
             box-shadow:
-                0 60px 220px rgba(0, 0, 0, 0.98), /* Deeper shadow */
-                0 0 280px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 70px rgba(255, 255, 255, 0.25), /* Stronger inner glow for depth */
-                inset 0 0 120px var(--primary-glow); /* Even more inner glow */
+                0 70px 250px rgba(0, 0, 0, 0.99), /* Deeper shadow */
+                0 0 320px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 80px rgba(255, 255, 255, 0.3), /* Stronger inner glow for depth */
+                inset 0 0 140px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 70px; /* Increased gap between sections */
-            animation: fadeInScale 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 1.2s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 80px; /* Increased gap between sections */
+            animation: fadeInScale 4.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 1.3s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -9px; /* More overflow */
-            border-radius: 67px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF, #8A2BE2, #FF1493); /* More vibrant border glow colors */
-            background-size: 700% 700%; /* Larger background for smoother animation */
-            animation: borderGlow 18s linear infinite alternate; /* Slower animation */
-            filter: blur(28px); /* Stronger blur */
+            inset: -12px; /* More overflow */
+            border-radius: 77px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #00FFFF, #8A2BE2, #FF1493, #00FF00); /* More vibrant border glow colors */
+            background-size: 800% 800%; /* Larger background for smoother animation */
+            animation: borderGlow 22s linear infinite alternate; /* Slower animation */
+            filter: blur(35px); /* Stronger blur */
             z-index: -1;
-            opacity: 0.95; /* Stronger glow */
+            opacity: 0.98; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
         }
 
@@ -209,48 +218,48 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.6) translateY(150px) perspective(1500px) rotateX(30deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(1500px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.5) translateY(200px) perspective(2000px) rotateX(40deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(2000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.2em; /* Even larger heading */
+            font-size: 4.8em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 50px var(--primary-glow), 0 0 80px rgba(135, 206, 250, 0.9), 0 0 100px rgba(135, 206, 250, 0.6);
-            margin-bottom: 45px;
-            letter-spacing: 7px;
+            text-shadow: 0 0 60px var(--primary-glow), 0 0 90px rgba(135, 206, 250, 0.95), 0 0 120px rgba(135, 206, 250, 0.7);
+            margin-bottom: 50px;
+            letter-spacing: 8px;
             line-height: 1.2;
             position: relative;
-            transform: translateZ(35px); /* Lift heading slightly in 3D space */
+            transform: translateZ(40px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -30px;
+            bottom: -35px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100%;
-            height: 6px; /* Thicker underline */
-            background: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
-            box-shadow: 0 0 35px var(--primary-glow);
+            width: 110%; /* Wider underline */
+            height: 7px; /* Thicker underline */
+            background: linear-gradient(90deg, transparent 3%, var(--accent-color) 50%, transparent 97%);
+            box-shadow: 0 0 40px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.98;
-            font-size: 1.2em;
-            transform: translateZ(18px);
+            opacity: 0.99;
+            font-size: 1.25em;
+            transform: translateZ(20px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 50px; /* Increased gap */
-            margin: 40px 0;
+            gap: 60px; /* Increased gap */
+            margin: 45px 0;
             position: relative;
         }
 
@@ -258,15 +267,15 @@
         .environmental-receptor-module, .formulated-protocol-details, .deployed-protocol-parameters {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
             text-align: left;
-            padding: 30px;
+            padding: 35px;
             background: var(--receptor-bg);
-            border-radius: 20px;
+            border-radius: 25px;
             border: 1px solid var(--receptor-border);
-            box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.4), 0 0 20px rgba(0, 191, 255, 0.3), inset 0 0 40px rgba(0, 191, 255, 0.1); /* More inner shadow */
+            box-shadow: inset 0 0 25px rgba(0, 191, 255, 0.5), 0 0 25px rgba(0, 191, 255, 0.4), inset 0 0 50px rgba(0, 191, 255, 0.15); /* More inner shadow */
             position: relative;
-            transform: translateZ(15px);
+            transform: translateZ(18px);
             overflow: hidden;
         }
         .environmental-receptor-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after {
@@ -276,53 +285,53 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(0, 191, 255, 0.08) 0%, transparent 60%);
+            background: radial-gradient(circle at top left, rgba(0, 191, 255, 0.1) 0%, transparent 65%);
             mix-blend-mode: overlay;
             pointer-events: none;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
 
         .environmental-receptor-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before {
             content: attr(data-label);
             position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 0.95em;
+            top: -22px;
+            left: 35px;
+            font-size: 1em;
             color: var(--receptor-text);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 6px 16px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 7px 18px;
+            border-radius: 12px;
             font-weight: 700;
-            letter-spacing: 1.2px;
-            transform: translateY(-50%) translateZ(8px);
-            opacity: 0.98;
+            letter-spacing: 1.5px;
+            transform: translateY(-50%) translateZ(10px);
+            opacity: 0.99;
             border: 1px solid var(--receptor-text);
-            box-shadow: 0 0 15px var(--receptor-text); /* Stronger glow */
+            box-shadow: 0 0 18px var(--receptor-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .receptor-group, .param-group {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.15em;
+            font-size: 1.2em;
             color: var(--data-stream-text);
-            letter-spacing: 0.9px;
+            letter-spacing: 1px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 13px rgba(0, 255, 255, 0.7);
-            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            margin-bottom: 12px;
         }
         .param-label > span { /* For sub-info like Energy Drain / Raw Data Rate */
-            font-size: 0.85em;
-            opacity: 0.7;
+            font-size: 0.88em;
+            opacity: 0.75;
             color: var(--receptor-text);
-            margin-top: 5px;
+            margin-top: 6px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
 
@@ -331,17 +340,17 @@
         .resource-display-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr; /* 3 columns for energy, data flow, raw data */
-            gap: 35px;
-            margin-bottom: 35px;
-            transform: translateZ(20px);
+            gap: 40px;
+            margin-bottom: 40px;
+            transform: translateZ(25px);
         }
 
         .energy-reserve-display, .data-flow-display, .raw-data-reserve-display {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            border-radius: 20px;
-            padding: 25px 30px;
-            box-shadow: inset 0 0 20px rgba(150, 0, 255, 0.5), 0 0 20px rgba(150, 0, 255, 0.4), inset 0 0 40px rgba(150, 0, 255, 0.1); /* More inner shadow */
+            border-radius: 25px;
+            padding: 28px 32px;
+            box-shadow: inset 0 0 25px rgba(150, 0, 255, 0.6), 0 0 25px rgba(150, 0, 255, 0.5), inset 0 0 50px rgba(150, 0, 255, 0.15); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
@@ -353,153 +362,153 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.08) 0%, transparent 75%);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p, .raw-data-reserve-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.15em;
+            font-size: 1.2em;
             color: var(--module-selection-text);
-            text-shadow: 0 0 12px rgba(150, 0, 255, 0.7);
-            margin-bottom: 15px;
+            text-shadow: 0 0 14px rgba(150, 0, 255, 0.8);
+            margin-bottom: 18px;
         }
 
         /* Specific resource display labels and colors */
         .energy-reserve-display::before {
             content: attr(data-label);
             color: var(--energy-color-high);
-            border: 1px solid rgba(255, 255, 0, 0.9);
-            box-shadow: 0 0 15px rgba(255, 255, 0, 0.9); /* Stronger glow */
+            border: 1px solid rgba(255, 255, 0, 0.95);
+            box-shadow: 0 0 18px rgba(255, 255, 0, 0.95); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -22px; left: 35px; font-size: 0.95em; background: rgba(0, 0, 0, 0.95); padding: 7px 18px; border-radius: 12px; font-weight: 700; letter-spacing: 1.5px; transform: translateY(-50%) translateZ(10px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
             color: var(--data-flow-color-high);
-            border: 1px solid rgba(0, 255, 0, 0.9);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.9); /* Stronger glow */
+            border: 1px solid rgba(0, 255, 0, 0.95);
+            box-shadow: 0 0 18px rgba(0, 255, 0, 0.95); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -22px; left: 35px; font-size: 0.95em; background: rgba(0, 0, 0, 0.95); padding: 7px 18px; border-radius: 12px; font-weight: 700; letter-spacing: 1.5px; transform: translateY(-50%) translateZ(10px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .raw-data-reserve-display::before {
             content: attr(data-label);
             color: var(--raw-data-text);
             border: 1px solid var(--raw-data-text);
-            box-shadow: 0 0 15px var(--raw-data-text); /* Stronger glow */
+            box-shadow: 0 0 18px var(--raw-data-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -20px; left: 30px; font-size: 0.9em; background: rgba(0, 0, 0, 0.9); padding: 6px 16px; border-radius: 10px; font-weight: 700; letter-spacing: 1.2px; transform: translateY(-50%) translateZ(8px); opacity: 0.98; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -22px; left: 35px; font-size: 0.95em; background: rgba(0, 0, 0, 0.95); padding: 7px 18px; border-radius: 12px; font-weight: 700; letter-spacing: 1.5px; transform: translateY(-50%) translateZ(10px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 22px;
+            height: 25px;
             background: var(--resource-bg);
-            border-radius: 11px;
+            border-radius: 13px;
             overflow: hidden;
-            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
-            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(255,255,255,0.08);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
-            background-size: 200% 100%;
-            animation: resourceFlow 10s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(255,255,255,0.12) 100%);
+            background-size: 250% 100%;
+            animation: resourceFlow 12s linear infinite;
             mix-blend-mode: overlay;
-            opacity: 0.5;
+            opacity: 0.6;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% { background-position: 250% 0; }
+            100% { background-position: -250% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 11px;
-            transition: width 1.3s cubic-bezier(0.25, 1, 0.5, 1), background 1.1s ease-out, box-shadow 1.1s ease-out;
-            box-shadow: 0 0 14px rgba(255, 255, 255, 0.5); /* Default */
+            border-radius: 13px;
+            transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1), background 1.2s ease-out, box-shadow 1.2s ease-out;
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.6); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 14px rgba(255, 255, 0, 0.9); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 14px rgba(0, 255, 0, 0.9); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 14px var(--raw-data-text); }
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 16px rgba(255, 255, 0, 0.95); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 16px rgba(0, 255, 0, 0.95); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 16px var(--raw-data-text); }
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 24px; /* Slightly taller */
-            background: rgba(255, 255, 255, 0.15); /* More subtle background */
-            border-radius: 12px;
+            height: 28px; /* Slightly taller */
+            background: rgba(255, 255, 255, 0.18); /* More subtle background */
+            border-radius: 14px;
             outline: none;
-            transition: all 0.35s ease;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0,191,255,0.2); /* Inset for depth, subtle outer glow */
-            transform: translateZ(4px);
-            border: 1px solid rgba(255,255,255,0.08); /* More subtle border */
+            transition: all 0.4s ease;
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0,191,255,0.3); /* Inset for depth, subtle outer glow */
+            transform: translateZ(5px);
+            border: 1px solid rgba(255,255,255,0.1); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 38px; /* Larger thumb */
-            height: 38px;
+            width: 42px; /* Larger thumb */
+            height: 42px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
-            border: 6px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 25px var(--primary-glow);
+            transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+            border: 7px solid rgba(255, 255, 255, 0.7);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
-            border: 6px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 25px var(--primary-glow);
+            transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+            border: 7px solid rgba(255, 255, 255, 0.7);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 35px var(--primary-glow), 0 0 15px var(--primary-glow) inset;
-            transform: scale(1.25);
+            box-shadow: 0 0 40px var(--primary-glow), 0 0 18px var(--primary-glow) inset;
+            transform: scale(1.3);
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 35px var(--primary-glow), 0 0 15px var(--primary-glow) inset;
-            transform: scale(1.25);
+            box-shadow: 0 0 40px var(--primary-glow), 0 0 18px var(--primary-glow) inset;
+            transform: scale(1.3);
         }
 
         /* Active Protocol Status Display */
         .system-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1.25em;
-            padding: 25px;
+            font-size: 1.3em;
+            padding: 28px;
             border: 1px solid var(--border-color);
-            border-radius: 20px;
+            border-radius: 25px;
             background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 22px rgba(0, 255, 255, 0.3), inset 0 0 45px rgba(0, 255, 255, 0.15); /* More inner shadow */
+            box-shadow: inset 0 0 25px rgba(0, 255, 255, 0.35), inset 0 0 50px rgba(0, 255, 255, 0.2); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 0.45s ease;
-            line-height: 1.65;
-            letter-spacing: 1px;
+            transition: all 0.5s ease;
+            line-height: 1.7;
+            letter-spacing: 1.2px;
             color: var(--data-stream-text);
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            text-shadow: 0 0 18px rgba(0, 255, 255, 0.9);
             font-weight: 400;
-            transform: translateZ(18px);
+            transform: translateZ(20px);
             overflow: hidden;
         }
         .system-status-display::after {
@@ -509,7 +518,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(0,255,255,0.06), transparent);
+            background: linear-gradient(45deg, rgba(0,255,255,0.08), transparent);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
@@ -517,19 +526,19 @@
         .system-status-display::before {
             content: 'SYSTEM STATUS';
             position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 0.9em;
+            top: -22px;
+            left: 35px;
+            font-size: 0.95em;
             color: var(--data-stream-text);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 6px 16px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 7px 18px;
+            border-radius: 12px;
             font-weight: 700;
-            letter-spacing: 1.2px;
-            transform: translateY(-50%) translateZ(8px);
-            opacity: 0.98;
+            letter-spacing: 1.5px;
+            transform: translateY(-50%) translateZ(10px);
+            opacity: 0.99;
             border: 1px solid var(--data-stream-text);
-            box-shadow: 0 0 15px var(--data-stream-text); /* Stronger glow */
+            box-shadow: 0 0 18px var(--data-stream-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -537,24 +546,24 @@
         /* Data Stream Monitor */
         .data-stream-monitor {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.1em;
-            min-height: 220px;
+            font-size: 1.15em;
+            min-height: 250px;
             display: block;
-            padding: 30px;
+            padding: 35px;
             border: 1px solid var(--border-color);
-            border-radius: 20px;
+            border-radius: 25px;
             background: var(--data-stream-bg);
-            box-shadow: inset 0 0 35px rgba(0, 255, 255, 0.3), inset 0 0 60px rgba(0, 255, 255, 0.15); /* More inner shadow */
+            box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.35), inset 0 0 70px rgba(0, 255, 255, 0.2); /* More inner shadow */
             text-align: left;
             overflow-y: auto;
-            max-height: 400px;
+            max-height: 450px;
             position: relative;
-            transition: all 0.45s ease;
-            line-height: 1.7;
-            letter-spacing: 0.8px;
+            transition: all 0.5s ease;
+            line-height: 1.75;
+            letter-spacing: 1px;
             font-weight: 300;
             color: var(--data-stream-text);
-            transform: translateZ(22px);
+            transform: translateZ(28px);
         }
 
         .data-stream-monitor::before { /* Scanline effect */
@@ -568,67 +577,67 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.18) 1px,
-                rgba(0, 255, 255, 0.18) 4px
+                rgba(0, 255, 255, 0.22) 1px,
+                rgba(0, 255, 255, 0.22) 5px
             );
             pointer-events: none;
             mix-blend-mode: overlay;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .data-stream-monitor.active {
-            box-shadow: inset 0 0 45px var(--secondary-glow), 0 0 30px var(--secondary-glow), inset 0 0 80px rgba(255, 105, 180, 0.15); /* More active glow */
-            border-color: rgba(255, 105, 180, 0.6);
+            box-shadow: inset 0 0 50px var(--secondary-glow), 0 0 35px var(--secondary-glow), inset 0 0 90px rgba(255, 105, 180, 0.2); /* More active glow */
+            border-color: rgba(255, 105, 180, 0.7);
         }
 
         .log-entry {
-            margin-bottom: 10px;
-            animation: fadeInLog 0.8s ease-out;
+            margin-bottom: 12px;
+            animation: fadeInLog 0.9s ease-out;
         }
 
         @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(25px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .processing-glitch {
             color: var(--glitch-color);
             text-shadow:
-                1px 1px 5px var(--glitch-color),
-                -1px -1px 5px var(--glitch-color);
-            animation: glitchEffect 0.3s infinite alternate;
+                1px 1px 7px var(--glitch-color),
+                -1px -1px 7px var(--glitch-color);
+            animation: glitchEffect 0.35s infinite alternate;
         }
 
         @keyframes glitchEffect {
-            0% { transform: translateX(0); opacity: 1; text-shadow: 1px 0 var(--glitch-color), -1px 0 var(--glitch-color); }
-            25% { transform: translateX(5px); opacity: 0.6; text-shadow: -5px 0 var(--glitch-color), 5px 0 var(--glitch-color); }
-            50% { transform: translateX(-5px); opacity: 0.8; text-shadow: 6px 0 var(--glitch-color), -6px 0 var(--glitch-color); }
-            75% { transform: translateX(3px); opacity: 0.7; text-shadow: -4px 0 var(--glitch-color), 4px 0 var(--glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -3px 0 var(--glitch-color), 3px 0 var(--glitch-color); }
+            0% { transform: translateX(0); opacity: 1; text-shadow: 2px 0 var(--glitch-color), -2px 0 var(--glitch-color); }
+            25% { transform: translateX(6px); opacity: 0.5; text-shadow: -6px 0 var(--glitch-color), 6px 0 var(--glitch-color); }
+            50% { transform: translateX(-6px); opacity: 0.7; text-shadow: 7px 0 var(--glitch-color), -7px 0 var(--glitch-color); }
+            75% { transform: translateX(4px); opacity: 0.6; text-shadow: -5px 0 var(--glitch-color), 5px 0 var(--glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -4px 0 var(--glitch-color), 4px 0 var(--glitch-color); }
         }
 
         .button-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 35px;
             justify-content: center;
-            margin-top: 50px;
-            transform: translateZ(22px);
+            margin-top: 55px;
+            transform: translateZ(30px);
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
             color: #050510;
             border: none;
-            padding: 22px 50px;
-            font-size: 1.3em;
+            padding: 24px 55px;
+            font-size: 1.4em;
             font-weight: 700;
-            border-radius: 55px;
+            border-radius: 60px;
             cursor: pointer;
             outline: none;
-            transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 14px 45px rgba(135, 206, 250, 0.85);
-            letter-spacing: 2px;
+            transition: all 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 15px 50px rgba(135, 206, 250, 0.9);
+            letter-spacing: 2.5px;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -643,35 +652,35 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.7s ease, height 0.7s ease;
+            transition: width 0.75s ease, height 0.75s ease;
             z-index: -1;
             opacity: 0;
         }
 
         button:hover::before {
-            width: 350%;
-            height: 350%;
+            width: 400%;
+            height: 400%;
             opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-15px) scale(1.1);
-            box-shadow: 0 25px 75px rgba(135, 206, 250, 1), 0 0 50px var(--accent-color);
+            transform: translateY(-18px) scale(1.12);
+            box-shadow: 0 28px 85px rgba(135, 206, 250, 1), 0 0 55px var(--accent-color);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.4);
+            filter: brightness(1.45);
         }
 
         button:active {
-            transform: translateY(-8px) scale(0.96);
-            box-shadow: 0 12px 45px rgba(135, 206, 250, 0.8);
+            transform: translateY(-10px) scale(0.95);
+            box-shadow: 0 14px 50px rgba(135, 206, 250, 0.85);
         }
 
         button:disabled {
-            opacity: 0.3;
+            opacity: 0.35;
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
@@ -682,100 +691,100 @@
 
         #formulate-protocol-button {
             background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%); /* Deep Pink */
-            box-shadow: 0 14px 45px var(--formulate-btn-glow);
+            box-shadow: 0 15px 50px var(--formulate-btn-glow);
             color: white;
         }
         #formulate-protocol-button:hover {
             background: linear-gradient(90deg, #C71585 0%, #FF1493 100%);
-            box-shadow: 0 25px 75px var(--formulate-btn-glow), 0 0 50px var(--formulate-btn-glow);
+            box-shadow: 0 28px 85px var(--formulate-btn-glow), 0 0 55px var(--formulate-btn-glow);
             color: white;
         }
 
         #integrate-protocol-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
-            box-shadow: 0 14px 45px rgba(0, 255, 255, 0.85);
+            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.9);
             color: #050510;
         }
         #integrate-protocol-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 25px 75px rgba(0, 255, 255, 1), 0 0 50px #00FFFF;
+            box-shadow: 0 28px 85px rgba(0, 255, 255, 1.05), 0 0 55px #00FFFF;
             color: white;
         }
 
         #tune-active-protocol-button {
             background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 14px 45px var(--tune-btn-glow);
+            box-shadow: 0 15px 50px var(--tune-btn-glow);
             color: #050510;
         }
         #tune-active-protocol-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 25px 75px var(--tune-btn-glow), 0 0 50px var(--tune-btn-glow);
+            box-shadow: 0 28px 85px var(--tune-btn-glow), 0 0 55px var(--tune-btn-glow);
             color: white;
         }
 
         #deactivate-protocol-button {
             background: linear-gradient(90deg, #800080 0%, #9400D3 100%); /* Purple */
-            box-shadow: 0 14px 45px rgba(128, 0, 128, 0.85);
+            box-shadow: 0 15px 50px rgba(128, 0, 128, 0.9);
             color: white;
         }
         #deactivate-protocol-button:hover {
             background: linear-gradient(90deg, #9400D3 0%, #800080 100%);
-            box-shadow: 0 25px 75px rgba(128, 0, 128, 1), 0 0 50px #800080;
+            box-shadow: 0 28px 85px rgba(128, 0, 128, 1.05), 0 0 55px #800080;
             color: white;
         }
         
         #recalibrate-core-button {
             background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
-            box-shadow: 0 14px 45px rgba(255, 99, 71, 0.85);
+            box-shadow: 0 15px 50px rgba(255, 99, 71, 0.9);
             color: white;
         }
 
         #recalibrate-core-button:hover {
             background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
-            box-shadow: 0 25px 75px rgba(255, 99, 71, 1), 0 0 50px #FF6347;
+            box-shadow: 0 28px 85px rgba(255, 99, 71, 1.05), 0 0 55px #FF6347;
             color: white;
         }
 
         /* NEW BUTTON STYLE */
         #optimize-receptors-button {
             background: linear-gradient(90deg, #6A5ACD 0%, #BA55D3 100%); /* Slate Blue to Orchid */
-            box-shadow: 0 14px 45px var(--optimize-btn-glow);
+            box-shadow: 0 15px 50px var(--optimize-btn-glow);
             color: white;
         }
         #optimize-receptors-button:hover {
             background: linear-gradient(90deg, #BA55D3 0%, #6A5ACD 100%);
-            box-shadow: 0 25px 75px var(--optimize-btn-glow), 0 0 50px var(--optimize-btn-glow);
+            box-shadow: 0 28px 85px var(--optimize-btn-glow), 0 0 55px var(--optimize-btn-glow);
             color: white;
-            filter: brightness(1.4);
+            filter: brightness(1.45);
         }
 
         .stability-level-container {
             width: 100%;
-            height: 35px;
-            background: rgba(0, 0, 0, 0.75);
-            border-radius: 18px;
-            margin-top: 50px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            margin-top: 55px;
             overflow: hidden;
-            box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.95);
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.98);
             position: relative;
             border: 1px solid var(--border-color);
-            transform: translateZ(18px);
+            transform: translateZ(20px);
         }
 
         .stability-level-bar {
             height: 100%;
             width: 70%;
             background: var(--stability-good);
-            border-radius: 18px;
-            transition: width 1.7s cubic-bezier(0.2, 0.8, 0.2, 1), background 1.5s ease-out, box-shadow 1.5s ease-out;
-            box-shadow: 0 0 30px rgba(102, 255, 102, 0.98);
+            border-radius: 20px;
+            transition: width 1.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 1.6s ease-out, box-shadow 1.6s ease-out;
+            box-shadow: 0 0 35px rgba(102, 255, 102, 0.99);
             position: relative;
             animation: barGlow 5s infinite alternate;
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 28px rgba(102, 255, 102, 0.9); }
-            100% { box-shadow: 0 0 45px rgba(102, 255, 102, 1), 0 0 15px rgba(255,255,255,0.6) inset; }
+            0% { box-shadow: 0 0 32px rgba(102, 255, 102, 0.95); }
+            100% { box-shadow: 0 0 50px rgba(102, 255, 102, 1), 0 0 18px rgba(255,255,255,0.7) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -787,38 +796,38 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.7) 0%,
-                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0.8) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 18px;
+            border-radius: 20px;
         }
 
         .status-text {
-            font-size: 1.3em;
-            margin-top: 25px;
+            font-size: 1.4em;
+            margin-top: 28px;
             opacity: 0.99;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
             color: var(--accent-color);
-            text-shadow: 0 0 15px var(--primary-glow);
+            text-shadow: 0 0 18px var(--primary-glow);
             font-weight: 700;
-            transform: translateZ(18px);
+            transform: translateZ(20px);
         }
 
         footer {
-            margin-top: 90px;
-            font-size: 1em;
-            color: rgba(255, 255, 255, 0.8);
+            margin-top: 100px;
+            font-size: 1.05em;
+            color: rgba(255, 255, 255, 0.85);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1.5px;
-            padding-top: 50px;
+            letter-spacing: 1.8px;
+            padding-top: 55px;
             border-top: 1px dashed var(--border-color);
-            text-shadow: 0 0 12px var(--secondary-glow);
+            text-shadow: 0 0 14px var(--secondary-glow);
             position: relative;
             line-height: 1.8;
-            transform: translateZ(10px);
+            transform: translateZ(12px);
         }
         
         footer::before {
@@ -827,11 +836,11 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
+            width: 95%;
             height: 1px;
-            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 80%);
-            opacity: 0.8;
-            filter: blur(20px);
+            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 85%);
+            opacity: 0.85;
+            filter: blur(25px);
         }
 
         @media (max-width: 900px) {
@@ -946,7 +955,7 @@
             <button id="formulate-protocol-button">Formulate Protocol</button>
             <button id="integrate-protocol-button" disabled>Integrate Protocol</button>
             <button id="tune-active-protocol-button" disabled>Tune Active Protocol</button>
-            <button id="optimize-receptors-button">Optimize Receptor Matrix</button> <!-- NEW BUTTON -->
+            <button id="optimize-receptors-button">Optimize Receptor Matrix</button>
             <button id="deactivate-protocol-button" disabled>Deactivate Protocol</button>
             <button id="recalibrate-core-button">Recalibrate Core</button>
         </div>
@@ -957,7 +966,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 19.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 20.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1009,10 +1018,10 @@
 
         // Environmental Receptors now have sensitivity, passive drain, and data rate
         const environmentalReceptors = [
-            { id: 'flux-modulator', label: 'Flux Modulator', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.05, baseRawDataRate: 0.1 },
-            { id: 'nexus-gain', label: 'Nexus Gain', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.08, baseRawDataRate: 0.15 },
-            { id: 'temporal-bias', label: 'Temporal Bias', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.04, baseRawDataRate: 0.08 },
-            { id: 'spectrum-harmonizer', label: 'Spectrum Harmonizer', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.07, baseRawDataRate: 0.12 }
+            { id: 'flux-modulator', label: 'Flux Modulator', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.06, baseRawDataRate: 0.12 },
+            { id: 'nexus-gain', label: 'Nexus Gain', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.09, baseRawDataRate: 0.18 },
+            { id: 'temporal-bias', label: 'Temporal Bias', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.05, baseRawDataRate: 0.10 },
+            { id: 'spectrum-harmonizer', label: 'Spectrum Harmonizer', sensitivity: 50, min: 0, max: 100, baseEnergyDrain: 0.08, baseRawDataRate: 0.15 }
         ];
 
         const MAX_ENERGY = 100;
@@ -1035,15 +1044,15 @@
 
             if (currentSystemStability < 25) {
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
-                stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
+                stabilityLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 10px rgba(255,255,255,0.3)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentSystemStability < 55) {
                 stabilityLevelBar.style.background = 'var(--stability-warning)';
-                stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
+                stabilityLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 10px rgba(255,255,255,0.3)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 stabilityLevelBar.style.background = 'var(--stability-good)';
-                stabilityLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 8px rgba(255,255,255,0.25)`;
+                stabilityLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 10px rgba(255,255,255,0.3)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
             }
         }
@@ -1055,15 +1064,15 @@
             
             if (currentEnergy < 30) {
                 energyLevelBar.style.background = 'var(--energy-color-low)';
-                energyLevelBar.style.boxShadow = `0 0 15px rgba(255,0,0,0.8)`;
+                energyLevelBar.style.boxShadow = `0 0 18px rgba(255,0,0,0.9)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentEnergy < 60) {
                 energyLevelBar.style.background = 'var(--energy-color-medium)';
-                energyLevelBar.style.boxShadow = `0 0 15px rgba(255,204,0,0.8)`;
+                energyLevelBar.style.boxShadow = `0 0 18px rgba(255,204,0,0.9)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 energyLevelBar.style.background = 'var(--energy-color-high)';
-                energyLevelBar.style.boxShadow = `0 0 15px rgba(255,255,0,0.8)`;
+                energyLevelBar.style.boxShadow = `0 0 18px rgba(255,255,0,0.9)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--energy-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
@@ -1075,15 +1084,15 @@
             
             if (currentRawData < MAX_RAW_DATA * 0.2) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
-                rawDataLevelBar.style.boxShadow = `0 0 15px rgba(120,144,156,0.8)`;
+                rawDataLevelBar.style.boxShadow = `0 0 18px rgba(120,144,156,0.9)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-color-low').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             } else if (currentRawData < MAX_RAW_DATA * 0.6) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-medium)';
-                rawDataLevelBar.style.boxShadow = `0 0 15px rgba(255,215,0,0.8)`;
+                rawDataLevelBar.style.boxShadow = `0 0 18px rgba(255,215,0,0.9)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-high)';
-                rawDataLevelBar.style.boxShadow = `0 0 15px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                rawDataLevelBar.style.boxShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
             }
         }
@@ -1095,15 +1104,15 @@
 
             if (currentDataFlow < 30) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-low)';
-                dataFlowLevelBar.style.boxShadow = `0 0 15px rgba(255,99,71,0.8)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 18px rgba(255,99,71,0.9)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentDataFlow < 60) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-medium)';
-                dataFlowLevelBar.style.boxShadow = `0 0 15px rgba(0,255,255,0.8)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 18px rgba(0,255,255,0.9)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-stream-text').trim();
             } else {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-high)';
-                dataFlowLevelBar.style.boxShadow = `0 0 15px rgba(0,255,0,0.8)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 18px rgba(0,255,0,0.9)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-flow-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
@@ -1126,11 +1135,15 @@
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
                 logEntry.style.textShadow = `0 0 9px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
             } else if (type === 'info') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--module-selection-text').trim();
-                logEntry.style.textShadow = `0 0 7px ${getComputedStyle(document.documentElement).getPropertyValue('--module-selection-border').trim()}`;
-            } else if (type === 'rawdata') { // New log type for raw data collection
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim(); // Using new info-color
+                logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim()}`;
+            } else if (type === 'rawdata') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
                 logEntry.style.textShadow = `0 0 7px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+            } else if (type === 'event') { // New log type for system events
+                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--event-color').trim();
+                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim()}`;
+                logEntry.style.fontWeight = 'bold';
             }
             dataStreamMonitor.prepend(logEntry); // Newest on top
             if (dataStreamMonitor.children.length > 30) { // Keep log concise
@@ -1252,7 +1265,7 @@
 
         // --- Core Game Logic ---
         function getReceptorArchetype(receptorValues) {
-            const sorted = [...receptorValues].sort((a, b) => b.sensitivity - a.sensitivity);
+            const sorted = [...environmentalReceptors].sort((a, b) => b.sensitivity - a.sensitivity);
             const topReceptor = sorted[0];
 
             if (topReceptor.id === 'flux-modulator') return 'Adaptive Flux';
@@ -1289,8 +1302,8 @@
         }
 
         function formulateNewProtocol() {
-            const FORMULATION_RAW_DATA_BASE_COST = 50;
-            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 0.5;
+            const FORMULATION_RAW_DATA_BASE_COST = 60; // Increased base cost
+            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 0.6; // Increased scaling
 
             const receptorValues = environmentalReceptors.map(r => r.sensitivity);
             const avgReceptorValue = receptorValues.reduce((sum, val) => sum + val, 0) / environmentalReceptors.length;
@@ -1301,28 +1314,28 @@
             const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
 
             // Dynamic complexity: Higher avg sensitivity = more complex. Higher variance = less "clean" data, but perhaps new complexity types.
-            const complexity = Math.round(avgReceptorValue * 0.7 + receptorVariance * 0.1 + Math.random() * 30);
+            const complexity = Math.round(avgReceptorValue * 0.8 + receptorVariance * 0.15 + Math.random() * 35); // Slightly higher complexity range
             
             // Dynamic stability risk: Higher variance = more risk, also high complexity adds risk
-            const stabilityRisk = Math.round(receptorVariance * 0.8 + complexity * 0.2 + Math.random() * 20);
+            const stabilityRisk = Math.round(receptorVariance * 0.9 + complexity * 0.25 + Math.random() * 25); // Slightly higher risk
 
             // Raw data cost: Base + scaled by complexity
-            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 30);
+            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 40);
 
             // Impact of integration, more complex/risky protocols have higher potential impacts (both positive and negative)
             // Higher complexity and lower stability risk can lead to better potential
-            const impactStability = Math.round(10 - stabilityRisk / 10 + (complexity / 20) + Math.random() * 5 - 2); // Can be negative
-            const impactDataFlow = Math.round(avgReceptorValue / 10 + complexity / 20 + Math.random() * 8 - 4); // Can be negative
+            const impactStability = Math.round(12 - stabilityRisk / 9 + (complexity / 18) + Math.random() * 6 - 3); // Can be negative, higher potential swings
+            const impactDataFlow = Math.round(avgReceptorValue / 9 + complexity / 18 + Math.random() * 9 - 5); // Can be negative, higher potential swings
 
             // Generate tuning parameters dynamically based on complexity
-            const numTuningParams = Math.min(4, 2 + Math.floor(complexity / 30));
+            const numTuningParams = Math.min(5, 2 + Math.floor(complexity / 25)); // Up to 5 params
             const tuningParams = [];
-            const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment'];
+            const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux'];
 
             for (let i = 0; i < numTuningParams; i++) {
                 const paramId = `tun-${protocolId}-${i}`;
-                const baseValue = Math.round(avgReceptorValue * (0.5 + i * 0.1) + Math.random() * 30 - 15);
-                const optimalRangeWidth = Math.max(10, 40 - complexity / 2); // Narrower range for complex protocols
+                const baseValue = Math.round(avgReceptorValue * (0.4 + i * 0.12) + Math.random() * 35 - 18);
+                const optimalRangeWidth = Math.max(8, 35 - complexity / 1.5); // Narrower range for complex protocols, harder to tune
                 const optimalMin = Math.max(0, baseValue - Math.floor(optimalRangeWidth / 2));
                 const optimalMax = Math.min(100, baseValue + Math.ceil(optimalRangeWidth / 2));
                 const initialValue = Math.round((optimalMin + optimalMax) / 2); // Start in optimal range
@@ -1361,7 +1374,7 @@
                 logDataStreamEntry(`Insufficient Energy for formulation (Cost: ${FORMULATION_ENERGY_COST}). Current: ${Math.round(currentEnergy)} units.`, 'critical');
                 return;
             }
-            // Temporarily calculate estimated cost for check
+            
             const estimatedProtocol = formulateNewProtocol(); 
             const estimatedRawDataCost = estimatedProtocol.rawDataCost;
 
@@ -1510,24 +1523,24 @@
                 let message = `Protocol "${activeProtocol.name}" tuning result: `;
 
                 // Impact of tuning depends on deviation, protocol characteristics, and a bit of randomness
-                const baseStabilityGain = 10 + (100 - activeProtocol.stabilityRisk) / 10;
-                const baseDataFlowGain = 10 + activeProtocol.complexity / 10;
+                const baseStabilityGain = 12 + (100 - activeProtocol.stabilityRisk) / 9;
+                const baseDataFlowGain = 12 + activeProtocol.complexity / 9;
 
                 if (optimalPercentage >= 75) { // Optimal tuning (75% or more params in optimal range)
-                    stabilityChange = Math.round(baseStabilityGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 5); // Minor bonus for very low average deviation
-                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 5);
+                    stabilityChange = Math.round(baseStabilityGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 6); // Minor bonus for very low average deviation
+                    dataFlowChange = Math.round(baseDataFlowGain * (1 + (100 - averageDeviation) / 1000) + Math.random() * 6);
                     feedbackType = 'optimal';
                     message += `OPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range.`;
                 } else if (optimalPercentage >= 30) { // Suboptimal tuning (30-74% params in optimal range)
-                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage / 100) - Math.random() * 5);
-                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage / 100) - Math.random() * 5);
+                    stabilityChange = Math.round(baseStabilityGain * (optimalPercentage / 100) - Math.random() * 6);
+                    dataFlowChange = Math.round(baseDataFlowGain * (optimalPercentage / 100) - Math.random() * 6);
                     if (stabilityChange < 0) stabilityChange = 0; // Prevent negative impact if tuning is just slightly off
                     if (dataFlowChange < 0) dataFlowChange = 0;
                     feedbackType = 'warning';
                     message += `SUBOPTIMAL. ${optimalCount}/${tunedParameters} parameters in optimal range. Requires further adjustment.`;
                 } else { // Critical tuning (less than 30% params in optimal range)
-                    stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 10);
-                    dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 2 - Math.random() * 5);
+                    stabilityChange = Math.round(-activeProtocol.stabilityRisk * (averageDeviation / 100) - Math.random() * 12);
+                    dataFlowChange = Math.round(-activeProtocol.complexity * (averageDeviation / 100) / 1.8 - Math.random() * 6);
                     feedbackType = 'critical';
                     message += `CRITICAL MISALIGNMENT. Only ${optimalCount}/${tunedParameters} parameters in optimal range. System instability detected!`;
                 }
@@ -1566,9 +1579,9 @@
 
             setTimeout(() => {
                 // Minor stability/data flow hit on deactivation, or recovery
-                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 5 + Math.random() * 5)); // Some variability
-                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow - 2 + Math.random() * 3));
-                currentEnergy = Math.min(MAX_ENERGY, currentEnergy + 10); // Recover some energy
+                currentSystemStability = Math.max(0, Math.min(100, currentSystemStability - 6 + Math.random() * 6)); // Some variability
+                currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow - 3 + Math.random() * 4));
+                currentEnergy = Math.min(MAX_ENERGY, currentEnergy + 12); // Recover some energy
                 updateAllDisplays();
 
                 logDataStreamEntry(`Protocol "${activeProtocol.name}" deactivated. System settling. Energy restored.`, 'info');
@@ -1610,9 +1623,9 @@
             systemStatusTextSpan.textContent = `Core Recalibration in Progress`;
 
             setTimeout(() => {
-                currentSystemStability = 75; // Slightly better base stability after recalibration
-                currentEnergy = 90; // Higher energy post-recalibration
-                currentDataFlow = 45; // Slightly higher data flow
+                currentSystemStability = 80; // Slightly better base stability after recalibration
+                currentEnergy = 95; // Higher energy post-recalibration
+                currentDataFlow = 55; // Slightly higher data flow
                 currentRawData = 0; // Raw data is cleared during recalibration
 
                 updateAllDisplays();
@@ -1635,7 +1648,7 @@
                     }
                 });
 
-                logDataStreamEntry('Core system recalibration complete. Stability restored to 75%, Energy to 90 units, Data Flow to 45Mbps. All protocols deactivated and receptors reset.', 'optimal');
+                logDataStreamEntry('Core system recalibration complete. Stability restored to 80%, Energy to 95 units, Data Flow to 55Mbps. All protocols deactivated and receptors reset.', 'optimal');
                 logDataStreamEntry('Raw Data buffer cleared. Awaiting new protocol formulation.', 'normal');
                 systemStatusTextSpan.textContent = `System Recalibrated.`;
 
@@ -1677,7 +1690,7 @@
                 let totalSensitivityChange = 0;
                 environmentalReceptors.forEach(r => {
                     const oldSensitivity = r.sensitivity;
-                    const newSensitivity = 65 + Math.floor(Math.random() * 10); // Between 65-75% for optimized
+                    const newSensitivity = 68 + Math.floor(Math.random() * 10); // Between 68-77% for optimized
                     r.sensitivity = newSensitivity;
                     totalSensitivityChange += Math.abs(newSensitivity - oldSensitivity);
 
@@ -1691,8 +1704,8 @@
                 });
 
                 // Apply a small stability/data flow bonus based on the optimization
-                const stabilityBoost = Math.round(totalSensitivityChange / environmentalReceptors.length * 0.1 + Math.random() * 3);
-                const dataFlowBoost = Math.round(totalSensitivityChange / environmentalReceptors.length * 0.05 + Math.random() * 2);
+                const stabilityBoost = Math.round(totalSensitivityChange / environmentalReceptors.length * 0.15 + Math.random() * 4);
+                const dataFlowBoost = Math.round(totalSensitivityChange / environmentalReceptors.length * 0.08 + Math.random() * 3);
                 
                 currentSystemStability = Math.min(100, currentSystemStability + stabilityBoost);
                 currentDataFlow = Math.min(MAX_DATA_FLOW, currentDataFlow + dataFlowBoost);
@@ -1710,6 +1723,9 @@
 
         // --- Dynamic System Update Loop (replacing fluctuations) ---
         let systemUpdateInterval;
+        let lastRawDataLogTime = 0;
+        const RAW_DATA_LOG_INTERVAL = 3000; // Log raw data every 3 seconds
+
         function startSystemUpdateLoop() {
             if (systemUpdateInterval) clearInterval(systemUpdateInterval);
 
@@ -1718,8 +1734,8 @@
 
                 let energyDelta = -0.5; // Base energy drain per tick
                 let rawDataDelta = 0;
-                let stabilityDelta = (Math.random() - 0.5) * 0.5; // Minor base fluctuations
-                let dataFlowDelta = (Math.random() - 0.5) * 0.3;
+                let stabilityDelta = (Math.random() - 0.5) * 0.6; // Minor base fluctuations, slightly more pronounced
+                let dataFlowDelta = (Math.random() - 0.5) * 0.4;
 
                 // Receptor passive effects
                 let totalReceptorEnergyDrainRate = 0;
@@ -1739,23 +1755,23 @@
                     const tuningDeviationFactor = activeProtocol.lastTuningScore / 100; // 0 for perfect, 1 for worst
 
                     // Protocols introduce more energy drain based on complexity
-                    energyDelta -= (2 + complexityFactor * 3) / 10; // Divide by 10 for per-tick
+                    energyDelta -= (2.5 + complexityFactor * 3.5) / 10; // Divide by 10 for per-tick, slightly higher drain
                     
                     // Stability fluctuations based on risk and tuning quality
-                    stabilityDelta += (Math.random() - 0.5) * 5 * stabilityRiskFactor * (1 + tuningDeviationFactor) / 10;
-                    if (tuningDeviationFactor > 0.5) stabilityDelta -= Math.random() * 5 / 10; // Penalty for bad tuning
+                    stabilityDelta += (Math.random() - 0.5) * 6 * stabilityRiskFactor * (1 + tuningDeviationFactor) / 10; // More pronounced
+                    if (tuningDeviationFactor > 0.5) stabilityDelta -= Math.random() * 6 / 10; // Penalty for bad tuning
 
                     // Data flow fluctuations based on complexity
-                    dataFlowDelta += (Math.random() - 0.5) * 3 * complexityFactor / 10;
+                    dataFlowDelta += (Math.random() - 0.5) * 3.5 * complexityFactor / 10; // More pronounced
 
                     // Small passive stability drain if not perfectly tuned
-                    if (tuningDeviationFactor > 0.1) stabilityDelta -= 0.5 / 10;
+                    if (tuningDeviationFactor > 0.1) stabilityDelta -= 0.6 / 10; // Slightly higher passive drain
                 } else {
                     // Slight energy recovery if idle (less drain than when active protocols/receptors are at max)
-                    energyDelta += 0.5 / 10; // Mitigate idle drain slightly
+                    energyDelta += 0.6 / 10; // Mitigate idle drain slightly more
                     // When idle, stability and data flow might slowly decay if not being actively managed by protocols
-                    stabilityDelta -= 0.1 / 10;
-                    dataFlowDelta -= 0.1 / 10;
+                    stabilityDelta -= 0.15 / 10; // Slightly faster decay
+                    dataFlowDelta -= 0.15 / 10;
                 }
 
                 currentSystemStability += stabilityDelta;
@@ -1763,9 +1779,11 @@
                 currentRawData += rawDataDelta;
                 currentDataFlow += dataFlowDelta;
 
-                // Log raw data collection if significant
-                if (rawDataDelta > 0.5 && currentRawData < MAX_RAW_DATA) { // Only log if actively collecting and not full
+                // Log raw data collection if significant and within interval
+                const now = Date.now();
+                if (rawDataDelta > 0.5 && currentRawData < MAX_RAW_DATA && (now - lastRawDataLogTime > RAW_DATA_LOG_INTERVAL)) {
                     logDataStreamEntry(`Collecting Raw Data: +${rawDataDelta.toFixed(1)} packets. Total: ${Math.round(currentRawData)}.`, 'rawdata');
+                    lastRawDataLogTime = now;
                 }
 
                 // Check for critical states
@@ -1780,6 +1798,27 @@
                 } else if (currentRawData >= MAX_RAW_DATA) {
                     if (currentRawData - rawDataDelta < MAX_RAW_DATA) { // Only log when it just became full
                         logDataStreamEntry("INFO: Raw Data buffer full. Formulate a protocol to utilize gathered data.", 'rawdata');
+                    }
+                    // Implement penalty for raw data overflow
+                    currentSystemStability -= 0.05; // Small stability hit
+                    currentDataFlow -= 0.02; // Small data flow hit
+                }
+
+                // Random minor system events (Gen 20.0 feature)
+                if (Math.random() < 0.005) { // 0.5% chance per second (0.005 * 2/sec = 1% every 1s)
+                    const eventType = Math.random();
+                    if (eventType < 0.3) {
+                        logDataStreamEntry("MINOR EVENT: Localized atmospheric interference detected.", 'event');
+                        currentRawData = Math.max(0, currentRawData - 5); // Lose some raw data
+                        updateRawDataDisplay();
+                    } else if (eventType < 0.6) {
+                        logDataStreamEntry("MINOR EVENT: Sub-routine cascade detected. Data flow slightly impacted.", 'event');
+                        currentDataFlow = Math.max(0, currentDataFlow - 3); // Lose some data flow
+                        updateDataFlowDisplay();
+                    } else {
+                        logDataStreamEntry("MINOR EVENT: System noise increased. Minor stability tremor.", 'event');
+                        currentSystemStability = Math.max(0, currentSystemStability - 2); // Lose some stability
+                        updateStabilityDisplay();
                     }
                 }
 
