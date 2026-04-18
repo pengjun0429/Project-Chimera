@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 20.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 21.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,7 +46,7 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* New 2.5 Gen / Gen 20.0 Colors */
+            /* New 2.5 Gen / Gen 21.0 Colors */
             --receptor-bg: rgba(15, 30, 45, 0.95); /* Dark blue-grey for receptors */
             --receptor-border: rgba(0, 191, 255, 0.5); /* Deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
@@ -62,7 +62,7 @@
             --optimize-btn-glow: rgba(106, 90, 205, 0.9); /* Slate Blue Glow */
             --tune-btn-glow: rgba(0, 255, 0, 0.9); /* Green Glow for Tune */
 
-            /* NEW for Gen 20.0 - Enhanced UI elements */
+            /* NEW for Gen 21.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Orange for events */
             --event-text-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
             --info-color: #9370DB; /* Medium Purple for info */
@@ -146,7 +146,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2ZmdHdhcmUBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJFRFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
             opacity: 0.15; /* Slightly more noticeable noise */
             pointer-events: none;
             z-index: 9999;
@@ -966,7 +966,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 20.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 21.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1329,9 +1329,9 @@
 
             // Generate tuning parameters dynamically based on complexity
             const numTuningParams = Math.min(5, 2 + Math.floor(complexity / 25)); // Up to 5 params
-            const tuningParams = [];
-            const paramNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux'];
+            const tuningParamNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux'];
 
+            const tuningParams = [];
             for (let i = 0; i < numTuningParams; i++) {
                 const paramId = `tun-${protocolId}-${i}`;
                 const baseValue = Math.round(avgReceptorValue * (0.4 + i * 0.12) + Math.random() * 35 - 18);
@@ -1342,7 +1342,7 @@
                 
                 tuningParams.push({
                     id: paramId,
-                    label: paramNames[i % paramNames.length],
+                    label: tuningParamNames[i % tuningParamNames.length],
                     min: 0,
                     max: 100,
                     value: initialValue, // Current slider value
@@ -1375,6 +1375,7 @@
                 return;
             }
             
+            // Generate a *temporary* protocol to get an accurate cost estimate
             const estimatedProtocol = formulateNewProtocol(); 
             const estimatedRawDataCost = estimatedProtocol.rawDataCost;
 
@@ -1804,7 +1805,7 @@
                     currentDataFlow -= 0.02; // Small data flow hit
                 }
 
-                // Random minor system events (Gen 20.0 feature)
+                // Random minor system events (Gen 21.0 feature)
                 if (Math.random() < 0.005) { // 0.5% chance per second (0.005 * 2/sec = 1% every 1s)
                     const eventType = Math.random();
                     if (eventType < 0.3) {
