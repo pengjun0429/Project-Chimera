@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 25.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 26.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             /* Core Theme Colors */
-            --primary-glow: rgba(135, 206, 250, 0.95); /* Sky blue glow - stronger */
-            --secondary-glow: rgba(255, 105, 180, 0.75); /* Hot pink glow - stronger */
-            --tertiary-glow: rgba(50, 205, 50, 0.85); /* Lime green glow - stronger */
-            --frosted-bg: rgba(255, 255, 255, 0.03); /* Even more transparent, ethereal frosted background */
+            --primary-glow: rgba(135, 206, 250, 0.98); /* Sky blue glow - stronger */
+            --secondary-glow: rgba(255, 105, 180, 0.85); /* Hot pink glow - stronger */
+            --tertiary-glow: rgba(50, 205, 50, 0.95); /* Lime green glow - stronger */
+            --frosted-bg: rgba(255, 255, 255, 0.05); /* Even more transparent, ethereal frosted background */
             --text-color: #E8E8E8; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.2); /* More visible border */
-            --console-bg: rgba(0, 0, 0, 0.9); /* Darker console */
+            --border-color: rgba(255, 255, 255, 0.3); /* More visible border */
+            --console-bg: rgba(0, 0, 0, 0.95); /* Darker console */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
@@ -28,14 +28,14 @@
             /* Data Stream & Protocol Status */
             --data-stream-bg: rgba(10, 20, 30, 0.99); /* Darker, more opaque blue for data stream */
             --data-stream-text: #00FFFF; /* Cyan for data */
-            --protocol-status-bg: rgba(20, 50, 70, 0.95); /* More opaque */
-            --protocol-status-glow: rgba(0, 200, 255, 0.85); /* Stronger glow */
+            --protocol-status-bg: rgba(20, 50, 70, 0.98); /* More opaque */
+            --protocol-status-glow: rgba(0, 200, 255, 0.95); /* Stronger glow */
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
             --module-selection-bg: rgba(30, 15, 45, 0.99); /* Darker, more opaque purple-ish for module selection */
-            --module-selection-border: rgba(150, 0, 255, 0.7); /* Stronger purple accent */
+            --module-selection-border: rgba(150, 0, 255, 0.8); /* Stronger purple accent */
             --module-selection-text: #E0BBE4; /* Light purple */
-            --resource-bg: rgba(0, 0, 0, 0.85); /* Background for resource bars */
+            --resource-bg: rgba(0, 0, 0, 0.9); /* Background for resource bars */
 
             /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFF00 0%, #FFCC00 100%); /* Yellow for energy */
@@ -46,9 +46,9 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* New 2.5 Gen / Gen 25.0 Colors */
+            /* New 2.5 Gen / Gen 26.0 Colors */
             --receptor-bg: rgba(15, 30, 45, 0.99); /* Darker blue-grey for receptors */
-            --receptor-border: rgba(0, 191, 255, 0.7); /* Stronger deep sky blue accent */
+            --receptor-border: rgba(0, 191, 255, 0.8); /* Stronger deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
             --formulate-btn-glow: rgba(255, 20, 147, 0.98); /* Deep Pink for Formulate button */
 
@@ -62,7 +62,7 @@
             --optimize-btn-glow: rgba(106, 90, 205, 0.98); /* Slate Blue Glow */
             --tune-btn-glow: rgba(0, 255, 0, 0.98); /* Green Glow for Tune */
 
-            /* NEW for Gen 25.0 - Enhanced UI elements */
+            /* NEW for Gen 26.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Orange for events */
             --event-text-shadow: 0 0 15px rgba(255, 165, 0, 0.9); /* Stronger shadow */
             --info-color: #9370DB; /* Medium Purple for info */
@@ -1003,7 +1003,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 25.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 26.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1857,7 +1857,7 @@
                     currentDataFlow -= 0.03; // Small data flow hit
                 }
 
-                // Random minor system events (Gen 25.0 feature)
+                // Random minor system events (Gen 26.0 feature)
                 if (Math.random() < 0.007) { // 0.7% chance per second (0.007 * 2.5/sec = ~1.75% every 1s)
                     const eventType = Math.random();
                     if (eventType < 0.3) {
