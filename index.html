@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 26.5</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 27.5</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,7 +46,7 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* New 2.5 Gen / Gen 26.5 Colors */
+            /* New 2.5 Gen / Gen 27.5 Colors */
             --receptor-bg: rgba(15, 30, 45, 0.99); /* Darker blue-grey for receptors */
             --receptor-border: rgba(0, 191, 255, 0.8); /* Stronger deep sky blue accent */
             --receptor-text: #B0E0E6; /* Powder blue */
@@ -62,7 +62,7 @@
             --optimize-btn-glow: rgba(106, 90, 205, 0.98); /* Slate Blue Glow */
             --tune-btn-glow: rgba(0, 255, 0, 0.98); /* Green Glow for Tune */
 
-            /* NEW for Gen 26.5 - Enhanced UI elements */
+            /* NEW for Gen 27.5 - Enhanced UI elements */
             --event-color: #FFA500; /* Orange for events */
             --event-text-shadow: 0 0 15px rgba(255, 165, 0, 0.9); /* Stronger shadow */
             --info-color: #9370DB; /* Medium Purple for info */
@@ -1003,7 +1003,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 26.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 27.5 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1173,13 +1173,13 @@
                 logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
             } else if (type === 'info') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim(); // Using new info-color
-                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim()}`;
+                logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim();
             } else if (type === 'rawdata') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
                 logEntry.style.textShadow = `0 0 8px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
             } else if (type === 'event') { // New log type for system events
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--event-color').trim();
-                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim()}`;
+                logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim();
                 logEntry.style.fontWeight = 'bold';
             }
             dataStreamMonitor.prepend(logEntry); // Newest on top
@@ -1857,7 +1857,7 @@
                     currentDataFlow -= 0.03; // Small data flow hit
                 }
 
-                // Random minor system events (Gen 26.5 feature)
+                // Random minor system events (Gen 27.5 feature)
                 if (Math.random() < 0.007) { // 0.7% chance per second (0.007 * 2.5/sec = ~1.75% every 1s)
                     const eventType = Math.random();
                     if (eventType < 0.3) {
