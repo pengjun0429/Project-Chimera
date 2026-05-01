@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 29.5</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 30.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,11 +11,11 @@
             --primary-glow: rgba(135, 206, 250, 0.98); /* Sky blue glow - stronger */
             --secondary-glow: rgba(255, 105, 180, 0.85); /* Hot pink glow - stronger */
             --tertiary-glow: rgba(50, 205, 50, 0.95); /* Lime green glow - stronger */
-            --frosted-bg: rgba(255, 255, 255, 0.05); /* Even more transparent, ethereal frosted background */
+            --frosted-bg: rgba(255, 255, 255, 0.03); /* Even more transparent, ethereal frosted background */
             --text-color: #E8E8E8; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.3); /* More visible border */
-            --console-bg: rgba(0, 0, 0, 0.95); /* Darker console */
+            --border-color: rgba(255, 255, 255, 0.2); /* More visible border, slightly less opaque */
+            --console-bg: rgba(0, 0, 0, 0.98); /* Darker console */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF6347; /* Tomato */
@@ -33,7 +33,7 @@
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
             --module-selection-bg: rgba(30, 15, 45, 0.99); /* Darker, more opaque purple-ish for module selection */
-            --module-selection-border: rgba(150, 0, 255, 0.8); /* Stronger purple accent */
+            --module-selection-border: rgba(150, 0, 255, 0.7); /* Stronger purple accent */
             --module-selection-text: #E0BBE4; /* Light purple */
             --resource-bg: rgba(0, 0, 0, 0.9); /* Background for resource bars */
 
@@ -46,50 +46,64 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* New 2.5 Gen / Gen 29.5 Colors (Updated from 28.5) */
+            /* Gen 30.0 Colors (Updated from 29.5) */
             --signal-array-bg: rgba(15, 30, 45, 0.99); /* Darker blue-grey for signal array */
-            --signal-array-border: rgba(0, 191, 255, 0.8); /* Stronger deep sky blue accent */
+            --signal-array-border: rgba(0, 191, 255, 0.7); /* Stronger deep sky blue accent */
             --signal-array-text: #B0E0E6; /* Powder blue */
             --formulate-btn-glow: rgba(255, 20, 147, 0.98); /* Deep Pink for Formulate button */
 
-            /* New 2.5 Gen resource: Raw Data */
+            /* Gen 30.0 resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
             --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold */
             --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%); /* Blue-grey */
             --raw-data-text: #F06292; /* Text color for raw data */
 
-            /* New 2.5 Gen resource: Processing Power (Gen 29.5 Addition) */
+            /* Gen 30.0 resource: Processing Power */
             --processing-power-color-high: linear-gradient(90deg, #BA55D3 0%, #8A2BE2 100%); /* Orchid to Blue Violet */
             --processing-power-color-medium: linear-gradient(90deg, #DA70D6 0%, #9932CC 100%); /* Orchid to Dark Orchid */
             --processing-power-color-low: linear-gradient(90deg, #4B0082 0%, #191970 100%); /* Indigo to Midnight Blue */
             --processing-power-text: #BA55D3; /* Orchid */
 
-            /* New 2.5 Gen button: Calibrate Signal Array (Replaces Optimize Receptors) */
+            /* Gen 30.0 button: Calibrate Signal Array */
             --calibrate-btn-glow: rgba(106, 90, 205, 0.98); /* Slate Blue Glow */
             --tune-btn-glow: rgba(0, 255, 0, 0.98); /* Green Glow for Tune */
 
-            /* NEW for Gen 29.5 - Enhanced UI elements */
+            /* NEW for Gen 30.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Orange for events */
-            --event-text-shadow: 0 0 15px rgba(255, 165, 0, 0.9); /* Stronger shadow */
+            --event-text-shadow: 0 0 18px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #9370DB; /* Medium Purple for info */
-            --info-text-shadow: 0 0 12px rgba(147, 112, 219, 0.8); /* Stronger shadow */
+            --info-text-shadow: 0 0 15px rgba(147, 112, 219, 0.9); /* Stronger shadow */
             --log-glitch-color: #FF00FF; /* Magenta */
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
-            /* Gen 29.5 NEW: Refine Protocol button */
+            /* Gen 30.0 NEW: Refine Protocol button */
             --refine-btn-glow: rgba(255, 255, 0, 0.98); /* Yellow glow for refine */
 
-            /* Gen 29.5 NEW: Anomaly Alert */
+            /* Gen 30.0 NEW: Anomaly Alert */
             --anomaly-color: #FF4500; /* OrangeRed */
-            --anomaly-bg: rgba(255, 69, 0, 0.15); /* Semi-transparent OrangeRed */
-            --anomaly-border: rgba(255, 69, 0, 0.8); /* Opaque OrangeRed */
+            --anomaly-bg: rgba(255, 69, 0, 0.2); /* Semi-transparent OrangeRed */
+            --anomaly-border: rgba(255, 69, 0, 0.9); /* Opaque OrangeRed */
+
+            /* Gen 30.0 NEW: Predictive Analysis Module */
+            --predictive-bg: rgba(10, 40, 30, 0.99); /* Dark Green-Blue */
+            --predictive-border: rgba(0, 255, 127, 0.8); /* Spring Green */
+            --predictive-text: #90EE90; /* Light Green */
+            --predictive-btn-glow: rgba(0, 255, 127, 0.9);
+
+            /* Gen 30.0 NEW: Sub-Protocol Augmentation Module */
+            --augmentation-bg: rgba(45, 30, 10, 0.99); /* Dark Orange-Brown */
+            --augmentation-border: rgba(255, 165, 0, 0.8); /* Orange */
+            --augmentation-text: #FFD700; /* Gold */
+            --augmentation-toggle-active: rgba(255, 165, 0, 0.9);
+            --augmentation-toggle-inactive: rgba(100, 70, 0, 0.6);
+            --augmentation-toggle-glow: rgba(255, 165, 0, 0.7);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #000008; /* Even darker, deeper background base */
+            background: #00000A; /* Even darker, deeper background base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,33 +112,33 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="1.5" fill="%23FF00FF"/></svg>') 20 20, auto; /* Cyan crosshair with a larger magenta dot */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="2" fill="%23FF00FF"/></svg>') 22 22, auto; /* Cyan crosshair with a larger magenta dot */
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation) */
         body::before {
             content: '';
             position: absolute;
-            top: -300%;
-            left: -300%;
-            width: 700%;
-            height: 700%;
+            top: -400%;
+            left: -400%;
+            width: 900%;
+            height: 900%;
             background: linear-gradient(
                 90deg,
-                #03010a 0%,
-                #0a020d 15%,
-                #050210 30%,
-                #0d0415 45%,
-                #03010a 60%,
-                #0a020d 75%,
-                #050210 90%,
-                #0d0415 100%
+                #02010c 0%,
+                #0c020f 15%,
+                #070212 30%,
+                #0f0417 45%,
+                #02010c 60%,
+                #0c020f 75%,
+                #070212 90%,
+                #0f0417 100%
             );
-            background-size: 1200% 1200%;
-            animation: fluidBackground1 480s linear infinite alternate, rotateBackground 720s linear infinite; /* Even longer animations */
+            background-size: 1500% 1500%;
+            animation: fluidBackground1 600s linear infinite alternate, rotateBackground 900s linear infinite; /* Even longer animations */
             z-index: -3;
-            filter: blur(550px) opacity(0.99); /* Stronger blur, more opaque */
-            transform: rotate(-150deg) scale(4); /* Larger scale, more rotation */
+            filter: blur(650px) opacity(0.999); /* Stronger blur, almost opaque */
+            transform: rotate(-180deg) scale(5); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -132,25 +146,25 @@
         body::after {
             content: '';
             position: absolute;
-            top: -150%;
-            left: -150%;
-            width: 400%;
-            height: 400%;
+            top: -200%;
+            left: -200%;
+            width: 500%;
+            height: 500%;
             background: linear-gradient(
-                -110deg,
-                rgba(135, 206, 250, 0.45) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.4) 20%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.4) 40%, /* tertiary glow accent */
-                rgba(0, 191, 255, 0.4) 60%, /* deep sky blue from signal array */
-                rgba(255, 105, 180, 0.4) 80%,
-                rgba(135, 206, 250, 0.45) 100%
+                -120deg,
+                rgba(135, 206, 250, 0.55) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.5) 20%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.5) 40%, /* tertiary glow accent */
+                rgba(0, 191, 255, 0.5) 60%, /* deep sky blue from signal array */
+                rgba(255, 105, 180, 0.5) 80%,
+                rgba(135, 206, 250, 0.55) 100%
             );
-            background-size: 800% 800%;
-            animation: fluidBackground2 240s ease-in-out infinite, rotateBackgroundReversed 480s linear infinite; /* Even longer animations */
+            background-size: 1000% 1000%;
+            animation: fluidBackground2 300s ease-in-out infinite, rotateBackgroundReversed 600s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(350px) opacity(0.95); /* Stronger blur, more opaque */
+            filter: blur(450px) opacity(0.98); /* Stronger blur, more opaque */
             mix-blend-mode: soft-light; /* Softer accenting */
-            transform: rotate(100deg) scale(3); /* Larger scale, more rotation */
+            transform: rotate(120deg) scale(4); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -162,10 +176,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.28; /* More noticeable noise */
+            opacity: 0.35; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
+            filter: grayscale(0.2) contrast(1.1); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -180,48 +195,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-150deg) scale(4); }
-            to { transform: rotate(270deg) scale(4); }
+            from { transform: rotate(-180deg) scale(5); }
+            to { transform: rotate(360deg) scale(5); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(100deg) scale(3); }
-            to { transform: rotate(-300deg) scale(3); }
+            from { transform: rotate(120deg) scale(4); }
+            to { transform: rotate(-480deg) scale(4); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1400px; /* Even wider for more content */
-            padding: 150px; /* More padding */
+            max-width: 1500px; /* Even wider for more content */
+            padding: 160px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 95px; /* Even more rounded */
-            backdrop-filter: blur(280px) saturate(900%) brightness(280%); /* Stronger blur, saturation, and brightness */
-            -webkit-backdrop-filter: blur(280px) saturate(900%) brightness(280%);
+            border-radius: 100px; /* Even more rounded */
+            backdrop-filter: blur(350px) saturate(1200%) brightness(350%) contrast(1.1); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(350px) saturate(1200%) brightness(350%) contrast(1.1);
             box-shadow:
-                0 100px 450px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 450px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 120px rgba(255, 255, 255, 0.45), /* Stronger inner glow for depth */
-                inset 0 0 200px var(--primary-glow); /* Even more inner glow */
+                0 120px 500px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 500px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 150px rgba(255, 255, 255, 0.5), /* Stronger inner glow for depth */
+                inset 0 0 250px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 120px; /* Increased gap between sections */
-            animation: fadeInScale 6.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 2s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 130px; /* Increased gap between sections */
+            animation: fadeInScale 7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 2.5s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -25px; /* More overflow */
-            border-radius: 97px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #BA55D3, #00FFFF, #8A2BE2, #FF1493, #00FF00, #F06292); /* More vibrant border glow colors, includes new processing power color */
-            background-size: 1200% 1200%; /* Larger background for smoother animation */
-            animation: borderGlow 40s linear infinite alternate; /* Slower animation */
-            filter: blur(60px); /* Stronger blur */
+            inset: -30px; /* More overflow */
+            border-radius: 102px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #BA55D3, #00FFFF, #8A2BE2, #FF1493, #00FF00, #F06292, #FFA500); /* More vibrant border glow colors, includes new processing power color and orange for augmentation */
+            background-size: 1500% 1500%; /* Larger background for smoother animation */
+            animation: borderGlow 50s linear infinite alternate; /* Slower animation */
+            filter: blur(70px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -233,32 +248,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.2) translateY(350px) perspective(4000px) rotateX(70deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(4000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.2) translateY(400px) perspective(5000px) rotateX(80deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(5000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 6em; /* Even larger heading */
+            font-size: 6.5em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 90px var(--primary-glow), 0 0 130px rgba(135, 206, 250, 0.98), 0 0 160px rgba(135, 206, 250, 0.8);
-            margin-bottom: 80px;
-            letter-spacing: 15px;
+            text-shadow: 0 0 100px var(--primary-glow), 0 0 150px rgba(135, 206, 250, 0.98), 0 0 180px rgba(135, 206, 250, 0.8);
+            margin-bottom: 90px;
+            letter-spacing: 18px;
             line-height: 1.2;
             position: relative;
-            transform: translateZ(70px); /* Lift heading slightly in 3D space */
+            transform: translateZ(80px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -50px;
+            bottom: -60px;
             left: 50%;
             transform: translateX(-50%);
-            width: 130%; /* Wider underline */
-            height: 12px; /* Thicker underline */
+            width: 140%; /* Wider underline */
+            height: 14px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 60px var(--primary-glow);
+            box-shadow: 0 0 70px var(--primary-glow);
         }
 
         p {
@@ -266,88 +281,179 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.99;
-            font-size: 1.5em;
-            transform: translateZ(35px);
+            font-size: 1.6em;
+            transform: translateZ(40px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 90px; /* Increased gap */
-            margin: 60px 0;
+            gap: 100px; /* Increased gap */
+            margin: 70px 0;
             position: relative;
         }
 
-        /* Signal Array Calibration & Formulated Protocol Details */
-        .signal-array-calibration-module, .formulated-protocol-details, .deployed-protocol-parameters {
+        /* Module base styles */
+        .signal-array-calibration-module, .formulated-protocol-details, .deployed-protocol-parameters,
+        .predictive-analysis-module, .sub-protocol-augmentation-module { /* NEW MODULES ADDED */
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 45px;
             text-align: left;
-            padding: 50px;
-            background: var(--signal-array-bg);
-            border-radius: 40px;
-            border: 1px solid var(--signal-array-border);
-            box-shadow: inset 0 0 40px rgba(0, 191, 255, 0.75), 0 0 40px rgba(0, 191, 255, 0.65), inset 0 0 80px rgba(0, 191, 255, 0.3); /* More inner shadow */
+            padding: 55px;
+            border-radius: 45px;
+            border: 1px solid var(--signal-array-border); /* Default border, will be overridden */
+            box-shadow: inset 0 0 45px rgba(0, 191, 255, 0.75), 0 0 45px rgba(0, 191, 255, 0.65), inset 0 0 90px rgba(0, 191, 255, 0.3); /* More inner shadow */
             position: relative;
-            transform: translateZ(28px);
+            transform: translateZ(30px);
             overflow: hidden;
+            background: var(--signal-array-bg); /* Default background, will be overridden */
         }
-        .signal-array-calibration-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after {
+        /* Specific overrides for new modules */
+        .predictive-analysis-module {
+            background: var(--predictive-bg);
+            border-color: var(--predictive-border);
+            box-shadow: inset 0 0 45px rgba(0, 255, 127, 0.75), 0 0 45px rgba(0, 255, 127, 0.65), inset 0 0 90px rgba(0, 255, 127, 0.3);
+        }
+        .sub-protocol-augmentation-module {
+            background: var(--augmentation-bg);
+            border-color: var(--augmentation-border);
+            box-shadow: inset 0 0 45px rgba(255, 165, 0, 0.75), 0 0 45px rgba(255, 165, 0, 0.65), inset 0 0 90px rgba(255, 165, 0, 0.3);
+        }
+
+        .signal-array-calibration-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after,
+        .predictive-analysis-module::after, .sub-protocol-augmentation-module::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(0, 191, 255, 0.25) 0%, transparent 65%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.18) 0%, transparent 65%);
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 0.98;
         }
 
 
-        .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before {
+        .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
+        .predictive-analysis-module::before, .sub-protocol-augmentation-module::before { /* NEW MODULES ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -30px;
-            left: 50px;
-            font-size: 1.15em;
-            color: var(--signal-array-text);
+            top: -35px;
+            left: 55px;
+            font-size: 1.2em;
+            color: var(--signal-array-text); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.98);
-            padding: 10px 25px;
-            border-radius: 18px;
+            padding: 12px 28px;
+            border-radius: 20px;
             font-weight: 700;
-            letter-spacing: 2.5px;
-            transform: translateY(-50%) translateZ(18px);
+            letter-spacing: 2.8px;
+            transform: translateY(-50%) translateZ(20px);
             opacity: 0.99;
-            border: 1px solid var(--signal-array-text);
-            box-shadow: 0 0 25px var(--signal-array-text); /* Stronger glow */
+            border: 1px solid var(--signal-array-text); /* Default border, will be overridden */
+            box-shadow: 0 0 28px var(--signal-array-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
+        /* Specific overrides for new modules before pseudo-elements */
+        .predictive-analysis-module::before {
+            color: var(--predictive-text);
+            border-color: var(--predictive-text);
+            box-shadow: 0 0 28px var(--predictive-text);
+        }
+        .sub-protocol-augmentation-module::before {
+            color: var(--augmentation-text);
+            border-color: var(--augmentation-text);
+            box-shadow: 0 0 28px var(--augmentation-text);
+        }
+
 
         .calibrator-group, .param-group {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.4em;
+            font-size: 1.5em;
             color: var(--data-stream-text);
-            letter-spacing: 1.5px;
+            letter-spacing: 1.8px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 22px rgba(0, 255, 255, 0.98); /* Stronger shadow */
-            margin-bottom: 20px;
+            text-shadow: 0 0 25px rgba(0, 255, 255, 0.98); /* Stronger shadow */
+            margin-bottom: 22px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 1em;
-            opacity: 0.88;
+            font-size: 1.05em;
+            opacity: 0.9;
             color: var(--signal-array-text);
-            margin-top: 12px;
+            margin-top: 15px;
             text-shadow: none; /* Clear text shadow for sub-info */
+        }
+        /* Predictive analysis results */
+        .predictive-results {
+            margin-top: 30px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px dashed var(--predictive-border);
+            border-radius: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        .predictive-results p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2em;
+            color: var(--predictive-text);
+            text-shadow: 0 0 15px rgba(0, 255, 127, 0.8);
+            margin-bottom: 10px;
+        }
+
+        /* Sub-Protocol Grid */
+        .sub-protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .sub-protocol-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--augmentation-toggle-inactive);
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+            transform: translateZ(8px);
+        }
+        .sub-protocol-card.active {
+            border-color: var(--augmentation-toggle-active);
+            box-shadow: 0 0 35px var(--augmentation-toggle-glow), inset 0 0 25px var(--augmentation-toggle-active);
+            background: rgba(40, 20, 0, 0.85);
+            transform: translateY(-10px) scale(1.03) translateZ(12px);
+        }
+        .sub-protocol-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4em;
+            color: var(--augmentation-text);
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px var(--augmentation-text);
+        }
+        .sub-protocol-card p {
+            font-size: 1.05em;
+            color: var(--text-color);
+            opacity: 0.85;
+            margin-bottom: 10px;
+            transform: translateZ(0); /* Reset for inner p */
+        }
+        .sub-protocol-card .cost-benefit {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.95em;
+            color: var(--data-stream-text);
+            text-shadow: 0 0 8px var(--data-stream-text);
+            margin-top: 20px;
+            opacity: 0.9;
         }
 
 
@@ -355,17 +461,17 @@
         .resource-display-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for energy, data flow, raw data, processing power */
-            gap: 60px;
-            margin-bottom: 60px;
-            transform: translateZ(38px);
+            gap: 70px;
+            margin-bottom: 70px;
+            transform: translateZ(40px);
         }
 
         .energy-reserve-display, .data-flow-display, .raw-data-reserve-display, .processing-power-display {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            border-radius: 40px;
-            padding: 40px 45px;
-            box-shadow: inset 0 0 40px rgba(150, 0, 255, 0.85), 0 0 40px rgba(150, 0, 255, 0.75), inset 0 0 80px rgba(150, 0, 255, 0.3); /* More inner shadow */
+            border-radius: 45px;
+            padding: 45px 50px;
+            box-shadow: inset 0 0 45px rgba(150, 0, 255, 0.85), 0 0 45px rgba(150, 0, 255, 0.75), inset 0 0 90px rgba(150, 0, 255, 0.3); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
@@ -377,16 +483,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.18) 0%, transparent 75%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.2) 0%, transparent 75%);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p, .raw-data-reserve-display p, .processing-power-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.4em;
+            font-size: 1.5em;
             color: var(--module-selection-text);
-            text-shadow: 0 0 20px rgba(150, 0, 255, 0.98); /* Stronger shadow */
-            margin-bottom: 25px;
+            text-shadow: 0 0 22px rgba(150, 0, 255, 0.98); /* Stronger shadow */
+            margin-bottom: 28px;
         }
 
         /* Specific resource display labels and colors */
@@ -394,145 +500,145 @@
             content: attr(data-label);
             color: var(--energy-color-high);
             border: 1px solid rgba(255, 255, 0, 0.98);
-            box-shadow: 0 0 25px rgba(255, 255, 0, 0.98); /* Stronger glow */
+            box-shadow: 0 0 28px rgba(255, 255, 0, 0.98); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -30px; left: 50px; font-size: 1.15em; background: rgba(0, 0, 0, 0.98); padding: 10px 25px; border-radius: 18px; font-weight: 700; letter-spacing: 2.5px; transform: translateY(-50%) translateZ(18px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
             color: var(--data-flow-color-high);
             border: 1px solid rgba(0, 255, 0, 0.98);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.98); /* Stronger glow */
+            box-shadow: 0 0 28px rgba(0, 255, 0, 0.98); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -30px; left: 50px; font-size: 1.15em; background: rgba(0, 0, 0, 0.98); padding: 10px 25px; border-radius: 18px; font-weight: 700; letter-spacing: 2.5px; transform: translateY(-50%) translateZ(18px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .raw-data-reserve-display::before {
             content: attr(data-label);
             color: var(--raw-data-text);
             border: 1px solid var(--raw-data-text);
-            box-shadow: 0 0 25px var(--raw-data-text); /* Stronger glow */
+            box-shadow: 0 0 28px var(--raw-data-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -30px; left: 50px; font-size: 1.15em; background: rgba(0, 0, 0, 0.98); padding: 10px 25px; border-radius: 18px; font-weight: 700; letter-spacing: 2.5px; transform: translateY(-50%) translateZ(18px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .processing-power-display::before { /* NEW */
             content: attr(data-label);
             color: var(--processing-power-text);
             border: 1px solid var(--processing-power-text);
-            box-shadow: 0 0 25px var(--processing-power-text); /* Stronger glow */
+            box-shadow: 0 0 28px var(--processing-power-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -30px; left: 50px; font-size: 1.15em; background: rgba(0, 0, 0, 0.98); padding: 10px 25px; border-radius: 18px; font-weight: 700; letter-spacing: 2.5px; transform: translateY(-50%) translateZ(18px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 40px; /* Taller bar */
+            height: 45px; /* Taller bar */
             background: var(--resource-bg);
-            border-radius: 20px;
+            border-radius: 22px;
             overflow: hidden;
-            box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.999);
-            border: 1px solid rgba(255,255,255,0.18);
+            box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.999);
+            border: 1px solid rgba(255,255,255,0.15);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.25) 0%, transparent 50%, rgba(255,255,255,0.25) 100%);
-            background-size: 400% 100%;
-            animation: resourceFlow 15s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.28) 0%, transparent 50%, rgba(255,255,255,0.28) 100%);
+            background-size: 450% 100%;
+            animation: resourceFlow 18s linear infinite;
             mix-blend-mode: overlay;
-            opacity: 0.8;
+            opacity: 0.85;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 400% 0; }
-            100% { background-position: -400% 0; }
+            0% { background-position: 450% 0; }
+            100% { background-position: -450% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 20px;
-            transition: width 2s cubic-bezier(0.25, 1, 0.5, 1), background 1.8s ease-out, box-shadow 1.8s ease-out;
-            box-shadow: 0 0 22px rgba(255, 255, 255, 0.85); /* Default */
+            border-radius: 22px;
+            transition: width 2.2s cubic-bezier(0.25, 1, 0.5, 1), background 2s ease-out, box-shadow 2s ease-out;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.85); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 25px rgba(255, 255, 0, 0.98); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 25px rgba(0, 255, 0, 0.98); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 25px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 25px var(--processing-power-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 28px rgba(255, 255, 0, 0.98); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 28px rgba(0, 255, 0, 0.98); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 28px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 28px var(--processing-power-text); } /* NEW */
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 40px; /* Taller */
-            background: rgba(255, 255, 255, 0.28); /* More subtle background */
-            border-radius: 20px;
+            height: 45px; /* Taller */
+            background: rgba(255, 255, 255, 0.3); /* More subtle background */
+            border-radius: 22px;
             outline: none;
-            transition: all 0.7s ease;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.999), 0 0 18px rgba(0,191,255,0.6); /* Inset for depth, subtle outer glow */
-            transform: translateZ(12px);
-            border: 1px solid rgba(255,255,255,0.18); /* More subtle border */
+            transition: all 0.8s ease;
+            box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.999), 0 0 20px rgba(0,191,255,0.7); /* Inset for depth, subtle outer glow */
+            transform: translateZ(14px);
+            border: 1px solid rgba(255,255,255,0.2); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 55px; /* Larger thumb */
-            height: 55px;
+            width: 60px; /* Larger thumb */
+            height: 60px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 40px var(--primary-glow);
-            transition: background 0.7s ease, box-shadow 0.7s ease, transform 0.7s ease;
-            border: 12px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 0 45px var(--primary-glow);
+            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease;
+            border: 14px solid rgba(255, 255, 255, 0.9);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 40px var(--primary-glow);
-            transition: background 0.7s ease, box-shadow 0.7s ease, transform 0.7s ease;
-            border: 12px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 0 45px var(--primary-glow);
+            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease;
+            border: 14px solid rgba(255, 255, 255, 0.9);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 55px var(--primary-glow), 0 0 28px var(--primary-glow) inset;
-            transform: scale(1.2); /* Reduced scale for smoother feel */
+            box-shadow: 0 0 60px var(--primary-glow), 0 0 30px var(--primary-glow) inset;
+            transform: scale(1.22); /* Reduced scale for smoother feel */
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 55px var(--primary-glow), 0 0 28px var(--primary-glow) inset;
-            transform: scale(1.2);
+            box-shadow: 0 0 60px var(--primary-glow), 0 0 30px var(--primary-glow) inset;
+            transform: scale(1.22);
         }
 
         /* Active Protocol Status Display */
         .system-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1.6em;
-            padding: 40px;
+            font-size: 1.7em;
+            padding: 45px;
             border: 1px solid var(--border-color);
-            border-radius: 40px;
+            border-radius: 45px;
             background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.55), inset 0 0 80px rgba(0, 255, 255, 0.35); /* More inner shadow */
+            box-shadow: inset 0 0 45px rgba(0, 255, 255, 0.6), inset 0 0 90px rgba(0, 255, 255, 0.4); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 0.8s ease;
-            line-height: 2;
-            letter-spacing: 2px;
+            transition: all 0.9s ease;
+            line-height: 2.1;
+            letter-spacing: 2.2px;
             color: var(--data-stream-text);
-            text-shadow: 0 0 25px rgba(0, 255, 255, 0.99); /* Stronger shadow */
+            text-shadow: 0 0 28px rgba(0, 255, 255, 0.99); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(33px);
+            transform: translateZ(35px);
             overflow: hidden;
         }
         .system-status-display::after {
@@ -542,7 +648,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(0,255,255,0.18), transparent);
+            background: linear-gradient(45deg, rgba(0,255,255,0.2) 0%, transparent 80%);
             mix-blend-mode: overlay;
             pointer-events: none;
         }
@@ -550,19 +656,19 @@
         .system-status-display::before {
             content: 'SYSTEM STATUS';
             position: absolute;
-            top: -30px;
-            left: 50px;
-            font-size: 1.15em;
+            top: -35px;
+            left: 55px;
+            font-size: 1.2em;
             color: var(--data-stream-text);
             background: rgba(0, 0, 0, 0.98);
-            padding: 10px 25px;
-            border-radius: 18px;
+            padding: 12px 28px;
+            border-radius: 20px;
             font-weight: 700;
-            letter-spacing: 2.5px;
-            transform: translateY(-50%) translateZ(18px);
+            letter-spacing: 2.8px;
+            transform: translateY(-50%) translateZ(20px);
             opacity: 0.99;
             border: 1px solid var(--data-stream-text);
-            box-shadow: 0 0 25px var(--data-stream-text); /* Stronger glow */
+            box-shadow: 0 0 28px var(--data-stream-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -570,24 +676,24 @@
         /* Data Stream Monitor */
         .data-stream-monitor {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.4em;
-            min-height: 350px;
+            font-size: 1.5em;
+            min-height: 380px;
             display: block;
-            padding: 50px;
+            padding: 55px;
             border: 1px solid var(--border-color);
-            border-radius: 40px;
+            border-radius: 45px;
             background: var(--data-stream-bg);
-            box-shadow: inset 0 0 55px rgba(0, 255, 255, 0.55), inset 0 0 100px rgba(0, 255, 255, 0.35); /* More inner shadow */
+            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.6), inset 0 0 110px rgba(0, 255, 255, 0.4); /* More inner shadow */
             text-align: left;
             overflow-y: auto;
-            max-height: 600px;
+            max-height: 650px;
             position: relative;
-            transition: all 0.8s ease;
-            line-height: 2;
-            letter-spacing: 1.5px;
+            transition: all 0.9s ease;
+            line-height: 2.1;
+            letter-spacing: 1.8px;
             font-weight: 300;
             color: var(--data-stream-text);
-            transform: translateZ(40px);
+            transform: translateZ(42px);
             display: flex; /* Make it a flex container */
             flex-direction: column-reverse; /* Stack new entries at the bottom, visualizer at top */
         }
@@ -603,8 +709,8 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.35) 1px,
-                rgba(0, 255, 255, 0.35) 8px
+                rgba(0, 255, 255, 0.4) 1px,
+                rgba(0, 255, 255, 0.4) 9px
             );
             pointer-events: none;
             mix-blend-mode: overlay;
@@ -612,7 +718,7 @@
         }
 
         .data-stream-monitor.active {
-            box-shadow: inset 0 0 65px var(--secondary-glow), 0 0 50px var(--secondary-glow), inset 0 0 120px rgba(255, 105, 180, 0.35); /* More active glow */
+            box-shadow: inset 0 0 70px var(--secondary-glow), 0 0 55px var(--secondary-glow), inset 0 0 130px rgba(255, 105, 180, 0.4); /* More active glow */
             border-color: rgba(255, 105, 180, 0.95);
         }
 
@@ -620,101 +726,101 @@
             position: sticky;
             top: 0; /* Stick to the top */
             background: linear-gradient(to bottom, var(--data-stream-bg) 0%, transparent 100%);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
             z-index: 1;
-            height: 80px; /* Visible area for visualizer */
+            height: 90px; /* Visible area for visualizer */
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border-bottom: 1px dashed rgba(0, 255, 255, 0.3);
-            transform: translateZ(5px);
+            border-bottom: 1px dashed rgba(0, 255, 255, 0.4);
+            transform: translateZ(8px);
         }
         .data-visualizer-wave { /* NEW */
             width: 100%;
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(0,255,255,0.05) 0%,
-                rgba(0,255,255,0.4) 15%,
-                rgba(0,255,255,0.05) 30%,
-                rgba(0,255,255,0.6) 45%,
-                rgba(0,255,255,0.05) 60%,
-                rgba(0,255,255,0.4) 75%,
-                rgba(0,255,255,0.05) 100%
+                rgba(0,255,255,0.08) 0%,
+                rgba(0,255,255,0.5) 15%,
+                rgba(0,255,255,0.08) 30%,
+                rgba(0,255,255,0.7) 45%,
+                rgba(0,255,255,0.08) 60%,
+                rgba(0,255,255,0.5) 75%,
+                rgba(0,255,255,0.08) 100%
             );
-            background-size: 200% 100%;
-            animation: dataWave 2.5s linear infinite;
-            filter: blur(2px) brightness(1.2);
-            opacity: 0.7;
+            background-size: 250% 100%;
+            animation: dataWave 2s linear infinite;
+            filter: blur(2.5px) brightness(1.3);
+            opacity: 0.75;
             mix-blend-mode: screen;
         }
 
         @keyframes dataWave {
             0% { background-position: 0% 0%; }
-            100% { background-position: -200% 0%; }
+            100% { background-position: -250% 0%; }
         }
 
 
         .log-entry {
-            margin-bottom: 20px;
-            animation: fadeInLog 1.3s ease-out;
+            margin-bottom: 22px;
+            animation: fadeInLog 1.5s ease-out;
             position: relative; /* For the small entry marker */
-            padding-left: 25px; /* Space for marker */
+            padding-left: 28px; /* Space for marker */
         }
         .log-entry::before { /* Small marker for each log entry */
             content: '›';
             position: absolute;
             left: 0;
             color: var(--data-stream-text);
-            text-shadow: 0 0 8px var(--data-stream-text);
-            font-size: 1.2em;
+            text-shadow: 0 0 9px var(--data-stream-text);
+            font-size: 1.3em;
         }
 
         @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(40px); }
+            from { opacity: 0; transform: translateY(45px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .log-entry.processing-glitch {
             color: var(--log-glitch-color);
             text-shadow:
-                1px 1px 10px var(--log-glitch-color),
-                -1px -1px 10px var(--log-glitch-color);
-            animation: glitchEffect 0.4s infinite alternate; /* Faster glitch */
+                1px 1px 12px var(--log-glitch-color),
+                -1px -1px 12px var(--log-glitch-color);
+            animation: glitchEffect 0.35s infinite alternate; /* Faster glitch */
         }
 
         @keyframes glitchEffect {
-            0% { transform: translateX(0); opacity: 1; text-shadow: 5px 0 var(--log-glitch-color), -5px 0 var(--log-glitch-color); }
-            25% { transform: translateX(10px); opacity: 0.3; text-shadow: -10px 0 var(--log-glitch-color), 10px 0 var(--log-glitch-color); }
-            50% { transform: translateX(-10px); opacity: 0.9; text-shadow: 12px 0 var(--log-glitch-color), -12px 0 var(--log-glitch-color); }
-            75% { transform: translateX(7px); opacity: 0.6; text-shadow: -8px 0 var(--log-glitch-color), 8px 0 var(--log-glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -7px 0 var(--log-glitch-color), 7px 0 var(--log-glitch-color); }
+            0% { transform: translateX(0); opacity: 1; text-shadow: 6px 0 var(--log-glitch-color), -6px 0 var(--log-glitch-color); }
+            25% { transform: translateX(12px); opacity: 0.25; text-shadow: -12px 0 var(--log-glitch-color), 12px 0 var(--log-glitch-color); }
+            50% { transform: translateX(-12px); opacity: 0.95; text-shadow: 14px 0 var(--log-glitch-color), -14px 0 var(--log-glitch-color); }
+            75% { transform: translateX(8px); opacity: 0.65; text-shadow: -9px 0 var(--log-glitch-color), 9px 0 var(--log-glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -8px 0 var(--log-glitch-color), 8px 0 var(--log-glitch-color); }
         }
 
         .button-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 50px; /* Increased gap */
+            gap: 55px; /* Increased gap */
             justify-content: center;
-            margin-top: 80px;
-            transform: translateZ(45px);
+            margin-top: 90px;
+            transform: translateZ(48px);
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
             color: #050510;
             border: none;
-            padding: 30px 70px;
-            font-size: 1.7em;
+            padding: 32px 75px;
+            font-size: 1.8em;
             font-weight: 700;
-            border-radius: 75px;
+            border-radius: 80px;
             cursor: pointer;
             outline: none;
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 22px 65px rgba(135, 206, 250, 0.98);
-            letter-spacing: 3.5px;
+            transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 25px 70px rgba(135, 206, 250, 0.98);
+            letter-spacing: 3.8px;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -729,126 +835,138 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 1s ease, height 1s ease;
+            transition: width 1.1s ease, height 1.1s ease;
             z-index: -1;
             opacity: 0;
         }
 
         button:hover::before {
-            width: 550%;
-            height: 550%;
+            width: 600%;
+            height: 600%;
             opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-25px) scale(1.15); /* Slightly less aggressive scale */
-            box-shadow: 0 35px 100px rgba(135, 206, 250, 1.2), 0 0 70px var(--accent-color);
+            transform: translateY(-28px) scale(1.18); /* Slightly less aggressive scale */
+            box-shadow: 0 40px 110px rgba(135, 206, 250, 1.3), 0 0 75px var(--accent-color);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.7);
+            filter: brightness(1.8);
         }
 
         button:active {
-            transform: translateY(-18px) scale(0.98);
-            box-shadow: 0 20px 65px rgba(135, 206, 250, 0.95);
+            transform: translateY(-20px) scale(0.97);
+            box-shadow: 0 22px 70px rgba(135, 206, 250, 0.95);
         }
 
         button:disabled {
-            opacity: 0.3;
+            opacity: 0.35;
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
-            filter: grayscale(1) brightness(0.6);
+            filter: grayscale(1) brightness(0.65);
             background: linear-gradient(90deg, #333 0%, #555 100%) !important;
             color: #aaa !important;
         }
 
         #formulate-protocol-button {
             background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%); /* Deep Pink */
-            box-shadow: 0 22px 65px var(--formulate-btn-glow);
+            box-shadow: 0 25px 70px var(--formulate-btn-glow);
             color: white;
         }
         #formulate-protocol-button:hover {
             background: linear-gradient(90deg, #C71585 0%, #FF1493 100%);
-            box-shadow: 0 35px 100px var(--formulate-btn-glow), 0 0 70px var(--formulate-btn-glow);
+            box-shadow: 0 40px 110px var(--formulate-btn-glow), 0 0 75px var(--formulate-btn-glow);
             color: white;
         }
 
         #refine-protocol-button { /* NEW BUTTON */
             background: linear-gradient(90deg, #FFD700 0%, #FFFF00 100%); /* Gold to Yellow */
-            box-shadow: 0 22px 65px var(--refine-btn-glow);
+            box-shadow: 0 25px 70px var(--refine-btn-glow);
             color: #050510;
         }
         #refine-protocol-button:hover {
             background: linear-gradient(90deg, #FFFF00 0%, #FFD700 100%);
-            box-shadow: 0 35px 100px var(--refine-btn-glow), 0 0 70px var(--refine-btn-glow);
+            box-shadow: 0 40px 110px var(--refine-btn-glow), 0 0 75px var(--refine-btn-glow);
             color: #000;
-            filter: brightness(1.8);
+            filter: brightness(1.9);
+        }
+
+        #run-predictive-analysis-button { /* NEW BUTTON */
+            background: linear-gradient(90deg, #00FF7F 0%, #3CB371 100%); /* Spring Green to Medium Sea Green */
+            box-shadow: 0 25px 70px var(--predictive-btn-glow);
+            color: #050510;
+        }
+        #run-predictive-analysis-button:hover {
+            background: linear-gradient(90deg, #3CB371 0%, #00FF7F 100%);
+            box-shadow: 0 40px 110px var(--predictive-btn-glow), 0 0 75px var(--predictive-btn-glow);
+            color: white;
+            filter: brightness(1.9);
         }
 
 
         #integrate-protocol-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
-            box-shadow: 0 22px 65px rgba(0, 255, 255, 0.98);
+            box-shadow: 0 25px 70px rgba(0, 255, 255, 0.98);
             color: #050510;
         }
         #integrate-protocol-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 35px 100px rgba(0, 255, 255, 1.2), 0 0 70px #00FFFF;
+            box-shadow: 0 40px 110px rgba(0, 255, 255, 1.3), 0 0 75px #00FFFF;
             color: white;
         }
 
         #tune-active-protocol-button {
             background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 22px 65px var(--tune-btn-glow);
+            box-shadow: 0 25px 70px var(--tune-btn-glow);
             color: #050510;
         }
         #tune-active-protocol-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 35px 100px var(--tune-btn-glow), 0 0 70px var(--tune-btn-glow);
+            box-shadow: 0 40px 110px var(--tune-btn-glow), 0 0 75px var(--tune-btn-glow);
             color: white;
         }
 
         #deactivate-protocol-button {
             background: linear-gradient(90deg, #800080 0%, #9400D3 100%); /* Purple */
-            box-shadow: 0 22px 65px rgba(128, 0, 128, 0.98);
+            box-shadow: 0 25px 70px rgba(128, 0, 128, 0.98);
             color: white;
         }
         #deactivate-protocol-button:hover {
             background: linear-gradient(90deg, #9400D3 0%, #800080 100%);
-            box-shadow: 0 35px 100px rgba(128, 0, 128, 1.2), 0 0 70px #800080;
+            box-shadow: 0 40px 110px rgba(128, 0, 128, 1.3), 0 0 75px #800080;
             color: white;
         }
         
         #recalibrate-core-button {
             background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
-            box-shadow: 0 22px 65px rgba(255, 99, 71, 0.98);
+            box-shadow: 0 25px 70px rgba(255, 99, 71, 0.98);
             color: white;
         }
 
         #recalibrate-core-button:hover {
             background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
-            box-shadow: 0 35px 100px rgba(255, 99, 71, 1.2), 0 0 70px #FF6347;
+            box-shadow: 0 40px 110px rgba(255, 99, 71, 1.3), 0 0 75px #FF6347;
             color: white;
         }
 
         /* NEW BUTTON STYLE */
         #calibrate-signal-array-button { /* Replaced #optimize-receptors-button */
             background: linear-gradient(90deg, #6A5ACD 0%, #BA55D3 100%); /* Slate Blue to Orchid */
-            box-shadow: 0 22px 65px var(--calibrate-btn-glow);
+            box-shadow: 0 25px 70px var(--calibrate-btn-glow);
             color: white;
         }
         #calibrate-signal-array-button:hover {
             background: linear-gradient(90deg, #BA55D3 0%, #6A5ACD 100%);
-            box-shadow: 0 35px 100px var(--calibrate-btn-glow), 0 0 70px var(--calibrate-btn-glow);
+            box-shadow: 0 40px 110px var(--calibrate-btn-glow), 0 0 75px var(--calibrate-btn-glow);
             color: white;
-            filter: brightness(1.7);
+            filter: brightness(1.8);
         }
 
-        /* Anomaly Alert Overlay - NEW */
+        /* Anomaly Alert Overlay */
         .anomaly-alert-overlay {
             position: absolute;
             top: 0;
@@ -856,21 +974,21 @@
             width: 100%;
             height: 100%;
             background: var(--anomaly-bg);
-            border: 5px solid var(--anomaly-border);
-            border-radius: 95px; /* Match container border radius */
+            border: 6px solid var(--anomaly-border);
+            border-radius: 100px; /* Match container border radius */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 45px;
             z-index: 100; /* Above everything else in container */
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-            backdrop-filter: blur(50px) brightness(1.2);
-            -webkit-backdrop-filter: blur(50px) brightness(1.2);
-            box-shadow: 0 0 100px var(--anomaly-color), inset 0 0 80px var(--anomaly-color);
-            transform: translateZ(200px); /* Bring it forward in 3D */
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+            backdrop-filter: blur(60px) brightness(1.3);
+            -webkit-backdrop-filter: blur(60px) brightness(1.3);
+            box-shadow: 0 0 110px var(--anomaly-color), inset 0 0 90px var(--anomaly-color);
+            transform: translateZ(220px); /* Bring it forward in 3D */
         }
         .anomaly-alert-overlay.active {
             opacity: 1;
@@ -878,64 +996,64 @@
         }
         .anomaly-alert-overlay h2 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5em;
+            font-size: 4em;
             color: var(--anomaly-color);
-            text-shadow: 0 0 40px var(--anomaly-color), 0 0 60px rgba(255, 69, 0, 0.7);
-            letter-spacing: 5px;
-            animation: textPulse 1.2s infinite alternate;
+            text-shadow: 0 0 45px var(--anomaly-color), 0 0 70px rgba(255, 69, 0, 0.8);
+            letter-spacing: 6px;
+            animation: textPulse 1s infinite alternate;
         }
         .anomaly-alert-overlay p {
-            font-size: 1.8em;
+            font-size: 1.9em;
             color: var(--text-color);
-            max-width: 80%;
-            opacity: 0.9;
-            text-shadow: 0 0 15px rgba(255,255,255,0.5);
+            max-width: 85%;
+            opacity: 0.95;
+            text-shadow: 0 0 18px rgba(255,255,255,0.6);
         }
         .anomaly-alert-overlay button { /* Specific button for anomaly */
             background: linear-gradient(90deg, var(--anomaly-color) 0%, #FF8C00 100%); /* OrangeRed to DarkOrange */
-            box-shadow: 0 20px 60px var(--anomaly-color);
+            box-shadow: 0 22px 65px var(--anomaly-color);
             color: white;
-            padding: 25px 60px;
-            font-size: 1.5em;
+            padding: 28px 65px;
+            font-size: 1.6em;
         }
         .anomaly-alert-overlay button:hover {
             background: linear-gradient(90deg, #FF8C00 0%, var(--anomaly-color) 100%);
-            box-shadow: 0 32px 95px var(--anomaly-color), 0 0 65px var(--anomaly-color);
-            filter: brightness(1.5);
+            box-shadow: 0 35px 100px var(--anomaly-color), 0 0 70px var(--anomaly-color);
+            filter: brightness(1.6);
         }
         @keyframes textPulse {
             from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1.03); opacity: 0.9; }
+            to { transform: scale(1.04); opacity: 0.92; }
         }
 
 
         .stability-level-container {
             width: 100%;
-            height: 55px; /* Taller */
+            height: 60px; /* Taller */
             background: rgba(0, 0, 0, 0.9);
-            border-radius: 28px;
-            margin-top: 80px;
+            border-radius: 30px;
+            margin-top: 90px;
             overflow: hidden;
-            box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.999);
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.999);
             position: relative;
             border: 1px solid var(--border-color);
-            transform: translateZ(33px);
+            transform: translateZ(35px);
         }
 
         .stability-level-bar {
             height: 100%;
             width: 70%;
             background: var(--stability-good);
-            border-radius: 28px;
-            transition: width 2.5s cubic-bezier(0.2, 0.8, 0.2, 1), background 2.2s ease-out, box-shadow 2.2s ease-out;
-            box-shadow: 0 0 50px rgba(102, 255, 102, 0.99);
+            border-radius: 30px;
+            transition: width 2.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 2.5s ease-out, box-shadow 2.5s ease-out;
+            box-shadow: 0 0 55px rgba(102, 255, 102, 0.99);
             position: relative;
-            animation: barGlow 8s infinite alternate; /* Slower glow */
+            animation: barGlow 9s infinite alternate; /* Slower glow */
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 45px rgba(102, 255, 102, 0.98); }
-            100% { box-shadow: 0 0 65px rgba(102, 255, 102, 1.08), 0 0 28px rgba(255,255,255,0.88) inset; }
+            0% { box-shadow: 0 0 50px rgba(102, 255, 102, 0.98); }
+            100% { box-shadow: 0 0 70px rgba(102, 255, 102, 1.1), 0 0 30px rgba(255,255,255,0.9) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -947,38 +1065,38 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.95) 0%,
-                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0.98) 0%,
+                rgba(255, 255, 255, 0.65) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 28px;
+            border-radius: 30px;
         }
 
         .status-text {
-            font-size: 1.7em;
-            margin-top: 40px;
+            font-size: 1.8em;
+            margin-top: 45px;
             opacity: 0.99;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 3.5px;
+            letter-spacing: 3.8px;
             color: var(--accent-color);
-            text-shadow: 0 0 25px var(--primary-glow);
+            text-shadow: 0 0 28px var(--primary-glow);
             font-weight: 700;
-            transform: translateZ(33px);
+            transform: translateZ(35px);
         }
 
         footer {
-            margin-top: 150px;
-            font-size: 1.3em;
+            margin-top: 160px;
+            font-size: 1.4em;
             color: rgba(255, 255, 255, 0.98);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 3px;
-            padding-top: 80px;
+            letter-spacing: 3.2px;
+            padding-top: 90px;
             border-top: 1px dashed var(--border-color);
-            text-shadow: 0 0 20px var(--secondary-glow);
+            text-shadow: 0 0 22px var(--secondary-glow);
             position: relative;
-            line-height: 2.2;
-            transform: translateZ(25px);
+            line-height: 2.3;
+            transform: translateZ(28px);
         }
         
         footer::before {
@@ -991,96 +1109,100 @@
             height: 1px;
             background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 90%);
             opacity: 0.98;
-            filter: blur(40px);
+            filter: blur(45px);
         }
 
         @media (max-width: 1000px) {
             .container {
-                margin: 30px;
-                padding: 70px;
-                gap: 60px;
-                border-radius: 65px;
+                margin: 35px;
+                padding: 75px;
+                gap: 70px;
+                border-radius: 70px;
                 max-width: 98%;
             }
             h1 {
-                font-size: 3.8em;
-                letter-spacing: 7px;
-                margin-bottom: 45px;
+                font-size: 4em;
+                letter-spacing: 8px;
+                margin-bottom: 50px;
             }
             h1::after {
-                bottom: -30px;
-                height: 7px;
+                bottom: -35px;
+                height: 8px;
             }
             p {
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
             .data-stream-monitor {
-                font-size: 1.1em;
-                min-height: 250px;
-                padding: 35px;
+                font-size: 1.2em;
+                min-height: 280px;
+                padding: 40px;
             }
             button {
-                padding: 25px 50px;
-                font-size: 1.4em;
-                border-radius: 60px;
-                letter-spacing: 2px;
+                padding: 28px 55px;
+                font-size: 1.5em;
+                border-radius: 65px;
+                letter-spacing: 2.2px;
             }
             .button-group {
                 flex-direction: column;
-                gap: 30px;
+                gap: 35px;
             }
             input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 40px;
-                height: 40px;
-                border: 7px solid rgba(255, 255, 255, 0.7);
+                width: 45px;
+                height: 45px;
+                border: 8px solid rgba(255, 255, 255, 0.75);
             }
             input[type="range"] {
-                height: 28px;
-                border-radius: 14px;
+                height: 32px;
+                border-radius: 16px;
             }
             .system-status-display {
-                font-size: 1.35em;
-                padding: 28px;
+                font-size: 1.4em;
+                padding: 30px;
             }
             .resource-display-container {
                 grid-template-columns: 1fr; /* Stack vertically on smaller screens */
-                gap: 35px;
+                gap: 40px;
             }
             .param-label {
                 align-items: flex-start; /* Keep left alignment for better readability */
             }
             .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
-            .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, .system-status-display::before {
-                top: -22px;
-                left: 35px;
-                font-size: 1em;
-                padding: 7px 18px;
+            .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
+            .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before {
+                top: -25px;
+                left: 40px;
+                font-size: 1.05em;
+                padding: 8px 20px;
             }
             .resource-level-bar-container {
-                height: 30px;
+                height: 35px;
             }
             .stability-level-container {
-                height: 40px;
+                height: 45px;
             }
             .status-text {
-                font-size: 1.4em;
-                margin-top: 30px;
-                letter-spacing: 2.5px;
+                font-size: 1.5em;
+                margin-top: 35px;
+                letter-spacing: 2.8px;
             }
             footer {
-                margin-top: 90px;
-                font-size: 1.1em;
-                padding-top: 50px;
+                margin-top: 100px;
+                font-size: 1.2em;
+                padding-top: 55px;
             }
             .anomaly-alert-overlay h2 {
-                font-size: 2.5em;
+                font-size: 2.8em;
             }
             .anomaly-alert-overlay p {
-                font-size: 1.4em;
+                font-size: 1.5em;
             }
             .anomaly-alert-overlay button {
-                padding: 20px 45px;
-                font-size: 1.3em;
+                padding: 22px 50px;
+                font-size: 1.4em;
+            }
+            .sub-protocol-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1126,11 +1248,20 @@
                 </div>
             </div>
 
-            <!-- NEW: Signal Array Calibration (replaces Environmental Data Receptors) -->
+            <!-- Signal Array Calibration -->
             <div class="signal-array-calibration-module" data-label="SIGNAL ARRAY CALIBRATION">
-                <p style="font-size: 1.15em; opacity: 0.95; margin-bottom: 28px; color: var(--signal-array-text);">Adjust signal frequency bands and amplitude gains. Optimal calibration enhances data acquisition and processing efficiency, but extreme settings can induce instability.</p>
+                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--signal-array-text);">Adjust signal frequency bands and amplitude gains. Optimal calibration enhances data acquisition and processing efficiency, but extreme settings can induce instability.</p>
                 <div id="signal-array-calibrators-container">
                     <!-- Calibrators will be dynamically rendered here -->
+                </div>
+            </div>
+
+            <!-- NEW: Predictive Analysis Engine -->
+            <div class="predictive-analysis-module" data-label="PREDICTIVE ANALYSIS ENGINE">
+                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--predictive-text);">Simulate protocol integration or system recalibration. Generates a temporary projection of expected stability, resource impact, and potential risks without committing changes.</p>
+                <button id="run-predictive-analysis-button" style="margin: 0 auto; width: fit-content; margin-top: 15px;">Run Predictive Analysis</button>
+                <div id="predictive-results" class="predictive-results" style="display: none;">
+                    <!-- Results displayed here -->
                 </div>
             </div>
 
@@ -1143,12 +1274,20 @@
                 <p><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
                 <p><strong>Raw Data Cost:</strong> <span id="formulated-protocol-raw-data-cost">N/A</span></p>
                 <p><strong>Processing Power Cost:</strong> <span id="formulated-protocol-processing-power-cost">N/A</span></p>
-                <p style="font-size: 1.1em; opacity: 0.88; margin-top: 28px;" id="formulated-protocol-description">Acquire Raw Data and formulate a protocol to see its details here.</p>
+                <p style="font-size: 1.1em; opacity: 0.88; margin-top: 30px;" id="formulated-protocol-description">Acquire Raw Data and formulate a protocol to see its details here.</p>
             </div>
 
             <!-- Deployed Protocol Parameters (now for tuning ACTIVE protocols) -->
             <div class="deployed-protocol-parameters" data-label="ACTIVE PROTOCOL TUNING" style="display: none;">
                 <p style="text-align: center; opacity: 0.88;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>
+            </div>
+
+            <!-- NEW: Sub-Protocol Augmentation System -->
+            <div class="sub-protocol-augmentation-module" data-label="SUB-PROTOCOL AUGMENTATION">
+                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--augmentation-text);">Deploy minor, specialized sub-protocols to fine-tune system behavior. Each active module incurs a continuous resource cost.</p>
+                <div id="sub-protocol-grid" class="sub-protocol-grid">
+                    <!-- Sub-protocol cards dynamically rendered here -->
+                </div>
             </div>
 
             <div class="system-status-display" id="system-status">
@@ -1179,13 +1318,13 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 29.5 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 30.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
         // DOM Elements
-        const signalArrayCalibratorsContainer = document.getElementById('signal-array-calibrators-container'); // RENAMED
+        const signalArrayCalibratorsContainer = document.getElementById('signal-array-calibrators-container');
         const formulatedProtocolDetailsContainer = document.getElementById('formulated-protocol-details');
         const formulatedProtocolNameSpan = document.getElementById('formulated-protocol-name');
         const formulatedProtocolIDSpan = document.getElementById('formulated-protocol-id');
@@ -1193,7 +1332,7 @@
         const formulatedProtocolComplexitySpan = document.getElementById('formulated-protocol-complexity');
         const formulatedProtocolStabilityRiskSpan = document.getElementById('formulated-protocol-stability-risk');
         const formulatedProtocolRawDataCostSpan = document.getElementById('formulated-protocol-raw-data-cost');
-        const formulatedProtocolProcessingPowerCostSpan = document.getElementById('formulated-protocol-processing-power-cost'); // NEW
+        const formulatedProtocolProcessingPowerCostSpan = document.getElementById('formulated-protocol-processing-power-cost');
         const formulatedProtocolDescription = document.getElementById('formulated-protocol-description');
         const deployedProtocolParametersContainer = document.getElementById('deployed-protocol-parameters');
         const systemStatusDisplay = document.getElementById('system-status');
@@ -1204,12 +1343,12 @@
 
         // Buttons
         const formulateProtocolButton = document.getElementById('formulate-protocol-button');
-        const refineProtocolButton = document.getElementById('refine-protocol-button'); // NEW BUTTON
+        const refineProtocolButton = document.getElementById('refine-protocol-button');
         const integrateProtocolButton = document.getElementById('integrate-protocol-button');
         const tuneActiveProtocolButton = document.getElementById('tune-active-protocol-button');
         const deactivateProtocolButton = document.getElementById('deactivate-protocol-button');
         const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
-        const calibrateSignalArrayButton = document.getElementById('calibrate-signal-array-button'); // RENAMED BUTTON
+        const calibrateSignalArrayButton = document.getElementById('calibrate-signal-array-button');
 
         // Resource & Status Displays
         const stabilityLevelBar = document.getElementById('stability-level-bar');
@@ -1220,39 +1359,95 @@
         const rawDataValueSpan = document.getElementById('raw-data-value');
         const dataFlowLevelBar = document.getElementById('data-flow-level-bar');
         const dataFlowValueSpan = document.getElementById('data-flow-value');
-        const processingPowerLevelBar = document.getElementById('processing-power-level-bar'); // NEW
-        const processingPowerValueSpan = document.getElementById('processing-power-value'); // NEW
+        const processingPowerLevelBar = document.getElementById('processing-power-level-bar');
+        const processingPowerValueSpan = document.getElementById('processing-power-value');
 
-        // Anomaly Elements - NEW
+        // Anomaly Elements
         const anomalyAlertOverlay = document.getElementById('anomaly-alert-overlay');
         const anomalyTitle = document.getElementById('anomaly-title');
         const anomalyDescription = document.getElementById('anomaly-description');
         const resolveAnomalyButton = document.getElementById('resolve-anomaly-button');
+
+        // NEW: Predictive Analysis Elements
+        const predictiveAnalysisModule = document.getElementById('predictive-analysis-module');
+        const runPredictiveAnalysisButton = document.getElementById('run-predictive-analysis-button');
+        const predictiveResultsDiv = document.getElementById('predictive-results');
+
+        // NEW: Sub-Protocol Augmentation Elements
+        const subProtocolAugmentationModule = document.getElementById('sub-protocol-augmentation-module');
+        const subProtocolGrid = document.getElementById('sub-protocol-grid');
+
 
         // System State Variables
         let currentSystemStability = 70;
         let currentEnergy = 100; // Max 100
         let currentRawData = 0; // Max 500
         let currentDataFlow = 50; // Max 100
-        let currentProcessingPower = 100; // NEW: Max 100
+        let currentProcessingPower = 100; // Max 100
 
         let isProcessing = false;
         let formulatedProtocol = null;
         let activeProtocol = null;
-        let anomalyActive = false; // NEW
-        let currentAnomaly = null; // NEW
+        let anomalyActive = false;
+        let currentAnomaly = null;
+        let predictiveAnalysisActive = false; // NEW
 
-        // Signal Array Components (Replaces Environmental Receptors) - NEW structure
+        // Signal Array Components
         const signalArrayComponents = [
             { id: 'frequency-band', label: 'Frequency Band', value: 50, min: 0, max: 100, dataRateFactor: 0.15, powerLoadFactor: 0.08, stabilityVariance: 0.05 },
             { id: 'amplitude-gain', label: 'Amplitude Gain', value: 50, min: 0, max: 100, dataRateFactor: 0.18, powerLoadFactor: 0.10, stabilityVariance: 0.07 },
             { id: 'signal-coherence', label: 'Signal Coherence', value: 50, min: 0, max: 100, dataRateFactor: 0.10, powerLoadFactor: 0.06, stabilityVariance: 0.04 }
         ];
 
+        // NEW: Sub-Protocols
+        const subProtocols = [
+            {
+                id: 'data-compression-unit',
+                name: 'Data Compression Unit',
+                description: 'Reduces Raw Data storage footprint. Increases Raw Data collection speed slightly.',
+                isActive: false,
+                costPerTick: { energy: 0.1, processingPower: 0.05 },
+                impactPerTick: { rawDataPerTick: 0.8 } // Effectively makes rawData collection more efficient
+            },
+            {
+                id: 'stability-reinforcer',
+                name: 'Stability Reinforcer',
+                description: 'Applies minor field corrections to enhance core stability over time.',
+                isActive: false,
+                costPerTick: { energy: 0.2, processingPower: 0.1 },
+                impactPerTick: { stability: 0.05 }
+            },
+            {
+                id: 'flow-accelerator',
+                name: 'Data Flow Accelerator',
+                description: 'Optimizes data routing for increased throughput, boosting Data Flow Index.',
+                isActive: false,
+                costPerTick: { energy: 0.15, processingPower: 0.15 },
+                impactPerTick: { dataFlow: 0.08 }
+            },
+            {
+                id: 'processing-booster',
+                name: 'Processing Booster',
+                description: 'Temporarily overclocks processing cores for a small boost to Processing Power.',
+                isActive: false,
+                costPerTick: { energy: 0.25, processingPower: 0.08 },
+                impactPerTick: { processingPower: 0.06 }
+            },
+            {
+                id: 'anomaly-sensor-suite',
+                name: 'Anomaly Sensor Suite',
+                description: 'Increases anomaly detection chance, but also gives a slight chance to resolve automatically.',
+                isActive: false,
+                costPerTick: { energy: 0.1, processingPower: 0.07 },
+                impactPerTick: { anomalyChanceModifier: -0.2, autoResolveChance: 0.005 } // Modified by negative, so it reduces spawn chance, also a small auto-resolve chance
+            }
+        ];
+
+
         const MAX_ENERGY = 100;
-        const MAX_RAW_DATA = 600; // Slightly increased
+        const MAX_RAW_DATA = 600;
         const MAX_DATA_FLOW = 100;
-        const MAX_PROCESSING_POWER = 100; // NEW
+        const MAX_PROCESSING_POWER = 100;
 
         // --- Utility Functions ---
         function updateAllDisplays() {
@@ -1260,7 +1455,7 @@
             updateEnergyDisplay();
             updateRawDataDisplay();
             updateDataFlowDisplay();
-            updateProcessingPowerDisplay(); // NEW
+            updateProcessingPowerDisplay();
             updateButtonStates();
         }
 
@@ -1271,15 +1466,15 @@
 
             if (currentSystemStability < 25) {
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
-                stabilityLevelBar.style.boxShadow = `0 0 45px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 15px rgba(255,255,255,0.5)`;
+                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentSystemStability < 55) {
                 stabilityLevelBar.style.background = 'var(--stability-warning)';
-                stabilityLevelBar.style.boxShadow = `0 0 45px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 15px rgba(255,255,255,0.5)`;
+                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 stabilityLevelBar.style.background = 'var(--stability-good)';
-                stabilityLevelBar.style.boxShadow = `0 0 45px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 15px rgba(255,255,255,0.5)`;
+                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
             }
         }
@@ -1291,15 +1486,15 @@
             
             if (currentEnergy < 30) {
                 energyLevelBar.style.background = 'var(--energy-color-low)';
-                energyLevelBar.style.boxShadow = `0 0 25px rgba(255,0,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,0,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentEnergy < 60) {
                 energyLevelBar.style.background = 'var(--energy-color-medium)';
-                energyLevelBar.style.boxShadow = `0 0 25px rgba(255,204,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,204,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 energyLevelBar.style.background = 'var(--energy-color-high)';
-                energyLevelBar.style.boxShadow = `0 0 25px rgba(255,255,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,255,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--energy-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
@@ -1311,15 +1506,15 @@
             
             if (currentRawData < MAX_RAW_DATA * 0.2) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
-                rawDataLevelBar.style.boxShadow = `0 0 25px rgba(120,144,156,0.98)`;
+                rawDataLevelBar.style.boxShadow = `0 0 28px rgba(120,144,156,0.98)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-color-low').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             } else if (currentRawData < MAX_RAW_DATA * 0.6) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-medium)';
-                rawDataLevelBar.style.boxShadow = `0 0 25px rgba(255,215,0,0.98)`;
+                rawDataLevelBar.style.boxShadow = `0 0 28px rgba(255,215,0,0.98)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-high)';
-                rawDataLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                rawDataLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
             }
         }
@@ -1331,20 +1526,19 @@
 
             if (currentDataFlow < 30) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-low)';
-                dataFlowLevelBar.style.boxShadow = `0 0 25px rgba(255,99,71,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(255,99,71,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentDataFlow < 60) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-medium)';
-                dataFlowLevelBar.style.boxShadow = `0 0 25px rgba(0,255,255,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(0,255,255,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-stream-text').trim();
             } else {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-high)';
-                dataFlowLevelBar.style.boxShadow = `0 0 25px rgba(0,255,0,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(0,255,0,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-flow-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
 
-        // NEW: Update Processing Power Display
         function updateProcessingPowerDisplay() {
             currentProcessingPower = Math.max(0, Math.min(MAX_PROCESSING_POWER, currentProcessingPower));
             processingPowerLevelBar.style.width = `${currentProcessingPower}%`;
@@ -1352,15 +1546,15 @@
 
             if (currentProcessingPower < 30) {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-low)';
-                processingPowerLevelBar.style.boxShadow = `0 0 25px rgba(75,0,130,0.98)`; /* Indigo shadow */
+                processingPowerLevelBar.style.boxShadow = `0 0 28px rgba(75,0,130,0.98)`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentProcessingPower < 60) {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-medium)';
-                processingPowerLevelBar.style.boxShadow = `0 0 25px rgba(218,112,214,0.98)`; /* Dark Orchid shadow */
+                processingPowerLevelBar.style.boxShadow = `0 0 28px rgba(218,112,214,0.98)`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-high)';
-                processingPowerLevelBar.style.boxShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
+                processingPowerLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
             }
         }
@@ -1374,48 +1568,47 @@
                 logEntry.classList.add('processing-glitch');
             } else if (type === 'warning') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
             } else if (type === 'critical') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-                logEntry.style.textShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                logEntry.style.textShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
                 logEntry.style.fontWeight = 'bold';
             } else if (type === 'optimal') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
-                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
+                logEntry.style.textShadow = `0 0 14px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
             } else if (type === 'info') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
                 logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim();
             } else if (type === 'rawdata') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
-                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
             } else if (type === 'event') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--event-color').trim();
                 logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim();
                 logEntry.style.fontWeight = 'bold';
-            } else if (type === 'processing') { // NEW
+            } else if (type === 'processing') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
-                logEntry.style.textShadow = `0 0 10px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
+                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
             }
-            // To ensure the visualizer stays at the top, we need to append after the visualizer div
             const visualizer = dataStreamMonitor.querySelector('.data-visualizer');
             if (visualizer) {
-                dataStreamMonitor.insertBefore(logEntry, visualizer.nextSibling); // Insert after the visualizer
+                dataStreamMonitor.insertBefore(logEntry, visualizer.nextSibling);
             } else {
                 dataStreamMonitor.appendChild(logEntry);
             }
 
-            if (dataStreamMonitor.children.length > 35) { // Keep log concise, slightly more
+            if (dataStreamMonitor.children.length > 40) { // Keep log concise, slightly more
                 dataStreamMonitor.removeChild(dataStreamMonitor.lastChild);
             }
-            dataStreamMonitor.scrollTop = dataStreamMonitor.scrollHeight; // Scroll to bottom for latest entries
+            dataStreamMonitor.scrollTop = dataStreamMonitor.scrollHeight;
             dataStreamMonitor.classList.add('active');
             clearTimeout(dataStreamMonitor.activeTimeout);
             dataStreamMonitor.activeTimeout = setTimeout(() => {
                 dataStreamMonitor.classList.remove('active');
-            }, 1800); // Longer active time
+            }, 2000); // Longer active time
         }
 
-        // NEW: Render Signal Array Calibrators
+        // Render Signal Array Calibrators
         function renderSignalArrayCalibrators() {
             signalArrayCalibratorsContainer.innerHTML = '';
             signalArrayComponents.forEach(calibrator => {
@@ -1483,29 +1676,61 @@
             deployedProtocolParametersContainer.style.display = 'flex';
         }
 
+        // NEW: Render Sub-Protocols
+        function renderSubProtocols() {
+            subProtocolGrid.innerHTML = '';
+            subProtocols.forEach(sp => {
+                const card = document.createElement('div');
+                card.classList.add('sub-protocol-card');
+                if (sp.isActive) card.classList.add('active');
+                card.id = `sub-protocol-${sp.id}`;
+
+                let costBenefitText = '';
+                for (const key in sp.costPerTick) {
+                    costBenefitText += `Cost: ${key} -${sp.costPerTick[key].toFixed(2)}/s | `;
+                }
+                for (const key in sp.impactPerTick) {
+                    costBenefitText += `Effect: ${key} ${sp.impactPerTick[key] > 0 ? '+' : ''}${sp.impactPerTick[key].toFixed(2)}/s | `;
+                }
+                costBenefitText = costBenefitText.slice(0, -3); // Remove trailing " | "
+
+                card.innerHTML = `
+                    <h4>${sp.name}</h4>
+                    <p>${sp.description}</p>
+                    <div class="cost-benefit">${costBenefitText}</div>
+                `;
+                card.addEventListener('click', () => toggleSubProtocol(sp.id));
+                subProtocolGrid.appendChild(card);
+            });
+        }
+
         function updateButtonStates() {
-            const FORMULATION_ENERGY_COST = 15; // Increased
-            const FORMULATION_PROCESSING_POWER_COST = 8; // NEW
-            const INTEGRATION_ENERGY_COST = 10; // Increased
-            const INTEGRATION_PROCESSING_POWER_COST = 5; // NEW
-            const TUNE_BASE_ENERGY_COST = 12; // Increased
-            const TUNE_BASE_PROCESSING_POWER_COST = 7; // NEW
-            const RECALIBRATE_ENERGY_COST = 30; // Increased
-            const RECALIBRATE_PROCESSING_POWER_COST = 15; // NEW
-            const CALIBRATE_SIGNAL_ARRAY_ENERGY_COST = 20; // RENAMED
-            const CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST = 100; // RENAMED
-            const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 15; // NEW
+            const FORMULATION_ENERGY_COST = 18;
+            const FORMULATION_PROCESSING_POWER_COST = 10;
+            const INTEGRATION_ENERGY_COST = 12;
+            const INTEGRATION_PROCESSING_POWER_COST = 7;
+            const TUNE_BASE_ENERGY_COST = 15;
+            const TUNE_BASE_PROCESSING_POWER_COST = 9;
+            const RECALIBRATE_ENERGY_COST = 35;
+            const RECALIBRATE_PROCESSING_POWER_COST = 18;
+            const CALIBRATE_SIGNAL_ARRAY_ENERGY_COST = 22;
+            const CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST = 120;
+            const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 18;
 
-            const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 50; // NEW
-            const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 20; // NEW
+            const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 60;
+            const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 25;
 
-            let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(80 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.7));
-            let totalProcessingPowerNeededForFormulation = formulatedProtocol ? formulatedProtocol.processingPowerCost : (Math.round(10 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.2));
+            const PREDICTIVE_ANALYSIS_ENERGY_COST = 8; // NEW
+            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 12; // NEW
+
+
+            let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(90 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.8));
+            let totalProcessingPowerNeededForFormulation = formulatedProtocol ? formulatedProtocol.processingPowerCost : (Math.round(12 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.25));
 
 
             formulateProtocolButton.disabled = isProcessing || anomalyActive || currentEnergy < FORMULATION_ENERGY_COST || currentRawData < totalRawDataNeededForFormulation || currentProcessingPower < totalProcessingPowerNeededForFormulation;
             
-            refineProtocolButton.disabled = isProcessing || anomalyActive || !formulatedProtocol || activeProtocol !== null || currentRawData < REFINE_PROTOCOL_RAW_DATA_COST_BASE || currentProcessingPower < REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE; // NEW
+            refineProtocolButton.disabled = isProcessing || anomalyActive || !formulatedProtocol || activeProtocol !== null || currentRawData < REFINE_PROTOCOL_RAW_DATA_COST_BASE || currentProcessingPower < REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE;
             
             integrateProtocolButton.disabled = isProcessing || anomalyActive || !formulatedProtocol || activeProtocol !== null || currentEnergy < INTEGRATION_ENERGY_COST || currentProcessingPower < INTEGRATION_PROCESSING_POWER_COST;
             
@@ -1515,17 +1740,20 @@
             
             recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
             
-            calibrateSignalArrayButton.disabled = isProcessing || anomalyActive || currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST; // RENAMED and added PP cost
+            calibrateSignalArrayButton.disabled = isProcessing || anomalyActive || currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST;
+
+            runPredictiveAnalysisButton.disabled = isProcessing || anomalyActive || predictiveAnalysisActive || currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST; // NEW
 
             // Critical state disables most buttons, except recalibrate if energy/PP permits
             if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentProcessingPower < 15 || (activeProtocol === null && currentRawData < totalRawDataNeededForFormulation / 2)) {
                 if (!isProcessing && !anomalyActive) {
                     formulateProtocolButton.disabled = true;
-                    refineProtocolButton.disabled = true; // NEW
+                    refineProtocolButton.disabled = true;
                     integrateProtocolButton.disabled = true;
                     tuneActiveProtocolButton.disabled = true;
                     deactivateProtocolButton.disabled = true;
-                    calibrateSignalArrayButton.disabled = true; // RENAMED
+                    calibrateSignalArrayButton.disabled = true;
+                    runPredictiveAnalysisButton.disabled = true; // NEW
                 }
                 recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
                 if (!isProcessing && systemStatusTextSpan.textContent !== "SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!" && !anomalyActive) {
@@ -1581,10 +1809,10 @@
         }
 
         function formulateNewProtocol() {
-            const FORMULATION_RAW_DATA_BASE_COST = 85; // Increased base cost
-            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 0.8; // Increased scaling
-            const FORMULATION_PROCESSING_POWER_BASE_COST = 10; // NEW
-            const FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT = 0.3; // NEW
+            const FORMULATION_RAW_DATA_BASE_COST = 90;
+            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 0.9;
+            const FORMULATION_PROCESSING_POWER_BASE_COST = 12;
+            const FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT = 0.35;
 
             const calibratorValues = signalArrayComponents.map(c => c.value);
             const avgCalibratorValue = calibratorValues.reduce((sum, val) => sum + val, 0) / signalArrayComponents.length;
@@ -1594,44 +1822,37 @@
             const protocolName = generateProtocolName(archetype);
             const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
 
-            // Dynamic complexity: Higher avg calibrator value = more complex. Higher variance = less "clean" data, but perhaps new complexity types.
-            const complexity = Math.round(avgCalibratorValue * 0.95 + calibratorVariance * 0.2 + Math.random() * 45); // Slightly higher complexity range, more affected by variance
+            const complexity = Math.round(avgCalibratorValue * 0.98 + calibratorVariance * 0.25 + Math.random() * 50); // Slightly higher complexity range, more affected by variance
             
-            // Dynamic stability risk: Higher variance = more risk, also high complexity adds risk
-            const stabilityRisk = Math.round(calibratorVariance * 1.1 + complexity * 0.35 + Math.random() * 35); // Slightly higher risk
+            const stabilityRisk = Math.round(calibratorVariance * 1.2 + complexity * 0.4 + Math.random() * 40);
 
-            // Raw data cost: Base + scaled by complexity
-            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 60);
+            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 70);
 
-            // Processing Power cost: Base + scaled by complexity (NEW)
-            const processingPowerCost = Math.round(FORMULATION_PROCESSING_POWER_BASE_COST + complexity * FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT + Math.random() * 10);
+            const processingPowerCost = Math.round(FORMULATION_PROCESSING_POWER_BASE_COST + complexity * FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT + Math.random() * 12);
 
 
-            // Impact of integration, more complex/risky protocols have higher potential impacts (both positive and negative)
-            // Higher complexity and lower stability risk can lead to better potential
-            const impactStability = Math.round(18 - stabilityRisk / 7 + (complexity / 14) + Math.random() * 10 - 5); // Can be negative, higher potential swings
-            const impactDataFlow = Math.round(avgCalibratorValue / 7 + complexity / 14 + Math.random() * 12 - 7); // Can be negative, higher potential swings
-            const impactProcessingPower = Math.round(avgCalibratorValue / 10 - complexity / 10 + Math.random() * 8 - 4); // NEW: Protocols can add or subtract PP
+            const impactStability = Math.round(20 - stabilityRisk / 6 + (complexity / 12) + Math.random() * 12 - 6); // Can be negative, higher potential swings
+            const impactDataFlow = Math.round(avgCalibratorValue / 6 + complexity / 12 + Math.random() * 14 - 8);
+            const impactProcessingPower = Math.round(avgCalibratorValue / 9 - complexity / 9 + Math.random() * 10 - 5);
 
-            // Generate tuning parameters dynamically based on complexity
-            const numTuningParams = Math.min(7, 3 + Math.floor(complexity / 18)); // Up to 7 params, minimum 3
-            const tuningParamNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux', 'Pattern Density', 'Signature Attenuation', 'Harmonic Divergence', 'Entropy Buffer', 'Quantum Field Index'];
+            const numTuningParams = Math.min(8, 4 + Math.floor(complexity / 16)); // Up to 8 params, minimum 4
+            const tuningParamNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux', 'Pattern Density', 'Signature Attenuation', 'Harmonic Divergence', 'Entropy Buffer', 'Quantum Field Index', 'Neural Interlink', 'Sub-Harmonic dampener', 'Causal Loop Adjust', 'Flux Gradient Offset', 'Temporal Shift Factor'];
 
             const tuningParams = [];
             for (let i = 0; i < numTuningParams; i++) {
                 const paramId = `tun-${protocolId}-${i}`;
-                const baseValue = Math.round(avgCalibratorValue * (0.4 + i * 0.08) + Math.random() * 45 - 25); // More variation
-                const optimalRangeWidth = Math.max(6, 35 - complexity / 1.1); // Narrower range for complex protocols, harder to tune
+                const baseValue = Math.round(avgCalibratorValue * (0.45 + i * 0.07) + Math.random() * 50 - 30);
+                const optimalRangeWidth = Math.max(7, 40 - complexity / 1.05);
                 const optimalMin = Math.max(0, baseValue - Math.floor(optimalRangeWidth / 2));
                 const optimalMax = Math.min(100, baseValue + Math.ceil(optimalRangeWidth / 2));
-                const initialValue = Math.round((optimalMin + optimalMax) / 2); // Start in optimal range
+                const initialValue = Math.round((optimalMin + optimalMax) / 2);
                 
                 tuningParams.push({
                     id: paramId,
                     label: tuningParamNames[i % tuningParamNames.length],
                     min: 0,
                     max: 100,
-                    value: initialValue, // Current slider value
+                    value: initialValue,
                     optimalRange: { min: optimalMin, max: optimalMax }
                 });
             }
@@ -1643,44 +1864,51 @@
                 complexity: complexity,
                 stabilityRisk: stabilityRisk,
                 rawDataCost: rawDataCost,
-                processingPowerCost: processingPowerCost, // NEW
-                impact: { stability: impactStability, dataFlow: impactDataFlow, processingPower: impactProcessingPower }, // NEW
+                processingPowerCost: processingPowerCost,
+                impact: { stability: impactStability, dataFlow: impactDataFlow, processingPower: impactProcessingPower },
                 tuningParams: tuningParams,
-                lastTuningScore: 0 // To track success of last tune attempt
+                lastTuningScore: 0
             };
             newProtocol.description = generateProtocolDescription(newProtocol);
             return newProtocol;
         }
 
-        // --- Anomaly System --- (NEW)
+        // --- Anomaly System ---
         const anomalyTypes = [
             {
                 id: 'flux-fluctuation',
                 title: 'FLUX FLUCTUATION',
                 description: 'Localized energy field destabilization detected. Minor energy and data flow disruption.',
-                impact: { energy: -15, dataFlow: -10, stability: -5 },
+                impact: { energy: -18, dataFlow: -12, stability: -7 },
                 resolutionMessage: 'Flux fluctuation stabilized. Residual effects minimal.'
             },
             {
                 id: 'data-corruption',
                 title: 'DATA CORRUPTION INGRESS',
                 description: 'Anomalous data packets detected in buffer. Raw Data integrity compromised. Rapid response critical.',
-                impact: { rawData: -70, stability: -10, processingPower: -5 },
+                impact: { rawData: -80, stability: -12, processingPower: -7 },
                 resolutionMessage: 'Data corruption contained and purged. Data loss mitigated.'
             },
             {
                 id: 'processing-spike',
                 title: 'OVERLOAD SPIKE',
                 description: 'Unexpected processing demand surge. Core processing units under strain. High risk of system lock-up.',
-                impact: { processingPower: -20, energy: -10, dataFlow: -5 },
+                impact: { processingPower: -25, energy: -12, dataFlow: -7 },
                 resolutionMessage: 'Processing spike re-routed. Load normalized.'
             },
             {
                 id: 'temporal-drift',
                 title: 'TEMPORAL DRIFT DETECTED',
                 description: 'Minor temporal desynchronization. Affecting overall system stability and data processing. Requires realignment.',
-                impact: { stability: -12, dataFlow: -8, processingPower: -8 },
+                impact: { stability: -15, dataFlow: -10, processingPower: -10 },
                 resolutionMessage: 'Temporal drift corrected. System parameters realigned.'
+            },
+            { // NEW Anomaly Type
+                id: 'sub-system-cascade',
+                title: 'SUB-SYSTEM CASCADE FAILURE',
+                description: 'An active sub-protocol chain reaction detected. Immediate intervention required to prevent resource drain amplification.',
+                impact: { energy: -25, processingPower: -20, stability: -15 },
+                resolutionMessage: 'Sub-system cascade contained. Minor resource recovery initiated.'
             }
         ];
 
@@ -1690,24 +1918,34 @@
         function spawnAnomaly() {
             if (anomalyActive || isProcessing) return;
 
+            // Apply anomaly chance modifier from sub-protocols
+            let effectiveAnomalyChance = 0.005; // Base chance per tick
+            subProtocols.filter(sp => sp.isActive && sp.impactPerTick.anomalyChanceModifier).forEach(sp => {
+                effectiveAnomalyChance += sp.impactPerTick.anomalyChanceModifier; // Modifier is negative for reduction
+            });
+            effectiveAnomalyChance = Math.max(0, effectiveAnomalyChance); // Ensure it's not negative
+
+            if (Math.random() > effectiveAnomalyChance * 20) { // Multiply by some factor to make it actually spawn. This logic needs to be tied to game loop for frequency.
+                return;
+            }
+
             const selectedAnomaly = anomalyTypes[Math.floor(Math.random() * anomalyTypes.length)];
             currentAnomaly = selectedAnomaly;
             anomalyActive = true;
-            anomalyDuration = 10000 + Math.random() * 5000; // 10-15 seconds to resolve
+            anomalyDuration = 12000 + Math.random() * 6000; // 12-18 seconds to resolve
 
             anomalyTitle.textContent = selectedAnomaly.title;
             anomalyDescription.textContent = selectedAnomaly.description;
             anomalyAlertOverlay.classList.add('active');
             logDataStreamEntry(`ANOMALY ALERT: ${selectedAnomaly.title}. System status impacted.`, 'critical');
             systemStatusTextSpan.textContent = `ANOMALY: ${selectedAnomaly.title}`;
-            updateButtonStates(); // Disable most buttons
+            updateButtonStates();
 
-            // If not resolved, apply full impact after duration
             anomalyTimeout = setTimeout(() => {
                 if (anomalyActive) {
                     applyAnomalyImpact(currentAnomaly.impact);
                     logDataStreamEntry(`ANOMALY FAILED TO RESOLVE: ${currentAnomaly.title} persisted. Severe system impact.`, 'critical');
-                    resolveAnomaly(); // Clean up anomaly state
+                    resolveAnomaly();
                 }
             }, anomalyDuration);
         }
@@ -1715,17 +1953,537 @@
         function resolveAnomaly() {
             if (!anomalyActive) return;
 
+            // Check for auto-resolve from sub-protocols
+            const autoResolveChance = subProtocols.filter(sp => sp.isActive && sp.impactPerTick.autoResolveChance)
+                                                .reduce((sum, sp) => sum + sp.impactPerTick.autoResolveChance, 0);
+
+            if (Math.random() < autoResolveChance && autoResolveChance > 0) {
+                logDataStreamEntry(`Auto-Protocol triggered! Anomaly ${currentAnomaly.title} mitigated.`, 'info');
+            }
+
             clearTimeout(anomalyTimeout);
             anomalyActive = false;
             currentAnomaly = null;
             anomalyAlertOverlay.classList.remove('active');
-            logDataStreamEntry(currentAnomaly ? currentAnomaly.resolutionMessage : 'Anomaly resolved.', 'optimal'); // Fallback if currentAnomaly is somehow null
+            logDataStreamEntry(currentAnomaly ? currentAnomaly.resolutionMessage : 'Anomaly resolved.', 'optimal');
             systemStatusTextSpan.textContent = `System Idle. Calibrate Signal Array to collect Raw Data.`;
-            updateButtonStates(); // Re-enable buttons
+            updateButtonStates();
         }
 
         function applyAnomalyImpact(impact) {
-            currentSystemStability = Math.max(0, Math.min(100, currentSystemStability + (impact.stability || 0)));
-            currentEnergy = Math.max(0, Math.min(MAX_ENERGY, currentEnergy + (impact.energy || 0)));
-            currentRawData = Math.max(0, Math.min(MAX_RAW_DATA, currentRawData + (impact.rawData || 0)));
-            currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW,
+            currentSystemStability += (impact.stability || 0);
+            currentEnergy += (impact.energy || 0);
+            currentRawData += (impact.rawData || 0);
+            currentDataFlow += (impact.dataFlow || 0);
+            currentProcessingPower += (impact.processingPower || 0);
+            logDataStreamEntry('System suffered direct impact from unresolved anomaly!', 'critical');
+            updateAllDisplays();
+        }
+
+        // --- NEW: Predictive Analysis Logic ---
+        function runPredictiveAnalysis() {
+            if (isProcessing || anomalyActive || predictiveAnalysisActive) return;
+
+            const PREDICTIVE_ANALYSIS_ENERGY_COST = 8;
+            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 12;
+            const ANALYSIS_DURATION = 5000; // 5 seconds display time
+
+            if (currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Not enough Energy or Processing Power for Predictive Analysis.', 'warning');
+                return;
+            }
+
+            currentEnergy -= PREDICTIVE_ANALYSIS_ENERGY_COST;
+            currentProcessingPower -= PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST;
+            logDataStreamEntry('Initiating Predictive Analysis...', 'processing');
+            predictiveAnalysisActive = true;
+            updateButtonStates();
+            updateAllDisplays();
+
+            // Simulate analysis time
+            setTimeout(() => {
+                let predictedStabilityChange = 0;
+                let predictedDataFlowChange = 0;
+                let predictedProcessingPowerChange = 0;
+                let predictionRisk = 'Low';
+
+                if (formulatedProtocol) {
+                    // If a protocol is formulated, predict its impact
+                    const p = formulatedProtocol;
+                    predictedStabilityChange = p.impact.stability + (Math.random() * 5 - 2.5); // Add some variance
+                    predictedDataFlowChange = p.impact.dataFlow + (Math.random() * 5 - 2.5);
+                    predictedProcessingPowerChange = p.impact.processingPower + (Math.random() * 4 - 2);
+
+                    if (p.stabilityRisk > 60 || p.complexity > 80) {
+                        predictionRisk = 'High';
+                    } else if (p.stabilityRisk > 30 || p.complexity > 50) {
+                        predictionRisk = 'Medium';
+                    }
+                } else {
+                    // If no protocol, analyze current signal array calibration impact (e.g., if recalibrating)
+                    const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
+                    const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
+
+                    // Simplified prediction for current calibration - more stable if values are balanced, less stable if highly varied
+                    predictedStabilityChange = -5 + (avgCalibratorValue / 20) - (calibratorVariance / 10);
+                    predictedDataFlowChange = (avgCalibratorValue / 15) - 5;
+                    predictedProcessingPowerChange = (avgCalibratorValue / 25) - 2;
+
+                    if (calibratorVariance > 30 || avgCalibratorValue < 20) {
+                        predictionRisk = 'Elevated';
+                    }
+                }
+
+                predictiveResultsDiv.innerHTML = `
+                    <p><strong>Predicted Impact:</strong></p>
+                    <p>Stability: ${predictedStabilityChange > 0 ? '+' : ''}${predictedStabilityChange.toFixed(1)}%</p>
+                    <p>Data Flow: ${predictedDataFlowChange > 0 ? '+' : ''}${predictedDataFlowChange.toFixed(1)} Mbps</p>
+                    <p>Processing Power: ${predictedProcessingPowerChange > 0 ? '+' : ''}${predictedProcessingPowerChange.toFixed(1)} GFLOPS</p>
+                    <p><strong>Estimated Risk:</strong> <span style="color: ${predictionRisk === 'High' || predictionRisk === 'Elevated' ? 'var(--critical-color)' : predictionRisk === 'Medium' ? 'var(--warning-color)' : 'var(--tertiary-glow)'}">${predictionRisk}</span></p>
+                    <p style="font-size:0.9em; opacity:0.7;">(Prediction valid for ~${(ANALYSIS_DURATION / 1000).toFixed(0)}s)</p>
+                `;
+                predictiveResultsDiv.style.display = 'block';
+                logDataStreamEntry('Predictive Analysis complete. Results displayed.', 'info');
+
+                setTimeout(() => {
+                    predictiveResultsDiv.style.display = 'none';
+                    predictiveAnalysisActive = false;
+                    updateButtonStates();
+                    logDataStreamEntry('Predictive Analysis results expired.', 'info');
+                }, ANALYSIS_DURATION);
+
+            }, 2500); // Analysis takes 2.5 seconds to compute
+        }
+
+        // --- NEW: Sub-Protocol Augmentation Logic ---
+        function toggleSubProtocol(id) {
+            if (isProcessing || anomalyActive) return;
+
+            const sp = subProtocols.find(p => p.id === id);
+            if (!sp) return;
+
+            sp.isActive = !sp.isActive;
+            const card = document.getElementById(`sub-protocol-${sp.id}`);
+            if (sp.isActive) {
+                card.classList.add('active');
+                logDataStreamEntry(`Sub-Protocol "${sp.name}" activated.`, 'info');
+            } else {
+                card.classList.remove('active');
+                logDataStreamEntry(`Sub-Protocol "${sp.name}" deactivated.`, 'info');
+            }
+            updateButtonStates(); // May affect resource states indirectly
+        }
+
+
+        // --- Event Listeners ---
+        formulateProtocolButton.addEventListener('click', async () => {
+            isProcessing = true;
+            logDataStreamEntry('Initiating protocol formulation sequence...', 'processing');
+            systemStatusTextSpan.textContent = 'PROTOCOL FORMULATION: In progress...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 3000)); // Simulate processing
+
+            const FORMULATION_ENERGY_COST = 18;
+            const FORMULATION_PROCESSING_POWER_COST = 10;
+            let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(90 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.8));
+
+            if (currentEnergy < FORMULATION_ENERGY_COST || currentRawData < totalRawDataNeededForFormulation || currentProcessingPower < FORMULATION_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient resources to formulate protocol. Aborting.', 'critical');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Formulation aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= FORMULATION_ENERGY_COST;
+            currentRawData -= totalRawDataNeededForFormulation;
+            currentProcessingPower -= FORMULATION_PROCESSING_POWER_COST;
+
+            formulatedProtocol = formulateNewProtocol();
+            formulatedProtocolNameSpan.textContent = formulatedProtocol.name;
+            formulatedProtocolIDSpan.textContent = formulatedProtocol.id;
+            formulatedProtocolArchetypeSpan.textContent = formulatedProtocol.archetype;
+            formulatedProtocolComplexitySpan.textContent = `${formulatedProtocol.complexity}%`;
+            formulatedProtocolStabilityRiskSpan.textContent = `${formulatedProtocol.stabilityRisk}%`;
+            formulatedProtocolRawDataCostSpan.textContent = `${formulatedProtocol.rawDataCost} packets`;
+            formulatedProtocolProcessingPowerCostSpan.textContent = `${formulatedProtocol.processingPowerCost} GFLOPS/s`;
+            formulatedProtocolDescription.textContent = formulatedProtocol.description;
+            formulatedProtocolDetailsContainer.style.display = 'flex';
+            
+            logDataStreamEntry(`Protocol "${formulatedProtocol.name}" formulated. Ready for refinement or integration.`, 'optimal');
+            systemStatusTextSpan.textContent = 'PROTOCOL FORMULATED: Awaiting integration.';
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        refineProtocolButton.addEventListener('click', async () => {
+            if (!formulatedProtocol) return;
+
+            isProcessing = true;
+            logDataStreamEntry('Initiating protocol refinement sequence...', 'processing');
+            systemStatusTextSpan.textContent = 'PROTOCOL REFINEMENT: In progress...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 3500));
+
+            const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 60;
+            const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 25;
+
+            if (currentRawData < REFINE_PROTOCOL_RAW_DATA_COST_BASE || currentProcessingPower < REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE) {
+                logDataStreamEntry('Insufficient Raw Data or Processing Power for refinement. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Refinement aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentRawData -= REFINE_PROTOCOL_RAW_DATA_COST_BASE;
+            currentProcessingPower -= REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE;
+
+            // Apply refinement effects
+            formulatedProtocol.complexity = Math.max(10, formulatedProtocol.complexity + (Math.random() * 10 - 5)); // Complexity can change
+            formulatedProtocol.stabilityRisk = Math.max(0, formulatedProtocol.stabilityRisk - (Math.random() * 10 + 5)); // Reduce risk
+            
+            // Adjust impacts slightly, generally positive with refinement
+            formulatedProtocol.impact.stability = Math.round(formulatedProtocol.impact.stability * (1 + Math.random() * 0.1));
+            formulatedProtocol.impact.dataFlow = Math.round(formulatedProtocol.impact.dataFlow * (1 + Math.random() * 0.1));
+            formulatedProtocol.impact.processingPower = Math.round(formulatedProtocol.impact.processingPower * (1 + Math.random() * 0.05));
+
+            formulatedProtocol.description = generateProtocolDescription(formulatedProtocol); // Update description
+            
+            formulatedProtocolComplexitySpan.textContent = `${Math.round(formulatedProtocol.complexity)}%`;
+            formulatedProtocolStabilityRiskSpan.textContent = `${Math.round(formulatedProtocol.stabilityRisk)}%`;
+            formulatedProtocolDescription.textContent = formulatedProtocol.description;
+
+            logDataStreamEntry(`Protocol "${formulatedProtocol.name}" refined. Stability risk reduced, potential impacts adjusted.`, 'optimal');
+            systemStatusTextSpan.textContent = 'PROTOCOL REFINED: Ready for integration.';
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        integrateProtocolButton.addEventListener('click', async () => {
+            if (!formulatedProtocol) return;
+
+            isProcessing = true;
+            logDataStreamEntry('Initiating protocol integration sequence...', 'processing');
+            systemStatusTextSpan.textContent = 'PROTOCOL INTEGRATION: Verifying parameters...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 4000));
+
+            const INTEGRATION_ENERGY_COST = 12;
+            const INTEGRATION_PROCESSING_POWER_COST = 7;
+
+            if (currentEnergy < INTEGRATION_ENERGY_COST || currentProcessingPower < INTEGRATION_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient Energy or Processing Power for integration. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Integration aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= INTEGRATION_ENERGY_COST;
+            currentProcessingPower -= INTEGRATION_PROCESSING_POWER_COST;
+
+            activeProtocol = formulatedProtocol;
+            formulatedProtocol = null; // Clear formulated protocol after integration
+            formulatedProtocolDetailsContainer.style.display = 'none';
+
+            activeProtocolNameSpan.textContent = activeProtocol.name;
+            activeProtocolIDSpan.textContent = activeProtocol.id;
+            systemStatusTextSpan.textContent = `PROTOCOL ACTIVE: "${activeProtocol.name}" deployed.`;
+
+            currentSystemStability += activeProtocol.impact.stability;
+            currentDataFlow += activeProtocol.impact.dataFlow;
+            currentProcessingPower += activeProtocol.impact.processingPower;
+
+            renderProtocolTuningParameters(activeProtocol);
+
+            logDataStreamEntry(`Protocol "${activeProtocol.name}" successfully integrated. System parameters adjusted.`, 'optimal');
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        tuneActiveProtocolButton.addEventListener('click', async () => {
+            if (!activeProtocol) return;
+
+            isProcessing = true;
+            logDataStreamEntry('Initiating active protocol tuning...', 'processing');
+            systemStatusTextSpan.textContent = 'ACTIVE PROTOCOL TUNING: Analyzing parameters...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            const TUNE_BASE_ENERGY_COST = 15;
+            const TUNE_BASE_PROCESSING_POWER_COST = 9;
+
+            if (currentEnergy < TUNE_BASE_ENERGY_COST || currentProcessingPower < TUNE_BASE_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient Energy or Processing Power for tuning. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'PROTOCOL ACTIVE: Tuning aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= TUNE_BASE_ENERGY_COST;
+            currentProcessingPower -= TUNE_BASE_PROCESSING_POWER_COST;
+
+            let totalOptimalScore = 0;
+            let currentScore = 0;
+            activeProtocol.tuningParams.forEach(param => {
+                const diffFromMin = Math.abs(param.value - param.optimalRange.min);
+                const diffFromMax = Math.abs(param.value - param.optimalRange.max);
+                const optimalRangeLength = param.optimalRange.max - param.optimalRange.min;
+
+                let scoreForParam = 0;
+                if (param.value >= param.optimalRange.min && param.value <= param.optimalRange.max) {
+                    scoreForParam = 100; // Perfect score if within range
+                } else {
+                    const dist = Math.min(diffFromMin, diffFromMax);
+                    scoreForParam = Math.max(0, 100 - (dist / (param.max / 2)) * 100); // Scale down score based on distance from optimal range
+                }
+                currentScore += scoreForParam;
+                totalOptimalScore += 100; // Each parameter contributes 100 to optimal
+            });
+
+            const overallTuningScore = (currentScore / totalOptimalScore) * 100;
+            activeProtocol.lastTuningScore = overallTuningScore;
+
+            let feedbackMessage = `Tuning complete. Overall efficiency: ${overallTuningScore.toFixed(1)}%. `;
+            let logType = 'info';
+
+            if (overallTuningScore > 85) {
+                currentSystemStability += Math.round(overallTuningScore / 15);
+                currentDataFlow += Math.round(overallTuningScore / 10);
+                currentProcessingPower += Math.round(overallTuningScore / 20);
+                feedbackMessage += 'Optimal parameters achieved, system boosted.';
+                logType = 'optimal';
+            } else if (overallTuningScore > 50) {
+                currentSystemStability += Math.round(overallTuningScore / 30 - 1); // Minor boost, possible slight reduction
+                feedbackMessage += 'Moderate efficiency, minor adjustments applied.';
+                logType = 'info';
+            } else {
+                currentSystemStability -= Math.round((100 - overallTuningScore) / 10); // Penalty for poor tuning
+                feedbackMessage += 'Sub-optimal tuning detected, system stability degraded.';
+                logType = 'warning';
+                if (Math.random() < 0.25) { // 25% chance of glitch on bad tune
+                    logDataStreamEntry('Tuning parameters misaligned. Temporary data glitch detected!', 'glitch');
+                }
+            }
+
+            logDataStreamEntry(feedbackMessage, logType);
+            systemStatusTextSpan.textContent = `PROTOCOL ACTIVE: Tuned to ${overallTuningScore.toFixed(1)}% efficiency.`;
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        deactivateProtocolButton.addEventListener('click', async () => {
+            if (!activeProtocol) return;
+
+            isProcessing = true;
+            logDataStreamEntry('Initiating protocol deactivation sequence...', 'processing');
+            systemStatusTextSpan.textContent = 'PROTOCOL DEACTIVATION: Disengaging modules...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            // Reverse impacts, maybe with some penalty for abrupt deactivation
+            currentSystemStability -= activeProtocol.impact.stability * 0.8; // 20% stability penalty on deactivation
+            currentDataFlow -= activeProtocol.impact.dataFlow;
+            currentProcessingPower -= activeProtocol.impact.processingPower;
+
+            activeProtocol = null;
+            deployedProtocolParametersContainer.style.display = 'none';
+            deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
+
+            activeProtocolNameSpan.textContent = 'NONE';
+            activeProtocolIDSpan.textContent = 'N/A';
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Protocol disengaged.';
+
+            logDataStreamEntry('Active protocol successfully deactivated. System returned to baseline.', 'optimal');
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        recalibrateCoreButton.addEventListener('click', async () => {
+            isProcessing = true;
+            logDataStreamEntry('Initiating core recalibration sequence...', 'critical');
+            systemStatusTextSpan.textContent = 'CORE RECALIBRATION: Warning - System instability imminent!';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 5000)); // Longer recalibration time
+
+            const RECALIBRATE_ENERGY_COST = 35;
+            const RECALIBRATE_PROCESSING_POWER_COST = 18;
+
+            if (currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient Energy or Processing Power for recalibration. Aborting.', 'critical');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Recalibration aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= RECALIBRATE_ENERGY_COST;
+            currentProcessingPower -= RECALIBRATE_PROCESSING_POWER_COST;
+
+            const oldStability = currentSystemStability;
+            currentSystemStability = 70 + (Math.random() * 20 - 10); // Reset to a healthy range with some variance
+            currentEnergy = 80 + (Math.random() * 20); // Restore energy
+            currentDataFlow = 60 + (Math.random() * 30); // Boost data flow
+            currentProcessingPower = 90 + (Math.random() * 10); // Restore processing power
+
+            logDataStreamEntry(`Core recalibration complete. Stability restored from ${oldStability.toFixed(1)}% to ${currentSystemStability.toFixed(1)}%.`, 'optimal');
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Core parameters normalized.';
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        calibrateSignalArrayButton.addEventListener('click', async () => {
+            isProcessing = true;
+            logDataStreamEntry('Initiating signal array calibration...', 'processing');
+            systemStatusTextSpan.textContent = 'SIGNAL ARRAY: Calibrating receptors...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            const CALIBRATE_SIGNAL_ARRAY_ENERGY_COST = 22;
+            const CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST = 120;
+            const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 18;
+
+            if (currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient resources for signal array calibration. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Calibration aborted (low resources).';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= CALIBRATE_SIGNAL_ARRAY_ENERGY_COST;
+            currentRawData -= CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST;
+            currentProcessingPower -= CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST;
+
+            // Apply effects of calibration
+            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
+            const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
+
+            let stabilityChange = 0;
+            let dataFlowBoost = 0;
+            let rawDataCollected = 0; // The actual raw data collected from the environment
+
+            // If calibrators are high and coherent, good things happen
+            if (avgCalibratorValue > 70 && calibratorVariance < 200) { // Low variance for coherence
+                stabilityChange = 5 + Math.random() * 5;
+                dataFlowBoost = 10 + Math.random() * 15;
+                rawDataCollected = 150 + Math.random() * 100; // More raw data
+                logDataStreamEntry('Signal arrays optimally aligned. High-yield data stream initiated.', 'optimal');
+            } else if (avgCalibratorValue < 30) {
+                stabilityChange = -5 - Math.random() * 5;
+                dataFlowBoost = -5 - Math.random() * 10;
+                rawDataCollected = 20 + Math.random() * 30; // Very little raw data
+                logDataStreamEntry('Signal arrays poorly aligned. Low data yield, minor instability detected.', 'warning');
+            } else {
+                stabilityChange = Math.random() * 4 - 2; // Minor variance
+                dataFlowBoost = 5 + Math.random() * 10;
+                rawDataCollected = 80 + Math.random() * 70; // Moderate raw data
+                logDataStreamEntry('Signal arrays calibrated. Data stream active.', 'info');
+            }
+
+            currentSystemStability += stabilityChange;
+            currentDataFlow += dataFlowBoost;
+            currentRawData += rawDataCollected; // Add collected raw data
+
+            logDataStreamEntry(`Signal array calibration complete. Collected ${rawDataCollected.toFixed(0)} raw data packets.`, 'rawdata');
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Signal arrays operational.';
+            isProcessing = false;
+            updateAllDisplays();
+        });
+
+        resolveAnomalyButton.addEventListener('click', () => {
+            if (anomalyActive && currentAnomaly) {
+                // For simplicity, directly resolve on button click.
+                // In a more complex game, this might cost resources or have a minigame.
+                resolveAnomaly();
+                logDataStreamEntry('Counter-Protocol initiated and anomaly resolved!', 'optimal');
+            }
+        });
+
+        runPredictiveAnalysisButton.addEventListener('click', runPredictiveAnalysis); // NEW Listener
+
+        // --- Game Loop and Initialization ---
+        let gameLoopInterval = null;
+
+        function gameLoop() {
+            // Passive resource decay/gain
+            currentEnergy -= 0.05; // Passive drain
+            currentDataFlow -= 0.02; // Passive decay, needs to be maintained
+            currentProcessingPower -= 0.03; // Passive drain
+
+            // Raw data collection (small passive gain if signal array is okay)
+            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
+            currentRawData += (avgCalibratorValue / 100) * (0.2 + Math.random() * 0.5); // Slow passive raw data collection
+
+            // Apply active protocol effects
+            if (activeProtocol) {
+                currentSystemStability -= activeProtocol.stabilityRisk * 0.005; // Continuous stability drain based on risk
+                currentEnergy -= activeProtocol.complexity * 0.01; // Protocol energy upkeep
+                currentProcessingPower -= activeProtocol.processingPowerCost * 0.01; // Protocol PP upkeep
+                currentDataFlow += activeProtocol.impact.dataFlow * 0.005; // Minor continuous data flow boost
+            }
+
+            // NEW: Apply Sub-Protocol effects
+            subProtocols.filter(sp => sp.isActive).forEach(sp => {
+                if (sp.costPerTick.energy) currentEnergy -= sp.costPerTick.energy;
+                if (sp.costPerTick.processingPower) currentProcessingPower -= sp.costPerTick.processingPower;
+
+                if (sp.impactPerTick.stability) currentSystemStability += sp.impactPerTick.stability;
+                if (sp.impactPerTick.dataFlow) currentDataFlow += sp.impactPerTick.dataFlow;
+                if (sp.impactPerTick.processingPower) currentProcessingPower += sp.impactPerTick.processingPower;
+                if (sp.impactPerTick.rawDataPerTick) currentRawData += sp.impactPerTick.rawDataPerTick;
+            });
+
+            // Stability fluctuations
+            currentSystemStability += (Math.random() * 0.2 - 0.1); // Minor random fluctuations
+
+            // Check for anomalies
+            if (Math.random() < 0.001) { // 0.1% chance per tick (e.g., every 1 second)
+                spawnAnomaly();
+            }
+
+            // Critical state handling
+            if (currentSystemStability < 0) {
+                currentSystemStability = 0;
+                logDataStreamEntry('SYSTEM COLLAPSE IMMINENT! RECALIBRATE CORE NOW!', 'critical');
+                if (!anomalyActive) { // Prevent overwriting anomaly alert
+                    systemStatusTextSpan.textContent = 'SYSTEM CRITICAL: Core stability lost!';
+                }
+                // Stop most operations if stability hits rock bottom, maybe force a game over or recovery state.
+            }
+            if (currentEnergy <= 0) {
+                currentEnergy = 0;
+                logDataStreamEntry('ENERGY RESERVE DEPLETED! All operations halted!', 'critical');
+                systemStatusTextSpan.textContent = 'SYSTEM SHUTDOWN: No energy.';
+                // Trigger game over or critical failure mode
+            }
+            if (currentRawData >= MAX_RAW_DATA) {
+                currentRawData = MAX_RAW_DATA;
+                logDataStreamEntry('RAW DATA BUFFER OVERFLOW! Data loss imminent!', 'warning');
+            }
+
+
+            updateAllDisplays();
+        }
+
+        function init() {
+            renderSignalArrayCalibrators();
+            renderSubProtocols(); // NEW: Render sub-protocols
+            updateAllDisplays();
+            gameLoopInterval = setInterval(gameLoop, 1000); // 1-second ticks
+            logDataStreamEntry('Core systems online. Initiating Generation 30.0 protocols.', 'event');
+        }
+
+        init();
+    </script>
+</body>
+</html>
