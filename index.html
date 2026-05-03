@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 30.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // Gen 31.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,7 +11,7 @@
             --primary-glow: rgba(135, 206, 250, 0.98); /* Sky blue glow - stronger */
             --secondary-glow: rgba(255, 105, 180, 0.85); /* Hot pink glow - stronger */
             --tertiary-glow: rgba(50, 205, 50, 0.95); /* Lime green glow - stronger */
-            --frosted-bg: rgba(255, 255, 255, 0.03); /* Even more transparent, ethereal frosted background */
+            --frosted-bg: rgba(255, 255, 255, 0.02); /* Even more transparent, ethereal frosted background */
             --text-color: #E8E8E8; /* Lighter text for contrast */
             --accent-color: #87CEFA; /* Light blue accent */
             --border-color: rgba(255, 255, 255, 0.2); /* More visible border, slightly less opaque */
@@ -46,29 +46,29 @@
             --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
             --data-flow-color-low: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Tomato for critical */
             
-            /* Gen 30.0 Colors (Updated from 29.5) */
+            /* Gen 31.0 Colors (Updated from 30.0) */
             --signal-array-bg: rgba(15, 30, 45, 0.99); /* Darker blue-grey for signal array */
             --signal-array-border: rgba(0, 191, 255, 0.7); /* Stronger deep sky blue accent */
             --signal-array-text: #B0E0E6; /* Powder blue */
             --formulate-btn-glow: rgba(255, 20, 147, 0.98); /* Deep Pink for Formulate button */
 
-            /* Gen 30.0 resource: Raw Data */
+            /* Gen 31.0 resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
             --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold */
             --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%); /* Blue-grey */
             --raw-data-text: #F06292; /* Text color for raw data */
 
-            /* Gen 30.0 resource: Processing Power */
+            /* Gen 31.0 resource: Processing Power */
             --processing-power-color-high: linear-gradient(90deg, #BA55D3 0%, #8A2BE2 100%); /* Orchid to Blue Violet */
             --processing-power-color-medium: linear-gradient(90deg, #DA70D6 0%, #9932CC 100%); /* Orchid to Dark Orchid */
             --processing-power-color-low: linear-gradient(90deg, #4B0082 0%, #191970 100%); /* Indigo to Midnight Blue */
             --processing-power-text: #BA55D3; /* Orchid */
 
-            /* Gen 30.0 button: Calibrate Signal Array */
+            /* Gen 31.0 button: Calibrate Signal Array */
             --calibrate-btn-glow: rgba(106, 90, 205, 0.98); /* Slate Blue Glow */
             --tune-btn-glow: rgba(0, 255, 0, 0.98); /* Green Glow for Tune */
 
-            /* NEW for Gen 30.0 - Enhanced UI elements */
+            /* NEW for Gen 31.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Orange for events */
             --event-text-shadow: 0 0 18px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #9370DB; /* Medium Purple for info */
@@ -76,21 +76,21 @@
             --log-glitch-color: #FF00FF; /* Magenta */
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
-            /* Gen 30.0 NEW: Refine Protocol button */
+            /* Gen 31.0 NEW: Refine Protocol button */
             --refine-btn-glow: rgba(255, 255, 0, 0.98); /* Yellow glow for refine */
 
-            /* Gen 30.0 NEW: Anomaly Alert */
+            /* Gen 31.0 NEW: Anomaly Alert */
             --anomaly-color: #FF4500; /* OrangeRed */
             --anomaly-bg: rgba(255, 69, 0, 0.2); /* Semi-transparent OrangeRed */
             --anomaly-border: rgba(255, 69, 0, 0.9); /* Opaque OrangeRed */
 
-            /* Gen 30.0 NEW: Predictive Analysis Module */
+            /* Gen 31.0 NEW: Predictive Analysis Module */
             --predictive-bg: rgba(10, 40, 30, 0.99); /* Dark Green-Blue */
             --predictive-border: rgba(0, 255, 127, 0.8); /* Spring Green */
             --predictive-text: #90EE90; /* Light Green */
             --predictive-btn-glow: rgba(0, 255, 127, 0.9);
 
-            /* Gen 30.0 NEW: Sub-Protocol Augmentation Module */
+            /* Gen 31.0 NEW: Sub-Protocol Augmentation Module */
             --augmentation-bg: rgba(45, 30, 10, 0.99); /* Dark Orange-Brown */
             --augmentation-border: rgba(255, 165, 0, 0.8); /* Orange */
             --augmentation-text: #FFD700; /* Gold */
@@ -112,17 +112,17 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="2" fill="%23FF00FF"/></svg>') 22 22, auto; /* Cyan crosshair with a larger magenta dot */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="2" fill="%23FF00FF"/><path fill="%2300FFFF" d="M12 0L9 6l-6 3 6 3 3 6 3-6 6-3-6-3zM12 22l-3-6 6-3-6-3-3-6-3 6-6 3 6 3z"/></svg>') 22 22, auto; /* Cyan crosshair with a larger magenta dot, with pulsing star points */
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation) */
         body::before {
             content: '';
             position: absolute;
-            top: -400%;
-            left: -400%;
-            width: 900%;
-            height: 900%;
+            top: -500%; /* Even larger coverage */
+            left: -500%;
+            width: 1100%;
+            height: 1100%;
             background: linear-gradient(
                 90deg,
                 #02010c 0%,
@@ -134,11 +134,11 @@
                 #070212 90%,
                 #0f0417 100%
             );
-            background-size: 1500% 1500%;
-            animation: fluidBackground1 600s linear infinite alternate, rotateBackground 900s linear infinite; /* Even longer animations */
+            background-size: 1800% 1800%; /* Even larger background for smoother animation */
+            animation: fluidBackground1 800s linear infinite alternate, rotateBackground 1200s linear infinite; /* Even longer animations */
             z-index: -3;
-            filter: blur(650px) opacity(0.999); /* Stronger blur, almost opaque */
-            transform: rotate(-180deg) scale(5); /* Larger scale, more rotation */
+            filter: blur(750px) opacity(0.999); /* Stronger blur, almost opaque */
+            transform: rotate(-270deg) scale(6); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -146,25 +146,25 @@
         body::after {
             content: '';
             position: absolute;
-            top: -200%;
-            left: -200%;
-            width: 500%;
-            height: 500%;
+            top: -250%; /* Even larger coverage */
+            left: -250%;
+            width: 600%;
+            height: 600%;
             background: linear-gradient(
-                -120deg,
-                rgba(135, 206, 250, 0.55) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.5) 20%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.5) 40%, /* tertiary glow accent */
-                rgba(0, 191, 255, 0.5) 60%, /* deep sky blue from signal array */
-                rgba(255, 105, 180, 0.5) 80%,
-                rgba(135, 206, 250, 0.55) 100%
+                -150deg, /* Different angle */
+                rgba(135, 206, 250, 0.6) 0%, /* primary glow accent */
+                rgba(255, 105, 180, 0.55) 20%, /* secondary glow accent */
+                rgba(50, 205, 50, 0.55) 40%, /* tertiary glow accent */
+                rgba(0, 191, 255, 0.6) 60%, /* deep sky blue from signal array */
+                rgba(255, 165, 0, 0.5) 80%, /* New orange accent */
+                rgba(135, 206, 250, 0.6) 100%
             );
-            background-size: 1000% 1000%;
-            animation: fluidBackground2 300s ease-in-out infinite, rotateBackgroundReversed 600s linear infinite; /* Even longer animations */
+            background-size: 1200% 1200%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 450s ease-in-out infinite, rotateBackgroundReversed 900s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(450px) opacity(0.98); /* Stronger blur, more opaque */
+            filter: blur(550px) opacity(0.98); /* Stronger blur, more opaque */
             mix-blend-mode: soft-light; /* Softer accenting */
-            transform: rotate(120deg) scale(4); /* Larger scale, more rotation */
+            transform: rotate(180deg) scale(5); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -176,11 +176,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.35; /* More noticeable noise */
+            opacity: 0.45; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.2) contrast(1.1); /* Subtle color and contrast */
+            filter: grayscale(0.2) contrast(1.1) brightness(1.1); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -195,48 +195,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-180deg) scale(5); }
-            to { transform: rotate(360deg) scale(5); }
+            from { transform: rotate(-270deg) scale(6); }
+            to { transform: rotate(450deg) scale(6); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(120deg) scale(4); }
-            to { transform: rotate(-480deg) scale(4); }
+            from { transform: rotate(180deg) scale(5); }
+            to { transform: rotate(-540deg) scale(5); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1500px; /* Even wider for more content */
-            padding: 160px; /* More padding */
+            max-width: 1700px; /* Even wider for more content */
+            padding: 180px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 100px; /* Even more rounded */
-            backdrop-filter: blur(350px) saturate(1200%) brightness(350%) contrast(1.1); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(350px) saturate(1200%) brightness(350%) contrast(1.1);
+            border-radius: 120px; /* Even more rounded */
+            backdrop-filter: blur(400px) saturate(1500%) brightness(400%) contrast(1.2); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(400px) saturate(1500%) brightness(400%) contrast(1.2);
             box-shadow:
-                0 120px 500px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 500px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 150px rgba(255, 255, 255, 0.5), /* Stronger inner glow for depth */
-                inset 0 0 250px var(--primary-glow); /* Even more inner glow */
+                0 150px 700px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 700px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 180px rgba(255, 255, 255, 0.55), /* Stronger inner glow for depth */
+                inset 0 0 300px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 130px; /* Increased gap between sections */
-            animation: fadeInScale 7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 2.5s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 150px; /* Increased gap between sections */
+            animation: fadeInScale 8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 2.8s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -30px; /* More overflow */
-            border-radius: 102px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #BA55D3, #00FFFF, #8A2BE2, #FF1493, #00FF00, #F06292, #FFA500); /* More vibrant border glow colors, includes new processing power color and orange for augmentation */
-            background-size: 1500% 1500%; /* Larger background for smoother animation */
-            animation: borderGlow 50s linear infinite alternate; /* Slower animation */
-            filter: blur(70px); /* Stronger blur */
+            inset: -40px; /* More overflow */
+            border-radius: 122px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #BA55D3, #00FFFF, #8A2BE2, #FF1493, #00FF00, #F06292, #FFA500, #90EE90, #FFD700); /* Even more vibrant border glow colors, includes new processing power color, orange, and light green */
+            background-size: 1800% 1800%; /* Larger background for smoother animation */
+            animation: borderGlow 60s linear infinite alternate; /* Slower animation */
+            filter: blur(90px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -248,32 +248,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.2) translateY(400px) perspective(5000px) rotateX(80deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(5000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.1) translateY(500px) perspective(7000px) rotateX(90deg) rotateY(15deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(7000px) rotateX(0deg) rotateY(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 6.5em; /* Even larger heading */
+            font-size: 7.5em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 100px var(--primary-glow), 0 0 150px rgba(135, 206, 250, 0.98), 0 0 180px rgba(135, 206, 250, 0.8);
-            margin-bottom: 90px;
-            letter-spacing: 18px;
+            text-shadow: 0 0 120px var(--primary-glow), 0 0 180px rgba(135, 206, 250, 0.98), 0 0 200px rgba(135, 206, 250, 0.8);
+            margin-bottom: 100px;
+            letter-spacing: 20px;
             line-height: 1.2;
             position: relative;
-            transform: translateZ(80px); /* Lift heading slightly in 3D space */
+            transform: translateZ(90px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -60px;
+            bottom: -70px;
             left: 50%;
             transform: translateX(-50%);
-            width: 140%; /* Wider underline */
-            height: 14px; /* Thicker underline */
+            width: 150%; /* Wider underline */
+            height: 16px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 70px var(--primary-glow);
+            box-shadow: 0 0 80px var(--primary-glow);
         }
 
         p {
@@ -281,15 +281,15 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.99;
-            font-size: 1.6em;
-            transform: translateZ(40px);
+            font-size: 1.8em; /* Larger paragraph text */
+            transform: translateZ(50px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 100px; /* Increased gap */
-            margin: 70px 0;
+            gap: 120px; /* Increased gap */
+            margin: 80px 0;
             position: relative;
         }
 
@@ -298,14 +298,14 @@
         .predictive-analysis-module, .sub-protocol-augmentation-module { /* NEW MODULES ADDED */
             display: flex;
             flex-direction: column;
-            gap: 45px;
+            gap: 50px;
             text-align: left;
-            padding: 55px;
-            border-radius: 45px;
+            padding: 60px;
+            border-radius: 50px;
             border: 1px solid var(--signal-array-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 45px rgba(0, 191, 255, 0.75), 0 0 45px rgba(0, 191, 255, 0.65), inset 0 0 90px rgba(0, 191, 255, 0.3); /* More inner shadow */
+            box-shadow: inset 0 0 50px rgba(0, 191, 255, 0.75), 0 0 50px rgba(0, 191, 255, 0.65), inset 0 0 100px rgba(0, 191, 255, 0.3); /* More inner shadow */
             position: relative;
-            transform: translateZ(30px);
+            transform: translateZ(40px);
             overflow: hidden;
             background: var(--signal-array-bg); /* Default background, will be overridden */
         }
@@ -313,12 +313,12 @@
         .predictive-analysis-module {
             background: var(--predictive-bg);
             border-color: var(--predictive-border);
-            box-shadow: inset 0 0 45px rgba(0, 255, 127, 0.75), 0 0 45px rgba(0, 255, 127, 0.65), inset 0 0 90px rgba(0, 255, 127, 0.3);
+            box-shadow: inset 0 0 50px rgba(0, 255, 127, 0.75), 0 0 50px rgba(0, 255, 127, 0.65), inset 0 0 100px rgba(0, 255, 127, 0.3);
         }
         .sub-protocol-augmentation-module {
             background: var(--augmentation-bg);
             border-color: var(--augmentation-border);
-            box-shadow: inset 0 0 45px rgba(255, 165, 0, 0.75), 0 0 45px rgba(255, 165, 0, 0.65), inset 0 0 90px rgba(255, 165, 0, 0.3);
+            box-shadow: inset 0 0 50px rgba(255, 165, 0, 0.75), 0 0 50px rgba(255, 165, 0, 0.65), inset 0 0 100px rgba(255, 165, 0, 0.3);
         }
 
         .signal-array-calibration-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after,
@@ -329,10 +329,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.18) 0%, transparent 65%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.22) 0%, transparent 60%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
-            opacity: 0.98;
+            opacity: 0.99;
         }
 
 
@@ -340,19 +340,19 @@
         .predictive-analysis-module::before, .sub-protocol-augmentation-module::before { /* NEW MODULES ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -35px;
-            left: 55px;
-            font-size: 1.2em;
+            top: -40px; /* Slightly higher */
+            left: 60px;
+            font-size: 1.3em; /* Larger label */
             color: var(--signal-array-text); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.98);
-            padding: 12px 28px;
-            border-radius: 20px;
+            padding: 14px 30px;
+            border-radius: 22px;
             font-weight: 700;
-            letter-spacing: 2.8px;
-            transform: translateY(-50%) translateZ(20px);
+            letter-spacing: 3.0px;
+            transform: translateY(-50%) translateZ(25px); /* Lift more */
             opacity: 0.99;
             border: 1px solid var(--signal-array-text); /* Default border, will be overridden */
-            box-shadow: 0 0 28px var(--signal-array-text); /* Stronger glow */
+            box-shadow: 0 0 32px var(--signal-array-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -360,100 +360,102 @@
         .predictive-analysis-module::before {
             color: var(--predictive-text);
             border-color: var(--predictive-text);
-            box-shadow: 0 0 28px var(--predictive-text);
+            box-shadow: 0 0 32px var(--predictive-text);
         }
         .sub-protocol-augmentation-module::before {
             color: var(--augmentation-text);
             border-color: var(--augmentation-text);
-            box-shadow: 0 0 28px var(--augmentation-text);
+            box-shadow: 0 0 32px var(--augmentation-text);
         }
 
 
         .calibrator-group, .param-group {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5em;
+            font-size: 1.6em; /* Larger */
             color: var(--data-stream-text);
-            letter-spacing: 1.8px;
+            letter-spacing: 2.0px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 25px rgba(0, 255, 255, 0.98); /* Stronger shadow */
-            margin-bottom: 22px;
+            text-shadow: 0 0 28px rgba(0, 255, 255, 0.98); /* Stronger shadow */
+            margin-bottom: 25px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 1.05em;
+            font-size: 1.1em; /* Slightly larger sub-info */
             opacity: 0.9;
             color: var(--signal-array-text);
-            margin-top: 15px;
+            margin-top: 18px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
         /* Predictive analysis results */
         .predictive-results {
-            margin-top: 30px;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.7);
+            margin-top: 35px;
+            padding: 35px;
+            background: rgba(0, 0, 0, 0.75); /* Darker background */
             border: 1px dashed var(--predictive-border);
-            border-radius: 20px;
-            animation: fadeIn 1s ease-out;
+            border-radius: 22px;
+            animation: fadeIn 1.2s ease-out;
+            box-shadow: 0 0 25px rgba(0, 255, 127, 0.5); /* Subtle glow */
         }
         .predictive-results p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2em;
+            font-size: 1.3em; /* Larger text */
             color: var(--predictive-text);
-            text-shadow: 0 0 15px rgba(0, 255, 127, 0.8);
-            margin-bottom: 10px;
+            text-shadow: 0 0 18px rgba(0, 255, 127, 0.8);
+            margin-bottom: 12px;
+            transform: translateZ(0); /* Reset for inner p */
         }
 
         /* Sub-Protocol Grid */
         .sub-protocol-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Larger min width */
+            gap: 35px;
+            margin-top: 25px;
         }
         .sub-protocol-card {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85); /* Darker */
             border: 1px solid var(--augmentation-toggle-inactive);
-            border-radius: 25px;
-            padding: 30px;
+            border-radius: 28px; /* More rounded */
+            padding: 35px;
             text-align: center;
             transition: all 0.5s ease;
             cursor: pointer;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
-            transform: translateZ(8px);
+            box-shadow: inset 0 0 18px rgba(0,0,0,0.6);
+            transform: translateZ(10px);
         }
         .sub-protocol-card.active {
             border-color: var(--augmentation-toggle-active);
-            box-shadow: 0 0 35px var(--augmentation-toggle-glow), inset 0 0 25px var(--augmentation-toggle-active);
-            background: rgba(40, 20, 0, 0.85);
-            transform: translateY(-10px) scale(1.03) translateZ(12px);
+            box-shadow: 0 0 40px var(--augmentation-toggle-glow), inset 0 0 28px var(--augmentation-toggle-active);
+            background: rgba(40, 20, 0, 0.9); /* More opaque */
+            transform: translateY(-12px) scale(1.04) translateZ(15px);
         }
         .sub-protocol-card h4 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.4em;
+            font-size: 1.5em; /* Larger */
             color: var(--augmentation-text);
             margin-top: 0;
-            margin-bottom: 15px;
-            text-shadow: 0 0 15px var(--augmentation-text);
+            margin-bottom: 18px;
+            text-shadow: 0 0 18px var(--augmentation-text);
         }
         .sub-protocol-card p {
-            font-size: 1.05em;
+            font-size: 1.1em; /* Larger */
             color: var(--text-color);
-            opacity: 0.85;
-            margin-bottom: 10px;
+            opacity: 0.88;
+            margin-bottom: 12px;
             transform: translateZ(0); /* Reset for inner p */
         }
         .sub-protocol-card .cost-benefit {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 0.95em;
+            font-size: 1.05em; /* Larger */
             color: var(--data-stream-text);
-            text-shadow: 0 0 8px var(--data-stream-text);
-            margin-top: 20px;
-            opacity: 0.9;
+            text-shadow: 0 0 10px var(--data-stream-text);
+            margin-top: 22px;
+            opacity: 0.95;
         }
 
 
@@ -461,17 +463,17 @@
         .resource-display-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for energy, data flow, raw data, processing power */
-            gap: 70px;
-            margin-bottom: 70px;
-            transform: translateZ(40px);
+            gap: 80px;
+            margin-bottom: 80px;
+            transform: translateZ(50px);
         }
 
         .energy-reserve-display, .data-flow-display, .raw-data-reserve-display, .processing-power-display {
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            border-radius: 45px;
-            padding: 45px 50px;
-            box-shadow: inset 0 0 45px rgba(150, 0, 255, 0.85), 0 0 45px rgba(150, 0, 255, 0.75), inset 0 0 90px rgba(150, 0, 255, 0.3); /* More inner shadow */
+            border-radius: 50px; /* More rounded */
+            padding: 50px 55px;
+            box-shadow: inset 0 0 50px rgba(150, 0, 255, 0.88), 0 0 50px rgba(150, 0, 255, 0.8), inset 0 0 100px rgba(150, 0, 255, 0.35); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
@@ -483,16 +485,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.2) 0%, transparent 75%);
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.25) 0%, transparent 70%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p, .raw-data-reserve-display p, .processing-power-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5em;
+            font-size: 1.6em; /* Larger */
             color: var(--module-selection-text);
-            text-shadow: 0 0 22px rgba(150, 0, 255, 0.98); /* Stronger shadow */
-            margin-bottom: 28px;
+            text-shadow: 0 0 25px rgba(150, 0, 255, 0.99); /* Stronger shadow */
+            margin-bottom: 30px;
         }
 
         /* Specific resource display labels and colors */
@@ -500,145 +502,145 @@
             content: attr(data-label);
             color: var(--energy-color-high);
             border: 1px solid rgba(255, 255, 0, 0.98);
-            box-shadow: 0 0 28px rgba(255, 255, 0, 0.98); /* Stronger glow */
+            box-shadow: 0 0 32px rgba(255, 255, 0, 0.98); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -40px; left: 60px; font-size: 1.3em; background: rgba(0, 0, 0, 0.98); padding: 14px 30px; border-radius: 22px; font-weight: 700; letter-spacing: 3.0px; transform: translateY(-50%) translateZ(25px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
             color: var(--data-flow-color-high);
             border: 1px solid rgba(0, 255, 0, 0.98);
-            box-shadow: 0 0 28px rgba(0, 255, 0, 0.98); /* Stronger glow */
+            box-shadow: 0 0 32px rgba(0, 255, 0, 0.98); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -40px; left: 60px; font-size: 1.3em; background: rgba(0, 0, 0, 0.98); padding: 14px 30px; border-radius: 22px; font-weight: 700; letter-spacing: 3.0px; transform: translateY(-50%) translateZ(25px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .raw-data-reserve-display::before {
             content: attr(data-label);
             color: var(--raw-data-text);
             border: 1px solid var(--raw-data-text);
-            box-shadow: 0 0 28px var(--raw-data-text); /* Stronger glow */
+            box-shadow: 0 0 32px var(--raw-data-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -40px; left: 60px; font-size: 1.3em; background: rgba(0, 0, 0, 0.98); padding: 14px 30px; border-radius: 22px; font-weight: 700; letter-spacing: 3.0px; transform: translateY(-50%) translateZ(25px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .processing-power-display::before { /* NEW */
             content: attr(data-label);
             color: var(--processing-power-text);
             border: 1px solid var(--processing-power-text);
-            box-shadow: 0 0 28px var(--processing-power-text); /* Stronger glow */
+            box-shadow: 0 0 32px var(--processing-power-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -35px; left: 55px; font-size: 1.2em; background: rgba(0, 0, 0, 0.98); padding: 12px 28px; border-radius: 20px; font-weight: 700; letter-spacing: 2.8px; transform: translateY(-50%) translateZ(20px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -40px; left: 60px; font-size: 1.3em; background: rgba(0, 0, 0, 0.98); padding: 14px 30px; border-radius: 22px; font-weight: 700; letter-spacing: 3.0px; transform: translateY(-50%) translateZ(25px); opacity: 0.99; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 45px; /* Taller bar */
+            height: 50px; /* Taller bar */
             background: var(--resource-bg);
-            border-radius: 22px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.999);
-            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.999);
+            border: 1px solid rgba(255,255,255,0.18);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.28) 0%, transparent 50%, rgba(255,255,255,0.28) 100%);
-            background-size: 450% 100%;
-            animation: resourceFlow 18s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.35) 0%, transparent 50%, rgba(255,255,255,0.35) 100%);
+            background-size: 500% 100%; /* Larger background for flow */
+            animation: resourceFlow 20s linear infinite;
             mix-blend-mode: overlay;
-            opacity: 0.85;
+            opacity: 0.9;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 450% 0; }
-            100% { background-position: -450% 0; }
+            0% { background-position: 500% 0; }
+            100% { background-position: -500% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 22px;
-            transition: width 2.2s cubic-bezier(0.25, 1, 0.5, 1), background 2s ease-out, box-shadow 2s ease-out;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.85); /* Default */
+            border-radius: 25px;
+            transition: width 2.5s cubic-bezier(0.25, 1, 0.5, 1), background 2.2s ease-out, box-shadow 2.2s ease-out;
+            box-shadow: 0 0 28px rgba(255, 255, 255, 0.9); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 28px rgba(255, 255, 0, 0.98); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 28px rgba(0, 255, 0, 0.98); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 28px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 28px var(--processing-power-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 32px rgba(255, 255, 0, 0.98); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 32px rgba(0, 255, 0, 0.98); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 32px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 32px var(--processing-power-text); } /* NEW */
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 45px; /* Taller */
-            background: rgba(255, 255, 255, 0.3); /* More subtle background */
-            border-radius: 22px;
+            height: 50px; /* Taller */
+            background: rgba(255, 255, 255, 0.35); /* More subtle background */
+            border-radius: 25px;
             outline: none;
-            transition: all 0.8s ease;
-            box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.999), 0 0 20px rgba(0,191,255,0.7); /* Inset for depth, subtle outer glow */
-            transform: translateZ(14px);
-            border: 1px solid rgba(255,255,255,0.2); /* More subtle border */
+            transition: all 0.9s ease;
+            box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.999), 0 0 22px rgba(0,191,255,0.75); /* Inset for depth, subtle outer glow */
+            transform: translateZ(16px);
+            border: 1px solid rgba(255,255,255,0.25); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 60px; /* Larger thumb */
-            height: 60px;
+            width: 65px; /* Larger thumb */
+            height: 65px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 45px var(--primary-glow);
-            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease;
-            border: 14px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 50px var(--primary-glow);
+            transition: background 0.9s ease, box-shadow 0.9s ease, transform 0.9s ease;
+            border: 15px solid rgba(255, 255, 255, 0.9);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 45px var(--primary-glow);
-            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease;
-            border: 14px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 50px var(--primary-glow);
+            transition: background 0.9s ease, box-shadow 0.9s ease, transform 0.9s ease;
+            border: 15px solid rgba(255, 255, 255, 0.9);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 60px var(--primary-glow), 0 0 30px var(--primary-glow) inset;
-            transform: scale(1.22); /* Reduced scale for smoother feel */
+            box-shadow: 0 0 70px var(--primary-glow), 0 0 35px var(--primary-glow) inset;
+            transform: scale(1.25);
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #A0D0E0;
-            box-shadow: 0 0 60px var(--primary-glow), 0 0 30px var(--primary-glow) inset;
-            transform: scale(1.22);
+            box-shadow: 0 0 70px var(--primary-glow), 0 0 35px var(--primary-glow) inset;
+            transform: scale(1.25);
         }
 
         /* Active Protocol Status Display */
         .system-status-display {
             font-family: 'Orbitron', monospace;
-            font-size: 1.7em;
-            padding: 45px;
+            font-size: 1.8em; /* Larger */
+            padding: 50px;
             border: 1px solid var(--border-color);
-            border-radius: 45px;
+            border-radius: 50px; /* More rounded */
             background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 45px rgba(0, 255, 255, 0.6), inset 0 0 90px rgba(0, 255, 255, 0.4); /* More inner shadow */
+            box-shadow: inset 0 0 50px rgba(0, 255, 255, 0.65), inset 0 0 100px rgba(0, 255, 255, 0.45); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 0.9s ease;
-            line-height: 2.1;
-            letter-spacing: 2.2px;
+            transition: all 1s ease;
+            line-height: 2.2;
+            letter-spacing: 2.5px;
             color: var(--data-stream-text);
-            text-shadow: 0 0 28px rgba(0, 255, 255, 0.99); /* Stronger shadow */
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.99); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(35px);
+            transform: translateZ(45px);
             overflow: hidden;
         }
         .system-status-display::after {
@@ -648,7 +650,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(0,255,255,0.2) 0%, transparent 80%);
+            background: linear-gradient(45deg, rgba(0,255,255,0.25) 0%, transparent 80%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
@@ -656,19 +658,19 @@
         .system-status-display::before {
             content: 'SYSTEM STATUS';
             position: absolute;
-            top: -35px;
-            left: 55px;
-            font-size: 1.2em;
+            top: -40px;
+            left: 60px;
+            font-size: 1.3em;
             color: var(--data-stream-text);
             background: rgba(0, 0, 0, 0.98);
-            padding: 12px 28px;
-            border-radius: 20px;
+            padding: 14px 30px;
+            border-radius: 22px;
             font-weight: 700;
-            letter-spacing: 2.8px;
-            transform: translateY(-50%) translateZ(20px);
+            letter-spacing: 3.0px;
+            transform: translateY(-50%) translateZ(25px);
             opacity: 0.99;
             border: 1px solid var(--data-stream-text);
-            box-shadow: 0 0 28px var(--data-stream-text); /* Stronger glow */
+            box-shadow: 0 0 32px var(--data-stream-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -676,24 +678,24 @@
         /* Data Stream Monitor */
         .data-stream-monitor {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.5em;
-            min-height: 380px;
+            font-size: 1.6em; /* Larger */
+            min-height: 420px; /* Taller */
             display: block;
-            padding: 55px;
+            padding: 60px;
             border: 1px solid var(--border-color);
-            border-radius: 45px;
+            border-radius: 50px; /* More rounded */
             background: var(--data-stream-bg);
-            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.6), inset 0 0 110px rgba(0, 255, 255, 0.4); /* More inner shadow */
+            box-shadow: inset 0 0 70px rgba(0, 255, 255, 0.65), inset 0 0 120px rgba(0, 255, 255, 0.45); /* More inner shadow */
             text-align: left;
             overflow-y: auto;
-            max-height: 650px;
+            max-height: 700px; /* Taller */
             position: relative;
-            transition: all 0.9s ease;
-            line-height: 2.1;
-            letter-spacing: 1.8px;
+            transition: all 1s ease;
+            line-height: 2.2;
+            letter-spacing: 2.0px;
             font-weight: 300;
             color: var(--data-stream-text);
-            transform: translateZ(42px);
+            transform: translateZ(52px);
             display: flex; /* Make it a flex container */
             flex-direction: column-reverse; /* Stack new entries at the bottom, visualizer at top */
         }
@@ -709,8 +711,8 @@
                 to bottom,
                 transparent 0px,
                 transparent 1px,
-                rgba(0, 255, 255, 0.4) 1px,
-                rgba(0, 255, 255, 0.4) 9px
+                rgba(0, 255, 255, 0.45) 1px,
+                rgba(0, 255, 255, 0.45) 10px /* Slightly thicker lines */
             );
             pointer-events: none;
             mix-blend-mode: overlay;
@@ -718,109 +720,109 @@
         }
 
         .data-stream-monitor.active {
-            box-shadow: inset 0 0 70px var(--secondary-glow), 0 0 55px var(--secondary-glow), inset 0 0 130px rgba(255, 105, 180, 0.4); /* More active glow */
-            border-color: rgba(255, 105, 180, 0.95);
+            box-shadow: inset 0 0 80px var(--secondary-glow), 0 0 65px var(--secondary-glow), inset 0 0 140px rgba(255, 105, 180, 0.5); /* More active glow */
+            border-color: rgba(255, 105, 180, 0.98);
         }
 
         .data-visualizer { /* NEW */
             position: sticky;
             top: 0; /* Stick to the top */
             background: linear-gradient(to bottom, var(--data-stream-bg) 0%, transparent 100%);
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+            padding-bottom: 30px; /* More padding */
+            margin-bottom: 30px;
             z-index: 1;
-            height: 90px; /* Visible area for visualizer */
+            height: 100px; /* Taller visible area for visualizer */
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border-bottom: 1px dashed rgba(0, 255, 255, 0.4);
-            transform: translateZ(8px);
+            border-bottom: 1px dashed rgba(0, 255, 255, 0.5);
+            transform: translateZ(10px);
         }
         .data-visualizer-wave { /* NEW */
             width: 100%;
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(0,255,255,0.08) 0%,
-                rgba(0,255,255,0.5) 15%,
-                rgba(0,255,255,0.08) 30%,
-                rgba(0,255,255,0.7) 45%,
-                rgba(0,255,255,0.08) 60%,
-                rgba(0,255,255,0.5) 75%,
-                rgba(0,255,255,0.08) 100%
+                rgba(0,255,255,0.1) 0%,
+                rgba(0,255,255,0.6) 15%,
+                rgba(0,255,255,0.1) 30%,
+                rgba(0,255,255,0.8) 45%,
+                rgba(0,255,255,0.1) 60%,
+                rgba(0,255,255,0.6) 75%,
+                rgba(0,255,255,0.1) 100%
             );
-            background-size: 250% 100%;
-            animation: dataWave 2s linear infinite;
-            filter: blur(2.5px) brightness(1.3);
-            opacity: 0.75;
+            background-size: 300% 100%; /* Wider wave */
+            animation: dataWave 1.8s linear infinite; /* Faster wave */
+            filter: blur(3px) brightness(1.4);
+            opacity: 0.8;
             mix-blend-mode: screen;
         }
 
         @keyframes dataWave {
             0% { background-position: 0% 0%; }
-            100% { background-position: -250% 0%; }
+            100% { background-position: -300% 0%; }
         }
 
 
         .log-entry {
-            margin-bottom: 22px;
-            animation: fadeInLog 1.5s ease-out;
+            margin-bottom: 25px;
+            animation: fadeInLog 1.8s ease-out; /* Longer fade in */
             position: relative; /* For the small entry marker */
-            padding-left: 28px; /* Space for marker */
+            padding-left: 30px; /* Space for marker */
         }
         .log-entry::before { /* Small marker for each log entry */
             content: '›';
             position: absolute;
             left: 0;
             color: var(--data-stream-text);
-            text-shadow: 0 0 9px var(--data-stream-text);
-            font-size: 1.3em;
+            text-shadow: 0 0 10px var(--data-stream-text);
+            font-size: 1.4em;
         }
 
         @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(45px); }
+            from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .log-entry.processing-glitch {
             color: var(--log-glitch-color);
             text-shadow:
-                1px 1px 12px var(--log-glitch-color),
-                -1px -1px 12px var(--log-glitch-color);
-            animation: glitchEffect 0.35s infinite alternate; /* Faster glitch */
+                1px 1px 14px var(--log-glitch-color),
+                -1px -1px 14px var(--log-glitch-color);
+            animation: glitchEffect 0.3s infinite alternate; /* Faster glitch */
         }
 
         @keyframes glitchEffect {
-            0% { transform: translateX(0); opacity: 1; text-shadow: 6px 0 var(--log-glitch-color), -6px 0 var(--log-glitch-color); }
-            25% { transform: translateX(12px); opacity: 0.25; text-shadow: -12px 0 var(--log-glitch-color), 12px 0 var(--log-glitch-color); }
-            50% { transform: translateX(-12px); opacity: 0.95; text-shadow: 14px 0 var(--log-glitch-color), -14px 0 var(--log-glitch-color); }
-            75% { transform: translateX(8px); opacity: 0.65; text-shadow: -9px 0 var(--log-glitch-color), 9px 0 var(--log-glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -8px 0 var(--log-glitch-color), 8px 0 var(--log-glitch-color); }
+            0% { transform: translateX(0); opacity: 1; text-shadow: 7px 0 var(--log-glitch-color), -7px 0 var(--log-glitch-color); }
+            25% { transform: translateX(14px); opacity: 0.2; text-shadow: -14px 0 var(--log-glitch-color), 14px 0 var(--log-glitch-color); }
+            50% { transform: translateX(-14px); opacity: 0.98; text-shadow: 16px 0 var(--log-glitch-color), -16px 0 var(--log-glitch-color); }
+            75% { transform: translateX(9px); opacity: 0.7; text-shadow: -10px 0 var(--log-glitch-color), 10px 0 var(--log-glitch-color); }
+            100% { transform: translateX(0); opacity: 1; text-shadow: -9px 0 var(--log-glitch-color), 9px 0 var(--log-glitch-color); }
         }
 
         .button-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 55px; /* Increased gap */
+            gap: 60px; /* Increased gap */
             justify-content: center;
-            margin-top: 90px;
-            transform: translateZ(48px);
+            margin-top: 100px;
+            transform: translateZ(58px);
         }
 
         button {
             background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
             color: #050510;
             border: none;
-            padding: 32px 75px;
-            font-size: 1.8em;
+            padding: 35px 80px; /* Larger padding */
+            font-size: 2.0em; /* Larger font */
             font-weight: 700;
-            border-radius: 80px;
+            border-radius: 90px; /* More rounded */
             cursor: pointer;
             outline: none;
-            transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 25px 70px rgba(135, 206, 250, 0.98);
-            letter-spacing: 3.8px;
+            transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 28px 80px rgba(135, 206, 250, 0.98);
+            letter-spacing: 4.0px;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -835,135 +837,135 @@
             left: 50%;
             width: 0;
             height: 0;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85); /* Stronger ripple */
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 1.1s ease, height 1.1s ease;
+            transition: width 1.2s ease, height 1.2s ease; /* Slower ripple */
             z-index: -1;
             opacity: 0;
         }
 
         button:hover::before {
-            width: 600%;
-            height: 600%;
+            width: 700%; /* Larger ripple */
+            height: 700%;
             opacity: 1;
         }
 
         button:hover {
-            transform: translateY(-28px) scale(1.18); /* Slightly less aggressive scale */
-            box-shadow: 0 40px 110px rgba(135, 206, 250, 1.3), 0 0 75px var(--accent-color);
+            transform: translateY(-30px) scale(1.2);
+            box-shadow: 0 45px 120px rgba(135, 206, 250, 1.3), 0 0 80px var(--accent-color);
             background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
             color: white;
-            filter: brightness(1.8);
+            filter: brightness(1.9);
         }
 
         button:active {
-            transform: translateY(-20px) scale(0.97);
-            box-shadow: 0 22px 70px rgba(135, 206, 250, 0.95);
+            transform: translateY(-22px) scale(0.95);
+            box-shadow: 0 25px 80px rgba(135, 206, 250, 0.95);
         }
 
         button:disabled {
-            opacity: 0.35;
+            opacity: 0.3;
             cursor: not-allowed;
             box-shadow: none;
             transform: none;
-            filter: grayscale(1) brightness(0.65);
+            filter: grayscale(1) brightness(0.6);
             background: linear-gradient(90deg, #333 0%, #555 100%) !important;
             color: #aaa !important;
         }
 
         #formulate-protocol-button {
             background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%); /* Deep Pink */
-            box-shadow: 0 25px 70px var(--formulate-btn-glow);
+            box-shadow: 0 28px 80px var(--formulate-btn-glow);
             color: white;
         }
         #formulate-protocol-button:hover {
             background: linear-gradient(90deg, #C71585 0%, #FF1493 100%);
-            box-shadow: 0 40px 110px var(--formulate-btn-glow), 0 0 75px var(--formulate-btn-glow);
+            box-shadow: 0 45px 120px var(--formulate-btn-glow), 0 0 80px var(--formulate-btn-glow);
             color: white;
         }
 
         #refine-protocol-button { /* NEW BUTTON */
             background: linear-gradient(90deg, #FFD700 0%, #FFFF00 100%); /* Gold to Yellow */
-            box-shadow: 0 25px 70px var(--refine-btn-glow);
+            box-shadow: 0 28px 80px var(--refine-btn-glow);
             color: #050510;
         }
         #refine-protocol-button:hover {
             background: linear-gradient(90deg, #FFFF00 0%, #FFD700 100%);
-            box-shadow: 0 40px 110px var(--refine-btn-glow), 0 0 75px var(--refine-btn-glow);
+            box-shadow: 0 45px 120px var(--refine-btn-glow), 0 0 80px var(--refine-btn-glow);
             color: #000;
-            filter: brightness(1.9);
+            filter: brightness(2.0);
         }
 
         #run-predictive-analysis-button { /* NEW BUTTON */
             background: linear-gradient(90deg, #00FF7F 0%, #3CB371 100%); /* Spring Green to Medium Sea Green */
-            box-shadow: 0 25px 70px var(--predictive-btn-glow);
+            box-shadow: 0 28px 80px var(--predictive-btn-glow);
             color: #050510;
         }
         #run-predictive-analysis-button:hover {
             background: linear-gradient(90deg, #3CB371 0%, #00FF7F 100%);
-            box-shadow: 0 40px 110px var(--predictive-btn-glow), 0 0 75px var(--predictive-btn-glow);
+            box-shadow: 0 45px 120px var(--predictive-btn-glow), 0 0 80px var(--predictive-btn-glow);
             color: white;
-            filter: brightness(1.9);
+            filter: brightness(2.0);
         }
 
 
         #integrate-protocol-button {
             background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
-            box-shadow: 0 25px 70px rgba(0, 255, 255, 0.98);
+            box-shadow: 0 28px 80px rgba(0, 255, 255, 0.98);
             color: #050510;
         }
         #integrate-protocol-button:hover {
             background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 40px 110px rgba(0, 255, 255, 1.3), 0 0 75px #00FFFF;
+            box-shadow: 0 45px 120px rgba(0, 255, 255, 1.3), 0 0 80px #00FFFF;
             color: white;
         }
 
         #tune-active-protocol-button {
             background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 25px 70px var(--tune-btn-glow);
+            box-shadow: 0 28px 80px var(--tune-btn-glow);
             color: #050510;
         }
         #tune-active-protocol-button:hover {
             background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 40px 110px var(--tune-btn-glow), 0 0 75px var(--tune-btn-glow);
+            box-shadow: 0 45px 120px var(--tune-btn-glow), 0 0 80px var(--tune-btn-glow);
             color: white;
         }
 
         #deactivate-protocol-button {
             background: linear-gradient(90deg, #800080 0%, #9400D3 100%); /* Purple */
-            box-shadow: 0 25px 70px rgba(128, 0, 128, 0.98);
+            box-shadow: 0 28px 80px rgba(128, 0, 128, 0.98);
             color: white;
         }
         #deactivate-protocol-button:hover {
             background: linear-gradient(90deg, #9400D3 0%, #800080 100%);
-            box-shadow: 0 40px 110px rgba(128, 0, 128, 1.3), 0 0 75px #800080;
+            box-shadow: 0 45px 120px rgba(128, 0, 128, 1.3), 0 0 80px #800080;
             color: white;
         }
         
         #recalibrate-core-button {
             background: linear-gradient(90deg, #FF6347 0%, #DC143C 100%); /* Red / Tomato */
-            box-shadow: 0 25px 70px rgba(255, 99, 71, 0.98);
+            box-shadow: 0 28px 80px rgba(255, 99, 71, 0.98);
             color: white;
         }
 
         #recalibrate-core-button:hover {
             background: linear-gradient(90deg, #CD5C5C 0%, #FF6347 100%);
-            box-shadow: 0 40px 110px rgba(255, 99, 71, 1.3), 0 0 75px #FF6347;
+            box-shadow: 0 45px 120px rgba(255, 99, 71, 1.3), 0 0 80px #FF6347;
             color: white;
         }
 
         /* NEW BUTTON STYLE */
         #calibrate-signal-array-button { /* Replaced #optimize-receptors-button */
             background: linear-gradient(90deg, #6A5ACD 0%, #BA55D3 100%); /* Slate Blue to Orchid */
-            box-shadow: 0 25px 70px var(--calibrate-btn-glow);
+            box-shadow: 0 28px 80px var(--calibrate-btn-glow);
             color: white;
         }
         #calibrate-signal-array-button:hover {
             background: linear-gradient(90deg, #BA55D3 0%, #6A5ACD 100%);
-            box-shadow: 0 40px 110px var(--calibrate-btn-glow), 0 0 75px var(--calibrate-btn-glow);
+            box-shadow: 0 45px 120px var(--calibrate-btn-glow), 0 0 80px var(--calibrate-btn-glow);
             color: white;
-            filter: brightness(1.8);
+            filter: brightness(1.9);
         }
 
         /* Anomaly Alert Overlay */
@@ -974,21 +976,21 @@
             width: 100%;
             height: 100%;
             background: var(--anomaly-bg);
-            border: 6px solid var(--anomaly-border);
-            border-radius: 100px; /* Match container border radius */
+            border: 8px solid var(--anomaly-border); /* Thicker border */
+            border-radius: 120px; /* Match container border radius */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 45px;
+            gap: 50px; /* More gap */
             z-index: 100; /* Above everything else in container */
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
-            backdrop-filter: blur(60px) brightness(1.3);
-            -webkit-backdrop-filter: blur(60px) brightness(1.3);
-            box-shadow: 0 0 110px var(--anomaly-color), inset 0 0 90px var(--anomaly-color);
-            transform: translateZ(220px); /* Bring it forward in 3D */
+            transition: opacity 0.7s ease, visibility 0.7s ease;
+            backdrop-filter: blur(70px) brightness(1.4); /* Stronger blur */
+            -webkit-backdrop-filter: blur(70px) brightness(1.4);
+            box-shadow: 0 0 130px var(--anomaly-color), inset 0 0 110px var(--anomaly-color);
+            transform: translateZ(250px); /* Bring it further forward in 3D */
         }
         .anomaly-alert-overlay.active {
             opacity: 1;
@@ -996,64 +998,64 @@
         }
         .anomaly-alert-overlay h2 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4em;
+            font-size: 4.5em; /* Larger */
             color: var(--anomaly-color);
-            text-shadow: 0 0 45px var(--anomaly-color), 0 0 70px rgba(255, 69, 0, 0.8);
-            letter-spacing: 6px;
-            animation: textPulse 1s infinite alternate;
+            text-shadow: 0 0 50px var(--anomaly-color), 0 0 80px rgba(255, 69, 0, 0.85);
+            letter-spacing: 7px;
+            animation: textPulse 0.9s infinite alternate; /* Faster pulse */
         }
         .anomaly-alert-overlay p {
-            font-size: 1.9em;
+            font-size: 2.0em; /* Larger */
             color: var(--text-color);
             max-width: 85%;
-            opacity: 0.95;
-            text-shadow: 0 0 18px rgba(255,255,255,0.6);
+            opacity: 0.98;
+            text-shadow: 0 0 20px rgba(255,255,255,0.7);
         }
         .anomaly-alert-overlay button { /* Specific button for anomaly */
             background: linear-gradient(90deg, var(--anomaly-color) 0%, #FF8C00 100%); /* OrangeRed to DarkOrange */
-            box-shadow: 0 22px 65px var(--anomaly-color);
+            box-shadow: 0 25px 75px var(--anomaly-color);
             color: white;
-            padding: 28px 65px;
-            font-size: 1.6em;
+            padding: 30px 70px; /* Larger padding */
+            font-size: 1.8em; /* Larger font */
         }
         .anomaly-alert-overlay button:hover {
             background: linear-gradient(90deg, #FF8C00 0%, var(--anomaly-color) 100%);
-            box-shadow: 0 35px 100px var(--anomaly-color), 0 0 70px var(--anomaly-color);
-            filter: brightness(1.6);
+            box-shadow: 0 40px 110px var(--anomaly-color), 0 0 75px var(--anomaly-color);
+            filter: brightness(1.7);
         }
         @keyframes textPulse {
             from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1.04); opacity: 0.92; }
+            to { transform: scale(1.05); opacity: 0.9; }
         }
 
 
         .stability-level-container {
             width: 100%;
-            height: 60px; /* Taller */
-            background: rgba(0, 0, 0, 0.9);
-            border-radius: 30px;
-            margin-top: 90px;
+            height: 65px; /* Taller */
+            background: rgba(0, 0, 0, 0.92); /* Darker */
+            border-radius: 32px;
+            margin-top: 100px;
             overflow: hidden;
-            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.999);
+            box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.999);
             position: relative;
             border: 1px solid var(--border-color);
-            transform: translateZ(35px);
+            transform: translateZ(45px);
         }
 
         .stability-level-bar {
             height: 100%;
             width: 70%;
             background: var(--stability-good);
-            border-radius: 30px;
-            transition: width 2.8s cubic-bezier(0.2, 0.8, 0.2, 1), background 2.5s ease-out, box-shadow 2.5s ease-out;
-            box-shadow: 0 0 55px rgba(102, 255, 102, 0.99);
+            border-radius: 32px;
+            transition: width 3s cubic-bezier(0.2, 0.8, 0.2, 1), background 2.8s ease-out, box-shadow 2.8s ease-out;
+            box-shadow: 0 0 60px rgba(102, 255, 102, 0.99);
             position: relative;
-            animation: barGlow 9s infinite alternate; /* Slower glow */
+            animation: barGlow 10s infinite alternate; /* Slower glow */
         }
 
         @keyframes barGlow {
-            0% { box-shadow: 0 0 50px rgba(102, 255, 102, 0.98); }
-            100% { box-shadow: 0 0 70px rgba(102, 255, 102, 1.1), 0 0 30px rgba(255,255,255,0.9) inset; }
+            0% { box-shadow: 0 0 55px rgba(102, 255, 102, 0.98); }
+            100% { box-shadow: 0 0 75px rgba(102, 255, 102, 1.15), 0 0 32px rgba(255,255,255,0.95) inset; }
         }
 
         .stability-level-bar::after { /* Glare effect on bar */
@@ -1065,38 +1067,38 @@
             height: 100%;
             background: linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.98) 0%,
-                rgba(255, 255, 255, 0.65) 50%,
+                rgba(255, 255, 255, 1.0) 0%, /* Stronger glare */
+                rgba(255, 255, 255, 0.7) 50%,
                 rgba(255, 255, 255, 0) 100%
             );
             mix-blend-mode: overlay;
-            border-radius: 30px;
+            border-radius: 32px;
         }
 
         .status-text {
-            font-size: 1.8em;
-            margin-top: 45px;
+            font-size: 2.0em; /* Larger */
+            margin-top: 50px;
             opacity: 0.99;
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 3.8px;
+            letter-spacing: 4.0px;
             color: var(--accent-color);
-            text-shadow: 0 0 28px var(--primary-glow);
+            text-shadow: 0 0 30px var(--primary-glow);
             font-weight: 700;
-            transform: translateZ(35px);
+            transform: translateZ(45px);
         }
 
         footer {
-            margin-top: 160px;
-            font-size: 1.4em;
+            margin-top: 180px;
+            font-size: 1.5em; /* Larger */
             color: rgba(255, 255, 255, 0.98);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 3.2px;
-            padding-top: 90px;
+            letter-spacing: 3.5px;
+            padding-top: 100px;
             border-top: 1px dashed var(--border-color);
-            text-shadow: 0 0 22px var(--secondary-glow);
+            text-shadow: 0 0 25px var(--secondary-glow);
             position: relative;
-            line-height: 2.3;
-            transform: translateZ(28px);
+            line-height: 2.4;
+            transform: translateZ(32px);
         }
         
         footer::before {
@@ -1108,61 +1110,61 @@
             width: 100%;
             height: 1px;
             background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 90%);
-            opacity: 0.98;
-            filter: blur(45px);
+            opacity: 0.99;
+            filter: blur(50px);
         }
 
         @media (max-width: 1000px) {
             .container {
-                margin: 35px;
-                padding: 75px;
-                gap: 70px;
-                border-radius: 70px;
+                margin: 40px;
+                padding: 80px;
+                gap: 80px;
+                border-radius: 80px;
                 max-width: 98%;
             }
             h1 {
-                font-size: 4em;
-                letter-spacing: 8px;
-                margin-bottom: 50px;
+                font-size: 4.5em;
+                letter-spacing: 10px;
+                margin-bottom: 60px;
             }
             h1::after {
-                bottom: -35px;
-                height: 8px;
+                bottom: -40px;
+                height: 10px;
             }
             p {
-                font-size: 1.3em;
+                font-size: 1.4em;
             }
             .data-stream-monitor {
-                font-size: 1.2em;
-                min-height: 280px;
-                padding: 40px;
+                font-size: 1.3em;
+                min-height: 300px;
+                padding: 45px;
             }
             button {
-                padding: 28px 55px;
-                font-size: 1.5em;
-                border-radius: 65px;
-                letter-spacing: 2.2px;
+                padding: 30px 60px;
+                font-size: 1.6em;
+                border-radius: 70px;
+                letter-spacing: 2.5px;
             }
             .button-group {
                 flex-direction: column;
-                gap: 35px;
+                gap: 40px;
             }
             input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 45px;
-                height: 45px;
-                border: 8px solid rgba(255, 255, 255, 0.75);
+                width: 50px;
+                height: 50px;
+                border: 10px solid rgba(255, 255, 255, 0.8);
             }
             input[type="range"] {
-                height: 32px;
-                border-radius: 16px;
+                height: 35px;
+                border-radius: 18px;
             }
             .system-status-display {
-                font-size: 1.4em;
-                padding: 30px;
+                font-size: 1.5em;
+                padding: 35px;
             }
             .resource-display-container {
                 grid-template-columns: 1fr; /* Stack vertically on smaller screens */
-                gap: 40px;
+                gap: 45px;
             }
             .param-label {
                 align-items: flex-start; /* Keep left alignment for better readability */
@@ -1170,36 +1172,36 @@
             .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
             .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
             .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before {
-                top: -25px;
-                left: 40px;
-                font-size: 1.05em;
-                padding: 8px 20px;
+                top: -30px;
+                left: 45px;
+                font-size: 1.15em;
+                padding: 10px 22px;
             }
             .resource-level-bar-container {
-                height: 35px;
+                height: 40px;
             }
             .stability-level-container {
-                height: 45px;
+                height: 50px;
             }
             .status-text {
-                font-size: 1.5em;
-                margin-top: 35px;
-                letter-spacing: 2.8px;
+                font-size: 1.6em;
+                margin-top: 40px;
+                letter-spacing: 3.0px;
             }
             footer {
-                margin-top: 100px;
-                font-size: 1.2em;
-                padding-top: 55px;
+                margin-top: 110px;
+                font-size: 1.3em;
+                padding-top: 60px;
             }
             .anomaly-alert-overlay h2 {
-                font-size: 2.8em;
+                font-size: 3.2em;
             }
             .anomaly-alert-overlay p {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
             .anomaly-alert-overlay button {
-                padding: 22px 50px;
-                font-size: 1.4em;
+                padding: 25px 55px;
+                font-size: 1.5em;
             }
             .sub-protocol-grid {
                 grid-template-columns: 1fr;
@@ -1250,7 +1252,7 @@
 
             <!-- Signal Array Calibration -->
             <div class="signal-array-calibration-module" data-label="SIGNAL ARRAY CALIBRATION">
-                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--signal-array-text);">Adjust signal frequency bands and amplitude gains. Optimal calibration enhances data acquisition and processing efficiency, but extreme settings can induce instability.</p>
+                <p style="font-size: 1.3em; opacity: 0.95; margin-bottom: 35px; color: var(--signal-array-text);">Adjust signal frequency bands and amplitude gains. Optimal calibration enhances passive data acquisition and processing efficiency, but extreme settings can induce instability. Use 'Calibrate Signal Array' to perform a high-yield scan.</p>
                 <div id="signal-array-calibrators-container">
                     <!-- Calibrators will be dynamically rendered here -->
                 </div>
@@ -1258,8 +1260,8 @@
 
             <!-- NEW: Predictive Analysis Engine -->
             <div class="predictive-analysis-module" data-label="PREDICTIVE ANALYSIS ENGINE">
-                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--predictive-text);">Simulate protocol integration or system recalibration. Generates a temporary projection of expected stability, resource impact, and potential risks without committing changes.</p>
-                <button id="run-predictive-analysis-button" style="margin: 0 auto; width: fit-content; margin-top: 15px;">Run Predictive Analysis</button>
+                <p style="font-size: 1.3em; opacity: 0.95; margin-bottom: 35px; color: var(--predictive-text);">Simulate protocol integration or system recalibration. Generates a temporary projection of expected stability, resource impact, and potential risks without committing changes. Costs Energy & Processing Power.</p>
+                <button id="run-predictive-analysis-button" style="margin: 0 auto; width: fit-content; margin-top: 18px;">Run Predictive Analysis</button>
                 <div id="predictive-results" class="predictive-results" style="display: none;">
                     <!-- Results displayed here -->
                 </div>
@@ -1267,24 +1269,24 @@
 
             <!-- New: Formulated Protocol Details -->
             <div class="formulated-protocol-details" data-label="FORMULATED PROTOCOL DETAILS" style="display: none;">
-                <p><strong>Protocol Name:</strong> <span id="formulated-protocol-name">N/A</span></p>
-                <p><strong>Protocol ID:</strong> <span id="formulated-protocol-id">N/A</span></p>
-                <p><strong>Archetype:</strong> <span id="formulated-protocol-archetype">N/A</span></p>
-                <p><strong>Complexity:</strong> <span id="formulated-protocol-complexity">N/A</span></p>
-                <p><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
-                <p><strong>Raw Data Cost:</strong> <span id="formulated-protocol-raw-data-cost">N/A</span></p>
-                <p><strong>Processing Power Cost:</strong> <span id="formulated-protocol-processing-power-cost">N/A</span></p>
-                <p style="font-size: 1.1em; opacity: 0.88; margin-top: 30px;" id="formulated-protocol-description">Acquire Raw Data and formulate a protocol to see its details here.</p>
+                <p style="font-size: 1.3em;"><strong>Protocol Name:</strong> <span id="formulated-protocol-name">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Protocol ID:</strong> <span id="formulated-protocol-id">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Archetype:</strong> <span id="formulated-protocol-archetype">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Complexity:</strong> <span id="formulated-protocol-complexity">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Raw Data Cost:</strong> <span id="formulated-protocol-raw-data-cost">N/A</span></p>
+                <p style="font-size: 1.3em;"><strong>Processing Power Cost:</strong> <span id="formulated-protocol-processing-power-cost">N/A</span></p>
+                <p style="font-size: 1.2em; opacity: 0.88; margin-top: 35px;" id="formulated-protocol-description">Acquire Raw Data and formulate a protocol to see its details here.</p>
             </div>
 
             <!-- Deployed Protocol Parameters (now for tuning ACTIVE protocols) -->
             <div class="deployed-protocol-parameters" data-label="ACTIVE PROTOCOL TUNING" style="display: none;">
-                <p style="text-align: center; opacity: 0.88;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>
+                <p style="text-align: center; opacity: 0.88; font-size: 1.3em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>
             </div>
 
             <!-- NEW: Sub-Protocol Augmentation System -->
             <div class="sub-protocol-augmentation-module" data-label="SUB-PROTOCOL AUGMENTATION">
-                <p style="font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; color: var(--augmentation-text);">Deploy minor, specialized sub-protocols to fine-tune system behavior. Each active module incurs a continuous resource cost.</p>
+                <p style="font-size: 1.3em; opacity: 0.95; margin-bottom: 35px; color: var(--augmentation-text);">Deploy minor, specialized sub-protocols to fine-tune system behavior. Each active module incurs a continuous resource cost.</p>
                 <div id="sub-protocol-grid" class="sub-protocol-grid">
                     <!-- Sub-protocol cards dynamically rendered here -->
                 </div>
@@ -1318,7 +1320,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 30.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 31.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1381,9 +1383,9 @@
         // System State Variables
         let currentSystemStability = 70;
         let currentEnergy = 100; // Max 100
-        let currentRawData = 0; // Max 500
+        let currentRawData = 0; // Max 600 (increased from 500)
         let currentDataFlow = 50; // Max 100
-        let currentProcessingPower = 100; // Max 100
+        let currentProcessingPower = 100; // Max 100 (NEW)
 
         let isProcessing = false;
         let formulatedProtocol = null;
@@ -1407,7 +1409,7 @@
                 description: 'Reduces Raw Data storage footprint. Increases Raw Data collection speed slightly.',
                 isActive: false,
                 costPerTick: { energy: 0.1, processingPower: 0.05 },
-                impactPerTick: { rawDataPerTick: 0.8 } // Effectively makes rawData collection more efficient
+                impactPerTick: { rawDataPerTickBoost: 0.08 } // Effectively makes rawData collection more efficient (changed from rawDataPerTick to rawDataPerTickBoost)
             },
             {
                 id: 'stability-reinforcer',
@@ -1439,13 +1441,21 @@
                 description: 'Increases anomaly detection chance, but also gives a slight chance to resolve automatically.',
                 isActive: false,
                 costPerTick: { energy: 0.1, processingPower: 0.07 },
-                impactPerTick: { anomalyChanceModifier: -0.2, autoResolveChance: 0.005 } // Modified by negative, so it reduces spawn chance, also a small auto-resolve chance
+                impactPerTick: { anomalyChanceModifier: -0.0003, autoResolveChance: 0.005 } // Modifier is negative for reduction
+            },
+            {
+                id: 'resource-harvester',
+                name: 'Resource Harvester',
+                description: 'Slowly replenishes small amounts of Energy and Processing Power over time.',
+                isActive: false,
+                costPerTick: { rawData: 0.02 }, // Cost Raw Data to run
+                impactPerTick: { energy: 0.03, processingPower: 0.02 }
             }
         ];
 
 
         const MAX_ENERGY = 100;
-        const MAX_RAW_DATA = 600;
+        const MAX_RAW_DATA = 600; // Increased
         const MAX_DATA_FLOW = 100;
         const MAX_PROCESSING_POWER = 100;
 
@@ -1466,15 +1476,15 @@
 
             if (currentSystemStability < 25) {
                 stabilityLevelBar.style.background = 'var(--stability-critical)';
-                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
+                stabilityLevelBar.style.boxShadow = `0 0 55px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 20px rgba(255,255,255,0.7)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentSystemStability < 55) {
                 stabilityLevelBar.style.background = 'var(--stability-warning)';
-                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
+                stabilityLevelBar.style.boxShadow = `0 0 55px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 20px rgba(255,255,255,0.7)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 stabilityLevelBar.style.background = 'var(--stability-good)';
-                stabilityLevelBar.style.boxShadow = `0 0 50px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 18px rgba(255,255,255,0.6)`;
+                stabilityLevelBar.style.boxShadow = `0 0 55px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 20px rgba(255,255,255,0.7)`;
                 stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
             }
         }
@@ -1486,15 +1496,15 @@
             
             if (currentEnergy < 30) {
                 energyLevelBar.style.background = 'var(--energy-color-low)';
-                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,0,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 32px rgba(255,0,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentEnergy < 60) {
                 energyLevelBar.style.background = 'var(--energy-color-medium)';
-                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,204,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 32px rgba(255,204,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 energyLevelBar.style.background = 'var(--energy-color-high)';
-                energyLevelBar.style.boxShadow = `0 0 28px rgba(255,255,0,0.98)`;
+                energyLevelBar.style.boxShadow = `0 0 32px rgba(255,255,0,0.98)`;
                 energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--energy-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
@@ -1506,15 +1516,15 @@
             
             if (currentRawData < MAX_RAW_DATA * 0.2) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
-                rawDataLevelBar.style.boxShadow = `0 0 28px rgba(120,144,156,0.98)`;
+                rawDataLevelBar.style.boxShadow = `0 0 32px rgba(120,144,156,0.98)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-color-low').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             } else if (currentRawData < MAX_RAW_DATA * 0.6) {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-medium)';
-                rawDataLevelBar.style.boxShadow = `0 0 28px rgba(255,215,0,0.98)`;
+                rawDataLevelBar.style.boxShadow = `0 0 32px rgba(255,215,0,0.98)`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 rawDataLevelBar.style.background = 'var(--raw-data-color-high)';
-                rawDataLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                rawDataLevelBar.style.boxShadow = `0 0 32px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
                 rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
             }
         }
@@ -1526,15 +1536,15 @@
 
             if (currentDataFlow < 30) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-low)';
-                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(255,99,71,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 32px rgba(255,99,71,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentDataFlow < 60) {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-medium)';
-                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(0,255,255,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 32px rgba(0,255,255,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-stream-text').trim();
             } else {
                 dataFlowLevelBar.style.background = 'var(--data-flow-color-high)';
-                dataFlowLevelBar.style.boxShadow = `0 0 28px rgba(0,255,0,0.98)`;
+                dataFlowLevelBar.style.boxShadow = `0 0 32px rgba(0,255,0,0.98)`;
                 dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-flow-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
             }
         }
@@ -1546,15 +1556,15 @@
 
             if (currentProcessingPower < 30) {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-low)';
-                processingPowerLevelBar.style.boxShadow = `0 0 28px rgba(75,0,130,0.98)`;
+                processingPowerLevelBar.style.boxShadow = `0 0 32px rgba(75,0,130,0.98)`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
             } else if (currentProcessingPower < 60) {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-medium)';
-                processingPowerLevelBar.style.boxShadow = `0 0 28px rgba(218,112,214,0.98)`;
+                processingPowerLevelBar.style.boxShadow = `0 0 32px rgba(218,112,214,0.98)`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
             } else {
                 processingPowerLevelBar.style.background = 'var(--processing-power-color-high)';
-                processingPowerLevelBar.style.boxShadow = `0 0 28px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
+                processingPowerLevelBar.style.boxShadow = `0 0 32px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
                 processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
             }
         }
@@ -1568,27 +1578,27 @@
                 logEntry.classList.add('processing-glitch');
             } else if (type === 'warning') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
+                logEntry.style.textShadow = `0 0 14px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
             } else if (type === 'critical') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-                logEntry.style.textShadow = `0 0 20px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
+                logEntry.style.textShadow = `0 0 22px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
                 logEntry.style.fontWeight = 'bold';
             } else if (type === 'optimal') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
-                logEntry.style.textShadow = `0 0 14px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
+                logEntry.style.textShadow = `0 0 16px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
             } else if (type === 'info') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
                 logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim();
             } else if (type === 'rawdata') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
-                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
+                logEntry.style.textShadow = `0 0 14px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
             } else if (type === 'event') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--event-color').trim();
                 logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim();
                 logEntry.style.fontWeight = 'bold';
             } else if (type === 'processing') {
                 logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
-                logEntry.style.textShadow = `0 0 12px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
+                logEntry.style.textShadow = `0 0 14px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
             }
             const visualizer = dataStreamMonitor.querySelector('.data-visualizer');
             if (visualizer) {
@@ -1597,7 +1607,7 @@
                 dataStreamMonitor.appendChild(logEntry);
             }
 
-            if (dataStreamMonitor.children.length > 40) { // Keep log concise, slightly more
+            if (dataStreamMonitor.children.length > 50) { // Keep log concise, slightly more
                 dataStreamMonitor.removeChild(dataStreamMonitor.lastChild);
             }
             dataStreamMonitor.scrollTop = dataStreamMonitor.scrollHeight;
@@ -1605,7 +1615,7 @@
             clearTimeout(dataStreamMonitor.activeTimeout);
             dataStreamMonitor.activeTimeout = setTimeout(() => {
                 dataStreamMonitor.classList.remove('active');
-            }, 2000); // Longer active time
+            }, 2500); // Longer active time
         }
 
         // Render Signal Array Calibrators
@@ -1617,7 +1627,7 @@
 
                 const calibratorLabelDiv = document.createElement('div');
                 calibratorLabelDiv.classList.add('param-label');
-                calibratorLabelDiv.innerHTML = `${calibrator.label}: <span id="${calibrator.id}-value">${calibrator.value}</span>% <br> <span style="font-size: 0.95em; opacity: 0.88; color: var(--signal-array-text);">Data Rate Factor: <span id="${calibrator.id}-drf">${(calibrator.dataRateFactor * calibrator.value / 10).toFixed(2)}</span> | Power Load: <span id="${calibrator.id}-plf">${(calibrator.powerLoadFactor * calibrator.value / 10).toFixed(2)}</span></span>`;
+                calibratorLabelDiv.innerHTML = `${calibrator.label}: <span id="${calibrator.id}-value">${calibrator.value}</span>% <br> <span style="font-size: 1.05em; opacity: 0.88; color: var(--signal-array-text);">Passive Data Rate: <span id="${calibrator.id}-drf">${(calibrator.dataRateFactor * calibrator.value / 10).toFixed(2)}</span>/s | Energy Load: <span id="${calibrator.id}-plf">${(calibrator.powerLoadFactor * calibrator.value / 10).toFixed(2)}</span>/s</span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
@@ -1631,7 +1641,7 @@
                     calibrator.value = parseInt(rangeInput.value); // Update internal state
                     document.getElementById(`${calibrator.id}-drf`).textContent = (calibrator.dataRateFactor * calibrator.value / 10).toFixed(2);
                     document.getElementById(`${calibrator.id}-plf`).textContent = (calibrator.powerLoadFactor * calibrator.value / 10).toFixed(2);
-                    updateButtonStates();
+                    updateButtonStates(); // Re-evaluate button states as calibration affects costs/gains
                 });
 
                 calibratorGroup.appendChild(calibratorLabelDiv);
@@ -1643,7 +1653,7 @@
         function renderProtocolTuningParameters(protocol) {
             deployedProtocolParametersContainer.innerHTML = '';
             if (!protocol) {
-                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
+                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88; font-size: 1.3em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
                 deployedProtocolParametersContainer.style.display = 'block';
                 return;
             }
@@ -1654,7 +1664,7 @@
 
                 const paramLabelDiv = document.createElement('div');
                 paramLabelDiv.classList.add('param-label');
-                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>% <span style="font-size: 0.95em; opacity: 0.75; color: var(--signal-array-text);">(Optimal: ${param.optimalRange.min}-${param.optimalRange.max}%)</span>`;
+                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>% <span style="font-size: 1.05em; opacity: 0.75; color: var(--signal-array-text);">(Optimal: ${param.optimalRange.min}-${param.optimalRange.max}%)</span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
@@ -1909,6 +1919,13 @@
                 description: 'An active sub-protocol chain reaction detected. Immediate intervention required to prevent resource drain amplification.',
                 impact: { energy: -25, processingPower: -20, stability: -15 },
                 resolutionMessage: 'Sub-system cascade contained. Minor resource recovery initiated.'
+            },
+             { // Another NEW Anomaly Type
+                id: 'neural-network-disruption',
+                title: 'NEURAL NETWORK DISRUPTION',
+                description: 'Core neural network pathways are experiencing interference. Impairing all resource generation and processing efficiency.',
+                impact: { rawData: -100, dataFlow: -20, processingPower: -15, stability: -10 },
+                resolutionMessage: 'Neural network realigned. Cognitive pathways re-established.'
             }
         ];
 
@@ -1919,20 +1936,20 @@
             if (anomalyActive || isProcessing) return;
 
             // Apply anomaly chance modifier from sub-protocols
-            let effectiveAnomalyChance = 0.005; // Base chance per tick
+            let effectiveAnomalyChance = 0.001; // Base chance per tick (0.1% chance per second)
             subProtocols.filter(sp => sp.isActive && sp.impactPerTick.anomalyChanceModifier).forEach(sp => {
                 effectiveAnomalyChance += sp.impactPerTick.anomalyChanceModifier; // Modifier is negative for reduction
             });
             effectiveAnomalyChance = Math.max(0, effectiveAnomalyChance); // Ensure it's not negative
 
-            if (Math.random() > effectiveAnomalyChance * 20) { // Multiply by some factor to make it actually spawn. This logic needs to be tied to game loop for frequency.
+            if (Math.random() > effectiveAnomalyChance) {
                 return;
             }
 
             const selectedAnomaly = anomalyTypes[Math.floor(Math.random() * anomalyTypes.length)];
             currentAnomaly = selectedAnomaly;
             anomalyActive = true;
-            anomalyDuration = 12000 + Math.random() * 6000; // 12-18 seconds to resolve
+            anomalyDuration = 12000 + Math.random() * 8000; // 12-20 seconds to resolve
 
             anomalyTitle.textContent = selectedAnomaly.title;
             anomalyDescription.textContent = selectedAnomaly.description;
@@ -1943,23 +1960,24 @@
 
             anomalyTimeout = setTimeout(() => {
                 if (anomalyActive) {
-                    applyAnomalyImpact(currentAnomaly.impact);
-                    logDataStreamEntry(`ANOMALY FAILED TO RESOLVE: ${currentAnomaly.title} persisted. Severe system impact.`, 'critical');
-                    resolveAnomaly();
+                    // Check for auto-resolve from sub-protocols on expiration
+                    const autoResolveChance = subProtocols.filter(sp => sp.isActive && sp.impactPerTick.autoResolveChance)
+                                                        .reduce((sum, sp) => sum + sp.impactPerTick.autoResolveChance, 0);
+
+                    if (Math.random() < autoResolveChance && autoResolveChance > 0) {
+                        logDataStreamEntry(`Auto-Protocol triggered! Anomaly ${currentAnomaly.title} mitigated just in time.`, 'info');
+                        resolveAnomaly();
+                    } else {
+                        applyAnomalyImpact(currentAnomaly.impact);
+                        logDataStreamEntry(`ANOMALY FAILED TO RESOLVE: ${currentAnomaly.title} persisted. Severe system impact.`, 'critical');
+                        resolveAnomaly();
+                    }
                 }
             }, anomalyDuration);
         }
 
         function resolveAnomaly() {
             if (!anomalyActive) return;
-
-            // Check for auto-resolve from sub-protocols
-            const autoResolveChance = subProtocols.filter(sp => sp.isActive && sp.impactPerTick.autoResolveChance)
-                                                .reduce((sum, sp) => sum + sp.impactPerTick.autoResolveChance, 0);
-
-            if (Math.random() < autoResolveChance && autoResolveChance > 0) {
-                logDataStreamEntry(`Auto-Protocol triggered! Anomaly ${currentAnomaly.title} mitigated.`, 'info');
-            }
 
             clearTimeout(anomalyTimeout);
             anomalyActive = false;
@@ -2010,9 +2028,9 @@
                 if (formulatedProtocol) {
                     // If a protocol is formulated, predict its impact
                     const p = formulatedProtocol;
-                    predictedStabilityChange = p.impact.stability + (Math.random() * 5 - 2.5); // Add some variance
-                    predictedDataFlowChange = p.impact.dataFlow + (Math.random() * 5 - 2.5);
-                    predictedProcessingPowerChange = p.impact.processingPower + (Math.random() * 4 - 2);
+                    predictedStabilityChange = p.impact.stability + (Math.random() * 6 - 3); // Add some variance
+                    predictedDataFlowChange = p.impact.dataFlow + (Math.random() * 6 - 3);
+                    predictedProcessingPowerChange = p.impact.processingPower + (Math.random() * 5 - 2.5);
 
                     if (p.stabilityRisk > 60 || p.complexity > 80) {
                         predictionRisk = 'High';
@@ -2025,9 +2043,9 @@
                     const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
 
                     // Simplified prediction for current calibration - more stable if values are balanced, less stable if highly varied
-                    predictedStabilityChange = -5 + (avgCalibratorValue / 20) - (calibratorVariance / 10);
-                    predictedDataFlowChange = (avgCalibratorValue / 15) - 5;
-                    predictedProcessingPowerChange = (avgCalibratorValue / 25) - 2;
+                    predictedStabilityChange = -5 + (avgCalibratorValue / 20) - (calibratorVariance / 10) + (Math.random() * 4 - 2);
+                    predictedDataFlowChange = (avgCalibratorValue / 15) - 5 + (Math.random() * 4 - 2);
+                    predictedProcessingPowerChange = (avgCalibratorValue / 25) - 2 + (Math.random() * 3 - 1.5);
 
                     if (calibratorVariance > 30 || avgCalibratorValue < 20) {
                         predictionRisk = 'Elevated';
@@ -2146,9 +2164,9 @@
             formulatedProtocol.stabilityRisk = Math.max(0, formulatedProtocol.stabilityRisk - (Math.random() * 10 + 5)); // Reduce risk
             
             // Adjust impacts slightly, generally positive with refinement
-            formulatedProtocol.impact.stability = Math.round(formulatedProtocol.impact.stability * (1 + Math.random() * 0.1));
-            formulatedProtocol.impact.dataFlow = Math.round(formulatedProtocol.impact.dataFlow * (1 + Math.random() * 0.1));
-            formulatedProtocol.impact.processingPower = Math.round(formulatedProtocol.impact.processingPower * (1 + Math.random() * 0.05));
+            formulatedProtocol.impact.stability = Math.round(formulatedProtocol.impact.stability * (1 + Math.random() * 0.15)); // Increased positive potential
+            formulatedProtocol.impact.dataFlow = Math.round(formulatedProtocol.impact.dataFlow * (1 + Math.random() * 0.15));
+            formulatedProtocol.impact.processingPower = Math.round(formulatedProtocol.impact.processingPower * (1 + Math.random() * 0.1));
 
             formulatedProtocol.description = generateProtocolDescription(formulatedProtocol); // Update description
             
@@ -2254,9 +2272,9 @@
             let logType = 'info';
 
             if (overallTuningScore > 85) {
-                currentSystemStability += Math.round(overallTuningScore / 15);
-                currentDataFlow += Math.round(overallTuningScore / 10);
-                currentProcessingPower += Math.round(overallTuningScore / 20);
+                currentSystemStability += Math.round(overallTuningScore / 15 + Math.random() * 5); // Increased boost
+                currentDataFlow += Math.round(overallTuningScore / 10 + Math.random() * 7);
+                currentProcessingPower += Math.round(overallTuningScore / 20 + Math.random() * 4);
                 feedbackMessage += 'Optimal parameters achieved, system boosted.';
                 logType = 'optimal';
             } else if (overallTuningScore > 50) {
@@ -2264,10 +2282,10 @@
                 feedbackMessage += 'Moderate efficiency, minor adjustments applied.';
                 logType = 'info';
             } else {
-                currentSystemStability -= Math.round((100 - overallTuningScore) / 10); // Penalty for poor tuning
+                currentSystemStability -= Math.round((100 - overallTuningScore) / 8); // Stronger penalty for poor tuning
                 feedbackMessage += 'Sub-optimal tuning detected, system stability degraded.';
                 logType = 'warning';
-                if (Math.random() < 0.25) { // 25% chance of glitch on bad tune
+                if (Math.random() < 0.35) { // 35% chance of glitch on bad tune (increased)
                     logDataStreamEntry('Tuning parameters misaligned. Temporary data glitch detected!', 'glitch');
                 }
             }
@@ -2289,13 +2307,13 @@
             await new Promise(resolve => setTimeout(resolve, 3000));
 
             // Reverse impacts, maybe with some penalty for abrupt deactivation
-            currentSystemStability -= activeProtocol.impact.stability * 0.8; // 20% stability penalty on deactivation
+            currentSystemStability -= activeProtocol.impact.stability * 0.9; // 10% stability penalty on deactivation
             currentDataFlow -= activeProtocol.impact.dataFlow;
             currentProcessingPower -= activeProtocol.impact.processingPower;
 
             activeProtocol = null;
             deployedProtocolParametersContainer.style.display = 'none';
-            deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
+            deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88; font-size: 1.3em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
 
             activeProtocolNameSpan.textContent = 'NONE';
             activeProtocolIDSpan.textContent = 'N/A';
@@ -2329,10 +2347,10 @@
             currentProcessingPower -= RECALIBRATE_PROCESSING_POWER_COST;
 
             const oldStability = currentSystemStability;
-            currentSystemStability = 70 + (Math.random() * 20 - 10); // Reset to a healthy range with some variance
-            currentEnergy = 80 + (Math.random() * 20); // Restore energy
-            currentDataFlow = 60 + (Math.random() * 30); // Boost data flow
-            currentProcessingPower = 90 + (Math.random() * 10); // Restore processing power
+            currentSystemStability = 75 + (Math.random() * 20 - 10); // Reset to a healthy range with some variance, slightly higher baseline
+            currentEnergy = 85 + (Math.random() * 15); // Restore energy
+            currentDataFlow = 65 + (Math.random() * 25); // Boost data flow
+            currentProcessingPower = 95 + (Math.random() * 5); // Restore processing power
 
             logDataStreamEntry(`Core recalibration complete. Stability restored from ${oldStability.toFixed(1)}% to ${currentSystemStability.toFixed(1)}%.`, 'optimal');
             systemStatusTextSpan.textContent = 'SYSTEM IDLE: Core parameters normalized.';
@@ -2342,8 +2360,8 @@
 
         calibrateSignalArrayButton.addEventListener('click', async () => {
             isProcessing = true;
-            logDataStreamEntry('Initiating signal array calibration...', 'processing');
-            systemStatusTextSpan.textContent = 'SIGNAL ARRAY: Calibrating receptors...';
+            logDataStreamEntry('Initiating high-gain signal array scan...', 'processing');
+            systemStatusTextSpan.textContent = 'SIGNAL ARRAY: Scanning for data...';
             updateButtonStates();
 
             await new Promise(resolve => setTimeout(resolve, 3000));
@@ -2353,8 +2371,8 @@
             const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 18;
 
             if (currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient resources for signal array calibration. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Calibration aborted (low resources).';
+                logDataStreamEntry('Insufficient resources for high-gain signal array scan. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Scan aborted (low resources).';
                 isProcessing = false;
                 updateButtonStates();
                 return;
@@ -2365,7 +2383,7 @@
             currentProcessingPower -= CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST;
 
             // Apply effects of calibration
-            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
+            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => c.value > 0 ? sum + c.value : sum, 0) / signalArrayComponents.filter(c => c.value > 0).length || 1; // Avoid NaN if all are zero
             const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
 
             let stabilityChange = 0;
@@ -2374,27 +2392,37 @@
 
             // If calibrators are high and coherent, good things happen
             if (avgCalibratorValue > 70 && calibratorVariance < 200) { // Low variance for coherence
-                stabilityChange = 5 + Math.random() * 5;
-                dataFlowBoost = 10 + Math.random() * 15;
-                rawDataCollected = 150 + Math.random() * 100; // More raw data
+                stabilityChange = 7 + Math.random() * 7;
+                dataFlowBoost = 12 + Math.random() * 18;
+                rawDataCollected = 200 + Math.random() * 150; // More raw data
                 logDataStreamEntry('Signal arrays optimally aligned. High-yield data stream initiated.', 'optimal');
             } else if (avgCalibratorValue < 30) {
-                stabilityChange = -5 - Math.random() * 5;
-                dataFlowBoost = -5 - Math.random() * 10;
-                rawDataCollected = 20 + Math.random() * 30; // Very little raw data
-                logDataStreamEntry('Signal arrays poorly aligned. Low data yield, minor instability detected.', 'warning');
+                stabilityChange = -8 - Math.random() * 8;
+                dataFlowBoost = -7 - Math.random() * 12;
+                rawDataCollected = 25 + Math.random() * 40; // Very little raw data
+                logDataStreamEntry('Signal arrays poorly aligned. Low data yield, significant instability detected.', 'warning');
             } else {
-                stabilityChange = Math.random() * 4 - 2; // Minor variance
-                dataFlowBoost = 5 + Math.random() * 10;
-                rawDataCollected = 80 + Math.random() * 70; // Moderate raw data
-                logDataStreamEntry('Signal arrays calibrated. Data stream active.', 'info');
+                stabilityChange = Math.random() * 6 - 3; // Minor variance
+                dataFlowBoost = 8 + Math.random() * 12;
+                rawDataCollected = 100 + Math.random() * 90; // Moderate raw data
+                logDataStreamEntry('Signal arrays scanned. Data stream acquired.', 'info');
             }
 
             currentSystemStability += stabilityChange;
             currentDataFlow += dataFlowBoost;
             currentRawData += rawDataCollected; // Add collected raw data
 
-            logDataStreamEntry(`Signal array calibration complete. Collected ${rawDataCollected.toFixed(0)} raw data packets.`, 'rawdata');
+            // Randomize calibrator values after a scan to encourage re-tuning
+            signalArrayComponents.forEach(c => {
+                c.value = Math.round(Math.random() * (c.max - c.min) + c.min);
+                document.getElementById(c.id).value = c.value;
+                document.getElementById(`${c.id}-value`).textContent = c.value;
+                document.getElementById(`${c.id}-drf`).textContent = (c.dataRateFactor * c.value / 10).toFixed(2);
+                document.getElementById(`${c.id}-plf`).textContent = (c.powerLoadFactor * c.value / 10).toFixed(2);
+            });
+
+
+            logDataStreamEntry(`Signal array scan complete. Collected ${rawDataCollected.toFixed(0)} raw data packets.`, 'rawdata');
             systemStatusTextSpan.textContent = 'SYSTEM IDLE: Signal arrays operational.';
             isProcessing = false;
             updateAllDisplays();
@@ -2416,35 +2444,48 @@
 
         function gameLoop() {
             // Passive resource decay/gain
-            currentEnergy -= 0.05; // Passive drain
-            currentDataFlow -= 0.02; // Passive decay, needs to be maintained
-            currentProcessingPower -= 0.03; // Passive drain
+            currentEnergy -= 0.08; // Passive drain (increased)
+            currentDataFlow -= 0.03; // Passive decay (increased)
+            currentProcessingPower -= 0.05; // Passive drain (increased)
 
-            // Raw data collection (small passive gain if signal array is okay)
-            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
-            currentRawData += (avgCalibratorValue / 100) * (0.2 + Math.random() * 0.5); // Slow passive raw data collection
+            // Raw data collection (passive gain based on signal array calibration)
+            let passiveRawDataGain = 0;
+            let totalPowerLoad = 0;
+            signalArrayComponents.forEach(c => {
+                passiveRawDataGain += (c.dataRateFactor * c.value / 10);
+                totalPowerLoad += (c.powerLoadFactor * c.value / 10);
+            });
+            currentRawData += passiveRawDataGain * (0.8 + Math.random() * 0.4); // Add some variance
+
+            // Apply energy and processing power load from signal array configuration
+            currentEnergy -= totalPowerLoad * 0.1;
+            currentProcessingPower -= totalPowerLoad * 0.05;
 
             // Apply active protocol effects
             if (activeProtocol) {
-                currentSystemStability -= activeProtocol.stabilityRisk * 0.005; // Continuous stability drain based on risk
-                currentEnergy -= activeProtocol.complexity * 0.01; // Protocol energy upkeep
-                currentProcessingPower -= activeProtocol.processingPowerCost * 0.01; // Protocol PP upkeep
-                currentDataFlow += activeProtocol.impact.dataFlow * 0.005; // Minor continuous data flow boost
+                currentSystemStability -= activeProtocol.stabilityRisk * 0.007; // Continuous stability drain based on risk (increased)
+                currentEnergy -= activeProtocol.complexity * 0.015; // Protocol energy upkeep (increased)
+                currentProcessingPower -= activeProtocol.processingPowerCost * 0.015; // Protocol PP upkeep (increased)
+                currentDataFlow += activeProtocol.impact.dataFlow * 0.007; // Minor continuous data flow boost (increased)
             }
 
             // NEW: Apply Sub-Protocol effects
             subProtocols.filter(sp => sp.isActive).forEach(sp => {
                 if (sp.costPerTick.energy) currentEnergy -= sp.costPerTick.energy;
                 if (sp.costPerTick.processingPower) currentProcessingPower -= sp.costPerTick.processingPower;
+                if (sp.costPerTick.rawData) currentRawData -= sp.costPerTick.rawData; // New raw data cost
 
                 if (sp.impactPerTick.stability) currentSystemStability += sp.impactPerTick.stability;
                 if (sp.impactPerTick.dataFlow) currentDataFlow += sp.impactPerTick.dataFlow;
                 if (sp.impactPerTick.processingPower) currentProcessingPower += sp.impactPerTick.processingPower;
-                if (sp.impactPerTick.rawDataPerTick) currentRawData += sp.impactPerTick.rawDataPerTick;
+                if (sp.impactPerTick.energy) currentEnergy += sp.impactPerTick.energy; // Resource harvester effect
+                if (sp.impactPerTick.rawDataPerTickBoost) { // Boost passive raw data gain
+                    currentRawData += passiveRawDataGain * sp.impactPerTick.rawDataPerTickBoost;
+                }
             });
 
             // Stability fluctuations
-            currentSystemStability += (Math.random() * 0.2 - 0.1); // Minor random fluctuations
+            currentSystemStability += (Math.random() * 0.3 - 0.15); // Minor random fluctuations (increased)
 
             // Check for anomalies
             if (Math.random() < 0.001) { // 0.1% chance per tick (e.g., every 1 second)
@@ -2470,6 +2511,11 @@
                 currentRawData = MAX_RAW_DATA;
                 logDataStreamEntry('RAW DATA BUFFER OVERFLOW! Data loss imminent!', 'warning');
             }
+            if (currentProcessingPower <= 0) {
+                currentProcessingPower = 0;
+                logDataStreamEntry('PROCESSING POWER DEPLETED! System response severely degraded!', 'critical');
+                // Potentially trigger game over or severely limit actions
+            }
 
 
             updateAllDisplays();
@@ -2480,7 +2526,7 @@
             renderSubProtocols(); // NEW: Render sub-protocols
             updateAllDisplays();
             gameLoopInterval = setInterval(gameLoop, 1000); // 1-second ticks
-            logDataStreamEntry('Core systems online. Initiating Generation 30.0 protocols.', 'event');
+            logDataStreamEntry('Core systems online. Initiating Generation 31.0 protocols.', 'event');
         }
 
         init();
