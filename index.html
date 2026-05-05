@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // Gen 32.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // v33.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -97,6 +97,20 @@
             --augmentation-toggle-active: rgba(255, 165, 0, 0.95);
             --augmentation-toggle-inactive: rgba(100, 70, 0, 0.65);
             --augmentation-toggle-glow: rgba(255, 165, 0, 0.8);
+
+            /* Gen 33.0 NEW: Quantum Entanglement Link (QEL) Module */
+            --qel-bg: rgba(20, 10, 40, 0.995); /* Dark Purple */
+            --qel-border: rgba(200, 0, 255, 0.8); /* Magenta-Purple */
+            --qel-text: #E6B0E6; /* Light Magenta */
+            --qel-btn-glow: rgba(200, 0, 255, 0.95);
+            --qel-card-active-border: rgba(255, 0, 255, 0.9);
+            --qel-card-active-shadow: rgba(255, 0, 255, 0.7);
+
+            /* Gen 33.0 NEW: Resource Transmutation Matrix (RTM) Module */
+            --rtm-bg: rgba(40, 30, 10, 0.995); /* Dark Gold-Brown */
+            --rtm-border: rgba(255, 200, 0, 0.9); /* Gold-Orange */
+            --rtm-text: #FFEB3B; /* Yellowish Gold */
+            --rtm-btn-glow: rgba(255, 200, 0, 0.95);
         }
 
         body {
@@ -294,7 +308,7 @@
         }
 
         /* Module base styles */
-        .signal-array-calibration-module, .formulated-protocol-details, .deployed-protocol-parameters,
+        .qel-module, .rtm-module, .formulated-protocol-details, .deployed-protocol-parameters,
         .predictive-analysis-module, .sub-protocol-augmentation-module { /* NEW MODULES ADDED */
             display: flex;
             flex-direction: column;
@@ -310,6 +324,16 @@
             background: var(--signal-array-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
+        .qel-module {
+            background: var(--qel-bg);
+            border-color: var(--qel-border);
+            box-shadow: inset 0 0 60px rgba(200, 0, 255, 0.8), 0 0 60px rgba(200, 0, 255, 0.7), inset 0 0 120px rgba(200, 0, 255, 0.4);
+        }
+        .rtm-module {
+            background: var(--rtm-bg);
+            border-color: var(--rtm-border);
+            box-shadow: inset 0 0 60px rgba(255, 200, 0, 0.8), 0 0 60px rgba(255, 200, 0, 0.7), inset 0 0 120px rgba(255, 200, 0, 0.4);
+        }
         .predictive-analysis-module {
             background: var(--predictive-bg);
             border-color: var(--predictive-border);
@@ -321,7 +345,7 @@
             box-shadow: inset 0 0 60px rgba(255, 165, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.7), inset 0 0 120px rgba(255, 165, 0, 0.4);
         }
 
-        .signal-array-calibration-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after,
+        .qel-module::after, .rtm-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after,
         .predictive-analysis-module::after, .sub-protocol-augmentation-module::after {
             content: '';
             position: absolute;
@@ -336,7 +360,7 @@
         }
 
 
-        .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
+        .qel-module::before, .rtm-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
         .predictive-analysis-module::before, .sub-protocol-augmentation-module::before { /* NEW MODULES ADDED */
             content: attr(data-label);
             position: absolute;
@@ -357,6 +381,16 @@
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
+        .qel-module::before {
+            color: var(--qel-text);
+            border-color: var(--qel-text);
+            box-shadow: 0 0 35px var(--qel-text);
+        }
+        .rtm-module::before {
+            color: var(--rtm-text);
+            border-color: var(--rtm-text);
+            box-shadow: 0 0 35px var(--rtm-text);
+        }
         .predictive-analysis-module::before {
             color: var(--predictive-text);
             border-color: var(--predictive-text);
@@ -456,6 +490,102 @@
             text-shadow: 0 0 12px var(--data-stream-text);
             margin-top: 25px;
             opacity: 0.98;
+        }
+
+        /* QEL Module Specific */
+        .active-qel-links-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            min-height: 100px;
+            border: 1px dashed rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .active-qel-card {
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--qel-card-active-border);
+            border-radius: 25px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 0 25px var(--qel-card-active-shadow);
+            transform: translateZ(10px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .active-qel-card:hover {
+            transform: translateY(-8px) scale(1.02) translateZ(15px);
+            box-shadow: 0 0 40px var(--qel-card-active-shadow);
+        }
+        .active-qel-card h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3em;
+            color: var(--qel-text);
+            margin: 0 0 15px 0;
+            text-shadow: 0 0 15px var(--qel-text);
+        }
+        .active-qel-card p {
+            font-size: 1.05em;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            transform: translateZ(0);
+        }
+        .active-qel-card .deactivate-qel-btn {
+            background: linear-gradient(90deg, #800080 0%, #B22222 100%); /* Purple to Firebrick */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 0.9em;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 0 15px rgba(178,34,34,0.7);
+            font-family: 'Orbitron', sans-serif;
+        }
+        .active-qel-card .deactivate-qel-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 25px rgba(178,34,34,0.9);
+            filter: brightness(1.2);
+        }
+
+        /* RTM Module Specific */
+        .rtm-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .rtm-controls select, .rtm-controls input[type="number"] {
+            background: rgba(0,0,0,0.7);
+            border: 1px solid var(--rtm-border);
+            color: var(--rtm-text);
+            padding: 18px 25px;
+            border-radius: 20px;
+            font-size: 1.3em;
+            font-family: 'Share Tech Mono', monospace;
+            box-shadow: inset 0 0 10px rgba(255,200,0,0.5);
+            width: 80%;
+            max-width: 400px;
+            appearance: none; /* Remove default arrow */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .rtm-controls select:focus, .rtm-controls input[type="number"]:focus {
+            outline: none;
+            border-color: var(--rtm-text);
+            box-shadow: inset 0 0 15px rgba(255,200,0,0.8), 0 0 20px rgba(255,200,0,0.6);
+        }
+        .rtm-info {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.25em;
+            color: var(--rtm-text);
+            text-shadow: 0 0 15px var(--rtm-text);
+            margin-top: 20px;
+            line-height: 1.8;
+            opacity: 0.95;
         }
 
 
@@ -956,17 +1086,30 @@
         }
 
         /* NEW BUTTON STYLE */
-        #calibrate-signal-array-button { /* Replaced #optimize-receptors-button */
-            background: linear-gradient(90deg, #6A5ACD 0%, #BA55D3 100%); /* Slate Blue to Orchid */
-            box-shadow: 0 30px 85px var(--calibrate-btn-glow);
+        #establish-qel-button { /* Renamed from calibrate-signal-array-button */
+            background: linear-gradient(90deg, #8A2BE2 0%, #BA55D3 100%); /* Blue Violet to Orchid */
+            box-shadow: 0 30px 85px var(--qel-btn-glow);
             color: white;
         }
-        #calibrate-signal-array-button:hover {
-            background: linear-gradient(90deg, #BA55D3 0%, #6A5ACD 100%);
-            box-shadow: 0 50px 130px var(--calibrate-btn-glow), 0 0 85px var(--calibrate-btn-glow);
+        #establish-qel-button:hover {
+            background: linear-gradient(90deg, #BA55D3 0%, #8A2BE2 100%);
+            box-shadow: 0 50px 130px var(--qel-btn-glow), 0 0 85px var(--qel-btn-glow);
             color: white;
             filter: brightness(2.0);
         }
+
+        #transmute-resources-button { /* NEW BUTTON */
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold to Orange */
+            box-shadow: 0 30px 85px var(--rtm-btn-glow);
+            color: #050510;
+        }
+        #transmute-resources-button:hover {
+            background: linear-gradient(90deg, #FFA500 0%, #FFD700 100%);
+            box-shadow: 0 50px 130px var(--rtm-btn-glow), 0 0 85px var(--rtm-btn-glow);
+            color: #000;
+            filter: brightness(2.1);
+        }
+
 
         /* Anomaly Alert Overlay */
         .anomaly-alert-overlay {
@@ -1169,7 +1312,7 @@
             .param-label {
                 align-items: flex-start; /* Keep left alignment for better readability */
             }
-            .signal-array-calibration-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
+            .qel-module::before, .rtm-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
             .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
             .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before {
                 top: -35px;
@@ -1206,6 +1349,9 @@
             .sub-protocol-grid {
                 grid-template-columns: 1fr;
             }
+            .active-qel-links-display {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1218,7 +1364,7 @@
         </div>
 
         <h1>Adaptive Protocol Nexus</h1>
-        <p>Calibrate signal arrays to acquire Raw Data and optimize processing efficiency. Refine and integrate advanced protocols to enhance system performance and maintain core stability.</p>
+        <p>Establish Quantum Entanglement Links to channel vital resources, or transmute excess for immediate needs. Refine and integrate advanced protocols to enhance system performance and maintain core stability.</p>
 
         <div class="control-module">
             <!-- Resource Display -->
@@ -1250,13 +1396,44 @@
                 </div>
             </div>
 
-            <!-- Signal Array Calibration -->
-            <div class="signal-array-calibration-module" data-label="SIGNAL ARRAY CALIBRATION">
-                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--signal-array-text);">Adjust signal frequency bands and amplitude gains. Optimal calibration enhances passive data acquisition and processing efficiency, but extreme settings can induce instability. Use 'Calibrate Signal Array' to perform a high-yield scan.</p>
+            <!-- NEW: Quantum Entanglement Link (QEL) Module -->
+            <div class="qel-module" data-label="QUANTUM ENTANGLEMENT LINK INITIATOR">
+                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--qel-text);">Configure signal arrays to establish stable Quantum Entanglement Links. Higher array coherence increases success chance and link efficiency. Each active link provides continuous resource gain but incurs upkeep.</p>
                 <div id="signal-array-calibrators-container">
                     <!-- Calibrators will be dynamically rendered here -->
                 </div>
+                <button id="establish-qel-button" style="margin: 0 auto; width: fit-content; margin-top: 20px;">Attempt QEL Establishment</button>
+                <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1.6em; color: var(--qel-text); text-shadow: 0 0 20px var(--qel-text); margin-top: 50px;">ACTIVE QUANTUM LINKS:</h4>
+                <div id="active-qel-links-display" class="active-qel-links-display">
+                    <p style="text-align: center; opacity: 0.7; font-size: 1.2em; grid-column: 1 / -1; margin-top: 15px;">No active links. Establish one to begin passive resource channeling.</p>
+                </div>
             </div>
+
+            <!-- NEW: Resource Transmutation Matrix (RTM) -->
+            <div class="rtm-module" data-label="RESOURCE TRANSMUTATION MATRIX">
+                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--rtm-text);">Transmute one resource type into another. Efficiency varies, and there's a small risk of stability flux. Requires Processing Power for conversion.</p>
+                <div class="rtm-controls">
+                    <input type="number" id="transmute-amount" value="50" min="10" step="10">
+                    <select id="transmute-source">
+                        <option value="rawData">Raw Data</option>
+                        <option value="energy">Energy</option>
+                        <option value="processingPower">Processing Power</option>
+                        <option value="dataFlow" disabled>Data Flow (Unsupported)</option>
+                    </select>
+                    <span>&rarr;</span>
+                    <select id="transmute-target">
+                        <option value="energy">Energy</option>
+                        <option value="processingPower">Processing Power</option>
+                        <option value="rawData">Raw Data</option>
+                        <option value="dataFlow" disabled>Data Flow (Unsupported)</option>
+                    </select>
+                    <button id="transmute-resources-button" style="width: fit-content; margin-top: 30px;">Transmute Resources</button>
+                    <div class="rtm-info" id="rtm-info">
+                        Current Efficiency: 40% (RD to Energy), 30% (RD to PP). Stability Risk: Low.
+                    </div>
+                </div>
+            </div>
+
 
             <!-- NEW: Predictive Analysis Engine -->
             <div class="predictive-analysis-module" data-label="PREDICTIVE ANALYSIS ENGINE">
@@ -1295,12 +1472,12 @@
             <div class="system-status-display" id="system-status">
                 <p><strong>Active Protocol:</strong> <span id="active-protocol-name">NONE</span></p>
                 <p><strong>Protocol ID:</strong> <span id="active-protocol-id">N/A</span></p>
-                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Calibrate Signal Array to collect Raw Data.</span></p>
+                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Configure Signal Array and establish a Quantum Entanglement Link for Raw Data.</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
                 <div class="data-visualizer"><div class="data-visualizer-wave"></div></div> <!-- NEW VISUALIZER -->
-                <span class="log-entry processing-glitch">System ready. Awaiting signal array calibration.</span>
+                <span class="log-entry processing-glitch">System ready. Awaiting Quantum Entanglement Link configuration.</span>
             </div>
         </div>
 
@@ -1309,7 +1486,6 @@
             <button id="refine-protocol-button" disabled>Refine Protocol</button> <!-- NEW BUTTON -->
             <button id="integrate-protocol-button" disabled>Integrate Protocol</button>
             <button id="tune-active-protocol-button" disabled>Tune Active Protocol</button>
-            <button id="calibrate-signal-array-button">Calibrate Signal Array</button> <!-- RENAMED BUTTON -->
             <button id="deactivate-protocol-button" disabled>Deactivate Protocol</button>
             <button id="recalibrate-core-button">Recalibrate Core</button>
         </div>
@@ -1320,7 +1496,7 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 32.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 33.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
@@ -1350,7 +1526,7 @@
         const tuneActiveProtocolButton = document.getElementById('tune-active-protocol-button');
         const deactivateProtocolButton = document.getElementById('deactivate-protocol-button');
         const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
-        const calibrateSignalArrayButton = document.getElementById('calibrate-signal-array-button');
+        const establishQELButton = document.getElementById('establish-qel-button'); // Renamed button
 
         // Resource & Status Displays
         const stabilityLevelBar = document.getElementById('stability-level-bar');
@@ -1379,6 +1555,16 @@
         const subProtocolAugmentationModule = document.getElementById('sub-protocol-augmentation-module');
         const subProtocolGrid = document.getElementById('sub-protocol-grid');
 
+        // NEW: Quantum Entanglement Link (QEL) Elements
+        const activeQELLinksDisplay = document.getElementById('active-qel-links-display');
+
+        // NEW: Resource Transmutation Matrix (RTM) Elements
+        const transmuteAmountInput = document.getElementById('transmute-amount');
+        const transmuteSourceSelect = document.getElementById('transmute-source');
+        const transmuteTargetSelect = document.getElementById('transmute-target');
+        const transmuteResourcesButton = document.getElementById('transmute-resources-button');
+        const rtmInfoDiv = document.getElementById('rtm-info');
+
 
         // System State Variables
         let currentSystemStability = 70;
@@ -1394,12 +1580,25 @@
         let currentAnomaly = null;
         let predictiveAnalysisActive = false; // NEW
 
-        // Signal Array Components
+        // Signal Array Components (Now QEL Configuration)
         const signalArrayComponents = [
-            { id: 'frequency-band', label: 'Frequency Band', value: 50, min: 0, max: 100, dataRateFactor: 0.18, powerLoadFactor: 0.10, stabilityVariance: 0.06 },
-            { id: 'amplitude-gain', label: 'Amplitude Gain', value: 50, min: 0, max: 100, dataRateFactor: 0.22, powerLoadFactor: 0.12, stabilityVariance: 0.08 },
-            { id: 'signal-coherence', label: 'Signal Coherence', value: 50, min: 0, max: 100, dataRateFactor: 0.13, powerLoadFactor: 0.07, stabilityVariance: 0.05 }
+            { id: 'frequency-band', label: 'Frequency Band', value: 50, min: 0, max: 100, impactFactor: 0.18 },
+            { id: 'amplitude-gain', label: 'Amplitude Gain', value: 50, min: 0, max: 100, impactFactor: 0.22 },
+            { id: 'signal-coherence', label: 'Signal Coherence', value: 50, min: 0, max: 100, impactFactor: 0.13 }
         ];
+
+        // NEW: Active Quantum Entanglement Links
+        let activeQELs = [];
+        let nextQELId = 1;
+
+        // NEW: QEL Archetypes
+        const qelArchetypes = [
+            { name: 'Raw Data Stream', resource: 'rawData', baseGain: 15, stabilityImpact: 1.5, energyDrain: 0.2, ppDrain: 0.1 },
+            { name: 'Flow Conduit', resource: 'dataFlow', baseGain: 3, stabilityImpact: 0.8, energyDrain: 0.3, ppDrain: 0.15 },
+            { name: 'Processing Core Uplink', resource: 'processingPower', baseGain: 3, stabilityImpact: 0.5, energyDrain: 0.4, ppDrain: 0.2 },
+            { name: 'Energy Resonance Tap', resource: 'energy', baseGain: 0.8, stabilityImpact: 2.0, energyDrain: 0.1, ppDrain: 0.1 }
+        ];
+
 
         // NEW: Sub-Protocols
         const subProtocols = [
@@ -1409,7 +1608,7 @@
                 description: 'Reduces Raw Data storage footprint. Increases Raw Data collection speed slightly.',
                 isActive: false,
                 costPerTick: { energy: 0.12, processingPower: 0.06 },
-                impactPerTick: { rawDataPerTickBoost: 0.1 } // Effectively makes rawData collection more efficient (changed from rawDataPerTick to rawDataPerTickBoost)
+                impactPerTick: { rawDataQELBoost: 0.1 } // Effectively makes QELs for rawData more efficient
             },
             {
                 id: 'stability-reinforcer',
@@ -1425,7 +1624,7 @@
                 description: 'Optimizes data routing for increased throughput, boosting Data Flow Index.',
                 isActive: false,
                 costPerTick: { energy: 0.18, processingPower: 0.18 },
-                impactPerTick: { dataFlow: 0.1 }
+                impactPerTick: { dataFlowQELBoost: 0.1 }
             },
             {
                 id: 'processing-booster',
@@ -1433,7 +1632,7 @@
                 description: 'Temporarily overclocks processing cores for a small boost to Processing Power.',
                 isActive: false,
                 costPerTick: { energy: 0.3, processingPower: 0.1 },
-                impactPerTick: { processingPower: 0.07 }
+                impactPerTick: { processingPowerQELBoost: 0.07 }
             },
             {
                 id: 'anomaly-sensor-suite',
@@ -1467,6 +1666,7 @@
             updateDataFlowDisplay();
             updateProcessingPowerDisplay();
             updateButtonStates();
+            updateRTMInfo();
         }
 
         function updateStabilityDisplay() {
@@ -1618,7 +1818,7 @@
             }, 3000); // Longer active time
         }
 
-        // Render Signal Array Calibrators
+        // Render Signal Array Calibrators (QEL Configuration)
         function renderSignalArrayCalibrators() {
             signalArrayCalibratorsContainer.innerHTML = '';
             signalArrayComponents.forEach(calibrator => {
@@ -1627,7 +1827,7 @@
 
                 const calibratorLabelDiv = document.createElement('div');
                 calibratorLabelDiv.classList.add('param-label');
-                calibratorLabelDiv.innerHTML = `${calibrator.label}: <span id="${calibrator.id}-value">${calibrator.value}</span>% <br> <span style="font-size: 1.1em; opacity: 0.9; color: var(--signal-array-text);">Passive Data Rate: <span id="${calibrator.id}-drf">${(calibrator.dataRateFactor * calibrator.value / 10).toFixed(2)}</span>/s | Energy Load: <span id="${calibrator.id}-plf">${(calibrator.powerLoadFactor * calibrator.value / 10).toFixed(2)}</span>/s</span>`;
+                calibratorLabelDiv.innerHTML = `${calibrator.label}: <span id="${calibrator.id}-value">${calibrator.value}</span>% <br> <span style="font-size: 1.1em; opacity: 0.9; color: var(--qel-text);">QEL Influence: <span id="${calibrator.id}-influence">${(calibrator.impactFactor * calibrator.value / 10).toFixed(2)}</span></span>`;
 
                 const rangeInput = document.createElement('input');
                 rangeInput.type = 'range';
@@ -1639,9 +1839,8 @@
                 rangeInput.addEventListener('input', () => {
                     document.getElementById(`${calibrator.id}-value`).textContent = rangeInput.value;
                     calibrator.value = parseInt(rangeInput.value); // Update internal state
-                    document.getElementById(`${calibrator.id}-drf`).textContent = (calibrator.dataRateFactor * calibrator.value / 10).toFixed(2);
-                    document.getElementById(`${calibrator.id}-plf`).textContent = (calibrator.powerLoadFactor * calibrator.value / 10).toFixed(2);
-                    updateButtonStates(); // Re-evaluate button states as calibration affects costs/gains
+                    document.getElementById(`${calibrator.id}-influence`).textContent = (calibrator.impactFactor * calibrator.value / 10).toFixed(2);
+                    updateButtonStates();
                 });
 
                 calibratorGroup.appendChild(calibratorLabelDiv);
@@ -1722,6 +1921,33 @@
             });
         }
 
+        // NEW: Render Active QELs
+        function renderActiveQELs() {
+            activeQELLinksDisplay.innerHTML = '';
+            if (activeQELs.length === 0) {
+                activeQELLinksDisplay.innerHTML = '<p style="text-align: center; opacity: 0.7; font-size: 1.2em; grid-column: 1 / -1; margin-top: 15px;">No active links. Establish one to begin passive resource channeling.</p>';
+                return;
+            }
+
+            activeQELs.forEach(qel => {
+                const qelCard = document.createElement('div');
+                qelCard.classList.add('active-qel-card');
+                qelCard.id = `qel-card-${qel.id}`;
+                qelCard.innerHTML = `
+                    <h5>${qel.name} (${qel.resource.toUpperCase()})</h5>
+                    <p>Gain: +${qel.gainPerTick.toFixed(2)}/s</p>
+                    <p>Energy Drain: -${qel.energyDrain.toFixed(2)}/s</p>
+                    <p>PP Drain: -${qel.ppDrain.toFixed(2)}/s</p>
+                    <button class="deactivate-qel-btn" data-qel-id="${qel.id}">Deactivate</button>
+                `;
+                activeQELLinksDisplay.appendChild(qelCard);
+            });
+
+            document.querySelectorAll('.deactivate-qel-btn').forEach(button => {
+                button.onclick = (event) => deactivateQEL(parseInt(event.target.dataset.qelId));
+            });
+        }
+
         function updateButtonStates() {
             const FORMULATION_ENERGY_COST = 20; /* Increased */
             const FORMULATION_PROCESSING_POWER_COST = 12; /* Increased */
@@ -1731,15 +1957,16 @@
             const TUNE_BASE_PROCESSING_POWER_COST = 11; /* Increased */
             const RECALIBRATE_ENERGY_COST = 40; /* Increased */
             const RECALIBRATE_PROCESSING_POWER_COST = 20; /* Increased */
-            const CALIBRATE_SIGNAL_ARRAY_ENERGY_COST = 25; /* Increased */
-            const CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST = 150; /* Increased */
-            const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 20; /* Increased */
-
+            
             const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 70; /* Increased */
             const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 30; /* Increased */
 
             const PREDICTIVE_ANALYSIS_ENERGY_COST = 10; /* Increased */
             const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 15; /* Increased */
+
+            const QEL_ESTABLISH_ENERGY_COST = 25; // NEW
+            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20; // NEW
+            const RTM_PROCESSING_POWER_BASE_COST = 5; // NEW
 
 
             let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(100 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.9));
@@ -1758,9 +1985,25 @@
             
             recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
             
-            calibrateSignalArrayButton.disabled = isProcessing || anomalyActive || currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST;
+            establishQELButton.disabled = isProcessing || anomalyActive || currentEnergy < QEL_ESTABLISH_ENERGY_COST || currentProcessingPower < QEL_ESTABLISH_PROCESSING_POWER_COST;
 
             runPredictiveAnalysisButton.disabled = isProcessing || anomalyActive || predictiveAnalysisActive || currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST; // NEW
+
+            // RTM button logic
+            const transmuteAmount = parseInt(transmuteAmountInput.value);
+            const sourceResource = transmuteSourceSelect.value;
+            const targetResource = transmuteTargetSelect.value;
+            let canTransmute = true;
+            if (transmuteAmount <= 0 || isNaN(transmuteAmount)) canTransmute = false;
+            if (sourceResource === targetResource) canTransmute = false;
+            if (currentProcessingPower < RTM_PROCESSING_POWER_BASE_COST) canTransmute = false;
+
+            if (sourceResource === 'rawData' && currentRawData < transmuteAmount) canTransmute = false;
+            if (sourceResource === 'energy' && currentEnergy < transmuteAmount) canTransmute = false;
+            if (sourceResource === 'processingPower' && currentProcessingPower < transmuteAmount + RTM_PROCESSING_POWER_BASE_COST) canTransmute = false; // PP costs itself + base.
+
+            transmuteResourcesButton.disabled = isProcessing || anomalyActive || !canTransmute;
+
 
             // Critical state disables most buttons, except recalibrate if energy/PP permits
             if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentProcessingPower < 15 || (activeProtocol === null && currentRawData < totalRawDataNeededForFormulation / 2)) {
@@ -1770,8 +2013,9 @@
                     integrateProtocolButton.disabled = true;
                     tuneActiveProtocolButton.disabled = true;
                     deactivateProtocolButton.disabled = true;
-                    calibrateSignalArrayButton.disabled = true;
+                    establishQELButton.disabled = true;
                     runPredictiveAnalysisButton.disabled = true; // NEW
+                    transmuteResourcesButton.disabled = true;
                 }
                 recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
                 if (!isProcessing && systemStatusTextSpan.textContent !== "SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!" && !anomalyActive) {
@@ -1992,7 +2236,7 @@
             currentAnomaly = null;
             anomalyAlertOverlay.classList.remove('active');
             logDataStreamEntry(currentAnomaly ? currentAnomaly.resolutionMessage : 'Anomaly resolved.', 'optimal');
-            systemStatusTextSpan.textContent = `System Idle. Calibrate Signal Array to collect Raw Data.`;
+            systemStatusTextSpan.textContent = `System Idle. Configure Signal Array and establish a Quantum Entanglement Link for Raw Data.`;
             updateButtonStates();
         }
 
@@ -2046,11 +2290,11 @@
                         predictionRisk = 'Medium';
                     }
                 } else {
-                    // If no protocol, analyze current signal array calibration impact (e.g., if recalibrating)
+                    // If no protocol, analyze current QEL configuration (e.g., if recalibrating or QEL attempt)
                     const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
                     const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
 
-                    // Simplified prediction for current calibration - more stable if values are balanced, less stable if highly varied
+                    // Simplified prediction for current configuration - more stable if values are balanced, less stable if highly varied
                     predictedStabilityChange = -6 + (avgCalibratorValue / 18) - (calibratorVariance / 9) + (Math.random() * 5 - 2.5);
                     predictedDataFlowChange = (avgCalibratorValue / 13) - 6 + (Math.random() * 5 - 2.5);
                     predictedProcessingPowerChange = (avgCalibratorValue / 22) - 3 + (Math.random() * 4 - 2);
@@ -2100,6 +2344,225 @@
             updateButtonStates(); // May affect resource states indirectly
         }
 
+        // --- NEW: Quantum Entanglement Link (QEL) Logic ---
+        async function establishQEL() {
+            if (isProcessing || anomalyActive) return;
+
+            isProcessing = true;
+            logDataStreamEntry('Attempting Quantum Entanglement Link establishment...', 'processing');
+            systemStatusTextSpan.textContent = 'QEL INITIATOR: Synchronizing arrays...';
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 4000)); // Simulate establishment time
+
+            const QEL_ESTABLISH_ENERGY_COST = 25;
+            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20;
+
+            if (currentEnergy < QEL_ESTABLISH_ENERGY_COST || currentProcessingPower < QEL_ESTABLISH_PROCESSING_POWER_COST) {
+                logDataStreamEntry('Insufficient Energy or Processing Power to establish QEL. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'SYSTEM IDLE: QEL attempt aborted.';
+                isProcessing = false;
+                updateButtonStates();
+                return;
+            }
+
+            currentEnergy -= QEL_ESTABLISH_ENERGY_COST;
+            currentProcessingPower -= QEL_ESTABLISH_PROCESSING_POWER_COST;
+
+            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => c.value > 0 ? sum + c.value : sum, 0) / signalArrayComponents.filter(c => c.value > 0).length || 1;
+            const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
+
+            let successChance = 0.3 + (avgCalibratorValue / 200) - (calibratorVariance / 1500); // Base 30% + calibrator influence
+            successChance = Math.max(0.1, Math.min(0.9, successChance)); // Clamp between 10% and 90%
+
+            let message = '';
+            let logType = 'info';
+
+            if (Math.random() < successChance) {
+                const selectedArchetype = qelArchetypes[Math.floor(Math.random() * qelArchetypes.length)];
+                
+                let effectiveGain = selectedArchetype.baseGain * (1 + (Math.random() * 0.2 - 0.1)); // +-10% variance
+                let effectiveEnergyDrain = selectedArchetype.energyDrain * (1 + (Math.random() * 0.1));
+                let effectivePPDrain = selectedArchetype.ppDrain * (1 + (Math.random() * 0.1));
+                let effectiveStabilityImpact = selectedArchetype.stabilityImpact * (1 + (Math.random() * 0.1 - 0.05));
+
+                // Apply sub-protocol boosts to QELs
+                if (selectedArchetype.resource === 'rawData') {
+                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.rawDataQELBoost).forEach(sp => {
+                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.rawDataQELBoost;
+                    });
+                } else if (selectedArchetype.resource === 'dataFlow') {
+                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.dataFlowQELBoost).forEach(sp => {
+                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.dataFlowQELBoost;
+                    });
+                } else if (selectedArchetype.resource === 'processingPower') {
+                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.processingPowerQELBoost).forEach(sp => {
+                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.processingPowerQELBoost;
+                    });
+                }
+
+
+                const newQEL = {
+                    id: nextQELId++,
+                    name: selectedArchetype.name,
+                    resource: selectedArchetype.resource,
+                    gainPerTick: effectiveGain,
+                    energyDrain: effectiveEnergyDrain,
+                    ppDrain: effectivePPDrain,
+                    stabilityImpact: effectiveStabilityImpact // Initial stability impact
+                };
+                activeQELs.push(newQEL);
+                currentSystemStability += newQEL.stabilityImpact; // One-time boost/drain upon establishment
+                
+                message = `Quantum Entanglement Link "${newQEL.name}" established! Providing ${newQEL.gainPerTick.toFixed(2)} ${newQEL.resource} per tick.`;
+                logType = 'optimal';
+
+                // Randomize calibrator values after a scan to encourage re-tuning
+                signalArrayComponents.forEach(c => {
+                    c.value = Math.round(Math.random() * (c.max - c.min) + c.min);
+                    document.getElementById(c.id).value = c.value;
+                    document.getElementById(`${c.id}-value`).textContent = c.value;
+                    document.getElementById(`${c.id}-influence`).textContent = (c.impactFactor * c.value / 10).toFixed(2);
+                });
+
+            } else {
+                message = `Failed to establish Quantum Entanglement Link. Array coherence insufficient or interference detected.`;
+                logType = 'warning';
+                currentSystemStability -= (calibratorVariance > 100 ? 5 : 2); // Penalty for failure with high variance
+            }
+            
+            logDataStreamEntry(message, logType);
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: QEL Initiator ready.';
+            isProcessing = false;
+            updateAllDisplays();
+            renderActiveQELs(); // Update QEL display
+        }
+
+        function deactivateQEL(id) {
+            if (isProcessing || anomalyActive) return;
+            const qelIndex = activeQELs.findIndex(q => q.id === id);
+            if (qelIndex > -1) {
+                const deactivatedQEL = activeQELs[qelIndex];
+                activeQELs.splice(qelIndex, 1);
+                currentSystemStability -= (deactivatedQEL.stabilityImpact / 2); // Small penalty for deactivation
+
+                logDataStreamEntry(`Quantum Entanglement Link "${deactivatedQEL.name}" (ID: ${id}) deactivated.`, 'info');
+                updateAllDisplays();
+                renderActiveQELs();
+            }
+        }
+
+        // NEW: Resource Transmutation Matrix (RTM) Logic
+        async function transmuteResources() {
+            if (isProcessing || anomalyActive) return;
+
+            const amount = parseInt(transmuteAmountInput.value);
+            const source = transmuteSourceSelect.value;
+            const target = transmuteTargetSelect.value;
+            const RTM_PROCESSING_POWER_BASE_COST = 5;
+            const RTM_STABILITY_RISK_CHANCE = 0.08; // 8% chance per transmutation
+            const RTM_STABILITY_IMPACT = -3;
+
+            if (source === target || amount <= 0 || isNaN(amount)) {
+                logDataStreamEntry('Invalid transmutation parameters.', 'warning');
+                return;
+            }
+
+            let sourceCurrent;
+            if (source === 'rawData') sourceCurrent = currentRawData;
+            else if (source === 'energy') sourceCurrent = currentEnergy;
+            else if (source === 'processingPower') sourceCurrent = currentProcessingPower;
+            else { logDataStreamEntry('Unsupported source resource.', 'warning'); return; }
+
+            if (sourceCurrent < amount || currentProcessingPower < RTM_PROCESSING_POWER_BASE_COST) {
+                logDataStreamEntry('Insufficient resources for transmutation.', 'warning');
+                return;
+            }
+
+            isProcessing = true;
+            logDataStreamEntry(`Initiating transmutation: ${amount} ${source.toUpperCase()} to ${target.toUpperCase()}...`, 'processing');
+            systemStatusTextSpan.textContent = `RTM: Transmuting ${source.toUpperCase()}...`;
+            updateButtonStates();
+
+            await new Promise(resolve => setTimeout(resolve, 2500)); // Simulate transmutation time
+
+            let yieldAmount = 0;
+            let efficiency = 0;
+
+            // Simplified efficiencies (can be expanded)
+            if (source === 'rawData' && target === 'energy') efficiency = 0.4; // 40%
+            if (source === 'rawData' && target === 'processingPower') efficiency = 0.3; // 30%
+            if (source === 'energy' && target === 'rawData') efficiency = 12; // 1 Energy -> 12 RawData
+            if (source === 'processingPower' && target === 'energy') efficiency = 0.6; // 60%
+            if (source === 'energy' && target === 'processingPower') efficiency = 0.5; // 50%
+            if (source === 'processingPower' && target === 'rawData') efficiency = 18; // 1 PP -> 18 RawData
+
+            yieldAmount = amount * efficiency;
+            if (target === 'rawData' || target === 'dataFlow') yieldAmount = Math.round(yieldAmount); // Raw data and data flow are integer-like
+
+            // Deduct source and processing power
+            if (source === 'rawData') currentRawData -= amount;
+            else if (source === 'energy') currentEnergy -= amount;
+            else if (source === 'processingPower') currentProcessingPower -= amount; // If PP is source, it still costs for the conversion process too.
+
+            currentProcessingPower -= RTM_PROCESSING_POWER_BASE_COST;
+
+            // Add target resource
+            if (target === 'rawData') currentRawData += yieldAmount;
+            else if (target === 'energy') currentEnergy += yieldAmount;
+            else if (target === 'processingPower') currentProcessingPower += yieldAmount;
+            else if (target === 'dataFlow') currentDataFlow += yieldAmount;
+
+            let logMessage = `Transmutation complete: ${amount} ${source.toUpperCase()} converted to ${yieldAmount.toFixed(2)} ${target.toUpperCase()}.`;
+            let logType = 'info';
+
+            // Stability risk
+            if (Math.random() < RTM_STABILITY_RISK_CHANCE) {
+                currentSystemStability += RTM_STABILITY_IMPACT;
+                logMessage += ' Minor stability flux detected during conversion!';
+                logType = 'warning';
+            }
+
+            logDataStreamEntry(logMessage, logType);
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: RTM ready for new operations.';
+            isProcessing = false;
+            updateAllDisplays();
+        }
+
+        function updateRTMInfo() {
+            const amount = parseInt(transmuteAmountInput.value);
+            const source = transmuteSourceSelect.value;
+            const target = transmuteTargetSelect.value;
+
+            if (source === target) {
+                rtmInfoDiv.innerHTML = "Cannot transmute a resource into itself. Choose different source/target.";
+                return;
+            }
+            if (amount <= 0 || isNaN(amount)) {
+                rtmInfoDiv.innerHTML = "Enter a valid amount to transmute.";
+                return;
+            }
+
+            let efficiency = 0;
+            if (source === 'rawData' && target === 'energy') efficiency = 0.4;
+            if (source === 'rawData' && target === 'processingPower') efficiency = 0.3;
+            if (source === 'energy' && target === 'rawData') efficiency = 12;
+            if (source === 'processingPower' && target === 'energy') efficiency = 0.6;
+            if (source === 'energy' && target === 'processingPower') efficiency = 0.5;
+            if (source === 'processingPower' && target === 'rawData') efficiency = 18;
+
+            let yieldAmount = amount * efficiency;
+            if (target === 'rawData' || target === 'dataFlow') yieldAmount = Math.round(yieldAmount);
+
+            const ppCost = 5;
+            const riskText = (RTM_STABILITY_RISK_CHANCE * 100).toFixed(0) + '% chance of minor stability flux.';
+
+            rtmInfoDiv.innerHTML = `
+                Transmute ${amount} ${source.toUpperCase()} to ${target.toUpperCase()} will yield ${yieldAmount.toFixed(2)} ${target.toUpperCase()}.<br>
+                Costs ${ppCost} Processing Power.<br>
+                Stability Risk: ${riskText}
+            `;
+        }
 
         // --- Event Listeners ---
         formulateProtocolButton.addEventListener('click', async () => {
@@ -2366,75 +2829,8 @@
             updateAllDisplays();
         });
 
-        calibrateSignalArrayButton.addEventListener('click', async () => {
-            isProcessing = true;
-            logDataStreamEntry('Initiating high-gain signal array scan...', 'processing');
-            systemStatusTextSpan.textContent = 'SIGNAL ARRAY: Scanning for data...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 3500)); /* Longer scan time */
-
-            const CALIBRATE_SIGNAL_ARRAY_ENERGY_COST = 25;
-            const CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST = 150;
-            const CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST = 20;
-
-            if (currentEnergy < CALIBRATE_SIGNAL_ARRAY_ENERGY_COST || currentRawData < CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST || currentProcessingPower < CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient resources for high-gain signal array scan. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Scan aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
-                return;
-            }
-
-            currentEnergy -= CALIBRATE_SIGNAL_ARRAY_ENERGY_COST;
-            currentRawData -= CALIBRATE_SIGNAL_ARRAY_RAW_DATA_COST;
-            currentProcessingPower -= CALIBRATE_SIGNAL_ARRAY_PROCESSING_POWER_COST;
-
-            // Apply effects of calibration
-            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => c.value > 0 ? sum + c.value : sum, 0) / signalArrayComponents.filter(c => c.value > 0).length || 1; // Avoid NaN if all are zero
-            const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
-
-            let stabilityChange = 0;
-            let dataFlowBoost = 0;
-            let rawDataCollected = 0; // The actual raw data collected from the environment
-
-            // If calibrators are high and coherent, good things happen
-            if (avgCalibratorValue > 75 && calibratorVariance < 180) { /* Higher thresholds, lower variance */
-                stabilityChange = 8 + Math.random() * 8;
-                dataFlowBoost = 15 + Math.random() * 20;
-                rawDataCollected = 250 + Math.random() * 200; // More raw data
-                logDataStreamEntry('Signal arrays optimally aligned. High-yield data stream initiated.', 'optimal');
-            } else if (avgCalibratorValue < 25) { /* Lower threshold */
-                stabilityChange = -10 - Math.random() * 10;
-                dataFlowBoost = -9 - Math.random() * 15;
-                rawDataCollected = 30 + Math.random() * 50; // Very little raw data
-                logDataStreamEntry('Signal arrays poorly aligned. Low data yield, significant instability detected.', 'warning');
-            } else {
-                stabilityChange = Math.random() * 7 - 3.5; // Minor variance
-                dataFlowBoost = 10 + Math.random() * 15;
-                rawDataCollected = 120 + Math.random() * 100; // Moderate raw data
-                logDataStreamEntry('Signal arrays scanned. Data stream acquired.', 'info');
-            }
-
-            currentSystemStability += stabilityChange;
-            currentDataFlow += dataFlowBoost;
-            currentRawData += rawDataCollected; // Add collected raw data
-
-            // Randomize calibrator values after a scan to encourage re-tuning
-            signalArrayComponents.forEach(c => {
-                c.value = Math.round(Math.random() * (c.max - c.min) + c.min);
-                document.getElementById(c.id).value = c.value;
-                document.getElementById(`${c.id}-value`).textContent = c.value;
-                document.getElementById(`${c.id}-drf`).textContent = (c.dataRateFactor * c.value / 10).toFixed(2);
-                document.getElementById(`${c.id}-plf`).textContent = (c.powerLoadFactor * c.value / 10).toFixed(2);
-            });
-
-
-            logDataStreamEntry(`Signal array scan complete. Collected ${rawDataCollected.toFixed(0)} raw data packets.`, 'rawdata');
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Signal arrays operational.';
-            isProcessing = false;
-            updateAllDisplays();
-        });
+        // Event listener for the new QEL button (replaces old Calibrate Signal Array)
+        establishQELButton.addEventListener('click', establishQEL);
 
         resolveAnomalyButton.addEventListener('click', () => {
             if (anomalyActive && currentAnomaly) {
@@ -2447,6 +2843,13 @@
 
         runPredictiveAnalysisButton.addEventListener('click', runPredictiveAnalysis); // NEW Listener
 
+        // RTM Event Listeners
+        transmuteResourcesButton.addEventListener('click', transmuteResources);
+        transmuteAmountInput.addEventListener('input', updateRTMInfo);
+        transmuteSourceSelect.addEventListener('change', updateRTMInfo);
+        transmuteTargetSelect.addEventListener('change', updateRTMInfo);
+
+
         // --- Game Loop and Initialization ---
         let gameLoopInterval = null;
 
@@ -2456,18 +2859,16 @@
             currentDataFlow -= 0.04; // Passive decay (increased)
             currentProcessingPower -= 0.06; // Passive drain (increased)
 
-            // Raw data collection (passive gain based on signal array calibration)
-            let passiveRawDataGain = 0;
-            let totalPowerLoad = 0;
-            signalArrayComponents.forEach(c => {
-                passiveRawDataGain += (c.dataRateFactor * c.value / 10);
-                totalPowerLoad += (c.powerLoadFactor * c.value / 10);
+            // Process active QELs
+            activeQELs.forEach(qel => {
+                currentEnergy -= qel.energyDrain;
+                currentProcessingPower -= qel.ppDrain;
+                if (qel.resource === 'rawData') currentRawData += qel.gainPerTick;
+                else if (qel.resource === 'energy') currentEnergy += qel.gainPerTick;
+                else if (qel.resource === 'dataFlow') currentDataFlow += qel.gainPerTick;
+                else if (qel.resource === 'processingPower') currentProcessingPower += qel.gainPerTick;
             });
-            currentRawData += passiveRawDataGain * (0.85 + Math.random() * 0.3); // Add some variance
 
-            // Apply energy and processing power load from signal array configuration
-            currentEnergy -= totalPowerLoad * 0.12;
-            currentProcessingPower -= totalPowerLoad * 0.06;
 
             // Apply active protocol effects
             if (activeProtocol) {
@@ -2484,12 +2885,9 @@
                 if (sp.costPerTick.rawData) currentRawData -= sp.costPerTick.rawData; // New raw data cost
 
                 if (sp.impactPerTick.stability) currentSystemStability += sp.impactPerTick.stability;
-                if (sp.impactPerTick.dataFlow) currentDataFlow += sp.impactPerTick.dataFlow;
-                if (sp.impactPerTick.processingPower) currentProcessingPower += sp.impactPerTick.processingPower;
+                // QEL specific boosts are handled in QEL establishment logic now.
+                // For direct buffs:
                 if (sp.impactPerTick.energy) currentEnergy += sp.impactPerTick.energy; // Resource harvester effect
-                if (sp.impactPerTick.rawDataPerTickBoost) { // Boost passive raw data gain
-                    currentRawData += passiveRawDataGain * sp.impactPerTick.rawDataPerTickBoost;
-                }
             });
 
             // Stability fluctuations
@@ -2532,9 +2930,10 @@
         function init() {
             renderSignalArrayCalibrators();
             renderSubProtocols(); // NEW: Render sub-protocols
+            renderActiveQELs(); // NEW: Render active QELs
             updateAllDisplays();
             gameLoopInterval = setInterval(gameLoop, 1000); // 1-second ticks
-            logDataStreamEntry('Core systems online. Initiating Generation 32.0 protocols.', 'event');
+            logDataStreamEntry('Core systems online. Initiating Generation 33.0 protocols.', 'event');
         }
 
         init();
