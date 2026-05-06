@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // v33.0</title>
+    <title>Web Life Form // Adaptive Protocol Nexus // v34.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -111,6 +111,13 @@
             --rtm-border: rgba(255, 200, 0, 0.9); /* Gold-Orange */
             --rtm-text: #FFEB3B; /* Yellowish Gold */
             --rtm-btn-glow: rgba(255, 200, 0, 0.95);
+
+            /* Gen 34.0 NEW: Protocol Blueprint Module */
+            --blueprint-bg: rgba(15, 40, 40, 0.995); /* Dark Teal */
+            --blueprint-border: rgba(0, 255, 255, 0.8); /* Cyan */
+            --blueprint-text: #00FFFF; /* Cyan */
+            --blueprint-component-bg: rgba(0, 0, 0, 0.7);
+            --blueprint-component-border: rgba(0, 255, 255, 0.5);
         }
 
         body {
@@ -126,7 +133,7 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="2.5" fill="%23FF00FF"/><path fill="%2300FFFF" d="M12 0L9 6l-6 3 6 3 3 6 3-6 6-3-6-3zM12 24l-3-6 6-3-6-3-3-6-3 6-6 3 6 3z"/></svg>') 30 30, auto; /* Cyan crosshair with a larger magenta dot, with pulsing star points, bigger cursor */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="3.5" fill="%23FF00FF"/><path fill="%2300FFFF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z"/></svg>') 40 40, auto; /* Cyan crosshair with a larger magenta dot, with pulsing star points, bigger cursor, more points */
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation) */
@@ -308,8 +315,7 @@
         }
 
         /* Module base styles */
-        .qel-module, .rtm-module, .formulated-protocol-details, .deployed-protocol-parameters,
-        .predictive-analysis-module, .sub-protocol-augmentation-module { /* NEW MODULES ADDED */
+        .qel-module, .rtm-module, .predictive-analysis-module, .sub-protocol-augmentation-module, .protocol-blueprint-module { /* NEW MODULE ADDED */
             display: flex;
             flex-direction: column;
             gap: 60px;
@@ -344,9 +350,13 @@
             border-color: var(--augmentation-border);
             box-shadow: inset 0 0 60px rgba(255, 165, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.7), inset 0 0 120px rgba(255, 165, 0, 0.4);
         }
+        .protocol-blueprint-module { /* NEW */
+            background: var(--blueprint-bg);
+            border-color: var(--blueprint-border);
+            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.7), inset 0 0 120px rgba(0, 255, 255, 0.4);
+        }
 
-        .qel-module::after, .rtm-module::after, .formulated-protocol-details::after, .deployed-protocol-parameters::after,
-        .predictive-analysis-module::after, .sub-protocol-augmentation-module::after {
+        .qel-module::after, .rtm-module::after, .predictive-analysis-module::after, .sub-protocol-augmentation-module::after, .protocol-blueprint-module::after {
             content: '';
             position: absolute;
             top: 0;
@@ -360,8 +370,7 @@
         }
 
 
-        .qel-module::before, .rtm-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
-        .predictive-analysis-module::before, .sub-protocol-augmentation-module::before { /* NEW MODULES ADDED */
+        .qel-module::before, .rtm-module::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before, .protocol-blueprint-module::before { /* NEW MODULE ADDED */
             content: attr(data-label);
             position: absolute;
             top: -50px; /* Slightly higher */
@@ -400,6 +409,11 @@
             color: var(--augmentation-text);
             border-color: var(--augmentation-text);
             box-shadow: 0 0 35px var(--augmentation-text);
+        }
+        .protocol-blueprint-module::before { /* NEW */
+            color: var(--blueprint-text);
+            border-color: var(--blueprint-text);
+            box-shadow: 0 0 35px var(--blueprint-text);
         }
 
 
@@ -588,6 +602,63 @@
             opacity: 0.95;
         }
 
+        /* NEW: Protocol Blueprint Module */
+        .blueprint-summary {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.4em;
+            color: var(--blueprint-text);
+            text-shadow: 0 0 15px var(--blueprint-text);
+            margin-bottom: 30px;
+        }
+        .blueprint-component-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+            max-height: 350px;
+            overflow-y: auto;
+            padding-right: 15px; /* For scrollbar space */
+        }
+        .blueprint-component-item {
+            background: var(--blueprint-component-bg);
+            border: 1px dashed var(--blueprint-component-border);
+            border-radius: 20px;
+            padding: 20px 30px;
+            text-align: left;
+            position: relative;
+            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+        .blueprint-component-item h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            color: var(--blueprint-text);
+            margin: 0 0 8px 0;
+            text-shadow: 0 0 10px var(--blueprint-text);
+        }
+        .blueprint-component-item p {
+            font-size: 1em;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 5px;
+            transform: none; /* Reset 3D transform */
+        }
+        .blueprint-component-item .remove-blueprint-component {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #CC0000;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .blueprint-component-item .remove-blueprint-component:hover {
+            background: #FF0000;
+        }
 
         /* Resource Display Styles */
         .resource-display-container {
@@ -1312,9 +1383,8 @@
             .param-label {
                 align-items: flex-start; /* Keep left alignment for better readability */
             }
-            .qel-module::before, .rtm-module::before, .formulated-protocol-details::before, .deployed-protocol-parameters::before,
-            .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
-            .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before {
+            .qel-module::before, .rtm-module::before, .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
+            .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before, .protocol-blueprint-module::before {
                 top: -35px;
                 left: 50px;
                 font-size: 1.25em;
@@ -1364,7 +1434,7 @@
         </div>
 
         <h1>Adaptive Protocol Nexus</h1>
-        <p>Establish Quantum Entanglement Links to channel vital resources, or transmute excess for immediate needs. Refine and integrate advanced protocols to enhance system performance and maintain core stability.</p>
+        <p>Design complex blueprints of interconnected Quantum Entanglement Links and Sub-Protocols. Transmute resources, predict futures, and stabilize the core.</p>
 
         <div class="control-module">
             <!-- Resource Display -->
@@ -1393,6 +1463,16 @@
                     <div class="resource-level-bar-container">
                         <div class="resource-level-bar" id="processing-power-level-bar" style="width: 100%;"></div>
                     </div>
+                </div>
+            </div>
+
+            <!-- NEW: Protocol Blueprint Module (Replaces Formulated/Deployed Protocol Details) -->
+            <div class="protocol-blueprint-module" data-label="PROTOCOL BLUEPRINT DESIGN" style="display: none;">
+                <p class="blueprint-summary"><strong>Blueprint:</strong> <span id="blueprint-name">Unnamed Protocol</span> (ID: <span id="blueprint-id">N/A</span>)</p>
+                <p class="blueprint-summary" id="blueprint-cost-summary">Estimated Cost: Energy 0, Raw Data 0, Processing Power 0</p>
+                <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1.6em; color: var(--blueprint-text); text-shadow: 0 0 20px var(--blueprint-text); margin-top: 20px;">COMPONENTS:</h4>
+                <div id="blueprint-component-list" class="blueprint-component-list">
+                    <p style="text-align: center; opacity: 0.7; font-size: 1.2em; margin-top: 15px;">No components added. Use "Formulate Protocol" to start designing.</p>
                 </div>
             </div>
 
@@ -1444,23 +1524,6 @@
                 </div>
             </div>
 
-            <!-- New: Formulated Protocol Details -->
-            <div class="formulated-protocol-details" data-label="FORMULATED PROTOCOL DETAILS" style="display: none;">
-                <p style="font-size: 1.4em;"><strong>Protocol Name:</strong> <span id="formulated-protocol-name">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Protocol ID:</strong> <span id="formulated-protocol-id">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Archetype:</strong> <span id="formulated-protocol-archetype">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Complexity:</strong> <span id="formulated-protocol-complexity">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Stability Risk:</strong> <span id="formulated-protocol-stability-risk">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Raw Data Cost:</strong> <span id="formulated-protocol-raw-data-cost">N/A</span></p>
-                <p style="font-size: 1.4em;"><strong>Processing Power Cost:</strong> <span id="formulated-protocol-processing-power-cost">N/A</span></p>
-                <p style="font-size: 1.3em; opacity: 0.88; margin-top: 40px;" id="formulated-protocol-description">Acquire Raw Data and formulate a protocol to see its details here.</p>
-            </div>
-
-            <!-- Deployed Protocol Parameters (now for tuning ACTIVE protocols) -->
-            <div class="deployed-protocol-parameters" data-label="ACTIVE PROTOCOL TUNING" style="display: none;">
-                <p style="text-align: center; opacity: 0.88; font-size: 1.4em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>
-            </div>
-
             <!-- NEW: Sub-Protocol Augmentation System -->
             <div class="sub-protocol-augmentation-module" data-label="SUB-PROTOCOL AUGMENTATION">
                 <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--augmentation-text);">Deploy minor, specialized sub-protocols to fine-tune system behavior. Each active module incurs a continuous resource cost.</p>
@@ -1470,23 +1533,23 @@
             </div>
 
             <div class="system-status-display" id="system-status">
-                <p><strong>Active Protocol:</strong> <span id="active-protocol-name">NONE</span></p>
-                <p><strong>Protocol ID:</strong> <span id="active-protocol-id">N/A</span></p>
-                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Configure Signal Array and establish a Quantum Entanglement Link for Raw Data.</span></p>
+                <p><strong>Active Blueprint:</strong> <span id="active-protocol-name">NONE</span></p>
+                <p><strong>Blueprint ID:</strong> <span id="active-protocol-id">N/A</span></p>
+                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Design a Protocol Blueprint.</span></p>
             </div>
             
             <div class="data-stream-monitor" id="data-stream-monitor">
                 <div class="data-visualizer"><div class="data-visualizer-wave"></div></div> <!-- NEW VISUALIZER -->
-                <span class="log-entry processing-glitch">System ready. Awaiting Quantum Entanglement Link configuration.</span>
+                <span class="log-entry processing-glitch">System ready. Awaiting Protocol Blueprint design.</span>
             </div>
         </div>
 
         <div class="button-group">
-            <button id="formulate-protocol-button">Formulate Protocol</button>
-            <button id="refine-protocol-button" disabled>Refine Protocol</button> <!-- NEW BUTTON -->
-            <button id="integrate-protocol-button" disabled>Integrate Protocol</button>
-            <button id="tune-active-protocol-button" disabled>Tune Active Protocol</button>
-            <button id="deactivate-protocol-button" disabled>Deactivate Protocol</button>
+            <button id="formulate-protocol-button">Design Blueprint</button>
+            <button id="refine-protocol-button" disabled>Refine Blueprint</button>
+            <button id="integrate-protocol-button" disabled>Integrate Blueprint</button>
+            <button id="tune-active-protocol-button" disabled>Tune Active Blueprint</button>
+            <button id="deactivate-protocol-button" disabled>Deactivate Blueprint</button>
             <button id="recalibrate-core-button">Recalibrate Core</button>
         </div>
 
@@ -1496,28 +1559,25 @@
         <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
 
         <footer>
-            <p>Generation 33.0 // Evolving Interface Entity // Web Life Form</p>
+            <p>Generation 34.0 // Evolving Interface Entity // Web Life Form</p>
         </footer>
     </div>
 
     <script>
         // DOM Elements
         const signalArrayCalibratorsContainer = document.getElementById('signal-array-calibrators-container');
-        const formulatedProtocolDetailsContainer = document.getElementById('formulated-protocol-details');
-        const formulatedProtocolNameSpan = document.getElementById('formulated-protocol-name');
-        const formulatedProtocolIDSpan = document.getElementById('formulated-protocol-id');
-        const formulatedProtocolArchetypeSpan = document.getElementById('formulated-protocol-archetype');
-        const formulatedProtocolComplexitySpan = document.getElementById('formulated-protocol-complexity');
-        const formulatedProtocolStabilityRiskSpan = document.getElementById('formulated-protocol-stability-risk');
-        const formulatedProtocolRawDataCostSpan = document.getElementById('formulated-protocol-raw-data-cost');
-        const formulatedProtocolProcessingPowerCostSpan = document.getElementById('formulated-protocol-processing-power-cost');
-        const formulatedProtocolDescription = document.getElementById('formulated-protocol-description');
-        const deployedProtocolParametersContainer = document.getElementById('deployed-protocol-parameters');
         const systemStatusDisplay = document.getElementById('system-status');
         const activeProtocolNameSpan = document.getElementById('active-protocol-name');
         const activeProtocolIDSpan = document.getElementById('active-protocol-id');
         const systemStatusTextSpan = document.getElementById('system-status-text');
         const dataStreamMonitor = document.getElementById('data-stream-monitor');
+
+        // NEW: Protocol Blueprint Elements
+        const protocolBlueprintModule = document.getElementById('protocol-blueprint-module');
+        const blueprintNameSpan = document.getElementById('blueprint-name');
+        const blueprintIDSpan = document.getElementById('blueprint-id');
+        const blueprintCostSummary = document.getElementById('blueprint-cost-summary');
+        const blueprintComponentList = document.getElementById('blueprint-component-list');
 
         // Buttons
         const formulateProtocolButton = document.getElementById('formulate-protocol-button');
@@ -1526,7 +1586,7 @@
         const tuneActiveProtocolButton = document.getElementById('tune-active-protocol-button');
         const deactivateProtocolButton = document.getElementById('deactivate-protocol-button');
         const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
-        const establishQELButton = document.getElementById('establish-qel-button'); // Renamed button
+        const establishQELButton = document.getElementById('establish-qel-button');
 
         // Resource & Status Displays
         const stabilityLevelBar = document.getElementById('stability-level-bar');
@@ -1574,8 +1634,8 @@
         let currentProcessingPower = 100; // Max 100 (NEW)
 
         let isProcessing = false;
-        let formulatedProtocol = null;
-        let activeProtocol = null;
+        let formulatedBlueprint = null; // Renamed from formulatedProtocol
+        let activeBlueprint = null;     // Renamed from activeProtocol
         let anomalyActive = false;
         let currentAnomaly = null;
         let predictiveAnalysisActive = false; // NEW
@@ -1591,16 +1651,16 @@
         let activeQELs = [];
         let nextQELId = 1;
 
-        // NEW: QEL Archetypes
+        // NEW: QEL Archetypes (for blueprint design and individual QELs)
         const qelArchetypes = [
-            { name: 'Raw Data Stream', resource: 'rawData', baseGain: 15, stabilityImpact: 1.5, energyDrain: 0.2, ppDrain: 0.1 },
-            { name: 'Flow Conduit', resource: 'dataFlow', baseGain: 3, stabilityImpact: 0.8, energyDrain: 0.3, ppDrain: 0.15 },
-            { name: 'Processing Core Uplink', resource: 'processingPower', baseGain: 3, stabilityImpact: 0.5, energyDrain: 0.4, ppDrain: 0.2 },
-            { name: 'Energy Resonance Tap', resource: 'energy', baseGain: 0.8, stabilityImpact: 2.0, energyDrain: 0.1, ppDrain: 0.1 }
+            { id: 'qel-data-stream', name: 'Raw Data Stream', resource: 'rawData', baseGain: 15, stabilityImpact: 1.5, energyDrain: 0.2, ppDrain: 0.1, blueprintCost: { energy: 5, rawData: 20, processingPower: 3 } },
+            { id: 'qel-flow-conduit', name: 'Flow Conduit', resource: 'dataFlow', baseGain: 3, stabilityImpact: 0.8, energyDrain: 0.3, ppDrain: 0.15, blueprintCost: { energy: 7, rawData: 15, processingPower: 4 } },
+            { id: 'qel-pp-uplink', name: 'Processing Core Uplink', resource: 'processingPower', baseGain: 3, stabilityImpact: 0.5, energyDrain: 0.4, ppDrain: 0.2, blueprintCost: { energy: 10, rawData: 10, processingPower: 5 } },
+            { id: 'qel-energy-tap', name: 'Energy Resonance Tap', resource: 'energy', baseGain: 0.8, stabilityImpact: 2.0, energyDrain: 0.1, ppDrain: 0.1, blueprintCost: { energy: 4, rawData: 25, processingPower: 2 } }
         ];
 
 
-        // NEW: Sub-Protocols
+        // NEW: Sub-Protocols (for blueprint design and individual activation)
         const subProtocols = [
             {
                 id: 'data-compression-unit',
@@ -1608,7 +1668,8 @@
                 description: 'Reduces Raw Data storage footprint. Increases Raw Data collection speed slightly.',
                 isActive: false,
                 costPerTick: { energy: 0.12, processingPower: 0.06 },
-                impactPerTick: { rawDataQELBoost: 0.1 } // Effectively makes QELs for rawData more efficient
+                impactPerTick: { rawDataQELBoost: 0.1 }, // Effectively makes QELs for rawData more efficient
+                blueprintCost: { energy: 8, rawData: 10, processingPower: 5 }
             },
             {
                 id: 'stability-reinforcer',
@@ -1616,7 +1677,8 @@
                 description: 'Applies minor field corrections to enhance core stability over time.',
                 isActive: false,
                 costPerTick: { energy: 0.25, processingPower: 0.12 },
-                impactPerTick: { stability: 0.06 }
+                impactPerTick: { stability: 0.06 },
+                blueprintCost: { energy: 15, rawData: 5, processingPower: 10 }
             },
             {
                 id: 'flow-accelerator',
@@ -1624,7 +1686,8 @@
                 description: 'Optimizes data routing for increased throughput, boosting Data Flow Index.',
                 isActive: false,
                 costPerTick: { energy: 0.18, processingPower: 0.18 },
-                impactPerTick: { dataFlowQELBoost: 0.1 }
+                impactPerTick: { dataFlowQELBoost: 0.1 },
+                blueprintCost: { energy: 10, rawData: 12, processingPower: 8 }
             },
             {
                 id: 'processing-booster',
@@ -1632,7 +1695,8 @@
                 description: 'Temporarily overclocks processing cores for a small boost to Processing Power.',
                 isActive: false,
                 costPerTick: { energy: 0.3, processingPower: 0.1 },
-                impactPerTick: { processingPowerQELBoost: 0.07 }
+                impactPerTick: { processingPowerQELBoost: 0.07 },
+                blueprintCost: { energy: 18, rawData: 8, processingPower: 12 }
             },
             {
                 id: 'anomaly-sensor-suite',
@@ -1640,7 +1704,8 @@
                 description: 'Increases anomaly detection chance, but also gives a slight chance to resolve automatically.',
                 isActive: false,
                 costPerTick: { energy: 0.12, processingPower: 0.08 },
-                impactPerTick: { anomalyChanceModifier: -0.0004, autoResolveChance: 0.007 } // Modifier is negative for reduction
+                impactPerTick: { anomalyChanceModifier: -0.0004, autoResolveChance: 0.007 }, // Modifier is negative for reduction
+                blueprintCost: { energy: 10, rawData: 15, processingPower: 7 }
             },
             {
                 id: 'resource-harvester',
@@ -1648,7 +1713,8 @@
                 description: 'Slowly replenishes small amounts of Energy and Processing Power over time.',
                 isActive: false,
                 costPerTick: { rawData: 0.03 }, // Cost Raw Data to run
-                impactPerTick: { energy: 0.04, processingPower: 0.03 }
+                impactPerTick: { energy: 0.04, processingPower: 0.03 },
+                blueprintCost: { energy: 5, rawData: 20, processingPower: 4 }
             }
         ];
 
@@ -1667,6 +1733,7 @@
             updateProcessingPowerDisplay();
             updateButtonStates();
             updateRTMInfo();
+            renderBlueprintDetails(); // Update blueprint display
         }
 
         function updateStabilityDisplay() {
@@ -1849,43 +1916,7 @@
             });
         }
 
-        function renderProtocolTuningParameters(protocol) {
-            deployedProtocolParametersContainer.innerHTML = '';
-            if (!protocol) {
-                deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88; font-size: 1.4em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
-                deployedProtocolParametersContainer.style.display = 'block';
-                return;
-            }
-
-            protocol.tuningParams.forEach(param => {
-                const paramGroup = document.createElement('div');
-                paramGroup.classList.add('param-group');
-
-                const paramLabelDiv = document.createElement('div');
-                paramLabelDiv.classList.add('param-label');
-                paramLabelDiv.innerHTML = `${param.label}: <span id="${param.id}-value">${param.value}</span>% <span style="font-size: 1.1em; opacity: 0.8; color: var(--signal-array-text);">(Optimal: ${param.optimalRange.min}-${param.optimalRange.max}%)</span>`;
-
-                const rangeInput = document.createElement('input');
-                rangeInput.type = 'range';
-                rangeInput.id = param.id;
-                rangeInput.min = param.min;
-                rangeInput.max = param.max;
-                rangeInput.value = param.value;
-                
-                rangeInput.addEventListener('input', () => {
-                    document.getElementById(`${param.id}-value`).textContent = rangeInput.value;
-                    const p = activeProtocol.tuningParams.find(dp => dp.id === param.id);
-                    if (p) p.value = parseInt(rangeInput.value);
-                });
-
-                paramGroup.appendChild(paramLabelDiv);
-                paramGroup.appendChild(rangeInput);
-                deployedProtocolParametersContainer.appendChild(paramGroup);
-            });
-            deployedProtocolParametersContainer.style.display = 'flex';
-        }
-
-        // NEW: Render Sub-Protocols
+        // NEW: Render Sub-Protocols (for individual activation/deactivation)
         function renderSubProtocols() {
             subProtocolGrid.innerHTML = '';
             subProtocols.forEach(sp => {
@@ -1921,7 +1952,7 @@
             });
         }
 
-        // NEW: Render Active QELs
+        // NEW: Render Active QELs (for individual QELs)
         function renderActiveQELs() {
             activeQELLinksDisplay.innerHTML = '';
             if (activeQELs.length === 0) {
@@ -1948,46 +1979,104 @@
             });
         }
 
+        // NEW: Render Protocol Blueprint Details
+        function renderBlueprintDetails() {
+            if (!formulatedBlueprint) {
+                protocolBlueprintModule.style.display = 'none';
+                return;
+            }
+
+            protocolBlueprintModule.style.display = 'flex';
+            blueprintNameSpan.textContent = formulatedBlueprint.name;
+            blueprintIDSpan.textContent = formulatedBlueprint.id;
+
+            let totalEnergyCost = 0;
+            let totalRawDataCost = 0;
+            let totalProcessingPowerCost = 0;
+
+            blueprintComponentList.innerHTML = '';
+            if (formulatedBlueprint.components.length === 0) {
+                blueprintComponentList.innerHTML = '<p style="text-align: center; opacity: 0.7; font-size: 1.2em; margin-top: 15px;">Add QELs or Sub-Protocols to this blueprint.</p>';
+            } else {
+                formulatedBlueprint.components.forEach((comp, index) => {
+                    const compItem = document.createElement('div');
+                    compItem.classList.add('blueprint-component-item');
+                    compItem.setAttribute('data-index', index);
+                    
+                    let costHtml = '';
+                    if (comp.blueprintCost) {
+                        if (comp.blueprintCost.energy) totalEnergyCost += comp.blueprintCost.energy;
+                        if (comp.blueprintCost.rawData) totalRawDataCost += comp.blueprintCost.rawData;
+                        if (comp.blueprintCost.processingPower) totalProcessingPowerCost += comp.blueprintCost.processingPower;
+
+                        costHtml = ` (Cost: ${comp.blueprintCost.energy || 0}E, ${comp.blueprintCost.rawData || 0}RD, ${comp.blueprintCost.processingPower || 0}PP)`;
+                    }
+
+                    compItem.innerHTML = `
+                        <h5>${comp.name} (${comp.type})</h5>
+                        <p>${comp.description}</p>
+                        <p>Initial Cost:${costHtml}</p>
+                        <button class="remove-blueprint-component" data-index="${index}">×</button>
+                    `;
+                    blueprintComponentList.appendChild(compItem);
+                });
+            }
+
+            blueprintCostSummary.textContent = `Estimated Integration Cost: Energy ${totalEnergyCost}, Raw Data ${totalRawDataCost}, Processing Power ${totalProcessingPowerCost}`;
+
+            document.querySelectorAll('.remove-blueprint-component').forEach(button => {
+                button.onclick = (event) => removeBlueprintComponent(parseInt(event.target.dataset.index));
+            });
+        }
+
         function updateButtonStates() {
-            const FORMULATION_ENERGY_COST = 20; /* Increased */
-            const FORMULATION_PROCESSING_POWER_COST = 12; /* Increased */
-            const INTEGRATION_ENERGY_COST = 15; /* Increased */
-            const INTEGRATION_PROCESSING_POWER_COST = 9; /* Increased */
-            const TUNE_BASE_ENERGY_COST = 18; /* Increased */
-            const TUNE_BASE_PROCESSING_POWER_COST = 11; /* Increased */
-            const RECALIBRATE_ENERGY_COST = 40; /* Increased */
-            const RECALIBRATE_PROCESSING_POWER_COST = 20; /* Increased */
+            const QEL_ESTABLISH_ENERGY_COST = 25;
+            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20;
+            const RTM_PROCESSING_POWER_BASE_COST = 5;
+            const RECALIBRATE_ENERGY_COST = 40;
+            const RECALIBRATE_PROCESSING_POWER_COST = 20;
             
-            const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 70; /* Increased */
-            const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 30; /* Increased */
+            // Blueprint costs
+            let totalBlueprintEnergyCost = 0;
+            let totalBlueprintRawDataCost = 0;
+            let totalBlueprintProcessingPowerCost = 0;
 
-            const PREDICTIVE_ANALYSIS_ENERGY_COST = 10; /* Increased */
-            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 15; /* Increased */
+            if (formulatedBlueprint) {
+                formulatedBlueprint.components.forEach(comp => {
+                    if (comp.blueprintCost) {
+                        totalBlueprintEnergyCost += comp.blueprintCost.energy || 0;
+                        totalBlueprintRawDataCost += comp.blueprintCost.rawData || 0;
+                        totalBlueprintProcessingPowerCost += comp.blueprintCost.processingPower || 0;
+                    }
+                });
+            }
 
-            const QEL_ESTABLISH_ENERGY_COST = 25; // NEW
-            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20; // NEW
-            const RTM_PROCESSING_POWER_BASE_COST = 5; // NEW
+            // Blueprint Design button
+            // Now this button's cost is based on *creating* a new blueprint container, not its components.
+            // Let's set a minimal fixed cost for DESIGNING a blueprint.
+            const DESIGN_BLUEPRINT_ENERGY_COST = 10;
+            const DESIGN_BLUEPRINT_PP_COST = 8;
+            formulateProtocolButton.disabled = isProcessing || anomalyActive || formulatedBlueprint !== null || 
+                                              currentEnergy < DESIGN_BLUEPRINT_ENERGY_COST || currentProcessingPower < DESIGN_BLUEPRINT_PP_COST;
 
-
-            let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(100 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.9));
-            let totalProcessingPowerNeededForFormulation = formulatedProtocol ? formulatedProtocol.processingPowerCost : (Math.round(15 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.3));
-
-
-            formulateProtocolButton.disabled = isProcessing || anomalyActive || currentEnergy < FORMULATION_ENERGY_COST || currentRawData < totalRawDataNeededForFormulation || currentProcessingPower < totalProcessingPowerNeededForFormulation;
+            // Refine Blueprint button
+            refineProtocolButton.disabled = isProcessing || anomalyActive || !formulatedBlueprint || activeBlueprint !== null;
+            // Integrate Blueprint button
+            integrateProtocolButton.disabled = isProcessing || anomalyActive || !formulatedBlueprint || formulatedBlueprint.components.length === 0 || activeBlueprint !== null ||
+                                               currentEnergy < totalBlueprintEnergyCost || currentRawData < totalBlueprintRawDataCost || currentProcessingPower < totalBlueprintProcessingPowerCost;
             
-            refineProtocolButton.disabled = isProcessing || anomalyActive || !formulatedProtocol || activeProtocol !== null || currentRawData < REFINE_PROTOCOL_RAW_DATA_COST_BASE || currentProcessingPower < REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE;
+            // Tune Active Blueprint button
+            tuneActiveProtocolButton.disabled = isProcessing || anomalyActive || !activeBlueprint;
+            // Deactivate Blueprint button
+            deactivateProtocolButton.disabled = isProcessing || anomalyActive || !activeBlueprint;
             
-            integrateProtocolButton.disabled = isProcessing || anomalyActive || !formulatedProtocol || activeProtocol !== null || currentEnergy < INTEGRATION_ENERGY_COST || currentProcessingPower < INTEGRATION_PROCESSING_POWER_COST;
-            
-            tuneActiveProtocolButton.disabled = isProcessing || anomalyActive || !activeProtocol || currentEnergy < TUNE_BASE_ENERGY_COST || currentProcessingPower < TUNE_BASE_PROCESSING_POWER_COST;
-            
-            deactivateProtocolButton.disabled = isProcessing || anomalyActive || !activeProtocol;
-            
+            // Other existing buttons
             recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
-            
             establishQELButton.disabled = isProcessing || anomalyActive || currentEnergy < QEL_ESTABLISH_ENERGY_COST || currentProcessingPower < QEL_ESTABLISH_PROCESSING_POWER_COST;
 
-            runPredictiveAnalysisButton.disabled = isProcessing || anomalyActive || predictiveAnalysisActive || currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST; // NEW
+            const PREDICTIVE_ANALYSIS_ENERGY_COST = 10;
+            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 15;
+            runPredictiveAnalysisButton.disabled = isProcessing || anomalyActive || predictiveAnalysisActive || currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST;
 
             // RTM button logic
             const transmuteAmount = parseInt(transmuteAmountInput.value);
@@ -2006,7 +2095,7 @@
 
 
             // Critical state disables most buttons, except recalibrate if energy/PP permits
-            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentProcessingPower < 15 || (activeProtocol === null && currentRawData < totalRawDataNeededForFormulation / 2)) {
+            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentProcessingPower < 15) {
                 if (!isProcessing && !anomalyActive) {
                     formulateProtocolButton.disabled = true;
                     refineProtocolButton.disabled = true;
@@ -2014,7 +2103,7 @@
                     tuneActiveProtocolButton.disabled = true;
                     deactivateProtocolButton.disabled = true;
                     establishQELButton.disabled = true;
-                    runPredictiveAnalysisButton.disabled = true; // NEW
+                    runPredictiveAnalysisButton.disabled = true;
                     transmuteResourcesButton.disabled = true;
                 }
                 recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
@@ -2025,114 +2114,95 @@
         }
 
         // --- Core Game Logic ---
-        function getSignalArrayArchetype(calibratorValues) {
-            const sorted = [...signalArrayComponents].sort((a, b) => b.value - a.value);
-            const topCalibrator = sorted[0];
 
-            if (topCalibrator.value > 80) { /* Higher threshold */
-                if (topCalibrator.id === 'frequency-band') return 'Spectral Resonance (Hyper-Gain)';
-                if (topCalibrator.id === 'amplitude-gain') return 'Power Field (Quantum-Focused)';
-                if (topCalibrator.id === 'signal-coherence') return 'Coherent Stream (Entangled)';
-            }
-            if (topCalibrator.value > 60) { /* Higher threshold */
-                 if (topCalibrator.id === 'frequency-band') return 'Spectral Resonance';
-                if (topCalibrator.id === 'amplitude-gain') return 'Power Field';
-                if (topCalibrator.id === 'signal-coherence') return 'Coherent Stream';
-            }
-            return 'General Purpose Signal'; // Default for lower values
-        }
-
-        function generateProtocolName(archetype) {
-            const prefixes = {
-                'Spectral Resonance': ['Dynamic', 'Reactive', 'Flux-Driven', 'Modular', 'Quantum', 'Harmonic', 'Adaptive'],
-                'Spectral Resonance (Hyper-Gain)': ['Hyper-Adaptive', 'Cascading Flux', 'Quantum Resonance', 'Dimensional Shifting', 'Aetheric', 'Singularity'],
-                'Power Field': ['Core', 'Integrated', 'Centralized', 'Distributed', 'Neural', 'Kinetic', 'Relay'],
-                'Power Field (Quantum-Focused)': ['Omni-Nexus', 'Cognitive Sync', 'Distributed Coherence', 'Emergent Topology', 'Energetic', 'Gravimetric'],
-                'Coherent Stream': ['Chronal', 'Phase-Locked', 'Synchronous', 'Asynchronous', 'Event-Driven', 'Unified', 'Temporal'],
-                'Coherent Stream (Entangled)': ['Chrono-Harmonic', 'Event-Horizon', 'Fractal Timing', 'Causal Loop', 'Convergent', 'Inertial'],
-                'General Purpose Signal': ['Basic', 'Universal', 'Standard', 'Generic', 'Foundation', 'Broadband', 'Auxiliary']
+        // NEW: Function to design a new empty blueprint
+        function designNewBlueprint() {
+            const blueprintId = 'BPN-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            formulatedBlueprint = {
+                id: blueprintId,
+                name: 'New Composite Protocol',
+                components: [], // Array of QELs and Sub-Protocols
+                archetype: 'Composite', // All blueprints are composite
+                complexity: 0,
+                stabilityRisk: 0,
+                impact: { stability: 0, dataFlow: 0, processingPower: 0 },
+                description: 'A custom blueprint for modular protocol integration.'
             };
-            const suffixes = ['Protocol', 'System', 'Link', 'Matrix', 'Engine', 'Framework', 'Nexus', 'Relay', 'Directive', 'Conduit'];
-
-            const selectedPrefixes = prefixes[archetype] || prefixes['General Purpose Signal'];
-            return `${selectedPrefixes[Math.floor(Math.random() * selectedPrefixes.length)]} ${archetype.replace(/\s*\(.*\)/, '')} ${suffixes[Math.floor(Math.random() * suffixes.length)]}`; // Remove archetype modifiers for suffix
+            logDataStreamEntry(`New Protocol Blueprint (${formulatedBlueprint.name}) created. Add components!`, 'optimal');
+            systemStatusTextSpan.textContent = 'BLUEPRINT DESIGN: Awaiting components.';
+            renderBlueprintDetails();
         }
 
-        function generateProtocolDescription(protocol) {
-            let desc = `A dynamically formulated ${protocol.archetype} protocol (${protocol.id}). `;
-            if (protocol.complexity > 80) desc += 'Highly intricate, designed for advanced system states and demanding precise calibration. '; /* Higher threshold */
-            else if (protocol.complexity < 30) desc += 'Straightforward structure, offers baseline adjustments and robust performance. '; /* Lower threshold */
-
-            if (protocol.stabilityRisk > 70) desc += 'Deployment carries a significant inherent stability risk, requiring careful monitoring and expert tuning. '; /* Higher threshold */
-            else if (protocol.stabilityRisk < 20) desc += 'Low inherent stability risk, suitable for exploratory integration and stable operations. '; /* Lower threshold */
-
-            desc += `Estimated Impact: Stability ${protocol.impact.stability > 0 ? '+' : ''}${protocol.impact.stability}%, Data Flow ${protocol.impact.dataFlow > 0 ? '+' : ''}${protocol.impact.dataFlow}%, Processing Power ${protocol.impact.processingPower > 0 ? '+' : ''}${protocol.impact.processingPower}%. Raw Data Cost: ${protocol.rawDataCost} packets. Processing Power Cost: ${protocol.processingPowerCost} GFLOPS/s.`;
-            return desc;
-        }
-
-        function formulateNewProtocol() {
-            const FORMULATION_RAW_DATA_BASE_COST = 100; /* Increased */
-            const FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT = 1.0; /* Increased */
-            const FORMULATION_PROCESSING_POWER_BASE_COST = 15; /* Increased */
-            const FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT = 0.4; /* Increased */
-
-            const calibratorValues = signalArrayComponents.map(c => c.value);
-            const avgCalibratorValue = calibratorValues.reduce((sum, val) => sum + val, 0) / signalArrayComponents.length;
-            const calibratorVariance = calibratorValues.reduce((sum, val) => sum + Math.pow(val - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
-
-            const archetype = getSignalArrayArchetype(signalArrayComponents);
-            const protocolName = generateProtocolName(archetype);
-            const protocolId = 'PRT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
-
-            const complexity = Math.round(avgCalibratorValue * 1.05 + calibratorVariance * 0.3 + Math.random() * 60); /* Slightly higher complexity range, more affected by variance */
-            
-            const stabilityRisk = Math.round(calibratorVariance * 1.3 + complexity * 0.45 + Math.random() * 50); /* Increased factors */
-
-            const rawDataCost = Math.round(FORMULATION_RAW_DATA_BASE_COST + complexity * FORMULATION_RAW_DATA_PER_COMPLEXITY_UNIT + Math.random() * 80); /* Increased costs */
-
-            const processingPowerCost = Math.round(FORMULATION_PROCESSING_POWER_BASE_COST + complexity * FORMULATION_PROCESSING_POWER_PER_COMPLEXITY_UNIT + Math.random() * 15); /* Increased costs */
-
-
-            const impactStability = Math.round(25 - stabilityRisk / 5 + (complexity / 10) + Math.random() * 15 - 8); // Can be negative, higher potential swings
-            const impactDataFlow = Math.round(avgCalibratorValue / 5 + complexity / 10 + Math.random() * 16 - 10); /* Increased factors */
-            const impactProcessingPower = Math.round(avgCalibratorValue / 8 - complexity / 8 + Math.random() * 12 - 7); /* Increased factors */
-
-            const numTuningParams = Math.min(10, 5 + Math.floor(complexity / 15)); // Up to 10 params, minimum 5
-            const tuningParamNames = ['Coherence Index', 'Flow Recursion', 'Synaptic Balance', 'Integrity Ratio', 'Phase Alignment', 'Vector Damping', 'Grid Density', 'Temporal Alignment', 'Resonance Amplitude', 'Nexus Flux', 'Pattern Density', 'Signature Attenuation', 'Harmonic Divergence', 'Entropy Buffer', 'Quantum Field Index', 'Neural Interlink', 'Sub-Harmonic dampener', 'Causal Loop Adjust', 'Flux Gradient Offset', 'Temporal Shift Factor', 'Dimensional Offset', 'Chronal Cascade'];
-
-            const tuningParams = [];
-            for (let i = 0; i < numTuningParams; i++) {
-                const paramId = `tun-${protocolId}-${i}`;
-                const baseValue = Math.round(avgCalibratorValue * (0.5 + i * 0.06) + Math.random() * 60 - 40);
-                const optimalRangeWidth = Math.max(8, 45 - complexity / 1.0); /* Wider optimal range for complex protocols */
-                const optimalMin = Math.max(0, baseValue - Math.floor(optimalRangeWidth / 2));
-                const optimalMax = Math.min(100, baseValue + Math.ceil(optimalRangeWidth / 2));
-                const initialValue = Math.round((optimalMin + optimalMax) / 2);
-                
-                tuningParams.push({
-                    id: paramId,
-                    label: tuningParamNames[i % tuningParamNames.length],
-                    min: 0,
-                    max: 100,
-                    value: initialValue,
-                    optimalRange: { min: optimalMin, max: optimalMax }
-                });
+        // NEW: Function to add a QEL to the blueprint
+        function addQELToBlueprint(archetypeId) {
+            if (!formulatedBlueprint) {
+                logDataStreamEntry('No active blueprint to add QEL to. Design one first!', 'warning');
+                return;
             }
+            const qelArchetype = qelArchetypes.find(q => q.id === archetypeId);
+            if (qelArchetype) {
+                formulatedBlueprint.components.push({ ...qelArchetype, type: 'QEL' });
+                logDataStreamEntry(`Added QEL "${qelArchetype.name}" to blueprint.`, 'info');
+                recalculateBlueprintStats();
+                renderBlueprintDetails();
+            }
+        }
 
-            const newProtocol = {
-                id: protocolId,
-                name: protocolName,
-                archetype: archetype,
-                complexity: complexity,
-                stabilityRisk: stabilityRisk,
-                rawDataCost: rawDataCost,
-                processingPowerCost: processingPowerCost,
-                impact: { stability: impactStability, dataFlow: impactDataFlow, processingPower: impactProcessingPower },
-                tuningParams: tuningParams,
-                lastTuningScore: 0
-            };
-            newProtocol.description = generateProtocolDescription(newProtocol);
-            return newProtocol;
+        // NEW: Function to add a Sub-Protocol to the blueprint
+        function addSubProtocolToBlueprint(subProtocolId) {
+            if (!formulatedBlueprint) {
+                logDataStreamEntry('No active blueprint to add Sub-Protocol to. Design one first!', 'warning');
+                return;
+            }
+            const subProto = subProtocols.find(s => s.id === subProtocolId);
+            if (subProto) {
+                formulatedBlueprint.components.push({ ...subProto, type: 'Sub-Protocol' });
+                logDataStreamEntry(`Added Sub-Protocol "${subProto.name}" to blueprint.`, 'info');
+                recalculateBlueprintStats();
+                renderBlueprintDetails();
+            }
+        }
+
+        // NEW: Function to remove a component from the blueprint
+        function removeBlueprintComponent(index) {
+            if (formulatedBlueprint && formulatedBlueprint.components[index]) {
+                const removedComp = formulatedBlueprint.components.splice(index, 1);
+                logDataStreamEntry(`Removed "${removedComp[0].name}" from blueprint.`, 'info');
+                recalculateBlueprintStats();
+                renderBlueprintDetails();
+            }
+        }
+
+        // NEW: Recalculate Blueprint's overall stats (complexity, risk, impacts)
+        function recalculateBlueprintStats() {
+            if (!formulatedBlueprint) return;
+
+            let totalComplexity = 0;
+            let totalStabilityRisk = 0;
+            let totalImpactStability = 0;
+            let totalImpactDataFlow = 0;
+            let totalImpactProcessingPower = 0;
+
+            formulatedBlueprint.components.forEach(comp => {
+                if (comp.type === 'QEL') {
+                    // QELs contribute to complexity, stability risk based on their archetype
+                    totalComplexity += 10; // Each QEL is a unit of complexity
+                    totalStabilityRisk += comp.stabilityImpact * 3; // QEL stability impact
+                } else if (comp.type === 'Sub-Protocol') {
+                    // Sub-Protocols also contribute
+                    totalComplexity += 8;
+                    // Sub-protocols can have stability impact, or modify existing QEL impacts
+                    if (comp.impactPerTick && comp.impactPerTick.stability) {
+                        totalStabilityRisk -= comp.impactPerTick.stability * 10; // Negative impact is good
+                    }
+                }
+            });
+
+            // Adjust ranges and add some randomness
+            formulatedBlueprint.complexity = Math.max(0, totalComplexity + Math.round(Math.random() * 10));
+            formulatedBlueprint.stabilityRisk = Math.max(0, totalStabilityRisk + Math.round(Math.random() * 5));
+            // For now, overall blueprint impacts will be derived when integrating.
+            // This could be made more complex, e.g., synergistic impacts.
         }
 
         // --- Anomaly System ---
@@ -2236,7 +2306,7 @@
             currentAnomaly = null;
             anomalyAlertOverlay.classList.remove('active');
             logDataStreamEntry(currentAnomaly ? currentAnomaly.resolutionMessage : 'Anomaly resolved.', 'optimal');
-            systemStatusTextSpan.textContent = `System Idle. Configure Signal Array and establish a Quantum Entanglement Link for Raw Data.`;
+            systemStatusTextSpan.textContent = `System Idle. Design a Protocol Blueprint.`;
             updateButtonStates();
         }
 
@@ -2277,29 +2347,50 @@
                 let predictedProcessingPowerChange = 0;
                 let predictionRisk = 'Low';
 
-                if (formulatedProtocol) {
-                    // If a protocol is formulated, predict its impact
-                    const p = formulatedProtocol;
-                    predictedStabilityChange = p.impact.stability + (Math.random() * 8 - 4); // Add some variance
-                    predictedDataFlowChange = p.impact.dataFlow + (Math.random() * 8 - 4);
-                    predictedProcessingPowerChange = p.impact.processingPower + (Math.random() * 6 - 3);
+                if (formulatedBlueprint) {
+                    // If a blueprint is formulated, predict its integration impact
+                    let tempStabilityImpact = 0;
+                    let tempDataFlowImpact = 0;
+                    let tempProcessingPowerImpact = 0;
+                    let tempComplexity = 0;
 
-                    if (p.stabilityRisk > 65 || p.complexity > 85) { /* Higher thresholds */
+                    formulatedBlueprint.components.forEach(comp => {
+                        if (comp.type === 'QEL') {
+                            tempStabilityImpact += comp.stabilityImpact;
+                            if (comp.resource === 'dataFlow') tempDataFlowImpact += comp.baseGain;
+                            if (comp.resource === 'processingPower') tempProcessingPowerImpact += comp.baseGain;
+                            tempComplexity += 10;
+                        } else if (comp.type === 'Sub-Protocol') {
+                             if (comp.impactPerTick && comp.impactPerTick.stability) {
+                                tempStabilityImpact -= comp.impactPerTick.stability * 10;
+                            }
+                            if (comp.impactPerTick && comp.impactPerTick.processingPowerQELBoost) {
+                                tempProcessingPowerImpact += 5; // Simulating a boost
+                            }
+                            tempComplexity += 8;
+                        }
+                    });
+
+                    predictedStabilityChange = tempStabilityImpact + (Math.random() * 8 - 4);
+                    predictedDataFlowChange = tempDataFlowImpact + (Math.random() * 8 - 4);
+                    predictedProcessingPowerChange = tempProcessingPowerImpact + (Math.random() * 6 - 3);
+
+                    if (tempComplexity > 80 || tempStabilityImpact > 15) {
                         predictionRisk = 'High';
-                    } else if (p.stabilityRisk > 35 || p.complexity > 55) { /* Higher thresholds */
+                    } else if (tempComplexity > 40 || tempStabilityImpact > 5) {
                         predictionRisk = 'Medium';
                     }
+
                 } else {
-                    // If no protocol, analyze current QEL configuration (e.g., if recalibrating or QEL attempt)
+                    // If no blueprint, analyze current system state or recalibration impact
                     const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
                     const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
 
-                    // Simplified prediction for current configuration - more stable if values are balanced, less stable if highly varied
                     predictedStabilityChange = -6 + (avgCalibratorValue / 18) - (calibratorVariance / 9) + (Math.random() * 5 - 2.5);
                     predictedDataFlowChange = (avgCalibratorValue / 13) - 6 + (Math.random() * 5 - 2.5);
                     predictedProcessingPowerChange = (avgCalibratorValue / 22) - 3 + (Math.random() * 4 - 2);
 
-                    if (calibratorVariance > 35 || avgCalibratorValue < 25) { /* Higher thresholds */
+                    if (calibratorVariance > 35 || avgCalibratorValue < 25) {
                         predictionRisk = 'Elevated';
                     }
                 }
@@ -2325,12 +2416,18 @@
             }, 3000); // Analysis takes 3 seconds to compute
         }
 
-        // --- NEW: Sub-Protocol Augmentation Logic ---
+        // --- NEW: Sub-Protocol Augmentation Logic (for individual activation) ---
         function toggleSubProtocol(id) {
             if (isProcessing || anomalyActive) return;
 
             const sp = subProtocols.find(p => p.id === id);
             if (!sp) return;
+
+            // Only allow toggling if no blueprint is active
+            if (activeBlueprint) {
+                logDataStreamEntry('Cannot toggle individual sub-protocols while a blueprint is active.', 'warning');
+                return;
+            }
 
             sp.isActive = !sp.isActive;
             const card = document.getElementById(`sub-protocol-${sp.id}`);
@@ -2341,12 +2438,18 @@
                 card.classList.remove('active');
                 logDataStreamEntry(`Sub-Protocol "${sp.name}" deactivated.`, 'info');
             }
-            updateButtonStates(); // May affect resource states indirectly
+            updateButtonStates();
         }
 
-        // --- NEW: Quantum Entanglement Link (QEL) Logic ---
+        // --- NEW: Quantum Entanglement Link (QEL) Logic (for individual establishment) ---
         async function establishQEL() {
             if (isProcessing || anomalyActive) return;
+
+            // Only allow individual QEL establishment if no blueprint is active
+            if (activeBlueprint) {
+                logDataStreamEntry('Cannot establish individual QELs while a blueprint is active. Deactivate blueprint first.', 'warning');
+                return;
+            }
 
             isProcessing = true;
             logDataStreamEntry('Attempting Quantum Entanglement Link establishment...', 'processing');
@@ -2409,7 +2512,8 @@
                     gainPerTick: effectiveGain,
                     energyDrain: effectiveEnergyDrain,
                     ppDrain: effectivePPDrain,
-                    stabilityImpact: effectiveStabilityImpact // Initial stability impact
+                    stabilityImpact: effectiveStabilityImpact, // Initial stability impact
+                    origin: 'individual' // Mark as individually established
                 };
                 activeQELs.push(newQEL);
                 currentSystemStability += newQEL.stabilityImpact; // One-time boost/drain upon establishment
@@ -2443,6 +2547,10 @@
             const qelIndex = activeQELs.findIndex(q => q.id === id);
             if (qelIndex > -1) {
                 const deactivatedQEL = activeQELs[qelIndex];
+                if (deactivatedQEL.origin === 'blueprint' && activeBlueprint) {
+                    logDataStreamEntry('Cannot deactivate blueprint-integrated QEL individually. Deactivate the blueprint.', 'warning');
+                    return;
+                }
                 activeQELs.splice(qelIndex, 1);
                 currentSystemStability -= (deactivatedQEL.stabilityImpact / 2); // Small penalty for deactivation
 
@@ -2566,150 +2674,177 @@
 
         // --- Event Listeners ---
         formulateProtocolButton.addEventListener('click', async () => {
-            isProcessing = true;
-            logDataStreamEntry('Initiating protocol formulation sequence...', 'processing');
-            systemStatusTextSpan.textContent = 'PROTOCOL FORMULATION: In progress...';
-            updateButtonStates();
+            if (isProcessing || anomalyActive || formulatedBlueprint !== null) return;
 
-            await new Promise(resolve => setTimeout(resolve, 3500)); // Simulate processing
+            const DESIGN_BLUEPRINT_ENERGY_COST = 10;
+            const DESIGN_BLUEPRINT_PP_COST = 8;
 
-            const FORMULATION_ENERGY_COST = 20;
-            const FORMULATION_PROCESSING_POWER_COST = 12;
-            let totalRawDataNeededForFormulation = formulatedProtocol ? formulatedProtocol.rawDataCost : (Math.round(100 + signalArrayComponents.reduce((sum, r) => sum + r.value, 0) / signalArrayComponents.length * 0.9));
-
-            if (currentEnergy < FORMULATION_ENERGY_COST || currentRawData < totalRawDataNeededForFormulation || currentProcessingPower < FORMULATION_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient resources to formulate protocol. Aborting.', 'critical');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Formulation aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
+            if (currentEnergy < DESIGN_BLUEPRINT_ENERGY_COST || currentProcessingPower < DESIGN_BLUEPRINT_PP_COST) {
+                logDataStreamEntry('Insufficient Energy or Processing Power to design a new blueprint.', 'warning');
                 return;
             }
 
-            currentEnergy -= FORMULATION_ENERGY_COST;
-            currentRawData -= totalRawDataNeededForFormulation;
-            currentProcessingPower -= FORMULATION_PROCESSING_POWER_COST;
+            isProcessing = true;
+            logDataStreamEntry('Initiating Blueprint Design sequence...', 'processing');
+            systemStatusTextSpan.textContent = 'BLUEPRINT DESIGN: Initializing canvas...';
+            updateButtonStates();
 
-            formulatedProtocol = formulateNewProtocol();
-            formulatedProtocolNameSpan.textContent = formulatedProtocol.name;
-            formulatedProtocolIDSpan.textContent = formulatedProtocol.id;
-            formulatedProtocolArchetypeSpan.textContent = formulatedProtocol.archetype;
-            formulatedProtocolComplexitySpan.textContent = `${Math.round(formulatedProtocol.complexity)}%`;
-            formulatedProtocolStabilityRiskSpan.textContent = `${Math.round(formulatedProtocol.stabilityRisk)}%`;
-            formulatedProtocolRawDataCostSpan.textContent = `${formulatedProtocol.rawDataCost} packets`;
-            formulatedProtocolProcessingPowerCostSpan.textContent = `${formulatedProtocol.processingPowerCost} GFLOPS/s`;
-            formulatedProtocolDescription.textContent = formulatedProtocol.description;
-            formulatedProtocolDetailsContainer.style.display = 'flex';
-            
-            logDataStreamEntry(`Protocol "${formulatedProtocol.name}" formulated. Ready for refinement or integration.`, 'optimal');
-            systemStatusTextSpan.textContent = 'PROTOCOL FORMULATED: Awaiting integration.';
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            currentEnergy -= DESIGN_BLUEPRINT_ENERGY_COST;
+            currentProcessingPower -= DESIGN_BLUEPRINT_PP_COST;
+
+            designNewBlueprint();
             isProcessing = false;
             updateAllDisplays();
         });
 
         refineProtocolButton.addEventListener('click', async () => {
-            if (!formulatedProtocol) return;
+            if (!formulatedBlueprint) return;
 
             isProcessing = true;
-            logDataStreamEntry('Initiating protocol refinement sequence...', 'processing');
-            systemStatusTextSpan.textContent = 'PROTOCOL REFINEMENT: In progress...';
+            logDataStreamEntry('Initiating blueprint refinement...', 'processing');
+            systemStatusTextSpan.textContent = 'BLUEPRINT REFINEMENT: Optimizing components...';
             updateButtonStates();
 
-            await new Promise(resolve => setTimeout(resolve, 4000)); /* Longer refinement time */
+            await new Promise(resolve => setTimeout(resolve, 3000));
 
-            const REFINE_PROTOCOL_RAW_DATA_COST_BASE = 70;
-            const REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE = 30;
-
-            if (currentRawData < REFINE_PROTOCOL_RAW_DATA_COST_BASE || currentProcessingPower < REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE) {
-                logDataStreamEntry('Insufficient Raw Data or Processing Power for refinement. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Refinement aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
-                return;
+            // Example refinement: Add a random QEL or sub-protocol if blueprint is small, or slightly reduce cost
+            if (formulatedBlueprint.components.length < 3) {
+                const randomType = Math.random() < 0.5 ? 'QEL' : 'Sub-Protocol';
+                if (randomType === 'QEL') {
+                    const qelArchetype = qelArchetypes[Math.floor(Math.random() * qelArchetypes.length)];
+                    formulatedBlueprint.components.push({ ...qelArchetype, type: 'QEL' });
+                    logDataStreamEntry(`Refinement added a "${qelArchetype.name}" QEL to the blueprint.`, 'info');
+                } else {
+                    const subProto = subProtocols[Math.floor(Math.random() * subProtocols.length)];
+                    formulatedBlueprint.components.push({ ...subProto, type: 'Sub-Protocol' });
+                    logDataStreamEntry(`Refinement added a "${subProto.name}" Sub-Protocol to the blueprint.`, 'info');
+                }
+            } else {
+                // For larger blueprints, simulate cost reduction
+                formulatedBlueprint.components.forEach(comp => {
+                    if (comp.blueprintCost) {
+                        comp.blueprintCost.energy = Math.max(0, comp.blueprintCost.energy - (Math.random() * 2));
+                        comp.blueprintCost.rawData = Math.max(0, comp.blueprintCost.rawData - (Math.random() * 5));
+                        comp.blueprintCost.processingPower = Math.max(0, comp.blueprintCost.processingPower - (Math.random() * 1));
+                    }
+                });
+                logDataStreamEntry('Blueprint component costs slightly optimized.', 'info');
             }
-
-            currentRawData -= REFINE_PROTOCOL_RAW_DATA_COST_BASE;
-            currentProcessingPower -= REFINE_PROTOCOL_PROCESSING_POWER_COST_BASE;
-
-            // Apply refinement effects
-            formulatedProtocol.complexity = Math.max(10, formulatedProtocol.complexity + (Math.random() * 12 - 6)); // Complexity can change
-            formulatedProtocol.stabilityRisk = Math.max(0, formulatedProtocol.stabilityRisk - (Math.random() * 12 + 7)); // Reduce risk, more aggressively
-            
-            // Adjust impacts slightly, generally positive with refinement
-            formulatedProtocol.impact.stability = Math.round(formulatedProtocol.impact.stability * (1 + Math.random() * 0.18)); // Increased positive potential
-            formulatedProtocol.impact.dataFlow = Math.round(formulatedProtocol.impact.dataFlow * (1 + Math.random() * 0.18));
-            formulatedProtocol.impact.processingPower = Math.round(formulatedProtocol.impact.processingPower * (1 + Math.random() * 0.12));
-
-            formulatedProtocol.description = generateProtocolDescription(formulatedProtocol); // Update description
-            
-            formulatedProtocolComplexitySpan.textContent = `${Math.round(formulatedProtocol.complexity)}%`;
-            formulatedProtocolStabilityRiskSpan.textContent = `${Math.round(formulatedProtocol.stabilityRisk)}%`;
-            formulatedProtocolDescription.textContent = formulatedProtocol.description;
-
-            logDataStreamEntry(`Protocol "${formulatedProtocol.name}" refined. Stability risk reduced, potential impacts adjusted.`, 'optimal');
-            systemStatusTextSpan.textContent = 'PROTOCOL REFINED: Ready for integration.';
+            recalculateBlueprintStats();
+            logDataStreamEntry('Blueprint refinement complete.', 'optimal');
             isProcessing = false;
             updateAllDisplays();
         });
 
         integrateProtocolButton.addEventListener('click', async () => {
-            if (!formulatedProtocol) return;
+            if (!formulatedBlueprint || formulatedBlueprint.components.length === 0 || activeBlueprint !== null) return;
 
-            isProcessing = true;
-            logDataStreamEntry('Initiating protocol integration sequence...', 'processing');
-            systemStatusTextSpan.textContent = 'PROTOCOL INTEGRATION: Verifying parameters...';
-            updateButtonStates();
+            // Calculate actual costs
+            let totalEnergyCost = 0;
+            let totalRawDataCost = 0;
+            let totalProcessingPowerCost = 0;
+            formulatedBlueprint.components.forEach(comp => {
+                if (comp.blueprintCost) {
+                    totalEnergyCost += comp.blueprintCost.energy || 0;
+                    totalRawDataCost += comp.blueprintCost.rawData || 0;
+                    totalProcessingPowerCost += comp.blueprintCost.processingPower || 0;
+                }
+            });
 
-            await new Promise(resolve => setTimeout(resolve, 4500)); /* Longer integration time */
-
-            const INTEGRATION_ENERGY_COST = 15;
-            const INTEGRATION_PROCESSING_POWER_COST = 9;
-
-            if (currentEnergy < INTEGRATION_ENERGY_COST || currentProcessingPower < INTEGRATION_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient Energy or Processing Power for integration. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Integration aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
+            if (currentEnergy < totalEnergyCost || currentRawData < totalRawDataCost || currentProcessingPower < totalProcessingPowerCost) {
+                logDataStreamEntry('Insufficient resources to integrate blueprint. Aborting.', 'warning');
+                systemStatusTextSpan.textContent = 'BLUEPRINT INTEGRATION: Aborted (low resources).';
                 return;
             }
 
-            currentEnergy -= INTEGRATION_ENERGY_COST;
-            currentProcessingPower -= INTEGRATION_PROCESSING_POWER_COST;
+            isProcessing = true;
+            logDataStreamEntry(`Initiating integration of Blueprint "${formulatedBlueprint.name}"...`, 'processing');
+            systemStatusTextSpan.textContent = 'BLUEPRINT INTEGRATION: Deploying components...';
+            updateButtonStates();
 
-            activeProtocol = formulatedProtocol;
-            formulatedProtocol = null; // Clear formulated protocol after integration
-            formulatedProtocolDetailsContainer.style.display = 'none';
+            await new Promise(resolve => setTimeout(resolve, 5000)); // Longer integration time
 
-            activeProtocolNameSpan.textContent = activeProtocol.name;
-            activeProtocolIDSpan.textContent = activeProtocol.id;
-            systemStatusTextSpan.textContent = `PROTOCOL ACTIVE: "${activeProtocol.name}" deployed.`;
+            currentEnergy -= totalEnergyCost;
+            currentRawData -= totalRawDataCost;
+            currentProcessingPower -= totalProcessingPowerCost;
 
-            currentSystemStability += activeProtocol.impact.stability;
-            currentDataFlow += activeProtocol.impact.dataFlow;
-            currentProcessingPower += activeProtocol.impact.processingPower;
+            let successfulComponents = 0;
+            let totalStabilityGain = 0; // Total immediate stability impact from integrated components
 
-            renderProtocolTuningParameters(activeProtocol);
+            // Iterate through blueprint components and activate them
+            for (const comp of formulatedBlueprint.components) {
+                if (comp.type === 'QEL') {
+                    // Simulate QEL establishment for blueprint. Success chance might be simplified here.
+                    if (Math.random() < 0.75) { // 75% success chance for blueprint QELs
+                        let effectiveGain = comp.baseGain * (1 + (Math.random() * 0.1));
+                        const newQEL = {
+                            id: nextQELId++,
+                            name: comp.name,
+                            resource: comp.resource,
+                            gainPerTick: effectiveGain,
+                            energyDrain: comp.energyDrain,
+                            ppDrain: comp.ppDrain,
+                            stabilityImpact: comp.stabilityImpact,
+                            origin: 'blueprint', // Mark as blueprint-integrated
+                            blueprintId: formulatedBlueprint.id // Link to blueprint
+                        };
+                        activeQELs.push(newQEL);
+                        totalStabilityGain += newQEL.stabilityImpact;
+                        successfulComponents++;
+                        logDataStreamEntry(`Integrated QEL: ${comp.name}`, 'info');
+                    } else {
+                        logDataStreamEntry(`Failed to establish QEL "${comp.name}" during integration.`, 'warning');
+                        currentSystemStability -= 5; // Penalty for failed QEL in blueprint
+                    }
+                } else if (comp.type === 'Sub-Protocol') {
+                    // Activate sub-protocol, ensuring it's not active already
+                    const existingSubProto = subProtocols.find(s => s.id === comp.id);
+                    if (existingSubProto && !existingSubProto.isActive) {
+                        existingSubProto.isActive = true;
+                        successfulComponents++;
+                        logDataStreamEntry(`Integrated Sub-Protocol: ${comp.name}`, 'info');
+                    } else if (existingSubProto && existingSubProto.isActive) {
+                        logDataStreamEntry(`Sub-Protocol "${comp.name}" was already active. Skipping.`, 'info');
+                    }
+                }
+            }
 
-            logDataStreamEntry(`Protocol "${activeProtocol.name}" successfully integrated. System parameters adjusted.`, 'optimal');
+            currentSystemStability += totalStabilityGain; // Apply total immediate stability gain from successful QELs
+
+            activeBlueprint = formulatedBlueprint; // Set the blueprint as active
+            formulatedBlueprint = null; // Clear the formulated blueprint
+            
+            // Update UI for active blueprint
+            activeProtocolNameSpan.textContent = activeBlueprint.name;
+            activeProtocolIDSpan.textContent = activeBlueprint.id;
+            systemStatusTextSpan.textContent = `BLUEPRINT ACTIVE: "${activeBlueprint.name}" deployed with ${successfulComponents} components.`;
+
+            logDataStreamEntry(`Blueprint "${activeBlueprint.name}" fully integrated. ${successfulComponents} components deployed.`, 'optimal');
             isProcessing = false;
             updateAllDisplays();
+            renderActiveQELs(); // Re-render to show blueprint QELs
+            renderSubProtocols(); // Re-render to show blueprint sub-protocols
         });
 
         tuneActiveProtocolButton.addEventListener('click', async () => {
-            if (!activeProtocol) return;
+            if (!activeBlueprint) return;
 
             isProcessing = true;
-            logDataStreamEntry('Initiating active protocol tuning...', 'processing');
-            systemStatusTextSpan.textContent = 'ACTIVE PROTOCOL TUNING: Analyzing parameters...';
+            logDataStreamEntry('Initiating active blueprint tuning...', 'processing');
+            systemStatusTextSpan.textContent = 'ACTIVE BLUEPRINT TUNING: Optimizing active components...';
             updateButtonStates();
 
-            await new Promise(resolve => setTimeout(resolve, 3500)); /* Longer tune time */
+            await new Promise(resolve => setTimeout(resolve, 3500));
 
+            // Tuning costs
             const TUNE_BASE_ENERGY_COST = 18;
             const TUNE_BASE_PROCESSING_POWER_COST = 11;
 
             if (currentEnergy < TUNE_BASE_ENERGY_COST || currentProcessingPower < TUNE_BASE_PROCESSING_POWER_COST) {
                 logDataStreamEntry('Insufficient Energy or Processing Power for tuning. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'PROTOCOL ACTIVE: Tuning aborted (low resources).';
+                systemStatusTextSpan.textContent = 'BLUEPRINT ACTIVE: Tuning aborted (low resources).';
                 isProcessing = false;
                 updateButtonStates();
                 return;
@@ -2718,81 +2853,72 @@
             currentEnergy -= TUNE_BASE_ENERGY_COST;
             currentProcessingPower -= TUNE_BASE_PROCESSING_POWER_COST;
 
-            let totalOptimalScore = 0;
-            let currentScore = 0;
-            activeProtocol.tuningParams.forEach(param => {
-                const diffFromMin = Math.abs(param.value - param.optimalRange.min);
-                const diffFromMax = Math.abs(param.value - param.optimalRange.max);
-                const optimalRangeLength = param.optimalRange.max - param.optimalRange.min;
+            let tuningImpactStability = 0;
+            let tuningImpactDataFlow = 0;
+            let tuningImpactProcessingPower = 0;
 
-                let scoreForParam = 0;
-                if (param.value >= param.optimalRange.min && param.value <= param.optimalRange.max) {
-                    scoreForParam = 100; // Perfect score if within range
-                } else {
-                    const dist = Math.min(diffFromMin, diffFromMax);
-                    scoreForParam = Math.max(0, 100 - (dist / (param.max / 1.8)) * 100); // Scale down score based on distance from optimal range, slightly more forgiving
-                }
-                currentScore += scoreForParam;
-                totalOptimalScore += 100; // Each parameter contributes 100 to optimal
+            // Apply tuning to all currently active QELs from this blueprint
+            activeQELs.filter(q => q.origin === 'blueprint' && q.blueprintId === activeBlueprint.id).forEach(qel => {
+                const tuningBonus = Math.random() * 0.1; // Small random boost
+                qel.gainPerTick *= (1 + tuningBonus);
+                qel.energyDrain *= (1 - tuningBonus * 0.5); // Reduce drain slightly
+                qel.ppDrain *= (1 - tuningBonus * 0.5);
+                tuningImpactStability += tuningBonus * 2; // Stability boost from better QEL performance
             });
 
-            const overallTuningScore = (currentScore / totalOptimalScore) * 100;
-            activeProtocol.lastTuningScore = overallTuningScore;
+            // Apply tuning to all currently active Sub-Protocols from this blueprint
+            subProtocols.filter(sp => sp.isActive && activeBlueprint.components.some(comp => comp.id === sp.id && comp.type === 'Sub-Protocol')).forEach(sp => {
+                if (sp.impactPerTick && sp.impactPerTick.stability) sp.impactPerTick.stability *= (1 + Math.random() * 0.05); // Boost stability effect
+                if (sp.impactPerTick && sp.impactPerTick.energy) sp.impactPerTick.energy *= (1 + Math.random() * 0.05); // Boost energy effect
+                // Adjust costs slightly for better efficiency
+                if (sp.costPerTick && sp.costPerTick.energy) sp.costPerTick.energy *= (1 - Math.random() * 0.03);
+                if (sp.costPerTick && sp.costPerTick.processingPower) sp.costPerTick.processingPower *= (1 - Math.random() * 0.03);
+            });
+            
+            currentSystemStability += tuningImpactStability;
 
-            let feedbackMessage = `Tuning complete. Overall efficiency: ${overallTuningScore.toFixed(1)}%. `;
-            let logType = 'info';
-
-            if (overallTuningScore > 88) { /* Higher threshold for optimal */
-                currentSystemStability += Math.round(overallTuningScore / 14 + Math.random() * 6); // Increased boost
-                currentDataFlow += Math.round(overallTuningScore / 9 + Math.random() * 8);
-                currentProcessingPower += Math.round(overallTuningScore / 18 + Math.random() * 5);
-                feedbackMessage += 'Optimal parameters achieved, system boosted.';
-                logType = 'optimal';
-            } else if (overallTuningScore > 55) { /* Higher threshold for moderate */
-                currentSystemStability += Math.round(overallTuningScore / 28 - 1.5); // Minor boost, possible slight reduction
-                feedbackMessage += 'Moderate efficiency, minor adjustments applied.';
-                logType = 'info';
-            } else {
-                currentSystemStability -= Math.round((100 - overallTuningScore) / 7); // Stronger penalty for poor tuning
-                feedbackMessage += 'Sub-optimal tuning detected, system stability degraded.';
-                logType = 'warning';
-                if (Math.random() < 0.4) { // 40% chance of glitch on bad tune (increased)
-                    logDataStreamEntry('Tuning parameters misaligned. Temporary data glitch detected!', 'glitch');
-                }
-            }
-
-            logDataStreamEntry(feedbackMessage, logType);
-            systemStatusTextSpan.textContent = `PROTOCOL ACTIVE: Tuned to ${overallTuningScore.toFixed(1)}% efficiency.`;
+            logDataStreamEntry(`Active Blueprint "${activeBlueprint.name}" tuned. Components optimized for better performance.`, 'optimal');
+            systemStatusTextSpan.textContent = `BLUEPRINT ACTIVE: "${activeBlueprint.name}" fine-tuned.`;
             isProcessing = false;
             updateAllDisplays();
+            renderActiveQELs(); // Update QEL display
+            renderSubProtocols(); // Update sub-protocols display
         });
 
         deactivateProtocolButton.addEventListener('click', async () => {
-            if (!activeProtocol) return;
+            if (!activeBlueprint) return;
 
             isProcessing = true;
-            logDataStreamEntry('Initiating protocol deactivation sequence...', 'processing');
-            systemStatusTextSpan.textContent = 'PROTOCOL DEACTIVATION: Disengaging modules...';
+            logDataStreamEntry(`Initiating deactivation of Blueprint "${activeBlueprint.name}"...`, 'processing');
+            systemStatusTextSpan.textContent = 'BLUEPRINT DEACTIVATION: Disengaging components...';
             updateButtonStates();
 
-            await new Promise(resolve => setTimeout(resolve, 3500)); /* Longer deactivation time */
+            await new Promise(resolve => setTimeout(resolve, 4000));
 
-            // Reverse impacts, maybe with some penalty for abrupt deactivation
-            currentSystemStability -= activeProtocol.impact.stability * 0.95; // 5% stability penalty on deactivation
-            currentDataFlow -= activeProtocol.impact.dataFlow;
-            currentProcessingPower -= activeProtocol.impact.processingPower;
+            // Deactivate all QELs associated with this blueprint
+            const qelsToRemove = activeQELs.filter(q => q.origin === 'blueprint' && q.blueprintId === activeBlueprint.id);
+            qelsToRemove.forEach(qel => {
+                const index = activeQELs.findIndex(aq => aq.id === qel.id);
+                if (index > -1) activeQELs.splice(index, 1);
+                currentSystemStability -= (qel.stabilityImpact * 0.75); // Small penalty on deactivation
+            });
 
-            activeProtocol = null;
-            deployedProtocolParametersContainer.style.display = 'none';
-            deployedProtocolParametersContainer.innerHTML = '<p style="text-align: center; opacity: 0.88; font-size: 1.4em;">No protocol active. Formulate and integrate a protocol to load tuning parameters.</p>';
+            // Deactivate all Sub-Protocols that were activated by this blueprint
+            activeBlueprint.components.filter(comp => comp.type === 'Sub-Protocol').forEach(comp => {
+                const existingSubProto = subProtocols.find(s => s.id === comp.id);
+                if (existingSubProto) existingSubProto.isActive = false;
+            });
 
+            activeBlueprint = null; // Clear the active blueprint
             activeProtocolNameSpan.textContent = 'NONE';
             activeProtocolIDSpan.textContent = 'N/A';
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Protocol disengaged.';
+            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Blueprint disengaged.';
 
-            logDataStreamEntry('Active protocol successfully deactivated. System returned to baseline.', 'optimal');
+            logDataStreamEntry('Active blueprint successfully deactivated. System returned to baseline.', 'optimal');
             isProcessing = false;
             updateAllDisplays();
+            renderActiveQELs();
+            renderSubProtocols();
         });
 
         recalibrateCoreButton.addEventListener('click', async () => {
@@ -2834,8 +2960,6 @@
 
         resolveAnomalyButton.addEventListener('click', () => {
             if (anomalyActive && currentAnomaly) {
-                // For simplicity, directly resolve on button click.
-                // In a more complex game, this might cost resources or have a minigame.
                 resolveAnomaly();
                 logDataStreamEntry('Counter-Protocol initiated and anomaly resolved!', 'optimal');
             }
@@ -2849,6 +2973,10 @@
         transmuteSourceSelect.addEventListener('change', updateRTMInfo);
         transmuteTargetSelect.addEventListener('change', updateRTMInfo);
 
+        // Add event listeners for dynamically adding components to blueprint (e.g. from existing modules)
+        // For demonstration, let's add some buttons within the modules to 'Add to Blueprint'
+        // This would require changes to the HTML structure of the QEL and Sub-Protocol modules
+        // For now, these functions are called when a blueprint is being refined or designed.
 
         // --- Game Loop and Initialization ---
         let gameLoopInterval = null;
@@ -2859,7 +2987,7 @@
             currentDataFlow -= 0.04; // Passive decay (increased)
             currentProcessingPower -= 0.06; // Passive drain (increased)
 
-            // Process active QELs
+            // Process active QELs (both individual and blueprint-integrated)
             activeQELs.forEach(qel => {
                 currentEnergy -= qel.energyDrain;
                 currentProcessingPower -= qel.ppDrain;
@@ -2870,15 +2998,7 @@
             });
 
 
-            // Apply active protocol effects
-            if (activeProtocol) {
-                currentSystemStability -= activeProtocol.stabilityRisk * 0.008; // Continuous stability drain based on risk (increased)
-                currentEnergy -= activeProtocol.complexity * 0.018; // Protocol energy upkeep (increased)
-                currentProcessingPower -= activeProtocol.processingPowerCost * 0.018; // Protocol PP upkeep (increased)
-                currentDataFlow += activeProtocol.impact.dataFlow * 0.008; // Minor continuous data flow boost (increased)
-            }
-
-            // NEW: Apply Sub-Protocol effects
+            // Apply active Sub-Protocol effects (both individual and blueprint-integrated)
             subProtocols.filter(sp => sp.isActive).forEach(sp => {
                 if (sp.costPerTick.energy) currentEnergy -= sp.costPerTick.energy;
                 if (sp.costPerTick.processingPower) currentProcessingPower -= sp.costPerTick.processingPower;
@@ -2905,7 +3025,6 @@
                 if (!anomalyActive) { // Prevent overwriting anomaly alert
                     systemStatusTextSpan.textContent = 'SYSTEM CRITICAL: Core stability lost!';
                 }
-                // Stop most operations if stability hits rock bottom, maybe force a game over or recovery state.
             }
             if (currentEnergy <= 0) {
                 currentEnergy = 0;
@@ -2920,7 +3039,6 @@
             if (currentProcessingPower <= 0) {
                 currentProcessingPower = 0;
                 logDataStreamEntry('PROCESSING POWER DEPLETED! System response severely degraded!', 'critical');
-                // Potentially trigger game over or severely limit actions
             }
 
 
@@ -2933,7 +3051,7 @@
             renderActiveQELs(); // NEW: Render active QELs
             updateAllDisplays();
             gameLoopInterval = setInterval(gameLoop, 1000); // 1-second ticks
-            logDataStreamEntry('Core systems online. Initiating Generation 33.0 protocols.', 'event');
+            logDataStreamEntry('Core systems online. Initiating Generation 34.0 protocols.', 'event');
         }
 
         init();
