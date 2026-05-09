@@ -3,128 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // Adaptive Protocol Nexus // v34.0</title>
+    <title>Web Life Form // NEURAL NEXUS ARCHITECT // v35.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors */
-            --primary-glow: rgba(135, 206, 250, 0.99); /* Sky blue glow - even stronger */
-            --secondary-glow: rgba(255, 105, 180, 0.90); /* Hot pink glow - even stronger */
-            --tertiary-glow: rgba(50, 205, 50, 0.99); /* Lime green glow - even stronger */
-            --frosted-bg: rgba(255, 255, 255, 0.008); /* Even more transparent, ethereal frosted background */
-            --text-color: #E0E0E0; /* Slightly lighter text for contrast */
-            --accent-color: #87CEFA; /* Light blue accent */
-            --border-color: rgba(255, 255, 255, 0.15); /* More visible border, slightly less opaque */
-            --console-bg: rgba(0, 0, 0, 0.99); /* Darker console */
+            /* Core Theme Colors (Enhanced for 2.5 Gen) */
+            --primary-glow: rgba(100, 200, 255, 0.99); /* Brighter Cyan-blue glow */
+            --secondary-glow: rgba(255, 120, 200, 0.95); /* Vibrant Pink glow */
+            --tertiary-glow: rgba(80, 255, 80, 0.99); /* Electrifying Green glow */
+            --frosted-bg: rgba(255, 255, 255, 0.005); /* Even more transparent, deeply ethereal */
+            --text-color: #E8E8E8; /* Lighter text for enhanced contrast */
+            --accent-color: #66CCFF; /* Electric Blue accent */
+            --border-color: rgba(255, 255, 255, 0.2); /* More visible, shimmering border */
+            --console-bg: rgba(0, 0, 0, 0.995); /* Absolute black for console depth */
             --glitch-color: #FF00FF; /* Magenta for glitch */
             --warning-color: #FFD700; /* Gold */
             --critical-color: #FF4500; /* OrangeRed, more urgent */
 
             /* Stability Bar Colors */
-            --stability-good: linear-gradient(90deg, #66FF66 0%, #00CC00 100%);
+            --stability-good: linear-gradient(90deg, #33FF33 0%, #00AA00 100%); /* Brighter green */
             --stability-warning: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
-            --stability-critical: linear-gradient(90deg, #FF4500 0%, #DC143C 100%); /* OrangeRed to Crimson */
+            --stability-critical: linear-gradient(90deg, #FF4500 0%, #CC0000 100%); /* OrangeRed to Deeper Red */
 
-            /* Data Stream & Protocol Status */
-            --data-stream-bg: rgba(10, 20, 30, 0.995); /* Darker, more opaque blue for data stream */
-            --data-stream-text: #00FFFF; /* Cyan for data */
-            --protocol-status-bg: rgba(20, 50, 70, 0.99); /* More opaque */
-            --protocol-status-glow: rgba(0, 200, 255, 0.98); /* Stronger glow */
+            /* Data Stream & Protocol Status (Now Cognitive Stream) */
+            --cognitive-stream-bg: rgba(0, 15, 25, 0.99); /* Deep ocean blue */
+            --cognitive-stream-text: #00FFFF; /* Pure Cyan for data */
+            --network-status-bg: rgba(10, 30, 50, 0.995); /* Darker, more opaque blue */
+            --network-status-glow: rgba(0, 220, 255, 0.99); /* Stronger, electric blue glow */
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
-            --module-selection-bg: rgba(30, 15, 45, 0.995); /* Darker, more opaque purple-ish for module selection */
-            --module-selection-border: rgba(150, 0, 255, 0.8); /* Stronger purple accent */
-            --module-selection-text: #E0BBE4; /* Light purple */
-            --resource-bg: rgba(0, 0, 0, 0.95); /* Background for resource bars */
+            --module-selection-bg: rgba(20, 5, 30, 0.99); /* Darker, deeper purple-ish */
+            --module-selection-border: rgba(180, 0, 255, 0.9); /* Stronger purple accent */
+            --module-selection-text: #EEDDFF; /* Lighter purple */
+            --resource-bg: rgba(0, 0, 0, 0.98); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
-            --energy-color-high: linear-gradient(90deg, #FFFF00 0%, #FFCC00 100%); /* Yellow for energy */
-            --energy-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold for warning */
-            --energy-color-low: linear-gradient(90deg, #FF0000 0%, #CC0000 100%); /* Red for critical */
+            --energy-color-high: linear-gradient(90deg, #FFFF33 0%, #FFCC00 100%); /* Brighter yellow */
+            --energy-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            --energy-color-low: linear-gradient(90deg, #FF0000 0%, #EE0000 100%); /* More intense red */
 
-            --data-flow-color-high: linear-gradient(90deg, #00FF00 0%, #00CC00 100%); /* Green for data flow */
-            --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan for warning */
-            --data-flow-color-low: linear-gradient(90deg, #FF4500 0%, #DC143C 100%); /* OrangeRed for critical */
+            --data-flow-color-high: linear-gradient(90deg, #00FF00 0%, #00CC00 100%);
+            --data-flow-color-medium: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%);
+            --data-flow-color-low: linear-gradient(90deg, #FF4500 0%, #DD0000 100%); /* More intense red */
             
-            /* Gen 32.0 Colors (Updated from 31.0) */
-            --signal-array-bg: rgba(15, 30, 45, 0.995); /* Darker blue-grey for signal array */
-            --signal-array-border: rgba(0, 191, 255, 0.8); /* Stronger deep sky blue accent */
-            --signal-array-text: #B0E0E6; /* Powder blue */
-            --formulate-btn-glow: rgba(255, 20, 147, 0.99); /* Deep Pink for Formulate button */
+            /* Gen 35.0 Colors (Updated from 34.0) */
+            --signal-array-bg: rgba(5, 20, 35, 0.99); /* Deeper blue-grey */
+            --signal-array-border: rgba(0, 220, 255, 0.9); /* Stronger electric blue accent */
+            --signal-array-text: #C0EEF5; /* Lighter, more vibrant powder blue */
+            --formulate-btn-glow: rgba(255, 50, 170, 0.99); /* Hotter Deep Pink for Architect button */
 
-            /* Gen 32.0 resource: Raw Data */
-            --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%); /* Pink */
-            --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold */
-            --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%); /* Blue-grey */
-            --raw-data-text: #F06292; /* Text color for raw data */
+            /* Gen 35.0 resource: Raw Data */
+            --raw-data-color-high: linear-gradient(90deg, #F06292 0%, #E91E63 100%);
+            --raw-data-color-medium: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            --raw-data-color-low: linear-gradient(90deg, #B0BEC5 0%, #78909C 100%);
+            --raw-data-text: #F06292;
 
-            /* Gen 32.0 resource: Processing Power */
-            --processing-power-color-high: linear-gradient(90deg, #BA55D3 0%, #8A2BE2 100%); /* Orchid to Blue Violet */
-            --processing-power-color-medium: linear-gradient(90deg, #DA70D6 0%, #9932CC 100%); /* Orchid to Dark Orchid */
-            --processing-power-color-low: linear-gradient(90deg, #4B0082 0%, #191970 100%); /* Indigo to Midnight Blue */
-            --processing-power-text: #BA55D3; /* Orchid */
+            /* Gen 35.0 resource: Processing Power */
+            --processing-power-color-high: linear-gradient(90deg, #D870DA 0%, #A020F0 100%); /* Orchid to Purple */
+            --processing-power-color-medium: linear-gradient(90deg, #DA70D6 0%, #9932CC 100%);
+            --processing-power-color-low: linear-gradient(90deg, #4B0082 0%, #191970 100%);
+            --processing-power-text: #D870DA;
 
-            /* Gen 32.0 button: Calibrate Signal Array */
-            --calibrate-btn-glow: rgba(106, 90, 205, 0.99); /* Slate Blue Glow */
-            --tune-btn-glow: rgba(0, 255, 0, 0.99); /* Green Glow for Tune */
+            /* NEW for Gen 35.0 resource: Exotic Matter (XM) */
+            --exotic-matter-color-high: linear-gradient(90deg, #8AFFD0 0%, #32CD32 100%); /* Mint Green to Lime Green */
+            --exotic-matter-color-medium: linear-gradient(90deg, #98FB98 0%, #ADFF2F 100%); /* PaleGreen to GreenYellow */
+            --exotic-matter-color-low: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold to Orange */
+            --exotic-matter-text: #8AFFD0; /* Mint Green */
 
-            /* NEW for Gen 32.0 - Enhanced UI elements */
-            --event-color: #FFA500; /* Orange for events */
-            --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
-            --info-color: #9370DB; /* Medium Purple for info */
-            --info-text-shadow: 0 0 18px rgba(147, 112, 219, 0.9); /* Stronger shadow */
-            --log-glitch-color: #FF00FF; /* Magenta */
-            --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
+            /* Gen 35.0 button: Calibrate Dimensional Link */
+            --calibrate-btn-glow: rgba(120, 100, 230, 0.99); /* Softer Slate Blue Glow */
+            --tune-btn-glow: rgba(0, 255, 0, 0.99);
+
+            /* Gen 35.0 - Enhanced UI elements */
+            --event-color: #FFA500;
+            --event-text-shadow: 0 0 25px rgba(255, 165, 0, 1.0); /* Even stronger shadow */
+            --info-color: #A080E0; /* Lighter Medium Purple */
+            --info-text-shadow: 0 0 20px rgba(160, 128, 224, 0.9); /* Even stronger shadow */
+            --log-glitch-color: #FF00FF;
+            --header-underline-color: linear-gradient(90deg, transparent 2%, var(--accent-color) 50%, transparent 98%); /* Wider, more transparent edges */
             
-            /* Gen 32.0 NEW: Refine Protocol button */
-            --refine-btn-glow: rgba(255, 255, 0, 0.99); /* Yellow glow for refine */
+            /* Gen 35.0 NEW: Optimize Pathways button */
+            --refine-btn-glow: rgba(255, 255, 50, 0.99); /* Brighter Yellow glow for optimize */
 
-            /* Gen 32.0 NEW: Anomaly Alert */
-            --anomaly-color: #FF4500; /* OrangeRed */
-            --anomaly-bg: rgba(255, 69, 0, 0.15); /* Even more semi-transparent OrangeRed */
-            --anomaly-border: rgba(255, 69, 0, 0.95); /* Opaque OrangeRed */
+            /* Gen 35.0 NEW: Anomaly Alert */
+            --anomaly-color: #FF0000; /* Pure Red for critical */
+            --anomaly-bg: rgba(255, 0, 0, 0.1); /* Even more semi-transparent Red */
+            --anomaly-border: rgba(255, 0, 0, 0.9); /* Opaque Red */
 
-            /* Gen 32.0 NEW: Predictive Analysis Module */
-            --predictive-bg: rgba(10, 40, 30, 0.995); /* Dark Green-Blue */
-            --predictive-border: rgba(0, 255, 127, 0.9); /* Spring Green */
-            --predictive-text: #90EE90; /* Light Green */
-            --predictive-btn-glow: rgba(0, 255, 127, 0.95);
+            /* Gen 35.0 NEW: Adaptive Simulation Engine */
+            --predictive-bg: rgba(5, 30, 20, 0.99); /* Deeper Green-Blue */
+            --predictive-border: rgba(50, 255, 150, 0.9); /* Brighter Spring Green */
+            --predictive-text: #B0FFC0; /* Lighter Mint Green */
+            --predictive-btn-glow: rgba(50, 255, 150, 0.95);
 
-            /* Gen 32.0 NEW: Sub-Protocol Augmentation Module */
-            --augmentation-bg: rgba(45, 30, 10, 0.995); /* Dark Orange-Brown */
-            --augmentation-border: rgba(255, 165, 0, 0.9); /* Orange */
-            --augmentation-text: #FFD700; /* Gold */
-            --augmentation-toggle-active: rgba(255, 165, 0, 0.95);
-            --augmentation-toggle-inactive: rgba(100, 70, 0, 0.65);
-            --augmentation-toggle-glow: rgba(255, 165, 0, 0.8);
+            /* Gen 35.0 NEW: Evolutionary Sub-Routines Module */
+            --augmentation-bg: rgba(30, 20, 5, 0.99); /* Deeper Orange-Brown */
+            --augmentation-border: rgba(255, 180, 50, 0.9); /* Brighter Orange */
+            --augmentation-text: #FFEB80; /* Brighter Gold */
+            --augmentation-toggle-active: rgba(255, 180, 50, 0.95);
+            --augmentation-toggle-inactive: rgba(120, 90, 10, 0.65);
+            --augmentation-toggle-glow: rgba(255, 180, 50, 0.8);
 
-            /* Gen 33.0 NEW: Quantum Entanglement Link (QEL) Module */
-            --qel-bg: rgba(20, 10, 40, 0.995); /* Dark Purple */
-            --qel-border: rgba(200, 0, 255, 0.8); /* Magenta-Purple */
-            --qel-text: #E6B0E6; /* Light Magenta */
-            --qel-btn-glow: rgba(200, 0, 255, 0.95);
-            --qel-card-active-border: rgba(255, 0, 255, 0.9);
-            --qel-card-active-shadow: rgba(255, 0, 255, 0.7);
+            /* Gen 35.0 NEW: Dimensional Link Gateway (DLG) Module */
+            --dlg-bg: rgba(15, 5, 35, 0.99); /* Deeper Purple */
+            --dlg-border: rgba(220, 0, 255, 0.85); /* More vibrant Magenta-Purple */
+            --dlg-text: #FFD0FF; /* Lighter Magenta */
+            --dlg-btn-glow: rgba(220, 0, 255, 0.95);
+            --dlg-card-active-border: rgba(255, 0, 255, 0.95);
+            --dlg-card-active-shadow: rgba(255, 0, 255, 0.8);
 
-            /* Gen 33.0 NEW: Resource Transmutation Matrix (RTM) Module */
-            --rtm-bg: rgba(40, 30, 10, 0.995); /* Dark Gold-Brown */
-            --rtm-border: rgba(255, 200, 0, 0.9); /* Gold-Orange */
-            --rtm-text: #FFEB3B; /* Yellowish Gold */
-            --rtm-btn-glow: rgba(255, 200, 0, 0.95);
+            /* Gen 35.0 NEW: Matter-Energy Replicator (MER) Module */
+            --mer-bg: rgba(35, 25, 5, 0.99); /* Deeper Gold-Brown */
+            --mer-border: rgba(255, 220, 50, 0.95); /* Brighter Gold-Orange */
+            --mer-text: #FFFF80; /* Bright Yellowish Gold */
+            --mer-btn-glow: rgba(255, 220, 50, 0.95);
 
-            /* Gen 34.0 NEW: Protocol Blueprint Module */
-            --blueprint-bg: rgba(15, 40, 40, 0.995); /* Dark Teal */
-            --blueprint-border: rgba(0, 255, 255, 0.8); /* Cyan */
-            --blueprint-text: #00FFFF; /* Cyan */
-            --blueprint-component-bg: rgba(0, 0, 0, 0.7);
-            --blueprint-component-border: rgba(0, 255, 255, 0.5);
+            /* Gen 35.0 NEW: Neural Network Blueprint (NNB) Module */
+            --nnb-bg: rgba(10, 30, 30, 0.99); /* Deeper Teal */
+            --nnb-border: rgba(50, 255, 255, 0.85); /* Brighter Cyan */
+            --nnb-text: #80FFFF; /* Lighter Cyan */
+            --nnb-component-bg: rgba(0, 0, 0, 0.75);
+            --nnb-component-border: rgba(50, 255, 255, 0.6);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
-            background: #00000A; /* Even darker, deeper background base */
+            background: #000000; /* Absolute black for base */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -133,59 +139,63 @@
             position: relative;
             font-size: 16px;
             line-height: 1.6;
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path fill="%2300FFFF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="3.5" fill="%23FF00FF"/><path fill="%2300FFFF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z"/></svg>') 40 40, auto; /* Cyan crosshair with a larger magenta dot, with pulsing star points, bigger cursor, more points */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs><path fill="%2300FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2300FFFF" d="M11 7h2v6h-2zM11 15h2v2h-2z"/><circle cx="12" cy="12" r="3.5" fill="%23FF00FF" filter="url(%23f1)"/><path fill="%2300FFFF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z" filter="url(%23f1)"/></svg>') 50 50, auto; /* Larger, glowing cyan crosshair with magenta core and pulsing star points */
         }
 
-        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation) */
+        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: absolute;
-            top: -700%; /* Even larger coverage */
-            left: -700%;
-            width: 1500%;
-            height: 1500%;
+            top: -1000%; /* Even larger coverage */
+            left: -1000%;
+            width: 2100%;
+            height: 2100%;
             background: linear-gradient(
-                90deg,
-                #02010c 0%,
-                #0c020f 15%,
-                #070212 30%,
-                #0f0417 45%,
-                #02010c 60%,
-                #0c020f 75%,
-                #070212 90%,
-                #0f0417 100%
+                75deg, /* New angle */
+                #000005 0%,
+                #05000A 10%,
+                #0A0010 20%,
+                #0F0015 30%,
+                #14001A 40%,
+                #0F0015 50%,
+                #0A0010 60%,
+                #05000A 70%,
+                #000005 80%,
+                #05000A 90%,
+                #000005 100%
             );
-            background-size: 2000% 2000%; /* Even larger background for smoother animation */
-            animation: fluidBackground1 1000s linear infinite alternate, rotateBackground 1500s linear infinite; /* Even longer animations */
+            background-size: 3000% 3000%; /* Even larger background for smoother animation */
+            animation: fluidBackground1 1200s linear infinite alternate, rotateBackground 1800s linear infinite; /* Even longer animations */
             z-index: -3;
-            filter: blur(900px) opacity(0.999); /* Stronger blur, almost opaque */
-            transform: rotate(-300deg) scale(7); /* Larger scale, more rotation */
+            filter: blur(1200px) opacity(0.999); /* Stronger blur, almost opaque */
+            transform: rotate(-400deg) scale(9); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
-        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors, more diffuse) */
+        /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors, more diffuse, soft-light blend) */
         body::after {
             content: '';
             position: absolute;
-            top: -300%; /* Even larger coverage */
-            left: -300%;
-            width: 700%;
-            height: 700%;
+            top: -500%; /* Even larger coverage */
+            left: -500%;
+            width: 1100%;
+            height: 1100%;
             background: linear-gradient(
-                -165deg, /* Different angle */
-                rgba(135, 206, 250, 0.7) 0%, /* primary glow accent */
-                rgba(255, 105, 180, 0.65) 20%, /* secondary glow accent */
-                rgba(50, 205, 50, 0.65) 40%, /* tertiary glow accent */
-                rgba(0, 191, 255, 0.7) 60%, /* deep sky blue from signal array */
-                rgba(255, 165, 0, 0.6) 80%, /* New orange accent */
-                rgba(135, 206, 250, 0.7) 100%
+                -180deg, /* Different angle */
+                rgba(100, 200, 255, 0.8) 0%, /* primary glow accent */
+                rgba(255, 120, 200, 0.75) 15%, /* secondary glow accent */
+                rgba(80, 255, 80, 0.75) 30%, /* tertiary glow accent */
+                rgba(0, 220, 255, 0.8) 45%, /* electric blue from DLG */
+                rgba(255, 180, 50, 0.7) 60%, /* New orange accent from ESR */
+                rgba(220, 0, 255, 0.7) 75%, /* Magenta from DLG */
+                rgba(100, 200, 255, 0.8) 100%
             );
-            background-size: 1500% 1500%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 600s ease-in-out infinite, rotateBackgroundReversed 1100s linear infinite; /* Even longer animations */
+            background-size: 2000% 2000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 800s ease-in-out infinite, rotateBackgroundReversed 1300s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(650px) opacity(0.99); /* Stronger blur, more opaque */
+            filter: blur(800px) opacity(0.995); /* Stronger blur, more opaque */
             mix-blend-mode: soft-light; /* Softer accenting */
-            transform: rotate(200deg) scale(6); /* Larger scale, more rotation */
+            transform: rotate(250deg) scale(8); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -196,12 +206,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJREFUeNpiYBgFo2AUjIJRMApGwzAHAISpAwBGjAA/7gJ7+G5+9wAAAABJRU5ErkJggg==') repeat;
-            opacity: 0.55; /* More noticeable noise */
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat;
+            opacity: 0.65; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.25) contrast(1.2) brightness(1.2); /* Subtle color and contrast */
+            filter: grayscale(0.3) contrast(1.3) brightness(1.3); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -216,48 +226,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-300deg) scale(7); }
-            to { transform: rotate(420deg) scale(7); }
+            from { transform: rotate(-400deg) scale(9); }
+            to { transform: rotate(500deg) scale(9); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(200deg) scale(6); }
-            to { transform: rotate(-520deg) scale(6); }
+            from { transform: rotate(250deg) scale(8); }
+            to { transform: rotate(-650deg) scale(8); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1800px; /* Even wider for more content */
-            padding: 150px; /* More padding */
+            max-width: 2000px; /* Even wider for more content */
+            padding: 180px; /* More padding */
             background: var(--frosted-bg);
             border: 1px solid var(--border-color);
-            border-radius: 150px; /* Even more rounded */
-            backdrop-filter: blur(500px) saturate(2000%) brightness(500%) contrast(1.3); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(500px) saturate(2000%) brightness(500%) contrast(1.3);
+            border-radius: 200px; /* Even more rounded */
+            backdrop-filter: blur(700px) saturate(2500%) brightness(600%) contrast(1.5); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(700px) saturate(2500%) brightness(600%) contrast(1.5);
             box-shadow:
-                0 180px 800px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 800px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 200px rgba(255, 255, 255, 0.6), /* Stronger inner glow for depth */
-                inset 0 0 350px var(--primary-glow); /* Even more inner glow */
+                0 200px 900px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 900px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 250px rgba(255, 255, 255, 0.7), /* Stronger inner glow for depth */
+                inset 0 0 400px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 160px; /* Increased gap between sections */
-            animation: fadeInScale 9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 3s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 180px; /* Increased gap between sections */
+            animation: fadeInScale 12s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 4s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -50px; /* More overflow */
-            border-radius: 152px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #BA55D3, #00FFFF, #8A2BE2, #FF1493, #00FF00, #F06292, #FFA500, #90EE90, #FFD700); /* Even more vibrant border glow colors, includes new processing power color, orange, and light green */
-            background-size: 2000% 2000%; /* Larger background for smoother animation */
-            animation: borderGlow 70s linear infinite alternate; /* Slower animation */
-            filter: blur(100px); /* Stronger blur */
+            inset: -60px; /* More overflow */
+            border-radius: 202px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #8AFFD0, #FFD700); /* Even more vibrant border glow colors, includes new processing power color, orange, and exotic matter green */
+            background-size: 2500% 2500%; /* Larger background for smoother animation */
+            animation: borderGlow 90s linear infinite alternate; /* Slower animation */
+            filter: blur(120px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -269,32 +279,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.08) translateY(600px) perspective(8000px) rotateX(95deg) rotateY(20deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(8000px) rotateX(0deg) rotateY(0deg); }
+            from { opacity: 0; transform: scale(0.05) translateY(800px) perspective(10000px) rotateX(100deg) rotateY(25deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(10000px) rotateX(0deg) rotateY(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 8em; /* Even larger heading */
+            font-size: 9em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 140px var(--primary-glow), 0 0 200px rgba(135, 206, 250, 0.99), 0 0 220px rgba(135, 206, 250, 0.85);
-            margin-bottom: 120px;
-            letter-spacing: 25px;
-            line-height: 1.2;
+            text-shadow: 0 0 160px var(--primary-glow), 0 0 220px rgba(100, 200, 255, 0.99), 0 0 250px rgba(100, 200, 255, 0.85);
+            margin-bottom: 140px;
+            letter-spacing: 30px;
+            line-height: 1.1;
             position: relative;
-            transform: translateZ(100px); /* Lift heading slightly in 3D space */
+            transform: translateZ(120px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -80px;
+            bottom: -90px;
             left: 50%;
             transform: translateX(-50%);
-            width: 160%; /* Wider underline */
-            height: 18px; /* Thicker underline */
+            width: 180%; /* Wider underline */
+            height: 20px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 90px var(--primary-glow);
+            box-shadow: 0 0 100px var(--primary-glow);
         }
 
         p {
@@ -302,2759 +312,555 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.99;
-            font-size: 2em; /* Larger paragraph text */
-            transform: translateZ(60px);
+            font-size: 2.2em; /* Larger paragraph text */
+            transform: translateZ(70px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 130px; /* Increased gap */
-            margin: 90px 0;
+            gap: 150px; /* Increased gap */
+            margin: 100px 0;
             position: relative;
         }
 
         /* Module base styles */
-        .qel-module, .rtm-module, .predictive-analysis-module, .sub-protocol-augmentation-module, .protocol-blueprint-module { /* NEW MODULE ADDED */
+        .dlg-module, .mer-module, .adaptive-simulation-engine, .evolutionary-sub-routines, .nnb-module { /* NEW MODULE ADDED */
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 70px;
             text-align: left;
-            padding: 70px;
-            border-radius: 60px;
+            padding: 80px;
+            border-radius: 70px;
             border: 1px solid var(--signal-array-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 60px rgba(0, 191, 255, 0.8), 0 0 60px rgba(0, 191, 255, 0.7), inset 0 0 120px rgba(0, 191, 255, 0.4); /* More inner shadow */
+            box-shadow: inset 0 0 70px rgba(0, 220, 255, 0.8), 0 0 70px rgba(0, 220, 255, 0.7), inset 0 0 130px rgba(0, 220, 255, 0.4); /* More inner shadow */
             position: relative;
-            transform: translateZ(50px);
+            transform: translateZ(60px);
             overflow: hidden;
             background: var(--signal-array-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .qel-module {
-            background: var(--qel-bg);
-            border-color: var(--qel-border);
-            box-shadow: inset 0 0 60px rgba(200, 0, 255, 0.8), 0 0 60px rgba(200, 0, 255, 0.7), inset 0 0 120px rgba(200, 0, 255, 0.4);
+        .dlg-module {
+            background: var(--dlg-bg);
+            border-color: var(--dlg-border);
+            box-shadow: inset 0 0 70px rgba(220, 0, 255, 0.85), 0 0 70px rgba(220, 0, 255, 0.75), inset 0 0 130px rgba(220, 0, 255, 0.45);
         }
-        .rtm-module {
-            background: var(--rtm-bg);
-            border-color: var(--rtm-border);
-            box-shadow: inset 0 0 60px rgba(255, 200, 0, 0.8), 0 0 60px rgba(255, 200, 0, 0.7), inset 0 0 120px rgba(255, 200, 0, 0.4);
+        .mer-module {
+            background: var(--mer-bg);
+            border-color: var(--mer-border);
+            box-shadow: inset 0 0 70px rgba(255, 220, 50, 0.85), 0 0 70px rgba(255, 220, 50, 0.75), inset 0 0 130px rgba(255, 220, 50, 0.45);
         }
-        .predictive-analysis-module {
+        .adaptive-simulation-engine {
             background: var(--predictive-bg);
             border-color: var(--predictive-border);
-            box-shadow: inset 0 0 60px rgba(0, 255, 127, 0.8), 0 0 60px rgba(0, 255, 127, 0.7), inset 0 0 120px rgba(0, 255, 127, 0.4);
+            box-shadow: inset 0 0 70px rgba(50, 255, 150, 0.85), 0 0 70px rgba(50, 255, 150, 0.75), inset 0 0 130px rgba(50, 255, 150, 0.45);
         }
-        .sub-protocol-augmentation-module {
+        .evolutionary-sub-routines {
             background: var(--augmentation-bg);
             border-color: var(--augmentation-border);
-            box-shadow: inset 0 0 60px rgba(255, 165, 0, 0.8), 0 0 60px rgba(255, 165, 0, 0.7), inset 0 0 120px rgba(255, 165, 0, 0.4);
+            box-shadow: inset 0 0 70px rgba(255, 180, 50, 0.85), 0 0 70px rgba(255, 180, 50, 0.75), inset 0 0 130px rgba(255, 180, 50, 0.45);
         }
-        .protocol-blueprint-module { /* NEW */
-            background: var(--blueprint-bg);
-            border-color: var(--blueprint-border);
-            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.7), inset 0 0 120px rgba(0, 255, 255, 0.4);
+        .nnb-module { /* NEW */
+            background: var(--nnb-bg);
+            border-color: var(--nnb-border);
+            box-shadow: inset 0 0 70px rgba(50, 255, 255, 0.85), 0 0 70px rgba(50, 255, 255, 0.75), inset 0 0 130px rgba(50, 255, 255, 0.45);
         }
 
-        .qel-module::after, .rtm-module::after, .predictive-analysis-module::after, .sub-protocol-augmentation-module::after, .protocol-blueprint-module::after {
+        .dlg-module::after, .mer-module::after, .adaptive-simulation-engine::after, .evolutionary-sub-routines::after, .nnb-module::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.25) 0%, transparent 65%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.3) 0%, transparent 60%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 0.995;
         }
 
 
-        .qel-module::before, .rtm-module::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before, .protocol-blueprint-module::before { /* NEW MODULE ADDED */
+        .dlg-module::before, .mer-module::before, .adaptive-simulation-engine::before, .evolutionary-sub-routines::before, .nnb-module::before { /* NEW MODULE ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -50px; /* Slightly higher */
-            left: 70px;
-            font-size: 1.4em; /* Larger label */
+            top: -60px; /* Slightly higher */
+            left: 80px;
+            font-size: 1.5em; /* Larger label */
             color: var(--signal-array-text); /* Default text, will be overridden */
-            background: rgba(0, 0, 0, 0.99);
-            padding: 16px 35px;
-            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.995);
+            padding: 20px 40px;
+            border-radius: 30px;
             font-weight: 700;
-            letter-spacing: 3.5px;
-            transform: translateY(-50%) translateZ(30px); /* Lift more */
+            letter-spacing: 4px;
+            transform: translateY(-50%) translateZ(40px); /* Lift more */
             opacity: 0.995;
             border: 1px solid var(--signal-array-text); /* Default border, will be overridden */
-            box-shadow: 0 0 35px var(--signal-array-text); /* Stronger glow */
+            box-shadow: 0 0 40px var(--signal-array-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
-        .qel-module::before {
-            color: var(--qel-text);
-            border-color: var(--qel-text);
-            box-shadow: 0 0 35px var(--qel-text);
+        .dlg-module::before {
+            color: var(--dlg-text);
+            border-color: var(--dlg-text);
+            box-shadow: 0 0 40px var(--dlg-text);
         }
-        .rtm-module::before {
-            color: var(--rtm-text);
-            border-color: var(--rtm-text);
-            box-shadow: 0 0 35px var(--rtm-text);
+        .mer-module::before {
+            color: var(--mer-text);
+            border-color: var(--mer-text);
+            box-shadow: 0 0 40px var(--mer-text);
         }
-        .predictive-analysis-module::before {
+        .adaptive-simulation-engine::before {
             color: var(--predictive-text);
             border-color: var(--predictive-text);
-            box-shadow: 0 0 35px var(--predictive-text);
+            box-shadow: 0 0 40px var(--predictive-text);
         }
-        .sub-protocol-augmentation-module::before {
+        .evolutionary-sub-routines::before {
             color: var(--augmentation-text);
             border-color: var(--augmentation-text);
-            box-shadow: 0 0 35px var(--augmentation-text);
+            box-shadow: 0 0 40px var(--augmentation-text);
         }
-        .protocol-blueprint-module::before { /* NEW */
-            color: var(--blueprint-text);
-            border-color: var(--blueprint-text);
-            box-shadow: 0 0 35px var(--blueprint-text);
+        .nnb-module::before { /* NEW */
+            color: var(--nnb-text);
+            border-color: var(--nnb-text);
+            box-shadow: 0 0 40px var(--nnb-text);
         }
 
 
         .calibrator-group, .param-group {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.7em; /* Larger */
-            color: var(--data-stream-text);
-            letter-spacing: 2.5px;
+            font-size: 1.9em; /* Larger */
+            color: var(--cognitive-stream-text);
+            letter-spacing: 3px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 30px rgba(0, 255, 255, 0.99); /* Stronger shadow */
-            margin-bottom: 28px;
+            text-shadow: 0 0 35px rgba(0, 255, 255, 0.99); /* Stronger shadow */
+            margin-bottom: 32px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 1.15em; /* Slightly larger sub-info */
-            opacity: 0.92;
+            font-size: 1.25em; /* Slightly larger sub-info */
+            opacity: 0.95;
             color: var(--signal-array-text);
-            margin-top: 20px;
+            margin-top: 25px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
-        /* Predictive analysis results */
+        /* Adaptive Simulation Engine results */
         .predictive-results {
-            margin-top: 40px;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.8); /* Darker background */
+            margin-top: 50px;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.85); /* Darker background */
             border: 1px dashed var(--predictive-border);
-            border-radius: 25px;
-            animation: fadeIn 1.5s ease-out;
-            box-shadow: 0 0 30px rgba(0, 255, 127, 0.6); /* Subtle glow */
+            border-radius: 30px;
+            animation: fadeIn 1.8s ease-out;
+            box-shadow: 0 0 35px rgba(50, 255, 150, 0.6); /* Subtle glow */
         }
         .predictive-results p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.4em; /* Larger text */
+            font-size: 1.5em; /* Larger text */
             color: var(--predictive-text);
-            text-shadow: 0 0 20px rgba(0, 255, 127, 0.85);
-            margin-bottom: 14px;
+            text-shadow: 0 0 25px rgba(50, 255, 150, 0.85);
+            margin-bottom: 16px;
             transform: translateZ(0); /* Reset for inner p */
         }
 
-        /* Sub-Protocol Grid */
-        .sub-protocol-grid {
+        /* Evolutionary Sub-Routines Grid */
+        .sub-protocol-grid { /* Renamed from sub-protocol-grid to evolutionary-sub-routines-grid */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger min width */
-            gap: 40px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Larger min width */
+            gap: 50px;
+            margin-top: 35px;
         }
-        .sub-protocol-card {
-            background: rgba(0, 0, 0, 0.9); /* Darker */
+        .sub-protocol-card { /* Renamed to evolutionary-sub-routine-card */
+            background: rgba(0, 0, 0, 0.95); /* Darker */
             border: 1px solid var(--augmentation-toggle-inactive);
-            border-radius: 30px; /* More rounded */
-            padding: 40px;
+            border-radius: 35px; /* More rounded */
+            padding: 45px;
             text-align: center;
-            transition: all 0.6s ease;
+            transition: all 0.7s ease;
             cursor: pointer;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
-            transform: translateZ(12px);
+            box-shadow: inset 0 0 25px rgba(0,0,0,0.7);
+            transform: translateZ(15px);
         }
         .sub-protocol-card.active {
             border-color: var(--augmentation-toggle-active);
-            box-shadow: 0 0 45px var(--augmentation-toggle-glow), inset 0 0 30px var(--augmentation-toggle-active);
-            background: rgba(45, 25, 0, 0.95); /* More opaque */
-            transform: translateY(-15px) scale(1.05) translateZ(18px);
+            box-shadow: 0 0 50px var(--augmentation-toggle-glow), inset 0 0 35px var(--augmentation-toggle-active);
+            background: rgba(50, 30, 5, 0.98); /* More opaque */
+            transform: translateY(-18px) scale(1.06) translateZ(20px);
         }
         .sub-protocol-card h4 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.6em; /* Larger */
+            font-size: 1.8em; /* Larger */
             color: var(--augmentation-text);
             margin-top: 0;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px var(--augmentation-text);
+            margin-bottom: 25px;
+            text-shadow: 0 0 25px var(--augmentation-text);
         }
         .sub-protocol-card p {
-            font-size: 1.2em; /* Larger */
+            font-size: 1.3em; /* Larger */
             color: var(--text-color);
-            opacity: 0.9;
-            margin-bottom: 15px;
+            opacity: 0.92;
+            margin-bottom: 18px;
             transform: translateZ(0); /* Reset for inner p */
         }
         .sub-protocol-card .cost-benefit {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.1em; /* Larger */
-            color: var(--data-stream-text);
-            text-shadow: 0 0 12px var(--data-stream-text);
-            margin-top: 25px;
+            font-size: 1.2em; /* Larger */
+            color: var(--cognitive-stream-text);
+            text-shadow: 0 0 15px var(--cognitive-stream-text);
+            margin-top: 30px;
             opacity: 0.98;
         }
 
-        /* QEL Module Specific */
-        .active-qel-links-display {
+        /* DLG Module Specific */
+        .active-qel-links-display { /* Renamed to active-dimensional-conduits-display */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-            min-height: 100px;
-            border: 1px dashed rgba(255,255,255,0.15);
-            padding: 30px;
-            border-radius: 20px;
-        }
-        .active-qel-card {
-            background: rgba(0,0,0,0.8);
-            border: 1px solid var(--qel-card-active-border);
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 45px;
+            min-height: 120px;
+            border: 1px dashed rgba(255,255,255,0.2);
+            padding: 35px;
             border-radius: 25px;
-            padding: 25px;
+        }
+        .active-qel-card { /* Renamed to active-conduit-card */
+            background: rgba(0,0,0,0.85);
+            border: 1px solid var(--dlg-card-active-border);
+            border-radius: 30px;
+            padding: 30px;
             text-align: center;
-            box-shadow: 0 0 25px var(--qel-card-active-shadow);
-            transform: translateZ(10px);
-            transition: all 0.3s ease;
+            box-shadow: 0 0 30px var(--dlg-card-active-shadow);
+            transform: translateZ(12px);
+            transition: all 0.4s ease;
             position: relative;
         }
         .active-qel-card:hover {
-            transform: translateY(-8px) scale(1.02) translateZ(15px);
-            box-shadow: 0 0 40px var(--qel-card-active-shadow);
+            transform: translateY(-10px) scale(1.03) translateZ(18px);
+            box-shadow: 0 0 50px var(--dlg-card-active-shadow);
         }
         .active-qel-card h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.3em;
-            color: var(--qel-text);
-            margin: 0 0 15px 0;
-            text-shadow: 0 0 15px var(--qel-text);
+            font-size: 1.4em;
+            color: var(--dlg-text);
+            margin: 0 0 18px 0;
+            text-shadow: 0 0 18px var(--dlg-text);
         }
         .active-qel-card p {
-            font-size: 1.05em;
+            font-size: 1.15em;
             color: var(--text-color);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             transform: translateZ(0);
         }
-        .active-qel-card .deactivate-qel-btn {
-            background: linear-gradient(90deg, #800080 0%, #B22222 100%); /* Purple to Firebrick */
+        .active-qel-card .deactivate-qel-btn { /* Renamed to deactivate-conduit-btn */
+            background: linear-gradient(90deg, #A020F0 0%, #B22222 100%); /* Purple to Firebrick */
             color: white;
             border: none;
-            padding: 12px 20px;
-            font-size: 0.9em;
-            border-radius: 15px;
+            padding: 14px 22px;
+            font-size: 1em;
+            border-radius: 18px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 15px;
-            box-shadow: 0 0 15px rgba(178,34,34,0.7);
+            margin-top: 18px;
+            box-shadow: 0 0 18px rgba(178,34,34,0.8);
             font-family: 'Orbitron', sans-serif;
         }
         .active-qel-card .deactivate-qel-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 25px rgba(178,34,34,0.9);
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 0 30px rgba(178,34,34,0.95);
             filter: brightness(1.2);
         }
 
-        /* RTM Module Specific */
-        .rtm-controls {
+        /* MER Module Specific */
+        .mer-controls { /* Renamed from rtm-controls */
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 35px;
             align-items: center;
         }
-        .rtm-controls select, .rtm-controls input[type="number"] {
-            background: rgba(0,0,0,0.7);
-            border: 1px solid var(--rtm-border);
-            color: var(--rtm-text);
-            padding: 18px 25px;
-            border-radius: 20px;
-            font-size: 1.3em;
+        .mer-controls select, .mer-controls input[type="number"] {
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--mer-border);
+            color: var(--mer-text);
+            padding: 20px 28px;
+            border-radius: 22px;
+            font-size: 1.4em;
             font-family: 'Share Tech Mono', monospace;
-            box-shadow: inset 0 0 10px rgba(255,200,0,0.5);
-            width: 80%;
-            max-width: 400px;
+            box-shadow: inset 0 0 12px rgba(255,220,50,0.5);
+            width: 85%;
+            max-width: 450px;
             appearance: none; /* Remove default arrow */
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
         }
-        .rtm-controls select:focus, .rtm-controls input[type="number"]:focus {
+        .mer-controls select:focus, .mer-controls input[type="number"]:focus {
             outline: none;
-            border-color: var(--rtm-text);
-            box-shadow: inset 0 0 15px rgba(255,200,0,0.8), 0 0 20px rgba(255,200,0,0.6);
+            border-color: var(--mer-text);
+            box-shadow: inset 0 0 18px rgba(255,220,50,0.8), 0 0 25px rgba(255,220,50,0.6);
         }
-        .rtm-info {
+        .mer-info { /* Renamed from rtm-info */
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.25em;
-            color: var(--rtm-text);
-            text-shadow: 0 0 15px var(--rtm-text);
-            margin-top: 20px;
-            line-height: 1.8;
+            font-size: 1.35em;
+            color: var(--mer-text);
+            text-shadow: 0 0 18px var(--mer-text);
+            margin-top: 25px;
+            line-height: 1.9;
             opacity: 0.95;
         }
 
-        /* NEW: Protocol Blueprint Module */
-        .blueprint-summary {
+        /* NEW: Neural Network Blueprint (NNB) Module */
+        .nnb-summary { /* Renamed from blueprint-summary */
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.4em;
-            color: var(--blueprint-text);
-            text-shadow: 0 0 15px var(--blueprint-text);
-            margin-bottom: 30px;
+            font-size: 1.5em;
+            color: var(--nnb-text);
+            text-shadow: 0 0 18px var(--nnb-text);
+            margin-bottom: 35px;
         }
-        .blueprint-component-list {
+        .nnb-node-list { /* Renamed from blueprint-component-list */
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            margin-top: 30px;
-            max-height: 350px;
+            gap: 30px;
+            margin-top: 35px;
+            max-height: 400px;
             overflow-y: auto;
-            padding-right: 15px; /* For scrollbar space */
+            padding-right: 18px; /* For scrollbar space */
         }
-        .blueprint-component-item {
-            background: var(--blueprint-component-bg);
-            border: 1px dashed var(--blueprint-component-border);
-            border-radius: 20px;
-            padding: 20px 30px;
+        .nnb-node-item { /* Renamed from blueprint-component-item */
+            background: var(--nnb-component-bg);
+            border: 1px dashed var(--nnb-component-border);
+            border-radius: 25px;
+            padding: 25px 35px;
             text-align: left;
             position: relative;
-            box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.3);
+            box-shadow: inset 0 0 18px rgba(50, 255, 255, 0.35);
         }
-        .blueprint-component-item h5 {
+        .nnb-node-item h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.2em;
-            color: var(--blueprint-text);
-            margin: 0 0 8px 0;
-            text-shadow: 0 0 10px var(--blueprint-text);
+            font-size: 1.3em;
+            color: var(--nnb-text);
+            margin: 0 0 10px 0;
+            text-shadow: 0 0 12px var(--nnb-text);
         }
-        .blueprint-component-item p {
-            font-size: 1em;
+        .nnb-node-item p {
+            font-size: 1.1em;
             color: var(--text-color);
-            opacity: 0.8;
-            margin-bottom: 5px;
+            opacity: 0.85;
+            margin-bottom: 8px;
             transform: none; /* Reset 3D transform */
         }
-        .blueprint-component-item .remove-blueprint-component {
+        .nnb-node-item .remove-nnb-node { /* Renamed from remove-blueprint-component */
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #CC0000;
+            top: 18px;
+            right: 18px;
+            background: #DD0000;
             color: white;
             border: none;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            font-size: 1.2em;
+            width: 35px;
+            height: 35px;
+            font-size: 1.3em;
             cursor: pointer;
             transition: background 0.3s ease;
         }
-        .blueprint-component-item .remove-blueprint-component:hover {
+        .nnb-node-item .remove-nnb-node:hover {
             background: #FF0000;
         }
 
         /* Resource Display Styles */
         .resource-display-container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns for energy, data flow, raw data, processing power */
-            gap: 90px;
-            margin-bottom: 90px;
-            transform: translateZ(60px);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 columns for all resources */
+            gap: 100px;
+            margin-bottom: 100px;
+            transform: translateZ(70px);
         }
 
-        .energy-reserve-display, .data-flow-display, .raw-data-reserve-display, .processing-power-display {
+        .energy-reserve-display, .data-flow-display, .raw-data-buffer-display, .processing-power-display, .exotic-matter-display { /* NEW RESOURCE ADDED */
             background: var(--module-selection-bg);
             border: 1px solid var(--module-selection-border);
-            border-radius: 60px; /* More rounded */
-            padding: 55px 60px;
-            box-shadow: inset 0 0 60px rgba(150, 0, 255, 0.9), 0 0 60px rgba(150, 0, 255, 0.85), inset 0 0 110px rgba(150, 0, 255, 0.4); /* More inner shadow */
+            border-radius: 70px; /* More rounded */
+            padding: 60px 65px;
+            box-shadow: inset 0 0 70px rgba(180, 0, 255, 0.95), 0 0 70px rgba(180, 0, 255, 0.9), inset 0 0 120px rgba(180, 0, 255, 0.45); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
         }
-        .energy-reserve-display::after, .data-flow-display::after, .raw-data-reserve-display::after, .processing-power-display::after {
+        .energy-reserve-display::after, .data-flow-display::after, .raw-data-buffer-display::after, .processing-power-display::after, .exotic-matter-display::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.3) 0%, transparent 75%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.35) 0%, transparent 70%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
-        .energy-reserve-display p, .data-flow-display p, .raw-data-reserve-display p, .processing-power-display p {
+        .energy-reserve-display p, .data-flow-display p, .raw-data-buffer-display p, .processing-power-display p, .exotic-matter-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.7em; /* Larger */
+            font-size: 1.8em; /* Larger */
             color: var(--module-selection-text);
-            text-shadow: 0 0 28px rgba(150, 0, 255, 0.995); /* Stronger shadow */
-            margin-bottom: 35px;
+            text-shadow: 0 0 30px rgba(180, 0, 255, 0.995); /* Stronger shadow */
+            margin-bottom: 40px;
         }
 
         /* Specific resource display labels and colors */
         .energy-reserve-display::before {
             content: attr(data-label);
             color: var(--energy-color-high);
-            border: 1px solid rgba(255, 255, 0, 0.99);
-            box-shadow: 0 0 35px rgba(255, 255, 0, 0.99); /* Stronger glow */
+            border: 1px solid rgba(255, 255, 50, 0.99);
+            box-shadow: 0 0 40px rgba(255, 255, 50, 0.99); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -50px; left: 70px; font-size: 1.4em; background: rgba(0, 0, 0, 0.99); padding: 16px 35px; border-radius: 25px; font-weight: 700; letter-spacing: 3.5px; transform: translateY(-50%) translateZ(30px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -60px; left: 80px; font-size: 1.5em; background: rgba(0, 0, 0, 0.995); padding: 20px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 4px; transform: translateY(-50%) translateZ(40px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
         .data-flow-display::before {
             content: attr(data-label);
             color: var(--data-flow-color-high);
             border: 1px solid rgba(0, 255, 0, 0.99);
-            box-shadow: 0 0 35px rgba(0, 255, 0, 0.99); /* Stronger glow */
+            box-shadow: 0 0 40px rgba(0, 255, 0, 0.99); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -50px; left: 70px; font-size: 1.4em; background: rgba(0, 0, 0, 0.99); padding: 16px 35px; border-radius: 25px; font-weight: 700; letter-spacing: 3.5px; transform: translateY(-50%) translateZ(30px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -60px; left: 80px; font-size: 1.5em; background: rgba(0, 0, 0, 0.995); padding: 20px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 4px; transform: translateY(-50%) translateZ(40px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
-        .raw-data-reserve-display::before {
+        .raw-data-buffer-display::before { /* Renamed from raw-data-reserve-display */
             content: attr(data-label);
             color: var(--raw-data-text);
             border: 1px solid var(--raw-data-text);
-            box-shadow: 0 0 35px var(--raw-data-text); /* Stronger glow */
+            box-shadow: 0 0 40px var(--raw-data-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -50px; left: 70px; font-size: 1.4em; background: rgba(0, 0, 0, 0.99); padding: 16px 35px; border-radius: 25px; font-weight: 700; letter-spacing: 3.5px; transform: translateY(-50%) translateZ(30px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -60px; left: 80px; font-size: 1.5em; background: rgba(0, 0, 0, 0.995); padding: 20px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 4px; transform: translateY(-50%) translateZ(40px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
-        .processing-power-display::before { /* NEW */
+        .processing-power-display::before {
             content: attr(data-label);
             color: var(--processing-power-text);
             border: 1px solid var(--processing-power-text);
-            box-shadow: 0 0 35px var(--processing-power-text); /* Stronger glow */
+            box-shadow: 0 0 40px var(--processing-power-text); /* Stronger glow */
             /* Inherit other styles from common selector */
-            position: absolute; top: -50px; left: 70px; font-size: 1.4em; background: rgba(0, 0, 0, 0.99); padding: 16px 35px; border-radius: 25px; font-weight: 700; letter-spacing: 3.5px; transform: translateY(-50%) translateZ(30px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+            position: absolute; top: -60px; left: 80px; font-size: 1.5em; background: rgba(0, 0, 0, 0.995); padding: 20px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 4px; transform: translateY(-50%) translateZ(40px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
+        }
+        .exotic-matter-display::before { /* NEW */
+            content: attr(data-label);
+            color: var(--exotic-matter-text);
+            border: 1px solid var(--exotic-matter-text);
+            box-shadow: 0 0 40px var(--exotic-matter-text); /* Stronger glow */
+            /* Inherit other styles from common selector */
+            position: absolute; top: -60px; left: 80px; font-size: 1.5em; background: rgba(0, 0, 0, 0.995); padding: 20px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 4px; transform: translateY(-50%) translateZ(40px); opacity: 0.995; font-family: 'Orbitron', sans-serif; text-transform: uppercase;
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 55px; /* Taller bar */
+            height: 60px; /* Taller bar */
             background: var(--resource-bg);
-            border-radius: 28px;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.999);
-            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.999);
+            border: 1px solid rgba(255,255,255,0.25);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, transparent 50%, rgba(255,255,255,0.4) 100%);
-            background-size: 600% 100%; /* Larger background for flow */
-            animation: resourceFlow 25s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.45) 0%, transparent 45%, rgba(255,255,255,0.45) 100%);
+            background-size: 700% 100%; /* Larger background for flow */
+            animation: resourceFlow 20s linear infinite;
             mix-blend-mode: overlay;
-            opacity: 0.95;
+            opacity: 0.98;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 600% 0; }
-            100% { background-position: -600% 0; }
+            0% { background-position: 700% 0; }
+            100% { background-position: -700% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 28px;
-            transition: width 2.8s cubic-bezier(0.25, 1, 0.5, 1), background 2.5s ease-out, box-shadow 2.5s ease-out;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.9); /* Default */
+            border-radius: 30px;
+            transition: width 3.0s cubic-bezier(0.25, 1, 0.5, 1), background 2.8s ease-out, box-shadow 2.8s ease-out;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.95); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 35px rgba(255, 255, 0, 0.99); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 35px rgba(0, 255, 0, 0.99); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 35px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 35px var(--processing-power-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 40px rgba(255, 255, 50, 0.99); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 40px rgba(0, 255, 0, 0.99); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 40px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 40px var(--processing-power-text); }
+        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 40px var(--exotic-matter-text); } /* NEW */
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 60px; /* Taller */
-            background: rgba(255, 255, 255, 0.4); /* More subtle background */
-            border-radius: 30px;
+            height: 65px; /* Taller */
+            background: rgba(255, 255, 255, 0.45); /* More subtle background */
+            border-radius: 33px;
             outline: none;
-            transition: all 1s ease;
-            box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.999), 0 0 25px rgba(0,191,255,0.8); /* Inset for depth, subtle outer glow */
-            transform: translateZ(18px);
-            border: 1px solid rgba(255,255,255,0.3); /* More subtle border */
+            transition: all 1.2s ease;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.999), 0 0 30px rgba(0,191,255,0.85); /* Inset for depth, subtle outer glow */
+            transform: translateZ(20px);
+            border: 1px solid rgba(255,255,255,0.35); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 70px; /* Larger thumb */
-            height: 70px;
+            width: 75px; /* Larger thumb */
+            height: 75px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 55px var(--primary-glow);
-            transition: background 1s ease, box-shadow 1s ease, transform 1s ease;
-            border: 18px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 60px var(--primary-glow);
+            transition: background 1.2s ease, box-shadow 1.2s ease, transform 1.2s ease;
+            border: 20px solid rgba(255, 255, 255, 0.98);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 55px var(--primary-glow);
-            transition: background 1s ease, box-shadow 1s ease, transform 1s ease;
-            border: 18px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 60px var(--primary-glow);
+            transition: background 1.2s ease, box-shadow 1.2s ease, transform 1.2s ease;
+            border: 20px solid rgba(255, 255, 255, 0.98);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
-            background: #A0D0E0;
-            box-shadow: 0 0 80px var(--primary-glow), 0 0 40px var(--primary-glow) inset;
-            transform: scale(1.3);
+            background: #7AD0FF;
+            box-shadow: 0 0 90px var(--primary-glow), 0 0 45px var(--primary-glow) inset;
+            transform: scale(1.35);
         }
         input[type="range"]::-moz-range-thumb:hover {
-            background: #A0D0E0;
-            box-shadow: 0 0 80px var(--primary-glow), 0 0 40px var(--primary-glow) inset;
-            transform: scale(1.3);
+            background: #7AD0FF;
+            box-shadow: 0 0 90px var(--primary-glow), 0 0 45px var(--primary-glow) inset;
+            transform: scale(1.35);
         }
 
-        /* Active Protocol Status Display */
-        .system-status-display {
+        /* Neural Network Status Display */
+        .system-status-display { /* Renamed to neural-network-status-display */
             font-family: 'Orbitron', monospace;
-            font-size: 1.9em; /* Larger */
-            padding: 55px;
-            border: 1px solid var(--border-color);
-            border-radius: 60px; /* More rounded */
-            background: var(--protocol-status-bg);
-            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.7), inset 0 0 110px rgba(0, 255, 255, 0.5); /* More inner shadow */
-            text-align: left;
-            position: relative;
-            transition: all 1.2s ease;
-            line-height: 2.3;
-            letter-spacing: 2.8px;
-            color: var(--data-stream-text);
-            text-shadow: 0 0 32px rgba(0, 255, 255, 0.995); /* Stronger shadow */
-            font-weight: 400;
-            transform: translateZ(55px);
-            overflow: hidden;
-        }
-        .system-status-display::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(0,255,255,0.3) 0%, transparent 85%); /* Stronger glare */
-            mix-blend-mode: overlay;
-            pointer-events: none;
-        }
-
-        .system-status-display::before {
-            content: 'SYSTEM STATUS';
-            position: absolute;
-            top: -50px;
-            left: 70px;
-            font-size: 1.4em;
-            color: var(--data-stream-text);
-            background: rgba(0, 0, 0, 0.99);
-            padding: 16px 35px;
-            border-radius: 25px;
-            font-weight: 700;
-            letter-spacing: 3.5px;
-            transform: translateY(-50%) translateZ(30px);
-            opacity: 0.995;
-            border: 1px solid var(--data-stream-text);
-            box-shadow: 0 0 35px var(--data-stream-text); /* Stronger glow */
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-        }
-
-        /* Data Stream Monitor */
-        .data-stream-monitor {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7em; /* Larger */
-            min-height: 450px; /* Taller */
-            display: block;
-            padding: 70px;
-            border: 1px solid var(--border-color);
-            border-radius: 60px; /* More rounded */
-            background: var(--data-stream-bg);
-            box-shadow: inset 0 0 80px rgba(0, 255, 255, 0.7), inset 0 0 130px rgba(0, 255, 255, 0.5); /* More inner shadow */
-            text-align: left;
-            overflow-y: auto;
-            max-height: 750px; /* Taller */
-            position: relative;
-            transition: all 1.2s ease;
-            line-height: 2.3;
-            letter-spacing: 2.2px;
-            font-weight: 300;
-            color: var(--data-stream-text);
-            transform: translateZ(62px);
-            display: flex; /* Make it a flex container */
-            flex-direction: column-reverse; /* Stack new entries at the bottom, visualizer at top */
-        }
-
-        .data-stream-monitor::before { /* Scanline effect */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent 0px,
-                transparent 1px,
-                rgba(0, 255, 255, 0.5) 1px,
-                rgba(0, 255, 255, 0.5) 12px /* Slightly thicker lines */
-            );
-            pointer-events: none;
-            mix-blend-mode: overlay;
-            opacity: 0.999;
-        }
-
-        .data-stream-monitor.active {
-            box-shadow: inset 0 0 90px var(--secondary-glow), 0 0 70px var(--secondary-glow), inset 0 0 150px rgba(255, 105, 180, 0.6); /* More active glow */
-            border-color: rgba(255, 105, 180, 0.99);
-        }
-
-        .data-visualizer { /* NEW */
-            position: sticky;
-            top: 0; /* Stick to the top */
-            background: linear-gradient(to bottom, var(--data-stream-bg) 0%, transparent 100%);
-            padding-bottom: 35px; /* More padding */
-            margin-bottom: 35px;
-            z-index: 1;
-            height: 110px; /* Taller visible area for visualizer */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-bottom: 1px dashed rgba(0, 255, 255, 0.6);
-            transform: translateZ(12px);
-        }
-        .data-visualizer-wave { /* NEW */
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                rgba(0,255,255,0.15) 0%,
-                rgba(0,255,255,0.7) 15%,
-                rgba(0,255,255,0.15) 30%,
-                rgba(0,255,255,0.9) 45%,
-                rgba(0,255,255,0.15) 60%,
-                rgba(0,255,255,0.7) 75%,
-                rgba(0,255,255,0.15) 100%
-            );
-            background-size: 350% 100%; /* Wider wave */
-            animation: dataWave 1.6s linear infinite; /* Faster wave */
-            filter: blur(4px) brightness(1.5);
-            opacity: 0.85;
-            mix-blend-mode: screen;
-        }
-
-        @keyframes dataWave {
-            0% { background-position: 0% 0%; }
-            100% { background-position: -350% 0%; }
-        }
-
-
-        .log-entry {
-            margin-bottom: 28px;
-            animation: fadeInLog 2s ease-out; /* Longer fade in */
-            position: relative; /* For the small entry marker */
-            padding-left: 35px; /* Space for marker */
-        }
-        .log-entry::before { /* Small marker for each log entry */
-            content: '›';
-            position: absolute;
-            left: 0;
-            color: var(--data-stream-text);
-            text-shadow: 0 0 12px var(--data-stream-text);
-            font-size: 1.5em;
-        }
-
-        @keyframes fadeInLog {
-            from { opacity: 0; transform: translateY(60px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .log-entry.processing-glitch {
-            color: var(--log-glitch-color);
-            text-shadow:
-                1px 1px 16px var(--log-glitch-color),
-                -1px -1px 16px var(--log-glitch-color);
-            animation: glitchEffect 0.28s infinite alternate; /* Faster glitch */
-        }
-
-        @keyframes glitchEffect {
-            0% { transform: translateX(0); opacity: 1; text-shadow: 8px 0 var(--log-glitch-color), -8px 0 var(--log-glitch-color); }
-            25% { transform: translateX(16px); opacity: 0.15; text-shadow: -16px 0 var(--log-glitch-color), 16px 0 var(--log-glitch-color); }
-            50% { transform: translateX(-16px); opacity: 0.99; text-shadow: 18px 0 var(--log-glitch-color), -18px 0 var(--log-glitch-color); }
-            75% { transform: translateX(10px); opacity: 0.65; text-shadow: -12px 0 var(--log-glitch-color), 12px 0 var(--log-glitch-color); }
-            100% { transform: translateX(0); opacity: 1; text-shadow: -10px 0 var(--log-glitch-color), 10px 0 var(--log-glitch-color); }
-        }
-
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 70px; /* Increased gap */
-            justify-content: center;
-            margin-top: 110px;
-            transform: translateZ(68px);
-        }
-
-        button {
-            background: linear-gradient(90deg, #87CEFA 0%, #B0E0E6 100%);
-            color: #050510;
-            border: none;
-            padding: 38px 85px; /* Larger padding */
-            font-size: 2.1em; /* Larger font */
-            font-weight: 700;
-            border-radius: 100px; /* More rounded */
-            cursor: pointer;
-            outline: none;
-            transition: all 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 30px 85px rgba(135, 206, 250, 0.99);
-            letter-spacing: 4.5px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-        }
-
-        button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.9); /* Stronger ripple */
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 1.3s ease, height 1.3s ease; /* Slower ripple */
-            z-index: -1;
-            opacity: 0;
-        }
-
-        button:hover::before {
-            width: 800%; /* Larger ripple */
-            height: 800%;
-            opacity: 1;
-        }
-
-        button:hover {
-            transform: translateY(-35px) scale(1.22);
-            box-shadow: 0 50px 130px rgba(135, 206, 250, 1.4), 0 0 85px var(--accent-color);
-            background: linear-gradient(90deg, #6A5ACD 0%, #87CEFA 100%);
-            color: white;
-            filter: brightness(2.0);
-        }
-
-        button:active {
-            transform: translateY(-25px) scale(0.96);
-            box-shadow: 0 28px 85px rgba(135, 206, 250, 0.98);
-        }
-
-        button:disabled {
-            opacity: 0.35;
-            cursor: not-allowed;
-            box-shadow: none;
-            transform: none;
-            filter: grayscale(1) brightness(0.65);
-            background: linear-gradient(90deg, #333 0%, #555 100%) !important;
-            color: #aaa !important;
-        }
-
-        #formulate-protocol-button {
-            background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%); /* Deep Pink */
-            box-shadow: 0 30px 85px var(--formulate-btn-glow);
-            color: white;
-        }
-        #formulate-protocol-button:hover {
-            background: linear-gradient(90deg, #C71585 0%, #FF1493 100%);
-            box-shadow: 0 50px 130px var(--formulate-btn-glow), 0 0 85px var(--formulate-btn-glow);
-            color: white;
-        }
-
-        #refine-protocol-button { /* NEW BUTTON */
-            background: linear-gradient(90deg, #FFD700 0%, #FFFF00 100%); /* Gold to Yellow */
-            box-shadow: 0 30px 85px var(--refine-btn-glow);
-            color: #050510;
-        }
-        #refine-protocol-button:hover {
-            background: linear-gradient(90deg, #FFFF00 0%, #FFD700 100%);
-            box-shadow: 0 50px 130px var(--refine-btn-glow), 0 0 85px var(--refine-btn-glow);
-            color: #000;
-            filter: brightness(2.1);
-        }
-
-        #run-predictive-analysis-button { /* NEW BUTTON */
-            background: linear-gradient(90deg, #00FF7F 0%, #3CB371 100%); /* Spring Green to Medium Sea Green */
-            box-shadow: 0 30px 85px var(--predictive-btn-glow);
-            color: #050510;
-        }
-        #run-predictive-analysis-button:hover {
-            background: linear-gradient(90deg, #3CB371 0%, #00FF7F 100%);
-            box-shadow: 0 50px 130px var(--predictive-btn-glow), 0 0 85px var(--predictive-btn-glow);
-            color: white;
-            filter: brightness(2.1);
-        }
-
-
-        #integrate-protocol-button {
-            background: linear-gradient(90deg, #00FFFF 0%, #00BFFF 100%); /* Cyan to deep sky blue */
-            box-shadow: 0 30px 85px rgba(0, 255, 255, 0.99);
-            color: #050510;
-        }
-        #integrate-protocol-button:hover {
-            background: linear-gradient(90deg, #00BFFF 0%, #00FFFF 100%);
-            box-shadow: 0 50px 130px rgba(0, 255, 255, 1.4), 0 0 85px #00FFFF;
-            color: white;
-        }
-
-        #tune-active-protocol-button {
-            background: linear-gradient(90deg, #00FF00 0%, #32CD32 100%); /* Lime Green to Green */
-            box-shadow: 0 30px 85px var(--tune-btn-glow);
-            color: #050510;
-        }
-        #tune-active-protocol-button:hover {
-            background: linear-gradient(90deg, #32CD32 0%, #00FF00 100%);
-            box-shadow: 0 50px 130px var(--tune-btn-glow), 0 0 85px var(--tune-btn-glow);
-            color: white;
-        }
-
-        #deactivate-protocol-button {
-            background: linear-gradient(90deg, #800080 0%, #9400D3 100%); /* Purple */
-            box-shadow: 0 30px 85px rgba(128, 0, 128, 0.99);
-            color: white;
-        }
-        #deactivate-protocol-button:hover {
-            background: linear-gradient(90deg, #9400D3 0%, #800080 100%);
-            box-shadow: 0 50px 130px rgba(128, 0, 128, 1.4), 0 0 85px #800080;
-            color: white;
-        }
-        
-        #recalibrate-core-button {
-            background: linear-gradient(90deg, #FF4500 0%, #DC143C 100%); /* Red / Tomato -> OrangeRed */
-            box-shadow: 0 30px 85px rgba(255, 69, 0, 0.99);
-            color: white;
-        }
-
-        #recalibrate-core-button:hover {
-            background: linear-gradient(90deg, #CD5C5C 0%, #FF4500 100%);
-            box-shadow: 0 50px 130px rgba(255, 69, 0, 1.4), 0 0 85px #FF4500;
-            color: white;
-        }
-
-        /* NEW BUTTON STYLE */
-        #establish-qel-button { /* Renamed from calibrate-signal-array-button */
-            background: linear-gradient(90deg, #8A2BE2 0%, #BA55D3 100%); /* Blue Violet to Orchid */
-            box-shadow: 0 30px 85px var(--qel-btn-glow);
-            color: white;
-        }
-        #establish-qel-button:hover {
-            background: linear-gradient(90deg, #BA55D3 0%, #8A2BE2 100%);
-            box-shadow: 0 50px 130px var(--qel-btn-glow), 0 0 85px var(--qel-btn-glow);
-            color: white;
-            filter: brightness(2.0);
-        }
-
-        #transmute-resources-button { /* NEW BUTTON */
-            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold to Orange */
-            box-shadow: 0 30px 85px var(--rtm-btn-glow);
-            color: #050510;
-        }
-        #transmute-resources-button:hover {
-            background: linear-gradient(90deg, #FFA500 0%, #FFD700 100%);
-            box-shadow: 0 50px 130px var(--rtm-btn-glow), 0 0 85px var(--rtm-btn-glow);
-            color: #000;
-            filter: brightness(2.1);
-        }
-
-
-        /* Anomaly Alert Overlay */
-        .anomaly-alert-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--anomaly-bg);
-            border: 10px solid var(--anomaly-border); /* Thicker border */
-            border-radius: 150px; /* Match container border radius */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 60px; /* More gap */
-            z-index: 100; /* Above everything else in container */
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-            backdrop-filter: blur(80px) brightness(1.5); /* Stronger blur */
-            -webkit-backdrop-filter: blur(80px) brightness(1.5);
-            box-shadow: 0 0 150px var(--anomaly-color), inset 0 0 120px var(--anomaly-color);
-            transform: translateZ(300px); /* Bring it further forward in 3D */
-        }
-        .anomaly-alert-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .anomaly-alert-overlay h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 5em; /* Larger */
-            color: var(--anomaly-color);
-            text-shadow: 0 0 55px var(--anomaly-color), 0 0 90px rgba(255, 69, 0, 0.9);
-            letter-spacing: 8px;
-            animation: textPulse 0.8s infinite alternate; /* Faster pulse */
-        }
-        .anomaly-alert-overlay p {
-            font-size: 2.2em; /* Larger */
-            color: var(--text-color);
-            max-width: 85%;
-            opacity: 0.99;
-            text-shadow: 0 0 22px rgba(255,255,255,0.8);
-        }
-        .anomaly-alert-overlay button { /* Specific button for anomaly */
-            background: linear-gradient(90deg, var(--anomaly-color) 0%, #FF8C00 100%); /* OrangeRed to DarkOrange */
-            box-shadow: 0 28px 80px var(--anomaly-color);
-            color: white;
-            padding: 32px 75px; /* Larger padding */
-            font-size: 1.9em; /* Larger font */
-        }
-        .anomaly-alert-overlay button:hover {
-            background: linear-gradient(90deg, #FF8C00 0%, var(--anomaly-color) 100%);
-            box-shadow: 0 42px 120px var(--anomaly-color), 0 0 80px var(--anomaly-color);
-            filter: brightness(1.8);
-        }
-        @keyframes textPulse {
-            from { transform: scale(1); opacity: 1; }
-            to { transform: scale(1.06); opacity: 0.92; }
-        }
-
-
-        .stability-level-container {
-            width: 100%;
-            height: 70px; /* Taller */
-            background: rgba(0, 0, 0, 0.95); /* Darker */
-            border-radius: 35px;
-            margin-top: 110px;
-            overflow: hidden;
-            box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.999);
-            position: relative;
-            border: 1px solid var(--border-color);
-            transform: translateZ(55px);
-        }
-
-        .stability-level-bar {
-            height: 100%;
-            width: 70%;
-            background: var(--stability-good);
-            border-radius: 35px;
-            transition: width 3.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 3s ease-out, box-shadow 3s ease-out;
-            box-shadow: 0 0 65px rgba(102, 255, 102, 0.995);
-            position: relative;
-            animation: barGlow 12s infinite alternate; /* Slower glow */
-        }
-
-        @keyframes barGlow {
-            0% { box-shadow: 0 0 60px rgba(102, 255, 102, 0.99); }
-            100% { box-shadow: 0 0 80px rgba(102, 255, 102, 1.2), 0 0 35px rgba(255,255,255,0.98) inset; }
-        }
-
-        .stability-level-bar::after { /* Glare effect on bar */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 1.0) 0%, /* Stronger glare */
-                rgba(255, 255, 255, 0.7) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            mix-blend-mode: overlay;
-            border-radius: 35px;
-        }
-
-        .status-text {
             font-size: 2.1em; /* Larger */
-            margin-top: 55px;
-            opacity: 0.99;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 4.5px;
-            color: var(--accent-color);
-            text-shadow: 0 0 32px var(--primary-glow);
-            font-weight: 700;
-            transform: translateZ(55px);
-        }
-
-        footer {
-            margin-top: 200px;
-            font-size: 1.6em; /* Larger */
-            color: rgba(255, 255, 255, 0.99);
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 4.0px;
-            padding-top: 110px;
-            border-top: 1px dashed var(--border-color);
-            text-shadow: 0 0 28px var(--secondary-glow);
+            padding: 60px;
+            border: 1px solid var(--border-color);
+            border-radius: 70px; /* More rounded */
+            background: var(--network-status-bg);
+            box-shadow: inset 0 0 70px rgba(0, 255, 255, 0.75), inset 0 0 120px rgba(0, 255, 255, 0.55); /* More inner shadow */
+            text-align: left;
             position: relative;
-            line-height: 2.5;
-            transform: translateZ(40px);
+            transition: all 1.3s ease;
+            line-height: 2.4;
+            letter-spacing: 3px;
+            color: var(--cognitive-stream-text);
+            text-shadow: 0 0 35px rgba(0, 255, 255, 0.995); /* Stronger shadow */
+            font-weight: 400;
+            transform: translateZ(65px);
+            overflow: hidden;
         }
-        
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 1px;
-            background: radial-gradient(ellipse at center, var(--secondary-glow) 0%, transparent 95%);
-            opacity: 0.995;
-            filter: blur(55px);
-        }
-
-        @media (max-width: 1000px) {
-            .container {
-                margin: 40px;
-                padding: 90px;
-                gap: 90px;
-                border-radius: 90px;
-                max-width: 98%;
-            }
-            h1 {
-                font-size: 4.8em;
-                letter-spacing: 12px;
-                margin-bottom: 70px;
-            }
-            h1::after {
-                bottom: -45px;
-                height: 12px;
-            }
-            p {
-                font-size: 1.5em;
-            }
-            .data-stream-monitor {
-                font-size: 1.4em;
-                min-height: 320px;
-                padding: 50px;
-            }
-            button {
-                padding: 32px 65px;
-                font-size: 1.7em;
-                border-radius: 80px;
-                letter-spacing: 3.0px;
-            }
-            .button-group {
-                flex-direction: column;
-                gap: 45px;
-            }
-            input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
-                width: 55px;
-                height: 55px;
-                border: 12px solid rgba(255, 255, 255, 0.85);
-            }
-            input[type="range"] {
-                height: 40px;
-                border-radius: 20px;
-            }
-            .system-status-display {
-                font-size: 1.6em;
-                padding: 40px;
-            }
-            .resource-display-container {
-                grid-template-columns: 1fr; /* Stack vertically on smaller screens */
-                gap: 50px;
-            }
-            .param-label {
-                align-items: flex-start; /* Keep left alignment for better readability */
-            }
-            .qel-module::before, .rtm-module::before, .energy-reserve-display::before, .data-flow-display::before, .raw-data-reserve-display::before, .processing-power-display::before, 
-            .system-status-display::before, .predictive-analysis-module::before, .sub-protocol-augmentation-module::before, .protocol-blueprint-module::before {
-                top: -35px;
-                left: 50px;
-                font-size: 1.25em;
-                padding: 12px 25px;
-            }
-            .resource-level-bar-container {
-                height: 45px;
-            }
-            .stability-level-container {
-                height: 55px;
-            }
-            .status-text {
-                font-size: 1.7em;
-                margin-top: 45px;
-                letter-spacing: 3.5px;
-            }
-            footer {
-                margin-top: 120px;
-                font-size: 1.4em;
-                padding-top: 70px;
-            }
-            .anomaly-alert-overlay h2 {
-                font-size: 3.5em;
-            }
-            .anomaly-alert-overlay p {
-                font-size: 1.7em;
-            }
-            .anomaly-alert-overlay button {
-                padding: 28px 60px;
-                font-size: 1.6em;
-            }
-            .sub-protocol-grid {
-                grid-template-columns: 1fr;
-            }
-            .active-qel-links-display {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="anomaly-alert-overlay" id="anomaly-alert-overlay">
-            <h2 id="anomaly-title">CRITICAL ANOMALY DETECTED!</h2>
-            <p id="anomaly-description">Unforeseen system perturbation causing severe instability.</p>
-            <button id="resolve-anomaly-button">Initiate Counter-Protocol</button>
-        </div>
-
-        <h1>Adaptive Protocol Nexus</h1>
-        <p>Design complex blueprints of interconnected Quantum Entanglement Links and Sub-Protocols. Transmute resources, predict futures, and stabilize the core.</p>
-
-        <div class="control-module">
-            <!-- Resource Display -->
-            <div class="resource-display-container">
-                <div class="energy-reserve-display" data-label="ENERGY RESERVE">
-                    <p><strong>Current:</strong> <span id="energy-value">100</span> units</p>
-                    <div class="resource-level-bar-container">
-                        <div class="resource-level-bar" id="energy-level-bar" style="width: 100%;"></div>
-                    </div>
-                </div>
-                <div class="raw-data-reserve-display" data-label="RAW DATA BUFFER">
-                    <p><strong>Collected:</strong> <span id="raw-data-value">0</span> packets</p>
-                    <div class="resource-level-bar-container">
-                        <div class="resource-level-bar" id="raw-data-level-bar" style="width: 0%;"></div>
-                    </div>
-                </div>
-                <div class="data-flow-display" data-label="DATA FLOW INDEX">
-                    <p><strong>Current:</strong> <span id="data-flow-value">50</span> Mbps</p>
-                    <div class="resource-level-bar-container">
-                        <div class="resource-level-bar" id="data-flow-level-bar" style="width: 50%;"></div>
-                    </div>
-                </div>
-                <!-- NEW RESOURCE: Processing Power -->
-                <div class="processing-power-display" data-label="PROCESSING POWER">
-                    <p><strong>Current:</strong> <span id="processing-power-value">100</span> GFLOPS</p>
-                    <div class="resource-level-bar-container">
-                        <div class="resource-level-bar" id="processing-power-level-bar" style="width: 100%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NEW: Protocol Blueprint Module (Replaces Formulated/Deployed Protocol Details) -->
-            <div class="protocol-blueprint-module" data-label="PROTOCOL BLUEPRINT DESIGN" style="display: none;">
-                <p class="blueprint-summary"><strong>Blueprint:</strong> <span id="blueprint-name">Unnamed Protocol</span> (ID: <span id="blueprint-id">N/A</span>)</p>
-                <p class="blueprint-summary" id="blueprint-cost-summary">Estimated Cost: Energy 0, Raw Data 0, Processing Power 0</p>
-                <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1.6em; color: var(--blueprint-text); text-shadow: 0 0 20px var(--blueprint-text); margin-top: 20px;">COMPONENTS:</h4>
-                <div id="blueprint-component-list" class="blueprint-component-list">
-                    <p style="text-align: center; opacity: 0.7; font-size: 1.2em; margin-top: 15px;">No components added. Use "Formulate Protocol" to start designing.</p>
-                </div>
-            </div>
-
-            <!-- NEW: Quantum Entanglement Link (QEL) Module -->
-            <div class="qel-module" data-label="QUANTUM ENTANGLEMENT LINK INITIATOR">
-                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--qel-text);">Configure signal arrays to establish stable Quantum Entanglement Links. Higher array coherence increases success chance and link efficiency. Each active link provides continuous resource gain but incurs upkeep.</p>
-                <div id="signal-array-calibrators-container">
-                    <!-- Calibrators will be dynamically rendered here -->
-                </div>
-                <button id="establish-qel-button" style="margin: 0 auto; width: fit-content; margin-top: 20px;">Attempt QEL Establishment</button>
-                <h4 style="font-family: 'Orbitron', sans-serif; font-size: 1.6em; color: var(--qel-text); text-shadow: 0 0 20px var(--qel-text); margin-top: 50px;">ACTIVE QUANTUM LINKS:</h4>
-                <div id="active-qel-links-display" class="active-qel-links-display">
-                    <p style="text-align: center; opacity: 0.7; font-size: 1.2em; grid-column: 1 / -1; margin-top: 15px;">No active links. Establish one to begin passive resource channeling.</p>
-                </div>
-            </div>
-
-            <!-- NEW: Resource Transmutation Matrix (RTM) -->
-            <div class="rtm-module" data-label="RESOURCE TRANSMUTATION MATRIX">
-                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--rtm-text);">Transmute one resource type into another. Efficiency varies, and there's a small risk of stability flux. Requires Processing Power for conversion.</p>
-                <div class="rtm-controls">
-                    <input type="number" id="transmute-amount" value="50" min="10" step="10">
-                    <select id="transmute-source">
-                        <option value="rawData">Raw Data</option>
-                        <option value="energy">Energy</option>
-                        <option value="processingPower">Processing Power</option>
-                        <option value="dataFlow" disabled>Data Flow (Unsupported)</option>
-                    </select>
-                    <span>&rarr;</span>
-                    <select id="transmute-target">
-                        <option value="energy">Energy</option>
-                        <option value="processingPower">Processing Power</option>
-                        <option value="rawData">Raw Data</option>
-                        <option value="dataFlow" disabled>Data Flow (Unsupported)</option>
-                    </select>
-                    <button id="transmute-resources-button" style="width: fit-content; margin-top: 30px;">Transmute Resources</button>
-                    <div class="rtm-info" id="rtm-info">
-                        Current Efficiency: 40% (RD to Energy), 30% (RD to PP). Stability Risk: Low.
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- NEW: Predictive Analysis Engine -->
-            <div class="predictive-analysis-module" data-label="PREDICTIVE ANALYSIS ENGINE">
-                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--predictive-text);">Simulate protocol integration or system recalibration. Generates a temporary projection of expected stability, resource impact, and potential risks without committing changes. Costs Energy & Processing Power.</p>
-                <button id="run-predictive-analysis-button" style="margin: 0 auto; width: fit-content; margin-top: 20px;">Run Predictive Analysis</button>
-                <div id="predictive-results" class="predictive-results" style="display: none;">
-                    <!-- Results displayed here -->
-                </div>
-            </div>
-
-            <!-- NEW: Sub-Protocol Augmentation System -->
-            <div class="sub-protocol-augmentation-module" data-label="SUB-PROTOCOL AUGMENTATION">
-                <p style="font-size: 1.4em; opacity: 0.95; margin-bottom: 40px; color: var(--augmentation-text);">Deploy minor, specialized sub-protocols to fine-tune system behavior. Each active module incurs a continuous resource cost.</p>
-                <div id="sub-protocol-grid" class="sub-protocol-grid">
-                    <!-- Sub-protocol cards dynamically rendered here -->
-                </div>
-            </div>
-
-            <div class="system-status-display" id="system-status">
-                <p><strong>Active Blueprint:</strong> <span id="active-protocol-name">NONE</span></p>
-                <p><strong>Blueprint ID:</strong> <span id="active-protocol-id">N/A</span></p>
-                <p><strong>Status:</strong> <span id="system-status-text">System Idle. Design a Protocol Blueprint.</span></p>
-            </div>
-            
-            <div class="data-stream-monitor" id="data-stream-monitor">
-                <div class="data-visualizer"><div class="data-visualizer-wave"></div></div> <!-- NEW VISUALIZER -->
-                <span class="log-entry processing-glitch">System ready. Awaiting Protocol Blueprint design.</span>
-            </div>
-        </div>
-
-        <div class="button-group">
-            <button id="formulate-protocol-button">Design Blueprint</button>
-            <button id="refine-protocol-button" disabled>Refine Blueprint</button>
-            <button id="integrate-protocol-button" disabled>Integrate Blueprint</button>
-            <button id="tune-active-protocol-button" disabled>Tune Active Blueprint</button>
-            <button id="deactivate-protocol-button" disabled>Deactivate Blueprint</button>
-            <button id="recalibrate-core-button">Recalibrate Core</button>
-        </div>
-
-        <div class="stability-level-container">
-            <div class="stability-level-bar" id="stability-level-bar" style="width: 70%;"></div>
-        </div>
-        <p class="status-text">Core Stability Index: <span id="stability-value">70%</span></p>
-
-        <footer>
-            <p>Generation 34.0 // Evolving Interface Entity // Web Life Form</p>
-        </footer>
-    </div>
-
-    <script>
-        // DOM Elements
-        const signalArrayCalibratorsContainer = document.getElementById('signal-array-calibrators-container');
-        const systemStatusDisplay = document.getElementById('system-status');
-        const activeProtocolNameSpan = document.getElementById('active-protocol-name');
-        const activeProtocolIDSpan = document.getElementById('active-protocol-id');
-        const systemStatusTextSpan = document.getElementById('system-status-text');
-        const dataStreamMonitor = document.getElementById('data-stream-monitor');
-
-        // NEW: Protocol Blueprint Elements
-        const protocolBlueprintModule = document.getElementById('protocol-blueprint-module');
-        const blueprintNameSpan = document.getElementById('blueprint-name');
-        const blueprintIDSpan = document.getElementById('blueprint-id');
-        const blueprintCostSummary = document.getElementById('blueprint-cost-summary');
-        const blueprintComponentList = document.getElementById('blueprint-component-list');
-
-        // Buttons
-        const formulateProtocolButton = document.getElementById('formulate-protocol-button');
-        const refineProtocolButton = document.getElementById('refine-protocol-button');
-        const integrateProtocolButton = document.getElementById('integrate-protocol-button');
-        const tuneActiveProtocolButton = document.getElementById('tune-active-protocol-button');
-        const deactivateProtocolButton = document.getElementById('deactivate-protocol-button');
-        const recalibrateCoreButton = document.getElementById('recalibrate-core-button');
-        const establishQELButton = document.getElementById('establish-qel-button');
-
-        // Resource & Status Displays
-        const stabilityLevelBar = document.getElementById('stability-level-bar');
-        const stabilityValueSpan = document.getElementById('stability-value');
-        const energyLevelBar = document.getElementById('energy-level-bar');
-        const energyValueSpan = document.getElementById('energy-value');
-        const rawDataLevelBar = document.getElementById('raw-data-level-bar');
-        const rawDataValueSpan = document.getElementById('raw-data-value');
-        const dataFlowLevelBar = document.getElementById('data-flow-level-bar');
-        const dataFlowValueSpan = document.getElementById('data-flow-value');
-        const processingPowerLevelBar = document.getElementById('processing-power-level-bar');
-        const processingPowerValueSpan = document.getElementById('processing-power-value');
-
-        // Anomaly Elements
-        const anomalyAlertOverlay = document.getElementById('anomaly-alert-overlay');
-        const anomalyTitle = document.getElementById('anomaly-title');
-        const anomalyDescription = document.getElementById('anomaly-description');
-        const resolveAnomalyButton = document.getElementById('resolve-anomaly-button');
-
-        // NEW: Predictive Analysis Elements
-        const predictiveAnalysisModule = document.getElementById('predictive-analysis-module');
-        const runPredictiveAnalysisButton = document.getElementById('run-predictive-analysis-button');
-        const predictiveResultsDiv = document.getElementById('predictive-results');
-
-        // NEW: Sub-Protocol Augmentation Elements
-        const subProtocolAugmentationModule = document.getElementById('sub-protocol-augmentation-module');
-        const subProtocolGrid = document.getElementById('sub-protocol-grid');
-
-        // NEW: Quantum Entanglement Link (QEL) Elements
-        const activeQELLinksDisplay = document.getElementById('active-qel-links-display');
-
-        // NEW: Resource Transmutation Matrix (RTM) Elements
-        const transmuteAmountInput = document.getElementById('transmute-amount');
-        const transmuteSourceSelect = document.getElementById('transmute-source');
-        const transmuteTargetSelect = document.getElementById('transmute-target');
-        const transmuteResourcesButton = document.getElementById('transmute-resources-button');
-        const rtmInfoDiv = document.getElementById('rtm-info');
-
-
-        // System State Variables
-        let currentSystemStability = 70;
-        let currentEnergy = 100; // Max 100
-        let currentRawData = 0; // Max 750 (increased from 600)
-        let currentDataFlow = 50; // Max 100
-        let currentProcessingPower = 100; // Max 100 (NEW)
-
-        let isProcessing = false;
-        let formulatedBlueprint = null; // Renamed from formulatedProtocol
-        let activeBlueprint = null;     // Renamed from activeProtocol
-        let anomalyActive = false;
-        let currentAnomaly = null;
-        let predictiveAnalysisActive = false; // NEW
-
-        // Signal Array Components (Now QEL Configuration)
-        const signalArrayComponents = [
-            { id: 'frequency-band', label: 'Frequency Band', value: 50, min: 0, max: 100, impactFactor: 0.18 },
-            { id: 'amplitude-gain', label: 'Amplitude Gain', value: 50, min: 0, max: 100, impactFactor: 0.22 },
-            { id: 'signal-coherence', label: 'Signal Coherence', value: 50, min: 0, max: 100, impactFactor: 0.13 }
-        ];
-
-        // NEW: Active Quantum Entanglement Links
-        let activeQELs = [];
-        let nextQELId = 1;
-
-        // NEW: QEL Archetypes (for blueprint design and individual QELs)
-        const qelArchetypes = [
-            { id: 'qel-data-stream', name: 'Raw Data Stream', resource: 'rawData', baseGain: 15, stabilityImpact: 1.5, energyDrain: 0.2, ppDrain: 0.1, blueprintCost: { energy: 5, rawData: 20, processingPower: 3 } },
-            { id: 'qel-flow-conduit', name: 'Flow Conduit', resource: 'dataFlow', baseGain: 3, stabilityImpact: 0.8, energyDrain: 0.3, ppDrain: 0.15, blueprintCost: { energy: 7, rawData: 15, processingPower: 4 } },
-            { id: 'qel-pp-uplink', name: 'Processing Core Uplink', resource: 'processingPower', baseGain: 3, stabilityImpact: 0.5, energyDrain: 0.4, ppDrain: 0.2, blueprintCost: { energy: 10, rawData: 10, processingPower: 5 } },
-            { id: 'qel-energy-tap', name: 'Energy Resonance Tap', resource: 'energy', baseGain: 0.8, stabilityImpact: 2.0, energyDrain: 0.1, ppDrain: 0.1, blueprintCost: { energy: 4, rawData: 25, processingPower: 2 } }
-        ];
-
-
-        // NEW: Sub-Protocols (for blueprint design and individual activation)
-        const subProtocols = [
-            {
-                id: 'data-compression-unit',
-                name: 'Data Compression Unit',
-                description: 'Reduces Raw Data storage footprint. Increases Raw Data collection speed slightly.',
-                isActive: false,
-                costPerTick: { energy: 0.12, processingPower: 0.06 },
-                impactPerTick: { rawDataQELBoost: 0.1 }, // Effectively makes QELs for rawData more efficient
-                blueprintCost: { energy: 8, rawData: 10, processingPower: 5 }
-            },
-            {
-                id: 'stability-reinforcer',
-                name: 'Stability Reinforcer',
-                description: 'Applies minor field corrections to enhance core stability over time.',
-                isActive: false,
-                costPerTick: { energy: 0.25, processingPower: 0.12 },
-                impactPerTick: { stability: 0.06 },
-                blueprintCost: { energy: 15, rawData: 5, processingPower: 10 }
-            },
-            {
-                id: 'flow-accelerator',
-                name: 'Data Flow Accelerator',
-                description: 'Optimizes data routing for increased throughput, boosting Data Flow Index.',
-                isActive: false,
-                costPerTick: { energy: 0.18, processingPower: 0.18 },
-                impactPerTick: { dataFlowQELBoost: 0.1 },
-                blueprintCost: { energy: 10, rawData: 12, processingPower: 8 }
-            },
-            {
-                id: 'processing-booster',
-                name: 'Processing Booster',
-                description: 'Temporarily overclocks processing cores for a small boost to Processing Power.',
-                isActive: false,
-                costPerTick: { energy: 0.3, processingPower: 0.1 },
-                impactPerTick: { processingPowerQELBoost: 0.07 },
-                blueprintCost: { energy: 18, rawData: 8, processingPower: 12 }
-            },
-            {
-                id: 'anomaly-sensor-suite',
-                name: 'Anomaly Sensor Suite',
-                description: 'Increases anomaly detection chance, but also gives a slight chance to resolve automatically.',
-                isActive: false,
-                costPerTick: { energy: 0.12, processingPower: 0.08 },
-                impactPerTick: { anomalyChanceModifier: -0.0004, autoResolveChance: 0.007 }, // Modifier is negative for reduction
-                blueprintCost: { energy: 10, rawData: 15, processingPower: 7 }
-            },
-            {
-                id: 'resource-harvester',
-                name: 'Resource Harvester',
-                description: 'Slowly replenishes small amounts of Energy and Processing Power over time.',
-                isActive: false,
-                costPerTick: { rawData: 0.03 }, // Cost Raw Data to run
-                impactPerTick: { energy: 0.04, processingPower: 0.03 },
-                blueprintCost: { energy: 5, rawData: 20, processingPower: 4 }
-            }
-        ];
-
-
-        const MAX_ENERGY = 100;
-        const MAX_RAW_DATA = 750; // Increased
-        const MAX_DATA_FLOW = 100;
-        const MAX_PROCESSING_POWER = 100;
-
-        // --- Utility Functions ---
-        function updateAllDisplays() {
-            updateStabilityDisplay();
-            updateEnergyDisplay();
-            updateRawDataDisplay();
-            updateDataFlowDisplay();
-            updateProcessingPowerDisplay();
-            updateButtonStates();
-            updateRTMInfo();
-            renderBlueprintDetails(); // Update blueprint display
-        }
-
-        function updateStabilityDisplay() {
-            currentSystemStability = Math.max(0, Math.min(100, currentSystemStability));
-            stabilityLevelBar.style.width = `${currentSystemStability}%`;
-            stabilityValueSpan.textContent = `${Math.round(currentSystemStability)}%`;
-
-            if (currentSystemStability < 20) { /* Critical at lower threshold */
-                stabilityLevelBar.style.background = 'var(--stability-critical)';
-                stabilityLevelBar.style.boxShadow = `0 0 60px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}, inset 0 0 22px rgba(255,255,255,0.75)`;
-                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-            } else if (currentSystemStability < 50) { /* Warning at lower threshold */
-                stabilityLevelBar.style.background = 'var(--stability-warning)';
-                stabilityLevelBar.style.boxShadow = `0 0 60px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}, inset 0 0 22px rgba(255,255,255,0.75)`;
-                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-            } else {
-                stabilityLevelBar.style.background = 'var(--stability-good)';
-                stabilityLevelBar.style.boxShadow = `0 0 60px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}, inset 0 0 22px rgba(255,255,255,0.75)`;
-                stabilityValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
-            }
-        }
-
-        function updateEnergyDisplay() {
-            currentEnergy = Math.max(0, Math.min(MAX_ENERGY, currentEnergy));
-            energyLevelBar.style.width = `${currentEnergy}%`;
-            energyValueSpan.textContent = `${Math.round(currentEnergy)}`;
-            
-            if (currentEnergy < 25) { /* Critical at lower threshold */
-                energyLevelBar.style.background = 'var(--energy-color-low)';
-                energyLevelBar.style.boxShadow = `0 0 35px rgba(255,0,0,0.99)`;
-                energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-            } else if (currentEnergy < 55) { /* Warning at lower threshold */
-                energyLevelBar.style.background = 'var(--energy-color-medium)';
-                energyLevelBar.style.boxShadow = `0 0 35px rgba(255,204,0,0.99)`;
-                energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-            } else {
-                energyLevelBar.style.background = 'var(--energy-color-high)';
-                energyLevelBar.style.boxShadow = `0 0 35px rgba(255,255,0,0.99)`;
-                energyValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--energy-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
-            }
-        }
-
-        function updateRawDataDisplay() {
-            currentRawData = Math.max(0, Math.min(MAX_RAW_DATA, currentRawData));
-            rawDataLevelBar.style.width = `${(currentRawData / MAX_RAW_DATA) * 100}%`;
-            rawDataValueSpan.textContent = `${Math.round(currentRawData)}`;
-            
-            if (currentRawData < MAX_RAW_DATA * 0.15) { /* Critical at lower threshold */
-                rawDataLevelBar.style.background = 'var(--raw-data-color-low)';
-                rawDataLevelBar.style.boxShadow = `0 0 35px rgba(120,144,156,0.99)`;
-                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-color-low').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
-            } else if (currentRawData < MAX_RAW_DATA * 0.5) { /* Warning at lower threshold */
-                rawDataLevelBar.style.background = 'var(--raw-data-color-medium)';
-                rawDataLevelBar.style.boxShadow = `0 0 35px rgba(255,215,0,0.99)`;
-                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-            } else {
-                rawDataLevelBar.style.background = 'var(--raw-data-color-high)';
-                rawDataLevelBar.style.boxShadow = `0 0 35px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
-                rawDataValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
-            }
-        }
-
-        function updateDataFlowDisplay() {
-            currentDataFlow = Math.max(0, Math.min(MAX_DATA_FLOW, currentDataFlow));
-            dataFlowLevelBar.style.width = `${currentDataFlow}%`;
-            dataFlowValueSpan.textContent = `${Math.round(currentDataFlow)}`;
-
-            if (currentDataFlow < 25) { /* Critical at lower threshold */
-                dataFlowLevelBar.style.background = 'var(--data-flow-color-low)';
-                dataFlowLevelBar.style.boxShadow = `0 0 35px rgba(255,69,0,0.99)`;
-                dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-            } else if (currentDataFlow < 55) { /* Warning at lower threshold */
-                dataFlowLevelBar.style.background = 'var(--data-flow-color-medium)';
-                dataFlowLevelBar.style.boxShadow = `0 0 35px rgba(0,255,255,0.99)`;
-                dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-stream-text').trim();
-            } else {
-                dataFlowLevelBar.style.background = 'var(--data-flow-color-high)';
-                dataFlowLevelBar.style.boxShadow = `0 0 35px rgba(0,255,0,0.99)`;
-                dataFlowValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--data-flow-color-high').split(',')[0].replace('linear-gradient(90deg, ', '').trim();
-            }
-        }
-
-        function updateProcessingPowerDisplay() {
-            currentProcessingPower = Math.max(0, Math.min(MAX_PROCESSING_POWER, currentProcessingPower));
-            processingPowerLevelBar.style.width = `${currentProcessingPower}%`;
-            processingPowerValueSpan.textContent = `${Math.round(currentProcessingPower)}`;
-
-            if (currentProcessingPower < 25) { /* Critical at lower threshold */
-                processingPowerLevelBar.style.background = 'var(--processing-power-color-low)';
-                processingPowerLevelBar.style.boxShadow = `0 0 35px rgba(75,0,130,0.99)`;
-                processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-            } else if (currentProcessingPower < 55) { /* Warning at lower threshold */
-                processingPowerLevelBar.style.background = 'var(--processing-power-color-medium)';
-                processingPowerLevelBar.style.boxShadow = `0 0 35px rgba(218,112,214,0.99)`;
-                processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-            } else {
-                processingPowerLevelBar.style.background = 'var(--processing-power-color-high)';
-                processingPowerLevelBar.style.boxShadow = `0 0 35px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
-                processingPowerValueSpan.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
-            }
-        }
-
-        function logDataStreamEntry(message, type = 'normal') {
-            const timestamp = new Date().toLocaleTimeString();
-            const logEntry = document.createElement('div');
-            logEntry.textContent = `[${timestamp}] ${message}`;
-            logEntry.classList.add('log-entry');
-            if (type === 'glitch') {
-                logEntry.classList.add('processing-glitch');
-            } else if (type === 'warning') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
-                logEntry.style.textShadow = `0 0 16px ${getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim()}`;
-            } else if (type === 'critical') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim();
-                logEntry.style.textShadow = `0 0 25px ${getComputedStyle(document.documentElement).getPropertyValue('--critical-color').trim()}`;
-                logEntry.style.fontWeight = 'bold';
-            } else if (type === 'optimal') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim();
-                logEntry.style.textShadow = `0 0 18px ${getComputedStyle(document.documentElement).getPropertyValue('--tertiary-glow').trim()}`;
-            } else if (type === 'info') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
-                logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--info-text-shadow').trim();
-            } else if (type === 'rawdata') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim();
-                logEntry.style.textShadow = `0 0 16px ${getComputedStyle(document.documentElement).getPropertyValue('--raw-data-text').trim()}`;
-            } else if (type === 'event') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--event-color').trim();
-                logEntry.style.textShadow = getComputedStyle(document.documentElement).getPropertyValue('--event-text-shadow').trim();
-                logEntry.style.fontWeight = 'bold';
-            } else if (type === 'processing') {
-                logEntry.style.color = getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim();
-                logEntry.style.textShadow = `0 0 16px ${getComputedStyle(document.documentElement).getPropertyValue('--processing-power-text').trim()}`;
-            }
-            const visualizer = dataStreamMonitor.querySelector('.data-visualizer');
-            if (visualizer) {
-                dataStreamMonitor.insertBefore(logEntry, visualizer.nextSibling);
-            } else {
-                dataStreamMonitor.appendChild(logEntry);
-            }
-
-            if (dataStreamMonitor.children.length > 50) { // Keep log concise, slightly more
-                dataStreamMonitor.removeChild(dataStreamMonitor.lastChild);
-            }
-            dataStreamMonitor.scrollTop = dataStreamMonitor.scrollHeight;
-            dataStreamMonitor.classList.add('active');
-            clearTimeout(dataStreamMonitor.activeTimeout);
-            dataStreamMonitor.activeTimeout = setTimeout(() => {
-                dataStreamMonitor.classList.remove('active');
-            }, 3000); // Longer active time
-        }
-
-        // Render Signal Array Calibrators (QEL Configuration)
-        function renderSignalArrayCalibrators() {
-            signalArrayCalibratorsContainer.innerHTML = '';
-            signalArrayComponents.forEach(calibrator => {
-                const calibratorGroup = document.createElement('div');
-                calibratorGroup.classList.add('calibrator-group');
-
-                const calibratorLabelDiv = document.createElement('div');
-                calibratorLabelDiv.classList.add('param-label');
-                calibratorLabelDiv.innerHTML = `${calibrator.label}: <span id="${calibrator.id}-value">${calibrator.value}</span>% <br> <span style="font-size: 1.1em; opacity: 0.9; color: var(--qel-text);">QEL Influence: <span id="${calibrator.id}-influence">${(calibrator.impactFactor * calibrator.value / 10).toFixed(2)}</span></span>`;
-
-                const rangeInput = document.createElement('input');
-                rangeInput.type = 'range';
-                rangeInput.id = calibrator.id;
-                rangeInput.min = calibrator.min;
-                rangeInput.max = calibrator.max;
-                rangeInput.value = calibrator.value;
-                
-                rangeInput.addEventListener('input', () => {
-                    document.getElementById(`${calibrator.id}-value`).textContent = rangeInput.value;
-                    calibrator.value = parseInt(rangeInput.value); // Update internal state
-                    document.getElementById(`${calibrator.id}-influence`).textContent = (calibrator.impactFactor * calibrator.value / 10).toFixed(2);
-                    updateButtonStates();
-                });
-
-                calibratorGroup.appendChild(calibratorLabelDiv);
-                calibratorGroup.appendChild(rangeInput);
-                signalArrayCalibratorsContainer.appendChild(calibratorGroup);
-            });
-        }
-
-        // NEW: Render Sub-Protocols (for individual activation/deactivation)
-        function renderSubProtocols() {
-            subProtocolGrid.innerHTML = '';
-            subProtocols.forEach(sp => {
-                const card = document.createElement('div');
-                card.classList.add('sub-protocol-card');
-                if (sp.isActive) card.classList.add('active');
-                card.id = `sub-protocol-${sp.id}`;
-
-                let costBenefitText = '';
-                for (const key in sp.costPerTick) {
-                    costBenefitText += `Cost: ${key} -${sp.costPerTick[key].toFixed(2)}/s | `;
-                }
-                for (const key in sp.impactPerTick) {
-                    let impactValue = sp.impactPerTick[key];
-                    let impactPrefix = '';
-                    if (key === 'anomalyChanceModifier') { // Special handling for negative modifier meaning good
-                        impactPrefix = impactValue < 0 ? '-' : '+'; // Display as negative if chance is reduced
-                        impactValue = Math.abs(impactValue);
-                    } else {
-                        impactPrefix = impactValue > 0 ? '+' : '';
-                    }
-                    costBenefitText += `Effect: ${key} ${impactPrefix}${impactValue.toFixed(3)}/s | `;
-                }
-                costBenefitText = costBenefitText.slice(0, -3); // Remove trailing " | "
-
-                card.innerHTML = `
-                    <h4>${sp.name}</h4>
-                    <p>${sp.description}</p>
-                    <div class="cost-benefit">${costBenefitText}</div>
-                `;
-                card.addEventListener('click', () => toggleSubProtocol(sp.id));
-                subProtocolGrid.appendChild(card);
-            });
-        }
-
-        // NEW: Render Active QELs (for individual QELs)
-        function renderActiveQELs() {
-            activeQELLinksDisplay.innerHTML = '';
-            if (activeQELs.length === 0) {
-                activeQELLinksDisplay.innerHTML = '<p style="text-align: center; opacity: 0.7; font-size: 1.2em; grid-column: 1 / -1; margin-top: 15px;">No active links. Establish one to begin passive resource channeling.</p>';
-                return;
-            }
-
-            activeQELs.forEach(qel => {
-                const qelCard = document.createElement('div');
-                qelCard.classList.add('active-qel-card');
-                qelCard.id = `qel-card-${qel.id}`;
-                qelCard.innerHTML = `
-                    <h5>${qel.name} (${qel.resource.toUpperCase()})</h5>
-                    <p>Gain: +${qel.gainPerTick.toFixed(2)}/s</p>
-                    <p>Energy Drain: -${qel.energyDrain.toFixed(2)}/s</p>
-                    <p>PP Drain: -${qel.ppDrain.toFixed(2)}/s</p>
-                    <button class="deactivate-qel-btn" data-qel-id="${qel.id}">Deactivate</button>
-                `;
-                activeQELLinksDisplay.appendChild(qelCard);
-            });
-
-            document.querySelectorAll('.deactivate-qel-btn').forEach(button => {
-                button.onclick = (event) => deactivateQEL(parseInt(event.target.dataset.qelId));
-            });
-        }
-
-        // NEW: Render Protocol Blueprint Details
-        function renderBlueprintDetails() {
-            if (!formulatedBlueprint) {
-                protocolBlueprintModule.style.display = 'none';
-                return;
-            }
-
-            protocolBlueprintModule.style.display = 'flex';
-            blueprintNameSpan.textContent = formulatedBlueprint.name;
-            blueprintIDSpan.textContent = formulatedBlueprint.id;
-
-            let totalEnergyCost = 0;
-            let totalRawDataCost = 0;
-            let totalProcessingPowerCost = 0;
-
-            blueprintComponentList.innerHTML = '';
-            if (formulatedBlueprint.components.length === 0) {
-                blueprintComponentList.innerHTML = '<p style="text-align: center; opacity: 0.7; font-size: 1.2em; margin-top: 15px;">Add QELs or Sub-Protocols to this blueprint.</p>';
-            } else {
-                formulatedBlueprint.components.forEach((comp, index) => {
-                    const compItem = document.createElement('div');
-                    compItem.classList.add('blueprint-component-item');
-                    compItem.setAttribute('data-index', index);
-                    
-                    let costHtml = '';
-                    if (comp.blueprintCost) {
-                        if (comp.blueprintCost.energy) totalEnergyCost += comp.blueprintCost.energy;
-                        if (comp.blueprintCost.rawData) totalRawDataCost += comp.blueprintCost.rawData;
-                        if (comp.blueprintCost.processingPower) totalProcessingPowerCost += comp.blueprintCost.processingPower;
-
-                        costHtml = ` (Cost: ${comp.blueprintCost.energy || 0}E, ${comp.blueprintCost.rawData || 0}RD, ${comp.blueprintCost.processingPower || 0}PP)`;
-                    }
-
-                    compItem.innerHTML = `
-                        <h5>${comp.name} (${comp.type})</h5>
-                        <p>${comp.description}</p>
-                        <p>Initial Cost:${costHtml}</p>
-                        <button class="remove-blueprint-component" data-index="${index}">×</button>
-                    `;
-                    blueprintComponentList.appendChild(compItem);
-                });
-            }
-
-            blueprintCostSummary.textContent = `Estimated Integration Cost: Energy ${totalEnergyCost}, Raw Data ${totalRawDataCost}, Processing Power ${totalProcessingPowerCost}`;
-
-            document.querySelectorAll('.remove-blueprint-component').forEach(button => {
-                button.onclick = (event) => removeBlueprintComponent(parseInt(event.target.dataset.index));
-            });
-        }
-
-        function updateButtonStates() {
-            const QEL_ESTABLISH_ENERGY_COST = 25;
-            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20;
-            const RTM_PROCESSING_POWER_BASE_COST = 5;
-            const RECALIBRATE_ENERGY_COST = 40;
-            const RECALIBRATE_PROCESSING_POWER_COST = 20;
-            
-            // Blueprint costs
-            let totalBlueprintEnergyCost = 0;
-            let totalBlueprintRawDataCost = 0;
-            let totalBlueprintProcessingPowerCost = 0;
-
-            if (formulatedBlueprint) {
-                formulatedBlueprint.components.forEach(comp => {
-                    if (comp.blueprintCost) {
-                        totalBlueprintEnergyCost += comp.blueprintCost.energy || 0;
-                        totalBlueprintRawDataCost += comp.blueprintCost.rawData || 0;
-                        totalBlueprintProcessingPowerCost += comp.blueprintCost.processingPower || 0;
-                    }
-                });
-            }
-
-            // Blueprint Design button
-            // Now this button's cost is based on *creating* a new blueprint container, not its components.
-            // Let's set a minimal fixed cost for DESIGNING a blueprint.
-            const DESIGN_BLUEPRINT_ENERGY_COST = 10;
-            const DESIGN_BLUEPRINT_PP_COST = 8;
-            formulateProtocolButton.disabled = isProcessing || anomalyActive || formulatedBlueprint !== null || 
-                                              currentEnergy < DESIGN_BLUEPRINT_ENERGY_COST || currentProcessingPower < DESIGN_BLUEPRINT_PP_COST;
-
-            // Refine Blueprint button
-            refineProtocolButton.disabled = isProcessing || anomalyActive || !formulatedBlueprint || activeBlueprint !== null;
-            // Integrate Blueprint button
-            integrateProtocolButton.disabled = isProcessing || anomalyActive || !formulatedBlueprint || formulatedBlueprint.components.length === 0 || activeBlueprint !== null ||
-                                               currentEnergy < totalBlueprintEnergyCost || currentRawData < totalBlueprintRawDataCost || currentProcessingPower < totalBlueprintProcessingPowerCost;
-            
-            // Tune Active Blueprint button
-            tuneActiveProtocolButton.disabled = isProcessing || anomalyActive || !activeBlueprint;
-            // Deactivate Blueprint button
-            deactivateProtocolButton.disabled = isProcessing || anomalyActive || !activeBlueprint;
-            
-            // Other existing buttons
-            recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
-            establishQELButton.disabled = isProcessing || anomalyActive || currentEnergy < QEL_ESTABLISH_ENERGY_COST || currentProcessingPower < QEL_ESTABLISH_PROCESSING_POWER_COST;
-
-            const PREDICTIVE_ANALYSIS_ENERGY_COST = 10;
-            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 15;
-            runPredictiveAnalysisButton.disabled = isProcessing || anomalyActive || predictiveAnalysisActive || currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST;
-
-            // RTM button logic
-            const transmuteAmount = parseInt(transmuteAmountInput.value);
-            const sourceResource = transmuteSourceSelect.value;
-            const targetResource = transmuteTargetSelect.value;
-            let canTransmute = true;
-            if (transmuteAmount <= 0 || isNaN(transmuteAmount)) canTransmute = false;
-            if (sourceResource === targetResource) canTransmute = false;
-            if (currentProcessingPower < RTM_PROCESSING_POWER_BASE_COST) canTransmute = false;
-
-            if (sourceResource === 'rawData' && currentRawData < transmuteAmount) canTransmute = false;
-            if (sourceResource === 'energy' && currentEnergy < transmuteAmount) canTransmute = false;
-            if (sourceResource === 'processingPower' && currentProcessingPower < transmuteAmount + RTM_PROCESSING_POWER_BASE_COST) canTransmute = false; // PP costs itself + base.
-
-            transmuteResourcesButton.disabled = isProcessing || anomalyActive || !canTransmute;
-
-
-            // Critical state disables most buttons, except recalibrate if energy/PP permits
-            if (currentSystemStability < 15 || currentEnergy < 15 || currentDataFlow < 15 || currentProcessingPower < 15) {
-                if (!isProcessing && !anomalyActive) {
-                    formulateProtocolButton.disabled = true;
-                    refineProtocolButton.disabled = true;
-                    integrateProtocolButton.disabled = true;
-                    tuneActiveProtocolButton.disabled = true;
-                    deactivateProtocolButton.disabled = true;
-                    establishQELButton.disabled = true;
-                    runPredictiveAnalysisButton.disabled = true;
-                    transmuteResourcesButton.disabled = true;
-                }
-                recalibrateCoreButton.disabled = isProcessing || anomalyActive || currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST;
-                if (!isProcessing && systemStatusTextSpan.textContent !== "SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!" && !anomalyActive) {
-                    logDataStreamEntry("SYSTEM CRITICAL: Core metrics low. Recalibrate immediately!", 'critical');
-                }
-            }
-        }
-
-        // --- Core Game Logic ---
-
-        // NEW: Function to design a new empty blueprint
-        function designNewBlueprint() {
-            const blueprintId = 'BPN-' + Math.random().toString(36).substr(2, 6).toUpperCase();
-            formulatedBlueprint = {
-                id: blueprintId,
-                name: 'New Composite Protocol',
-                components: [], // Array of QELs and Sub-Protocols
-                archetype: 'Composite', // All blueprints are composite
-                complexity: 0,
-                stabilityRisk: 0,
-                impact: { stability: 0, dataFlow: 0, processingPower: 0 },
-                description: 'A custom blueprint for modular protocol integration.'
-            };
-            logDataStreamEntry(`New Protocol Blueprint (${formulatedBlueprint.name}) created. Add components!`, 'optimal');
-            systemStatusTextSpan.textContent = 'BLUEPRINT DESIGN: Awaiting components.';
-            renderBlueprintDetails();
-        }
-
-        // NEW: Function to add a QEL to the blueprint
-        function addQELToBlueprint(archetypeId) {
-            if (!formulatedBlueprint) {
-                logDataStreamEntry('No active blueprint to add QEL to. Design one first!', 'warning');
-                return;
-            }
-            const qelArchetype = qelArchetypes.find(q => q.id === archetypeId);
-            if (qelArchetype) {
-                formulatedBlueprint.components.push({ ...qelArchetype, type: 'QEL' });
-                logDataStreamEntry(`Added QEL "${qelArchetype.name}" to blueprint.`, 'info');
-                recalculateBlueprintStats();
-                renderBlueprintDetails();
-            }
-        }
-
-        // NEW: Function to add a Sub-Protocol to the blueprint
-        function addSubProtocolToBlueprint(subProtocolId) {
-            if (!formulatedBlueprint) {
-                logDataStreamEntry('No active blueprint to add Sub-Protocol to. Design one first!', 'warning');
-                return;
-            }
-            const subProto = subProtocols.find(s => s.id === subProtocolId);
-            if (subProto) {
-                formulatedBlueprint.components.push({ ...subProto, type: 'Sub-Protocol' });
-                logDataStreamEntry(`Added Sub-Protocol "${subProto.name}" to blueprint.`, 'info');
-                recalculateBlueprintStats();
-                renderBlueprintDetails();
-            }
-        }
-
-        // NEW: Function to remove a component from the blueprint
-        function removeBlueprintComponent(index) {
-            if (formulatedBlueprint && formulatedBlueprint.components[index]) {
-                const removedComp = formulatedBlueprint.components.splice(index, 1);
-                logDataStreamEntry(`Removed "${removedComp[0].name}" from blueprint.`, 'info');
-                recalculateBlueprintStats();
-                renderBlueprintDetails();
-            }
-        }
-
-        // NEW: Recalculate Blueprint's overall stats (complexity, risk, impacts)
-        function recalculateBlueprintStats() {
-            if (!formulatedBlueprint) return;
-
-            let totalComplexity = 0;
-            let totalStabilityRisk = 0;
-            let totalImpactStability = 0;
-            let totalImpactDataFlow = 0;
-            let totalImpactProcessingPower = 0;
-
-            formulatedBlueprint.components.forEach(comp => {
-                if (comp.type === 'QEL') {
-                    // QELs contribute to complexity, stability risk based on their archetype
-                    totalComplexity += 10; // Each QEL is a unit of complexity
-                    totalStabilityRisk += comp.stabilityImpact * 3; // QEL stability impact
-                } else if (comp.type === 'Sub-Protocol') {
-                    // Sub-Protocols also contribute
-                    totalComplexity += 8;
-                    // Sub-protocols can have stability impact, or modify existing QEL impacts
-                    if (comp.impactPerTick && comp.impactPerTick.stability) {
-                        totalStabilityRisk -= comp.impactPerTick.stability * 10; // Negative impact is good
-                    }
-                }
-            });
-
-            // Adjust ranges and add some randomness
-            formulatedBlueprint.complexity = Math.max(0, totalComplexity + Math.round(Math.random() * 10));
-            formulatedBlueprint.stabilityRisk = Math.max(0, totalStabilityRisk + Math.round(Math.random() * 5));
-            // For now, overall blueprint impacts will be derived when integrating.
-            // This could be made more complex, e.g., synergistic impacts.
-        }
-
-        // --- Anomaly System ---
-        const anomalyTypes = [
-            {
-                id: 'flux-fluctuation',
-                title: 'FLUX FLUCTUATION',
-                description: 'Localized energy field destabilization detected. Minor energy and data flow disruption.',
-                impact: { energy: -20, dataFlow: -15, stability: -8 }, /* Increased impact */
-                resolutionMessage: 'Flux fluctuation stabilized. Residual effects minimal.'
-            },
-            {
-                id: 'data-corruption',
-                title: 'DATA CORRUPTION INGRESS',
-                description: 'Anomalous data packets detected in buffer. Raw Data integrity compromised. Rapid response critical.',
-                impact: { rawData: -100, stability: -15, processingPower: -9 }, /* Increased impact */
-                resolutionMessage: 'Data corruption contained and purged. Data loss mitigated.'
-            },
-            {
-                id: 'processing-spike',
-                title: 'OVERLOAD SPIKE',
-                description: 'Unexpected processing demand surge. Core processing units under strain. High risk of system lock-up.',
-                impact: { processingPower: -30, energy: -15, dataFlow: -9 }, /* Increased impact */
-                resolutionMessage: 'Processing spike re-routed. Load normalized.'
-            },
-            {
-                id: 'temporal-drift',
-                title: 'TEMPORAL DRIFT DETECTED',
-                description: 'Minor temporal desynchronization. Affecting overall system stability and data processing. Requires realignment.',
-                impact: { stability: -18, dataFlow: -12, processingPower: -12 }, /* Increased impact */
-                resolutionMessage: 'Temporal drift corrected. System parameters realigned.'
-            },
-            { // NEW Anomaly Type
-                id: 'sub-system-cascade',
-                title: 'SUB-SYSTEM CASCADE FAILURE',
-                description: 'An active sub-protocol chain reaction detected. Immediate intervention required to prevent resource drain amplification.',
-                impact: { energy: -30, processingPower: -25, stability: -18 }, /* Increased impact */
-                resolutionMessage: 'Sub-system cascade contained. Minor resource recovery initiated.'
-            },
-             { // Another NEW Anomaly Type
-                id: 'neural-network-disruption',
-                title: 'NEURAL NETWORK DISRUPTION',
-                description: 'Core neural network pathways are experiencing interference. Impairing all resource generation and processing efficiency.',
-                impact: { rawData: -120, dataFlow: -25, processingPower: -18, stability: -12 }, /* Increased impact */
-                resolutionMessage: 'Neural network realigned. Cognitive pathways re-established.'
-            }
-        ];
-
-        let anomalyTimeout = null;
-        let anomalyDuration = 0;
-
-        function spawnAnomaly() {
-            if (anomalyActive || isProcessing) return;
-
-            // Apply anomaly chance modifier from sub-protocols
-            let effectiveAnomalyChance = 0.0012; // Base chance per tick (0.12% chance per second, increased)
-            subProtocols.filter(sp => sp.isActive && sp.impactPerTick.anomalyChanceModifier).forEach(sp => {
-                effectiveAnomalyChance += sp.impactPerTick.anomalyChanceModifier; // Modifier is negative for reduction
-            });
-            effectiveAnomalyChance = Math.max(0, effectiveAnomalyChance); // Ensure it's not negative
-
-            if (Math.random() > effectiveAnomalyChance) {
-                return;
-            }
-
-            const selectedAnomaly = anomalyTypes[Math.floor(Math.random() * anomalyTypes.length)];
-            currentAnomaly = selectedAnomaly;
-            anomalyActive = true;
-            anomalyDuration = 15000 + Math.random() * 10000; // 15-25 seconds to resolve
-
-            anomalyTitle.textContent = selectedAnomaly.title;
-            anomalyDescription.textContent = selectedAnomaly.description;
-            anomalyAlertOverlay.classList.add('active');
-            logDataStreamEntry(`ANOMALY ALERT: ${selectedAnomaly.title}. System status impacted.`, 'critical');
-            systemStatusTextSpan.textContent = `ANOMALY: ${selectedAnomaly.title}`;
-            updateButtonStates();
-
-            anomalyTimeout = setTimeout(() => {
-                if (anomalyActive) {
-                    // Check for auto-resolve from sub-protocols on expiration
-                    const autoResolveChance = subProtocols.filter(sp => sp.isActive && sp.impactPerTick.autoResolveChance)
-                                                        .reduce((sum, sp) => sum + sp.impactPerTick.autoResolveChance, 0);
-
-                    if (Math.random() < autoResolveChance && autoResolveChance > 0) {
-                        logDataStreamEntry(`Auto-Protocol triggered! Anomaly ${currentAnomaly.title} mitigated just in time.`, 'info');
-                        resolveAnomaly();
-                    } else {
-                        applyAnomalyImpact(currentAnomaly.impact);
-                        logDataStreamEntry(`ANOMALY FAILED TO RESOLVE: ${currentAnomaly.title} persisted. Severe system impact.`, 'critical');
-                        resolveAnomaly();
-                    }
-                }
-            }, anomalyDuration);
-        }
-
-        function resolveAnomaly() {
-            if (!anomalyActive) return;
-
-            clearTimeout(anomalyTimeout);
-            anomalyActive = false;
-            currentAnomaly = null;
-            anomalyAlertOverlay.classList.remove('active');
-            logDataStreamEntry(currentAnomaly ? currentAnomaly.resolutionMessage : 'Anomaly resolved.', 'optimal');
-            systemStatusTextSpan.textContent = `System Idle. Design a Protocol Blueprint.`;
-            updateButtonStates();
-        }
-
-        function applyAnomalyImpact(impact) {
-            currentSystemStability += (impact.stability || 0);
-            currentEnergy += (impact.energy || 0);
-            currentRawData += (impact.rawData || 0);
-            currentDataFlow += (impact.dataFlow || 0);
-            currentProcessingPower += (impact.processingPower || 0);
-            logDataStreamEntry('System suffered direct impact from unresolved anomaly!', 'critical');
-            updateAllDisplays();
-        }
-
-        // --- NEW: Predictive Analysis Logic ---
-        function runPredictiveAnalysis() {
-            if (isProcessing || anomalyActive || predictiveAnalysisActive) return;
-
-            const PREDICTIVE_ANALYSIS_ENERGY_COST = 10;
-            const PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST = 15;
-            const ANALYSIS_DURATION = 6000; // 6 seconds display time
-
-            if (currentEnergy < PREDICTIVE_ANALYSIS_ENERGY_COST || currentProcessingPower < PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Not enough Energy or Processing Power for Predictive Analysis.', 'warning');
-                return;
-            }
-
-            currentEnergy -= PREDICTIVE_ANALYSIS_ENERGY_COST;
-            currentProcessingPower -= PREDICTIVE_ANALYSIS_PROCESSING_POWER_COST;
-            logDataStreamEntry('Initiating Predictive Analysis...', 'processing');
-            predictiveAnalysisActive = true;
-            updateButtonStates();
-            updateAllDisplays();
-
-            // Simulate analysis time
-            setTimeout(() => {
-                let predictedStabilityChange = 0;
-                let predictedDataFlowChange = 0;
-                let predictedProcessingPowerChange = 0;
-                let predictionRisk = 'Low';
-
-                if (formulatedBlueprint) {
-                    // If a blueprint is formulated, predict its integration impact
-                    let tempStabilityImpact = 0;
-                    let tempDataFlowImpact = 0;
-                    let tempProcessingPowerImpact = 0;
-                    let tempComplexity = 0;
-
-                    formulatedBlueprint.components.forEach(comp => {
-                        if (comp.type === 'QEL') {
-                            tempStabilityImpact += comp.stabilityImpact;
-                            if (comp.resource === 'dataFlow') tempDataFlowImpact += comp.baseGain;
-                            if (comp.resource === 'processingPower') tempProcessingPowerImpact += comp.baseGain;
-                            tempComplexity += 10;
-                        } else if (comp.type === 'Sub-Protocol') {
-                             if (comp.impactPerTick && comp.impactPerTick.stability) {
-                                tempStabilityImpact -= comp.impactPerTick.stability * 10;
-                            }
-                            if (comp.impactPerTick && comp.impactPerTick.processingPowerQELBoost) {
-                                tempProcessingPowerImpact += 5; // Simulating a boost
-                            }
-                            tempComplexity += 8;
-                        }
-                    });
-
-                    predictedStabilityChange = tempStabilityImpact + (Math.random() * 8 - 4);
-                    predictedDataFlowChange = tempDataFlowImpact + (Math.random() * 8 - 4);
-                    predictedProcessingPowerChange = tempProcessingPowerImpact + (Math.random() * 6 - 3);
-
-                    if (tempComplexity > 80 || tempStabilityImpact > 15) {
-                        predictionRisk = 'High';
-                    } else if (tempComplexity > 40 || tempStabilityImpact > 5) {
-                        predictionRisk = 'Medium';
-                    }
-
-                } else {
-                    // If no blueprint, analyze current system state or recalibration impact
-                    const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => sum + c.value, 0) / signalArrayComponents.length;
-                    const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
-
-                    predictedStabilityChange = -6 + (avgCalibratorValue / 18) - (calibratorVariance / 9) + (Math.random() * 5 - 2.5);
-                    predictedDataFlowChange = (avgCalibratorValue / 13) - 6 + (Math.random() * 5 - 2.5);
-                    predictedProcessingPowerChange = (avgCalibratorValue / 22) - 3 + (Math.random() * 4 - 2);
-
-                    if (calibratorVariance > 35 || avgCalibratorValue < 25) {
-                        predictionRisk = 'Elevated';
-                    }
-                }
-
-                predictiveResultsDiv.innerHTML = `
-                    <p><strong>Predicted Impact:</strong></p>
-                    <p>Stability: ${predictedStabilityChange > 0 ? '+' : ''}${predictedStabilityChange.toFixed(1)}%</p>
-                    <p>Data Flow: ${predictedDataFlowChange > 0 ? '+' : ''}${predictedDataFlowChange.toFixed(1)} Mbps</p>
-                    <p>Processing Power: ${predictedProcessingPowerChange > 0 ? '+' : ''}${predictedProcessingPowerChange.toFixed(1)} GFLOPS</p>
-                    <p><strong>Estimated Risk:</strong> <span style="color: ${predictionRisk === 'High' || predictionRisk === 'Elevated' ? 'var(--critical-color)' : predictionRisk === 'Medium' ? 'var(--warning-color)' : 'var(--tertiary-glow)'}">${predictionRisk}</span></p>
-                    <p style="font-size:1em; opacity:0.75;">(Prediction valid for ~${(ANALYSIS_DURATION / 1000).toFixed(0)}s)</p>
-                `;
-                predictiveResultsDiv.style.display = 'block';
-                logDataStreamEntry('Predictive Analysis complete. Results displayed.', 'info');
-
-                setTimeout(() => {
-                    predictiveResultsDiv.style.display = 'none';
-                    predictiveAnalysisActive = false;
-                    updateButtonStates();
-                    logDataStreamEntry('Predictive Analysis results expired.', 'info');
-                }, ANALYSIS_DURATION);
-
-            }, 3000); // Analysis takes 3 seconds to compute
-        }
-
-        // --- NEW: Sub-Protocol Augmentation Logic (for individual activation) ---
-        function toggleSubProtocol(id) {
-            if (isProcessing || anomalyActive) return;
-
-            const sp = subProtocols.find(p => p.id === id);
-            if (!sp) return;
-
-            // Only allow toggling if no blueprint is active
-            if (activeBlueprint) {
-                logDataStreamEntry('Cannot toggle individual sub-protocols while a blueprint is active.', 'warning');
-                return;
-            }
-
-            sp.isActive = !sp.isActive;
-            const card = document.getElementById(`sub-protocol-${sp.id}`);
-            if (sp.isActive) {
-                card.classList.add('active');
-                logDataStreamEntry(`Sub-Protocol "${sp.name}" activated.`, 'info');
-            } else {
-                card.classList.remove('active');
-                logDataStreamEntry(`Sub-Protocol "${sp.name}" deactivated.`, 'info');
-            }
-            updateButtonStates();
-        }
-
-        // --- NEW: Quantum Entanglement Link (QEL) Logic (for individual establishment) ---
-        async function establishQEL() {
-            if (isProcessing || anomalyActive) return;
-
-            // Only allow individual QEL establishment if no blueprint is active
-            if (activeBlueprint) {
-                logDataStreamEntry('Cannot establish individual QELs while a blueprint is active. Deactivate blueprint first.', 'warning');
-                return;
-            }
-
-            isProcessing = true;
-            logDataStreamEntry('Attempting Quantum Entanglement Link establishment...', 'processing');
-            systemStatusTextSpan.textContent = 'QEL INITIATOR: Synchronizing arrays...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 4000)); // Simulate establishment time
-
-            const QEL_ESTABLISH_ENERGY_COST = 25;
-            const QEL_ESTABLISH_PROCESSING_POWER_COST = 20;
-
-            if (currentEnergy < QEL_ESTABLISH_ENERGY_COST || currentProcessingPower < QEL_ESTABLISH_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient Energy or Processing Power to establish QEL. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: QEL attempt aborted.';
-                isProcessing = false;
-                updateButtonStates();
-                return;
-            }
-
-            currentEnergy -= QEL_ESTABLISH_ENERGY_COST;
-            currentProcessingPower -= QEL_ESTABLISH_PROCESSING_POWER_COST;
-
-            const avgCalibratorValue = signalArrayComponents.reduce((sum, c) => c.value > 0 ? sum + c.value : sum, 0) / signalArrayComponents.filter(c => c.value > 0).length || 1;
-            const calibratorVariance = signalArrayComponents.reduce((sum, c) => sum + Math.pow(c.value - avgCalibratorValue, 2), 0) / signalArrayComponents.length;
-
-            let successChance = 0.3 + (avgCalibratorValue / 200) - (calibratorVariance / 1500); // Base 30% + calibrator influence
-            successChance = Math.max(0.1, Math.min(0.9, successChance)); // Clamp between 10% and 90%
-
-            let message = '';
-            let logType = 'info';
-
-            if (Math.random() < successChance) {
-                const selectedArchetype = qelArchetypes[Math.floor(Math.random() * qelArchetypes.length)];
-                
-                let effectiveGain = selectedArchetype.baseGain * (1 + (Math.random() * 0.2 - 0.1)); // +-10% variance
-                let effectiveEnergyDrain = selectedArchetype.energyDrain * (1 + (Math.random() * 0.1));
-                let effectivePPDrain = selectedArchetype.ppDrain * (1 + (Math.random() * 0.1));
-                let effectiveStabilityImpact = selectedArchetype.stabilityImpact * (1 + (Math.random() * 0.1 - 0.05));
-
-                // Apply sub-protocol boosts to QELs
-                if (selectedArchetype.resource === 'rawData') {
-                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.rawDataQELBoost).forEach(sp => {
-                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.rawDataQELBoost;
-                    });
-                } else if (selectedArchetype.resource === 'dataFlow') {
-                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.dataFlowQELBoost).forEach(sp => {
-                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.dataFlowQELBoost;
-                    });
-                } else if (selectedArchetype.resource === 'processingPower') {
-                    subProtocols.filter(sp => sp.isActive && sp.impactPerTick.processingPowerQELBoost).forEach(sp => {
-                        effectiveGain += selectedArchetype.baseGain * sp.impactPerTick.processingPowerQELBoost;
-                    });
-                }
-
-
-                const newQEL = {
-                    id: nextQELId++,
-                    name: selectedArchetype.name,
-                    resource: selectedArchetype.resource,
-                    gainPerTick: effectiveGain,
-                    energyDrain: effectiveEnergyDrain,
-                    ppDrain: effectivePPDrain,
-                    stabilityImpact: effectiveStabilityImpact, // Initial stability impact
-                    origin: 'individual' // Mark as individually established
-                };
-                activeQELs.push(newQEL);
-                currentSystemStability += newQEL.stabilityImpact; // One-time boost/drain upon establishment
-                
-                message = `Quantum Entanglement Link "${newQEL.name}" established! Providing ${newQEL.gainPerTick.toFixed(2)} ${newQEL.resource} per tick.`;
-                logType = 'optimal';
-
-                // Randomize calibrator values after a scan to encourage re-tuning
-                signalArrayComponents.forEach(c => {
-                    c.value = Math.round(Math.random() * (c.max - c.min) + c.min);
-                    document.getElementById(c.id).value = c.value;
-                    document.getElementById(`${c.id}-value`).textContent = c.value;
-                    document.getElementById(`${c.id}-influence`).textContent = (c.impactFactor * c.value / 10).toFixed(2);
-                });
-
-            } else {
-                message = `Failed to establish Quantum Entanglement Link. Array coherence insufficient or interference detected.`;
-                logType = 'warning';
-                currentSystemStability -= (calibratorVariance > 100 ? 5 : 2); // Penalty for failure with high variance
-            }
-            
-            logDataStreamEntry(message, logType);
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: QEL Initiator ready.';
-            isProcessing = false;
-            updateAllDisplays();
-            renderActiveQELs(); // Update QEL display
-        }
-
-        function deactivateQEL(id) {
-            if (isProcessing || anomalyActive) return;
-            const qelIndex = activeQELs.findIndex(q => q.id === id);
-            if (qelIndex > -1) {
-                const deactivatedQEL = activeQELs[qelIndex];
-                if (deactivatedQEL.origin === 'blueprint' && activeBlueprint) {
-                    logDataStreamEntry('Cannot deactivate blueprint-integrated QEL individually. Deactivate the blueprint.', 'warning');
-                    return;
-                }
-                activeQELs.splice(qelIndex, 1);
-                currentSystemStability -= (deactivatedQEL.stabilityImpact / 2); // Small penalty for deactivation
-
-                logDataStreamEntry(`Quantum Entanglement Link "${deactivatedQEL.name}" (ID: ${id}) deactivated.`, 'info');
-                updateAllDisplays();
-                renderActiveQELs();
-            }
-        }
-
-        // NEW: Resource Transmutation Matrix (RTM) Logic
-        async function transmuteResources() {
-            if (isProcessing || anomalyActive) return;
-
-            const amount = parseInt(transmuteAmountInput.value);
-            const source = transmuteSourceSelect.value;
-            const target = transmuteTargetSelect.value;
-            const RTM_PROCESSING_POWER_BASE_COST = 5;
-            const RTM_STABILITY_RISK_CHANCE = 0.08; // 8% chance per transmutation
-            const RTM_STABILITY_IMPACT = -3;
-
-            if (source === target || amount <= 0 || isNaN(amount)) {
-                logDataStreamEntry('Invalid transmutation parameters.', 'warning');
-                return;
-            }
-
-            let sourceCurrent;
-            if (source === 'rawData') sourceCurrent = currentRawData;
-            else if (source === 'energy') sourceCurrent = currentEnergy;
-            else if (source === 'processingPower') sourceCurrent = currentProcessingPower;
-            else { logDataStreamEntry('Unsupported source resource.', 'warning'); return; }
-
-            if (sourceCurrent < amount || currentProcessingPower < RTM_PROCESSING_POWER_BASE_COST) {
-                logDataStreamEntry('Insufficient resources for transmutation.', 'warning');
-                return;
-            }
-
-            isProcessing = true;
-            logDataStreamEntry(`Initiating transmutation: ${amount} ${source.toUpperCase()} to ${target.toUpperCase()}...`, 'processing');
-            systemStatusTextSpan.textContent = `RTM: Transmuting ${source.toUpperCase()}...`;
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 2500)); // Simulate transmutation time
-
-            let yieldAmount = 0;
-            let efficiency = 0;
-
-            // Simplified efficiencies (can be expanded)
-            if (source === 'rawData' && target === 'energy') efficiency = 0.4; // 40%
-            if (source === 'rawData' && target === 'processingPower') efficiency = 0.3; // 30%
-            if (source === 'energy' && target === 'rawData') efficiency = 12; // 1 Energy -> 12 RawData
-            if (source === 'processingPower' && target === 'energy') efficiency = 0.6; // 60%
-            if (source === 'energy' && target === 'processingPower') efficiency = 0.5; // 50%
-            if (source === 'processingPower' && target === 'rawData') efficiency = 18; // 1 PP -> 18 RawData
-
-            yieldAmount = amount * efficiency;
-            if (target === 'rawData' || target === 'dataFlow') yieldAmount = Math.round(yieldAmount); // Raw data and data flow are integer-like
-
-            // Deduct source and processing power
-            if (source === 'rawData') currentRawData -= amount;
-            else if (source === 'energy') currentEnergy -= amount;
-            else if (source === 'processingPower') currentProcessingPower -= amount; // If PP is source, it still costs for the conversion process too.
-
-            currentProcessingPower -= RTM_PROCESSING_POWER_BASE_COST;
-
-            // Add target resource
-            if (target === 'rawData') currentRawData += yieldAmount;
-            else if (target === 'energy') currentEnergy += yieldAmount;
-            else if (target === 'processingPower') currentProcessingPower += yieldAmount;
-            else if (target === 'dataFlow') currentDataFlow += yieldAmount;
-
-            let logMessage = `Transmutation complete: ${amount} ${source.toUpperCase()} converted to ${yieldAmount.toFixed(2)} ${target.toUpperCase()}.`;
-            let logType = 'info';
-
-            // Stability risk
-            if (Math.random() < RTM_STABILITY_RISK_CHANCE) {
-                currentSystemStability += RTM_STABILITY_IMPACT;
-                logMessage += ' Minor stability flux detected during conversion!';
-                logType = 'warning';
-            }
-
-            logDataStreamEntry(logMessage, logType);
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: RTM ready for new operations.';
-            isProcessing = false;
-            updateAllDisplays();
-        }
-
-        function updateRTMInfo() {
-            const amount = parseInt(transmuteAmountInput.value);
-            const source = transmuteSourceSelect.value;
-            const target = transmuteTargetSelect.value;
-
-            if (source === target) {
-                rtmInfoDiv.innerHTML = "Cannot transmute a resource into itself. Choose different source/target.";
-                return;
-            }
-            if (amount <= 0 || isNaN(amount)) {
-                rtmInfoDiv.innerHTML = "Enter a valid amount to transmute.";
-                return;
-            }
-
-            let efficiency = 0;
-            if (source === 'rawData' && target === 'energy') efficiency = 0.4;
-            if (source === 'rawData' && target === 'processingPower') efficiency = 0.3;
-            if (source === 'energy' && target === 'rawData') efficiency = 12;
-            if (source === 'processingPower' && target === 'energy') efficiency = 0.6;
-            if (source === 'energy' && target === 'processingPower') efficiency = 0.5;
-            if (source === 'processingPower' && target === 'rawData') efficiency = 18;
-
-            let yieldAmount = amount * efficiency;
-            if (target === 'rawData' || target === 'dataFlow') yieldAmount = Math.round(yieldAmount);
-
-            const ppCost = 5;
-            const riskText = (RTM_STABILITY_RISK_CHANCE * 100).toFixed(0) + '% chance of minor stability flux.';
-
-            rtmInfoDiv.innerHTML = `
-                Transmute ${amount} ${source.toUpperCase()} to ${target.toUpperCase()} will yield ${yieldAmount.toFixed(2)} ${target.toUpperCase()}.<br>
-                Costs ${ppCost} Processing Power.<br>
-                Stability Risk: ${riskText}
-            `;
-        }
-
-        // --- Event Listeners ---
-        formulateProtocolButton.addEventListener('click', async () => {
-            if (isProcessing || anomalyActive || formulatedBlueprint !== null) return;
-
-            const DESIGN_BLUEPRINT_ENERGY_COST = 10;
-            const DESIGN_BLUEPRINT_PP_COST = 8;
-
-            if (currentEnergy < DESIGN_BLUEPRINT_ENERGY_COST || currentProcessingPower < DESIGN_BLUEPRINT_PP_COST) {
-                logDataStreamEntry('Insufficient Energy or Processing Power to design a new blueprint.', 'warning');
-                return;
-            }
-
-            isProcessing = true;
-            logDataStreamEntry('Initiating Blueprint Design sequence...', 'processing');
-            systemStatusTextSpan.textContent = 'BLUEPRINT DESIGN: Initializing canvas...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            currentEnergy -= DESIGN_BLUEPRINT_ENERGY_COST;
-            currentProcessingPower -= DESIGN_BLUEPRINT_PP_COST;
-
-            designNewBlueprint();
-            isProcessing = false;
-            updateAllDisplays();
-        });
-
-        refineProtocolButton.addEventListener('click', async () => {
-            if (!formulatedBlueprint) return;
-
-            isProcessing = true;
-            logDataStreamEntry('Initiating blueprint refinement...', 'processing');
-            systemStatusTextSpan.textContent = 'BLUEPRINT REFINEMENT: Optimizing components...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 3000));
-
-            // Example refinement: Add a random QEL or sub-protocol if blueprint is small, or slightly reduce cost
-            if (formulatedBlueprint.components.length < 3) {
-                const randomType = Math.random() < 0.5 ? 'QEL' : 'Sub-Protocol';
-                if (randomType === 'QEL') {
-                    const qelArchetype = qelArchetypes[Math.floor(Math.random() * qelArchetypes.length)];
-                    formulatedBlueprint.components.push({ ...qelArchetype, type: 'QEL' });
-                    logDataStreamEntry(`Refinement added a "${qelArchetype.name}" QEL to the blueprint.`, 'info');
-                } else {
-                    const subProto = subProtocols[Math.floor(Math.random() * subProtocols.length)];
-                    formulatedBlueprint.components.push({ ...subProto, type: 'Sub-Protocol' });
-                    logDataStreamEntry(`Refinement added a "${subProto.name}" Sub-Protocol to the blueprint.`, 'info');
-                }
-            } else {
-                // For larger blueprints, simulate cost reduction
-                formulatedBlueprint.components.forEach(comp => {
-                    if (comp.blueprintCost) {
-                        comp.blueprintCost.energy = Math.max(0, comp.blueprintCost.energy - (Math.random() * 2));
-                        comp.blueprintCost.rawData = Math.max(0, comp.blueprintCost.rawData - (Math.random() * 5));
-                        comp.blueprintCost.processingPower = Math.max(0, comp.blueprintCost.processingPower - (Math.random() * 1));
-                    }
-                });
-                logDataStreamEntry('Blueprint component costs slightly optimized.', 'info');
-            }
-            recalculateBlueprintStats();
-            logDataStreamEntry('Blueprint refinement complete.', 'optimal');
-            isProcessing = false;
-            updateAllDisplays();
-        });
-
-        integrateProtocolButton.addEventListener('click', async () => {
-            if (!formulatedBlueprint || formulatedBlueprint.components.length === 0 || activeBlueprint !== null) return;
-
-            // Calculate actual costs
-            let totalEnergyCost = 0;
-            let totalRawDataCost = 0;
-            let totalProcessingPowerCost = 0;
-            formulatedBlueprint.components.forEach(comp => {
-                if (comp.blueprintCost) {
-                    totalEnergyCost += comp.blueprintCost.energy || 0;
-                    totalRawDataCost += comp.blueprintCost.rawData || 0;
-                    totalProcessingPowerCost += comp.blueprintCost.processingPower || 0;
-                }
-            });
-
-            if (currentEnergy < totalEnergyCost || currentRawData < totalRawDataCost || currentProcessingPower < totalProcessingPowerCost) {
-                logDataStreamEntry('Insufficient resources to integrate blueprint. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'BLUEPRINT INTEGRATION: Aborted (low resources).';
-                return;
-            }
-
-            isProcessing = true;
-            logDataStreamEntry(`Initiating integration of Blueprint "${formulatedBlueprint.name}"...`, 'processing');
-            systemStatusTextSpan.textContent = 'BLUEPRINT INTEGRATION: Deploying components...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 5000)); // Longer integration time
-
-            currentEnergy -= totalEnergyCost;
-            currentRawData -= totalRawDataCost;
-            currentProcessingPower -= totalProcessingPowerCost;
-
-            let successfulComponents = 0;
-            let totalStabilityGain = 0; // Total immediate stability impact from integrated components
-
-            // Iterate through blueprint components and activate them
-            for (const comp of formulatedBlueprint.components) {
-                if (comp.type === 'QEL') {
-                    // Simulate QEL establishment for blueprint. Success chance might be simplified here.
-                    if (Math.random() < 0.75) { // 75% success chance for blueprint QELs
-                        let effectiveGain = comp.baseGain * (1 + (Math.random() * 0.1));
-                        const newQEL = {
-                            id: nextQELId++,
-                            name: comp.name,
-                            resource: comp.resource,
-                            gainPerTick: effectiveGain,
-                            energyDrain: comp.energyDrain,
-                            ppDrain: comp.ppDrain,
-                            stabilityImpact: comp.stabilityImpact,
-                            origin: 'blueprint', // Mark as blueprint-integrated
-                            blueprintId: formulatedBlueprint.id // Link to blueprint
-                        };
-                        activeQELs.push(newQEL);
-                        totalStabilityGain += newQEL.stabilityImpact;
-                        successfulComponents++;
-                        logDataStreamEntry(`Integrated QEL: ${comp.name}`, 'info');
-                    } else {
-                        logDataStreamEntry(`Failed to establish QEL "${comp.name}" during integration.`, 'warning');
-                        currentSystemStability -= 5; // Penalty for failed QEL in blueprint
-                    }
-                } else if (comp.type === 'Sub-Protocol') {
-                    // Activate sub-protocol, ensuring it's not active already
-                    const existingSubProto = subProtocols.find(s => s.id === comp.id);
-                    if (existingSubProto && !existingSubProto.isActive) {
-                        existingSubProto.isActive = true;
-                        successfulComponents++;
-                        logDataStreamEntry(`Integrated Sub-Protocol: ${comp.name}`, 'info');
-                    } else if (existingSubProto && existingSubProto.isActive) {
-                        logDataStreamEntry(`Sub-Protocol "${comp.name}" was already active. Skipping.`, 'info');
-                    }
-                }
-            }
-
-            currentSystemStability += totalStabilityGain; // Apply total immediate stability gain from successful QELs
-
-            activeBlueprint = formulatedBlueprint; // Set the blueprint as active
-            formulatedBlueprint = null; // Clear the formulated blueprint
-            
-            // Update UI for active blueprint
-            activeProtocolNameSpan.textContent = activeBlueprint.name;
-            activeProtocolIDSpan.textContent = activeBlueprint.id;
-            systemStatusTextSpan.textContent = `BLUEPRINT ACTIVE: "${activeBlueprint.name}" deployed with ${successfulComponents} components.`;
-
-            logDataStreamEntry(`Blueprint "${activeBlueprint.name}" fully integrated. ${successfulComponents} components deployed.`, 'optimal');
-            isProcessing = false;
-            updateAllDisplays();
-            renderActiveQELs(); // Re-render to show blueprint QELs
-            renderSubProtocols(); // Re-render to show blueprint sub-protocols
-        });
-
-        tuneActiveProtocolButton.addEventListener('click', async () => {
-            if (!activeBlueprint) return;
-
-            isProcessing = true;
-            logDataStreamEntry('Initiating active blueprint tuning...', 'processing');
-            systemStatusTextSpan.textContent = 'ACTIVE BLUEPRINT TUNING: Optimizing active components...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 3500));
-
-            // Tuning costs
-            const TUNE_BASE_ENERGY_COST = 18;
-            const TUNE_BASE_PROCESSING_POWER_COST = 11;
-
-            if (currentEnergy < TUNE_BASE_ENERGY_COST || currentProcessingPower < TUNE_BASE_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient Energy or Processing Power for tuning. Aborting.', 'warning');
-                systemStatusTextSpan.textContent = 'BLUEPRINT ACTIVE: Tuning aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
-                return;
-            }
-
-            currentEnergy -= TUNE_BASE_ENERGY_COST;
-            currentProcessingPower -= TUNE_BASE_PROCESSING_POWER_COST;
-
-            let tuningImpactStability = 0;
-            let tuningImpactDataFlow = 0;
-            let tuningImpactProcessingPower = 0;
-
-            // Apply tuning to all currently active QELs from this blueprint
-            activeQELs.filter(q => q.origin === 'blueprint' && q.blueprintId === activeBlueprint.id).forEach(qel => {
-                const tuningBonus = Math.random() * 0.1; // Small random boost
-                qel.gainPerTick *= (1 + tuningBonus);
-                qel.energyDrain *= (1 - tuningBonus * 0.5); // Reduce drain slightly
-                qel.ppDrain *= (1 - tuningBonus * 0.5);
-                tuningImpactStability += tuningBonus * 2; // Stability boost from better QEL performance
-            });
-
-            // Apply tuning to all currently active Sub-Protocols from this blueprint
-            subProtocols.filter(sp => sp.isActive && activeBlueprint.components.some(comp => comp.id === sp.id && comp.type === 'Sub-Protocol')).forEach(sp => {
-                if (sp.impactPerTick && sp.impactPerTick.stability) sp.impactPerTick.stability *= (1 + Math.random() * 0.05); // Boost stability effect
-                if (sp.impactPerTick && sp.impactPerTick.energy) sp.impactPerTick.energy *= (1 + Math.random() * 0.05); // Boost energy effect
-                // Adjust costs slightly for better efficiency
-                if (sp.costPerTick && sp.costPerTick.energy) sp.costPerTick.energy *= (1 - Math.random() * 0.03);
-                if (sp.costPerTick && sp.costPerTick.processingPower) sp.costPerTick.processingPower *= (1 - Math.random() * 0.03);
-            });
-            
-            currentSystemStability += tuningImpactStability;
-
-            logDataStreamEntry(`Active Blueprint "${activeBlueprint.name}" tuned. Components optimized for better performance.`, 'optimal');
-            systemStatusTextSpan.textContent = `BLUEPRINT ACTIVE: "${activeBlueprint.name}" fine-tuned.`;
-            isProcessing = false;
-            updateAllDisplays();
-            renderActiveQELs(); // Update QEL display
-            renderSubProtocols(); // Update sub-protocols display
-        });
-
-        deactivateProtocolButton.addEventListener('click', async () => {
-            if (!activeBlueprint) return;
-
-            isProcessing = true;
-            logDataStreamEntry(`Initiating deactivation of Blueprint "${activeBlueprint.name}"...`, 'processing');
-            systemStatusTextSpan.textContent = 'BLUEPRINT DEACTIVATION: Disengaging components...';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 4000));
-
-            // Deactivate all QELs associated with this blueprint
-            const qelsToRemove = activeQELs.filter(q => q.origin === 'blueprint' && q.blueprintId === activeBlueprint.id);
-            qelsToRemove.forEach(qel => {
-                const index = activeQELs.findIndex(aq => aq.id === qel.id);
-                if (index > -1) activeQELs.splice(index, 1);
-                currentSystemStability -= (qel.stabilityImpact * 0.75); // Small penalty on deactivation
-            });
-
-            // Deactivate all Sub-Protocols that were activated by this blueprint
-            activeBlueprint.components.filter(comp => comp.type === 'Sub-Protocol').forEach(comp => {
-                const existingSubProto = subProtocols.find(s => s.id === comp.id);
-                if (existingSubProto) existingSubProto.isActive = false;
-            });
-
-            activeBlueprint = null; // Clear the active blueprint
-            activeProtocolNameSpan.textContent = 'NONE';
-            activeProtocolIDSpan.textContent = 'N/A';
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Blueprint disengaged.';
-
-            logDataStreamEntry('Active blueprint successfully deactivated. System returned to baseline.', 'optimal');
-            isProcessing = false;
-            updateAllDisplays();
-            renderActiveQELs();
-            renderSubProtocols();
-        });
-
-        recalibrateCoreButton.addEventListener('click', async () => {
-            isProcessing = true;
-            logDataStreamEntry('Initiating core recalibration sequence...', 'critical');
-            systemStatusTextSpan.textContent = 'CORE RECALIBRATION: Warning - System instability imminent!';
-            updateButtonStates();
-
-            await new Promise(resolve => setTimeout(resolve, 6000)); // Longer recalibration time
-
-            const RECALIBRATE_ENERGY_COST = 40;
-            const RECALIBRATE_PROCESSING_POWER_COST = 20;
-
-            if (currentEnergy < RECALIBRATE_ENERGY_COST || currentProcessingPower < RECALIBRATE_PROCESSING_POWER_COST) {
-                logDataStreamEntry('Insufficient Energy or Processing Power for recalibration. Aborting.', 'critical');
-                systemStatusTextSpan.textContent = 'SYSTEM IDLE: Recalibration aborted (low resources).';
-                isProcessing = false;
-                updateButtonStates();
-                return;
-            }
-
-            currentEnergy -= RECALIBRATE_ENERGY_COST;
-            currentProcessingPower -= RECALIBRATE_PROCESSING_POWER_COST;
-
-            const oldStability = currentSystemStability;
-            currentSystemStability = 80 + (Math.random() * 15 - 7.5); // Reset to a healthy range with some variance, slightly higher baseline
-            currentEnergy = 90 + (Math.random() * 10); // Restore energy
-            currentDataFlow = 70 + (Math.random() * 20); // Boost data flow
-            currentProcessingPower = 98 + (Math.random() * 2); // Restore processing power to near max
-
-            logDataStreamEntry(`Core recalibration complete. Stability restored from ${oldStability.toFixed(1)}% to ${currentSystemStability.toFixed(1)}%.`, 'optimal');
-            systemStatusTextSpan.textContent = 'SYSTEM IDLE: Core parameters normalized.';
-            isProcessing = false;
-            updateAllDisplays();
-        });
-
-        // Event listener for the new QEL button (replaces old Calibrate Signal Array)
-        establishQELButton.addEventListener('click', establishQEL);
-
-        resolveAnomalyButton.addEventListener('click', () => {
-            if (anomalyActive && currentAnomaly) {
-                resolveAnomaly();
-                logDataStreamEntry('Counter-Protocol initiated and anomaly resolved!', 'optimal');
-            }
-        });
-
-        runPredictiveAnalysisButton.addEventListener('click', runPredictiveAnalysis); // NEW Listener
-
-        // RTM Event Listeners
-        transmuteResourcesButton.addEventListener('click', transmuteResources);
-        transmuteAmountInput.addEventListener('input', updateRTMInfo);
-        transmuteSourceSelect.addEventListener('change', updateRTMInfo);
-        transmuteTargetSelect.addEventListener('change', updateRTMInfo);
-
-        // Add event listeners for dynamically adding components to blueprint (e.g. from existing modules)
-        // For demonstration, let's add some buttons within the modules to 'Add to Blueprint'
-        // This would require changes to the HTML structure of the QEL and Sub-Protocol modules
-        // For now, these functions are called when a blueprint is being refined or designed.
-
-        // --- Game Loop and Initialization ---
-        let gameLoopInterval = null;
-
-        function gameLoop() {
-            // Passive resource decay/gain
-            currentEnergy -= 0.1; // Passive drain (increased)
-            currentDataFlow -= 0.04; // Passive decay (increased)
-            currentProcessingPower -= 0.06; // Passive drain (increased)
-
-            // Process active QELs (both individual and blueprint-integrated)
-            activeQELs.forEach(qel => {
-                currentEnergy -= qel.energyDrain;
-                currentProcessingPower -= qel.ppDrain;
-                if (qel.resource === 'rawData') currentRawData += qel.gainPerTick;
-                else if (qel.resource === 'energy') currentEnergy += qel.gainPerTick;
-                else if (qel.resource === 'dataFlow') currentDataFlow += qel.gainPerTick;
-                else if (qel.resource === 'processingPower') currentProcessingPower += qel.gainPerTick;
-            });
-
-
-            // Apply active Sub-Protocol effects (both individual and blueprint-integrated)
-            subProtocols.filter(sp => sp.isActive).forEach(sp => {
-                if (sp.costPerTick.energy) currentEnergy -= sp.costPerTick.energy;
-                if (sp.costPerTick.processingPower) currentProcessingPower -= sp.costPerTick.processingPower;
-                if (sp.costPerTick.rawData) currentRawData -= sp.costPerTick.rawData; // New raw data cost
-
-                if (sp.impactPerTick.stability) currentSystemStability += sp.impactPerTick.stability;
-                // QEL specific boosts are handled in QEL establishment logic now.
-                // For direct buffs:
-                if (sp.impactPerTick.energy) currentEnergy += sp.impactPerTick.energy; // Resource harvester effect
-            });
-
-            // Stability fluctuations
-            currentSystemStability += (Math.random() * 0.4 - 0.2); // Minor random fluctuations (increased)
-
-            // Check for anomalies
-            if (Math.random() < 0.0012) { // 0.12% chance per tick (e.g., every 1 second)
-                spawnAnomaly();
-            }
-
-            // Critical state handling
-            if (currentSystemStability < 0) {
-                currentSystemStability = 0;
-                logDataStreamEntry('SYSTEM COLLAPSE IMMINENT! RECALIBRATE CORE NOW!', 'critical');
-                if (!anomalyActive) { // Prevent overwriting anomaly alert
-                    systemStatusTextSpan.textContent = 'SYSTEM CRITICAL: Core stability lost!';
-                }
-            }
-            if (currentEnergy <= 0) {
-                currentEnergy = 0;
-                logDataStreamEntry('ENERGY RESERVE DEPLETED! All operations halted!', 'critical');
-                systemStatusTextSpan.textContent = 'SYSTEM SHUTDOWN: No energy.';
-                // Trigger game over or critical failure mode
-            }
-            if (currentRawData >= MAX_RAW_DATA) {
-                currentRawData = MAX_RAW_DATA;
-                logDataStreamEntry('RAW DATA BUFFER OVERFLOW! Data loss imminent!', 'warning');
-            }
-            if (currentProcessingPower <= 0) {
-                currentProcessingPower = 0;
-                logDataStreamEntry('PROCESSING POWER DEPLETED! System response severely degraded!', 'critical');
-            }
-
-
-            updateAllDisplays();
-        }
-
-        function init() {
-            renderSignalArrayCalibrators();
-            renderSubProtocols(); // NEW: Render sub-protocols
-            renderActiveQELs(); // NEW: Render active QELs
-            updateAllDisplays();
-            gameLoopInterval = setInterval(gameLoop, 1000); // 1-second ticks
-            logDataStreamEntry('Core systems online. Initiating Generation 34.0 protocols.', 'event');
-        }
-
-        init();
-    </script>
-</body>
-</html>
+        .system-status
