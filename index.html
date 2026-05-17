@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v42.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v43.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Enhanced for 2.5 Gen / v42.0) */
-            --primary-glow: rgba(80, 250, 255, 0.9999); /* Even Brighter, more electric Cyan-blue glow */
-            --secondary-glow: rgba(255, 110, 250, 0.999); /* More vibrant, deeper Pink glow */
-            --tertiary-glow: rgba(60, 255, 100, 0.9999); /* Electrifying Green glow, slightly softer */
-            --frosted-bg: rgba(255, 255, 255, 0.003); /* Ultra-transparent, hyper-ethereal, slightly more visible */
-            --text-color: #F0F0F0; /* Even lighter text for enhanced readability */
-            --accent-color: #44EEFF; /* Electric Cyan accent, slightly deeper */
-            --border-color: rgba(255, 255, 255, 0.5); /* More visible, shimmering border */
-            --console-bg: rgba(0, 0, 0, 0.9999); /* Absolute black for console depth */
+            /* Core Theme Colors (Enhanced for 2.5 Gen / v43.0) */
+            --primary-glow: rgba(70, 240, 255, 0.9999); /* Electric Cyan-blue glow, slightly cooler */
+            --secondary-glow: rgba(255, 100, 240, 0.999); /* Deep Magenta glow, more intense */
+            --tertiary-glow: rgba(50, 255, 90, 0.9999); /* Electrifying Green glow, slightly sharper */
+            --frosted-bg: rgba(255, 255, 255, 0.002); /* Ultra-transparent, hyper-ethereal */
+            --text-color: #E8E8E8; /* Lighter text for enhanced readability */
+            --accent-color: #33F0FF; /* Electric Cyan accent, slightly brighter */
+            --border-color: rgba(255, 255, 255, 0.4); /* More visible, shimmering border */
+            --console-bg: rgba(0, 0, 0, 0.99999); /* Absolute black for console depth */
             --glitch-color: #FF00FF; /* Magenta for glitch */
-            --warning-color: #FFC107; /* Amber, more urgent than gold */
-            --critical-color: #FF3B3B; /* Pure Red, highly urgent */
+            --warning-color: #FFB300; /* Richer Amber, more urgent */
+            --critical-color: #FF2222; /* Pure Red, highly urgent */
 
             /* Stability Bar Colors */
             --stability-good: linear-gradient(90deg, #00FF55 0%, #00C040 100%); /* Brighter, deeper green */
@@ -26,112 +26,112 @@
             --stability-critical: linear-gradient(90deg, #FF2020 0%, #B00000 100%); /* Bright Red to Deeper Red */
 
             /* Data Stream & Protocol Status (Now Cognitive Stream) */
-            --cognitive-stream-bg: rgba(0, 10, 20, 0.999); /* Deep ocean blue, almost black */
-            --cognitive-stream-text: #00F5FF; /* Pure Cyan for data, slightly muted */
-            --network-status-bg: rgba(0, 15, 30, 0.9999); /* Darker, more opaque blue */
-            --network-status-glow: rgba(0, 200, 255, 0.9999); /* Stronger, electric blue glow */
+            --cognitive-stream-bg: rgba(0, 8, 18, 0.999); /* Deep ocean blue, almost black */
+            --cognitive-stream-text: #00E0FF; /* Pure Cyan for data, slightly muted */
+            --network-status-bg: rgba(0, 12, 25, 0.9999); /* Darker, more opaque blue */
+            --network-status-glow: rgba(0, 180, 255, 0.9999); /* Stronger, electric blue glow */
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
-            --module-selection-bg: rgba(10, 0, 20, 0.999); /* Darker, deeper purple-ish */
-            --module-selection-border: rgba(160, 0, 255, 0.98); /* Stronger purple accent, slightly redder */
-            --module-selection-text: #F8D8FF; /* Lighter purple */
+            --module-selection-bg: rgba(8, 0, 18, 0.999); /* Darker, deeper purple-ish */
+            --module-selection-border: rgba(140, 0, 240, 0.98); /* Stronger purple accent, slightly redder */
+            --module-selection-text: #F0D0FF; /* Lighter purple */
             --resource-bg: rgba(0, 0, 0, 0.999); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
-            --energy-color-high: linear-gradient(90deg, #FFFFC0 0%, #FFD000 100%); /* Brighter yellow */
-            --energy-color-medium: linear-gradient(90deg, #FFE000 0%, #FF9000 100%);
-            --energy-color-low: linear-gradient(90deg, #FF3030 0%, #C00000 100%); /* More intense red */
+            --energy-color-high: linear-gradient(90deg, #FFFFB0 0%, #FFC000 100%); /* Brighter yellow */
+            --energy-color-medium: linear-gradient(90deg, #FFD000 0%, #FF8000 100%);
+            --energy-color-low: linear-gradient(90deg, #FF2020 0%, #B00000 100%); /* More intense red */
 
             --data-flow-color-high: linear-gradient(90deg, #00FF88 0%, #00B070 100%);
             --data-flow-color-medium: linear-gradient(90deg, #00F0FF 0%, #0090FF 100%);
             --data-flow-color-low: linear-gradient(90deg, #FF4020 0%, #C01000 100%); /* More intense red */
             
-            /* Gen 42.0 Colors (Updated from 41.0) */
-            --signal-array-bg: rgba(0, 10, 20, 0.999); /* Deeper blue-grey */
-            --signal-array-border: rgba(0, 200, 255, 0.98); /* Stronger electric blue accent */
+            /* Gen 43.0 Colors (Updated from 42.0) */
+            --signal-array-bg: rgba(0, 8, 18, 0.999); /* Deeper blue-grey */
+            --signal-array-border: rgba(0, 180, 255, 0.98); /* Stronger electric blue accent */
             --signal-array-text: #A0EEF5; /* Lighter, more vibrant powder blue */
-            --formulate-btn-glow: rgba(255, 30, 140, 0.9999); /* Hotter Deep Pink for Architect button */
+            --formulate-btn-glow: rgba(255, 20, 130, 0.9999); /* Hotter Deep Pink for Architect button */
 
-            /* Gen 42.0 resource: Raw Data */
+            /* Gen 43.0 resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #F88CD5 0%, #E85085 100%); /* Warmer, deeper pink */
             --raw-data-color-medium: linear-gradient(90deg, #FFC000 0%, #FF9000 100%);
             --raw-data-color-low: linear-gradient(90deg, #90A0A0 0%, #506060 100%); /* Desaturated grey */
             --raw-data-text: #F88CD5;
 
-            /* Gen 42.0 resource: Processing Power */
+            /* Gen 43.0 resource: Processing Power */
             --processing-power-color-high: linear-gradient(90deg, #E080F8 0%, #A040F8 100%); /* Brighter Orchid to Purple */
             --processing-power-color-medium: linear-gradient(90deg, #D080D0 0%, #9030CC 100%);
             --processing-power-color-low: linear-gradient(90deg, #500090 0%, #202080 100%); /* Darker, more intense purple */
             --processing-power-text: #E080F8;
 
-            /* NEW for Gen 42.0 resource: Exotic Matter (XM) */
+            /* NEW for Gen 43.0 resource: Exotic Matter (XM) */
             --exotic-matter-color-high: linear-gradient(90deg, #A0FFC0 0%, #50D050 100%); /* Brighter Mint Green to Lime Green */
             --exotic-matter-color-medium: linear-gradient(90deg, #A0E590 0%, #B0F030 100%); /* PaleGreen to GreenYellow */
             --exotic-matter-color-low: linear-gradient(90deg, #FFC000 0%, #FF9000 100%); /* Gold to Orange */
             --exotic-matter-text: #A0FFC0; /* Mint Green */
 
-            /* NEW for Gen 42.0 resource: Existential Fabric (EF) */
+            /* NEW for Gen 43.0 resource: Existential Fabric (EF) */
             --existential-fabric-color-high: linear-gradient(90deg, #C0A0D0 0%, #8030D0 100%); /* Soft Purple to Blue Violet, slightly more saturated */
             --existential-fabric-color-medium: linear-gradient(90deg, #D090D0 0%, #9030B0 100%); /* Plum to Dark Orchid */
             --existential-fabric-color-low: linear-gradient(90deg, #800080 0%, #400075 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #C0A0D0; /* Soft Purple */
 
 
-            /* Gen 42.0 button: Calibrate Dimensional Link */
-            --calibrate-btn-glow: rgba(100, 80, 200, 0.9999); /* Deeper Slate Blue Glow */
-            --tune-btn-glow: rgba(0, 220, 50, 0.9999);
+            /* Gen 43.0 button: Calibrate Dimensional Link */
+            --calibrate-btn-glow: rgba(90, 70, 190, 0.9999); /* Deeper Slate Blue Glow */
+            --tune-btn-glow: rgba(0, 200, 40, 0.9999);
 
-            /* Gen 42.0 - Enhanced UI elements */
-            --event-color: #FF9A00; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 45px rgba(255, 154, 0, 1.0); /* Even stronger shadow */
-            --info-color: #9070D0; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 40px rgba(144, 112, 208, 0.9); /* Even stronger shadow */
+            /* Gen 43.0 - Enhanced UI elements */
+            --event-color: #FF9000; /* Brighter Orange, slightly more yellow */
+            --event-text-shadow: 0 0 40px rgba(255, 144, 0, 1.0); /* Even stronger shadow */
+            --info-color: #8060C0; /* Lighter Medium Purple */
+            --info-text-shadow: 0 0 35px rgba(128, 96, 192, 0.9); /* Even stronger shadow */
             --log-glitch-color: #FF00FF;
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%); /* Wider, more transparent edges */
             
-            /* Gen 42.0 NEW: Optimize Pathways button (for Cognitive Axiom Synthesis Module) */
-            --synthesize-btn-glow: rgba(255, 255, 40, 0.9999); /* Brighter Yellow glow for synthesize */
+            /* Gen 43.0 NEW: Synthesize Axiom Flux button (for Cognitive Axiom Synthesis Module) */
+            --synthesize-btn-glow: rgba(255, 255, 30, 0.9999); /* Brighter Yellow glow for synthesize */
 
-            /* Gen 42.0 NEW: Anomaly Alert */
+            /* Gen 43.0 NEW: Anomaly Alert */
             --anomaly-color: #FF0000; /* Pure Red for critical */
-            --anomaly-bg: rgba(255, 0, 0, 0.15); /* Even more semi-transparent Red */
-            --anomaly-border: rgba(255, 0, 0, 0.99); /* Opaque Red */
+            --anomaly-bg: rgba(255, 0, 0, 0.12); /* Even more semi-transparent Red */
+            --anomaly-border: rgba(255, 0, 0, 0.98); /* Opaque Red */
 
-            /* Gen 42.0 NEW: Temporal Flux Scrutiny Engine */
-            --temporal-bg: rgba(0, 25, 15, 0.999); /* Deeper Green-Blue */
-            --temporal-border: rgba(40, 255, 140, 0.98); /* Brighter Spring Green */
+            /* Gen 43.0 NEW: Temporal Flux Scrutiny Engine */
+            --temporal-bg: rgba(0, 20, 12, 0.999); /* Deeper Green-Blue */
+            --temporal-border: rgba(30, 240, 130, 0.98); /* Brighter Spring Green */
             --temporal-text: #A0FFB0; /* Lighter Mint Green */
-            --temporal-btn-glow: rgba(40, 255, 140, 0.99);
+            --temporal-btn-glow: rgba(30, 240, 130, 0.99);
 
-            /* Gen 42.0 NEW: Cognitive Axiom Synthesis Module */
-            --axiom-bg: rgba(25, 15, 0, 0.999); /* Deeper Orange-Brown */
-            --axiom-border: rgba(255, 160, 40, 0.98); /* Brighter Orange */
+            /* Gen 43.0 NEW: Cognitive Axiom Synthesis Module */
+            --axiom-bg: rgba(20, 12, 0, 0.999); /* Deeper Orange-Brown */
+            --axiom-border: rgba(240, 150, 30, 0.98); /* Brighter Orange */
             --axiom-text: #FFD080; /* Brighter Gold */
-            --axiom-slider-active: rgba(255, 160, 40, 0.99);
-            --axiom-slider-inactive: rgba(100, 70, 0, 0.8);
-            --axiom-slider-thumb-glow: rgba(255, 160, 40, 0.95);
+            --axiom-slider-active: rgba(240, 150, 30, 0.99);
+            --axiom-slider-inactive: rgba(90, 60, 0, 0.8);
+            --axiom-slider-thumb-glow: rgba(240, 150, 30, 0.95);
 
-            /* Gen 42.0 NEW: Quantum Chrono-Conduit System (QCCS) Module */
-            --qccs-bg: rgba(10, 0, 25, 0.999); /* Deeper Purple */
-            --qccs-border: rgba(200, 20, 220, 0.95); /* More vibrant Magenta-Purple */
+            /* Gen 43.0 NEW: Quantum Chrono-Conduit System (QCCS) Module */
+            --qccs-bg: rgba(8, 0, 20, 0.999); /* Deeper Purple */
+            --qccs-border: rgba(180, 15, 200, 0.95); /* More vibrant Magenta-Purple */
             --qccs-text: #FFB0FF; /* Lighter Magenta */
-            --qccs-btn-glow: rgba(200, 20, 220, 0.99);
-            --qccs-card-active-border: rgba(220, 20, 220, 0.99);
-            --qccs-card-active-shadow: rgba(220, 20, 220, 0.95);
+            --qccs-btn-glow: rgba(180, 15, 200, 0.99);
+            --qccs-card-active-border: rgba(200, 15, 200, 0.99);
+            --qccs-card-active-shadow: rgba(200, 15, 200, 0.95);
 
-            /* Gen 42.0 NEW: Existential Fabric Weave Loom (EFWL) Module */
-            --efwl-bg: rgba(25, 15, 0, 0.999); /* Deeper Gold-Brown, slightly more opaque */
-            --efwl-border: rgba(255, 200, 40, 0.99); /* Brighter Gold-Orange */
-            --efwl-text: #FFFF90; /* Bright Yellowish Gold */
-            --efwl-btn-glow: rgba(255, 200, 40, 0.99);
+            /* Gen 43.0 NEW: Existential Fabric Weave Loom (EFWL) Module */
+            --efwl-bg: rgba(20, 12, 0, 0.999); /* Deeper Gold-Brown, slightly more opaque */
+            --efwl-border: rgba(240, 190, 30, 0.99); /* Brighter Gold-Orange */
+            --efwl-text: #FFFF80; /* Bright Yellowish Gold */
+            --efwl-btn-glow: rgba(240, 190, 30, 0.99);
 
-            /* Gen 42.0 NEW: Cosmic Sentience Matrix (CSM) Module */
-            --csm-bg: rgba(0, 25, 25, 0.999); /* Deeper Teal */
-            --csm-border: rgba(40, 255, 255, 0.95); /* Brighter Cyan */
-            --csm-text: #80FFFF; /* Lighter Cyan */
+            /* Gen 43.0 NEW: Cosmic Sentience Matrix (CSM) Module */
+            --csm-bg: rgba(0, 20, 20, 0.999); /* Deeper Teal */
+            --csm-border: rgba(30, 240, 240, 0.95); /* Brighter Cyan */
+            --csm-text: #70FFFF; /* Lighter Cyan */
             --csm-component-bg: rgba(0, 0, 0, 0.9);
-            --csm-component-border: rgba(40, 255, 255, 0.8);
-            --csm-sentience-color: linear-gradient(90deg, #80FFFF 0%, #FFB0FF 50%, #C0A0D0 100%); /* Cyan -> Magenta -> Purple */
+            --csm-component-border: rgba(30, 240, 240, 0.8);
+            --csm-sentience-color: linear-gradient(90deg, #70FFFF 0%, #FFB0FF 50%, #C0A0D0 100%); /* Cyan -> Magenta -> Purple */
         }
 
         body {
@@ -145,39 +145,39 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 20px; /* Slightly larger base font */
-            line-height: 1.7;
+            font-size: 18px; /* Slightly larger base font */
+            line-height: 1.6;
             /* Updated Cursor: Larger, more intricate, pulsing */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.9); opacity: 0.7;} 50% {transform: scale(1.15); opacity: 1;} 100% {transform: scale(0.9); opacity: 0.7;}} .pulsing-circle {animation: pulse 1.6s infinite ease-in-out; transform-origin: center center;}</style></defs><path fill="%2344EEFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2344EEFF" d="M11 6h2v7h-2zM11 14h2v3h-2z"/><circle cx="12" cy="12" r="5" fill="%23FF00FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2344EEFF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z" filter="url(%23f1)"/><circle cx="12" cy="12" r="2.5" fill="%23FFFF00" filter="url(%23f2)" class="pulsing-circle"/></svg>') 90 90, auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.9); opacity: 0.7;} 50% {transform: scale(1.15); opacity: 1;} 100% {transform: scale(0.9); opacity: 0.7;}} .pulsing-circle {animation: pulse 1.6s infinite ease-in-out; transform-origin: center center;}</style></defs><path fill="%2333F0FF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2333F0FF" d="M11 6h2v7h-2zM11 14h2v3h-2z"/><circle cx="12" cy="12" r="5" fill="%23FF00FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2333F0FF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z" filter="url(%23f1)"/><circle cx="12" cy="12" r="2.5" fill="%23FFFF00" filter="url(%23f2)" class="pulsing-circle"/></svg>') 90 90, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: absolute;
-            top: -2500%; /* Even larger coverage */
-            left: -2500%;
-            width: 5100%;
-            height: 5100%;
+            top: -3000%; /* Even larger coverage */
+            left: -3000%;
+            width: 6100%;
+            height: 6100%;
             background: linear-gradient(
-                85deg, /* New angle */
-                #000003 0%,
-                #030006 10%,
-                #060009 20%,
-                #09000C 30%,
-                #0C000F 40%,
-                #09000C 50%,
-                #060009 60%,
-                #030006 70%,
-                #000003 80%,
-                #030006 90%,
-                #000003 100%
+                95deg, /* New angle */
+                #000002 0%,
+                #020004 10%,
+                #040006 20%,
+                #060008 30%,
+                #08000A 40%,
+                #060008 50%,
+                #040006 60%,
+                #020004 70%,
+                #000002 80%,
+                #020004 90%,
+                #000002 100%
             );
-            background-size: 6000% 6000%; /* Even larger background for smoother animation */
-            animation: fluidBackground1 3000s linear infinite alternate, rotateBackground 3600s linear infinite; /* Even longer animations */
+            background-size: 7000% 7000%; /* Even larger background for smoother animation */
+            animation: fluidBackground1 3500s linear infinite alternate, rotateBackground 4000s linear infinite; /* Even longer animations */
             z-index: -3;
-            filter: blur(2500px) opacity(0.999999); /* Stronger blur, almost opaque */
-            transform: rotate(-800deg) scale(18); /* Larger scale, more rotation */
+            filter: blur(2800px) opacity(0.999999); /* Stronger blur, almost opaque */
+            transform: rotate(-900deg) scale(20); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -185,27 +185,27 @@
         body::after {
             content: '';
             position: absolute;
-            top: -1500%; /* Even larger coverage */
-            left: -1500%;
-            width: 3100%;
-            height: 3100%;
+            top: -1800%; /* Even larger coverage */
+            left: -1800%;
+            width: 3700%;
+            height: 3700%;
             background: linear-gradient(
-                -250deg, /* Different angle */
-                rgba(80, 250, 255, 0.98) 0%, /* primary glow accent */
-                rgba(255, 110, 250, 0.95) 15%, /* secondary glow accent */
-                rgba(60, 255, 100, 0.95) 30%, /* tertiary glow accent */
-                rgba(0, 200, 255, 0.98) 45%, /* electric blue from QCCS */
-                rgba(255, 160, 40, 0.9) 60%, /* New orange accent from CAS */
-                rgba(200, 20, 220, 0.9) 75%, /* Magenta from QCCS */
+                -280deg, /* Different angle */
+                rgba(70, 240, 255, 0.98) 0%, /* primary glow accent */
+                rgba(255, 100, 240, 0.95) 15%, /* secondary glow accent */
+                rgba(50, 255, 90, 0.95) 30%, /* tertiary glow accent */
+                rgba(0, 180, 255, 0.98) 45%, /* electric blue from QCCS */
+                rgba(240, 150, 30, 0.9) 60%, /* New orange accent from CAS */
+                rgba(180, 15, 200, 0.9) 75%, /* Magenta from QCCS */
                 rgba(192, 160, 208, 0.85) 85%, /* Existential Fabric */
-                rgba(80, 250, 255, 0.98) 100%
+                rgba(70, 240, 255, 0.98) 100%
             );
-            background-size: 4000% 4000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 2000s ease-in-out infinite, rotateBackgroundReversed 2800s linear infinite; /* Even longer animations */
+            background-size: 4500% 4500%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 2200s ease-in-out infinite, rotateBackgroundReversed 3000s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(1800px) opacity(0.9999); /* Stronger blur, more opaque */
+            filter: blur(2000px) opacity(0.9999); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(450deg) scale(15); /* Larger scale, more rotation */
+            transform: rotate(500deg) scale(17); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -217,11 +217,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.9; /* More noticeable noise */
+            opacity: 0.007; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.3) contrast(2.0) brightness(1.8); /* Subtle color and contrast */
+            filter: grayscale(0.2) contrast(2.2) brightness(2.0); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -236,48 +236,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-800deg) scale(18); }
-            to { transform: rotate(1000deg) scale(18); }
+            from { transform: rotate(-900deg) scale(20); }
+            to { transform: rotate(1100deg) scale(20); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(450deg) scale(15); }
-            to { transform: rotate(-1200deg) scale(15); }
+            from { transform: rotate(500deg) scale(17); }
+            to { transform: rotate(-1300deg) scale(17); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 2800px; /* Even wider for more content */
-            padding: 250px; /* More padding */
+            max-width: 3000px; /* Even wider for more content */
+            padding: 300px; /* More padding */
             background: var(--frosted-bg);
-            border: 4px solid var(--border-color); /* Thicker border */
-            border-radius: 320px; /* Even more rounded */
-            backdrop-filter: blur(1500px) saturate(5000%) brightness(1000%) contrast(2.5); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(1500px) saturate(5000%) brightness(1000%) contrast(2.5);
+            border: 5px solid var(--border-color); /* Thicker border */
+            border-radius: 350px; /* Even more rounded */
+            backdrop-filter: blur(1700px) saturate(6000%) brightness(1200%) contrast(2.8); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(1700px) saturate(6000%) brightness(1200%) contrast(2.8);
             box-shadow:
-                0 400px 2000px rgba(0, 0, 0, 0.999999), /* Deeper shadow */
-                0 0 2000px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 500px rgba(255, 255, 255, 0.95), /* Stronger inner glow for depth */
-                inset 0 0 700px var(--primary-glow); /* Even more inner glow */
+                0 450px 2200px rgba(0, 0, 0, 0.999999), /* Deeper shadow */
+                0 0 2200px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 550px rgba(255, 255, 255, 0.95), /* Stronger inner glow for depth */
+                inset 0 0 750px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 300px; /* Increased gap between sections */
-            animation: fadeInScale 22s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 8s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 350px; /* Increased gap between sections */
+            animation: fadeInScale 25s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 9s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -100px; /* More overflow */
-            border-radius: 322px;
+            inset: -120px; /* More overflow */
+            border-radius: 352px;
             background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF); /* Even more vibrant border glow colors, includes new processing power color, orange, and exotic matter green, existential fabric, csm cyan */
-            background-size: 4000% 4000%; /* Larger background for smoother animation */
-            animation: borderGlow 180s linear infinite alternate; /* Slower animation */
-            filter: blur(220px); /* Stronger blur */
+            background-size: 4500% 4500%; /* Larger background for smoother animation */
+            animation: borderGlow 200s linear infinite alternate; /* Slower animation */
+            filter: blur(250px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -289,32 +289,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.005) translateY(2000px) perspective(30000px) rotateX(180deg) rotateY(60deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(30000px) rotateX(0deg) rotateY(0deg); }
+            from { opacity: 0; transform: scale(0.003) translateY(2500px) perspective(35000px) rotateX(190deg) rotateY(70deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(35000px) rotateX(0deg) rotateY(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 13em; /* Even larger heading */
+            font-size: 14em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 250px var(--primary-glow), 0 0 350px rgba(80, 250, 255, 0.9999), 0 0 400px rgba(80, 250, 255, 0.95);
-            margin-bottom: 200px;
-            letter-spacing: 50px;
+            text-shadow: 0 0 280px var(--primary-glow), 0 0 380px rgba(70, 240, 255, 0.9999), 0 0 450px rgba(70, 240, 255, 0.95);
+            margin-bottom: 220px;
+            letter-spacing: 55px;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(200px); /* Lift heading slightly in 3D space */
+            transform: translateZ(220px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -130px;
+            bottom: -150px;
             left: 50%;
             transform: translateX(-50%);
-            width: 250%; /* Wider underline */
-            height: 35px; /* Thicker underline */
+            width: 280%; /* Wider underline */
+            height: 40px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 180px var(--primary-glow);
+            box-shadow: 0 0 200px var(--primary-glow);
         }
 
         p {
@@ -322,15 +322,15 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.999;
-            font-size: 3.0em; /* Larger paragraph text */
-            transform: translateZ(100px);
+            font-size: 3.2em; /* Larger paragraph text */
+            transform: translateZ(110px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 250px; /* Increased gap */
-            margin: 160px 0;
+            gap: 280px; /* Increased gap */
+            margin: 180px 0;
             position: relative;
         }
 
@@ -338,14 +338,14 @@
         .qccs-module, .efwl-module, .temporal-flux-scrutiny-engine, .cognitive-axiom-synthesis, .csm-module { /* NEW MODULE ADDED */
             display: flex;
             flex-direction: column;
-            gap: 100px;
+            gap: 120px;
             text-align: left;
-            padding: 120px;
-            border-radius: 100px;
-            border: 4px solid var(--signal-array-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 100px rgba(0, 200, 255, 0.98), 0 0 100px rgba(0, 200, 255, 0.95), inset 0 0 200px rgba(0, 200, 255, 0.7); /* More inner shadow */
+            padding: 140px;
+            border-radius: 110px;
+            border: 5px solid var(--signal-array-border); /* Default border, will be overridden */
+            box-shadow: inset 0 0 110px rgba(0, 180, 255, 0.98), 0 0 110px rgba(0, 180, 255, 0.95), inset 0 0 220px rgba(0, 180, 255, 0.7); /* More inner shadow */
             position: relative;
-            transform: translateZ(90px);
+            transform: translateZ(100px);
             overflow: hidden;
             background: var(--signal-array-bg); /* Default background, will be overridden */
         }
@@ -353,27 +353,27 @@
         .qccs-module {
             background: var(--qccs-bg);
             border-color: var(--qccs-border);
-            box-shadow: inset 0 0 100px rgba(200, 20, 220, 0.98), 0 0 100px rgba(200, 20, 220, 0.95), inset 0 0 200px rgba(200, 20, 220, 0.75);
+            box-shadow: inset 0 0 110px rgba(180, 15, 200, 0.98), 0 0 110px rgba(180, 15, 200, 0.95), inset 0 0 220px rgba(180, 15, 200, 0.75);
         }
         .efwl-module {
             background: var(--efwl-bg);
             border-color: var(--efwl-border);
-            box-shadow: inset 0 0 100px rgba(255, 200, 40, 0.98), 0 0 100px rgba(255, 200, 40, 0.95), inset 0 0 200px rgba(255, 200, 40, 0.75);
+            box-shadow: inset 0 0 110px rgba(240, 190, 30, 0.98), 0 0 110px rgba(240, 190, 30, 0.95), inset 0 0 220px rgba(240, 190, 30, 0.75);
         }
         .temporal-flux-scrutiny-engine {
             background: var(--temporal-bg);
             border-color: var(--temporal-border);
-            box-shadow: inset 0 0 100px rgba(40, 255, 140, 0.98), 0 0 100px rgba(40, 255, 140, 0.95), inset 0 0 200px rgba(40, 255, 140, 0.75);
+            box-shadow: inset 0 0 110px rgba(30, 240, 130, 0.98), 0 0 110px rgba(30, 240, 130, 0.95), inset 0 0 220px rgba(30, 240, 130, 0.75);
         }
         .cognitive-axiom-synthesis {
             background: var(--axiom-bg);
             border-color: var(--axiom-border);
-            box-shadow: inset 0 0 100px rgba(255, 160, 40, 0.98), 0 0 100px rgba(255, 160, 40, 0.95), inset 0 0 200px rgba(255, 160, 40, 0.75);
+            box-shadow: inset 0 0 110px rgba(240, 150, 30, 0.98), 0 0 110px rgba(240, 150, 30, 0.95), inset 0 0 220px rgba(240, 150, 30, 0.75);
         }
         .csm-module { /* NEW */
             background: var(--csm-bg);
             border-color: var(--csm-border);
-            box-shadow: inset 0 0 100px rgba(40, 255, 255, 0.98), 0 0 100px rgba(40, 255, 255, 0.95), inset 0 0 200px rgba(40, 255, 255, 0.75);
+            box-shadow: inset 0 0 110px rgba(30, 240, 240, 0.98), 0 0 110px rgba(30, 240, 240, 0.95), inset 0 0 220px rgba(30, 240, 240, 0.75);
         }
 
         .qccs-module::after, .efwl-module::after, .temporal-flux-scrutiny-engine::after, .cognitive-axiom-synthesis::after, .csm-module::after {
@@ -383,7 +383,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.55) 0%, transparent 70%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.6) 0%, transparent 75%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 0.9999;
@@ -393,19 +393,19 @@
         .qccs-module::before, .efwl-module::before, .temporal-flux-scrutiny-engine::before, .cognitive-axiom-synthesis::before, .csm-module::before { /* NEW MODULE ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -90px; /* Slightly higher */
-            left: 120px;
-            font-size: 2.0em; /* Larger label */
+            top: -100px; /* Slightly higher */
+            left: 140px;
+            font-size: 2.2em; /* Larger label */
             color: var(--signal-array-text); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.9999);
-            padding: 35px 55px;
-            border-radius: 45px;
+            padding: 40px 60px;
+            border-radius: 50px;
             font-weight: 700;
-            letter-spacing: 7px;
-            transform: translateY(-50%) translateZ(70px); /* Lift more */
+            letter-spacing: 8px;
+            transform: translateY(-50%) translateZ(80px); /* Lift more */
             opacity: 0.9999;
-            border: 4px solid var(--signal-array-text); /* Default border, will be overridden */
-            box-shadow: 0 0 60px var(--signal-array-text); /* Stronger glow */
+            border: 5px solid var(--signal-array-text); /* Default border, will be overridden */
+            box-shadow: 0 0 65px var(--signal-array-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -413,61 +413,61 @@
         .qccs-module::before {
             color: var(--qccs-text);
             border-color: var(--qccs-text);
-            box-shadow: 0 0 60px var(--qccs-text);
+            box-shadow: 0 0 65px var(--qccs-text);
         }
         .efwl-module::before {
             color: var(--efwl-text);
             border-color: var(--efwl-text);
-            box-shadow: 0 0 60px var(--efwl-text);
+            box-shadow: 0 0 65px var(--efwl-text);
         }
         .temporal-flux-scrutiny-engine::before {
             color: var(--temporal-text);
             border-color: var(--temporal-text);
-            box-shadow: 0 0 60px var(--temporal-text);
+            box-shadow: 0 0 65px var(--temporal-text);
         }
         .cognitive-axiom-synthesis::before {
             color: var(--axiom-text);
             border-color: var(--axiom-text);
-            box-shadow: 0 0 60px var(--axiom-text);
+            box-shadow: 0 0 65px var(--axiom-text);
         }
         .csm-module::before { /* NEW */
             color: var(--csm-text);
             border-color: var(--csm-text);
-            box-shadow: 0 0 60px var(--csm-text);
+            box-shadow: 0 0 65px var(--csm-text);
         }
 
 
         .calibrator-group, .param-group {
-            margin-bottom: 90px;
+            margin-bottom: 100px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em; /* Larger */
+            font-size: 2.6em; /* Larger */
             color: var(--cognitive-stream-text);
-            letter-spacing: 6px;
+            letter-spacing: 7px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 55px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 50px;
+            text-shadow: 0 0 60px rgba(0, 240, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 60px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 1.6em; /* Slightly larger sub-info */
+            font-size: 1.8em; /* Slightly larger sub-info */
             opacity: 0.99;
             color: var(--signal-array-text);
-            margin-top: 35px;
+            margin-top: 40px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
         /* Temporal Flux Scrutiny Engine results */
         .temporal-readout {
-            margin-top: 80px;
-            padding: 80px;
+            margin-top: 90px;
+            padding: 90px;
             background: rgba(0, 0, 0, 0.98); /* Darker background */
-            border: 4px dashed var(--temporal-border);
-            border-radius: 50px;
-            animation: fadeIn 3s ease-out;
-            box-shadow: 0 0 55px rgba(40, 255, 140, 0.85); /* Subtle glow */
+            border: 5px dashed var(--temporal-border);
+            border-radius: 55px;
+            animation: fadeIn 3.5s ease-out;
+            box-shadow: 0 0 60px rgba(30, 240, 130, 0.85); /* Subtle glow */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -475,129 +475,129 @@
         }
         .temporal-readout p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.9em; /* Larger text */
+            font-size: 2.1em; /* Larger text */
             color: var(--temporal-text);
-            text-shadow: 0 0 45px rgba(40, 255, 140, 0.99);
-            margin-bottom: 30px;
+            text-shadow: 0 0 50px rgba(30, 240, 130, 0.99);
+            margin-bottom: 35px;
             transform: translateZ(0); /* Reset for inner p */
-            line-height: 2.1;
+            line-height: 2.2;
         }
 
         /* Cognitive Axiom Synthesis Module Grid */
         .axiom-configuration-grid { /* Renamed from sub-protocol-grid to evolutionary-sub-routines-grid */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Larger min width */
-            gap: 80px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); /* Larger min width */
+            gap: 90px;
+            margin-top: 70px;
         }
         .axiom-unit-card { /* Renamed to evolutionary-sub-routine-card */
             background: rgba(0, 0, 0, 0.99); /* Darker */
-            border: 4px solid var(--axiom-slider-inactive);
-            border-radius: 50px; /* More rounded */
-            padding: 60px;
+            border: 5px solid var(--axiom-slider-inactive);
+            border-radius: 55px; /* More rounded */
+            padding: 70px;
             text-align: center;
-            transition: all 1.0s ease;
+            transition: all 1.2s ease;
             cursor: pointer;
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.9);
-            transform: translateZ(25px);
+            box-shadow: inset 0 0 45px rgba(0,0,0,0.9);
+            transform: translateZ(30px);
             display: flex;
             flex-direction: column;
-            gap: 35px;
+            gap: 40px;
         }
         .axiom-unit-card.active {
             border-color: var(--axiom-slider-active);
-            box-shadow: 0 0 80px var(--axiom-slider-thumb-glow), inset 0 0 60px var(--axiom-slider-active);
-            background: rgba(80, 60, 20, 0.999); /* More opaque */
-            transform: translateY(-30px) scale(1.1) translateZ(40px);
+            box-shadow: 0 0 90px var(--axiom-slider-thumb-glow), inset 0 0 70px var(--axiom-slider-active);
+            background: rgba(70, 50, 15, 0.999); /* More opaque */
+            transform: translateY(-35px) scale(1.12) translateZ(45px);
         }
         .axiom-unit-card h4 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2em; /* Larger */
+            font-size: 2.4em; /* Larger */
             color: var(--axiom-text);
             margin-top: 0;
-            margin-bottom: 35px;
-            text-shadow: 0 0 40px var(--axiom-text);
+            margin-bottom: 40px;
+            text-shadow: 0 0 45px var(--axiom-text);
         }
         .axiom-unit-card p {
-            font-size: 1.7em; /* Larger */
+            font-size: 1.9em; /* Larger */
             color: var(--text-color);
             opacity: 0.98;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             transform: translateZ(0); /* Reset for inner p */
         }
         .axiom-unit-card .effect-cost {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.6em; /* Larger */
+            font-size: 1.8em; /* Larger */
             color: var(--cognitive-stream-text);
-            text-shadow: 0 0 25px var(--cognitive-stream-text);
-            margin-top: 45px;
+            text-shadow: 0 0 30px var(--cognitive-stream-text);
+            margin-top: 50px;
             opacity: 0.999;
         }
 
         /* QCCS Module Specific */
         .active-chrono-conduits-display { /* Renamed from active-qel-links-display */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-            gap: 50px;
-            margin-top: 70px;
-            min-height: 180px;
-            border: 4px dashed rgba(255,255,255,0.4);
-            padding: 50px;
-            border-radius: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            gap: 60px;
+            margin-top: 80px;
+            min-height: 200px;
+            border: 5px dashed rgba(255,255,255,0.45);
+            padding: 60px;
+            border-radius: 45px;
         }
         .active-conduit-unit { /* Renamed from active-qel-card */
             background: rgba(0,0,0,0.98);
-            border: 4px solid var(--qccs-card-active-border);
-            border-radius: 45px;
-            padding: 45px;
+            border: 5px solid var(--qccs-card-active-border);
+            border-radius: 50px;
+            padding: 50px;
             text-align: center;
-            box-shadow: 0 0 45px var(--qccs-card-active-shadow);
-            transform: translateZ(20px);
-            transition: all 0.7s ease;
+            box-shadow: 0 0 50px var(--qccs-card-active-shadow);
+            transform: translateZ(25px);
+            transition: all 0.8s ease;
             position: relative;
         }
         .active-conduit-unit:hover {
-            transform: translateY(-18px) scale(1.07) translateZ(30px);
-            box-shadow: 0 0 80px var(--qccs-card-active-shadow);
+            transform: translateY(-20px) scale(1.08) translateZ(35px);
+            box-shadow: 0 0 90px var(--qccs-card-active-shadow);
         }
         .active-conduit-unit h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8em;
+            font-size: 2.0em;
             color: var(--qccs-text);
-            margin: 0 0 25px 0;
-            text-shadow: 0 0 30px var(--qccs-text);
+            margin: 0 0 30px 0;
+            text-shadow: 0 0 35px var(--qccs-text);
         }
         .active-conduit-unit p {
-            font-size: 1.5em;
+            font-size: 1.7em;
             color: var(--text-color);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             transform: translateZ(0);
         }
         .active-conduit-unit .deactivate-conduit-btn { /* Renamed from deactivate-qel-btn */
             background: linear-gradient(90deg, #A020F0 0%, #C02020 100%); /* Purple to Firebrick */
             color: white;
             border: none;
-            padding: 20px 30px;
-            font-size: 1.4em;
-            border-radius: 30px;
+            padding: 22px 32px;
+            font-size: 1.6em;
+            border-radius: 35px;
             cursor: pointer;
-            transition: all 0.5s ease;
-            margin-top: 30px;
-            box-shadow: 0 0 30px rgba(192,32,32,0.95);
+            transition: all 0.6s ease;
+            margin-top: 35px;
+            box-shadow: 0 0 35px rgba(192,32,32,0.95);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
         }
         .active-conduit-unit .deactivate-conduit-btn:hover {
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 0 50px rgba(192,32,32,0.99);
-            filter: brightness(1.3);
+            transform: translateY(-10px) scale(1.12);
+            box-shadow: 0 0 60px rgba(192,32,32,0.99);
+            filter: brightness(1.35);
         }
 
         /* EFWL Module Specific */
         .efwl-controls { /* Renamed from rtm-controls */
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
         .efwl-controls .slider-group {
@@ -605,127 +605,127 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 20px;
+            gap: 25px;
         }
         .efwl-controls .slider-group span {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7em;
+            font-size: 1.9em;
             color: var(--efwl-text);
-            text-shadow: 0 0 20px var(--efwl-text);
-            letter-spacing: 3px;
+            text-shadow: 0 0 25px var(--efwl-text);
+            letter-spacing: 4px;
         }
 
         .efwl-info { /* Renamed from rtm-info */
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8em;
+            font-size: 2.0em;
             color: var(--efwl-text);
-            text-shadow: 0 0 30px var(--efwl-text);
-            margin-top: 40px;
-            line-height: 2.3;
+            text-shadow: 0 0 35px var(--efwl-text);
+            margin-top: 45px;
+            line-height: 2.4;
             opacity: 0.999;
         }
 
         /* NEW: Cosmic Sentience Matrix (CSM) Module */
         .csm-summary { /* Renamed from blueprint-summary */
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.9em;
+            font-size: 2.1em;
             color: var(--csm-text);
-            text-shadow: 0 0 30px var(--csm-text);
-            margin-bottom: 50px;
-            line-height: 2.1;
+            text-shadow: 0 0 35px var(--csm-text);
+            margin-bottom: 60px;
+            line-height: 2.2;
         }
         .csm-core-list { /* Renamed from blueprint-component-list */
             display: flex;
             flex-direction: column;
-            gap: 45px;
-            margin-top: 50px;
-            max-height: 600px;
+            gap: 50px;
+            margin-top: 60px;
+            max-height: 650px;
             overflow-y: auto;
-            padding-right: 30px; /* For scrollbar space */
+            padding-right: 35px; /* For scrollbar space */
         }
         .csm-core-item { /* Renamed from blueprint-component-item */
             background: var(--csm-component-bg);
-            border: 4px dashed var(--csm-component-border);
-            border-radius: 40px;
-            padding: 40px 50px;
+            border: 5px dashed var(--csm-component-border);
+            border-radius: 45px;
+            padding: 45px 55px;
             text-align: left;
             position: relative;
-            box-shadow: inset 0 0 30px rgba(40, 255, 255, 0.5);
+            box-shadow: inset 0 0 35px rgba(30, 240, 240, 0.5);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
         .csm-core-item h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.7em;
+            font-size: 1.9em;
             color: var(--csm-text);
-            margin: 0 0 18px 0;
-            text-shadow: 0 0 20px var(--csm-text);
+            margin: 0 0 20px 0;
+            text-shadow: 0 0 25px var(--csm-text);
         }
         .csm-core-item p {
-            font-size: 1.45em;
+            font-size: 1.65em;
             color: var(--text-color);
             opacity: 0.95;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             transform: none; /* Reset 3D transform */
         }
         .csm-core-item .core-alignment-label {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.45em;
+            font-size: 1.65em;
             color: var(--csm-text);
-            text-shadow: 0 0 15px var(--csm-text);
-            margin-bottom: 15px;
+            text-shadow: 0 0 18px var(--csm-text);
+            margin-bottom: 18px;
         }
         .csm-core-item .remove-csm-core { /* Renamed from remove-blueprint-component */
             position: absolute;
-            top: 30px;
-            right: 30px;
-            background: #C00000;
+            top: 35px;
+            right: 35px;
+            background: #B00000;
             color: white;
             border: none;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.7em;
+            width: 55px;
+            height: 55px;
+            font-size: 1.9em;
             cursor: pointer;
-            transition: background 0.3s ease;
-            box-shadow: 0 0 20px rgba(192, 0, 0, 0.9);
+            transition: background 0.4s ease;
+            box-shadow: 0 0 25px rgba(176, 0, 0, 0.9);
         }
         .csm-core-item .remove-csm-core:hover {
             background: #FF0000;
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.99);
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.99);
         }
         .sentience-quotient-display {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em;
+            font-size: 2.6em;
             color: var(--csm-text);
-            text-shadow: 0 0 40px var(--csm-text), 0 0 50px var(--qccs-text);
-            margin-top: 50px;
-            padding: 40px;
-            border: 4px solid var(--csm-border);
-            border-radius: 40px;
+            text-shadow: 0 0 45px var(--csm-text), 0 0 55px var(--qccs-text);
+            margin-top: 60px;
+            padding: 45px;
+            border: 5px solid var(--csm-border);
+            border-radius: 45px;
             background: rgba(0, 0, 0, 0.95);
-            box-shadow: inset 0 0 35px rgba(40, 255, 255, 0.8);
-            line-height: 1.8;
+            box-shadow: inset 0 0 40px rgba(30, 240, 240, 0.8);
+            line-height: 1.9;
         }
 
 
         /* Resource Display Styles */
         .resource-display-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); /* Adaptive 5-6 columns */
-            gap: 150px;
-            margin-bottom: 150px;
-            transform: translateZ(100px);
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); /* Adaptive 5-6 columns */
+            gap: 170px;
+            margin-bottom: 170px;
+            transform: translateZ(110px);
             align-items: start;
         }
 
         .energy-reserve-display, .data-flow-display, .raw-data-buffer-display, .processing-power-display, .exotic-matter-display, .existential-fabric-display { /* NEW RESOURCE ADDED */
             background: var(--module-selection-bg);
-            border: 4px solid var(--module-selection-border);
-            border-radius: 100px; /* More rounded */
-            padding: 90px 95px;
-            box-shadow: inset 0 0 100px rgba(160, 0, 255, 0.999), 0 0 100px rgba(160, 0, 255, 0.99), inset 0 0 180px rgba(160, 0, 255, 0.7); /* More inner shadow */
+            border: 5px solid var(--module-selection-border);
+            border-radius: 110px; /* More rounded */
+            padding: 100px 105px;
+            box-shadow: inset 0 0 110px rgba(140, 0, 240, 0.999), 0 0 110px rgba(140, 0, 240, 0.99), inset 0 0 200px rgba(140, 0, 240, 0.7); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
@@ -737,184 +737,184 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.6) 0%, transparent 80%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.65) 0%, transparent 85%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p, .raw-data-buffer-display p, .processing-power-display p, .exotic-matter-display p, .existential-fabric-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2em; /* Larger */
+            font-size: 2.4em; /* Larger */
             color: var(--module-selection-text);
-            text-shadow: 0 0 45px rgba(160, 0, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 55px;
+            text-shadow: 0 0 50px rgba(140, 0, 240, 0.9999); /* Stronger shadow */
+            margin-bottom: 60px;
         }
 
         /* Specific resource display labels and colors */
         .resource-display-container > div::before { /* Common styles for resource labels */
             content: attr(data-label);
             position: absolute;
-            top: -90px; /* Aligned with module labels */
-            left: 95px; /* Aligned with module labels */
-            font-size: 2.0em; /* Consistent with module labels */
+            top: -100px; /* Aligned with module labels */
+            left: 105px; /* Aligned with module labels */
+            font-size: 2.2em; /* Consistent with module labels */
             background: rgba(0, 0, 0, 0.9999);
-            padding: 35px 55px;
-            border-radius: 45px;
+            padding: 40px 60px;
+            border-radius: 50px;
             font-weight: 700;
-            letter-spacing: 7px;
-            transform: translateY(-50%) translateZ(70px);
+            letter-spacing: 8px;
+            transform: translateY(-50%) translateZ(80px);
             opacity: 0.9999;
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         .energy-reserve-display::before {
             color: var(--energy-color-high);
-            border: 4px solid rgba(255, 255, 100, 0.9999);
-            box-shadow: 0 0 60px rgba(255, 255, 100, 0.9999); /* Stronger glow */
+            border: 5px solid rgba(255, 255, 90, 0.9999);
+            box-shadow: 0 0 65px rgba(255, 255, 90, 0.9999); /* Stronger glow */
         }
         .data-flow-display::before {
             color: var(--data-flow-color-high);
-            border: 4px solid rgba(0, 255, 60, 0.9999);
-            box-shadow: 0 0 60px rgba(0, 255, 60, 0.9999); /* Stronger glow */
+            border: 5px solid rgba(0, 255, 50, 0.9999);
+            box-shadow: 0 0 65px rgba(0, 255, 50, 0.9999); /* Stronger glow */
         }
         .raw-data-buffer-display::before { /* Renamed from raw-data-reserve-display */
             color: var(--raw-data-text);
-            border: 4px solid var(--raw-data-text);
-            box-shadow: 0 0 60px var(--raw-data-text); /* Stronger glow */
+            border: 5px solid var(--raw-data-text);
+            box-shadow: 0 0 65px var(--raw-data-text); /* Stronger glow */
         }
         .processing-power-display::before {
             color: var(--processing-power-text);
-            border: 4px solid var(--processing-power-text);
-            box-shadow: 0 0 60px var(--processing-power-text); /* Stronger glow */
+            border: 5px solid var(--processing-power-text);
+            box-shadow: 0 0 65px var(--processing-power-text); /* Stronger glow */
         }
         .exotic-matter-display::before { /* NEW */
             color: var(--exotic-matter-text);
-            border: 4px solid var(--exotic-matter-text);
-            box-shadow: 0 0 60px var(--exotic-matter-text); /* Stronger glow */
+            border: 5px solid var(--exotic-matter-text);
+            box-shadow: 0 0 65px var(--exotic-matter-text); /* Stronger glow */
         }
         .existential-fabric-display::before { /* NEW */
             content: attr(data-label);
             color: var(--existential-fabric-text);
-            border: 4px solid var(--existential-fabric-text);
-            box-shadow: 0 0 60px var(--existential-fabric-text);
+            border: 5px solid var(--existential-fabric-text);
+            box-shadow: 0 0 65px var(--existential-fabric-text);
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 90px; /* Taller bar */
+            height: 100px; /* Taller bar */
             background: var(--resource-bg);
-            border-radius: 45px;
+            border-radius: 50px;
             overflow: hidden;
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.999999);
-            border: 4px solid rgba(255,255,255,0.5);
+            box-shadow: inset 0 0 55px rgba(0, 0, 0, 0.999999);
+            border: 5px solid rgba(255,255,255,0.55);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, transparent 30%, rgba(255,255,255,0.7) 100%);
-            background-size: 1200% 100%; /* Larger background for flow */
-            animation: resourceFlow 35s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, transparent 30%, rgba(255,255,255,0.75) 100%);
+            background-size: 1500% 100%; /* Larger background for flow */
+            animation: resourceFlow 40s linear infinite;
             mix-blend-mode: overlay;
             opacity: 0.999;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 1200% 0; }
-            100% { background-position: -1200% 0; }
+            0% { background-position: 1500% 0; }
+            100% { background-position: -1500% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 45px;
-            transition: width 4.5s cubic-bezier(0.25, 1, 0.5, 1), background 4s ease-out, box-shadow 4s ease-out;
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.999); /* Default */
+            border-radius: 50px;
+            transition: width 5s cubic-bezier(0.25, 1, 0.5, 1), background 4.5s ease-out, box-shadow 4.5s ease-out;
+            box-shadow: 0 0 55px rgba(255, 255, 255, 0.999); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 55px rgba(255, 255, 100, 0.9999); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 55px rgba(0, 255, 60, 0.9999); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 55px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 55px var(--processing-power-text); }
-        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 55px var(--exotic-matter-text); } /* NEW */
-        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 55px var(--existential-fabric-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 60px rgba(255, 255, 90, 0.9999); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 60px rgba(0, 255, 50, 0.9999); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 60px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 60px var(--processing-power-text); }
+        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 60px var(--exotic-matter-text); } /* NEW */
+        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 60px var(--existential-fabric-text); } /* NEW */
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 95px; /* Taller */
-            background: rgba(255, 255, 255, 0.7); /* More subtle background */
-            border-radius: 48px;
+            height: 105px; /* Taller */
+            background: rgba(255, 255, 255, 0.75); /* More subtle background */
+            border-radius: 53px;
             outline: none;
-            transition: all 1.8s ease;
-            box-shadow: inset 0 0 45px rgba(0, 0, 0, 0.999999), 0 0 45px rgba(0,191,255,0.98); /* Inset for depth, subtle outer glow */
-            transform: translateZ(35px);
-            border: 4px solid rgba(255,255,255,0.6); /* More subtle border */
+            transition: all 2.0s ease;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.999999), 0 0 50px rgba(0,180,255,0.98); /* Inset for depth, subtle outer glow */
+            transform: translateZ(40px);
+            border: 5px solid rgba(255,255,255,0.65); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 105px; /* Larger thumb */
-            height: 105px;
+            width: 115px; /* Larger thumb */
+            height: 115px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 90px var(--primary-glow);
-            transition: background 1.8s ease, box-shadow 1.8s ease, transform 1.8s ease;
-            border: 28px solid rgba(255, 255, 255, 0.999);
+            box-shadow: 0 0 100px var(--primary-glow);
+            transition: background 2.0s ease, box-shadow 2.0s ease, transform 2.0s ease;
+            border: 30px solid rgba(255, 255, 255, 0.999);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 105px;
-            height: 105px;
+            width: 115px;
+            height: 115px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 90px var(--primary-glow);
-            transition: background 1.8s ease, box-shadow 1.8s ease, transform 1.8s ease;
-            border: 28px solid rgba(255, 255, 255, 0.999);
+            box-shadow: 0 0 100px var(--primary-glow);
+            transition: background 2.0s ease, box-shadow 2.0s ease, transform 2.0s ease;
+            border: 30px solid rgba(255, 255, 255, 0.999);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
-            background: #7AF5FF;
-            box-shadow: 0 0 120px var(--primary-glow), 0 0 70px var(--primary-glow) inset;
-            transform: scale(1.5);
+            background: #6AF0FF;
+            box-shadow: 0 0 130px var(--primary-glow), 0 0 75px var(--primary-glow) inset;
+            transform: scale(1.55);
         }
         input[type="range"]::-moz-range-thumb:hover {
-            background: #7AF5FF;
-            box-shadow: 0 0 120px var(--primary-glow), 0 0 70px var(--primary-glow) inset;
-            transform: scale(1.5);
+            background: #6AF0FF;
+            box-shadow: 0 0 130px var(--primary-glow), 0 0 75px var(--primary-glow) inset;
+            transform: scale(1.55);
         }
 
         /* Specific slider styles for Axiom Intensity */
         .axiom-unit-card input[type="range"], .csm-core-item input[type="range"], .efwl-controls input[type="range"] {
-            height: 55px;
-            border-radius: 28px;
+            height: 60px;
+            border-radius: 30px;
             background: var(--axiom-slider-inactive); /* Use axiom inactive for both */
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.98), 0 0 30px rgba(255, 160, 40, 0.6);
+            box-shadow: inset 0 0 35px rgba(0,0,0,0.98), 0 0 35px rgba(240, 150, 30, 0.65);
             border: none;
         }
         .axiom-unit-card input[type="range"]::-webkit-slider-thumb, .csm-core-item input[type="range"]::-webkit-slider-thumb, .efwl-controls input[type="range"]::-webkit-slider-thumb {
-            width: 65px;
-            height: 65px;
+            width: 70px;
+            height: 70px;
             border-color: var(--axiom-slider-active);
             background: var(--axiom-slider-active);
-            box-shadow: 0 0 50px var(--axiom-slider-thumb-glow);
-            border-width: 20px;
+            box-shadow: 0 0 55px var(--axiom-slider-thumb-glow);
+            border-width: 22px;
         }
         .axiom-unit-card input[type="range"]::-moz-range-thumb, .csm-core-item input[type="range"]::-moz-range-thumb, .efwl-controls input[type="range"]::-moz-range-thumb {
-            width: 65px;
-            height: 65px;
+            width: 70px;
+            height: 70px;
             border-color: var(--axiom-slider-active);
             background: var(--axiom-slider-active);
-            box-shadow: 0 0 50px var(--axiom-slider-thumb-glow);
-            border-width: 20px;
+            box-shadow: 0 0 55px var(--axiom-slider-thumb-glow);
+            border-width: 22px;
         }
         .axiom-unit-card input[type="range"]::-webkit-slider-thumb:hover,
         .axiom-unit-card input[type="range"]::-moz-range-thumb:hover,
@@ -923,64 +923,64 @@
         .efwl-controls input[type="range"]::-webkit-slider-thumb:hover,
         .efwl-controls input[type="range"]::-moz-range-thumb:hover {
             background: var(--axiom-text);
-            box-shadow: 0 0 70px var(--axiom-slider-thumb-glow);
-            transform: scale(1.3);
+            box-shadow: 0 0 75px var(--axiom-slider-thumb-glow);
+            transform: scale(1.35);
         }
 
 
         /* Neural Network Status Display */
         .neural-network-status-display { /* Renamed to neural-network-status-display */
             font-family: 'Orbitron', monospace;
-            font-size: 2.6em; /* Larger */
-            padding: 90px;
-            border: 4px solid var(--border-color);
-            border-radius: 100px; /* More rounded */
+            font-size: 2.8em; /* Larger */
+            padding: 100px;
+            border: 5px solid var(--border-color);
+            border-radius: 110px; /* More rounded */
             background: var(--network-status-bg);
-            box-shadow: inset 0 0 100px rgba(0, 255, 255, 0.9), inset 0 0 180px rgba(0, 255, 255, 0.75); /* More inner shadow */
+            box-shadow: inset 0 0 110px rgba(0, 240, 255, 0.9), inset 0 0 200px rgba(0, 240, 255, 0.75); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 1.8s ease;
-            line-height: 2.8;
-            letter-spacing: 6px;
+            transition: all 2.0s ease;
+            line-height: 3.0;
+            letter-spacing: 7px;
             color: var(--cognitive-stream-text);
-            text-shadow: 0 0 50px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            text-shadow: 0 0 55px rgba(0, 240, 255, 0.9999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(95px);
+            transform: translateZ(105px);
             overflow: hidden;
         }
 
         .neural-network-status-display::before {
             content: 'NEURAL NEXUS STATUS // COSMIC CONSCIOUSNESS';
             position: absolute;
-            top: -90px;
-            left: 120px;
-            font-size: 2.0em;
+            top: -100px;
+            left: 140px;
+            font-size: 2.2em;
             color: var(--network-status-glow);
             background: rgba(0, 0, 0, 0.9999);
-            padding: 35px 55px;
-            border-radius: 45px;
+            padding: 40px 60px;
+            border-radius: 50px;
             font-weight: 700;
-            letter-spacing: 7px;
-            transform: translateY(-50%) translateZ(70px);
+            letter-spacing: 8px;
+            transform: translateY(-50%) translateZ(80px);
             opacity: 0.9999;
-            border: 4px solid var(--network-status-glow);
-            box-shadow: 0 0 60px var(--network-status-glow);
+            border: 5px solid var(--network-status-glow);
+            box-shadow: 0 0 65px var(--network-status-glow);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 30px;
+            margin-right: 35px;
             opacity: 0.99;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 35px var(--primary-glow);
+            text-shadow: 0 0 40px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -993,57 +993,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 30px var(--log-glitch-color);
-            animation: textGlitch 0.5s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 35px var(--log-glitch-color);
+            animation: textGlitch 0.4s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(5px) skewX(10deg); opacity: 0.7;}
-            40% { transform: translateX(-5px) skewX(-10deg); opacity: 0.65; }
-            60% { transform: translateX(4px) skewX(7deg); opacity: 0.75; }
-            80% { transform: translateX(-4px) skewX(-7deg); opacity: 0.72; }
+            20% { transform: translateX(6px) skewX(12deg); opacity: 0.6;}
+            40% { transform: translateX(-6px) skewX(-12deg); opacity: 0.55; }
+            60% { transform: translateX(5px) skewX(9deg); opacity: 0.65; }
+            80% { transform: translateX(-5px) skewX(-9deg); opacity: 0.62; }
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2em; /* Larger button text */
-            padding: 35px 65px;
-            border-radius: 55px;
+            font-size: 2.4em; /* Larger button text */
+            padding: 40px 70px;
+            border-radius: 60px;
             border: none;
             cursor: pointer;
-            transition: all 1.0s ease-in-out, box-shadow 1.8s ease-in-out, transform 1.0s ease-in-out;
-            margin-top: 90px;
+            transition: all 1.2s ease-in-out, box-shadow 2.0s ease-in-out, transform 1.2s ease-in-out;
+            margin-top: 100px;
             text-transform: uppercase;
-            letter-spacing: 7px;
+            letter-spacing: 8px;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.95), rgba(15,0,25,0.95)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.96), rgba(12,0,22,0.96)); /* Dark base */
             color: var(--text-color);
-            border: 5px solid var(--border-color); /* Thicker border */
-            transform: translateZ(80px);
+            border: 6px solid var(--border-color); /* Thicker border */
+            transform: translateZ(90px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -10px;
-            border-radius: 55px;
-            border: 10px solid transparent;
+            inset: -12px;
+            border-radius: 60px;
+            border: 12px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(15px);
+            filter: blur(18px);
             opacity: 0.9;
-            transition: opacity 1.0s ease, filter 1.0s ease;
-            animation: buttonBorderRotate 25s linear infinite; /* Slower rotation */
+            transition: opacity 1.2s ease, filter 1.2s ease;
+            animation: buttonBorderRotate 28s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(30px);
+            filter: blur(35px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1055,104 +1055,104 @@
         /* Specific button styles */
         .btn-architect {
             color: var(--formulate-btn-glow);
-            box-shadow: 0 0 60px var(--formulate-btn-glow);
+            box-shadow: 0 0 65px var(--formulate-btn-glow);
             border-color: var(--formulate-btn-glow);
         }
         .btn-architect:hover {
-            background: rgba(255, 30, 140, 0.3);
-            box-shadow: 0 0 100px var(--formulate-btn-glow), inset 0 0 80px var(--formulate-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(255, 20, 130, 0.35);
+            box-shadow: 0 0 110px var(--formulate-btn-glow), inset 0 0 90px var(--formulate-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .btn-calibrate {
             color: var(--calibrate-btn-glow);
-            box-shadow: 0 0 60px var(--calibrate-btn-glow);
+            box-shadow: 0 0 65px var(--calibrate-btn-glow);
             border-color: var(--calibrate-btn-glow);
         }
         .btn-calibrate:hover {
-            background: rgba(100, 80, 200, 0.3);
-            box-shadow: 0 0 100px var(--calibrate-btn-glow), inset 0 0 80px var(--calibrate-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(90, 70, 190, 0.35);
+            box-shadow: 0 0 110px var(--calibrate-btn-glow), inset 0 0 90px var(--calibrate-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .btn-tune {
             color: var(--tune-btn-glow);
-            box-shadow: 0 0 60px var(--tune-btn-glow);
+            box-shadow: 0 0 65px var(--tune-btn-glow);
             border-color: var(--tune-btn-glow);
         }
         .btn-tune:hover {
-            background: rgba(0, 220, 50, 0.3);
-            box-shadow: 0 0 100px var(--tune-btn-glow), inset 0 0 80px var(--tune-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(0, 200, 40, 0.35);
+            box-shadow: 0 0 110px var(--tune-btn-glow), inset 0 0 90px var(--tune-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .btn-synthesize { /* NEW */
             color: var(--synthesize-btn-glow);
-            box-shadow: 0 0 60px var(--synthesize-btn-glow);
+            box-shadow: 0 0 65px var(--synthesize-btn-glow);
             border-color: var(--synthesize-btn-glow);
         }
         .btn-synthesize:hover {
-            background: rgba(255, 255, 40, 0.3);
-            box-shadow: 0 0 100px var(--synthesize-btn-glow), inset 0 0 80px var(--synthesize-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(255, 255, 30, 0.35);
+            box-shadow: 0 0 110px var(--synthesize-btn-glow), inset 0 0 90px var(--synthesize-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .btn-scrutinize { /* NEW */
             color: var(--temporal-btn-glow);
-            box-shadow: 0 0 60px var(--temporal-btn-glow);
+            box-shadow: 0 0 65px var(--temporal-btn-glow);
             border-color: var(--temporal-btn-glow);
         }
         .btn-scrutinize:hover {
-            background: rgba(40, 255, 140, 0.3);
-            box-shadow: 0 0 100px var(--temporal-btn-glow), inset 0 0 80px var(--temporal-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(30, 240, 130, 0.35);
+            box-shadow: 0 0 110px var(--temporal-btn-glow), inset 0 0 90px var(--temporal-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .btn-qccs { /* NEW */
             color: var(--qccs-btn-glow);
-            box-shadow: 0 0 60px var(--qccs-btn-glow);
+            box-shadow: 0 0 65px var(--qccs-btn-glow);
             border-color: var(--qccs-btn-glow);
         }
         .btn-qccs:hover {
-            background: rgba(200, 20, 220, 0.3);
-            box-shadow: 0 0 100px var(--qccs-btn-glow), inset 0 0 80px var(--qccs-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(180, 15, 200, 0.35);
+            box-shadow: 0 0 110px var(--qccs-btn-glow), inset 0 0 90px var(--qccs-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
         .btn-efwl { /* NEW */
             color: var(--efwl-btn-glow);
-            box-shadow: 0 0 60px var(--efwl-btn-glow);
+            box-shadow: 0 0 65px var(--efwl-btn-glow);
             border-color: var(--efwl-btn-glow);
         }
         .btn-efwl:hover {
-            background: rgba(255, 200, 40, 0.3);
-            box-shadow: 0 0 100px var(--efwl-btn-glow), inset 0 0 80px var(--efwl-btn-glow);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(240, 190, 30, 0.35);
+            box-shadow: 0 0 110px var(--efwl-btn-glow), inset 0 0 90px var(--efwl-btn-glow);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
         .btn-csm { /* NEW */
             color: var(--csm-text);
-            box-shadow: 0 0 60px var(--csm-text);
+            box-shadow: 0 0 65px var(--csm-text);
             border-color: var(--csm-text);
         }
         .btn-csm:hover {
-            background: rgba(40, 255, 255, 0.3);
-            box-shadow: 0 0 100px var(--csm-text), inset 0 0 80px var(--csm-text);
-            transform: translateY(-15px) scale(1.06) translateZ(90px);
+            background: rgba(30, 240, 240, 0.35);
+            box-shadow: 0 0 110px var(--csm-text), inset 0 0 90px var(--csm-text);
+            transform: translateY(-18px) scale(1.07) translateZ(100px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 6px solid var(--anomaly-border);
-            border-radius: 55px;
-            padding: 55px;
-            margin-top: 150px;
+            border: 7px solid var(--anomaly-border);
+            border-radius: 60px;
+            padding: 60px;
+            margin-top: 170px;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 3.5em;
-            text-shadow: 0 0 60px var(--anomaly-color);
-            animation: pulseWarning 0.8s infinite alternate; /* Faster pulse */
-            transform: translateZ(130px);
+            font-size: 3.8em;
+            text-shadow: 0 0 65px var(--anomaly-color);
+            animation: pulseWarning 0.7s infinite alternate; /* Faster pulse */
+            transform: translateZ(140px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 1.8s ease-out;
+            transition: opacity 2.0s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -1160,40 +1160,40 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 35px var(--anomaly-color), inset 0 0 18px var(--anomaly-color); }
-            to { box-shadow: 0 0 120px var(--anomaly-color), inset 0 0 60px var(--anomaly-color); }
+            from { box-shadow: 0 0 40px var(--anomaly-color), inset 0 0 20px var(--anomaly-color); }
+            to { box-shadow: 0 0 130px var(--anomaly-color), inset 0 0 65px var(--anomaly-color); }
         }
 
         /* Scrollbar styles for CSM core list */
         .csm-core-list::-webkit-scrollbar {
-            width: 22px; /* Thicker scrollbar */
+            width: 25px; /* Thicker scrollbar */
         }
         .csm-core-list::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.95);
-            border-radius: 18px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.96);
+            border-radius: 20px;
+            box-shadow: inset 0 0 12px rgba(0,0,0,0.85);
         }
         .csm-core-list::-webkit-scrollbar-thumb {
             background: var(--csm-border);
-            border-radius: 18px;
-            border: 6px solid rgba(0,0,0,0.95);
-            box-shadow: 0 0 25px var(--csm-text);
+            border-radius: 20px;
+            border: 7px solid rgba(0,0,0,0.96);
+            box-shadow: 0 0 28px var(--csm-text);
         }
         .csm-core-list::-webkit-scrollbar-thumb:hover {
             background: var(--csm-text);
-            box-shadow: 0 0 40px var(--csm-text);
+            box-shadow: 0 0 45px var(--csm-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.9em;
+            font-size: 2.1em;
             color: var(--text-color);
-            margin-top: 220px;
-            letter-spacing: 5px;
+            margin-top: 250px;
+            letter-spacing: 6px;
             opacity: 0.9;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-            transform: translateZ(50px);
+            text-shadow: 0 0 28px rgba(255, 255, 255, 0.65);
+            transform: translateZ(55px);
         }
 
     </style>
@@ -1369,7 +1369,7 @@
         </section>
 
         <footer class="version-display">
-            Generation 42.0 // Multiversal Transcendence Protocol Active
+            Generation 43.0 // Multiversal Transcendence Protocol Active
         </footer>
 
     </div>
@@ -1405,33 +1405,33 @@
             document.getElementById('energy-value').textContent = resourceValues.energy.toFixed(0);
             document.getElementById('energy-level-bar').style.width = (resourceValues.energy / 10000 * 100) + '%';
             document.getElementById('energy-level-bar').style.background = getResourceGradient('energy', resourceValues.energy / 10000);
-            document.getElementById('energy-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
+            document.getElementById('energy-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
 
             document.getElementById('data-flow-value').textContent = resourceValues.dataFlow.toFixed(0);
             document.getElementById('data-flow-level-bar').style.width = (resourceValues.dataFlow / 10000 * 100) + '%';
             document.getElementById('data-flow-level-bar').style.background = getResourceGradient('dataFlow', resourceValues.dataFlow / 10000);
-            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
+            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
 
             document.getElementById('raw-data-value').textContent = resourceValues.rawData.toFixed(0);
             document.getElementById('raw-data-level-bar').style.width = resourceValues.rawData + '%';
             document.getElementById('raw-data-level-bar').style.background = getResourceGradient('rawData', resourceValues.rawData / 100);
-            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
+            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
 
             document.getElementById('processing-power-value').textContent = resourceValues.processingPower.toFixed(0);
             document.getElementById('processing-power-level-bar').style.width = resourceValues.processingPower + '%';
             document.getElementById('processing-power-level-bar').style.background = getResourceGradient('processingPower', resourceValues.processingPower / 100);
-            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
+            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
 
             document.getElementById('exotic-matter-value').textContent = resourceValues.exoticMatter.toFixed(2); // Increased precision
             document.getElementById('exotic-matter-level-bar').style.width = (resourceValues.exoticMatter / 10 * 100) + '%'; // Assuming max 10 kMol
             document.getElementById('exotic-matter-level-bar').style.background = getResourceGradient('exoticMatter', resourceValues.exoticMatter / 10);
-            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / 10)}`;
+            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / 10)}`;
 
             // NEW Existential Fabric
             document.getElementById('existential-fabric-value').textContent = resourceValues.existentialFabric.toFixed(2);
             document.getElementById('existential-fabric-level-bar').style.width = (resourceValues.existentialFabric / 2 * 100) + '%'; // Assuming max 2 units
             document.getElementById('existential-fabric-level-bar').style.background = getResourceGradient('existentialFabric', resourceValues.existentialFabric / 2);
-            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 55px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / 2)}`;
+            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / 2)}`;
 
             // Update axiom focus values
             for (const axiomId in axiomFocus) {
@@ -1467,7 +1467,7 @@
             let lowColor, mediumColor, highColor;
             // Extract the base color from the linear gradient start for shadow
             if (resourceName === 'energy') {
-                lowColor = 'rgba(255, 48, 48, 0.9999)'; mediumColor = 'rgba(255, 224, 0, 0.9999)'; highColor = 'rgba(255, 255, 192, 0.9999)';
+                lowColor = 'rgba(255, 32, 32, 0.9999)'; mediumColor = 'rgba(255, 208, 0, 0.9999)'; highColor = 'rgba(255, 255, 176, 0.9999)';
             } else if (resourceName === 'dataFlow') {
                 lowColor = 'rgba(255, 64, 32, 0.9999)'; mediumColor = 'rgba(0, 240, 255, 0.9999)'; highColor = 'rgba(0, 255, 136, 0.9999)';
             } else if (resourceName === 'rawData') {
@@ -1501,7 +1501,7 @@
         // Temporal Flux Scrutiny Engine Functions
         function updateScrutinyParam(paramId, value) {
             // No direct display, just logging the change
-            addToLog(`Temporal Scrutiny param '${paramId}' set to ${value}.`, 'info');
+            //addToLog(`Temporal Scrutiny param '${paramId}' set to ${value}.`, 'info'); // Too verbose, removing
         }
 
         function initiateTemporalScrutiny() {
@@ -1512,8 +1512,8 @@
             addToLog(`Initiating Temporal Scrutiny (Span: ${temporalSpan}, Distortion: ${causalDistortion})...`, 'event');
 
             // Resource cost for scrutiny
-            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (temporalSpan * 0.07));
-            resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (causalDistortion * 0.12));
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (temporalSpan * 0.08)); // Increased cost
+            resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (causalDistortion * 0.15)); // Increased cost
             updateResourceDisplay();
 
             setTimeout(() => {
@@ -1526,18 +1526,18 @@
                     recommendation = "IMMEDIATE: Initiate Existential Fabric weave at maximum density. Reconfigure Logic Nexus cores.";
                     logType = 'critical';
                     showAnomalyAlert(true);
-                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.20); // Fabric loss
-                    resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 15); // High impact
+                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.25); // Fabric loss
+                    resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 20); // High impact
                 } else if (temporalSpan > 50 && causalDistortion < 30) {
                     outcome = "Temporal Flux: Minimal variance. Future trajectories largely stable. Potential for optimization.";
                     recommendation = "ACTION: Monitor for subtle shifts. Optimize Data Flow and re-evaluate Axiom focus. Consider a minor Chrono-Conduit.";
                     logType = 'info';
-                    resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 600); // Small data flow boost
+                    resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 700); // Small data flow boost
                 } else if (Math.random() > 0.6) {
                     outcome = "Temporal Distortion detected in Sector Gamma. Minor causality loops observed, potentially emergent.";
                     recommendation = "ADJUST: Increase Empathic Resonance Alignment. Establish new Chrono-Conduit for resource compensation. Prioritize Existential Fabric.";
                     logType = 'warning';
-                    resourceValues.energy = Math.max(0, resourceValues.energy - 600); // Small energy drain
+                    resourceValues.energy = Math.max(0, resourceValues.energy - 700); // Small energy drain
                 } else {
                     outcome = "Temporal Scan: All cycles within nominal parameters. No significant anomalies or emergent threats.";
                     recommendation = "STATUS: Continue passive observation. Maintain system stability. Energy reserves optimal.";
@@ -1547,7 +1547,7 @@
                 addToLog(`Temporal Scrutiny complete. Outcome: ${outcome.split('.')[0]}.`, logType);
                 updateResourceDisplay();
                 checkStability();
-            }, 4500);
+            }, 5000); // Slightly longer analysis
         }
 
         // Cognitive Axiom Synthesis Module Functions
@@ -1562,7 +1562,7 @@
             updateResourceDisplay(); // Updates the displayed focus values
             // Add a log entry if a significant change, or if it becomes active/inactive
             const routineName = card.querySelector('h4').textContent;
-            addToLog(`Axiom '${routineName}' focus adjusted to ${value}%.`, 'info');
+            //addToLog(`Axiom '${routineName}' focus adjusted to ${value}%.`, 'info'); // Too verbose, removing
         }
 
         function synthesizeAxiomFlux() {
@@ -1574,16 +1574,16 @@
 
             if (totalFocus > 0) {
                 // Costs are cumulative based on focus
-                resourceValues.energy = Math.max(0, resourceValues.energy - (totalFocus * 1.5)); // Increased energy cost
-                resourceValues.rawData = Math.max(0, resourceValues.rawData - (axiomFocus['axiom-1'] * 0.15)); // Paradoxical Logic consumes raw data
-                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (axiomFocus['axiom-2'] * 0.008)); // Empathic Resonance consumes XM
-                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (axiomFocus['axiom-2'] * 0.25)); // Empathic Resonance consumes Proc. Power
-                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (axiomFocus['axiom-3'] * 1.5)); // Reality Refinement consumes Data Flow
+                resourceValues.energy = Math.max(0, resourceValues.energy - (totalFocus * 1.8)); // Increased energy cost
+                resourceValues.rawData = Math.max(0, resourceValues.rawData - (axiomFocus['axiom-1'] * 0.18)); // Paradoxical Logic consumes raw data
+                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (axiomFocus['axiom-2'] * 0.009)); // Empathic Resonance consumes XM
+                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (axiomFocus['axiom-2'] * 0.30)); // Empathic Resonance consumes Proc. Power
+                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (axiomFocus['axiom-3'] * 1.8)); // Reality Refinement consumes Data Flow
 
                 // Benefits:
-                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + (totalFocus * 0.06)); // Slight boost to PP
-                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (totalFocus * 2.5)); // Significant data flow boost
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (axiomFocus['axiom-3'] * 0.002)); // Reality Refinement produces tiny EF
+                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + (totalFocus * 0.07)); // Slight boost to PP
+                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (totalFocus * 2.8)); // Significant data flow boost
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (axiomFocus['axiom-3'] * 0.0025)); // Reality Refinement produces tiny EF
 
             } else {
                 addToLog('Axiom Flux Synthesis aborted: No axioms are focused.', 'warning');
@@ -1594,14 +1594,14 @@
             checkStability();
             setTimeout(() => {
                 addToLog('Axiom Flux Synthesis complete. Cognitive pathways optimized.', 'info');
-            }, 3000);
+            }, 3500); // Slightly longer synthesis
         }
 
         // Quantum Chrono-Conduit System (QCCS) Functions
         let currentHarmonicTunerValue = 50;
         function updateHarmonicTuner(value) {
             currentHarmonicTunerValue = parseInt(value);
-            addToLog(`Harmonic Tuner set to ${value}.`, 'info');
+            //addToLog(`Harmonic Tuner set to ${value}.`, 'info'); // Too verbose, removing
         }
 
         function establishChronoConduit() {
@@ -1619,40 +1619,40 @@
 
             const linkId = `chrono-${nextConduitId++}`;
             let conduitType = "Unstable Flux";
-            let flowRate = (Math.random() * 60 + 25).toFixed(1); // Default low flow
+            let flowRate = (Math.random() * 70 + 30).toFixed(1); // Default low flow, slightly higher
             let conduitStatus = "Active";
             
             // Logic for different conduit types based on tuner value
             if (currentHarmonicTunerValue >= 45 && currentHarmonicTunerValue <= 55) {
                 conduitType = "Balanced Data Flow";
-                flowRate = (Math.random() * 180 + 180).toFixed(1); // Higher data flow
+                flowRate = (Math.random() * 200 + 200).toFixed(1); // Higher data flow
                 addToLog(`Harmonic alignment successful. New Data Conduit established.`, 'event');
             } else if (currentHarmonicTunerValue >= 70 && currentHarmonicTunerValue < 85) {
                 conduitType = "Exotic Matter Stream";
-                flowRate = (Math.random() * 0.1 + 0.1).toFixed(2); // Generates XM
+                flowRate = (Math.random() * 0.12 + 0.12).toFixed(2); // Generates XM, slightly more
                 addToLog(`High-frequency resonance achieved. Exotic Matter Conduit established.`, 'event');
             } else if (currentHarmonicTunerValue >= 85) {
                 conduitType = "Existential Fabric Link"; // Very rare, high value
-                flowRate = (Math.random() * 0.005 + 0.005).toFixed(3); // Generates tiny EF
+                flowRate = (Math.random() * 0.007 + 0.007).toFixed(3); // Generates tiny EF, slightly more
                 addToLog(`CRITICAL SUCCESS: Existential Fabric Link established!`, 'event');
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.01); // Instant small boost
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.012); // Instant small boost
             } else if (currentHarmonicTunerValue <= 30 && currentHarmonicTunerValue > 15) {
                 conduitType = "Energetic Cascade Link";
-                flowRate = (Math.random() * 350 + 350).toFixed(0); // Generates Energy
+                flowRate = (Math.random() * 400 + 400).toFixed(0); // Generates Energy, slightly more
                 addToLog(`Low-frequency resonance achieved. Energetic Conduit established.`, 'event');
             } else if (currentHarmonicTunerValue <= 15) {
                 conduitType = "Raw Data Influx Conduit"; // Generates Raw Data
-                flowRate = (Math.random() * 5 + 5).toFixed(1);
+                flowRate = (Math.random() * 6 + 6).toFixed(1); // Slightly more
                 addToLog(`Deep resonance found. Raw Data Influx Conduit established.`, 'event');
-            } else if (Math.random() < 0.25) { // 25% chance of anomaly if not perfectly tuned
+            } else if (Math.random() < 0.28) { // Increased chance of anomaly if not perfectly tuned
                  conduitType = "Temporal Glitch Conduit";
-                 flowRate = (Math.random() * 15).toFixed(1);
+                 flowRate = (Math.random() * 18).toFixed(1); // Slightly more impactful
                  conduitStatus = "Degraded";
                  addToLog(`Warning: Unstable chrono-conduit established. Temporal Glitch detected.`, 'warning');
-                 resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 500); // Immediate penalty
+                 resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 600); // Immediate penalty
             } else {
                 conduitType = "Minor Temporal Anomaly";
-                flowRate = (Math.random() * 60).toFixed(1); // Generic/low
+                flowRate = (Math.random() * 70).toFixed(1); // Generic/low
                 conduitStatus = "Degraded";
                 addToLog(`Harmonic alignment partial. Minor Anomaly Conduit established.`, 'warning');
             }
@@ -1681,9 +1681,9 @@
                 // Resource recovery/loss based on conduit type
                 const removedConduit = activeConduits.find(c => c.id === id); // This needs to be done *before* filtering if resources are based on the *removed* conduit
                 if (removedConduit) {
-                    if (removedConduit.type.includes('Exotic Matter')) resourceValues.exoticMatter += 0.03; // Small recovery
-                    if (removedConduit.type.includes('Existential Fabric')) resourceValues.existentialFabric += 0.005; // Small recovery
-                    if (removedConduit.status === 'Degraded') resourceValues.energy += 120; // Recover some energy from draining
+                    if (removedConduit.type.includes('Exotic Matter')) resourceValues.exoticMatter += 0.04; // Small recovery
+                    if (removedConduit.type.includes('Existential Fabric')) resourceValues.existentialFabric += 0.006; // Small recovery
+                    if (removedConduit.status === 'Degraded') resourceValues.energy += 150; // Recover some energy from draining
                 }
 
 
@@ -1717,9 +1717,9 @@
             const efwlStatus = document.getElementById('efwl-status');
 
             // Resource costs are now more significant and depend on ratios
-            const rawDataCost = rdRatio * 0.25; // Max 25% raw data
-            const procPowerCost = ppRatio * 0.2; // Max 20% processing power
-            const exoticMatterCost = xmRatio * 0.015; // Max 1.5 kMol exotic matter
+            const rawDataCost = rdRatio * 0.30; // Max 30% raw data
+            const procPowerCost = ppRatio * 0.25; // Max 25% processing power
+            const exoticMatterCost = xmRatio * 0.018; // Max 1.8 kMol exotic matter
 
             if (resourceValues.rawData < rawDataCost || resourceValues.processingPower < procPowerCost || resourceValues.exoticMatter < exoticMatterCost) {
                 efwlStatus.textContent = "// Error: Insufficient resources for weave. Adjust ratios.";
@@ -1731,12 +1731,12 @@
             resourceValues.rawData = Math.max(0, resourceValues.rawData - rawDataCost);
             resourceValues.processingPower = Math.max(0, resourceValues.processingPower - procPowerCost);
             resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - exoticMatterCost);
-            resourceValues.energy = Math.max(0, resourceValues.energy - 1200); // Base energy cost for weaving
+            resourceValues.energy = Math.max(0, resourceValues.energy - 1400); // Base energy cost for weaving, increased
 
             // Fabric generation depends on synergy and high ratios
             // More fabric with higher ratios, less if any ratio is zero
-            let fabricGenerated = (rdRatio / 100) * (ppRatio / 100) * (xmRatio / 100) * 1.2; // Max 1.2 units per weave
-            fabricGenerated *= (Math.random() * 0.4 + 0.8); // Random efficiency +/- 20%
+            let fabricGenerated = (rdRatio / 100) * (ppRatio / 100) * (xmRatio / 100) * 1.4; // Max 1.4 units per weave
+            fabricGenerated *= (Math.random() * 0.5 + 0.75); // Random efficiency +/- 25% (slightly more variance)
             
             resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + fabricGenerated); // Cap at 2.0 units
 
@@ -1753,7 +1753,7 @@
             let typeCounts = { 'Logic Nexus': 0, 'Intuition Engine': 0, 'Empathy Core': 0, 'Creativity Nexus': 0, 'Pattern Synthesis Unit': 0 };
 
             csmCores.forEach(core => {
-                let coreContribution = core.efficiency / 100 * (Math.random() * 0.15 + 0.9); // Base on efficiency with slight random variance
+                let coreContribution = core.efficiency / 100 * (Math.random() * 0.18 + 0.85); // Base on efficiency with slightly more random variance
                 typeCounts[core.type]++;
 
                 if (core.type === 'Logic Nexus') {
@@ -1765,32 +1765,32 @@
                 } else if (core.type === 'Creativity Nexus') {
                     coreContribution *= (1 - core.alignment / 100 * 0.4 + 1.1); // Creativity boosts more with balanced/chaotic
                 } else if (core.type === 'Pattern Synthesis Unit') {
-                    coreContribution *= (core.alignment / 100 * 0.2 + 0.9); // More general, benefits moderately from alignment
+                    coreContribution *= (core.alignment / 100 * 0.25 + 0.85); // More general, benefits moderately from alignment
                 }
                 totalQuotient += coreContribution;
             });
 
             // Synergy bonuses: More complex interactions
-            if (typeCounts['Logic Nexus'] > 0 && typeCounts['Intuition Engine'] > 0) totalQuotient *= 1.2; // Logic-Intuition synergy
-            if (typeCounts['Empathy Core'] > 0 && typeCounts['Creativity Nexus'] > 0) totalQuotient *= 1.15; // Empathy-Creativity synergy
-            if (typeCounts['Pattern Synthesis Unit'] > 0 && (typeCounts['Logic Nexus'] + typeCounts['Intuition Engine'] > 1)) totalQuotient *= 1.1; // PSU + core types
-            if (typeCounts['Logic Nexus'] > 1 && typeCounts['Empathy Core'] > 0) totalQuotient *= 1.08; // Multiple Logic + Empathy
+            if (typeCounts['Logic Nexus'] > 0 && typeCounts['Intuition Engine'] > 0) totalQuotient *= 1.25; // Logic-Intuition synergy, increased
+            if (typeCounts['Empathy Core'] > 0 && typeCounts['Creativity Nexus'] > 0) totalQuotient *= 1.20; // Empathy-Creativity synergy, increased
+            if (typeCounts['Pattern Synthesis Unit'] > 0 && (typeCounts['Logic Nexus'] + typeCounts['Intuition Engine'] > 1)) totalQuotient *= 1.15; // PSU + core types, increased
+            if (typeCounts['Logic Nexus'] > 1 && typeCounts['Empathy Core'] > 0) totalQuotient *= 1.10; // Multiple Logic + Empathy, increased
             
             // Existential Fabric provides the foundation for higher sentience
-            if (resourceValues.existentialFabric > 0.1) totalQuotient *= (1 + resourceValues.existentialFabric * 0.3); // Fabric has significant impact
-            if (resourceValues.existentialFabric < 0.1 && csmCores.length > 0) totalQuotient *= 0.4; // Severe penalty without fabric, if cores are present.
+            if (resourceValues.existentialFabric > 0.1) totalQuotient *= (1 + resourceValues.existentialFabric * 0.35); // Fabric has significant impact, increased
+            if (resourceValues.existentialFabric < 0.1 && csmCores.length > 0) totalQuotient *= 0.35; // Severe penalty without fabric, if cores are present.
 
             // Axiom 2 (Empathic Resonance) also directly contributes
-            totalQuotient += (axiomFocus['axiom-2'] / 100) * 0.6; // Max 0.6 extra quotient from this axiom
+            totalQuotient += (axiomFocus['axiom-2'] / 100) * 0.7; // Max 0.7 extra quotient from this axiom, increased
 
             const quotientDisplay = document.getElementById('sentience-quotient');
             let tier = "Tier 0 (Dormant)";
-            if (totalQuotient > 0.5) tier = "Tier 1 (Emergent)";
-            if (totalQuotient > 1.8) tier = "Tier 2 (Cognizant)";
-            if (totalQuotient > 3.5) tier = "Tier 3 (Conscious)";
-            if (totalQuotient > 6.0) tier = "Tier 4 (Transcendental)";
-            if (totalQuotient > 10.0) tier = "Tier 5 (Cosmic Sentience)";
-            if (totalQuotient > 15.0) tier = "Tier 6 (Omni-Consciousness)";
+            if (totalQuotient > 0.6) tier = "Tier 1 (Emergent)";
+            if (totalQuotient > 2.0) tier = "Tier 2 (Cognizant)";
+            if (totalQuotient > 4.0) tier = "Tier 3 (Conscious)";
+            if (totalQuotient > 6.5) tier = "Tier 4 (Transcendental)";
+            if (totalQuotient > 11.0) tier = "Tier 5 (Cosmic Sentience)";
+            if (totalQuotient > 16.0) tier = "Tier 6 (Omni-Consciousness)";
 
 
             quotientDisplay.textContent = `${totalQuotient.toFixed(2)} (${tier})`;
@@ -1804,14 +1804,14 @@
             }
 
             // Resource cost for integrating a core
-            if (resourceValues.processingPower < 15 || resourceValues.existentialFabric < 0.15 || resourceValues.exoticMatter < 0.5) {
+            if (resourceValues.processingPower < 18 || resourceValues.existentialFabric < 0.18 || resourceValues.exoticMatter < 0.6) {
                 addToLog('Insufficient Processing Power, Existential Fabric, or Exotic Matter to integrate a new core.', 'critical');
                 return;
             }
-            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 15);
-            resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.15);
-            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - 0.5);
-            resourceValues.energy = Math.max(0, resourceValues.energy - 1000);
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 18);
+            resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.18);
+            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - 0.6);
+            resourceValues.energy = Math.max(0, resourceValues.energy - 1200); // Increased energy cost
             updateResourceDisplay();
 
 
@@ -1827,8 +1827,8 @@
             const selectedCore = coreTypes[Math.floor(Math.random() * coreTypes.length)];
             const coreType = selectedCore.name;
             const coreFunction = selectedCore.func;
-            const coreStatus = Math.random() > 0.15 ? "Online" : "Booting"; // Higher chance of booting
-            const coreEfficiency = Math.floor(Math.random() * 20) + 80; // 80-100%
+            const coreStatus = Math.random() > 0.18 ? "Online" : "Booting"; // Higher chance of booting
+            const coreEfficiency = Math.floor(Math.random() * 25) + 75; // 75-100% (more variance)
             const coreAlignment = Math.floor(Math.random() * 101); // 0-100
 
             const newCoreItem = document.createElement('div');
@@ -1866,9 +1866,9 @@
                 coreItem.remove();
                 csmCores = csmCores.filter(c => c.id !== id);
                 addToLog(`Sentience Core '${id}' de-integrated.`, 'warning');
-                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 8); // Recover some power
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.03); // Small fabric recovery
-                resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.2); // Small XM recovery
+                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 10); // Recover some power
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.04); // Small fabric recovery
+                resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.25); // Small XM recovery
                 updateResourceDisplay();
                 updateSentienceQuotient();
             }
@@ -1880,29 +1880,29 @@
             let stabilityScore = 100;
 
             // Resource levels impact stability
-            if (resourceValues.energy < 2500) stabilityScore -= 18; // Low energy
-            if (resourceValues.dataFlow < 3500) stabilityScore -= 15; // Low data flow
-            if (resourceValues.rawData > 85) stabilityScore -= 25; // High raw data buffer indicates overload/inefficiency
-            if (resourceValues.processingPower < 25) stabilityScore -= 35; // Low processing power is critical
-            if (resourceValues.exoticMatter < 1.2) stabilityScore -= 12; // Low XM
-            if (resourceValues.existentialFabric < 0.3) stabilityScore -= 30; // Critical for Existential Fabric (foundational)
-            if (resourceValues.existentialFabric <= 0.01 && csmCores.length > 0) stabilityScore -= 60; // No fabric at all, with cores = disaster!
+            if (resourceValues.energy < 2000) stabilityScore -= 22; // Low energy
+            if (resourceValues.dataFlow < 3000) stabilityScore -= 18; // Low data flow
+            if (resourceValues.rawData > 90) stabilityScore -= 28; // High raw data buffer indicates overload/inefficiency
+            if (resourceValues.processingPower < 20) stabilityScore -= 40; // Low processing power is critical
+            if (resourceValues.exoticMatter < 1.0) stabilityScore -= 15; // Low XM
+            if (resourceValues.existentialFabric < 0.25) stabilityScore -= 35; // Critical for Existential Fabric (foundational)
+            if (resourceValues.existentialFabric <= 0.05 && csmCores.length > 0) stabilityScore -= 70; // No fabric at all, with cores = disaster!
 
             // QCCS links impact stability
             const degradedLinks = activeConduits.filter(c => c.status === 'Degraded').length;
-            if (activeConduits.length > 5) stabilityScore -= (activeConduits.length - 5) * 10; // Too many conduits strains system
-            stabilityScore -= degradedLinks * 30; // Degraded links are very bad
+            if (activeConduits.length > 5) stabilityScore -= (activeConduits.length - 5) * 12; // Too many conduits strains system
+            stabilityScore -= degradedLinks * 35; // Degraded links are very bad
 
             // Axiom focus impact stability
-            if (axiomFocus['axiom-1'] > 70) stabilityScore -= 20; // High paradoxical logic might introduce severe instability
-            if (axiomFocus['axiom-1'] > 0 && resourceValues.rawData > 90) stabilityScore -= 15; // Paradoxical logic + full buffer = bad
-            if (axiomFocus['axiom-3'] > 60) stabilityScore += (axiomFocus['axiom-3'] * 0.2); // Reality Refinement boosts stability more
-            if (axiomFocus['axiom-2'] > 80) stabilityScore -= 8; // Empathic resonance can be resource-intensive, slight instability
+            if (axiomFocus['axiom-1'] > 75) stabilityScore -= 25; // High paradoxical logic might introduce severe instability
+            if (axiomFocus['axiom-1'] > 0 && resourceValues.rawData > 95) stabilityScore -= 18; // Paradoxical logic + full buffer = bad
+            if (axiomFocus['axiom-3'] > 65) stabilityScore += (axiomFocus['axiom-3'] * 0.25); // Reality Refinement boosts stability more
+            if (axiomFocus['axiom-2'] > 85) stabilityScore -= 10; // Empathic resonance can be resource-intensive, slight instability
 
             // CSM cores impact stability
             const numCores = csmCores.length;
-            if (numC.length > 10) stabilityScore -= (numCores - 10) * 8; // Too many cores can introduce complexity errors
-            if (numCores < 4) stabilityScore -= (4 - numCores) * 20; // Too few cores means low processing capability for consciousness
+            if (numCores > 10) stabilityScore -= (numCores - 10) * 10; // Too many cores can introduce complexity errors
+            if (numCores < 4) stabilityScore -= (4 - numCores) * 25; // Too few cores means low processing capability for consciousness
             
             // Sentience Quotient influence
             const sqElement = document.getElementById('sentience-quotient');
@@ -1910,24 +1910,24 @@
             if (sqElement && sqElement.textContent) {
                 sq = parseFloat(sqElement.textContent);
             }
-            if (sq < 0.8 && numCores > 0) stabilityScore -= 25; // Very low sentience means primitive, less adaptive
-            if (sq > 12.0) stabilityScore += 10; // Very high sentience might imply advanced self-correction and harmony
-            if (sq > 4.0 && resourceValues.existentialFabric < 0.6) stabilityScore -= 40; // High SQ without enough EF is very dangerous.
+            if (sq < 0.9 && numCores > 0) stabilityScore -= 30; // Very low sentience means primitive, less adaptive
+            if (sq > 13.0) stabilityScore += 12; // Very high sentience might imply advanced self-correction and harmony
+            if (sq > 4.5 && resourceValues.existentialFabric < 0.7) stabilityScore -= 45; // High SQ without enough EF is very dangerous.
 
             // Temporal Flux Scrutiny Engine parameters impact stability
             const causalDistortion = parseInt(document.getElementById('causal-distortion').value);
-            if (causalDistortion > 80) stabilityScore -= (causalDistortion - 80) * 0.5; // High distortion adds risk
+            if (causalDistortion > 85) stabilityScore -= (causalDistortion - 85) * 0.6; // High distortion adds risk
 
             // Random events can cause minor fluctuations
-            stabilityScore += (Math.random() * 20) - 10; // -10 to +10 random fluctuation
+            stabilityScore += (Math.random() * 25) - 12.5; // -12.5 to +12.5 random fluctuation
 
             stabilityScore = Math.max(0, Math.min(100, stabilityScore));
 
             const anomalyAlert = document.getElementById('anomaly-alert');
-            if (stabilityScore < 35 && !anomalyAlert.classList.contains('active')) {
+            if (stabilityScore < 30 && !anomalyAlert.classList.contains('active')) { // Lower threshold for alert
                 anomalyAlert.classList.add('active');
                 addToLog(`CRITICAL: System stability at ${stabilityScore.toFixed(0)}%. Temporal Flux Imbalance! Immediate intervention required.`, 'critical');
-            } else if (stabilityScore >= 35 && anomalyAlert.classList.contains('active')) {
+            } else if (stabilityScore >= 30 && anomalyAlert.classList.contains('active')) {
                 anomalyAlert.classList.remove('active');
                 addToLog(`WARNING: System Stability restored to nominal (${stabilityScore.toFixed(0)}%). Monitoring.`, 'warning');
             }
@@ -1952,7 +1952,7 @@
             checkStability();
 
             // Simulate some initial log entries
-            addToLog('Cosmic Consciousness Architect Core Engaged. (v42.0)', 'event');
+            addToLog('Cosmic Consciousness Architect Core Engaged. (v43.0)', 'event');
             addToLog('Quantum Chrono-Conduit System initialized.', 'info');
             addToLog('Existential Fabric Loom operational.', 'info');
             addToLog('Sentience Matrix online. Ready for integration.', 'info');
@@ -1988,55 +1988,55 @@
         // Periodically update resources and check stability (simulation)
         setInterval(() => {
             // Base fluctuations
-            resourceValues.energy = Math.max(0, Math.min(10000, resourceValues.energy + Math.random() * 100 - 50));
-            resourceValues.dataFlow = Math.max(0, Math.min(10000, resourceValues.dataFlow + Math.random() * 200 - 100));
-            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + Math.random() * 4 - 2));
-            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + Math.random() * 3 - 1.5));
-            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + Math.random() * 0.25 - 0.125));
-            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + Math.random() * 0.04 - 0.02));
+            resourceValues.energy = Math.max(0, Math.min(10000, resourceValues.energy + Math.random() * 120 - 60)); // Slightly more fluctuation
+            resourceValues.dataFlow = Math.max(0, Math.min(10000, resourceValues.dataFlow + Math.random() * 250 - 125));
+            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + Math.random() * 5 - 2.5));
+            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + Math.random() * 3.5 - 1.75));
+            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + Math.random() * 0.3 - 0.15));
+            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + Math.random() * 0.05 - 0.025));
 
 
             // Apply effects of active Axioms
             if (axiomFocus['axiom-1'] > 0) { // Paradoxical Logic Integration
                 const focus = axiomFocus['axiom-1'];
-                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.5)); // Higher cost
-                resourceValues.rawData = Math.min(100, resourceValues.rawData + (focus * 0.04)); // Increases raw data processing
+                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.8)); // Higher cost
+                resourceValues.rawData = Math.min(100, resourceValues.rawData + (focus * 0.05)); // Increases raw data processing
             }
             if (axiomFocus['axiom-2'] > 0) { // Empathic Resonance Alignment
                 const focus = axiomFocus['axiom-2'];
-                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (focus * 0.008)); // Cost: XM
-                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (focus * 0.25)); // Cost: Proc. Power
+                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (focus * 0.009)); // Cost: XM
+                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (focus * 0.30)); // Cost: Proc. Power
             }
             if (axiomFocus['axiom-3'] > 0) { // Reality Construct Refinement
                 const focus = axiomFocus['axiom-3'];
-                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (focus * 1.5)); // Cost: Data Flow
-                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.0)); // Cost: Energy
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (focus * 0.003)); // Small EF gain
+                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (focus * 1.8)); // Cost: Data Flow
+                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.2)); // Cost: Energy
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (focus * 0.0035)); // Small EF gain
             }
 
             // Apply effects of active QCCS conduits
             activeConduits.forEach(conduit => {
                 if (conduit.status === 'Active') {
                     if (conduit.type.includes('Data')) {
-                        resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + conduit.flowRate * 0.7); // Increase data flow
-                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.1); // Data flow costs energy
+                        resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + conduit.flowRate * 0.8); // Increase data flow
+                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.12); // Data flow costs energy
                     } else if (conduit.type.includes('Exotic')) {
-                        resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + conduit.flowRate * 1.0); // Increase XM
-                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 0.2); // XM harvest costs processing
+                        resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + conduit.flowRate * 1.1); // Increase XM
+                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 0.25); // XM harvest costs processing
                     } else if (conduit.type.includes('Energetic')) {
-                        resourceValues.energy = Math.min(10000, resourceValues.energy + conduit.flowRate * 1.0); // Increase Energy
-                        resourceValues.rawData = Math.max(0, resourceValues.rawData - conduit.flowRate * 0.003); // Energy harvest may consume raw data
+                        resourceValues.energy = Math.min(10000, resourceValues.energy + conduit.flowRate * 1.1); // Increase Energy
+                        resourceValues.rawData = Math.max(0, resourceValues.rawData - conduit.flowRate * 0.004); // Energy harvest may consume raw data
                     } else if (conduit.type.includes('Raw Data Influx')) {
-                        resourceValues.rawData = Math.min(100, resourceValues.rawData + conduit.flowRate * 0.08); // Increase Raw Data
-                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 5); // Raw data influx can be energy intensive
+                        resourceValues.rawData = Math.min(100, resourceValues.rawData + conduit.flowRate * 0.1); // Increase Raw Data
+                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 6); // Raw data influx can be energy intensive
                     } else if (conduit.type.includes('Existential Fabric')) {
-                        resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + conduit.flowRate * 0.8); // Increase EF
-                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 150); // EF conduits are heavy on processing
+                        resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + conduit.flowRate * 0.9); // Increase EF
+                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 180); // EF conduits are heavy on processing
                     }
                 } else if (conduit.status === 'Degraded') {
-                    resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.2); // Degraded links drain energy more
-                    resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - conduit.flowRate * 0.03); // And leak data more
-                    if (Math.random() < 0.06) addToLog(`Degraded Chrono-Conduit ${conduit.id} causing resource drain.`, 'warning');
+                    resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.25); // Degraded links drain energy more
+                    resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - conduit.flowRate * 0.04); // And leak data more
+                    if (Math.random() < 0.07) addToLog(`Degraded Chrono-Conduit ${conduit.id} causing resource drain.`, 'warning');
                 }
             });
 
@@ -2045,7 +2045,7 @@
             updateSentienceQuotient(); // Re-evaluate SQ regularly
             checkStability();
 
-            if (Math.random() < 0.08) { // 8% chance of a minor log event
+            if (Math.random() < 0.10) { // 10% chance of a minor log event
                 const messages = [
                     "Temporal signature drift detected, self-corrected. Flux stabilized.",
                     "Cognitive axiom flux stabilized. Efficiency +0.3%. Pathway coherence achieved.",
@@ -2059,7 +2059,7 @@
                 ];
                 addToLog(messages[Math.floor(Math.random() * messages.length)], 'info');
             }
-            if (Math.random() < 0.03) { // 3% chance of a glitch or warning
+            if (Math.random() < 0.04) { // 4% chance of a glitch or warning
                 const glitchMessages = [
                     "LOG_CORRUPTION::DAT_INTEGRITY_COMPROMISED::RECOVERING_PROTOCOL_STACK::",
                     "WARNING::SYSTEM_OVERLOAD_DETECTED::INITIATING_PROTOCOL_SHUTDOWN_REQUESTS::PRIORITY_JUNCTURE::",
@@ -2070,7 +2070,7 @@
                 addToLog(glitchMessages[Math.floor(Math.random() * glitchMessages.length)], Math.random() > 0.5 ? 'glitch' : 'warning');
             }
 
-        }, 1800); // Update every 1.8 seconds (slightly faster simulation for 2.5 Gen)
+        }, 1500); // Update every 1.5 seconds (slightly faster simulation for 2.5 Gen)
 
     </script>
 </body>
