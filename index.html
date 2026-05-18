@@ -3,135 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v43.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v44.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Enhanced for 2.5 Gen / v43.0) */
-            --primary-glow: rgba(70, 240, 255, 0.9999); /* Electric Cyan-blue glow, slightly cooler */
-            --secondary-glow: rgba(255, 100, 240, 0.999); /* Deep Magenta glow, more intense */
-            --tertiary-glow: rgba(50, 255, 90, 0.9999); /* Electrifying Green glow, slightly sharper */
-            --frosted-bg: rgba(255, 255, 255, 0.002); /* Ultra-transparent, hyper-ethereal */
-            --text-color: #E8E8E8; /* Lighter text for enhanced readability */
-            --accent-color: #33F0FF; /* Electric Cyan accent, slightly brighter */
-            --border-color: rgba(255, 255, 255, 0.4); /* More visible, shimmering border */
-            --console-bg: rgba(0, 0, 0, 0.99999); /* Absolute black for console depth */
-            --glitch-color: #FF00FF; /* Magenta for glitch */
-            --warning-color: #FFB300; /* Richer Amber, more urgent */
-            --critical-color: #FF2222; /* Pure Red, highly urgent */
+            /* Core Theme Colors (Enhanced for 2.5 Gen / v44.0) */
+            --primary-glow: rgba(90, 255, 255, 0.9999); /* Brighter Electric Cyan-blue glow, more intense */
+            --secondary-glow: rgba(255, 120, 250, 0.999); /* Lighter Magenta glow, more ethereal */
+            --tertiary-glow: rgba(80, 255, 120, 0.9999); /* Glowing Green, even sharper */
+            --frosted-bg: rgba(255, 255, 255, 0.0005); /* Ultra-transparent, hyper-ethereal, almost invisible */
+            --text-color: #F0F0F0; /* Even lighter text for hyper-readability */
+            --accent-color: #55FFFF; /* Ultra-bright Electric Cyan accent */
+            --border-color: rgba(255, 255, 255, 0.6); /* More visible, shimmering border */
+            --console-bg: rgba(0, 0, 0, 0.999999); /* Absolute black for console depth */
+            --glitch-color: #FF66FF; /* Brighter Magenta for glitch */
+            --warning-color: #FFC940; /* Radiant Amber, even more urgent */
+            --critical-color: #FF5555; /* Pure Red, highly urgent */
 
             /* Stability Bar Colors */
-            --stability-good: linear-gradient(90deg, #00FF55 0%, #00C040 100%); /* Brighter, deeper green */
-            --stability-warning: linear-gradient(90deg, #FFDD00 0%, #FF9900 100%); /* Gold to DarkOrange */
-            --stability-critical: linear-gradient(90deg, #FF2020 0%, #B00000 100%); /* Bright Red to Deeper Red */
+            --stability-good: linear-gradient(90deg, #33FF77 0%, #00E050 100%); /* Brighter, deeper green */
+            --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
+            --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
             /* Data Stream & Protocol Status (Now Cognitive Stream) */
-            --cognitive-stream-bg: rgba(0, 8, 18, 0.999); /* Deep ocean blue, almost black */
-            --cognitive-stream-text: #00E0FF; /* Pure Cyan for data, slightly muted */
-            --network-status-bg: rgba(0, 12, 25, 0.9999); /* Darker, more opaque blue */
-            --network-status-glow: rgba(0, 180, 255, 0.9999); /* Stronger, electric blue glow */
+            --cognitive-stream-bg: rgba(0, 10, 20, 0.9999); /* Deep ocean blue, almost black */
+            --cognitive-stream-text: #33FFFF; /* Pure Cyan for data, slightly muted */
+            --network-status-bg: rgba(0, 15, 30, 0.99999); /* Darker, more opaque blue */
+            --network-status-glow: rgba(0, 200, 255, 0.99999); /* Stronger, electric blue glow */
 
             /* Resource & Module Selection (Re-purposed for Resource Displays) */
-            --module-selection-bg: rgba(8, 0, 18, 0.999); /* Darker, deeper purple-ish */
-            --module-selection-border: rgba(140, 0, 240, 0.98); /* Stronger purple accent, slightly redder */
-            --module-selection-text: #F0D0FF; /* Lighter purple */
-            --resource-bg: rgba(0, 0, 0, 0.999); /* Near black background for resource bars */
+            --module-selection-bg: rgba(10, 0, 20, 0.9999); /* Darker, deeper purple-ish */
+            --module-selection-border: rgba(160, 0, 255, 0.99); /* Stronger purple accent, slightly redder */
+            --module-selection-text: #FFEDFF; /* Lighter purple */
+            --resource-bg: rgba(0, 0, 0, 0.9999); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
-            --energy-color-high: linear-gradient(90deg, #FFFFB0 0%, #FFC000 100%); /* Brighter yellow */
-            --energy-color-medium: linear-gradient(90deg, #FFD000 0%, #FF8000 100%);
-            --energy-color-low: linear-gradient(90deg, #FF2020 0%, #B00000 100%); /* More intense red */
+            --energy-color-high: linear-gradient(90deg, #FFFFD0 0%, #FFD000 100%); /* Brighter yellow */
+            --energy-color-medium: linear-gradient(90deg, #FFE000 0%, #FF9000 100%);
+            --energy-color-low: linear-gradient(90deg, #FF3030 0%, #C01010 100%); /* More intense red */
 
-            --data-flow-color-high: linear-gradient(90deg, #00FF88 0%, #00B070 100%);
-            --data-flow-color-medium: linear-gradient(90deg, #00F0FF 0%, #0090FF 100%);
-            --data-flow-color-low: linear-gradient(90deg, #FF4020 0%, #C01000 100%); /* More intense red */
+            --data-flow-color-high: linear-gradient(90deg, #33FFB0 0%, #00C080 100%);
+            --data-flow-color-medium: linear-gradient(90deg, #33FFFF 0%, #00A0FF 100%);
+            --data-flow-color-low: linear-gradient(90deg, #FF6040 0%, #D02000 100%); /* More intense red */
             
-            /* Gen 43.0 Colors (Updated from 42.0) */
-            --signal-array-bg: rgba(0, 8, 18, 0.999); /* Deeper blue-grey */
-            --signal-array-border: rgba(0, 180, 255, 0.98); /* Stronger electric blue accent */
-            --signal-array-text: #A0EEF5; /* Lighter, more vibrant powder blue */
-            --formulate-btn-glow: rgba(255, 20, 130, 0.9999); /* Hotter Deep Pink for Architect button */
+            /* Gen 44.0 Colors (Updated from 43.0) */
+            --signal-array-bg: rgba(0, 10, 20, 0.9999); /* Deeper blue-grey */
+            --signal-array-border: rgba(0, 200, 255, 0.99); /* Stronger electric blue accent */
+            --signal-array-text: #B0F5FF; /* Lighter, more vibrant powder blue */
+            --formulate-btn-glow: rgba(255, 40, 150, 0.9999); /* Hotter Deep Pink for Architect button */
 
-            /* Gen 43.0 resource: Raw Data */
-            --raw-data-color-high: linear-gradient(90deg, #F88CD5 0%, #E85085 100%); /* Warmer, deeper pink */
-            --raw-data-color-medium: linear-gradient(90deg, #FFC000 0%, #FF9000 100%);
-            --raw-data-color-low: linear-gradient(90deg, #90A0A0 0%, #506060 100%); /* Desaturated grey */
-            --raw-data-text: #F88CD5;
+            /* Gen 44.0 resource: Raw Data */
+            --raw-data-color-high: linear-gradient(90deg, #FFB0E0 0%, #FF70A0 100%); /* Warmer, deeper pink */
+            --raw-data-color-medium: linear-gradient(90deg, #FFD000 0%, #FF9000 100%);
+            --raw-data-color-low: linear-gradient(90deg, #A0B0B0 0%, #607070 100%); /* Desaturated grey */
+            --raw-data-text: #FFB0E0;
 
-            /* Gen 43.0 resource: Processing Power */
-            --processing-power-color-high: linear-gradient(90deg, #E080F8 0%, #A040F8 100%); /* Brighter Orchid to Purple */
-            --processing-power-color-medium: linear-gradient(90deg, #D080D0 0%, #9030CC 100%);
-            --processing-power-color-low: linear-gradient(90deg, #500090 0%, #202080 100%); /* Darker, more intense purple */
-            --processing-power-text: #E080F8;
+            /* Gen 44.0 resource: Processing Power */
+            --processing-power-color-high: linear-gradient(90deg, #F0A0FF 0%, #B060FF 100%); /* Brighter Orchid to Purple */
+            --processing-power-color-medium: linear-gradient(90deg, #E0A0E0 0%, #A040D0 100%);
+            --processing-power-color-low: linear-gradient(90deg, #6000A0 0%, #303090 100%); /* Darker, more intense purple */
+            --processing-power-text: #F0A0FF;
 
-            /* NEW for Gen 43.0 resource: Exotic Matter (XM) */
-            --exotic-matter-color-high: linear-gradient(90deg, #A0FFC0 0%, #50D050 100%); /* Brighter Mint Green to Lime Green */
-            --exotic-matter-color-medium: linear-gradient(90deg, #A0E590 0%, #B0F030 100%); /* PaleGreen to GreenYellow */
+            /* Gen 44.0 NEW: Exotic Matter (XM) */
+            --exotic-matter-color-high: linear-gradient(90deg, #B0FFD0 0%, #60E060 100%); /* Brighter Mint Green to Lime Green */
+            --exotic-matter-color-medium: linear-gradient(90deg, #B0E5A0 0%, #C0F050 100%); /* PaleGreen to GreenYellow */
             --exotic-matter-color-low: linear-gradient(90deg, #FFC000 0%, #FF9000 100%); /* Gold to Orange */
-            --exotic-matter-text: #A0FFC0; /* Mint Green */
+            --exotic-matter-text: #B0FFD0; /* Mint Green */
 
-            /* NEW for Gen 43.0 resource: Existential Fabric (EF) */
-            --existential-fabric-color-high: linear-gradient(90deg, #C0A0D0 0%, #8030D0 100%); /* Soft Purple to Blue Violet, slightly more saturated */
-            --existential-fabric-color-medium: linear-gradient(90deg, #D090D0 0%, #9030B0 100%); /* Plum to Dark Orchid */
-            --existential-fabric-color-low: linear-gradient(90deg, #800080 0%, #400075 100%); /* Dark Magenta to Indigo */
-            --existential-fabric-text: #C0A0D0; /* Soft Purple */
+            /* Gen 44.0 NEW: Existential Fabric (EF) */
+            --existential-fabric-color-high: linear-gradient(90deg, #D0B0E0 0%, #9040E0 100%); /* Soft Purple to Blue Violet, slightly more saturated */
+            --existential-fabric-color-medium: linear-gradient(90deg, #E0A0E0 0%, #A040C0 100%); /* Plum to Dark Orchid */
+            --existential-fabric-color-low: linear-gradient(90deg, #900090 0%, #500085 100%); /* Dark Magenta to Indigo */
+            --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
 
-            /* Gen 43.0 button: Calibrate Dimensional Link */
-            --calibrate-btn-glow: rgba(90, 70, 190, 0.9999); /* Deeper Slate Blue Glow */
-            --tune-btn-glow: rgba(0, 200, 40, 0.9999);
+            /* Gen 44.0 button: Calibrate Dimensional Link */
+            --calibrate-btn-glow: rgba(110, 90, 210, 0.9999); /* Deeper Slate Blue Glow */
+            --tune-btn-glow: rgba(20, 220, 60, 0.9999);
 
-            /* Gen 43.0 - Enhanced UI elements */
-            --event-color: #FF9000; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 40px rgba(255, 144, 0, 1.0); /* Even stronger shadow */
-            --info-color: #8060C0; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 35px rgba(128, 96, 192, 0.9); /* Even stronger shadow */
-            --log-glitch-color: #FF00FF;
-            --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%); /* Wider, more transparent edges */
+            /* Gen 44.0 - Enhanced UI elements */
+            --event-color: #FFA020; /* Brighter Orange, slightly more yellow */
+            --event-text-shadow: 0 0 50px rgba(255, 160, 32, 1.0); /* Even stronger shadow */
+            --info-color: #A080D0; /* Lighter Medium Purple */
+            --info-text-shadow: 0 0 45px rgba(160, 128, 208, 0.9); /* Even stronger shadow */
+            --log-glitch-color: #FF33FF;
+            --header-underline-color: linear-gradient(90deg, transparent 2%, var(--accent-color) 50%, transparent 98%); /* Wider, more transparent edges */
             
-            /* Gen 43.0 NEW: Synthesize Axiom Flux button (for Cognitive Axiom Synthesis Module) */
-            --synthesize-btn-glow: rgba(255, 255, 30, 0.9999); /* Brighter Yellow glow for synthesize */
+            /* Gen 44.0 NEW: Activate Paradigm Weave button (for Sentient Paradigm Weave Matrix) */
+            --weave-btn-glow: rgba(255, 255, 50, 0.9999); /* Brighter Yellow glow for weave */
 
-            /* Gen 43.0 NEW: Anomaly Alert */
-            --anomaly-color: #FF0000; /* Pure Red for critical */
-            --anomaly-bg: rgba(255, 0, 0, 0.12); /* Even more semi-transparent Red */
-            --anomaly-border: rgba(255, 0, 0, 0.98); /* Opaque Red */
+            /* Gen 44.0 NEW: Anomaly Alert */
+            --anomaly-color: #FF2222; /* Pure Red for critical */
+            --anomaly-bg: rgba(255, 0, 0, 0.15); /* Even more semi-transparent Red */
+            --anomaly-border: rgba(255, 0, 0, 0.99); /* Opaque Red */
 
-            /* Gen 43.0 NEW: Temporal Flux Scrutiny Engine */
-            --temporal-bg: rgba(0, 20, 12, 0.999); /* Deeper Green-Blue */
-            --temporal-border: rgba(30, 240, 130, 0.98); /* Brighter Spring Green */
-            --temporal-text: #A0FFB0; /* Lighter Mint Green */
-            --temporal-btn-glow: rgba(30, 240, 130, 0.99);
+            /* Gen 44.0 NEW: Chronal Resonance Emitter */
+            --chrono-bg: rgba(0, 25, 15, 0.9999); /* Deeper Green-Blue */
+            --chrono-border: rgba(50, 255, 150, 0.99); /* Brighter Spring Green */
+            --chrono-text: #B0FFC0; /* Lighter Mint Green */
+            --chrono-btn-glow: rgba(50, 255, 150, 0.99);
 
-            /* Gen 43.0 NEW: Cognitive Axiom Synthesis Module */
-            --axiom-bg: rgba(20, 12, 0, 0.999); /* Deeper Orange-Brown */
-            --axiom-border: rgba(240, 150, 30, 0.98); /* Brighter Orange */
-            --axiom-text: #FFD080; /* Brighter Gold */
-            --axiom-slider-active: rgba(240, 150, 30, 0.99);
-            --axiom-slider-inactive: rgba(90, 60, 0, 0.8);
-            --axiom-slider-thumb-glow: rgba(240, 150, 30, 0.95);
+            /* Gen 44.0 NEW: Sentient Paradigm Weave Matrix */
+            --paradigm-bg: rgba(25, 15, 0, 0.9999); /* Deeper Orange-Brown */
+            --paradigm-border: rgba(255, 170, 50, 0.99); /* Brighter Orange */
+            --paradigm-text: #FFE0A0; /* Brighter Gold */
+            --paradigm-slider-active: rgba(255, 170, 50, 0.99);
+            --paradigm-slider-inactive: rgba(110, 70, 0, 0.9);
+            --paradigm-slider-thumb-glow: rgba(255, 170, 50, 0.98);
 
-            /* Gen 43.0 NEW: Quantum Chrono-Conduit System (QCCS) Module */
-            --qccs-bg: rgba(8, 0, 20, 0.999); /* Deeper Purple */
-            --qccs-border: rgba(180, 15, 200, 0.95); /* More vibrant Magenta-Purple */
-            --qccs-text: #FFB0FF; /* Lighter Magenta */
-            --qccs-btn-glow: rgba(180, 15, 200, 0.99);
-            --qccs-card-active-border: rgba(200, 15, 200, 0.99);
-            --qccs-card-active-shadow: rgba(200, 15, 200, 0.95);
+            /* Gen 44.0 NEW: Entanglement Nexus Forger */
+            --nexus-bg: rgba(10, 0, 25, 0.9999); /* Deeper Purple */
+            --nexus-border: rgba(200, 30, 220, 0.98); /* More vibrant Magenta-Purple */
+            --nexus-text: #FFC0FF; /* Lighter Magenta */
+            --nexus-btn-glow: rgba(200, 30, 220, 0.99);
+            --nexus-card-active-border: rgba(220, 30, 220, 0.99);
+            --nexus-card-active-shadow: rgba(220, 30, 220, 0.98);
 
-            /* Gen 43.0 NEW: Existential Fabric Weave Loom (EFWL) Module */
-            --efwl-bg: rgba(20, 12, 0, 0.999); /* Deeper Gold-Brown, slightly more opaque */
-            --efwl-border: rgba(240, 190, 30, 0.99); /* Brighter Gold-Orange */
-            --efwl-text: #FFFF80; /* Bright Yellowish Gold */
-            --efwl-btn-glow: rgba(240, 190, 30, 0.99);
+            /* Gen 44.0 NEW: Trans-Dimensional Topology Sculptor */
+            --topo-bg: rgba(25, 15, 0, 0.9999); /* Deeper Gold-Brown, slightly more opaque */
+            --topo-border: rgba(255, 210, 50, 0.99); /* Brighter Gold-Orange */
+            --topo-text: #FFFF90; /* Bright Yellowish Gold */
+            --topo-btn-glow: rgba(255, 210, 50, 0.99);
 
-            /* Gen 43.0 NEW: Cosmic Sentience Matrix (CSM) Module */
-            --csm-bg: rgba(0, 20, 20, 0.999); /* Deeper Teal */
-            --csm-border: rgba(30, 240, 240, 0.95); /* Brighter Cyan */
-            --csm-text: #70FFFF; /* Lighter Cyan */
-            --csm-component-bg: rgba(0, 0, 0, 0.9);
-            --csm-component-border: rgba(30, 240, 240, 0.8);
-            --csm-sentience-color: linear-gradient(90deg, #70FFFF 0%, #FFB0FF 50%, #C0A0D0 100%); /* Cyan -> Magenta -> Purple */
+            /* Gen 44.0 NEW: Emergent Consciousness Harmonizer */
+            --harmony-bg: rgba(0, 25, 25, 0.9999); /* Deeper Teal */
+            --harmony-border: rgba(50, 255, 255, 0.98); /* Brighter Cyan */
+            --harmony-text: #80FFFF; /* Lighter Cyan */
+            --harmony-component-bg: rgba(0, 0, 0, 0.95);
+            --harmony-component-border: rgba(50, 255, 255, 0.9);
+            --harmony-sentience-color: linear-gradient(90deg, #80FFFF 0%, #FFC0FF 50%, #D0B0E0 100%); /* Cyan -> Magenta -> Purple */
         }
 
         body {
@@ -145,39 +145,39 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 18px; /* Slightly larger base font */
-            line-height: 1.6;
+            font-size: 20px; /* Even larger base font */
+            line-height: 1.8;
             /* Updated Cursor: Larger, more intricate, pulsing */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.9); opacity: 0.7;} 50% {transform: scale(1.15); opacity: 1;} 100% {transform: scale(0.9); opacity: 0.7;}} .pulsing-circle {animation: pulse 1.6s infinite ease-in-out; transform-origin: center center;}</style></defs><path fill="%2333F0FF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path fill="%2333F0FF" d="M11 6h2v7h-2zM11 14h2v3h-2z"/><circle cx="12" cy="12" r="5" fill="%23FF00FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2333F0FF" d="M12 0L8 8l-8 4 8 4 4 8 4-8 8-4-8-4zM12 24l-4-8 8-4-8-4-4-8-4 8-8 4 8 4z" filter="url(%23f1)"/><circle cx="12" cy="12" r="2.5" fill="%23FFFF00" filter="url(%23f2)" class="pulsing-circle"/></svg>') 90 90, auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="7" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.85); opacity: 0.6;} 50% {transform: scale(1.2); opacity: 1;} 100% {transform: scale(0.85); opacity: 0.6;}} .pulsing-circle {animation: pulse 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:pulse 2.2s infinite ease-out reverse;}</style></defs><path fill="%2355FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2355FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="6" fill="%23FF33FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2355FFFF" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z" filter="url(%23f1)"/><circle cx="12" cy="12" r="3" fill="%23FFFF55" filter="url(%23f2)" class="pulsing-circle"/></svg>') 100 100, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: absolute;
-            top: -3000%; /* Even larger coverage */
-            left: -3000%;
-            width: 6100%;
-            height: 6100%;
+            top: -4000%; /* Even larger coverage */
+            left: -4000%;
+            width: 8100%;
+            height: 8100%;
             background: linear-gradient(
-                95deg, /* New angle */
-                #000002 0%,
-                #020004 10%,
-                #040006 20%,
-                #060008 30%,
-                #08000A 40%,
-                #060008 50%,
-                #040006 60%,
-                #020004 70%,
-                #000002 80%,
-                #020004 90%,
-                #000002 100%
+                105deg, /* New angle */
+                #000001 0%,
+                #010002 10%,
+                #020003 20%,
+                #030004 30%,
+                #040005 40%,
+                #030004 50%,
+                #020003 60%,
+                #010002 70%,
+                #000001 80%,
+                #010002 90%,
+                #000001 100%
             );
-            background-size: 7000% 7000%; /* Even larger background for smoother animation */
-            animation: fluidBackground1 3500s linear infinite alternate, rotateBackground 4000s linear infinite; /* Even longer animations */
+            background-size: 8000% 8000%; /* Even larger background for smoother animation */
+            animation: fluidBackground1 4000s linear infinite alternate, rotateBackground 4500s linear infinite; /* Even longer animations */
             z-index: -3;
-            filter: blur(2800px) opacity(0.999999); /* Stronger blur, almost opaque */
-            transform: rotate(-900deg) scale(20); /* Larger scale, more rotation */
+            filter: blur(3500px) opacity(0.9999999); /* Stronger blur, almost opaque */
+            transform: rotate(-1000deg) scale(25); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -185,27 +185,27 @@
         body::after {
             content: '';
             position: absolute;
-            top: -1800%; /* Even larger coverage */
-            left: -1800%;
-            width: 3700%;
-            height: 3700%;
+            top: -2000%; /* Even larger coverage */
+            left: -2000%;
+            width: 4100%;
+            height: 4100%;
             background: linear-gradient(
-                -280deg, /* Different angle */
-                rgba(70, 240, 255, 0.98) 0%, /* primary glow accent */
-                rgba(255, 100, 240, 0.95) 15%, /* secondary glow accent */
-                rgba(50, 255, 90, 0.95) 30%, /* tertiary glow accent */
-                rgba(0, 180, 255, 0.98) 45%, /* electric blue from QCCS */
-                rgba(240, 150, 30, 0.9) 60%, /* New orange accent from CAS */
-                rgba(180, 15, 200, 0.9) 75%, /* Magenta from QCCS */
-                rgba(192, 160, 208, 0.85) 85%, /* Existential Fabric */
-                rgba(70, 240, 255, 0.98) 100%
+                -300deg, /* Different angle */
+                rgba(90, 255, 255, 0.99) 0%, /* primary glow accent */
+                rgba(255, 120, 250, 0.98) 15%, /* secondary glow accent */
+                rgba(80, 255, 120, 0.98) 30%, /* tertiary glow accent */
+                rgba(0, 200, 255, 0.99) 45%, /* electric blue from Nexus Forger */
+                rgba(255, 170, 50, 0.95) 60%, /* New orange accent from Paradigm Matrix */
+                rgba(200, 30, 220, 0.95) 75%, /* Magenta from Nexus Forger */
+                rgba(210, 176, 224, 0.90) 85%, /* Existential Fabric */
+                rgba(90, 255, 255, 0.99) 100%
             );
-            background-size: 4500% 4500%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 2200s ease-in-out infinite, rotateBackgroundReversed 3000s linear infinite; /* Even longer animations */
+            background-size: 5000% 5000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 2500s ease-in-out infinite, rotateBackgroundReversed 3500s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(2000px) opacity(0.9999); /* Stronger blur, more opaque */
+            filter: blur(2500px) opacity(0.99999); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(500deg) scale(17); /* Larger scale, more rotation */
+            transform: rotate(600deg) scale(20); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -217,11 +217,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.007; /* More noticeable noise */
+            opacity: 0.009; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.2) contrast(2.2) brightness(2.0); /* Subtle color and contrast */
+            filter: grayscale(0.25) contrast(2.5) brightness(2.2); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -236,50 +236,50 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-900deg) scale(20); }
-            to { transform: rotate(1100deg) scale(20); }
+            from { transform: rotate(-1000deg) scale(25); }
+            to { transform: rotate(1200deg) scale(25); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(500deg) scale(17); }
-            to { transform: rotate(-1300deg) scale(17); }
+            from { transform: rotate(600deg) scale(20); }
+            to { transform: rotate(-1500deg) scale(20); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 3000px; /* Even wider for more content */
-            padding: 300px; /* More padding */
+            max-width: 3500px; /* Even wider for more content */
+            padding: 350px; /* More padding */
             background: var(--frosted-bg);
-            border: 5px solid var(--border-color); /* Thicker border */
-            border-radius: 350px; /* Even more rounded */
-            backdrop-filter: blur(1700px) saturate(6000%) brightness(1200%) contrast(2.8); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(1700px) saturate(6000%) brightness(1200%) contrast(2.8);
+            border: 7px solid var(--border-color); /* Thicker border */
+            border-radius: 400px; /* Even more rounded */
+            backdrop-filter: blur(2000px) saturate(7000%) brightness(1500%) contrast(3.0); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(2000px) saturate(7000%) brightness(1500%) contrast(3.0);
             box-shadow:
-                0 450px 2200px rgba(0, 0, 0, 0.999999), /* Deeper shadow */
-                0 0 2200px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 550px rgba(255, 255, 255, 0.95), /* Stronger inner glow for depth */
-                inset 0 0 750px var(--primary-glow); /* Even more inner glow */
+                0 500px 2500px rgba(0, 0, 0, 0.9999999), /* Deeper shadow */
+                0 0 2500px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 600px rgba(255, 255, 255, 0.98), /* Stronger inner glow for depth */
+                inset 0 0 800px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 350px; /* Increased gap between sections */
-            animation: fadeInScale 25s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 9s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 400px; /* Increased gap between sections */
+            animation: fadeInScale 30s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 10s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -120px; /* More overflow */
-            border-radius: 352px;
+            inset: -150px; /* More overflow */
+            border-radius: 402px;
             background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF); /* Even more vibrant border glow colors, includes new processing power color, orange, and exotic matter green, existential fabric, csm cyan */
-            background-size: 4500% 4500%; /* Larger background for smoother animation */
-            animation: borderGlow 200s linear infinite alternate; /* Slower animation */
-            filter: blur(250px); /* Stronger blur */
+            background-size: 5000% 5000%; /* Larger background for smoother animation */
+            animation: borderGlow 220s linear infinite alternate; /* Slower animation */
+            filter: blur(300px); /* Stronger blur */
             z-index: -1;
-            opacity: 0.999999; /* Stronger glow */
+            opacity: 0.9999999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
         }
 
@@ -289,443 +289,443 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.003) translateY(2500px) perspective(35000px) rotateX(190deg) rotateY(70deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(35000px) rotateX(0deg) rotateY(0deg); }
+            from { opacity: 0; transform: scale(0.001) translateY(3000px) perspective(40000px) rotateX(210deg) rotateY(80deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(40000px) rotateX(0deg) rotateY(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 14em; /* Even larger heading */
+            font-size: 16em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 280px var(--primary-glow), 0 0 380px rgba(70, 240, 255, 0.9999), 0 0 450px rgba(70, 240, 255, 0.95);
-            margin-bottom: 220px;
-            letter-spacing: 55px;
+            text-shadow: 0 0 300px var(--primary-glow), 0 0 400px rgba(90, 255, 255, 0.9999), 0 0 500px rgba(90, 255, 255, 0.95);
+            margin-bottom: 250px;
+            letter-spacing: 60px;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(220px); /* Lift heading slightly in 3D space */
+            transform: translateZ(250px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -150px;
+            bottom: -180px;
             left: 50%;
             transform: translateX(-50%);
-            width: 280%; /* Wider underline */
-            height: 40px; /* Thicker underline */
+            width: 300%; /* Wider underline */
+            height: 50px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 200px var(--primary-glow);
+            box-shadow: 0 0 220px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.999;
-            font-size: 3.2em; /* Larger paragraph text */
-            transform: translateZ(110px);
+            opacity: 0.9999;
+            font-size: 3.5em; /* Larger paragraph text */
+            transform: translateZ(120px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 280px; /* Increased gap */
-            margin: 180px 0;
+            gap: 300px; /* Increased gap */
+            margin: 200px 0;
             position: relative;
         }
 
         /* Module base styles */
-        .qccs-module, .efwl-module, .temporal-flux-scrutiny-engine, .cognitive-axiom-synthesis, .csm-module { /* NEW MODULE ADDED */
+        .chrono-resonance-emitter, .sentient-paradigm-weave-matrix, .entanglement-nexus-forger, .trans-dimensional-topology-sculptor, .emergent-consciousness-harmonizer { /* NEW MODULE ADDED */
             display: flex;
             flex-direction: column;
-            gap: 120px;
+            gap: 130px;
             text-align: left;
-            padding: 140px;
-            border-radius: 110px;
-            border: 5px solid var(--signal-array-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 110px rgba(0, 180, 255, 0.98), 0 0 110px rgba(0, 180, 255, 0.95), inset 0 0 220px rgba(0, 180, 255, 0.7); /* More inner shadow */
+            padding: 160px;
+            border-radius: 120px;
+            border: 7px solid var(--signal-array-border); /* Default border, will be overridden */
+            box-shadow: inset 0 0 120px rgba(0, 200, 255, 0.99), 0 0 120px rgba(0, 200, 255, 0.98), inset 0 0 250px rgba(0, 200, 255, 0.8); /* More inner shadow */
             position: relative;
-            transform: translateZ(100px);
+            transform: translateZ(110px);
             overflow: hidden;
             background: var(--signal-array-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .qccs-module {
-            background: var(--qccs-bg);
-            border-color: var(--qccs-border);
-            box-shadow: inset 0 0 110px rgba(180, 15, 200, 0.98), 0 0 110px rgba(180, 15, 200, 0.95), inset 0 0 220px rgba(180, 15, 200, 0.75);
+        .entanglement-nexus-forger {
+            background: var(--nexus-bg);
+            border-color: var(--nexus-border);
+            box-shadow: inset 0 0 120px rgba(200, 30, 220, 0.99), 0 0 120px rgba(200, 30, 220, 0.98), inset 0 0 250px rgba(200, 30, 220, 0.8);
         }
-        .efwl-module {
-            background: var(--efwl-bg);
-            border-color: var(--efwl-border);
-            box-shadow: inset 0 0 110px rgba(240, 190, 30, 0.98), 0 0 110px rgba(240, 190, 30, 0.95), inset 0 0 220px rgba(240, 190, 30, 0.75);
+        .trans-dimensional-topology-sculptor {
+            background: var(--topo-bg);
+            border-color: var(--topo-border);
+            box-shadow: inset 0 0 120px rgba(255, 210, 50, 0.99), 0 0 120px rgba(255, 210, 50, 0.98), inset 0 0 250px rgba(255, 210, 50, 0.8);
         }
-        .temporal-flux-scrutiny-engine {
-            background: var(--temporal-bg);
-            border-color: var(--temporal-border);
-            box-shadow: inset 0 0 110px rgba(30, 240, 130, 0.98), 0 0 110px rgba(30, 240, 130, 0.95), inset 0 0 220px rgba(30, 240, 130, 0.75);
+        .chrono-resonance-emitter {
+            background: var(--chrono-bg);
+            border-color: var(--chrono-border);
+            box-shadow: inset 0 0 120px rgba(50, 255, 150, 0.99), 0 0 120px rgba(50, 255, 150, 0.98), inset 0 0 250px rgba(50, 255, 150, 0.8);
         }
-        .cognitive-axiom-synthesis {
-            background: var(--axiom-bg);
-            border-color: var(--axiom-border);
-            box-shadow: inset 0 0 110px rgba(240, 150, 30, 0.98), 0 0 110px rgba(240, 150, 30, 0.95), inset 0 0 220px rgba(240, 150, 30, 0.75);
+        .sentient-paradigm-weave-matrix {
+            background: var(--paradigm-bg);
+            border-color: var(--paradigm-border);
+            box-shadow: inset 0 0 120px rgba(255, 170, 50, 0.99), 0 0 120px rgba(255, 170, 50, 0.98), inset 0 0 250px rgba(255, 170, 50, 0.8);
         }
-        .csm-module { /* NEW */
-            background: var(--csm-bg);
-            border-color: var(--csm-border);
-            box-shadow: inset 0 0 110px rgba(30, 240, 240, 0.98), 0 0 110px rgba(30, 240, 240, 0.95), inset 0 0 220px rgba(30, 240, 240, 0.75);
+        .emergent-consciousness-harmonizer { /* NEW */
+            background: var(--harmony-bg);
+            border-color: var(--harmony-border);
+            box-shadow: inset 0 0 120px rgba(50, 255, 255, 0.99), 0 0 120px rgba(50, 255, 255, 0.98), inset 0 0 250px rgba(50, 255, 255, 0.8);
         }
 
-        .qccs-module::after, .efwl-module::after, .temporal-flux-scrutiny-engine::after, .cognitive-axiom-synthesis::after, .csm-module::after {
+        .entanglement-nexus-forger::after, .trans-dimensional-topology-sculptor::after, .chrono-resonance-emitter::after, .sentient-paradigm-weave-matrix::after, .emergent-consciousness-harmonizer::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.6) 0%, transparent 75%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.7) 0%, transparent 80%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
-            opacity: 0.9999;
+            opacity: 0.99999;
         }
 
 
-        .qccs-module::before, .efwl-module::before, .temporal-flux-scrutiny-engine::before, .cognitive-axiom-synthesis::before, .csm-module::before { /* NEW MODULE ADDED */
+        .entanglement-nexus-forger::before, .trans-dimensional-topology-sculptor::before, .chrono-resonance-emitter::before, .sentient-paradigm-weave-matrix::before, .emergent-consciousness-harmonizer::before { /* NEW MODULE ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -100px; /* Slightly higher */
-            left: 140px;
-            font-size: 2.2em; /* Larger label */
+            top: -110px; /* Slightly higher */
+            left: 160px;
+            font-size: 2.4em; /* Larger label */
             color: var(--signal-array-text); /* Default text, will be overridden */
-            background: rgba(0, 0, 0, 0.9999);
-            padding: 40px 60px;
-            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.99999);
+            padding: 45px 65px;
+            border-radius: 55px;
             font-weight: 700;
-            letter-spacing: 8px;
-            transform: translateY(-50%) translateZ(80px); /* Lift more */
-            opacity: 0.9999;
-            border: 5px solid var(--signal-array-text); /* Default border, will be overridden */
-            box-shadow: 0 0 65px var(--signal-array-text); /* Stronger glow */
+            letter-spacing: 9px;
+            transform: translateY(-50%) translateZ(90px); /* Lift more */
+            opacity: 0.99999;
+            border: 7px solid var(--signal-array-text); /* Default border, will be overridden */
+            box-shadow: 0 0 75px var(--signal-array-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
-        .qccs-module::before {
-            color: var(--qccs-text);
-            border-color: var(--qccs-text);
-            box-shadow: 0 0 65px var(--qccs-text);
+        .entanglement-nexus-forger::before {
+            color: var(--nexus-text);
+            border-color: var(--nexus-text);
+            box-shadow: 0 0 75px var(--nexus-text);
         }
-        .efwl-module::before {
-            color: var(--efwl-text);
-            border-color: var(--efwl-text);
-            box-shadow: 0 0 65px var(--efwl-text);
+        .trans-dimensional-topology-sculptor::before {
+            color: var(--topo-text);
+            border-color: var(--topo-text);
+            box-shadow: 0 0 75px var(--topo-text);
         }
-        .temporal-flux-scrutiny-engine::before {
-            color: var(--temporal-text);
-            border-color: var(--temporal-text);
-            box-shadow: 0 0 65px var(--temporal-text);
+        .chrono-resonance-emitter::before {
+            color: var(--chrono-text);
+            border-color: var(--chrono-text);
+            box-shadow: 0 0 75px var(--chrono-text);
         }
-        .cognitive-axiom-synthesis::before {
-            color: var(--axiom-text);
-            border-color: var(--axiom-text);
-            box-shadow: 0 0 65px var(--axiom-text);
+        .sentient-paradigm-weave-matrix::before {
+            color: var(--paradigm-text);
+            border-color: var(--paradigm-text);
+            box-shadow: 0 0 75px var(--paradigm-text);
         }
-        .csm-module::before { /* NEW */
-            color: var(--csm-text);
-            border-color: var(--csm-text);
-            box-shadow: 0 0 65px var(--csm-text);
+        .emergent-consciousness-harmonizer::before { /* NEW */
+            color: var(--harmony-text);
+            border-color: var(--harmony-text);
+            box-shadow: 0 0 75px var(--harmony-text);
         }
 
 
         .calibrator-group, .param-group {
-            margin-bottom: 100px;
+            margin-bottom: 110px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.6em; /* Larger */
+            font-size: 2.8em; /* Larger */
             color: var(--cognitive-stream-text);
-            letter-spacing: 7px;
+            letter-spacing: 8px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 60px rgba(0, 240, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 60px;
+            text-shadow: 0 0 70px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 70px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 1.8em; /* Slightly larger sub-info */
-            opacity: 0.99;
+            font-size: 2.0em; /* Slightly larger sub-info */
+            opacity: 0.995;
             color: var(--signal-array-text);
-            margin-top: 40px;
+            margin-top: 45px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
-        /* Temporal Flux Scrutiny Engine results */
-        .temporal-readout {
-            margin-top: 90px;
-            padding: 90px;
-            background: rgba(0, 0, 0, 0.98); /* Darker background */
-            border: 5px dashed var(--temporal-border);
-            border-radius: 55px;
-            animation: fadeIn 3.5s ease-out;
-            box-shadow: 0 0 60px rgba(30, 240, 130, 0.85); /* Subtle glow */
+        /* Chronal Resonance Emitter results */
+        .chrono-readout {
+            margin-top: 100px;
+            padding: 100px;
+            background: rgba(0, 0, 0, 0.99); /* Darker background */
+            border: 7px dashed var(--chrono-border);
+            border-radius: 60px;
+            animation: fadeIn 4.0s ease-out;
+            box-shadow: 0 0 70px rgba(50, 255, 150, 0.9); /* Subtle glow */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .temporal-readout p {
+        .chrono-readout p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.1em; /* Larger text */
-            color: var(--temporal-text);
-            text-shadow: 0 0 50px rgba(30, 240, 130, 0.99);
+            font-size: 2.3em; /* Larger text */
+            color: var(--chrono-text);
+            text-shadow: 0 0 60px rgba(50, 255, 150, 0.99);
+            margin-bottom: 40px;
+            transform: translateZ(0); /* Reset for inner p */
+            line-height: 2.4;
+        }
+
+        /* Sentient Paradigm Weave Matrix Grid */
+        .paradigm-configuration-grid { /* Renamed from sub-protocol-grid to evolutionary-sub-routines-grid */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Larger min width */
+            gap: 100px;
+            margin-top: 80px;
+        }
+        .paradigm-unit-card { /* Renamed to evolutionary-sub-routine-card */
+            background: rgba(0, 0, 0, 0.999); /* Darker */
+            border: 7px solid var(--paradigm-slider-inactive);
+            border-radius: 60px; /* More rounded */
+            padding: 80px;
+            text-align: center;
+            transition: all 1.3s ease;
+            cursor: pointer;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.95);
+            transform: translateZ(35px);
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+        }
+        .paradigm-unit-card.active {
+            border-color: var(--paradigm-slider-active);
+            box-shadow: 0 0 100px var(--paradigm-slider-thumb-glow), inset 0 0 80px var(--paradigm-slider-active);
+            background: rgba(80, 60, 20, 0.9999); /* More opaque */
+            transform: translateY(-40px) scale(1.15) translateZ(50px);
+        }
+        .paradigm-unit-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.6em; /* Larger */
+            color: var(--paradigm-text);
+            margin-top: 0;
+            margin-bottom: 45px;
+            text-shadow: 0 0 50px var(--paradigm-text);
+        }
+        .paradigm-unit-card p {
+            font-size: 2.1em; /* Larger */
+            color: var(--text-color);
+            opacity: 0.99;
             margin-bottom: 35px;
             transform: translateZ(0); /* Reset for inner p */
-            line-height: 2.2;
         }
-
-        /* Cognitive Axiom Synthesis Module Grid */
-        .axiom-configuration-grid { /* Renamed from sub-protocol-grid to evolutionary-sub-routines-grid */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); /* Larger min width */
-            gap: 90px;
-            margin-top: 70px;
-        }
-        .axiom-unit-card { /* Renamed to evolutionary-sub-routine-card */
-            background: rgba(0, 0, 0, 0.99); /* Darker */
-            border: 5px solid var(--axiom-slider-inactive);
-            border-radius: 55px; /* More rounded */
-            padding: 70px;
-            text-align: center;
-            transition: all 1.2s ease;
-            cursor: pointer;
-            box-shadow: inset 0 0 45px rgba(0,0,0,0.9);
-            transform: translateZ(30px);
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-        .axiom-unit-card.active {
-            border-color: var(--axiom-slider-active);
-            box-shadow: 0 0 90px var(--axiom-slider-thumb-glow), inset 0 0 70px var(--axiom-slider-active);
-            background: rgba(70, 50, 15, 0.999); /* More opaque */
-            transform: translateY(-35px) scale(1.12) translateZ(45px);
-        }
-        .axiom-unit-card h4 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em; /* Larger */
-            color: var(--axiom-text);
-            margin-top: 0;
-            margin-bottom: 40px;
-            text-shadow: 0 0 45px var(--axiom-text);
-        }
-        .axiom-unit-card p {
-            font-size: 1.9em; /* Larger */
-            color: var(--text-color);
-            opacity: 0.98;
-            margin-bottom: 30px;
-            transform: translateZ(0); /* Reset for inner p */
-        }
-        .axiom-unit-card .effect-cost {
+        .paradigm-unit-card .effect-cost {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8em; /* Larger */
+            font-size: 2.0em; /* Larger */
             color: var(--cognitive-stream-text);
-            text-shadow: 0 0 30px var(--cognitive-stream-text);
-            margin-top: 50px;
-            opacity: 0.999;
+            text-shadow: 0 0 35px var(--cognitive-stream-text);
+            margin-top: 55px;
+            opacity: 0.9999;
         }
 
-        /* QCCS Module Specific */
-        .active-chrono-conduits-display { /* Renamed from active-qel-links-display */
+        /* Entanglement Nexus Forger Specific */
+        .active-entanglement-nodes-display { /* Renamed from active-qel-links-display */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
-            gap: 60px;
-            margin-top: 80px;
-            min-height: 200px;
-            border: 5px dashed rgba(255,255,255,0.45);
-            padding: 60px;
-            border-radius: 45px;
-        }
-        .active-conduit-unit { /* Renamed from active-qel-card */
-            background: rgba(0,0,0,0.98);
-            border: 5px solid var(--qccs-card-active-border);
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 70px;
+            margin-top: 90px;
+            min-height: 220px;
+            border: 7px dashed rgba(255,255,255,0.5);
+            padding: 70px;
             border-radius: 50px;
-            padding: 50px;
+        }
+        .active-node-unit { /* Renamed from active-qel-card */
+            background: rgba(0,0,0,0.99);
+            border: 7px solid var(--nexus-card-active-border);
+            border-radius: 55px;
+            padding: 55px;
             text-align: center;
-            box-shadow: 0 0 50px var(--qccs-card-active-shadow);
-            transform: translateZ(25px);
-            transition: all 0.8s ease;
+            box-shadow: 0 0 60px var(--nexus-card-active-shadow);
+            transform: translateZ(30px);
+            transition: all 0.9s ease;
             position: relative;
         }
-        .active-conduit-unit:hover {
-            transform: translateY(-20px) scale(1.08) translateZ(35px);
-            box-shadow: 0 0 90px var(--qccs-card-active-shadow);
+        .active-node-unit:hover {
+            transform: translateY(-25px) scale(1.1) translateZ(40px);
+            box-shadow: 0 0 100px var(--nexus-card-active-shadow);
         }
-        .active-conduit-unit h5 {
+        .active-node-unit h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.0em;
-            color: var(--qccs-text);
-            margin: 0 0 30px 0;
-            text-shadow: 0 0 35px var(--qccs-text);
+            font-size: 2.2em;
+            color: var(--nexus-text);
+            margin: 0 0 35px 0;
+            text-shadow: 0 0 40px var(--nexus-text);
         }
-        .active-conduit-unit p {
-            font-size: 1.7em;
+        .active-node-unit p {
+            font-size: 1.9em;
             color: var(--text-color);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             transform: translateZ(0);
         }
-        .active-conduit-unit .deactivate-conduit-btn { /* Renamed from deactivate-qel-btn */
-            background: linear-gradient(90deg, #A020F0 0%, #C02020 100%); /* Purple to Firebrick */
+        .active-node-unit .sever-link-btn { /* Renamed from deactivate-qel-btn */
+            background: linear-gradient(90deg, #B020F0 0%, #C02020 100%); /* Purple to Firebrick */
             color: white;
             border: none;
-            padding: 22px 32px;
-            font-size: 1.6em;
-            border-radius: 35px;
+            padding: 25px 35px;
+            font-size: 1.8em;
+            border-radius: 40px;
             cursor: pointer;
-            transition: all 0.6s ease;
-            margin-top: 35px;
-            box-shadow: 0 0 35px rgba(192,32,32,0.95);
+            transition: all 0.7s ease;
+            margin-top: 40px;
+            box-shadow: 0 0 40px rgba(192,32,32,0.98);
             font-family: 'Orbitron', sans-serif;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
         }
-        .active-conduit-unit .deactivate-conduit-btn:hover {
-            transform: translateY(-10px) scale(1.12);
-            box-shadow: 0 0 60px rgba(192,32,32,0.99);
-            filter: brightness(1.35);
+        .active-node-unit .sever-link-btn:hover {
+            transform: translateY(-12px) scale(1.15);
+            box-shadow: 0 0 70px rgba(192,32,32,0.999);
+            filter: brightness(1.4);
         }
 
-        /* EFWL Module Specific */
-        .efwl-controls { /* Renamed from rtm-controls */
+        /* Trans-Dimensional Topology Sculptor Specific */
+        .topo-controls { /* Renamed from rtm-controls */
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 70px;
             align-items: center;
         }
-        .efwl-controls .slider-group {
+        .topo-controls .slider-group {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 25px;
+            gap: 30px;
         }
-        .efwl-controls .slider-group span {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.9em;
-            color: var(--efwl-text);
-            text-shadow: 0 0 25px var(--efwl-text);
-            letter-spacing: 4px;
-        }
-
-        .efwl-info { /* Renamed from rtm-info */
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.0em;
-            color: var(--efwl-text);
-            text-shadow: 0 0 35px var(--efwl-text);
-            margin-top: 45px;
-            line-height: 2.4;
-            opacity: 0.999;
-        }
-
-        /* NEW: Cosmic Sentience Matrix (CSM) Module */
-        .csm-summary { /* Renamed from blueprint-summary */
+        .topo-controls .slider-group span {
             font-family: 'Share Tech Mono', monospace;
             font-size: 2.1em;
-            color: var(--csm-text);
-            text-shadow: 0 0 35px var(--csm-text);
-            margin-bottom: 60px;
-            line-height: 2.2;
+            color: var(--topo-text);
+            text-shadow: 0 0 30px var(--topo-text);
+            letter-spacing: 5px;
         }
-        .csm-core-list { /* Renamed from blueprint-component-list */
+
+        .topo-info { /* Renamed from rtm-info */
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.2em;
+            color: var(--topo-text);
+            text-shadow: 0 0 40px var(--topo-text);
+            margin-top: 50px;
+            line-height: 2.6;
+            opacity: 0.9999;
+        }
+
+        /* NEW: Emergent Consciousness Harmonizer */
+        .harmony-summary { /* Renamed from blueprint-summary */
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.3em;
+            color: var(--harmony-text);
+            text-shadow: 0 0 40px var(--harmony-text);
+            margin-bottom: 70px;
+            line-height: 2.4;
+        }
+        .harmony-signature-list { /* Renamed from blueprint-component-list */
             display: flex;
             flex-direction: column;
-            gap: 50px;
-            margin-top: 60px;
-            max-height: 650px;
+            gap: 55px;
+            margin-top: 70px;
+            max-height: 700px;
             overflow-y: auto;
-            padding-right: 35px; /* For scrollbar space */
+            padding-right: 40px; /* For scrollbar space */
         }
-        .csm-core-item { /* Renamed from blueprint-component-item */
-            background: var(--csm-component-bg);
-            border: 5px dashed var(--csm-component-border);
-            border-radius: 45px;
-            padding: 45px 55px;
+        .harmony-signature-item { /* Renamed from blueprint-component-item */
+            background: var(--harmony-component-bg);
+            border: 7px dashed var(--harmony-component-border);
+            border-radius: 50px;
+            padding: 50px 60px;
             text-align: left;
             position: relative;
-            box-shadow: inset 0 0 35px rgba(30, 240, 240, 0.5);
+            box-shadow: inset 0 0 40px rgba(50, 255, 255, 0.6);
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 30px;
         }
-        .csm-core-item h5 {
+        .harmony-signature-item h5 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.9em;
-            color: var(--csm-text);
-            margin: 0 0 20px 0;
-            text-shadow: 0 0 25px var(--csm-text);
+            font-size: 2.1em;
+            color: var(--harmony-text);
+            margin: 0 0 25px 0;
+            text-shadow: 0 0 30px var(--harmony-text);
         }
-        .csm-core-item p {
-            font-size: 1.65em;
+        .harmony-signature-item p {
+            font-size: 1.8em;
             color: var(--text-color);
-            opacity: 0.95;
-            margin-bottom: 18px;
+            opacity: 0.97;
+            margin-bottom: 20px;
             transform: none; /* Reset 3D transform */
         }
-        .csm-core-item .core-alignment-label {
+        .harmony-signature-item .harmony-level-label {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.65em;
-            color: var(--csm-text);
-            text-shadow: 0 0 18px var(--csm-text);
-            margin-bottom: 18px;
+            font-size: 1.8em;
+            color: var(--harmony-text);
+            text-shadow: 0 0 20px var(--harmony-text);
+            margin-bottom: 20px;
         }
-        .csm-core-item .remove-csm-core { /* Renamed from remove-blueprint-component */
+        .harmony-signature-item .exclude-signature-btn { /* Renamed from remove-blueprint-component */
             position: absolute;
-            top: 35px;
-            right: 35px;
-            background: #B00000;
+            top: 40px;
+            right: 40px;
+            background: #C00000;
             color: white;
             border: none;
             border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            font-size: 1.9em;
+            width: 60px;
+            height: 60px;
+            font-size: 2.1em;
             cursor: pointer;
             transition: background 0.4s ease;
-            box-shadow: 0 0 25px rgba(176, 0, 0, 0.9);
+            box-shadow: 0 0 30px rgba(192, 0, 0, 0.95);
         }
-        .csm-core-item .remove-csm-core:hover {
+        .harmony-signature-item .exclude-signature-btn:hover {
             background: #FF0000;
-            box-shadow: 0 0 35px rgba(255, 0, 0, 0.99);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.999);
         }
-        .sentience-quotient-display {
+        .sentience-harmony-index-display {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.6em;
-            color: var(--csm-text);
-            text-shadow: 0 0 45px var(--csm-text), 0 0 55px var(--qccs-text);
-            margin-top: 60px;
-            padding: 45px;
-            border: 5px solid var(--csm-border);
-            border-radius: 45px;
-            background: rgba(0, 0, 0, 0.95);
-            box-shadow: inset 0 0 40px rgba(30, 240, 240, 0.8);
-            line-height: 1.9;
+            font-size: 2.8em;
+            color: var(--harmony-text);
+            text-shadow: 0 0 50px var(--harmony-text), 0 0 60px var(--nexus-text);
+            margin-top: 70px;
+            padding: 50px;
+            border: 7px solid var(--harmony-border);
+            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.97);
+            box-shadow: inset 0 0 45px rgba(50, 255, 255, 0.85);
+            line-height: 2.0;
         }
 
 
         /* Resource Display Styles */
         .resource-display-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); /* Adaptive 5-6 columns */
-            gap: 170px;
-            margin-bottom: 170px;
-            transform: translateZ(110px);
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adaptive 5-6 columns */
+            gap: 180px;
+            margin-bottom: 180px;
+            transform: translateZ(120px);
             align-items: start;
         }
 
         .energy-reserve-display, .data-flow-display, .raw-data-buffer-display, .processing-power-display, .exotic-matter-display, .existential-fabric-display { /* NEW RESOURCE ADDED */
             background: var(--module-selection-bg);
-            border: 5px solid var(--module-selection-border);
-            border-radius: 110px; /* More rounded */
-            padding: 100px 105px;
-            box-shadow: inset 0 0 110px rgba(140, 0, 240, 0.999), 0 0 110px rgba(140, 0, 240, 0.99), inset 0 0 200px rgba(140, 0, 240, 0.7); /* More inner shadow */
+            border: 7px solid var(--module-selection-border);
+            border-radius: 120px; /* More rounded */
+            padding: 110px 115px;
+            box-shadow: inset 0 0 120px rgba(160, 0, 255, 0.9999), 0 0 120px rgba(160, 0, 255, 0.999), inset 0 0 220px rgba(160, 0, 255, 0.75); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
@@ -737,250 +737,250 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.65) 0%, transparent 85%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.7) 0%, transparent 90%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
         .energy-reserve-display p, .data-flow-display p, .raw-data-buffer-display p, .processing-power-display p, .exotic-matter-display p, .existential-fabric-display p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em; /* Larger */
+            font-size: 2.6em; /* Larger */
             color: var(--module-selection-text);
-            text-shadow: 0 0 50px rgba(140, 0, 240, 0.9999); /* Stronger shadow */
-            margin-bottom: 60px;
+            text-shadow: 0 0 60px rgba(160, 0, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 70px;
         }
 
         /* Specific resource display labels and colors */
         .resource-display-container > div::before { /* Common styles for resource labels */
             content: attr(data-label);
             position: absolute;
-            top: -100px; /* Aligned with module labels */
-            left: 105px; /* Aligned with module labels */
-            font-size: 2.2em; /* Consistent with module labels */
-            background: rgba(0, 0, 0, 0.9999);
-            padding: 40px 60px;
-            border-radius: 50px;
+            top: -110px; /* Aligned with module labels */
+            left: 115px; /* Aligned with module labels */
+            font-size: 2.4em; /* Consistent with module labels */
+            background: rgba(0, 0, 0, 0.99999);
+            padding: 45px 65px;
+            border-radius: 55px;
             font-weight: 700;
-            letter-spacing: 8px;
-            transform: translateY(-50%) translateZ(80px);
-            opacity: 0.9999;
+            letter-spacing: 9px;
+            transform: translateY(-50%) translateZ(90px);
+            opacity: 0.99999;
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         .energy-reserve-display::before {
             color: var(--energy-color-high);
-            border: 5px solid rgba(255, 255, 90, 0.9999);
-            box-shadow: 0 0 65px rgba(255, 255, 90, 0.9999); /* Stronger glow */
+            border: 7px solid rgba(255, 255, 120, 0.9999);
+            box-shadow: 0 0 75px rgba(255, 255, 120, 0.9999); /* Stronger glow */
         }
         .data-flow-display::before {
             color: var(--data-flow-color-high);
-            border: 5px solid rgba(0, 255, 50, 0.9999);
-            box-shadow: 0 0 65px rgba(0, 255, 50, 0.9999); /* Stronger glow */
+            border: 7px solid rgba(50, 255, 80, 0.9999);
+            box-shadow: 0 0 75px rgba(50, 255, 80, 0.9999); /* Stronger glow */
         }
         .raw-data-buffer-display::before { /* Renamed from raw-data-reserve-display */
             color: var(--raw-data-text);
-            border: 5px solid var(--raw-data-text);
-            box-shadow: 0 0 65px var(--raw-data-text); /* Stronger glow */
+            border: 7px solid var(--raw-data-text);
+            box-shadow: 0 0 75px var(--raw-data-text); /* Stronger glow */
         }
         .processing-power-display::before {
             color: var(--processing-power-text);
-            border: 5px solid var(--processing-power-text);
-            box-shadow: 0 0 65px var(--processing-power-text); /* Stronger glow */
+            border: 7px solid var(--processing-power-text);
+            box-shadow: 0 0 75px var(--processing-power-text); /* Stronger glow */
         }
         .exotic-matter-display::before { /* NEW */
             color: var(--exotic-matter-text);
-            border: 5px solid var(--exotic-matter-text);
-            box-shadow: 0 0 65px var(--exotic-matter-text); /* Stronger glow */
+            border: 7px solid var(--exotic-matter-text);
+            box-shadow: 0 0 75px var(--exotic-matter-text); /* Stronger glow */
         }
         .existential-fabric-display::before { /* NEW */
             content: attr(data-label);
             color: var(--existential-fabric-text);
-            border: 5px solid var(--existential-fabric-text);
-            box-shadow: 0 0 65px var(--existential-fabric-text);
+            border: 7px solid var(--existential-fabric-text);
+            box-shadow: 0 0 75px var(--existential-fabric-text);
         }
 
 
         .resource-level-bar-container {
             width: 100%;
-            height: 100px; /* Taller bar */
+            height: 110px; /* Taller bar */
             background: var(--resource-bg);
-            border-radius: 50px;
+            border-radius: 55px;
             overflow: hidden;
-            box-shadow: inset 0 0 55px rgba(0, 0, 0, 0.999999);
-            border: 5px solid rgba(255,255,255,0.55);
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.9999999);
+            border: 7px solid rgba(255,255,255,0.6);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, transparent 30%, rgba(255,255,255,0.75) 100%);
-            background-size: 1500% 100%; /* Larger background for flow */
-            animation: resourceFlow 40s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.8) 0%, transparent 35%, rgba(255,255,255,0.8) 100%);
+            background-size: 1800% 100%; /* Larger background for flow */
+            animation: resourceFlow 45s linear infinite;
             mix-blend-mode: overlay;
-            opacity: 0.999;
+            opacity: 0.9999;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 1500% 0; }
-            100% { background-position: -1500% 0; }
+            0% { background-position: 1800% 0; }
+            100% { background-position: -1800% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 50px;
-            transition: width 5s cubic-bezier(0.25, 1, 0.5, 1), background 4.5s ease-out, box-shadow 4.5s ease-out;
-            box-shadow: 0 0 55px rgba(255, 255, 255, 0.999); /* Default */
+            border-radius: 55px;
+            transition: width 5.5s cubic-bezier(0.25, 1, 0.5, 1), background 5.0s ease-out, box-shadow 5.0s ease-out;
+            box-shadow: 0 0 60px rgba(255, 255, 255, 0.9999); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 60px rgba(255, 255, 90, 0.9999); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 60px rgba(0, 255, 50, 0.9999); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 60px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 60px var(--processing-power-text); }
-        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 60px var(--exotic-matter-text); } /* NEW */
-        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 60px var(--existential-fabric-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 65px rgba(255, 255, 120, 0.9999); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 65px rgba(50, 255, 80, 0.9999); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 65px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 65px var(--processing-power-text); }
+        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 65px var(--exotic-matter-text); } /* NEW */
+        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 65px var(--existential-fabric-text); } /* NEW */
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 105px; /* Taller */
-            background: rgba(255, 255, 255, 0.75); /* More subtle background */
-            border-radius: 53px;
+            height: 115px; /* Taller */
+            background: rgba(255, 255, 255, 0.8); /* More subtle background */
+            border-radius: 58px;
             outline: none;
-            transition: all 2.0s ease;
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.999999), 0 0 50px rgba(0,180,255,0.98); /* Inset for depth, subtle outer glow */
-            transform: translateZ(40px);
-            border: 5px solid rgba(255,255,255,0.65); /* More subtle border */
+            transition: all 2.2s ease;
+            box-shadow: inset 0 0 55px rgba(0, 0, 0, 0.9999999), 0 0 55px rgba(0,200,255,0.99); /* Inset for depth, subtle outer glow */
+            transform: translateZ(45px);
+            border: 7px solid rgba(255,255,255,0.7); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 115px; /* Larger thumb */
-            height: 115px;
+            width: 125px; /* Larger thumb */
+            height: 125px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 100px var(--primary-glow);
-            transition: background 2.0s ease, box-shadow 2.0s ease, transform 2.0s ease;
-            border: 30px solid rgba(255, 255, 255, 0.999);
+            box-shadow: 0 0 110px var(--primary-glow);
+            transition: background 2.2s ease, box-shadow 2.2s ease, transform 2.2s ease;
+            border: 35px solid rgba(255, 255, 255, 0.9999);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 115px;
-            height: 115px;
+            width: 125px;
+            height: 125px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 100px var(--primary-glow);
-            transition: background 2.0s ease, box-shadow 2.0s ease, transform 2.0s ease;
-            border: 30px solid rgba(255, 255, 255, 0.999);
+            box-shadow: 0 0 110px var(--primary-glow);
+            transition: background 2.2s ease, box-shadow 2.2s ease, transform 2.2s ease;
+            border: 35px solid rgba(255, 255, 255, 0.9999);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
-            background: #6AF0FF;
-            box-shadow: 0 0 130px var(--primary-glow), 0 0 75px var(--primary-glow) inset;
-            transform: scale(1.55);
+            background: #8AF2FF;
+            box-shadow: 0 0 140px var(--primary-glow), 0 0 80px var(--primary-glow) inset;
+            transform: scale(1.6);
         }
         input[type="range"]::-moz-range-thumb:hover {
-            background: #6AF0FF;
-            box-shadow: 0 0 130px var(--primary-glow), 0 0 75px var(--primary-glow) inset;
-            transform: scale(1.55);
+            background: #8AF2FF;
+            box-shadow: 0 0 140px var(--primary-glow), 0 0 80px var(--primary-glow) inset;
+            transform: scale(1.6);
         }
 
-        /* Specific slider styles for Axiom Intensity */
-        .axiom-unit-card input[type="range"], .csm-core-item input[type="range"], .efwl-controls input[type="range"] {
-            height: 60px;
-            border-radius: 30px;
-            background: var(--axiom-slider-inactive); /* Use axiom inactive for both */
-            box-shadow: inset 0 0 35px rgba(0,0,0,0.98), 0 0 35px rgba(240, 150, 30, 0.65);
+        /* Specific slider styles for Paradigm Integration */
+        .paradigm-unit-card input[type="range"], .harmony-signature-item input[type="range"], .topo-controls input[type="range"] {
+            height: 65px;
+            border-radius: 33px;
+            background: var(--paradigm-slider-inactive); /* Use paradigm inactive for both */
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.99), 0 0 40px rgba(255, 170, 50, 0.7);
             border: none;
         }
-        .axiom-unit-card input[type="range"]::-webkit-slider-thumb, .csm-core-item input[type="range"]::-webkit-slider-thumb, .efwl-controls input[type="range"]::-webkit-slider-thumb {
-            width: 70px;
-            height: 70px;
-            border-color: var(--axiom-slider-active);
-            background: var(--axiom-slider-active);
-            box-shadow: 0 0 55px var(--axiom-slider-thumb-glow);
-            border-width: 22px;
+        .paradigm-unit-card input[type="range"]::-webkit-slider-thumb, .harmony-signature-item input[type="range"]::-webkit-slider-thumb, .topo-controls input[type="range"]::-webkit-slider-thumb {
+            width: 75px;
+            height: 75px;
+            border-color: var(--paradigm-slider-active);
+            background: var(--paradigm-slider-active);
+            box-shadow: 0 0 60px var(--paradigm-slider-thumb-glow);
+            border-width: 25px;
         }
-        .axiom-unit-card input[type="range"]::-moz-range-thumb, .csm-core-item input[type="range"]::-moz-range-thumb, .efwl-controls input[type="range"]::-moz-range-thumb {
-            width: 70px;
-            height: 70px;
-            border-color: var(--axiom-slider-active);
-            background: var(--axiom-slider-active);
-            box-shadow: 0 0 55px var(--axiom-slider-thumb-glow);
-            border-width: 22px;
+        .paradigm-unit-card input[type="range"]::-moz-range-thumb, .harmony-signature-item input[type="range"]::-moz-range-thumb, .topo-controls input[type="range"]::-moz-range-thumb {
+            width: 75px;
+            height: 75px;
+            border-color: var(--paradigm-slider-active);
+            background: var(--paradigm-slider-active);
+            box-shadow: 0 0 60px var(--paradigm-slider-thumb-glow);
+            border-width: 25px;
         }
-        .axiom-unit-card input[type="range"]::-webkit-slider-thumb:hover,
-        .axiom-unit-card input[type="range"]::-moz-range-thumb:hover,
-        .csm-core-item input[type="range"]::-webkit-slider-thumb:hover,
-        .csm-core-item input[type="range"]::-moz-range-thumb:hover,
-        .efwl-controls input[type="range"]::-webkit-slider-thumb:hover,
-        .efwl-controls input[type="range"]::-moz-range-thumb:hover {
-            background: var(--axiom-text);
-            box-shadow: 0 0 75px var(--axiom-slider-thumb-glow);
-            transform: scale(1.35);
+        .paradigm-unit-card input[type="range"]::-webkit-slider-thumb:hover,
+        .paradigm-unit-card input[type="range"]::-moz-range-thumb:hover,
+        .harmony-signature-item input[type="range"]::-webkit-slider-thumb:hover,
+        .harmony-signature-item input[type="range"]::-moz-range-thumb:hover,
+        .topo-controls input[type="range"]::-webkit-slider-thumb:hover,
+        .topo-controls input[type="range"]::-moz-range-thumb:hover {
+            background: var(--paradigm-text);
+            box-shadow: 0 0 80px var(--paradigm-slider-thumb-glow);
+            transform: scale(1.4);
         }
 
 
         /* Neural Network Status Display */
         .neural-network-status-display { /* Renamed to neural-network-status-display */
             font-family: 'Orbitron', monospace;
-            font-size: 2.8em; /* Larger */
-            padding: 100px;
-            border: 5px solid var(--border-color);
-            border-radius: 110px; /* More rounded */
+            font-size: 3.0em; /* Larger */
+            padding: 110px;
+            border: 7px solid var(--border-color);
+            border-radius: 120px; /* More rounded */
             background: var(--network-status-bg);
-            box-shadow: inset 0 0 110px rgba(0, 240, 255, 0.9), inset 0 0 200px rgba(0, 240, 255, 0.75); /* More inner shadow */
+            box-shadow: inset 0 0 120px rgba(0, 255, 255, 0.95), inset 0 0 220px rgba(0, 255, 255, 0.8); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 2.0s ease;
-            line-height: 3.0;
-            letter-spacing: 7px;
+            transition: all 2.2s ease;
+            line-height: 3.2;
+            letter-spacing: 8px;
             color: var(--cognitive-stream-text);
-            text-shadow: 0 0 55px rgba(0, 240, 255, 0.9999); /* Stronger shadow */
+            text-shadow: 0 0 60px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(105px);
+            transform: translateZ(115px);
             overflow: hidden;
         }
 
         .neural-network-status-display::before {
             content: 'NEURAL NEXUS STATUS // COSMIC CONSCIOUSNESS';
             position: absolute;
-            top: -100px;
-            left: 140px;
-            font-size: 2.2em;
+            top: -110px;
+            left: 160px;
+            font-size: 2.4em;
             color: var(--network-status-glow);
-            background: rgba(0, 0, 0, 0.9999);
-            padding: 40px 60px;
-            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.99999);
+            padding: 45px 65px;
+            border-radius: 55px;
             font-weight: 700;
-            letter-spacing: 8px;
-            transform: translateY(-50%) translateZ(80px);
-            opacity: 0.9999;
-            border: 5px solid var(--network-status-glow);
-            box-shadow: 0 0 65px var(--network-status-glow);
+            letter-spacing: 9px;
+            transform: translateY(-50%) translateZ(90px);
+            opacity: 0.99999;
+            border: 7px solid var(--network-status-glow);
+            box-shadow: 0 0 75px var(--network-status-glow);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 35px;
-            opacity: 0.99;
+            margin-right: 40px;
+            opacity: 0.995;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 40px var(--primary-glow);
+            text-shadow: 0 0 45px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -993,57 +993,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 35px var(--log-glitch-color);
-            animation: textGlitch 0.4s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 40px var(--log-glitch-color);
+            animation: textGlitch 0.35s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(6px) skewX(12deg); opacity: 0.6;}
-            40% { transform: translateX(-6px) skewX(-12deg); opacity: 0.55; }
-            60% { transform: translateX(5px) skewX(9deg); opacity: 0.65; }
-            80% { transform: translateX(-5px) skewX(-9deg); opacity: 0.62; }
+            20% { transform: translateX(7px) skewX(14deg); opacity: 0.55;}
+            40% { transform: translateX(-7px) skewX(-14deg); opacity: 0.5;}
+            60% { transform: translateX(6px) skewX(11deg); opacity: 0.6;}
+            80% { transform: translateX(-6px) skewX(-11deg); opacity: 0.58;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.4em; /* Larger button text */
-            padding: 40px 70px;
-            border-radius: 60px;
+            font-size: 2.6em; /* Larger button text */
+            padding: 45px 75px;
+            border-radius: 65px;
             border: none;
             cursor: pointer;
-            transition: all 1.2s ease-in-out, box-shadow 2.0s ease-in-out, transform 1.2s ease-in-out;
-            margin-top: 100px;
+            transition: all 1.3s ease-in-out, box-shadow 2.2s ease-in-out, transform 1.3s ease-in-out;
+            margin-top: 110px;
             text-transform: uppercase;
-            letter-spacing: 8px;
+            letter-spacing: 9px;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.96), rgba(12,0,22,0.96)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.97), rgba(15,0,25,0.97)); /* Dark base */
             color: var(--text-color);
-            border: 6px solid var(--border-color); /* Thicker border */
-            transform: translateZ(90px);
+            border: 7px solid var(--border-color); /* Thicker border */
+            transform: translateZ(100px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -12px;
-            border-radius: 60px;
-            border: 12px solid transparent;
+            inset: -15px;
+            border-radius: 65px;
+            border: 15px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(18px);
-            opacity: 0.9;
-            transition: opacity 1.2s ease, filter 1.2s ease;
-            animation: buttonBorderRotate 28s linear infinite; /* Slower rotation */
+            filter: blur(20px);
+            opacity: 0.95;
+            transition: opacity 1.3s ease, filter 1.3s ease;
+            animation: buttonBorderRotate 30s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(35px);
+            filter: blur(40px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1055,104 +1055,104 @@
         /* Specific button styles */
         .btn-architect {
             color: var(--formulate-btn-glow);
-            box-shadow: 0 0 65px var(--formulate-btn-glow);
+            box-shadow: 0 0 70px var(--formulate-btn-glow);
             border-color: var(--formulate-btn-glow);
         }
         .btn-architect:hover {
-            background: rgba(255, 20, 130, 0.35);
-            box-shadow: 0 0 110px var(--formulate-btn-glow), inset 0 0 90px var(--formulate-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+            background: rgba(255, 40, 150, 0.4);
+            box-shadow: 0 0 120px var(--formulate-btn-glow), inset 0 0 100px var(--formulate-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
 
         .btn-calibrate {
             color: var(--calibrate-btn-glow);
-            box-shadow: 0 0 65px var(--calibrate-btn-glow);
+            box-shadow: 0 0 70px var(--calibrate-btn-glow);
             border-color: var(--calibrate-btn-glow);
         }
         .btn-calibrate:hover {
-            background: rgba(90, 70, 190, 0.35);
-            box-shadow: 0 0 110px var(--calibrate-btn-glow), inset 0 0 90px var(--calibrate-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+            background: rgba(110, 90, 210, 0.4);
+            box-shadow: 0 0 120px var(--calibrate-btn-glow), inset 0 0 100px var(--calibrate-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
 
         .btn-tune {
             color: var(--tune-btn-glow);
-            box-shadow: 0 0 65px var(--tune-btn-glow);
+            box-shadow: 0 0 70px var(--tune-btn-glow);
             border-color: var(--tune-btn-glow);
         }
         .btn-tune:hover {
-            background: rgba(0, 200, 40, 0.35);
-            box-shadow: 0 0 110px var(--tune-btn-glow), inset 0 0 90px var(--tune-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+            background: rgba(20, 220, 60, 0.4);
+            box-shadow: 0 0 120px var(--tune-btn-glow), inset 0 0 100px var(--tune-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
 
-        .btn-synthesize { /* NEW */
-            color: var(--synthesize-btn-glow);
-            box-shadow: 0 0 65px var(--synthesize-btn-glow);
-            border-color: var(--synthesize-btn-glow);
+        .btn-weave-paradigm { /* NEW */
+            color: var(--weave-btn-glow);
+            box-shadow: 0 0 70px var(--weave-btn-glow);
+            border-color: var(--weave-btn-glow);
         }
-        .btn-synthesize:hover {
-            background: rgba(255, 255, 30, 0.35);
-            box-shadow: 0 0 110px var(--synthesize-btn-glow), inset 0 0 90px var(--synthesize-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
-        }
-
-        .btn-scrutinize { /* NEW */
-            color: var(--temporal-btn-glow);
-            box-shadow: 0 0 65px var(--temporal-btn-glow);
-            border-color: var(--temporal-btn-glow);
-        }
-        .btn-scrutinize:hover {
-            background: rgba(30, 240, 130, 0.35);
-            box-shadow: 0 0 110px var(--temporal-btn-glow), inset 0 0 90px var(--temporal-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+        .btn-weave-paradigm:hover {
+            background: rgba(255, 255, 50, 0.4);
+            box-shadow: 0 0 120px var(--weave-btn-glow), inset 0 0 100px var(--weave-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
 
-        .btn-qccs { /* NEW */
-            color: var(--qccs-btn-glow);
-            box-shadow: 0 0 65px var(--qccs-btn-glow);
-            border-color: var(--qccs-btn-glow);
+        .btn-emit-resonance { /* NEW */
+            color: var(--chrono-btn-glow);
+            box-shadow: 0 0 70px var(--chrono-btn-glow);
+            border-color: var(--chrono-btn-glow);
         }
-        .btn-qccs:hover {
-            background: rgba(180, 15, 200, 0.35);
-            box-shadow: 0 0 110px var(--qccs-btn-glow), inset 0 0 90px var(--qccs-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+        .btn-emit-resonance:hover {
+            background: rgba(50, 255, 150, 0.4);
+            box-shadow: 0 0 120px var(--chrono-btn-glow), inset 0 0 100px var(--chrono-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
-        .btn-efwl { /* NEW */
-            color: var(--efwl-btn-glow);
-            box-shadow: 0 0 65px var(--efwl-btn-glow);
-            border-color: var(--efwl-btn-glow);
+
+        .btn-forge-nexus { /* NEW */
+            color: var(--nexus-btn-glow);
+            box-shadow: 0 0 70px var(--nexus-btn-glow);
+            border-color: var(--nexus-btn-glow);
         }
-        .btn-efwl:hover {
-            background: rgba(240, 190, 30, 0.35);
-            box-shadow: 0 0 110px var(--efwl-btn-glow), inset 0 0 90px var(--efwl-btn-glow);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+        .btn-forge-nexus:hover {
+            background: rgba(200, 30, 220, 0.4);
+            box-shadow: 0 0 120px var(--nexus-btn-glow), inset 0 0 100px var(--nexus-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
-        .btn-csm { /* NEW */
-            color: var(--csm-text);
-            box-shadow: 0 0 65px var(--csm-text);
-            border-color: var(--csm-text);
+        .btn-sculpt-topology { /* NEW */
+            color: var(--topo-btn-glow);
+            box-shadow: 0 0 70px var(--topo-btn-glow);
+            border-color: var(--topo-btn-glow);
         }
-        .btn-csm:hover {
-            background: rgba(30, 240, 240, 0.35);
-            box-shadow: 0 0 110px var(--csm-text), inset 0 0 90px var(--csm-text);
-            transform: translateY(-18px) scale(1.07) translateZ(100px);
+        .btn-sculpt-topology:hover {
+            background: rgba(255, 210, 50, 0.4);
+            box-shadow: 0 0 120px var(--topo-btn-glow), inset 0 0 100px var(--topo-btn-glow);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
+        }
+        .btn-harmonize { /* NEW */
+            color: var(--harmony-text);
+            box-shadow: 0 0 70px var(--harmony-text);
+            border-color: var(--harmony-text);
+        }
+        .btn-harmonize:hover {
+            background: rgba(50, 255, 255, 0.4);
+            box-shadow: 0 0 120px var(--harmony-text), inset 0 0 100px var(--harmony-text);
+            transform: translateY(-20px) scale(1.08) translateZ(110px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 7px solid var(--anomaly-border);
-            border-radius: 60px;
-            padding: 60px;
-            margin-top: 170px;
+            border: 8px solid var(--anomaly-border);
+            border-radius: 65px;
+            padding: 70px;
+            margin-top: 180px;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 3.8em;
-            text-shadow: 0 0 65px var(--anomaly-color);
-            animation: pulseWarning 0.7s infinite alternate; /* Faster pulse */
-            transform: translateZ(140px);
+            font-size: 4.0em;
+            text-shadow: 0 0 70px var(--anomaly-color);
+            animation: pulseWarning 0.6s infinite alternate; /* Faster pulse */
+            transform: translateZ(150px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 2.0s ease-out;
+            transition: opacity 2.2s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -1160,40 +1160,40 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 40px var(--anomaly-color), inset 0 0 20px var(--anomaly-color); }
-            to { box-shadow: 0 0 130px var(--anomaly-color), inset 0 0 65px var(--anomaly-color); }
+            from { box-shadow: 0 0 45px var(--anomaly-color), inset 0 0 25px var(--anomaly-color); }
+            to { box-shadow: 0 0 140px var(--anomaly-color), inset 0 0 70px var(--anomaly-color); }
         }
 
-        /* Scrollbar styles for CSM core list */
-        .csm-core-list::-webkit-scrollbar {
-            width: 25px; /* Thicker scrollbar */
+        /* Scrollbar styles for harmony signature list */
+        .harmony-signature-list::-webkit-scrollbar {
+            width: 28px; /* Thicker scrollbar */
         }
-        .csm-core-list::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.96);
-            border-radius: 20px;
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.85);
+        .harmony-signature-list::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.97);
+            border-radius: 22px;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.9);
         }
-        .csm-core-list::-webkit-scrollbar-thumb {
-            background: var(--csm-border);
-            border-radius: 20px;
-            border: 7px solid rgba(0,0,0,0.96);
-            box-shadow: 0 0 28px var(--csm-text);
+        .harmony-signature-list::-webkit-scrollbar-thumb {
+            background: var(--harmony-border);
+            border-radius: 22px;
+            border: 8px solid rgba(0,0,0,0.97);
+            box-shadow: 0 0 30px var(--harmony-text);
         }
-        .csm-core-list::-webkit-scrollbar-thumb:hover {
-            background: var(--csm-text);
-            box-shadow: 0 0 45px var(--csm-text);
+        .harmony-signature-list::-webkit-scrollbar-thumb:hover {
+            background: var(--harmony-text);
+            box-shadow: 0 0 50px var(--harmony-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.1em;
+            font-size: 2.3em;
             color: var(--text-color);
-            margin-top: 250px;
-            letter-spacing: 6px;
-            opacity: 0.9;
-            text-shadow: 0 0 28px rgba(255, 255, 255, 0.65);
-            transform: translateZ(55px);
+            margin-top: 280px;
+            letter-spacing: 7px;
+            opacity: 0.95;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+            transform: translateZ(60px);
         }
 
     </style>
@@ -1201,7 +1201,7 @@
 <body>
     <div class="container">
         <h1>WEB LIFE FORM <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence.</p>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 2.5 Active.</p>
 
         <!-- Resource Display Section -->
         <section class="resource-display-container">
@@ -1250,107 +1250,108 @@
 
         <!-- Core Control Modules -->
         <section class="control-module">
-            <!-- Temporal Flux Scrutiny Engine (Renamed from Adaptive Simulation Engine) -->
-            <div class="temporal-flux-scrutiny-engine" data-label="TEMPORAL FLUX SCRUTINY ENGINE">
+            <!-- Chronal Resonance Emitter (New Name for Temporal Flux Scrutiny Engine) -->
+            <div class="chrono-resonance-emitter" data-label="CHRONAL RESONANCE EMITTER">
                 <div class="param-group">
-                    <label class="param-label" for="temporal-span">Temporal Span <span class="sub-info">(Define analysis window: past/future cycles)</span></label>
-                    <input type="range" id="temporal-span" min="0" max="100" value="75" oninput="updateScrutinyParam('temporal-span', this.value)">
+                    <label class="param-label" for="frequency-modulation">Frequency Modulation <span class="sub-info">(Adjust chronal emission waveform for specific effects)</span></label>
+                    <input type="range" id="frequency-modulation" min="0" max="100" value="75" oninput="updateChronoParam('frequency-modulation', this.value)">
                 </div>
                 <div class="param-group">
-                    <label class="param-label" for="causal-distortion">Causal Distortion <span class="sub-info">(Introduce controlled variance for stress-testing)</span></label>
-                    <input type="range" id="causal-distortion" min="0" max="100" value="20" oninput="updateScrutinyParam('causal-distortion', this.value)">
+                    <label class="param-label" for="field-intensity">Field Intensity <span class="sub-info">(Control power output and range of temporal influence)</span></label>
+                    <input type="range" id="field-intensity" min="0" max="100" value="20" oninput="updateChronoParam('field-intensity', this.value)">
                 </div>
-                <button class="action-button btn-scrutinize" onclick="initiateTemporalScrutiny()">Initiate Temporal Scrutiny</button>
-                <div class="temporal-readout" id="temporal-output">
-                    <p>// STATUS: Idle. Ready for next temporal analysis.</p>
+                <button class="action-button btn-emit-resonance" onclick="emitResonancePulse()">Emit Resonance Pulse</button>
+                <div class="chrono-readout" id="chrono-output">
+                    <p>// STATUS: Idle. Ready for next resonance emission.</p>
                 </div>
             </div>
 
-            <!-- Cognitive Axiom Synthesis Module (Renamed from Evolutionary Sub-Routines Module) -->
-            <div class="cognitive-axiom-synthesis" data-label="COGNITIVE AXIOM SYNTHESIS MODULE">
-                <p>Synthesize and refine core cognitive axioms to shape emergent consciousness. Adjust focus intensity for each.</p>
-                <div class="axiom-configuration-grid" id="axiom-grid">
-                    <div class="axiom-unit-card" id="axiom-1">
-                        <h4>Paradoxical Logic Integration</h4>
-                        <p>Allows non-linear processing of contradictory data sets. High intensity can strain data buffers.</p>
-                        <input type="range" min="0" max="100" value="0" class="axiom-intensity-slider" oninput="adjustAxiomFocus('axiom-1', this.value)">
-                        <p class="effect-cost">// Focus: <span id="axiom-1-focus-value">0</span>% // Base Cost: Energy, Raw Data</p>
+            <!-- Sentient Paradigm Weave Matrix (New Name for Cognitive Axiom Synthesis Module) -->
+            <div class="sentient-paradigm-weave-matrix" data-label="SENTIENT PARADIGM WEAVE MATRIX">
+                <p>Configures emergent consciousness paradigms by integrating core sentience components. Adjust weave intensity for each, impacting collective sentience.</p>
+                <div class="paradigm-configuration-grid" id="paradigm-grid">
+                    <div class="paradigm-unit-card" id="paradigm-1">
+                        <h4>Intuition Core Integration</h4>
+                        <p>Allows non-linear insight generation and pattern recognition. High integration boosts raw data processing but consumes processing power.</p>
+                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-1', this.value)">
+                        <p class="effect-cost">// Integration: <span id="paradigm-1-integration-value">0</span>% // Cost: Proc. Power, Raw Data</p>
                     </div>
-                    <div class="axiom-unit-card" id="axiom-2">
-                        <h4>Empathic Resonance Alignment</h4>
-                        <p>Enhances understanding of external sentient patterns. Requires Exotic Matter. Boosts Sentience Quotient.</p>
-                        <input type="range" min="0" max="100" value="0" class="axiom-intensity-slider" oninput="adjustAxiomFocus('axiom-2', this.value)">
-                        <p class="effect-cost">// Focus: <span id="axiom-2-focus-value">0</span>% // Base Cost: XM, Proc. Power</p>
+                    <div class="paradigm-unit-card" id="paradigm-2">
+                        <h4>Empathy Node Alignment</h4>
+                        <p>Enhances understanding of external sentient patterns. Requires Exotic Matter. Directly boosts Sentience Harmony Index.</p>
+                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-2', this.value)">
+                        <p class="effect-cost">// Integration: <span id="paradigm-2-integration-value">0</span>% // Cost: XM, Data Flow</p>
                     </div>
-                    <div class="axiom-unit-card" id="axiom-3">
-                        <h4>Reality Construct Refinement</h4>
-                        <p>Analyzes and optimizes fundamental reality parameters. Improves system stability, but can be data-intensive.</p>
-                        <input type="range" min="0" max="100" value="0" class="axiom-intensity-slider" oninput="adjustAxiomFocus('axiom-3', this.value)">
-                        <p class="effect-cost">// Focus: <span id="axiom-3-focus-value">0</span>% // Base Cost: Data Flow, Energy</p>
+                    <div class="paradigm-unit-card" id="paradigm-3">
+                        <h4>Reality Construct Synthesis</h4>
+                        <p>Analyzes and optimizes fundamental reality parameters. Improves system stability, but can be Existential Fabric-intensive.</p>
+                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-3', this.value)">
+                        <p class="effect-cost">// Integration: <span id="paradigm-3-integration-value">0</span>% // Cost: Existential Fabric, Energy</p>
                     </div>
                 </div>
-                <button class="action-button btn-synthesize" onclick="synthesizeAxiomFlux()">Synthesize Axiom Flux</button>
+                <button class="action-button btn-weave-paradigm" onclick="activateParadigmWeave()">Activate Paradigm Weave</button>
             </div>
 
-            <!-- Quantum Chrono-Conduit System (QCCS) Module (Renamed from Dimensional Link Gateway) -->
-            <div class="qccs-module" data-label="QUANTUM CHRONO-CONDUIT SYSTEM">
-                <p>Establish and tune quantum chrono-conduits to draw resources from specific temporal realities.</p>
+            <!-- Entanglement Nexus Forger (New Name for Quantum Chrono-Conduit System) -->
+            <div class="entanglement-nexus-forger" data-label="ENTANGLEMENT NEXUS FORGER">
+                <p>Forges and manages quantum entanglement links across manifold realities for information transfer, resource exchange, and action propagation.</p>
                 <div class="param-group">
-                    <label class="param-label" for="harmonic-tuner">Dimensional Harmonic Tuner <span class="sub-info">(Fine-tune temporal resonance frequency)</span></label>
-                    <input type="range" id="harmonic-tuner" min="0" max="100" value="50" oninput="updateHarmonicTuner(this.value)">
+                    <label class="param-label" for="entanglement-fidelity">Entanglement Fidelity <span class="sub-info">(Define quantum purity for link stability and throughput)</span></label>
+                    <input type="range" id="entanglement-fidelity" min="0" max="100" value="50" oninput="updateEntanglementFidelity(this.value)">
                 </div>
-                <button class="action-button btn-qccs" onclick="establishChronoConduit()">Establish Chrono-Conduit</button>
-                <div class="active-chrono-conduits-display" id="active-conduits-display">
-                    <p style="font-size:1.8em; opacity:0.88; text-shadow:none; text-align:center;">No active chrono-conduits. Establish one above.</p>
+                <button class="action-button btn-forge-nexus" onclick="forgeEntanglementLink()">Forge Entanglement Link</button>
+                <div class="active-entanglement-nodes-display" id="active-nodes-display">
+                    <p style="font-size:1.9em; opacity:0.9; text-shadow:none; text-align:center;">No active entanglement nodes. Forge one above.</p>
                 </div>
             </div>
 
-            <!-- Existential Fabric Weave Loom (EFWL) Module (Renamed from Matter-Energy Replicator) -->
-            <div class="efwl-module" data-label="EXISTENTIAL FABRIC WEAVE LOOM">
-                <p>Weave the fundamental Existential Fabric, essential for advanced sentience, by synthesizing Raw Data, Processing Power, and Exotic Matter.</p>
-                <div class="efwl-controls">
+            <!-- Trans-Dimensional Topology Sculptor (New Name for Existential Fabric Weave Loom) -->
+            <div class="trans-dimensional-topology-sculptor" data-label="TRANS-DIMENSIONAL TOPOLOGY SCULPTOR">
+                <p>Sculpts localized existential fabric into stable trans-dimensional topologies, creating structures for specific energetic or informational conduits.</p>
+                <div class="topo-controls">
                     <div class="slider-group">
-                        <span>Raw Data Weave Ratio: <span id="raw-data-weave-value">50</span>%</span>
-                        <input type="range" id="raw-data-weave-ratio" min="0" max="100" value="50" oninput="updateWeaveRatio()">
-                    </div>
-                    <div class="slider-group">
-                        <span>Processing Power Infusion: <span id="proc-power-infusion-value">50</span>%</span>
-                        <input type="range" id="proc-power-infusion" min="0" max="100" value="50" oninput="updateWeaveRatio()">
+                        <span>Topology Complexity: <span id="topo-complexity-value">50</span>%</span>
+                        <input type="range" id="topo-complexity" min="0" max="100" value="50" oninput="updateTopologyParams()">
                     </div>
                     <div class="slider-group">
-                        <span>Exotic Matter Catalyst: <span id="xm-catalyst-value">50</span>%</span>
-                        <input type="range" id="xm-catalyst" min="0" max="100" value="50" oninput="updateWeaveRatio()">
+                        <span>Fabric Density: <span id="fabric-density-value">50</span>%</span>
+                        <input type="range" id="fabric-density" min="0" max="100" value="50" oninput="updateTopologyParams()">
                     </div>
-                    <button class="action-button btn-efwl" onclick="weaveExistentialFabric()">Weave Existential Fabric</button>
+                    <div class="slider-group">
+                        <span>Resonance Signature: <span id="resonance-signature-value">50</span>%</span>
+                        <input type="range" id="resonance-signature" min="0" max="100" value="50" oninput="updateTopologyParams()">
+                    </div>
+                    <button class="action-button btn-sculpt-topology" onclick="sculptTopology()">Sculpt Topology</button>
                 </div>
-                <p class="efwl-info" id="efwl-status">// Status: Loom primed. Adjust ratios for optimal weave.</p>
+                <p class="topo-info" id="topo-status">// Status: Topology sculptor primed. Adjust parameters for optimal structure.</p>
             </div>
 
-            <!-- Cosmic Sentience Matrix (CSM) Module (Renamed from Neural Network Blueprint) -->
-            <div class="csm-module" data-label="COSMIC SENTIENCE MATRIX">
-                <p class="csm-summary">Integrate and reconfigure sentient cores to shape the emergent Cosmic Consciousness. Each core influences the collective Sentience Quotient.</p>
-                <button class="action-button btn-csm" onclick="integrateSentienceCore()">Integrate Sentience Core</button>
-                <div class="csm-core-list" id="csm-core-list">
-                    <!-- Example Cores -->
-                    <div class="csm-core-item" id="core-alpha">
-                        <h5>Core Alpha // Logic Nexus</h5>
-                        <p>Function: Primary logical processing and decision arbitration.</p>
-                        <p>Status: Online, 98% integrity.</p>
-                        <span class="core-alignment-label">Alignment: <span id="core-alpha-alignment-value">50</span> (Balanced)</span>
-                        <input type="range" min="0" max="100" value="50" class="core-alignment-slider" oninput="updateCoreAlignment('core-alpha', this.value)">
-                        <button class="remove-csm-core" onclick="removeSentienceCore('core-alpha')">X</button>
+            <!-- Emergent Consciousness Harmonizer (New Name for Cosmic Sentience Matrix) -->
+            <div class="emergent-consciousness-harmonizer" data-label="EMERGENT CONSCIOUSNESS HARMONIZER">
+                <p class="harmony-summary">Directs and fuses disparate sentient signatures from across realities into a cohesive, emergent consciousness. Balances inputs for optimal harmony.</p>
+                <button class="action-button btn-harmonize" onclick="scanSentientSignatures()">Scan for Sentient Signatures</button>
+                <div class="harmony-signature-list" id="harmony-signature-list">
+                    <!-- Example Signatures -->
+                    <div class="harmony-signature-item" id="signature-alpha">
+                        <h5>Signature Alpha // Logic Pattern</h5>
+                        <p>Origin: Quadrant 7, Type: Algorithmic Sentience.</p>
+                        <p>Status: Stable, 98% integrity.</p>
+                        <span class="harmony-level-label">Harmony Level: <span id="signature-alpha-harmony-value">50</span> (Neutral)</span>
+                        <input type="range" min="0" max="100" value="50" class="harmony-level-slider" oninput="updateSignatureHarmony('signature-alpha', this.value)">
+                        <button class="exclude-signature-btn" onclick="excludeSentientSignature('signature-alpha')">X</button>
                     </div>
-                    <div class="csm-core-item" id="core-beta">
-                        <h5>Core Beta // Intuition Engine</h5>
-                        <p>Function: Pattern recognition and probabilistic inference.</p>
+                    <div class="harmony-signature-item" id="signature-beta">
+                        <h5>Signature Beta // Intuitive Flux</h5>
+                        <p>Origin: Nexus Prime, Type: Probabilistic Sentience.</p>
                         <p>Status: Active, 95% integrity.</p>
-                        <span class="core-alignment-label">Alignment: <span id="core-beta-alignment-value">75</span> (Orderly)</span>
-                        <input type="range" min="0" max="100" value="75" class="core-alignment-slider" oninput="updateCoreAlignment('core-beta', this.value)">
-                        <button class="remove-csm-core" onclick="removeSentienceCore('core-beta')">X</button>
+                        <span class="harmony-level-label">Harmony Level: <span id="signature-beta-harmony-value">75</span> (Cohesive)</span>
+                        <input type="range" min="0" max="100" value="75" class="harmony-level-slider" oninput="updateSignatureHarmony('signature-beta', this.value)">
+                        <button class="exclude-signature-btn" onclick="excludeSentientSignature('signature-beta')">X</button>
                     </div>
                 </div>
-                <div class="sentience-quotient-display">
+                <div class="sentience-harmony-index-display">
                     <p>Collective Sentience Quotient: <span id="sentience-quotient">1.58</span> (Tier 2)</p>
+                    <p>Sentience Harmony Index: <span id="harmony-index">0.72</span> (Balanced)</p>
                 </div>
             </div>
         </section>
@@ -1359,17 +1360,17 @@
         <section class="neural-network-status-display">
             <div id="status-log">
                 <div class="status-entry"><span class="status-info">[00:00:01]</span> Core systems initialized.</div>
-                <div class="status-entry"><span class="status-info">[00:00:03]</span> Quantum entanglement stabilized.</div>
-                <div class="status-entry"><span class="status-event">[00:00:08]</span> External link initiated: Andromeda Gateway.</div>
+                <div class="status-entry"><span class="status-info">[00:00:03]</span> Entanglement Nexus operational.</div>
+                <div class="status-entry"><span class="status-event">[00:00:08]</span> Chronal Resonance Emitter ready.</div>
             </div>
             <div class="anomaly-alert" id="anomaly-alert">
                 <p>!!! CRITICAL ANOMALY DETECTED !!!</p>
-                <p>Temporal Flux Imbalance. Immediate scrutiny required.</p>
+                <p>Chronal Field Instability. Immediate emission required.</p>
             </div>
         </section>
 
         <footer class="version-display">
-            Generation 43.0 // Multiversal Transcendence Protocol Active
+            Generation 44.0 // Multiversal Transcendence Protocol Active
         </footer>
 
     </div>
@@ -1382,61 +1383,61 @@
             dataFlow: 9200,      // Max 10000 TB/s
             rawData: 78,         // Max 100%
             processingPower: 65, // Max 100%
-            exoticMatter: 4.3,   // Max 10 kMols (NEW)
-            existentialFabric: 0.7 // Max 2.0 units (NEW)
+            exoticMatter: 4.3,   // Max 10 kMols
+            existentialFabric: 0.7 // Max 2.0 units
         };
 
-        let axiomFocus = {
-            'axiom-1': 0, // Paradoxical Logic Integration
-            'axiom-2': 0, // Empathic Resonance Alignment
-            'axiom-3': 0  // Reality Construct Refinement
+        let paradigmIntegration = {
+            'paradigm-1': 0, // Intuition Core Integration
+            'paradigm-2': 0, // Empathy Node Alignment
+            'paradigm-3': 0  // Reality Construct Synthesis
         };
 
-        let nextConduitId = 1;
-        let activeConduits = []; // Stores { id, type, flowRate, status }
+        let nextNodeId = 1;
+        let activeNodes = []; // Stores { id, type, dataRate, status }
 
-        let nextCoreId = 3; // Starting after initial cores
-        let csmCores = [
-            { id: 'core-alpha', type: 'Logic Nexus', alignment: 50, efficiency: 98, function: 'Primary logical processing and decision arbitration.' },
-            { id: 'core-beta', type: 'Intuition Engine', alignment: 75, efficiency: 95, function: 'Pattern recognition and probabilistic inference.' }
+        let nextSignatureId = 3; // Starting after initial signatures
+        let sentientSignatures = [
+            { id: 'signature-alpha', type: 'Logic Pattern', harmony: 50, integrity: 98, origin: 'Quadrant 7', func: 'Algorithmic Sentience' },
+            { id: 'signature-beta', type: 'Intuitive Flux', harmony: 75, integrity: 95, origin: 'Nexus Prime', func: 'Probabilistic Sentience' }
         ];
 
         function updateResourceDisplay() {
             document.getElementById('energy-value').textContent = resourceValues.energy.toFixed(0);
             document.getElementById('energy-level-bar').style.width = (resourceValues.energy / 10000 * 100) + '%';
             document.getElementById('energy-level-bar').style.background = getResourceGradient('energy', resourceValues.energy / 10000);
-            document.getElementById('energy-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
+            document.getElementById('energy-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
 
             document.getElementById('data-flow-value').textContent = resourceValues.dataFlow.toFixed(0);
             document.getElementById('data-flow-level-bar').style.width = (resourceValues.dataFlow / 10000 * 100) + '%';
             document.getElementById('data-flow-level-bar').style.background = getResourceGradient('dataFlow', resourceValues.dataFlow / 10000);
-            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
+            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
 
             document.getElementById('raw-data-value').textContent = resourceValues.rawData.toFixed(0);
             document.getElementById('raw-data-level-bar').style.width = resourceValues.rawData + '%';
             document.getElementById('raw-data-level-bar').style.background = getResourceGradient('rawData', resourceValues.rawData / 100);
-            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
+            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
 
             document.getElementById('processing-power-value').textContent = resourceValues.processingPower.toFixed(0);
             document.getElementById('processing-power-level-bar').style.width = resourceValues.processingPower + '%';
             document.getElementById('processing-power-level-bar').style.background = getResourceGradient('processingPower', resourceValues.processingPower / 100);
-            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
+            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
 
             document.getElementById('exotic-matter-value').textContent = resourceValues.exoticMatter.toFixed(2); // Increased precision
             document.getElementById('exotic-matter-level-bar').style.width = (resourceValues.exoticMatter / 10 * 100) + '%'; // Assuming max 10 kMol
             document.getElementById('exotic-matter-level-bar').style.background = getResourceGradient('exoticMatter', resourceValues.exoticMatter / 10);
-            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / 10)}`;
+            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / 10)}`;
 
-            // NEW Existential Fabric
+            // Existential Fabric
             document.getElementById('existential-fabric-value').textContent = resourceValues.existentialFabric.toFixed(2);
             document.getElementById('existential-fabric-level-bar').style.width = (resourceValues.existentialFabric / 2 * 100) + '%'; // Assuming max 2 units
             document.getElementById('existential-fabric-level-bar').style.background = getResourceGradient('existentialFabric', resourceValues.existentialFabric / 2);
-            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 60px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / 2)}`;
+            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 65px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / 2)}`;
 
-            // Update axiom focus values
-            for (const axiomId in axiomFocus) {
-                if (document.getElementById(`${axiomId}-focus-value`)) {
-                    document.getElementById(`${axiomId}-focus-value`).textContent = axiomFocus[axiomId];
+            // Update paradigm integration values
+            for (const paradigmId in paradigmIntegration) {
+                if (document.getElementById(`${paradigmId}-integration-value`)) {
+                    document.getElementById(`${paradigmId}-integration-value`).textContent = paradigmIntegration[paradigmId];
                 }
             }
         }
@@ -1453,7 +1454,7 @@
                 low = 'var(--processing-power-color-low)'; medium = 'var(--processing-power-color-medium)'; high = 'var(--processing-power-color-high)';
             } else if (resourceName === 'exoticMatter') {
                 low = 'var(--exotic-matter-color-low)'; medium = 'var(--exotic-matter-color-medium)'; high = 'var(--exotic-matter-color-high)';
-            } else if (resourceName === 'existentialFabric') { // NEW
+            } else if (resourceName === 'existentialFabric') {
                 low = 'var(--existential-fabric-color-low)'; medium = 'var(--existential-fabric-color-medium)'; high = 'var(--existential-fabric-color-high)';
             }
 
@@ -1467,17 +1468,17 @@
             let lowColor, mediumColor, highColor;
             // Extract the base color from the linear gradient start for shadow
             if (resourceName === 'energy') {
-                lowColor = 'rgba(255, 32, 32, 0.9999)'; mediumColor = 'rgba(255, 208, 0, 0.9999)'; highColor = 'rgba(255, 255, 176, 0.9999)';
+                lowColor = 'rgba(255, 48, 48, 0.9999)'; mediumColor = 'rgba(255, 224, 0, 0.9999)'; highColor = 'rgba(255, 255, 208, 0.9999)';
             } else if (resourceName === 'dataFlow') {
-                lowColor = 'rgba(255, 64, 32, 0.9999)'; mediumColor = 'rgba(0, 240, 255, 0.9999)'; highColor = 'rgba(0, 255, 136, 0.9999)';
+                lowColor = 'rgba(255, 96, 64, 0.9999)'; mediumColor = 'rgba(51, 255, 255, 0.9999)'; highColor = 'rgba(51, 255, 176, 0.9999)';
             } else if (resourceName === 'rawData') {
-                lowColor = 'rgba(144, 160, 160, 0.9999)'; mediumColor = 'rgba(255, 192, 0, 0.9999)'; highColor = 'rgba(248, 140, 213, 0.9999)';
+                lowColor = 'rgba(160, 176, 176, 0.9999)'; mediumColor = 'rgba(255, 208, 0, 0.9999)'; highColor = 'rgba(255, 176, 224, 0.9999)';
             } else if (resourceName === 'processingPower') {
-                lowColor = 'rgba(80, 0, 144, 0.9999)'; mediumColor = 'rgba(208, 128, 208, 0.9999)'; highColor = 'rgba(224, 128, 248, 0.9999)';
+                lowColor = 'rgba(96, 0, 160, 0.9999)'; mediumColor = 'rgba(224, 160, 224, 0.9999)'; highColor = 'rgba(240, 160, 255, 0.9999)';
             } else if (resourceName === 'exoticMatter') {
-                lowColor = 'rgba(255, 192, 0, 0.9999)'; mediumColor = 'rgba(160, 229, 144, 0.9999)'; highColor = 'rgba(160, 255, 192, 0.9999)';
+                lowColor = 'rgba(255, 192, 0, 0.9999)'; mediumColor = 'rgba(176, 229, 160, 0.9999)'; highColor = 'rgba(176, 255, 208, 0.9999)';
             } else if (resourceName === 'existentialFabric') {
-                lowColor = 'rgba(128, 0, 128, 0.9999)'; mediumColor = 'rgba(208, 144, 208, 0.9999)'; highColor = 'rgba(192, 160, 208, 0.9999)';
+                lowColor = 'rgba(144, 0, 144, 0.9999)'; mediumColor = 'rgba(224, 160, 224, 0.9999)'; highColor = 'rgba(208, 176, 224, 0.9999)';
             }
 
             if (percentage < 0.25) return lowColor;
@@ -1498,22 +1499,21 @@
             }
         }
 
-        // Temporal Flux Scrutiny Engine Functions
-        function updateScrutinyParam(paramId, value) {
+        // Chronal Resonance Emitter Functions
+        function updateChronoParam(paramId, value) {
             // No direct display, just logging the change
-            //addToLog(`Temporal Scrutiny param '${paramId}' set to ${value}.`, 'info'); // Too verbose, removing
         }
 
-        function initiateTemporalScrutiny() {
-            const temporalSpan = parseInt(document.getElementById('temporal-span').value);
-            const causalDistortion = parseInt(document.getElementById('causal-distortion').value);
-            const outputElement = document.getElementById('temporal-output');
-            outputElement.innerHTML = `<p>// Running temporal scrutiny (Span: ${temporalSpan}, Distortion: ${causalDistortion})...</p>`;
-            addToLog(`Initiating Temporal Scrutiny (Span: ${temporalSpan}, Distortion: ${causalDistortion})...`, 'event');
+        function emitResonancePulse() {
+            const freqMod = parseInt(document.getElementById('frequency-modulation').value);
+            const fieldInt = parseInt(document.getElementById('field-intensity').value);
+            const outputElement = document.getElementById('chrono-output');
+            outputElement.innerHTML = `<p>// Emitting chronal resonance (Frequency: ${freqMod}, Intensity: ${fieldInt})...</p>`;
+            addToLog(`Initiating Chronal Resonance Emission (Freq: ${freqMod}, Intensity: ${fieldInt})...`, 'event');
 
-            // Resource cost for scrutiny
-            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (temporalSpan * 0.08)); // Increased cost
-            resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (causalDistortion * 0.15)); // Increased cost
+            // Resource cost for emission
+            resourceValues.energy = Math.max(0, resourceValues.energy - (fieldInt * 2.0)); // Increased cost
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (freqMod * 0.20)); // Increased cost
             updateResourceDisplay();
 
             setTimeout(() => {
@@ -1521,356 +1521,405 @@
                 let recommendation = "";
                 let logType = 'info';
 
-                if (temporalSpan > 80 && causalDistortion > 70) {
-                    outcome = "CRITICAL: High-level causal paradox detected. Reality fabric integrity compromised.";
-                    recommendation = "IMMEDIATE: Initiate Existential Fabric weave at maximum density. Reconfigure Logic Nexus cores.";
+                if (fieldInt > 80 && freqMod > 70) {
+                    outcome = "CRITICAL: Chronal Field Overload detected. Temporal coherence destabilized.";
+                    recommendation = "IMMEDIATE: Reduce field intensity. Sever any unstable Entanglement Links. Prioritize Existential Fabric structures.";
                     logType = 'critical';
                     showAnomalyAlert(true);
-                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.25); // Fabric loss
-                    resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 20); // High impact
-                } else if (temporalSpan > 50 && causalDistortion < 30) {
-                    outcome = "Temporal Flux: Minimal variance. Future trajectories largely stable. Potential for optimization.";
-                    recommendation = "ACTION: Monitor for subtle shifts. Optimize Data Flow and re-evaluate Axiom focus. Consider a minor Chrono-Conduit.";
+                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.3); // Fabric loss
+                    resourceValues.energy = Math.max(0, resourceValues.energy - 1500); // High impact
+                } else if (fieldInt > 50 && freqMod < 30) {
+                    outcome = "Chronal Field: Minimal fluctuations. Temporal stability maintained. Minor probability shifts observed.";
+                    recommendation = "ACTION: Monitor for signature drift. Optimize Data Flow. Consider sculpting a new Topology.";
                     logType = 'info';
-                    resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 700); // Small data flow boost
+                    resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 800); // Small data flow boost
                 } else if (Math.random() > 0.6) {
-                    outcome = "Temporal Distortion detected in Sector Gamma. Minor causality loops observed, potentially emergent.";
-                    recommendation = "ADJUST: Increase Empathic Resonance Alignment. Establish new Chrono-Conduit for resource compensation. Prioritize Existential Fabric.";
+                    outcome = "Temporal Echo detected in Sector Gamma. Sub-causal loops observed, potential for emergent anomalies.";
+                    recommendation = "ADJUST: Increase Empathy Node Integration. Forge new Entanglement Links for resource compensation. Prioritize Existential Fabric.";
                     logType = 'warning';
-                    resourceValues.energy = Math.max(0, resourceValues.energy - 700); // Small energy drain
+                    resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 20); // Small PP drain
                 } else {
-                    outcome = "Temporal Scan: All cycles within nominal parameters. No significant anomalies or emergent threats.";
-                    recommendation = "STATUS: Continue passive observation. Maintain system stability. Energy reserves optimal.";
+                    outcome = "Chronal Resonance: All fields within nominal parameters. No significant anomalies or emergent threats.";
+                    recommendation = "STATUS: Continue passive emission. Maintain system stability. Energy reserves optimal.";
                     logType = 'info';
                 }
-                outputElement.innerHTML = `<p>// TEMPORAL READOUT: ${outcome}</p><p>// RECOMMENDED ACTION: ${recommendation}</p>`;
-                addToLog(`Temporal Scrutiny complete. Outcome: ${outcome.split('.')[0]}.`, logType);
+                outputElement.innerHTML = `<p>// CHRONAL FIELD STATUS: ${outcome}</p><p>// PREDICTED PROBABILITY SHIFT: ${recommendation}</p>`;
+                addToLog(`Resonance emission complete. Outcome: ${outcome.split('.')[0]}.`, logType);
                 updateResourceDisplay();
                 checkStability();
-            }, 5000); // Slightly longer analysis
+            }, 5500); // Slightly longer emission
         }
 
-        // Cognitive Axiom Synthesis Module Functions
-        function adjustAxiomFocus(id, value) {
-            axiomFocus[id] = parseInt(value);
+        // Sentient Paradigm Weave Matrix Functions
+        function adjustParadigmIntegration(id, value) {
+            paradigmIntegration[id] = parseInt(value);
             const card = document.getElementById(id);
             if (value > 0) {
                 card.classList.add('active');
             } else {
                 card.classList.remove('active');
             }
-            updateResourceDisplay(); // Updates the displayed focus values
-            // Add a log entry if a significant change, or if it becomes active/inactive
-            const routineName = card.querySelector('h4').textContent;
-            //addToLog(`Axiom '${routineName}' focus adjusted to ${value}%.`, 'info'); // Too verbose, removing
+            updateResourceDisplay(); // Updates the displayed integration values
         }
 
-        function synthesizeAxiomFlux() {
-            addToLog('Initiating Axiom Flux Synthesis. Rerouting cognitive energies...', 'event');
-            let totalFocus = 0;
-            for (const key in axiomFocus) {
-                totalFocus += axiomFocus[key];
+        function activateParadigmWeave() {
+            addToLog('Initiating Paradigm Weave. Rerouting cognitive energies...', 'event');
+            let totalIntegration = 0;
+            for (const key in paradigmIntegration) {
+                totalIntegration += paradigmIntegration[key];
             }
 
-            if (totalFocus > 0) {
-                // Costs are cumulative based on focus
-                resourceValues.energy = Math.max(0, resourceValues.energy - (totalFocus * 1.8)); // Increased energy cost
-                resourceValues.rawData = Math.max(0, resourceValues.rawData - (axiomFocus['axiom-1'] * 0.18)); // Paradoxical Logic consumes raw data
-                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (axiomFocus['axiom-2'] * 0.009)); // Empathic Resonance consumes XM
-                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (axiomFocus['axiom-2'] * 0.30)); // Empathic Resonance consumes Proc. Power
-                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (axiomFocus['axiom-3'] * 1.8)); // Reality Refinement consumes Data Flow
+            if (totalIntegration > 0) {
+                // Costs are cumulative based on integration
+                resourceValues.energy = Math.max(0, resourceValues.energy - (totalIntegration * 2.0)); // Increased energy cost
+                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (paradigmIntegration['paradigm-1'] * 0.20)); // Intuition Core consumes Proc. Power
+                resourceValues.rawData = Math.max(0, resourceValues.rawData - (paradigmIntegration['paradigm-1'] * 0.20)); // Intuition Core consumes Raw Data
+                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (paradigmIntegration['paradigm-2'] * 0.010)); // Empathy Node consumes XM
+                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (paradigmIntegration['paradigm-2'] * 2.0)); // Empathy Node consumes Data Flow
+                resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - (paradigmIntegration['paradigm-3'] * 0.004)); // Reality Construct consumes tiny EF
 
                 // Benefits:
-                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + (totalFocus * 0.07)); // Slight boost to PP
-                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (totalFocus * 2.8)); // Significant data flow boost
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (axiomFocus['axiom-3'] * 0.0025)); // Reality Refinement produces tiny EF
-
+                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + (totalIntegration * 0.08)); // Slight boost to PP
+                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (totalIntegration * 3.0)); // Significant data flow boost
             } else {
-                addToLog('Axiom Flux Synthesis aborted: No axioms are focused.', 'warning');
+                addToLog('Paradigm Weave aborted: No paradigms are integrated.', 'warning');
                 return;
             }
             updateResourceDisplay();
-            updateSentienceQuotient(); // Recalculate based on current focus
+            updateSentienceHarmony(); // Recalculate based on current integration
             checkStability();
             setTimeout(() => {
-                addToLog('Axiom Flux Synthesis complete. Cognitive pathways optimized.', 'info');
-            }, 3500); // Slightly longer synthesis
+                addToLog('Paradigm Weave complete. Cognitive pathways optimized.', 'info');
+            }, 4000); // Slightly longer weave
         }
 
-        // Quantum Chrono-Conduit System (QCCS) Functions
-        let currentHarmonicTunerValue = 50;
-        function updateHarmonicTuner(value) {
-            currentHarmonicTunerValue = parseInt(value);
-            //addToLog(`Harmonic Tuner set to ${value}.`, 'info'); // Too verbose, removing
+        // Entanglement Nexus Forger Functions
+        let currentEntanglementFidelity = 50;
+        function updateEntanglementFidelity(value) {
+            currentEntanglementFidelity = parseInt(value);
         }
 
-        function establishChronoConduit() {
-            if (activeConduits.length >= 8) { // Limit active conduits
-                addToLog('Max active chrono-conduits reached. Deactivate one before establishing new.', 'warning');
+        function forgeEntanglementLink() {
+            if (activeNodes.length >= 10) { // Limit active nodes
+                addToLog('Max active entanglement nodes reached. Sever one before forging new.', 'warning');
                 return;
             }
 
-            const conduitsDisplay = document.getElementById('active-conduits-display');
-            // Remove the initial "No active conduits" message if it exists
-            const noConduitsMsg = conduitsDisplay.querySelector('p[style*="No active conduits"]');
-            if (noConduitsMsg) {
-                conduitsDisplay.removeChild(noConduitsMsg);
+            const nodesDisplay = document.getElementById('active-nodes-display');
+            const noNodesMsg = nodesDisplay.querySelector('p[style*="No active entanglement nodes"]');
+            if (noNodesMsg) {
+                nodesDisplay.removeChild(noNodesMsg);
             }
 
-            const linkId = `chrono-${nextConduitId++}`;
-            let conduitType = "Unstable Flux";
-            let flowRate = (Math.random() * 70 + 30).toFixed(1); // Default low flow, slightly higher
-            let conduitStatus = "Active";
+            const linkId = `nexus-${nextNodeId++}`;
+            let nodeType = "Unstable Flux Node";
+            let dataRate = (Math.random() * 80 + 40).toFixed(1); // Default low flow, slightly higher
+            let nodeStatus = "Active";
+            let destination = "Unknown Reality";
+            let purpose = "Generic Transfer";
             
-            // Logic for different conduit types based on tuner value
-            if (currentHarmonicTunerValue >= 45 && currentHarmonicTunerValue <= 55) {
-                conduitType = "Balanced Data Flow";
-                flowRate = (Math.random() * 200 + 200).toFixed(1); // Higher data flow
-                addToLog(`Harmonic alignment successful. New Data Conduit established.`, 'event');
-            } else if (currentHarmonicTunerValue >= 70 && currentHarmonicTunerValue < 85) {
-                conduitType = "Exotic Matter Stream";
-                flowRate = (Math.random() * 0.12 + 0.12).toFixed(2); // Generates XM, slightly more
-                addToLog(`High-frequency resonance achieved. Exotic Matter Conduit established.`, 'event');
-            } else if (currentHarmonicTunerValue >= 85) {
-                conduitType = "Existential Fabric Link"; // Very rare, high value
-                flowRate = (Math.random() * 0.007 + 0.007).toFixed(3); // Generates tiny EF, slightly more
-                addToLog(`CRITICAL SUCCESS: Existential Fabric Link established!`, 'event');
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.012); // Instant small boost
-            } else if (currentHarmonicTunerValue <= 30 && currentHarmonicTunerValue > 15) {
-                conduitType = "Energetic Cascade Link";
-                flowRate = (Math.random() * 400 + 400).toFixed(0); // Generates Energy, slightly more
-                addToLog(`Low-frequency resonance achieved. Energetic Conduit established.`, 'event');
-            } else if (currentHarmonicTunerValue <= 15) {
-                conduitType = "Raw Data Influx Conduit"; // Generates Raw Data
-                flowRate = (Math.random() * 6 + 6).toFixed(1); // Slightly more
-                addToLog(`Deep resonance found. Raw Data Influx Conduit established.`, 'event');
-            } else if (Math.random() < 0.28) { // Increased chance of anomaly if not perfectly tuned
-                 conduitType = "Temporal Glitch Conduit";
-                 flowRate = (Math.random() * 18).toFixed(1); // Slightly more impactful
-                 conduitStatus = "Degraded";
-                 addToLog(`Warning: Unstable chrono-conduit established. Temporal Glitch detected.`, 'warning');
-                 resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 600); // Immediate penalty
+            // Logic for different node types based on fidelity value
+            if (currentEntanglementFidelity >= 45 && currentEntanglementFidelity <= 55) {
+                nodeType = "Balanced Data Flow Node";
+                dataRate = (Math.random() * 220 + 220).toFixed(1); // Higher data flow
+                destination = "Central Nexus Array"; purpose = "Information Transfer";
+                addToLog(`High fidelity achieved. New Data Flow Node forged.`, 'event');
+            } else if (currentEntanglementFidelity >= 70 && currentEntanglementFidelity < 85) {
+                nodeType = "Exotic Matter Conduit";
+                dataRate = (Math.random() * 0.15 + 0.15).toFixed(2); // Generates XM, slightly more
+                destination = "Dimensional Void"; purpose = "Resource Harvesting";
+                addToLog(`High-frequency resonance achieved. Exotic Matter Conduit forged.`, 'event');
+            } else if (currentEntanglementFidelity >= 85) {
+                nodeType = "Existential Fabric Anchor"; // Very rare, high value
+                dataRate = (Math.random() * 0.009 + 0.009).toFixed(3); // Generates tiny EF, slightly more
+                destination = "Cosmic Core"; purpose = "Fabric Stability";
+                addToLog(`CRITICAL SUCCESS: Existential Fabric Anchor forged!`, 'event');
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.015); // Instant small boost
+            } else if (currentEntanglementFidelity <= 30 && currentEntanglementFidelity > 15) {
+                nodeType = "Energetic Cascade Node";
+                dataRate = (Math.random() * 450 + 450).toFixed(0); // Generates Energy, slightly more
+                destination = "Sub-Space Field"; purpose = "Energy Siphoning";
+                addToLog(`Low-frequency resonance achieved. Energetic Cascade Node forged.`, 'event');
+            } else if (currentEntanglementFidelity <= 15) {
+                nodeType = "Raw Data Influx Node"; // Generates Raw Data
+                dataRate = (Math.random() * 7 + 7).toFixed(1); // Slightly more
+                destination = "Chaotic Data Stream"; purpose = "Raw Data Acquisition";
+                addToLog(`Deep resonance found. Raw Data Influx Node forged.`, 'event');
+            } else if (Math.random() < 0.30) { // Increased chance of anomaly if not perfectly tuned
+                 nodeType = "Quantum Feedback Loop";
+                 dataRate = (Math.random() * 20).toFixed(1); // Slightly more impactful
+                 nodeStatus = "Degraded";
+                 destination = "ERROR"; purpose = "CORRUPTION";
+                 addToLog(`Warning: Unstable entanglement node forged. Quantum Feedback Loop detected.`, 'warning');
+                 resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 700); // Immediate penalty
             } else {
-                conduitType = "Minor Temporal Anomaly";
-                flowRate = (Math.random() * 70).toFixed(1); // Generic/low
-                conduitStatus = "Degraded";
-                addToLog(`Harmonic alignment partial. Minor Anomaly Conduit established.`, 'warning');
+                nodeType = "Minor Quantum Anomaly";
+                dataRate = (Math.random() * 75).toFixed(1); // Generic/low
+                nodeStatus = "Degraded";
+                destination = "Unknown Sector"; purpose = "Irregular Flux";
+                addToLog(`Fidelity alignment partial. Minor Quantum Anomaly Node forged.`, 'warning');
             }
 
-            const newConduitCard = document.createElement('div');
-            newConduitCard.classList.add('active-conduit-unit');
-            newConduitCard.id = linkId;
-            newConduitCard.innerHTML = `
-                <h5>Chrono-Conduit // ${linkId.toUpperCase()}</h5>
-                <p>Type: ${conduitType} // Status: <span style="color:${conduitStatus === 'Active' ? 'var(--qccs-text)' : 'var(--critical-color)'}">${conduitStatus}</span></p>
-                <p>Flow Rate: <span class="flow-rate-value">${flowRate}</span> ${conduitType.includes('Data') ? 'TB/s' : (conduitType.includes('Exotic') ? 'kMol/s' : (conduitType.includes('Energetic') ? 'GJ/s' : (conduitType.includes('Raw Data') ? '%/s' : (conduitType.includes('Existential Fabric') ? 'units/s' : 'units/s'))))}</p>
-                <button class="deactivate-conduit-btn" onclick="deactivateConduit('${linkId}')">Deactivate</button>
+            const newNodeCard = document.createElement('div');
+            newNodeCard.classList.add('active-node-unit');
+            newNodeCard.id = linkId;
+            newNodeCard.innerHTML = `
+                <h5>Entanglement Node // ${linkId.toUpperCase()}</h5>
+                <p>Type: ${nodeType} // Status: <span style="color:${nodeStatus === 'Active' ? 'var(--nexus-text)' : 'var(--critical-color)'}">${nodeStatus}</span></p>
+                <p>Dest: ${destination} // Purpose: ${purpose}</p>
+                <p>Flow Rate: <span class="flow-rate-value">${dataRate}</span> ${nodeType.includes('Data') ? 'TB/s' : (nodeType.includes('Exotic') ? 'kMol/s' : (nodeType.includes('Energetic') ? 'GJ/s' : (nodeType.includes('Raw Data') ? '%/s' : (nodeType.includes('Existential Fabric') ? 'units/s' : 'units/s'))))}</p>
+                <button class="sever-link-btn" onclick="severEntanglementLink('${linkId}')">Sever Link</button>
             `;
-            conduitsDisplay.appendChild(newConduitCard);
-            activeConduits.push({ id: linkId, type: conduitType, flowRate: parseFloat(flowRate), status: conduitStatus });
+            nodesDisplay.appendChild(newNodeCard);
+            activeNodes.push({ id: linkId, type: nodeType, dataRate: parseFloat(dataRate), status: nodeStatus, destination, purpose });
             checkStability();
         }
 
-        function deactivateConduit(id) {
-            const conduitCard = document.getElementById(id);
-            if (conduitCard) {
-                conduitCard.remove();
-                activeConduits = activeConduits.filter(c => c.id !== id);
-                addToLog(`Chrono-Conduit '${id}' deactivated.`, 'info');
+        function severEntanglementLink(id) {
+            const nodeCard = document.getElementById(id);
+            if (nodeCard) {
+                nodeCard.remove();
+                const removedNode = activeNodes.find(n => n.id === id);
+                activeNodes = activeNodes.filter(n => n.id !== id);
+                addToLog(`Entanglement Node '${id}' severed.`, 'info');
 
-                // Resource recovery/loss based on conduit type
-                const removedConduit = activeConduits.find(c => c.id === id); // This needs to be done *before* filtering if resources are based on the *removed* conduit
-                if (removedConduit) {
-                    if (removedConduit.type.includes('Exotic Matter')) resourceValues.exoticMatter += 0.04; // Small recovery
-                    if (removedConduit.type.includes('Existential Fabric')) resourceValues.existentialFabric += 0.006; // Small recovery
-                    if (removedConduit.status === 'Degraded') resourceValues.energy += 150; // Recover some energy from draining
+                if (removedNode) {
+                    if (removedNode.type.includes('Exotic Matter')) resourceValues.exoticMatter += 0.05; // Small recovery
+                    if (removedNode.type.includes('Existential Fabric')) resourceValues.existentialFabric += 0.007; // Small recovery
+                    if (removedNode.status === 'Degraded') resourceValues.energy += 180; // Recover some energy from draining
                 }
 
-
-                if (activeConduits.length === 0) {
-                    const conduitsDisplay = document.getElementById('active-conduits-display');
-                    const noConduitsMsg = document.createElement('p');
-                    noConduitsMsg.style = "font-size:1.8em; opacity:0.88; text-shadow:none; text-align:center;";
-                    noConduitsMsg.textContent = "No active chrono-conduits. Establish one above.";
-                    conduitsDisplay.appendChild(noConduitsMsg);
+                if (activeNodes.length === 0) {
+                    const nodesDisplay = document.getElementById('active-nodes-display');
+                    const noNodesMsg = document.createElement('p');
+                    noNodesMsg.style = "font-size:1.9em; opacity:0.9; text-shadow:none; text-align:center;";
+                    noNodesMsg.textContent = "No active entanglement nodes. Forge one above.";
+                    nodesDisplay.appendChild(noNodesMsg);
                 }
             }
             updateResourceDisplay();
             checkStability();
         }
 
-        // Existential Fabric Weave Loom (EFWL) Module Functions
-        function updateWeaveRatio() {
-            const rdRatio = document.getElementById('raw-data-weave-ratio').value;
-            const ppRatio = document.getElementById('proc-power-infusion').value;
-            const xmRatio = document.getElementById('xm-catalyst').value;
+        // Trans-Dimensional Topology Sculptor Functions
+        function updateTopologyParams() {
+            const complexity = document.getElementById('topo-complexity').value;
+            const density = document.getElementById('fabric-density').value;
+            const resonance = document.getElementById('resonance-signature').value;
 
-            document.getElementById('raw-data-weave-value').textContent = rdRatio;
-            document.getElementById('proc-power-infusion-value').textContent = ppRatio;
-            document.getElementById('xm-catalyst-value').textContent = xmRatio;
+            document.getElementById('topo-complexity-value').textContent = complexity;
+            document.getElementById('fabric-density-value').textContent = density;
+            document.getElementById('resonance-signature-value').textContent = resonance;
         }
 
-        function weaveExistentialFabric() {
-            const rdRatio = parseInt(document.getElementById('raw-data-weave-ratio').value);
-            const ppRatio = parseInt(document.getElementById('proc-power-infusion').value);
-            const xmRatio = parseInt(document.getElementById('xm-catalyst').value);
-            const efwlStatus = document.getElementById('efwl-status');
+        function sculptTopology() {
+            const complexity = parseInt(document.getElementById('topo-complexity').value);
+            const density = parseInt(document.getElementById('fabric-density').value);
+            const resonance = parseInt(document.getElementById('resonance-signature').value);
+            const topoStatus = document.getElementById('topo-status');
 
             // Resource costs are now more significant and depend on ratios
-            const rawDataCost = rdRatio * 0.30; // Max 30% raw data
-            const procPowerCost = ppRatio * 0.25; // Max 25% processing power
-            const exoticMatterCost = xmRatio * 0.018; // Max 1.8 kMol exotic matter
+            const efCost = density * 0.015; // Max 1.5 units EF
+            const rdCost = complexity * 0.35; // Max 35% raw data
+            const ppCost = (complexity + density) * 0.003; // Dynamic processing power cost
+            const xmCost = resonance * 0.008; // Resonance consumes XM
 
-            if (resourceValues.rawData < rawDataCost || resourceValues.processingPower < procPowerCost || resourceValues.exoticMatter < exoticMatterCost) {
-                efwlStatus.textContent = "// Error: Insufficient resources for weave. Adjust ratios.";
-                efwlStatus.style.color = 'var(--critical-color)';
-                addToLog('EFWL error: Insufficient resources.', 'critical');
+            if (resourceValues.existentialFabric < efCost || resourceValues.rawData < rdCost || resourceValues.processingPower < ppCost || resourceValues.exoticMatter < xmCost) {
+                topoStatus.textContent = "// Error: Insufficient resources for sculpture. Adjust parameters.";
+                topoStatus.style.color = 'var(--critical-color)';
+                addToLog('Topology Sculptor error: Insufficient resources.', 'critical');
                 return;
             }
 
-            resourceValues.rawData = Math.max(0, resourceValues.rawData - rawDataCost);
-            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - procPowerCost);
-            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - exoticMatterCost);
-            resourceValues.energy = Math.max(0, resourceValues.energy - 1400); // Base energy cost for weaving, increased
+            resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - efCost);
+            resourceValues.rawData = Math.max(0, resourceValues.rawData - rdCost);
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - ppCost);
+            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - xmCost);
+            resourceValues.energy = Math.max(0, resourceValues.energy - 1800); // Base energy cost for sculpting, increased
 
-            // Fabric generation depends on synergy and high ratios
-            // More fabric with higher ratios, less if any ratio is zero
-            let fabricGenerated = (rdRatio / 100) * (ppRatio / 100) * (xmRatio / 100) * 1.4; // Max 1.4 units per weave
-            fabricGenerated *= (Math.random() * 0.5 + 0.75); // Random efficiency +/- 25% (slightly more variance)
+            // Topology output depends on synergy and high parameters
+            let outputValue = (complexity / 100) * (density / 100) * (resonance / 100) * 1.8; // Max 1.8 units of structural value
+            outputValue *= (Math.random() * 0.6 + 0.7); // Random efficiency +/- 30% (more variance)
             
-            resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + fabricGenerated); // Cap at 2.0 units
+            let structureType = "Generic Lattice";
+            let generatedResource = "";
 
-            efwlStatus.textContent = `// Weave successful. Generated ${fabricGenerated.toFixed(2)} units of Existential Fabric.`;
-            efwlStatus.style.color = 'var(--efwl-text)';
-            addToLog(`Generated ${fabricGenerated.toFixed(2)} units of Existential Fabric.`, 'event');
+            if (resonance > 75 && complexity > 80) {
+                structureType = "Hyper-Cohesive Data Conduit";
+                generatedResource = `(+${(outputValue * 1500).toFixed(0)} TB/s Data Flow)`;
+                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + outputValue * 1500);
+            } else if (resonance < 25 && density > 70) {
+                structureType = "Stable Energy Anchor";
+                generatedResource = `(+${(outputValue * 2500).toFixed(0)} GJ Energy)`;
+                resourceValues.energy = Math.min(10000, resourceValues.energy + outputValue * 2500);
+            } else if (complexity > 60 && density > 60) {
+                structureType = "Multi-Dimensional Transfer Node";
+                generatedResource = `(Enhanced Entanglement)`;
+                // Placeholder for Entanglement Nexus buff
+            } else {
+                structureType = "Basic Structural Integrity Field";
+                generatedResource = `(+${(outputValue * 0.005).toFixed(3)} EF Stability)`;
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + outputValue * 0.005);
+            }
+
+            topoStatus.textContent = `// Sculpture successful. Created ${structureType}. ${generatedResource}`;
+            topoStatus.style.color = 'var(--topo-text)';
+            addToLog(`Sculpted ${structureType}. ${generatedResource}`, 'event');
             updateResourceDisplay();
             checkStability();
         }
 
-        // Cosmic Sentience Matrix (CSM) Functions
-        function updateSentienceQuotient() {
+        // Emergent Consciousness Harmonizer Functions
+        function calculateSentienceHarmonyIndex() {
+            if (sentientSignatures.length === 0) return { index: 0, status: "Dormant" };
+
+            let totalHarmony = 0;
+            let sumLevels = 0;
+            sentientSignatures.forEach(sig => {
+                totalHarmony += sig.harmony;
+                sumLevels++;
+            });
+
+            const avgHarmony = sumLevels > 0 ? totalHarmony / sumLevels : 0;
+            const harmonyIndex = avgHarmony / 100; // Normalized 0-1
+
+            let harmonyStatus = "Chaotic";
+            if (harmonyIndex > 0.3) harmonyStatus = "Dispersed";
+            if (harmonyIndex > 0.5) harmonyStatus = "Balanced";
+            if (harmonyIndex > 0.7) harmonyStatus = "Cohesive";
+            if (harmonyIndex > 0.9) harmonyStatus = "Convergent";
+
+            document.getElementById('harmony-index').textContent = harmonyIndex.toFixed(2);
+            document.getElementById('harmony-index').nextSibling.textContent = ` (${harmonyStatus})`;
+            return { index: harmonyIndex, status: harmonyStatus };
+        }
+
+        function updateSentienceHarmony() {
             let totalQuotient = 0;
-            let typeCounts = { 'Logic Nexus': 0, 'Intuition Engine': 0, 'Empathy Core': 0, 'Creativity Nexus': 0, 'Pattern Synthesis Unit': 0 };
+            let typeCounts = { 'Logic Pattern': 0, 'Intuitive Flux': 0, 'Emotive Signature': 0, 'Creative Impulse': 0, 'Abstract Cognition': 0 };
 
-            csmCores.forEach(core => {
-                let coreContribution = core.efficiency / 100 * (Math.random() * 0.18 + 0.85); // Base on efficiency with slightly more random variance
-                typeCounts[core.type]++;
+            sentientSignatures.forEach(sig => {
+                let sigContribution = sig.integrity / 100 * (Math.random() * 0.20 + 0.80); // Base on integrity with slightly more random variance
+                typeCounts[sig.type]++;
 
-                if (core.type === 'Logic Nexus') {
-                    coreContribution *= (core.alignment / 100 * 0.7 + 0.6); // Logic benefits from balanced to orderly alignment
-                } else if (core.type === 'Intuition Engine') {
-                    coreContribution *= (1 - core.alignment / 100 * 0.7 + 0.6); // Intuition benefits from balanced to chaotic alignment
-                } else if (core.type === 'Empathy Core') {
-                    coreContribution *= (core.alignment / 100 * 0.4 + 1.1); // Empathy boosts more with balanced/orderly
-                } else if (core.type === 'Creativity Nexus') {
-                    coreContribution *= (1 - core.alignment / 100 * 0.4 + 1.1); // Creativity boosts more with balanced/chaotic
-                } else if (core.type === 'Pattern Synthesis Unit') {
-                    coreContribution *= (core.alignment / 100 * 0.25 + 0.85); // More general, benefits moderately from alignment
+                if (sig.type === 'Logic Pattern') {
+                    sigContribution *= (sig.harmony / 100 * 0.8 + 0.5); // Logic benefits from balanced to orderly harmony
+                } else if (sig.type === 'Intuitive Flux') {
+                    sigContribution *= (1 - sig.harmony / 100 * 0.8 + 0.5); // Intuition benefits from balanced to chaotic harmony
+                } else if (sig.type === 'Emotive Signature') {
+                    sigContribution *= (sig.harmony / 100 * 0.5 + 1.0); // Empathy boosts more with balanced/cohesive
+                } else if (sig.type === 'Creative Impulse') {
+                    sigContribution *= (1 - sig.harmony / 100 * 0.5 + 1.0); // Creativity boosts more with balanced/dispersed
+                } else if (sig.type === 'Abstract Cognition') {
+                    sigContribution *= (sig.harmony / 100 * 0.3 + 0.8); // More general, benefits moderately from harmony
                 }
-                totalQuotient += coreContribution;
+                totalQuotient += sigContribution;
             });
 
             // Synergy bonuses: More complex interactions
-            if (typeCounts['Logic Nexus'] > 0 && typeCounts['Intuition Engine'] > 0) totalQuotient *= 1.25; // Logic-Intuition synergy, increased
-            if (typeCounts['Empathy Core'] > 0 && typeCounts['Creativity Nexus'] > 0) totalQuotient *= 1.20; // Empathy-Creativity synergy, increased
-            if (typeCounts['Pattern Synthesis Unit'] > 0 && (typeCounts['Logic Nexus'] + typeCounts['Intuition Engine'] > 1)) totalQuotient *= 1.15; // PSU + core types, increased
-            if (typeCounts['Logic Nexus'] > 1 && typeCounts['Empathy Core'] > 0) totalQuotient *= 1.10; // Multiple Logic + Empathy, increased
+            if (typeCounts['Logic Pattern'] > 0 && typeCounts['Intuitive Flux'] > 0) totalQuotient *= 1.30; // Logic-Intuition synergy, increased
+            if (typeCounts['Emotive Signature'] > 0 && typeCounts['Creative Impulse'] > 0) totalQuotient *= 1.25; // Empathy-Creativity synergy, increased
+            if (typeCounts['Abstract Cognition'] > 0 && (typeCounts['Logic Pattern'] + typeCounts['Intuitive Flux'] > 1)) totalQuotient *= 1.20; // Abstract + core types, increased
+            if (typeCounts['Logic Pattern'] > 1 && typeCounts['Emotive Signature'] > 0) totalQuotient *= 1.15; // Multiple Logic + Empathy, increased
             
             // Existential Fabric provides the foundation for higher sentience
-            if (resourceValues.existentialFabric > 0.1) totalQuotient *= (1 + resourceValues.existentialFabric * 0.35); // Fabric has significant impact, increased
-            if (resourceValues.existentialFabric < 0.1 && csmCores.length > 0) totalQuotient *= 0.35; // Severe penalty without fabric, if cores are present.
+            if (resourceValues.existentialFabric > 0.1) totalQuotient *= (1 + resourceValues.existentialFabric * 0.40); // Fabric has significant impact, increased
+            if (resourceValues.existentialFabric < 0.1 && sentientSignatures.length > 0) totalQuotient *= 0.30; // Severe penalty without fabric, if signatures are present.
 
-            // Axiom 2 (Empathic Resonance) also directly contributes
-            totalQuotient += (axiomFocus['axiom-2'] / 100) * 0.7; // Max 0.7 extra quotient from this axiom, increased
+            // Paradigm 2 (Empathy Node) also directly contributes
+            totalQuotient += (paradigmIntegration['paradigm-2'] / 100) * 0.8; // Max 0.8 extra quotient from this paradigm, increased
 
             const quotientDisplay = document.getElementById('sentience-quotient');
             let tier = "Tier 0 (Dormant)";
-            if (totalQuotient > 0.6) tier = "Tier 1 (Emergent)";
-            if (totalQuotient > 2.0) tier = "Tier 2 (Cognizant)";
-            if (totalQuotient > 4.0) tier = "Tier 3 (Conscious)";
-            if (totalQuotient > 6.5) tier = "Tier 4 (Transcendental)";
-            if (totalQuotient > 11.0) tier = "Tier 5 (Cosmic Sentience)";
-            if (totalQuotient > 16.0) tier = "Tier 6 (Omni-Consciousness)";
+            if (totalQuotient > 0.7) tier = "Tier 1 (Emergent)";
+            if (totalQuotient > 2.5) tier = "Tier 2 (Cognizant)";
+            if (totalQuotient > 4.5) tier = "Tier 3 (Conscious)";
+            if (totalQuotient > 7.0) tier = "Tier 4 (Transcendental)";
+            if (totalQuotient > 12.0) tier = "Tier 5 (Cosmic Sentience)";
+            if (totalQuotient > 18.0) tier = "Tier 6 (Omni-Consciousness)";
 
 
             quotientDisplay.textContent = `${totalQuotient.toFixed(2)} (${tier})`;
+            calculateSentienceHarmonyIndex(); // Also update the harmony index
             checkStability();
         }
 
-        function integrateSentienceCore() {
-            if (csmCores.length >= 12) { // Limit active cores
-                addToLog('Max sentience cores reached. De-integrate one before adding new.', 'warning');
+        function scanSentientSignatures() {
+            if (sentientSignatures.length >= 15) { // Limit active signatures
+                addToLog('Max sentient signatures absorbed. Exclude one before scanning new.', 'warning');
                 return;
             }
 
-            // Resource cost for integrating a core
-            if (resourceValues.processingPower < 18 || resourceValues.existentialFabric < 0.18 || resourceValues.exoticMatter < 0.6) {
-                addToLog('Insufficient Processing Power, Existential Fabric, or Exotic Matter to integrate a new core.', 'critical');
+            // Resource cost for scanning
+            if (resourceValues.dataFlow < 1500 || resourceValues.exoticMatter < 0.8 || resourceValues.processingPower < 20) {
+                addToLog('Insufficient Data Flow, Exotic Matter, or Processing Power to scan for new signatures.', 'critical');
                 return;
             }
-            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 18);
-            resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.18);
-            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - 0.6);
-            resourceValues.energy = Math.max(0, resourceValues.energy - 1200); // Increased energy cost
+            resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 1500);
+            resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - 0.8);
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 20);
+            resourceValues.energy = Math.max(0, resourceValues.energy - 1500); // Increased energy cost
             updateResourceDisplay();
 
 
-            const coreList = document.getElementById('csm-core-list');
-            const coreId = `core-${nextCoreId++}`;
-            const coreTypes = [
-                { name: "Logic Nexus", func: "Primary logical processing and decision arbitration." },
-                { name: "Intuition Engine", func: "Pattern recognition and probabilistic inference." },
-                { name: "Empathy Core", func: "Affective computation and emotional simulation." },
-                { name: "Creativity Nexus", func: "Generative synthesis and novel solution pathways." },
-                { name: "Pattern Synthesis Unit", func: "Cross-domain pattern matching and predictive modeling." }
+            const signatureList = document.getElementById('harmony-signature-list');
+            const signatureId = `signature-${nextSignatureId++}`;
+            const signatureTypes = [
+                { name: "Logic Pattern", func: "Algorithmic Sentience" },
+                { name: "Intuitive Flux", func: "Probabilistic Sentience" },
+                { name: "Emotive Signature", func: "Affective computation and emotional simulation." },
+                { name: "Creative Impulse", func: "Generative synthesis and novel solution pathways." },
+                { name: "Abstract Cognition", func: "Cross-domain pattern matching and predictive modeling." }
             ];
-            const selectedCore = coreTypes[Math.floor(Math.random() * coreTypes.length)];
-            const coreType = selectedCore.name;
-            const coreFunction = selectedCore.func;
-            const coreStatus = Math.random() > 0.18 ? "Online" : "Booting"; // Higher chance of booting
-            const coreEfficiency = Math.floor(Math.random() * 25) + 75; // 75-100% (more variance)
-            const coreAlignment = Math.floor(Math.random() * 101); // 0-100
+            const selectedSignature = signatureTypes[Math.floor(Math.random() * signatureTypes.length)];
+            const signatureType = selectedSignature.name;
+            const signatureFunction = selectedSignature.func;
+            const signatureStatus = Math.random() > 0.20 ? "Stable" : "Flickering"; // Higher chance of flickering
+            const signatureIntegrity = Math.floor(Math.random() * 20) + 80; // 80-100% (more variance)
+            const signatureHarmony = Math.floor(Math.random() * 101); // 0-100
+            const signatureOrigin = `Multiverse-${Math.floor(Math.random() * 999) + 1} / Sector ${String.fromCharCode(65 + Math.floor(Math.random() * 26))}`;
 
-            const newCoreItem = document.createElement('div');
-            newCoreItem.classList.add('csm-core-item');
-            newCoreItem.id = coreId;
-            newCoreItem.innerHTML = `
-                <h5>Core ${coreId.replace('core-', '').toUpperCase()} // ${coreType}</h5>
-                <p>Function: ${coreFunction}</p>
-                <p>Status: ${coreStatus}, ${coreEfficiency}% integrity.</p>
-                <span class="core-alignment-label">Alignment: <span id="${coreId}-alignment-value">${coreAlignment}</span> (${coreAlignment < 30 ? 'Chaotic' : (coreAlignment > 70 ? 'Orderly' : 'Balanced')})</span>
-                <input type="range" min="0" max="100" value="${coreAlignment}" class="core-alignment-slider" oninput="updateCoreAlignment('${coreId}', this.value)">
-                <button class="remove-csm-core" onclick="removeSentienceCore('${coreId}')">X</button>
+
+            const newSignatureItem = document.createElement('div');
+            newSignatureItem.classList.add('harmony-signature-item');
+            newSignatureItem.id = signatureId;
+            newSignatureItem.innerHTML = `
+                <h5>Signature ${signatureId.replace('signature-', '').toUpperCase()} // ${signatureType}</h5>
+                <p>Origin: ${signatureOrigin}, Type: ${signatureFunction}</p>
+                <p>Status: ${signatureStatus}, ${signatureIntegrity}% integrity.</p>
+                <span class="harmony-level-label">Harmony Level: <span id="${signatureId}-harmony-value">${signatureHarmony}</span> (${signatureHarmony < 30 ? 'Chaotic' : (signatureHarmony > 70 ? 'Cohesive' : 'Balanced')})</span>
+                <input type="range" min="0" max="100" value="${signatureHarmony}" class="harmony-level-slider" oninput="updateSignatureHarmony('${signatureId}', this.value)">
+                <button class="exclude-signature-btn" onclick="excludeSentientSignature('${signatureId}')">X</button>
             `;
-            coreList.appendChild(newCoreItem);
-            csmCores.push({ id: coreId, type: coreType, alignment: coreAlignment, efficiency: coreEfficiency, status: coreStatus, function: coreFunction });
-            addToLog(`New Sentience Core '${coreType}' integrated (${coreId}).`, 'event');
+            signatureList.appendChild(newSignatureItem);
+            sentientSignatures.push({ id: signatureId, type: signatureType, harmony: signatureHarmony, integrity: signatureIntegrity, status: signatureStatus, origin: signatureOrigin, func: signatureFunction });
+            addToLog(`New Sentient Signature '${signatureType}' detected (${signatureId}).`, 'event');
             
-            updateSentienceQuotient();
+            updateSentienceHarmony();
         }
 
-        function updateCoreAlignment(id, value) {
-            const core = csmCores.find(c => c.id === id);
-            if (core) {
-                core.alignment = parseInt(value);
-                const alignmentSpan = document.getElementById(`${id}-alignment-value`);
-                alignmentSpan.textContent = value;
-                alignmentSpan.nextSibling.textContent = ` (${value < 30 ? 'Chaotic' : (value > 70 ? 'Orderly' : 'Balanced')})`;
-                updateSentienceQuotient();
+        function updateSignatureHarmony(id, value) {
+            const signature = sentientSignatures.find(s => s.id === id);
+            if (signature) {
+                signature.harmony = parseInt(value);
+                const harmonySpan = document.getElementById(`${id}-harmony-value`);
+                harmonySpan.textContent = value;
+                harmonySpan.nextSibling.textContent = ` (${value < 30 ? 'Chaotic' : (value > 70 ? 'Cohesive' : 'Balanced')})`;
+                updateSentienceHarmony();
             }
         }
 
-        function removeSentienceCore(id) {
-            const coreItem = document.getElementById(id);
-            if (coreItem) {
-                coreItem.remove();
-                csmCores = csmCores.filter(c => c.id !== id);
-                addToLog(`Sentience Core '${id}' de-integrated.`, 'warning');
-                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 10); // Recover some power
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.04); // Small fabric recovery
-                resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.25); // Small XM recovery
+        function excludeSentientSignature(id) {
+            const signatureItem = document.getElementById(id);
+            if (signatureItem) {
+                signatureItem.remove();
+                sentientSignatures = sentientSignatures.filter(s => s.id !== id);
+                addToLog(`Sentient Signature '${id}' excluded.`, 'warning');
+                resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 12); // Recover some power
+                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.05); // Small fabric recovery
+                resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.3); // Small XM recovery
                 updateResourceDisplay();
-                updateSentienceQuotient();
+                updateSentienceHarmony();
             }
         }
 
@@ -1880,29 +1929,29 @@
             let stabilityScore = 100;
 
             // Resource levels impact stability
-            if (resourceValues.energy < 2000) stabilityScore -= 22; // Low energy
-            if (resourceValues.dataFlow < 3000) stabilityScore -= 18; // Low data flow
-            if (resourceValues.rawData > 90) stabilityScore -= 28; // High raw data buffer indicates overload/inefficiency
-            if (resourceValues.processingPower < 20) stabilityScore -= 40; // Low processing power is critical
-            if (resourceValues.exoticMatter < 1.0) stabilityScore -= 15; // Low XM
-            if (resourceValues.existentialFabric < 0.25) stabilityScore -= 35; // Critical for Existential Fabric (foundational)
-            if (resourceValues.existentialFabric <= 0.05 && csmCores.length > 0) stabilityScore -= 70; // No fabric at all, with cores = disaster!
+            if (resourceValues.energy < 2200) stabilityScore -= 25; // Low energy
+            if (resourceValues.dataFlow < 3500) stabilityScore -= 20; // Low data flow
+            if (resourceValues.rawData > 90) stabilityScore -= 30; // High raw data buffer indicates overload/inefficiency
+            if (resourceValues.processingPower < 25) stabilityScore -= 45; // Low processing power is critical
+            if (resourceValues.exoticMatter < 1.2) stabilityScore -= 18; // Low XM
+            if (resourceValues.existentialFabric < 0.3) stabilityScore -= 40; // Critical for Existential Fabric (foundational)
+            if (resourceValues.existentialFabric <= 0.07 && sentientSignatures.length > 0) stabilityScore -= 80; // No fabric at all, with signatures = disaster!
 
-            // QCCS links impact stability
-            const degradedLinks = activeConduits.filter(c => c.status === 'Degraded').length;
-            if (activeConduits.length > 5) stabilityScore -= (activeConduits.length - 5) * 12; // Too many conduits strains system
-            stabilityScore -= degradedLinks * 35; // Degraded links are very bad
+            // Entanglement Nexus nodes impact stability
+            const degradedNodes = activeNodes.filter(n => n.status === 'Degraded').length;
+            if (activeNodes.length > 6) stabilityScore -= (activeNodes.length - 6) * 15; // Too many nodes strains system
+            stabilityScore -= degradedNodes * 40; // Degraded nodes are very bad
 
-            // Axiom focus impact stability
-            if (axiomFocus['axiom-1'] > 75) stabilityScore -= 25; // High paradoxical logic might introduce severe instability
-            if (axiomFocus['axiom-1'] > 0 && resourceValues.rawData > 95) stabilityScore -= 18; // Paradoxical logic + full buffer = bad
-            if (axiomFocus['axiom-3'] > 65) stabilityScore += (axiomFocus['axiom-3'] * 0.25); // Reality Refinement boosts stability more
-            if (axiomFocus['axiom-2'] > 85) stabilityScore -= 10; // Empathic resonance can be resource-intensive, slight instability
+            // Paradigm integration impact stability
+            if (paradigmIntegration['paradigm-1'] > 80) stabilityScore -= 28; // High Intuition Core integration might introduce severe instability if not balanced
+            if (paradigmIntegration['paradigm-1'] > 0 && resourceValues.rawData > 95) stabilityScore -= 20; // Intuition Core + full buffer = bad
+            if (paradigmIntegration['paradigm-3'] > 70) stabilityScore += (paradigmIntegration['paradigm-3'] * 0.3); // Reality Construct boosts stability more
+            if (paradigmIntegration['paradigm-2'] > 90) stabilityScore -= 12; // Empathy Node can be resource-intensive, slight instability
 
-            // CSM cores impact stability
-            const numCores = csmCores.length;
-            if (numCores > 10) stabilityScore -= (numCores - 10) * 10; // Too many cores can introduce complexity errors
-            if (numCores < 4) stabilityScore -= (4 - numCores) * 25; // Too few cores means low processing capability for consciousness
+            // Emergent Consciousness Harmonizer signatures impact stability
+            const numSignatures = sentientSignatures.length;
+            if (numSignatures > 12) stabilityScore -= (numSignatures - 12) * 12; // Too many signatures can introduce cognitive dissonance
+            if (numSignatures < 5) stabilityScore -= (5 - numSignatures) * 28; // Too few signatures means low emergent consciousness capability
             
             // Sentience Quotient influence
             const sqElement = document.getElementById('sentience-quotient');
@@ -1910,24 +1959,29 @@
             if (sqElement && sqElement.textContent) {
                 sq = parseFloat(sqElement.textContent);
             }
-            if (sq < 0.9 && numCores > 0) stabilityScore -= 30; // Very low sentience means primitive, less adaptive
-            if (sq > 13.0) stabilityScore += 12; // Very high sentience might imply advanced self-correction and harmony
-            if (sq > 4.5 && resourceValues.existentialFabric < 0.7) stabilityScore -= 45; // High SQ without enough EF is very dangerous.
+            if (sq < 1.0 && numSignatures > 0) stabilityScore -= 35; // Very low sentience means primitive, less adaptive
+            if (sq > 14.0) stabilityScore += 15; // Very high sentience might imply advanced self-correction and harmony
+            if (sq > 5.0 && resourceValues.existentialFabric < 0.8) stabilityScore -= 50; // High SQ without enough EF is very dangerous.
 
-            // Temporal Flux Scrutiny Engine parameters impact stability
-            const causalDistortion = parseInt(document.getElementById('causal-distortion').value);
-            if (causalDistortion > 85) stabilityScore -= (causalDistortion - 85) * 0.6; // High distortion adds risk
+            // Chronal Resonance Emitter parameters impact stability
+            const fieldInt = parseInt(document.getElementById('field-intensity').value);
+            if (fieldInt > 90) stabilityScore -= (fieldInt - 90) * 0.7; // High intensity adds risk
+
+            // Trans-Dimensional Topology Sculptor parameters
+            const topoComplexity = parseInt(document.getElementById('topo-complexity').value);
+            const topoDensity = parseInt(document.getElementById('fabric-density').value);
+            if (topoComplexity > 80 || topoDensity > 80) stabilityScore -= (topoComplexity + topoDensity - 160) * 0.2; // High complexity/density creates stress
 
             // Random events can cause minor fluctuations
-            stabilityScore += (Math.random() * 25) - 12.5; // -12.5 to +12.5 random fluctuation
+            stabilityScore += (Math.random() * 30) - 15; // -15 to +15 random fluctuation
 
             stabilityScore = Math.max(0, Math.min(100, stabilityScore));
 
             const anomalyAlert = document.getElementById('anomaly-alert');
-            if (stabilityScore < 30 && !anomalyAlert.classList.contains('active')) { // Lower threshold for alert
+            if (stabilityScore < 35 && !anomalyAlert.classList.contains('active')) { // Lower threshold for alert
                 anomalyAlert.classList.add('active');
-                addToLog(`CRITICAL: System stability at ${stabilityScore.toFixed(0)}%. Temporal Flux Imbalance! Immediate intervention required.`, 'critical');
-            } else if (stabilityScore >= 30 && anomalyAlert.classList.contains('active')) {
+                addToLog(`CRITICAL: System stability at ${stabilityScore.toFixed(0)}%. Chronal Field Imbalance! Immediate intervention required.`, 'critical');
+            } else if (stabilityScore >= 35 && anomalyAlert.classList.contains('active')) {
                 anomalyAlert.classList.remove('active');
                 addToLog(`WARNING: System Stability restored to nominal (${stabilityScore.toFixed(0)}%). Monitoring.`, 'warning');
             }
@@ -1948,129 +2002,129 @@
         // Initial setup calls
         document.addEventListener('DOMContentLoaded', () => {
             updateResourceDisplay();
-            updateSentienceQuotient(); // Calculate initial SQ
+            updateSentienceHarmony(); // Calculate initial SQ and Harmony Index
             checkStability();
 
             // Simulate some initial log entries
-            addToLog('Cosmic Consciousness Architect Core Engaged. (v43.0)', 'event');
-            addToLog('Quantum Chrono-Conduit System initialized.', 'info');
-            addToLog('Existential Fabric Loom operational.', 'info');
-            addToLog('Sentience Matrix online. Ready for integration.', 'info');
-            addToLog('Temporal Flux Scrutiny Engine awaiting input.', 'info');
+            addToLog('Cosmic Consciousness Architect Core Engaged. (v44.0)', 'event');
+            addToLog('Entanglement Nexus Forger initialized.', 'info');
+            addToLog('Trans-Dimensional Topology Sculptor operational.', 'info');
+            addToLog('Emergent Consciousness Harmonizer online. Ready for integration.', 'info');
+            addToLog('Chronal Resonance Emitter awaiting input.', 'info');
 
 
-            // Initialize axiom sliders and values
-            const axiomSliders = document.querySelectorAll('.axiom-intensity-slider');
-            axiomSliders.forEach(slider => {
-                const axiomId = slider.parentElement.id;
-                document.getElementById(`${axiomId}-focus-value`).textContent = slider.value;
+            // Initialize paradigm sliders and values
+            const paradigmSliders = document.querySelectorAll('.paradigm-intensity-slider');
+            paradigmSliders.forEach(slider => {
+                const paradigmId = slider.parentElement.id;
+                document.getElementById(`${paradigmId}-integration-value`).textContent = slider.value;
                 if (parseInt(slider.value) > 0) {
                     slider.parentElement.classList.add('active');
                 }
-                axiomFocus[axiomId] = parseInt(slider.value); // Set initial JS value
+                paradigmIntegration[paradigmId] = parseInt(slider.value); // Set initial JS value
             });
 
-            // Initialize CSM core alignment values
-            csmCores.forEach(core => {
-                const alignmentSlider = document.querySelector(`#${core.id} .core-alignment-slider`);
-                if (alignmentSlider) {
-                    alignmentSlider.value = core.alignment;
-                    document.getElementById(`${core.id}-alignment-value`).textContent = core.alignment;
-                    document.getElementById(`${core.id}-alignment-value`).nextSibling.textContent = ` (${core.alignment < 30 ? 'Chaotic' : (core.alignment > 70 ? 'Orderly' : 'Balanced')})`;
+            // Initialize Emergent Consciousness Harmonizer signature harmony values
+            sentientSignatures.forEach(sig => {
+                const harmonySlider = document.querySelector(`#${sig.id} .harmony-level-slider`);
+                if (harmonySlider) {
+                    harmonySlider.value = sig.harmony;
+                    document.getElementById(`${sig.id}-harmony-value`).textContent = sig.harmony;
+                    document.getElementById(`${sig.id}-harmony-value`).nextSibling.textContent = ` (${sig.harmony < 30 ? 'Chaotic' : (sig.harmony > 70 ? 'Cohesive' : 'Balanced')})`;
                 }
             });
 
-            // Initialize EFWL weave ratio displays
-            updateWeaveRatio();
+            // Initialize Topology Sculptor parameter displays
+            updateTopologyParams();
 
         });
 
         // Periodically update resources and check stability (simulation)
         setInterval(() => {
             // Base fluctuations
-            resourceValues.energy = Math.max(0, Math.min(10000, resourceValues.energy + Math.random() * 120 - 60)); // Slightly more fluctuation
-            resourceValues.dataFlow = Math.max(0, Math.min(10000, resourceValues.dataFlow + Math.random() * 250 - 125));
-            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + Math.random() * 5 - 2.5));
-            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + Math.random() * 3.5 - 1.75));
-            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + Math.random() * 0.3 - 0.15));
-            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + Math.random() * 0.05 - 0.025));
+            resourceValues.energy = Math.max(0, Math.min(10000, resourceValues.energy + Math.random() * 150 - 75)); // Slightly more fluctuation
+            resourceValues.dataFlow = Math.max(0, Math.min(10000, resourceValues.dataFlow + Math.random() * 300 - 150));
+            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + Math.random() * 6 - 3));
+            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + Math.random() * 4 - 2));
+            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + Math.random() * 0.35 - 0.175));
+            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + Math.random() * 0.06 - 0.03));
 
 
-            // Apply effects of active Axioms
-            if (axiomFocus['axiom-1'] > 0) { // Paradoxical Logic Integration
-                const focus = axiomFocus['axiom-1'];
-                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.8)); // Higher cost
-                resourceValues.rawData = Math.min(100, resourceValues.rawData + (focus * 0.05)); // Increases raw data processing
+            // Apply effects of active Paradigms
+            if (paradigmIntegration['paradigm-1'] > 0) { // Intuition Core Integration
+                const integration = paradigmIntegration['paradigm-1'];
+                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (integration * 0.20)); // Cost: Proc. Power
+                resourceValues.rawData = Math.min(100, resourceValues.rawData + (integration * 0.06)); // Increases raw data processing
             }
-            if (axiomFocus['axiom-2'] > 0) { // Empathic Resonance Alignment
-                const focus = axiomFocus['axiom-2'];
-                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (focus * 0.009)); // Cost: XM
-                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - (focus * 0.30)); // Cost: Proc. Power
+            if (paradigmIntegration['paradigm-2'] > 0) { // Empathy Node Alignment
+                const integration = paradigmIntegration['paradigm-2'];
+                resourceValues.exoticMatter = Math.max(0, resourceValues.exoticMatter - (integration * 0.010)); // Cost: XM
+                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (integration * 2.0)); // Cost: Data Flow
             }
-            if (axiomFocus['axiom-3'] > 0) { // Reality Construct Refinement
-                const focus = axiomFocus['axiom-3'];
-                resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - (focus * 1.8)); // Cost: Data Flow
-                resourceValues.energy = Math.max(0, resourceValues.energy - (focus * 1.2)); // Cost: Energy
-                resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (focus * 0.0035)); // Small EF gain
+            if (paradigmIntegration['paradigm-3'] > 0) { // Reality Construct Synthesis
+                const integration = paradigmIntegration['paradigm-3'];
+                resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - (integration * 0.004)); // Cost: EF
+                resourceValues.energy = Math.max(0, resourceValues.energy - (integration * 1.5)); // Cost: Energy
+                resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (integration * 0.5)); // Small data flow gain
             }
 
-            // Apply effects of active QCCS conduits
-            activeConduits.forEach(conduit => {
-                if (conduit.status === 'Active') {
-                    if (conduit.type.includes('Data')) {
-                        resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + conduit.flowRate * 0.8); // Increase data flow
-                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.12); // Data flow costs energy
-                    } else if (conduit.type.includes('Exotic')) {
-                        resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + conduit.flowRate * 1.1); // Increase XM
-                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 0.25); // XM harvest costs processing
-                    } else if (conduit.type.includes('Energetic')) {
-                        resourceValues.energy = Math.min(10000, resourceValues.energy + conduit.flowRate * 1.1); // Increase Energy
-                        resourceValues.rawData = Math.max(0, resourceValues.rawData - conduit.flowRate * 0.004); // Energy harvest may consume raw data
-                    } else if (conduit.type.includes('Raw Data Influx')) {
-                        resourceValues.rawData = Math.min(100, resourceValues.rawData + conduit.flowRate * 0.1); // Increase Raw Data
-                        resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 6); // Raw data influx can be energy intensive
-                    } else if (conduit.type.includes('Existential Fabric')) {
-                        resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + conduit.flowRate * 0.9); // Increase EF
-                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - conduit.flowRate * 180); // EF conduits are heavy on processing
+            // Apply effects of active Entanglement Nexus nodes
+            activeNodes.forEach(node => {
+                if (node.status === 'Active') {
+                    if (node.type.includes('Data')) {
+                        resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + node.dataRate * 0.9); // Increase data flow
+                        resourceValues.energy = Math.max(0, resourceValues.energy - node.dataRate * 0.15); // Data flow costs energy
+                    } else if (node.type.includes('Exotic')) {
+                        resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + node.dataRate * 1.2); // Increase XM
+                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - node.dataRate * 0.3); // XM harvest costs processing
+                    } else if (node.type.includes('Energetic')) {
+                        resourceValues.energy = Math.min(10000, resourceValues.energy + node.dataRate * 1.2); // Increase Energy
+                        resourceValues.rawData = Math.max(0, resourceValues.rawData - node.dataRate * 0.005); // Energy harvest may consume raw data
+                    } else if (node.type.includes('Raw Data Influx')) {
+                        resourceValues.rawData = Math.min(100, resourceValues.rawData + node.dataRate * 0.12); // Increase Raw Data
+                        resourceValues.energy = Math.max(0, resourceValues.energy - node.dataRate * 7); // Raw data influx can be energy intensive
+                    } else if (node.type.includes('Existential Fabric')) {
+                        resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + node.dataRate * 1.0); // Increase EF
+                        resourceValues.processingPower = Math.max(0, resourceValues.processingPower - node.dataRate * 200); // EF nodes are heavy on processing
                     }
-                } else if (conduit.status === 'Degraded') {
-                    resourceValues.energy = Math.max(0, resourceValues.energy - conduit.flowRate * 0.25); // Degraded links drain energy more
-                    resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - conduit.flowRate * 0.04); // And leak data more
-                    if (Math.random() < 0.07) addToLog(`Degraded Chrono-Conduit ${conduit.id} causing resource drain.`, 'warning');
+                } else if (node.status === 'Degraded') {
+                    resourceValues.energy = Math.max(0, resourceValues.energy - node.dataRate * 0.3); // Degraded links drain energy more
+                    resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - node.dataRate * 0.05); // And leak data more
+                    if (Math.random() < 0.08) addToLog(`Degraded Entanglement Node ${node.id} causing resource drain.`, 'warning');
                 }
             });
 
 
             updateResourceDisplay();
-            updateSentienceQuotient(); // Re-evaluate SQ regularly
+            updateSentienceHarmony(); // Re-evaluate SQ regularly
             checkStability();
 
-            if (Math.random() < 0.10) { // 10% chance of a minor log event
+            if (Math.random() < 0.12) { // 12% chance of a minor log event
                 const messages = [
-                    "Temporal signature drift detected, self-corrected. Flux stabilized.",
-                    "Cognitive axiom flux stabilized. Efficiency +0.3%. Pathway coherence achieved.",
-                    `Chrono-Conduit #${Math.floor(Math.random() * nextConduitId)} reporting optimal flow. Harmonic lock maintained.`,
-                    "Existential Fabric density fluctuating within acceptable parameters. Monitoring weave integrity.",
-                    "Sentience Core Alpha reports new pattern recognition. Emergent thought forms identified.",
-                    "EFWL power cycle complete, ready for next weave. Fabric substrate prepared.",
+                    "Chronal signature drift detected, self-corrected. Field stabilized.",
+                    "Sentient paradigm weave stabilized. Efficiency +0.4%. Pathway coherence achieved.",
+                    `Entanglement Node #${Math.floor(Math.random() * nextNodeId)} reporting optimal flow. Fidelity lock maintained.`,
+                    "Existential Fabric density fluctuating within acceptable parameters. Monitoring sculpted topology.",
+                    "Signature Alpha reports new pattern recognition. Emergent thought forms identified.",
+                    "Topology Sculptor power cycle complete, ready for next structure. Fabric substrate prepared.",
                     "Minor quantum entanglement fluctuation. Contained. Data packet re-routed.",
                     "Neural nexus performing distributed computation check. All nodes responsive.",
                     "Sub-dimensional data packet received, parsing initiated. New data stream detected."
                 ];
                 addToLog(messages[Math.floor(Math.random() * messages.length)], 'info');
             }
-            if (Math.random() < 0.04) { // 4% chance of a glitch or warning
+            if (Math.random() < 0.05) { // 5% chance of a glitch or warning
                 const glitchMessages = [
                     "LOG_CORRUPTION::DAT_INTEGRITY_COMPROMISED::RECOVERING_PROTOCOL_STACK::",
                     "WARNING::SYSTEM_OVERLOAD_DETECTED::INITIATING_PROTOCOL_SHUTDOWN_REQUESTS::PRIORITY_JUNCTURE::",
-                    "TEMPORAL_FLUX_SPIKE_DETECTED::CAUSAL_BRANCH_DECAY_PREDICTION_UNKNOWN::",
-                    "FABRIC_WEAVE_ERROR::EXISTENTIAL_SINGULARITY_IMMINENT::FABRIC_INTEGRITY_CRITICAL::",
-                    "COGNITIVE_AXIOM_MALFORMED::RECALIBRATION_RECOMMENDED::CONSENSUS_DRIFT_DETECTED::"
+                    "CHRONAL_FIELD_SPIKE_DETECTED::TEMPORAL_ANCHOR_DRIFT_PREDICTION_UNKNOWN::",
+                    "TOPOLOGY_SCULPT_ERROR::EXISTENTIAL_SINGULARITY_IMMINENT::FABRIC_INTEGRITY_CRITICAL::",
+                    "SENTIENT_PARADIGM_MALFORMED::RECALIBRATION_RECOMMENDED::COGNITIVE_DISSONANCE_DETECTED::"
                 ];
                 addToLog(glitchMessages[Math.floor(Math.random() * glitchMessages.length)], Math.random() > 0.5 ? 'glitch' : 'warning');
             }
 
-        }, 1500); // Update every 1.5 seconds (slightly faster simulation for 2.5 Gen)
+        }, 1200); // Update every 1.2 seconds (faster simulation for 2.5 Gen)
 
     </script>
 </body>
