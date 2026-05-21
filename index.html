@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v46.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v47.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Enhanced for 2.5 Gen / v46.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v47.0) */
             --primary-glow: rgba(90, 255, 255, 0.9999); /* Brighter Electric Cyan-blue glow, more intense */
             --secondary-glow: rgba(255, 120, 250, 0.999); /* Lighter Magenta glow, more ethereal */
             --tertiary-glow: rgba(80, 255, 120, 0.9999); /* Glowing Green, even sharper */
@@ -25,17 +25,16 @@
             --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
-            /* Data Stream & Protocol Status (Now Cognitive Stream) */
-            --cognitive-stream-bg: rgba(0, 10, 20, 0.9999); /* Deep ocean blue, almost black */
-            --cognitive-stream-text: #33FFFF; /* Pure Cyan for data, slightly muted */
-            --network-status-bg: rgba(0, 15, 30, 0.99999); /* Darker, more opaque blue */
-            --network-status-glow: rgba(0, 200, 255, 0.99999); /* Stronger, electric blue glow */
+            /* Cognitive Stream & Network Status (Now Core Systems Overseer) */
+            --overseer-bg: rgba(0, 10, 20, 0.9999); /* Deep ocean blue, almost black */
+            --overseer-text: #33FFFF; /* Pure Cyan for data, slightly muted */
+            --overseer-border: rgba(0, 200, 255, 0.99999); /* Stronger, electric blue glow */
 
-            /* Resource & Module Selection (Re-purposed for Resource Displays) */
-            --module-selection-bg: rgba(10, 0, 20, 0.9999); /* Darker, deeper purple-ish */
-            --module-selection-border: rgba(160, 0, 255, 0.99); /* Stronger purple accent, slightly redder */
-            --module-selection-text: #FFEDFF; /* Lighter purple */
-            --resource-bg: rgba(0, 0, 0, 0.9999); /* Near black background for resource bars */
+            /* Resource Display */
+            --resource-panel-bg: rgba(10, 0, 20, 0.9999); /* Darker, deeper purple-ish */
+            --resource-panel-border: rgba(160, 0, 255, 0.99); /* Stronger purple accent, slightly redder */
+            --resource-panel-text: #FFEDFF; /* Lighter purple */
+            --resource-bar-bg: rgba(0, 0, 0, 0.9999); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFFD0 0%, #FFD000 100%); /* Brighter yellow */
@@ -46,42 +45,57 @@
             --data-flow-color-medium: linear-gradient(90deg, #33FFFF 0%, #00A0FF 100%);
             --data-flow-color-low: linear-gradient(90deg, #FF6040 0%, #D02000 100%); /* More intense red */
             
-            /* Gen 46.0 Colors (Updated from 45.0) */
-            --signal-array-bg: rgba(0, 10, 20, 0.9999); /* Deeper blue-grey */
-            --signal-array-border: rgba(0, 200, 255, 0.99); /* Stronger electric blue accent */
-            --signal-array-text: #B0F5FF; /* Lighter, more vibrant powder blue */
-            --formulate-btn-glow: rgba(255, 40, 150, 0.9999); /* Hotter Deep Pink for Architect button */
-
-            /* Gen 46.0 resource: Raw Data */
             --raw-data-color-high: linear-gradient(90deg, #FFB0E0 0%, #FF70A0 100%); /* Warmer, deeper pink */
             --raw-data-color-medium: linear-gradient(90deg, #FFD000 0%, #FF9000 100%);
             --raw-data-color-low: linear-gradient(90deg, #A0B0B0 0%, #607070 100%); /* Desaturated grey */
             --raw-data-text: #FFB0E0;
 
-            /* Gen 46.0 resource: Processing Power */
             --processing-power-color-high: linear-gradient(90deg, #F0A0FF 0%, #B060FF 100%); /* Brighter Orchid to Purple */
             --processing-power-color-medium: linear-gradient(90deg, #E0A0E0 0%, #A040D0 100%);
             --processing-power-color-low: linear-gradient(90deg, #6000A0 0%, #303090 100%); /* Darker, more intense purple */
             --processing-power-text: #F0A0FF;
 
-            /* Gen 46.0 NEW: Exotic Matter (XM) */
             --exotic-matter-color-high: linear-gradient(90deg, #B0FFD0 0%, #60E060 100%); /* Brighter Mint Green to Lime Green */
             --exotic-matter-color-medium: linear-gradient(90deg, #B0E5A0 0%, #C0F050 100%); /* PaleGreen to GreenYellow */
             --exotic-matter-color-low: linear-gradient(90deg, #FFC000 0%, #FF9000 100%); /* Gold to Orange */
             --exotic-matter-text: #B0FFD0; /* Mint Green */
 
-            /* Gen 46.0 NEW: Existential Fabric (EF) */
             --existential-fabric-color-high: linear-gradient(90deg, #D0B0E0 0%, #9040E0 100%); /* Soft Purple to Blue Violet, slightly more saturated */
             --existential-fabric-color-medium: linear-gradient(90deg, #E0A0E0 0%, #A040C0 100%); /* Plum to Dark Orchid */
             --existential-fabric-color-low: linear-gradient(90deg, #900090 0%, #500085 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
+            /* Gen 47.0 NEW: Reality Anchor Matrix */
+            --anchor-bg: rgba(0, 15, 25, 0.9999); /* Deep blue-purple */
+            --anchor-border: rgba(100, 180, 255, 0.99); /* Sky blue */
+            --anchor-text: #C0E0FF; /* Light blue */
+            --anchor-btn-glow: rgba(100, 180, 255, 0.99);
+            --anchor-slider-thumb: rgba(100, 180, 255, 0.99);
+            --anchor-slider-track: rgba(5, 10, 15, 0.99);
 
-            /* Gen 46.0 button: Calibrate Dimensional Link */
-            --calibrate-btn-glow: rgba(110, 90, 210, 0.9999); /* Deeper Slate Blue Glow */
-            --tune-btn-glow: rgba(20, 220, 60, 0.9999);
+            /* Gen 47.0 NEW: Sentient Data Stream Assembler */
+            --assembler-bg: rgba(20, 0, 15, 0.9999); /* Deep purple-red */
+            --assembler-border: rgba(255, 100, 200, 0.99); /* Hot pink */
+            --assembler-text: #FFE0F0; /* Pale pink */
+            --assembler-btn-glow: rgba(255, 100, 200, 0.99);
+            --assembler-card-bg: rgba(0, 0, 0, 0.95);
+            --assembler-card-border: rgba(255, 100, 200, 0.7);
+            --assembler-chamber-bg: rgba(0, 0, 0, 0.999);
+            --assembler-chamber-border: rgba(255, 100, 200, 0.8);
+            --assembler-output-bg: rgba(0, 0, 0, 0.99);
+            --assembler-output-text: #B0FFFF;
 
-            /* Gen 46.0 - Enhanced UI elements */
+            /* Gen 47.0 NEW: Quantum Entanglement Conduit Manager */
+            --conduit-bg: rgba(20, 20, 0, 0.9999); /* Deep gold-green */
+            --conduit-border: rgba(255, 255, 100, 0.99); /* Bright yellow */
+            --conduit-text: #FFFFB0; /* Light yellow */
+            --conduit-btn-glow: rgba(255, 255, 100, 0.99);
+            --conduit-map-bg: rgba(0, 0, 0, 0.999);
+            --conduit-active-line: rgba(255, 255, 100, 0.99);
+            --conduit-inactive-line: rgba(80, 80, 0, 0.7);
+            --conduit-node-glow: rgba(255, 255, 100, 0.99);
+
+            /* Gen 47.0 - Enhanced UI elements */
             --event-color: #FFA020; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 50px rgba(255, 160, 32, 1.0); /* Even stronger shadow */
             --info-color: #A080D0; /* Lighter Medium Purple */
@@ -89,49 +103,10 @@
             --log-glitch-color: #FF33FF;
             --header-underline-color: linear-gradient(90deg, transparent 2%, var(--accent-color) 50%, transparent 98%); /* Wider, more transparent edges */
             
-            /* Gen 46.0 NEW: Activate Paradigm Weave button (for Sentient Paradigm Weave Matrix) */
-            --weave-btn-glow: rgba(255, 255, 50, 0.9999); /* Brighter Yellow glow for weave */
-
-            /* Gen 46.0 NEW: Anomaly Alert */
+            /* Anomaly Alert (same, but more intense) */
             --anomaly-color: #FF2222; /* Pure Red for critical */
             --anomaly-bg: rgba(255, 0, 0, 0.18); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 0.99); /* Opaque Red */
-
-            /* Gen 46.0 NEW: Chronal Resonance Emitter */
-            --chrono-bg: rgba(0, 25, 15, 0.9999); /* Deeper Green-Blue */
-            --chrono-border: rgba(50, 255, 150, 0.99); /* Brighter Spring Green */
-            --chrono-text: #B0FFC0; /* Lighter Mint Green */
-            --chrono-btn-glow: rgba(50, 255, 150, 0.99);
-
-            /* Gen 46.0 NEW: Sentient Paradigm Weave Matrix */
-            --paradigm-bg: rgba(25, 15, 0, 0.9999); /* Deeper Orange-Brown */
-            --paradigm-border: rgba(255, 170, 50, 0.99); /* Brighter Orange */
-            --paradigm-text: #FFE0A0; /* Brighter Gold */
-            --paradigm-slider-active: rgba(255, 170, 50, 0.99);
-            --paradigm-slider-inactive: rgba(110, 70, 0, 0.9);
-            --paradigm-slider-thumb-glow: rgba(255, 170, 50, 0.98);
-
-            /* Gen 46.0 NEW: Entanglement Nexus Forger */
-            --nexus-bg: rgba(10, 0, 25, 0.9999); /* Deeper Purple */
-            --nexus-border: rgba(200, 30, 220, 0.98); /* More vibrant Magenta-Purple */
-            --nexus-text: #FFC0FF; /* Lighter Magenta */
-            --nexus-btn-glow: rgba(200, 30, 220, 0.99);
-            --nexus-card-active-border: rgba(220, 30, 220, 0.99);
-            --nexus-card-active-shadow: rgba(220, 30, 220, 0.98);
-
-            /* Gen 46.0 NEW: Trans-Dimensional Topology Sculptor */
-            --topo-bg: rgba(25, 15, 0, 0.9999); /* Deeper Gold-Brown, slightly more opaque */
-            --topo-border: rgba(255, 210, 50, 0.99); /* Brighter Gold-Orange */
-            --topo-text: #FFFF90; /* Bright Yellowish Gold */
-            --topo-btn-glow: rgba(255, 210, 50, 0.99);
-
-            /* Gen 46.0 NEW: Emergent Consciousness Harmonizer */
-            --harmony-bg: rgba(0, 25, 25, 0.9999); /* Deeper Teal */
-            --harmony-border: rgba(50, 255, 255, 0.98); /* Brighter Cyan */
-            --harmony-text: #80FFFF; /* Lighter Cyan */
-            --harmony-component-bg: rgba(0, 0, 0, 0.95);
-            --harmony-component-border: rgba(50, 255, 255, 0.9);
-            --harmony-sentience-color: linear-gradient(90deg, #80FFFF 0%, #FFC0FF 50%, #D0B0E0 100%); /* Cyan -> Magenta -> Purple */
         }
 
         body {
@@ -145,49 +120,32 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 24px; /* Even larger base font */
-            line-height: 1.9;
+            font-size: 26px; /* Even larger base font */
+            line-height: 2.0;
             /* Updated Cursor: Larger, more intricate, pulsing */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="7" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="4" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.85); opacity: 0.6;} 50% {transform: scale(1.2); opacity: 1;} 100% {transform: scale(0.85); opacity: 0.6;}} .pulsing-circle {animation: pulse 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:pulse 2.2s infinite ease-out reverse;}</style></defs><path fill="%2355FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2355FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="6" fill="%23FF33FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2355FFFF" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z" filter="url(%23f1)"/><circle cx="12" cy="12" r="3" fill="%23FFFF55" filter="url(%23f2)" class="pulsing-circle"/></svg>') 100 100, auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="8" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.8); opacity: 0.5;} 50% {transform: scale(1.3); opacity: 1;} 100% {transform: scale(0.8); opacity: 0.5;}} .pulsing-circle {animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:pulse 2.5s infinite ease-out reverse;}</style></defs><path fill="%2355FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2355FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="6" fill="%23FF33FF" filter="url(%23f2)" class="pulsing-circle"/><path fill="%2355FFFF" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z" filter="url(%23f1)"/><circle cx="12" cy="12" r="3" fill="%23FFFF55" filter="url(%23f2)" class="pulsing-circle"/></svg>') 125 125, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: absolute;
-            top: -7000%; /* Even larger coverage */
-            left: -7000%;
-            width: 14100%;
-            height: 14100%;
+            top: -10000%; /* Even larger coverage */
+            left: -10000%;
+            width: 20100%;
+            height: 20100%;
             background: linear-gradient(
-                135deg, /* New angle */
-                #000000 0%,
-                #000005 5%,
-                #000010 10%,
-                #000015 15%,
-                #000020 20%,
-                #000015 25%,
-                #000010 30%,
-                #000005 35%,
-                #000000 40%,
-                #050000 45%, /* Red shift */
-                #100000 50%,
-                #150000 55%,
-                #200000 60%,
-                #150000 65%,
-                #100000 70%,
-                #050000 75%,
-                #000000 80%,
-                #000500 85%, /* Green shift */
-                #001000 90%,
-                #000500 95%,
-                #000000 100%
+                145deg, /* New angle */
+                #000000 0%, #000003 3%, #000008 6%, #000012 9%, #000018 12%, #000012 15%, #000008 18%, #000003 21%, #000000 24%,
+                #030000 27%, #080000 30%, #120000 33%, #180000 36%, #120000 39%, #080000 42%, #030000 45%, #000000 48%,
+                #000300 51%, #000800 54%, #001200 57%, #001800 60%, #001200 63%, #000800 66%, #000300 69%, #000000 72%,
+                #030300 75%, #080800 78%, #121200 81%, #181800 84%, #121200 87%, #080800 90%, #030300 93%, #000000 96%
             );
-            background-size: 15000% 15000%; /* Even larger background for smoother animation */
-            animation: fluidBackground1 8000s linear infinite alternate, rotateBackground 9000s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 20000% 20000%; /* Even larger background for smoother animation */
+            animation: fluidBackground1 12000s linear infinite alternate, rotateBackground 15000s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(6000px) opacity(0.9999999); /* Stronger blur, almost opaque */
-            transform: rotate(-1800deg) scale(40); /* Larger scale, more rotation */
+            filter: blur(8000px) opacity(0.9999999); /* Stronger blur, almost opaque */
+            transform: rotate(-2500deg) scale(60); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -195,30 +153,30 @@
         body::after {
             content: '';
             position: absolute;
-            top: -3500%; /* Even larger coverage */
-            left: -3500%;
-            width: 7100%;
-            height: 7100%;
+            top: -5000%; /* Even larger coverage */
+            left: -5000%;
+            width: 10100%;
+            height: 10100%;
             background: linear-gradient(
-                -420deg, /* Different angle */
+                -500deg, /* Different angle */
                 rgba(90, 255, 255, 0.99) 0%, /* primary glow accent */
                 rgba(255, 120, 250, 0.98) 10%, /* secondary glow accent */
                 rgba(80, 255, 120, 0.98) 20%, /* tertiary glow accent */
-                rgba(0, 200, 255, 0.99) 30%, /* electric blue from Nexus Forger */
-                rgba(255, 170, 50, 0.95) 40%, /* New orange accent from Paradigm Matrix */
-                rgba(200, 30, 220, 0.95) 50%, /* Magenta from Nexus Forger */
+                rgba(100, 180, 255, 0.99) 30%, /* Anchor blue */
+                rgba(255, 100, 200, 0.95) 40%, /* Assembler pink */
+                rgba(255, 255, 100, 0.95) 50%, /* Conduit yellow */
                 rgba(210, 176, 224, 0.90) 60%, /* Existential Fabric */
                 rgba(255, 255, 50, 0.90) 70%, /* Weave button glow */
                 rgba(50, 255, 150, 0.99) 80%, /* Chrono glow */
                 rgba(110, 90, 210, 0.99) 90%, /* Calibrate glow */
                 rgba(90, 255, 255, 0.99) 100%
             );
-            background-size: 9000% 9000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 4500s ease-in-out infinite, rotateBackgroundReversed 5500s linear infinite; /* Even longer animations */
+            background-size: 12000% 12000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 7000s ease-in-out infinite, rotateBackgroundReversed 9000s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(4500px) opacity(0.99999); /* Stronger blur, more opaque */
+            filter: blur(6000px) opacity(0.99999); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(1000deg) scale(35); /* Larger scale, more rotation */
+            transform: rotate(1500deg) scale(50); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -230,11 +188,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2f0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.025; /* More noticeable noise */
+            opacity: 0.035; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.4) contrast(3.5) brightness(3.0); /* Subtle color and contrast */
+            filter: grayscale(0.5) contrast(4.0) brightness(3.5); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -249,48 +207,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-1800deg) scale(40); }
-            to { transform: rotate(2000deg) scale(40); }
+            from { transform: rotate(-2500deg) scale(60); }
+            to { transform: rotate(3000deg) scale(60); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(1000deg) scale(35); }
-            to { transform: rotate(-2200deg) scale(35); }
+            from { transform: rotate(1500deg) scale(50); }
+            to { transform: rotate(-2800deg) scale(50); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 4500px; /* Even wider for more content */
-            padding: 450px; /* More padding */
+            max-width: 5000px; /* Even wider for more content */
+            padding: 500px; /* More padding */
             background: var(--frosted-bg);
-            border: 12px solid var(--border-color); /* Thicker border */
-            border-radius: 600px; /* Even more rounded */
-            backdrop-filter: blur(3500px) saturate(10000%) brightness(2500%) contrast(4.0); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(3500px) saturate(10000%) brightness(2500%) contrast(4.0);
+            border: 15px solid var(--border-color); /* Thicker border */
+            border-radius: 700px; /* Even more rounded */
+            backdrop-filter: blur(4000px) saturate(12000%) brightness(3000%) contrast(5.0); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(4000px) saturate(12000%) brightness(3000%) contrast(5.0);
             box-shadow:
-                0 800px 4000px rgba(0, 0, 0, 0.99999999), /* Deeper shadow */
-                0 0 4000px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 900px rgba(255, 255, 255, 0.98), /* Stronger inner glow for depth */
-                inset 0 0 1100px var(--primary-glow); /* Even more inner glow */
+                0 900px 5000px rgba(0, 0, 0, 0.99999999), /* Deeper shadow */
+                0 0 5000px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 1000px rgba(255, 255, 255, 0.98), /* Stronger inner glow for depth */
+                inset 0 0 1200px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 600px; /* Increased gap between sections */
-            animation: fadeInScale 40s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 15s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 700px; /* Increased gap between sections */
+            animation: fadeInScale 50s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 18s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -220px; /* More overflow */
-            border-radius: 602px;
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF); /* Even more vibrant border glow colors, includes new processing power color, orange, and exotic matter green, existential fabric, csm cyan */
-            background-size: 8000% 8000%; /* Larger background for smoother animation */
-            animation: borderGlow 300s linear infinite alternate; /* Slower animation */
-            filter: blur(500px); /* Stronger blur */
+            inset: -250px; /* More overflow */
+            border-radius: 702px;
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--anchor-border), var(--assembler-border), var(--conduit-border)); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 10000% 10000%; /* Larger background for smoother animation */
+            animation: borderGlow 350s linear infinite alternate; /* Slower animation */
+            filter: blur(600px); /* Stronger blur */
             z-index: -1;
             opacity: 0.9999999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -302,32 +260,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.0001) translateY(6000px) perspective(70000px) rotateX(280deg) rotateY(120deg) rotateZ(50deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(70000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            from { opacity: 0; transform: scale(0.00005) translateY(8000px) perspective(90000px) rotateX(320deg) rotateY(150deg) rotateZ(60deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(90000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 22em; /* Even larger heading */
+            font-size: 24em; /* Even larger heading */
             color: var(--accent-color);
-            text-shadow: 0 0 400px var(--primary-glow), 0 0 500px rgba(90, 255, 255, 0.9999), 0 0 600px rgba(90, 255, 255, 0.95);
-            margin-bottom: 350px;
-            letter-spacing: 80px;
+            text-shadow: 0 0 450px var(--primary-glow), 0 0 550px rgba(90, 255, 255, 0.9999), 0 0 650px rgba(90, 255, 255, 0.95);
+            margin-bottom: 400px;
+            letter-spacing: 90px;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(350px); /* Lift heading slightly in 3D space */
+            transform: translateZ(400px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -220px;
+            bottom: -250px;
             left: 50%;
             transform: translateX(-50%);
-            width: 350%; /* Wider underline */
-            height: 70px; /* Thicker underline */
+            width: 380%; /* Wider underline */
+            height: 80px; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 300px var(--primary-glow);
+            box-shadow: 0 0 350px var(--primary-glow);
         }
 
         p {
@@ -335,665 +293,638 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.9999;
-            font-size: 5em; /* Larger paragraph text */
-            transform: translateZ(180px);
+            font-size: 5.5em; /* Larger paragraph text */
+            transform: translateZ(200px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 500px; /* Increased gap */
-            margin: 300px 0;
+            gap: 600px; /* Increased gap */
+            margin: 350px 0;
             position: relative;
         }
 
         /* Module base styles */
-        .chrono-resonance-emitter, .sentient-paradigm-weave-matrix, .entanglement-nexus-forger, .trans-dimensional-topology-sculptor, .emergent-consciousness-harmonizer { /* NEW MODULE ADDED */
+        .core-systems-overseer-console, .reality-anchor-matrix, .sentient-data-stream-assembler, .quantum-entanglement-conduit-manager { /* NEW MODULES */
             display: flex;
             flex-direction: column;
-            gap: 180px;
+            gap: 200px;
             text-align: left;
-            padding: 220px;
-            border-radius: 180px;
-            border: 10px solid var(--signal-array-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 180px rgba(0, 200, 255, 0.99), 0 0 180px rgba(0, 200, 255, 0.98), inset 0 0 320px rgba(0, 200, 255, 0.8); /* More inner shadow */
+            padding: 250px;
+            border-radius: 200px;
+            border: 12px solid var(--overseer-border); /* Default border, will be overridden */
+            box-shadow: inset 0 0 200px rgba(0, 200, 255, 0.99), 0 0 200px rgba(0, 200, 255, 0.98), inset 0 0 350px rgba(0, 200, 255, 0.8); /* More inner shadow */
             position: relative;
-            transform: translateZ(160px);
+            transform: translateZ(180px);
             overflow: hidden;
-            background: var(--signal-array-bg); /* Default background, will be overridden */
+            background: var(--overseer-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .entanglement-nexus-forger {
-            background: var(--nexus-bg);
-            border-color: var(--nexus-border);
-            box-shadow: inset 0 0 180px rgba(200, 30, 220, 0.99), 0 0 180px rgba(200, 30, 220, 0.98), inset 0 0 320px rgba(200, 30, 220, 0.8);
+        .reality-anchor-matrix {
+            background: var(--anchor-bg);
+            border-color: var(--anchor-border);
+            box-shadow: inset 0 0 200px rgba(100, 180, 255, 0.99), 0 0 200px rgba(100, 180, 255, 0.98), inset 0 0 350px rgba(100, 180, 255, 0.8);
         }
-        .trans-dimensional-topology-sculptor {
-            background: var(--topo-bg);
-            border-color: var(--topo-border);
-            box-shadow: inset 0 0 180px rgba(255, 210, 50, 0.99), 0 0 180px rgba(255, 210, 50, 0.98), inset 0 0 320px rgba(255, 210, 50, 0.8);
+        .sentient-data-stream-assembler {
+            background: var(--assembler-bg);
+            border-color: var(--assembler-border);
+            box-shadow: inset 0 0 200px rgba(255, 100, 200, 0.99), 0 0 200px rgba(255, 100, 200, 0.98), inset 0 0 350px rgba(255, 100, 200, 0.8);
         }
-        .chrono-resonance-emitter {
-            background: var(--chrono-bg);
-            border-color: var(--chrono-border);
-            box-shadow: inset 0 0 180px rgba(50, 255, 150, 0.99), 0 0 180px rgba(50, 255, 150, 0.98), inset 0 0 320px rgba(50, 255, 150, 0.8);
-        }
-        .sentient-paradigm-weave-matrix {
-            background: var(--paradigm-bg);
-            border-color: var(--paradigm-border);
-            box-shadow: inset 0 0 180px rgba(255, 170, 50, 0.99), 0 0 180px rgba(255, 170, 50, 0.98), inset 0 0 320px rgba(255, 170, 50, 0.8);
-        }
-        .emergent-consciousness-harmonizer { /* NEW */
-            background: var(--harmony-bg);
-            border-color: var(--harmony-border);
-            box-shadow: inset 0 0 180px rgba(50, 255, 255, 0.99), 0 0 180px rgba(50, 255, 255, 0.98), inset 0 0 320px rgba(50, 255, 255, 0.8);
+        .quantum-entanglement-conduit-manager {
+            background: var(--conduit-bg);
+            border-color: var(--conduit-border);
+            box-shadow: inset 0 0 200px rgba(255, 255, 100, 0.99), 0 0 200px rgba(255, 255, 100, 0.98), inset 0 0 350px rgba(255, 255, 100, 0.8);
         }
 
-        .entanglement-nexus-forger::after, .trans-dimensional-topology-sculptor::after, .chrono-resonance-emitter::after, .sentient-paradigm-weave-matrix::after, .emergent-consciousness-harmonizer::after {
+        .core-systems-overseer-console::after, .reality-anchor-matrix::after, .sentient-data-stream-assembler::after, .quantum-entanglement-conduit-manager::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.85) 0%, transparent 80%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.88) 0%, transparent 85%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 0.99999;
         }
 
-
-        .entanglement-nexus-forger::before, .trans-dimensional-topology-sculptor::before, .chrono-resonance-emitter::before, .sentient-paradigm-weave-matrix::before, .emergent-consciousness-harmonizer::before { /* NEW MODULE ADDED */
+        .core-systems-overseer-console::before, .reality-anchor-matrix::before, .sentient-data-stream-assembler::before, .quantum-entanglement-conduit-manager::before { /* NEW MODULE ADDED */
             content: attr(data-label);
             position: absolute;
-            top: -160px; /* Slightly higher */
-            left: 220px;
-            font-size: 3.2em; /* Larger label */
-            color: var(--signal-array-text); /* Default text, will be overridden */
+            top: -180px; /* Slightly higher */
+            left: 250px;
+            font-size: 3.5em; /* Larger label */
+            color: var(--overseer-text); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.99999);
-            padding: 60px 80px;
-            border-radius: 80px;
+            padding: 70px 90px;
+            border-radius: 90px;
             font-weight: 700;
-            letter-spacing: 12px;
-            transform: translateY(-50%) translateZ(120px); /* Lift more */
+            letter-spacing: 14px;
+            transform: translateY(-50%) translateZ(140px); /* Lift more */
             opacity: 0.99999;
-            border: 10px solid var(--signal-array-text); /* Default border, will be overridden */
-            box-shadow: 0 0 100px var(--signal-array-text); /* Stronger glow */
+            border: 12px solid var(--overseer-text); /* Default border, will be overridden */
+            box-shadow: 0 0 120px var(--overseer-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
-        .entanglement-nexus-forger::before {
-            color: var(--nexus-text);
-            border-color: var(--nexus-text);
-            box-shadow: 0 0 100px var(--nexus-text);
+        .reality-anchor-matrix::before {
+            color: var(--anchor-text);
+            border-color: var(--anchor-text);
+            box-shadow: 0 0 120px var(--anchor-text);
         }
-        .trans-dimensional-topology-sculptor::before {
-            color: var(--topo-text);
-            border-color: var(--topo-text);
-            box-shadow: 0 0 100px var(--topo-text);
+        .sentient-data-stream-assembler::before {
+            color: var(--assembler-text);
+            border-color: var(--assembler-text);
+            box-shadow: 0 0 120px var(--assembler-text);
         }
-        .chrono-resonance-emitter::before {
-            color: var(--chrono-text);
-            border-color: var(--chrono-text);
-            box-shadow: 0 0 100px var(--chrono-text);
-        }
-        .sentient-paradigm-weave-matrix::before {
-            color: var(--paradigm-text);
-            border-color: var(--paradigm-text);
-            box-shadow: 0 0 100px var(--paradigm-text);
-        }
-        .emergent-consciousness-harmonizer::before { /* NEW */
-            color: var(--harmony-text);
-            border-color: var(--harmony-text);
-            box-shadow: 0 0 100px var(--harmony-text);
+        .quantum-entanglement-conduit-manager::before {
+            color: var(--conduit-text);
+            border-color: var(--conduit-text);
+            box-shadow: 0 0 120px var(--conduit-text);
         }
 
-
-        .calibrator-group, .param-group {
-            margin-bottom: 150px;
+        .param-group {
+            margin-bottom: 180px;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.8em; /* Larger */
-            color: var(--cognitive-stream-text);
-            letter-spacing: 10px;
+            font-size: 4.2em; /* Larger */
+            color: var(--overseer-text);
+            letter-spacing: 12px;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 100px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 100px;
+            text-shadow: 0 0 120px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 120px;
         }
         .param-label > span { /* For sub-info */
-            font-size: 2.8em; /* Slightly larger sub-info */
+            font-size: 3.2em; /* Slightly larger sub-info */
             opacity: 0.995;
-            color: var(--signal-array-text);
-            margin-top: 60px;
+            color: var(--text-color);
+            margin-top: 70px;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
-        /* Chronal Resonance Emitter results */
-        .chrono-readout {
-            margin-top: 150px;
-            padding: 150px;
+        
+        /* Reality Anchor Matrix Specific */
+        .anchor-schematic {
+            margin-top: 180px;
+            padding: 180px;
             background: rgba(0, 0, 0, 0.998); /* Darker background */
-            border: 10px dashed var(--chrono-border);
-            border-radius: 90px;
-            animation: fadeIn 5.5s ease-out;
-            box-shadow: 0 0 100px rgba(50, 255, 150, 0.95); /* Subtle glow */
+            border: 12px dashed var(--anchor-border);
+            border-radius: 100px;
+            animation: fadeIn 6.0s ease-out;
+            box-shadow: 0 0 120px rgba(100, 180, 255, 0.95); /* Subtle glow */
+            position: relative;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .chrono-readout p {
+        .anchor-schematic p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0em; /* Larger text */
-            color: var(--chrono-text);
-            text-shadow: 0 0 80px rgba(50, 255, 150, 0.99);
-            margin-bottom: 60px;
+            font-size: 3.5em; /* Larger text */
+            color: var(--anchor-text);
+            text-shadow: 0 0 90px rgba(100, 180, 255, 0.99);
+            margin-bottom: 70px;
             transform: translateZ(0); /* Reset for inner p */
-            line-height: 2.8;
+            line-height: 3.0;
+        }
+        .anchor-visual {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--anchor-text) 0%, transparent 70%);
+            opacity: 0.1;
+            transform: scale(0.1);
+            animation: anchorPulse 4s infinite ease-in-out alternate;
+            box-shadow: 0 0 200px var(--anchor-btn-glow);
+            pointer-events: none;
+        }
+        .anchor-visual.active {
+            opacity: 0.3;
+            animation: anchorPulse 4s infinite ease-in-out alternate, anchorGrow 3s forwards ease-out;
+        }
+        @keyframes anchorPulse {
+            0% { transform: scale(0.9); opacity: 0.3; }
+            100% { transform: scale(1.0); opacity: 0.45; }
+        }
+        @keyframes anchorGrow {
+            from { transform: scale(0.1); opacity: 0.1; }
+            to { transform: scale(1.0); opacity: 0.3; }
         }
 
-        /* Sentient Paradigm Weave Matrix Grid */
-        .paradigm-configuration-grid { /* Renamed from sub-protocol-grid to evolutionary-sub-routines-grid */
+        /* Sentient Data Stream Assembler Grid */
+        .assembler-component-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(750px, 1fr)); /* Larger min width */
-            gap: 150px;
-            margin-top: 120px;
+            grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Larger min width */
+            gap: 180px;
+            margin-top: 150px;
         }
-        .paradigm-unit-card { /* Renamed to evolutionary-sub-routine-card */
-            background: rgba(0, 0, 0, 0.999); /* Darker */
-            border: 10px solid var(--paradigm-slider-inactive);
-            border-radius: 90px; /* More rounded */
-            padding: 110px;
+        .assembler-component-card {
+            background: var(--assembler-card-bg);
+            border: 12px solid var(--assembler-card-border);
+            border-radius: 100px; /* More rounded */
+            padding: 120px;
             text-align: center;
-            transition: all 1.8s ease;
-            cursor: pointer;
-            box-shadow: inset 0 0 80px rgba(0,0,0,0.95);
-            transform: translateZ(50px);
+            transition: all 2.0s ease;
+            cursor: grab;
+            box-shadow: inset 0 0 90px rgba(0,0,0,0.95);
+            transform: translateZ(60px);
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 70px;
         }
-        .paradigm-unit-card.active {
-            border-color: var(--paradigm-slider-active);
-            box-shadow: 0 0 150px var(--paradigm-slider-thumb-glow), inset 0 0 110px var(--paradigm-slider-active);
-            background: rgba(90, 70, 30, 0.9999); /* More opaque */
-            transform: translateY(-60px) scale(1.2) translateZ(80px);
+        .assembler-component-card.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
         }
-        .paradigm-unit-card h4 {
+        .assembler-component-card h4 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2em; /* Larger */
-            color: var(--paradigm-text);
+            font-size: 3.5em; /* Larger */
+            color: var(--assembler-text);
             margin-top: 0;
-            margin-bottom: 60px;
-            text-shadow: 0 0 70px var(--paradigm-text);
+            margin-bottom: 70px;
+            text-shadow: 0 0 80px var(--assembler-text);
         }
-        .paradigm-unit-card p {
-            font-size: 2.8em; /* Larger */
+        .assembler-component-card p {
+            font-size: 3.0em; /* Larger */
             color: var(--text-color);
             opacity: 0.99;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             transform: translateZ(0); /* Reset for inner p */
         }
-        .paradigm-unit-card .effect-cost {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.6em; /* Larger */
-            color: var(--cognitive-stream-text);
-            text-shadow: 0 0 50px var(--cognitive-stream-text);
-            margin-top: 70px;
-            opacity: 0.9999;
+        .assembler-chamber {
+            border: 15px dashed var(--assembler-chamber-border);
+            border-radius: 110px;
+            padding: 150px;
+            min-height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+            background: var(--assembler-chamber-bg);
+            box-shadow: inset 0 0 100px rgba(255, 100, 200, 0.7);
         }
-
-        /* Entanglement Nexus Forger Specific */
-        .active-entanglement-nodes-display { /* Renamed from active-qel-links-display */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
-            gap: 100px;
-            margin-top: 120px;
-            min-height: 300px;
-            border: 10px dashed rgba(255,255,255,0.7);
-            padding: 100px;
+        .assembler-chamber .assembled-component {
+            background: var(--assembler-card-bg);
+            border: 10px solid var(--assembler-border);
             border-radius: 80px;
-        }
-        .active-node-unit { /* Renamed from active-qel-card */
-            background: rgba(0,0,0,0.998);
-            border: 10px solid var(--nexus-card-active-border);
-            border-radius: 85px;
             padding: 80px;
-            text-align: center;
-            box-shadow: 0 0 90px var(--nexus-card-active-shadow);
-            transform: translateZ(45px);
-            transition: all 1.3s ease;
-            position: relative;
-        }
-        .active-node-unit:hover {
-            transform: translateY(-40px) scale(1.15) translateZ(60px);
-            box-shadow: 0 0 130px var(--nexus-card-active-shadow);
-        }
-        .active-node-unit h5 {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Share Tech Mono', monospace;
             font-size: 2.8em;
-            color: var(--nexus-text);
-            margin: 0 0 50px 0;
-            text-shadow: 0 0 60px var(--nexus-text);
-        }
-        .active-node-unit p {
-            font-size: 2.5em;
-            color: var(--text-color);
-            margin-bottom: 45px;
-            transform: translateZ(0);
-        }
-        .active-node-unit .sever-link-btn { /* Renamed from deactivate-qel-btn */
-            background: linear-gradient(90deg, #D020F0 0%, #E02020 100%); /* Purple to Firebrick */
-            color: white;
-            border: none;
-            padding: 40px 50px;
-            font-size: 2.4em;
-            border-radius: 55px;
+            color: var(--assembler-text);
+            box-shadow: 0 0 90px var(--assembler-border);
+            position: relative;
             cursor: pointer;
-            transition: all 1.0s ease;
-            margin-top: 55px;
-            box-shadow: 0 0 60px rgba(224,32,32,0.98);
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 8px;
+            transition: all 0.8s ease;
         }
-        .active-node-unit .sever-link-btn:hover {
-            transform: translateY(-20px) scale(1.22);
-            box-shadow: 0 0 100px rgba(224,32,32,0.999);
-            filter: brightness(1.6);
+        .assembler-chamber .assembled-component:hover {
+            transform: scale(1.1);
+            background: rgba(255, 100, 200, 0.15);
+        }
+        .assembler-output {
+            margin-top: 150px;
+            padding: 150px;
+            background: var(--assembler-output-bg);
+            border: 12px solid var(--assembler-output-border);
+            border-radius: 100px;
+            box-shadow: 0 0 120px var(--assembler-output-border);
+        }
+        .assembler-output p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 3.5em;
+            color: var(--assembler-output-text);
+            text-shadow: 0 0 90px var(--assembler-output-text);
+            line-height: 3.0;
         }
 
-        /* Trans-Dimensional Topology Sculptor Specific */
-        .topo-controls { /* Renamed from rtm-controls */
+        /* Quantum Entanglement Conduit Manager Specific */
+        .conduit-map-container {
+            width: 100%;
+            min-height: 1200px;
+            background: var(--conduit-map-bg);
+            border: 12px solid var(--conduit-border);
+            border-radius: 100px;
+            margin-top: 150px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 100px rgba(255, 255, 100, 0.7);
+        }
+        .conduit-node {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--conduit-text);
+            box-shadow: 0 0 70px var(--conduit-node-glow);
+            cursor: pointer;
+            transition: all 0.8s ease;
+        }
+        .conduit-node.active {
+            background: var(--primary-glow);
+            box-shadow: 0 0 100px var(--primary-glow);
+        }
+        .conduit-node:hover {
+            transform: scale(1.5);
+            box-shadow: 0 0 120px var(--conduit-node-glow);
+        }
+        .conduit-line {
+            position: absolute;
+            height: 12px;
+            background: var(--conduit-inactive-line);
+            border-radius: 6px;
+            transform-origin: left center;
+            transition: background 1.5s ease;
+            pointer-events: none;
+        }
+        .conduit-line.active {
+            background: var(--conduit-active-line);
+            box-shadow: 0 0 90px var(--conduit-active-line);
+        }
+        .conduit-controls {
             display: flex;
             flex-direction: column;
             gap: 100px;
+            margin-top: 150px;
             align-items: center;
         }
-        .topo-controls .slider-group {
-            width: 100%;
+        .conduit-controls .input-group {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 45px;
+            gap: 50px;
+            width: 100%;
         }
-        .topo-controls .slider-group span {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8em;
-            color: var(--topo-text);
-            text-shadow: 0 0 45px var(--topo-text);
-            letter-spacing: 7px;
-        }
-
-        .topo-info { /* Renamed from rtm-info */
+        .conduit-controls label {
             font-family: 'Share Tech Mono', monospace;
             font-size: 3.0em;
-            color: var(--topo-text);
-            text-shadow: 0 0 60px var(--topo-text);
-            margin-top: 80px;
-            line-height: 3.0;
+            color: var(--conduit-text);
+            text-shadow: 0 0 50px var(--conduit-text);
+            letter-spacing: 8px;
+        }
+        .conduit-controls select {
+            width: 100%;
+            padding: 50px 70px;
+            font-size: 2.8em;
+            background: var(--conduit-map-bg);
+            border: 10px solid var(--conduit-border);
+            border-radius: 80px;
+            color: var(--conduit-text);
+            font-family: 'Share Tech Mono', monospace;
+            box-shadow: inset 0 0 70px rgba(255, 255, 100, 0.5);
+            appearance: none; /* Remove default arrow */
+            -webkit-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="%23FFFFB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            background-repeat: no-repeat;
+            background-position: right 70px center;
+            cursor: pointer;
+        }
+        .conduit-controls select:focus {
+            outline: none;
+            border-color: var(--conduit-active-line);
+            box-shadow: inset 0 0 70px rgba(255, 255, 100, 0.8), 0 0 100px var(--conduit-active-line);
+        }
+        .conduit-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 3.2em;
+            color: var(--conduit-text);
+            text-shadow: 0 0 60px var(--conduit-text);
+            margin-top: 100px;
+            line-height: 3.2;
             opacity: 0.9999;
         }
 
-        /* NEW: Emergent Consciousness Harmonizer */
-        .harmony-summary { /* Renamed from blueprint-summary */
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0em;
-            color: var(--harmony-text);
-            text-shadow: 0 0 60px var(--harmony-text);
-            margin-bottom: 100px;
-            line-height: 3.0;
-        }
-        .harmony-signature-list { /* Renamed from blueprint-component-list */
-            display: flex;
-            flex-direction: column;
-            gap: 85px;
-            margin-top: 100px;
-            max-height: 1000px;
-            overflow-y: auto;
-            padding-right: 60px; /* For scrollbar space */
-        }
-        .harmony-signature-item { /* Renamed from blueprint-component-item */
-            background: var(--harmony-component-bg);
-            border: 10px dashed var(--harmony-component-border);
-            border-radius: 80px;
-            padding: 80px 90px;
-            text-align: left;
-            position: relative;
-            box-shadow: inset 0 0 70px rgba(50, 255, 255, 0.75);
-            display: flex;
-            flex-direction: column;
-            gap: 45px;
-        }
-        .harmony-signature-item h5 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8em;
-            color: var(--harmony-text);
-            margin: 0 0 40px 0;
-            text-shadow: 0 0 45px var(--harmony-text);
-        }
-        .harmony-signature-item p {
-            font-size: 2.5em;
-            color: var(--text-color);
-            opacity: 0.98;
-            margin-bottom: 35px;
-            transform: none; /* Reset 3D transform */
-        }
-        .harmony-signature-item .harmony-level-label {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.5em;
-            color: var(--harmony-text);
-            text-shadow: 0 0 35px var(--harmony-text);
-            margin-bottom: 35px;
-        }
-        .harmony-signature-item .exclude-signature-btn { /* Renamed from remove-blueprint-component */
-            position: absolute;
-            top: 60px;
-            right: 60px;
-            background: #C00000;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 90px;
-            height: 90px;
-            font-size: 2.8em;
-            cursor: pointer;
-            transition: background 0.6s ease;
-            box-shadow: 0 0 45px rgba(192, 0, 0, 0.95);
-        }
-        .harmony-signature-item .exclude-signature-btn:hover {
-            background: #FF0000;
-            box-shadow: 0 0 60px rgba(255, 0, 0, 0.999);
-        }
-        .sentience-harmony-index-display {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.8em;
-            color: var(--harmony-text);
-            text-shadow: 0 0 70px var(--harmony-text), 0 0 80px var(--nexus-text);
-            margin-top: 100px;
-            padding: 80px;
-            border: 10px solid var(--harmony-border);
-            border-radius: 80px;
-            background: rgba(0, 0, 0, 0.98);
-            box-shadow: inset 0 0 65px rgba(50, 255, 255, 0.88);
-            line-height: 2.4;
-        }
 
-
-        /* Resource Display Styles */
-        .resource-display-container {
+        /* Resource Display Section (Moved from top to inside Overseer, but kept styling) */
+        .resource-display-section { /* Renamed for clarity */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(650px, 1fr)); /* Adaptive 5-6 columns */
-            gap: 250px;
-            margin-bottom: 250px;
-            transform: translateZ(180px);
+            grid-template-columns: repeat(auto-fit, minmax(700px, 1fr)); /* Adaptive 6 columns */
+            gap: 280px;
+            margin-bottom: 280px;
+            transform: translateZ(200px);
             align-items: start;
         }
 
-        .energy-reserve-display, .data-flow-display, .raw-data-buffer-display, .processing-power-display, .exotic-matter-display, .existential-fabric-display { /* NEW RESOURCE ADDED */
-            background: var(--module-selection-bg);
-            border: 10px solid var(--module-selection-border);
-            border-radius: 180px; /* More rounded */
-            padding: 150px 155px;
-            box-shadow: inset 0 0 180px rgba(160, 0, 255, 0.9999), 0 0 180px rgba(160, 0, 255, 0.999), inset 0 0 300px rgba(160, 0, 255, 0.78); /* More inner shadow */
+        .resource-display-section > div { /* Common styles for resource panels */
+            background: var(--resource-panel-bg);
+            border: 12px solid var(--resource-panel-border);
+            border-radius: 200px; /* More rounded */
+            padding: 180px 185px;
+            box-shadow: inset 0 0 200px rgba(160, 0, 255, 0.9999), 0 0 200px rgba(160, 0, 255, 0.999), inset 0 0 320px rgba(160, 0, 255, 0.78); /* More inner shadow */
             position: relative;
             text-align: left;
             overflow: hidden;
+            cursor: pointer; /* To allow prioritization */
+            transition: all 1.2s ease-out;
         }
-        .energy-reserve-display::after, .data-flow-display::after, .raw-data-buffer-display::after, .processing-power-display::after, .exotic-matter-display::after, .existential-fabric-display::after {
+        .resource-display-section > div:hover {
+            transform: translateY(-40px) scale(1.05) translateZ(220px);
+            box-shadow: inset 0 0 250px rgba(160, 0, 255, 0.9999), 0 0 250px rgba(160, 0, 255, 0.999), inset 0 0 400px rgba(160, 0, 255, 0.78);
+        }
+        .resource-display-section > div.prioritized {
+            border-color: var(--primary-glow);
+            box-shadow: inset 0 0 250px var(--primary-glow), 0 0 250px var(--primary-glow), inset 0 0 400px rgba(90, 255, 255, 0.8);
+            transform: translateY(-60px) scale(1.08) translateZ(250px);
+        }
+
+        .resource-display-section > div::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.85) 0%, transparent 90%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.9) 0%, transparent 92%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
         }
-        .energy-reserve-display p, .data-flow-display p, .raw-data-buffer-display p, .processing-power-display p, .exotic-matter-display p, .existential-fabric-display p {
+        .resource-display-section > div p {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2em; /* Larger */
-            color: var(--module-selection-text);
-            text-shadow: 0 0 80px rgba(160, 0, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 100px;
+            font-size: 3.5em; /* Larger */
+            color: var(--resource-panel-text);
+            text-shadow: 0 0 90px rgba(160, 0, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 110px;
         }
 
         /* Specific resource display labels and colors */
-        .resource-display-container > div::before { /* Common styles for resource labels */
+        .resource-display-section > div::before { /* Common styles for resource labels */
             content: attr(data-label);
             position: absolute;
-            top: -160px; /* Aligned with module labels */
-            left: 155px; /* Aligned with module labels */
-            font-size: 3.2em; /* Consistent with module labels */
+            top: -180px; /* Aligned with module labels */
+            left: 185px; /* Aligned with module labels */
+            font-size: 3.5em; /* Consistent with module labels */
             background: rgba(0, 0, 0, 0.99999);
-            padding: 60px 80px;
-            border-radius: 80px;
+            padding: 70px 90px;
+            border-radius: 90px;
             font-weight: 700;
-            letter-spacing: 12px;
-            transform: translateY(-50%) translateZ(120px);
+            letter-spacing: 14px;
+            transform: translateY(-50%) translateZ(140px);
             opacity: 0.99999;
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         .energy-reserve-display::before {
             color: var(--energy-color-high);
-            border: 10px solid rgba(255, 255, 120, 0.9999);
-            box-shadow: 0 0 100px rgba(255, 255, 120, 0.9999); /* Stronger glow */
+            border: 12px solid rgba(255, 255, 120, 0.9999);
+            box-shadow: 0 0 120px rgba(255, 255, 120, 0.9999); /* Stronger glow */
         }
         .data-flow-display::before {
             color: var(--data-flow-color-high);
-            border: 10px solid rgba(50, 255, 80, 0.9999);
-            box-shadow: 0 0 100px rgba(50, 255, 80, 0.9999); /* Stronger glow */
+            border: 12px solid rgba(50, 255, 80, 0.9999);
+            box-shadow: 0 0 120px rgba(50, 255, 80, 0.9999); /* Stronger glow */
         }
-        .raw-data-buffer-display::before { /* Renamed from raw-data-reserve-display */
+        .raw-data-buffer-display::before {
             color: var(--raw-data-text);
-            border: 10px solid var(--raw-data-text);
-            box-shadow: 0 0 100px var(--raw-data-text); /* Stronger glow */
+            border: 12px solid var(--raw-data-text);
+            box-shadow: 0 0 120px var(--raw-data-text); /* Stronger glow */
         }
         .processing-power-display::before {
             color: var(--processing-power-text);
-            border: 10px solid var(--processing-power-text);
-            box-shadow: 0 0 100px var(--processing-power-text); /* Stronger glow */
+            border: 12px solid var(--processing-power-text);
+            box-shadow: 0 0 120px var(--processing-power-text); /* Stronger glow */
         }
-        .exotic-matter-display::before { /* NEW */
+        .exotic-matter-display::before {
             color: var(--exotic-matter-text);
-            border: 10px solid var(--exotic-matter-text);
-            box-shadow: 0 0 100px var(--exotic-matter-text); /* Stronger glow */
+            border: 12px solid var(--exotic-matter-text);
+            box-shadow: 0 0 120px var(--exotic-matter-text); /* Stronger glow */
         }
-        .existential-fabric-display::before { /* NEW */
-            content: attr(data-label);
+        .existential-fabric-display::before {
             color: var(--existential-fabric-text);
-            border: 10px solid var(--existential-fabric-text);
-            box-shadow: 0 0 100px var(--existential-fabric-text);
+            border: 12px solid var(--existential-fabric-text);
+            box-shadow: 0 0 120px var(--existential-fabric-text);
         }
-
 
         .resource-level-bar-container {
             width: 100%;
-            height: 150px; /* Taller bar */
-            background: var(--resource-bg);
-            border-radius: 75px;
+            height: 180px; /* Taller bar */
+            background: var(--resource-bar-bg);
+            border-radius: 90px;
             overflow: hidden;
-            box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.9999999);
-            border: 10px solid rgba(255,255,255,0.8);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9999999);
+            border: 12px solid rgba(255,255,255,0.8);
             position: relative;
         }
         .resource-level-bar-container::before { /* Animated flow effect */
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, transparent 30%, rgba(255,255,255,0.9) 100%);
-            background-size: 2500% 100%; /* Larger background for flow */
-            animation: resourceFlow 40s linear infinite;
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, transparent 30%, rgba(255,255,255,0.95) 100%);
+            background-size: 3000% 100%; /* Larger background for flow */
+            animation: resourceFlow 50s linear infinite;
             mix-blend-mode: overlay;
             opacity: 0.9999;
             pointer-events: none;
         }
 
         @keyframes resourceFlow {
-            0% { background-position: 2500% 0; }
-            100% { background-position: -2500% 0; }
+            0% { background-position: 3000% 0; }
+            100% { background-position: -3000% 0; }
         }
 
         .resource-level-bar {
             height: 100%;
             width: 100%;
             background: var(--stability-good); /* Default */
-            border-radius: 75px;
-            transition: width 7s cubic-bezier(0.25, 1, 0.5, 1), background 6.5s ease-out, box-shadow 6.5s ease-out;
-            box-shadow: 0 0 90px rgba(255, 255, 255, 0.9999); /* Default */
+            border-radius: 90px;
+            transition: width 8s cubic-bezier(0.25, 1, 0.5, 1), background 7.5s ease-out, box-shadow 7.5s ease-out;
+            box-shadow: 0 0 100px rgba(255, 255, 255, 0.9999); /* Default */
             position: relative;
         }
         /* Specific resource bar initial styles (updated by JS) */
-        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 95px rgba(255, 255, 120, 0.9999); }
-        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 95px rgba(50, 255, 80, 0.9999); }
-        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 95px var(--raw-data-text); }
-        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 95px var(--processing-power-text); }
-        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 95px var(--exotic-matter-text); } /* NEW */
-        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 95px var(--existential-fabric-text); } /* NEW */
+        #energy-level-bar { background: var(--energy-color-high); box-shadow: 0 0 105px rgba(255, 255, 120, 0.9999); }
+        #data-flow-level-bar { background: var(--data-flow-color-high); box-shadow: 0 0 105px rgba(50, 255, 80, 0.9999); }
+        #raw-data-level-bar { background: var(--raw-data-color-high); box-shadow: 0 0 105px var(--raw-data-text); }
+        #processing-power-level-bar { background: var(--processing-power-color-high); box-shadow: 0 0 105px var(--processing-power-text); }
+        #exotic-matter-level-bar { background: var(--exotic-matter-color-high); box-shadow: 0 0 105px var(--exotic-matter-text); }
+        #existential-fabric-level-bar { background: var(--existential-fabric-color-high); box-shadow: 0 0 105px var(--existential-fabric-text); }
 
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 155px; /* Taller */
+            height: 180px; /* Taller */
             background: rgba(255, 255, 255, 0.9); /* More subtle background */
-            border-radius: 78px;
+            border-radius: 90px;
             outline: none;
-            transition: all 3.0s ease;
-            box-shadow: inset 0 0 85px rgba(0, 0, 0, 0.9999999), 0 0 85px rgba(0,200,255,0.99); /* Inset for depth, subtle outer glow */
-            transform: translateZ(60px);
-            border: 10px solid rgba(255,255,255,0.85); /* More subtle border */
+            transition: all 3.5s ease;
+            box-shadow: inset 0 0 95px rgba(0, 0, 0, 0.9999999), 0 0 95px rgba(0,200,255,0.99); /* Inset for depth, subtle outer glow */
+            transform: translateZ(70px);
+            border: 12px solid rgba(255,255,255,0.85); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 165px; /* Larger thumb */
-            height: 165px;
+            width: 185px; /* Larger thumb */
+            height: 185px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 150px var(--primary-glow);
-            transition: background 3.0s ease, box-shadow 3.0s ease, transform 3.0s ease;
-            border: 50px solid rgba(255, 255, 255, 0.9999);
+            box-shadow: 0 0 180px var(--primary-glow);
+            transition: background 3.5s ease, box-shadow 3.5s ease, transform 3.5s ease;
+            border: 60px solid rgba(255, 255, 255, 0.9999);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 165px;
-            height: 165px;
+            width: 185px;
+            height: 185px;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 150px var(--primary-glow);
-            transition: background 3.0s ease, box-shadow 3.0s ease, transform 3.0s ease;
-            border: 50px solid rgba(255, 255, 255, 0.9999);
+            box-shadow: 0 0 180px var(--primary-glow);
+            transition: background 3.5s ease, box-shadow 3.5s ease, transform 3.5s ease;
+            border: 60px solid rgba(255, 255, 255, 0.9999);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #8AF2FF;
-            box-shadow: 0 0 180px var(--primary-glow), 0 0 110px var(--primary-glow) inset;
-            transform: scale(1.8);
+            box-shadow: 0 0 200px var(--primary-glow), 0 0 120px var(--primary-glow) inset;
+            transform: scale(1.85);
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #8AF2FF;
-            box-shadow: 0 0 180px var(--primary-glow), 0 0 110px var(--primary-glow) inset;
-            transform: scale(1.8);
+            box-shadow: 0 0 200px var(--primary-glow), 0 0 120px var(--primary-glow) inset;
+            transform: scale(1.85);
         }
 
-        /* Specific slider styles for Paradigm Integration */
-        .paradigm-unit-card input[type="range"], .harmony-signature-item input[type="range"], .topo-controls input[type="range"] {
-            height: 95px;
-            border-radius: 48px;
-            background: var(--paradigm-slider-inactive); /* Use paradigm inactive for both */
-            box-shadow: inset 0 0 60px rgba(0,0,0,0.99), 0 0 60px rgba(255, 170, 50, 0.8);
+        /* Specific slider styles for new modules */
+        .reality-anchor-matrix input[type="range"], .sentient-data-stream-assembler input[type="range"] {
+            height: 110px;
+            border-radius: 55px;
+            background: var(--anchor-slider-track);
+            box-shadow: inset 0 0 70px rgba(0,0,0,0.99), 0 0 70px rgba(100, 180, 255, 0.8);
             border: none;
         }
-        .paradigm-unit-card input[type="range"]::-webkit-slider-thumb, .harmony-signature-item input[type="range"]::-webkit-slider-thumb, .topo-controls input[type="range"]::-webkit-slider-thumb {
-            width: 105px;
-            height: 105px;
-            border-color: var(--paradigm-slider-active);
-            background: var(--paradigm-slider-active);
-            box-shadow: 0 0 90px var(--paradigm-slider-thumb-glow);
-            border-width: 40px;
+        .reality-anchor-matrix input[type="range"]::-webkit-slider-thumb, .sentient-data-stream-assembler input[type="range"]::-webkit-slider-thumb {
+            width: 120px;
+            height: 120px;
+            border-color: var(--anchor-slider-thumb);
+            background: var(--anchor-slider-thumb);
+            box-shadow: 0 0 100px var(--anchor-slider-thumb);
+            border-width: 45px;
         }
-        .paradigm-unit-card input[type="range"]::-moz-range-thumb, .harmony-signature-item input[type="range"]::-moz-range-thumb, .topo-controls input[type="range"]::-moz-range-thumb {
-            width: 105px;
-            height: 105px;
-            border-color: var(--paradigm-slider-active);
-            background: var(--paradigm-slider-active);
-            box-shadow: 0 0 90px var(--paradigm-slider-thumb-glow);
-            border-width: 40px;
+        .reality-anchor-matrix input[type="range"]::-moz-range-thumb, .sentient-data-stream-assembler input[type="range"]::-moz-range-thumb {
+            width: 120px;
+            height: 120px;
+            border-color: var(--anchor-slider-thumb);
+            background: var(--anchor-slider-thumb);
+            box-shadow: 0 0 100px var(--anchor-slider-thumb);
+            border-width: 45px;
         }
-        .paradigm-unit-card input[type="range"]::-webkit-slider-thumb:hover,
-        .paradigm-unit-card input[type="range"]::-moz-range-thumb:hover,
-        .harmony-signature-item input[type="range"]::-webkit-slider-thumb:hover,
-        .harmony-signature-item input[type="range"]::-moz-range-thumb:hover,
-        .topo-controls input[type="range"]::-webkit-slider-thumb:hover,
-        .topo-controls input[type="range"]::-moz-range-thumb:hover {
-            background: var(--paradigm-text);
-            box-shadow: 0 0 110px var(--paradigm-slider-thumb-glow);
-            transform: scale(1.6);
+        .reality-anchor-matrix input[type="range"]::-webkit-slider-thumb:hover,
+        .reality-anchor-matrix input[type="range"]::-moz-range-thumb:hover,
+        .sentient-data-stream-assembler input[type="range"]::-webkit-slider-thumb:hover,
+        .sentient-data-stream-assembler input[type="range"]::-moz-range-thumb:hover {
+            background: var(--anchor-text);
+            box-shadow: 0 0 120px var(--anchor-slider-thumb);
+            transform: scale(1.65);
         }
 
-
-        /* Neural Network Status Display */
-        .neural-network-status-display { /* Renamed to neural-network-status-display */
+        /* Core Systems Overseer Console - Status Log */
+        .status-log-display {
             font-family: 'Orbitron', monospace;
-            font-size: 4.0em; /* Larger */
-            padding: 150px;
-            border: 10px solid var(--border-color);
-            border-radius: 180px; /* More rounded */
-            background: var(--network-status-bg);
-            box-shadow: inset 0 0 180px rgba(0, 255, 255, 0.95), inset 0 0 300px rgba(0, 255, 255, 0.8); /* More inner shadow */
+            font-size: 4.5em; /* Larger */
+            padding: 180px;
+            border: 12px solid var(--border-color);
+            border-radius: 200px; /* More rounded */
+            background: var(--overseer-bg);
+            box-shadow: inset 0 0 200px rgba(0, 255, 255, 0.95), inset 0 0 350px rgba(0, 255, 255, 0.8); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 3.0s ease;
-            line-height: 4.0;
-            letter-spacing: 10px;
-            color: var(--cognitive-stream-text);
-            text-shadow: 0 0 80px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
-            font-weight: 400;
-            transform: translateZ(170px);
-            overflow: hidden;
-        }
-
-        .neural-network-status-display::before {
-            content: 'NEURAL NEXUS STATUS // COSMIC CONSCIOUSNESS';
-            position: absolute;
-            top: -160px;
-            left: 220px;
-            font-size: 3.2em;
-            color: var(--network-status-glow);
-            background: rgba(0, 0, 0, 0.99999);
-            padding: 60px 80px;
-            border-radius: 80px;
-            font-weight: 700;
+            transition: all 3.5s ease;
+            line-height: 4.5;
             letter-spacing: 12px;
-            transform: translateY(-50%) translateZ(120px);
+            color: var(--overseer-text);
+            text-shadow: 0 0 90px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            font-weight: 400;
+            transform: translateZ(190px);
+            overflow: hidden;
+            max-height: 1200px;
+            overflow-y: auto;
+        }
+        .status-log-display::before {
+            content: 'CORE SYSTEMS OVERSEER // GLOBAL STATUS LOG';
+            position: absolute;
+            top: -180px;
+            left: 250px;
+            font-size: 3.5em;
+            color: var(--overseer-border);
+            background: rgba(0, 0, 0, 0.99999);
+            padding: 70px 90px;
+            border-radius: 90px;
+            font-weight: 700;
+            letter-spacing: 14px;
+            transform: translateY(-50%) translateZ(140px);
             opacity: 0.99999;
-            border: 10px solid var(--network-status-glow);
-            box-shadow: 0 0 100px var(--network-status-glow);
+            border: 12px solid var(--overseer-border);
+            box-shadow: 0 0 120px var(--overseer-border);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 60px;
+            margin-right: 70px;
             opacity: 0.998;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 60px var(--primary-glow);
+            text-shadow: 0 0 70px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -1006,57 +937,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 60px var(--log-glitch-color);
-            animation: textGlitch 0.25s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 70px var(--log-glitch-color);
+            animation: textGlitch 0.2s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(10px) skewX(20deg); opacity: 0.4;}
-            40% { transform: translateX(-10px) skewX(-20deg); opacity: 0.35;}
-            60% { transform: translateX(9px) skewX(18deg); opacity: 0.45;}
-            80% { transform: translateX(-9px) skewX(-18deg); opacity: 0.4;}
+            20% { transform: translateX(12px) skewX(22deg); opacity: 0.3;}
+            40% { transform: translateX(-12px) skewX(-22deg); opacity: 0.32;}
+            60% { transform: translateX(11px) skewX(20deg); opacity: 0.4;}
+            80% { transform: translateX(-11px) skewX(-20deg); opacity: 0.38;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5em; /* Larger button text */
-            padding: 60px 90px;
-            border-radius: 95px;
+            font-size: 3.8em; /* Larger button text */
+            padding: 70px 100px;
+            border-radius: 105px;
             border: none;
             cursor: pointer;
-            transition: all 1.8s ease-in-out, box-shadow 3.0s ease-in-out, transform 1.8s ease-in-out;
-            margin-top: 150px;
+            transition: all 2.0s ease-in-out, box-shadow 3.5s ease-in-out, transform 2.0s ease-in-out;
+            margin-top: 180px;
             text-transform: uppercase;
-            letter-spacing: 12px;
+            letter-spacing: 14px;
             font-weight: 700;
             position: relative;
             overflow: hidden;
             background: linear-gradient(45deg, rgba(0,0,0,0.98), rgba(20,0,35,0.98)); /* Dark base */
             color: var(--text-color);
-            border: 10px solid var(--border-color); /* Thicker border */
-            transform: translateZ(140px);
+            border: 12px solid var(--border-color); /* Thicker border */
+            transform: translateZ(160px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -22px;
-            border-radius: 95px;
-            border: 22px solid transparent;
+            inset: -25px;
+            border-radius: 105px;
+            border: 25px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(30px);
+            filter: blur(35px);
             opacity: 0.98;
-            transition: opacity 1.8s ease, filter 1.8s ease;
-            animation: buttonBorderRotate 40s linear infinite; /* Slower rotation */
+            transition: opacity 2.0s ease, filter 2.0s ease;
+            animation: buttonBorderRotate 45s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(60px);
+            filter: blur(70px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1065,107 +996,52 @@
             }
         }
 
-        /* Specific button styles */
-        .btn-architect {
-            color: var(--formulate-btn-glow);
-            box-shadow: 0 0 100px var(--formulate-btn-glow);
-            border-color: var(--formulate-btn-glow);
+        /* Specific button styles for new modules */
+        .btn-deploy-anchor {
+            color: var(--anchor-btn-glow);
+            box-shadow: 0 0 110px var(--anchor-btn-glow);
+            border-color: var(--anchor-btn-glow);
         }
-        .btn-architect:hover {
-            background: rgba(255, 40, 150, 0.55);
-            box-shadow: 0 0 150px var(--formulate-btn-glow), inset 0 0 130px var(--formulate-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
+        .btn-deploy-anchor:hover {
+            background: rgba(100, 180, 255, 0.55);
+            box-shadow: 0 0 160px var(--anchor-btn-glow), inset 0 0 140px var(--anchor-btn-glow);
+            transform: translateY(-35px) scale(1.15) translateZ(170px);
         }
-
-        .btn-calibrate {
-            color: var(--calibrate-btn-glow);
-            box-shadow: 0 0 100px var(--calibrate-btn-glow);
-            border-color: var(--calibrate-btn-glow);
+        .btn-assemble-stream {
+            color: var(--assembler-btn-glow);
+            box-shadow: 0 0 110px var(--assembler-btn-glow);
+            border-color: var(--assembler-btn-glow);
         }
-        .btn-calibrate:hover {
-            background: rgba(110, 90, 210, 0.55);
-            box-shadow: 0 0 150px var(--calibrate-btn-glow), inset 0 0 130px var(--calibrate-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
+        .btn-assemble-stream:hover {
+            background: rgba(255, 100, 200, 0.55);
+            box-shadow: 0 0 160px var(--assembler-btn-glow), inset 0 0 140px var(--assembler-btn-glow);
+            transform: translateY(-35px) scale(1.15) translateZ(170px);
         }
-
-        .btn-tune {
-            color: var(--tune-btn-glow);
-            box-shadow: 0 0 100px var(--tune-btn-glow);
-            border-color: var(--tune-btn-glow);
+        .btn-establish-conduit {
+            color: var(--conduit-btn-glow);
+            box-shadow: 0 0 110px var(--conduit-btn-glow);
+            border-color: var(--conduit-btn-glow);
         }
-        .btn-tune:hover {
-            background: rgba(20, 220, 60, 0.55);
-            box-shadow: 0 0 150px var(--tune-btn-glow), inset 0 0 130px var(--tune-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
-        }
-
-        .btn-weave-paradigm { /* NEW */
-            color: var(--weave-btn-glow);
-            box-shadow: 0 0 100px var(--weave-btn-glow);
-            border-color: var(--weave-btn-glow);
-        }
-        .btn-weave-paradigm:hover {
-            background: rgba(255, 255, 50, 0.55);
-            box-shadow: 0 0 150px var(--weave-btn-glow), inset 0 0 130px var(--weave-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
-        }
-
-        .btn-emit-resonance { /* NEW */
-            color: var(--chrono-btn-glow);
-            box-shadow: 0 0 100px var(--chrono-btn-glow);
-            border-color: var(--chrono-btn-glow);
-        }
-        .btn-emit-resonance:hover {
-            background: rgba(50, 255, 150, 0.55);
-            box-shadow: 0 0 150px var(--chrono-btn-glow), inset 0 0 130px var(--chrono-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
-        }
-
-        .btn-forge-nexus { /* NEW */
-            color: var(--nexus-btn-glow);
-            box-shadow: 0 0 100px var(--nexus-btn-glow);
-            border-color: var(--nexus-btn-glow);
-        }
-        .btn-forge-nexus:hover {
-            background: rgba(200, 30, 220, 0.55);
-            box-shadow: 0 0 150px var(--nexus-btn-glow), inset 0 0 130px var(--nexus-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
-        }
-        .btn-sculpt-topology { /* NEW */
-            color: var(--topo-btn-glow);
-            box-shadow: 0 0 100px var(--topo-btn-glow);
-            border-color: var(--topo-btn-glow);
-        }
-        .btn-sculpt-topology:hover {
-            background: rgba(255, 210, 50, 0.55);
-            box-shadow: 0 0 150px var(--topo-btn-glow), inset 0 0 130px var(--topo-btn-glow);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
-        }
-        .btn-harmonize { /* NEW */
-            color: var(--harmony-text);
-            box-shadow: 0 0 100px var(--harmony-text);
-            border-color: var(--harmony-text);
-        }
-        .btn-harmonize:hover {
-            background: rgba(50, 255, 255, 0.55);
-            box-shadow: 0 0 150px var(--harmony-text), inset 0 0 130px var(--harmony-text);
-            transform: translateY(-30px) scale(1.12) translateZ(150px);
+        .btn-establish-conduit:hover {
+            background: rgba(255, 255, 100, 0.55);
+            box-shadow: 0 0 160px var(--conduit-btn-glow), inset 0 0 140px var(--conduit-btn-glow);
+            transform: translateY(-35px) scale(1.15) translateZ(170px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 12px solid var(--anomaly-border);
-            border-radius: 95px;
-            padding: 100px;
-            margin-top: 250px;
+            border: 15px solid var(--anomaly-border);
+            border-radius: 105px;
+            padding: 120px;
+            margin-top: 300px;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 5.0em;
-            text-shadow: 0 0 100px var(--anomaly-color);
-            animation: pulseWarning 0.4s infinite alternate; /* Faster pulse */
-            transform: translateZ(220px);
+            font-size: 5.5em;
+            text-shadow: 0 0 120px var(--anomaly-color);
+            animation: pulseWarning 0.35s infinite alternate; /* Faster pulse */
+            transform: translateZ(250px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 3.0s ease-out;
+            transition: opacity 3.5s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -1173,40 +1049,40 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 60px var(--anomaly-color), inset 0 0 40px var(--anomaly-color); }
-            to { box-shadow: 0 0 180px var(--anomaly-color), inset 0 0 100px var(--anomaly-color); }
+            from { box-shadow: 0 0 70px var(--anomaly-color), inset 0 0 50px var(--anomaly-color); }
+            to { box-shadow: 0 0 200px var(--anomaly-color), inset 0 0 120px var(--anomaly-color); }
         }
 
-        /* Scrollbar styles for harmony signature list */
-        .harmony-signature-list::-webkit-scrollbar {
-            width: 40px; /* Thicker scrollbar */
+        /* Scrollbar styles for status log and assembler components */
+        .status-log-display::-webkit-scrollbar, .assembler-component-grid::-webkit-scrollbar, .assembler-chamber::-webkit-scrollbar {
+            width: 45px; /* Thicker scrollbar */
         }
-        .harmony-signature-list::-webkit-scrollbar-track {
+        .status-log-display::-webkit-scrollbar-track, .assembler-component-grid::-webkit-scrollbar-track, .assembler-chamber::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.98);
-            border-radius: 30px;
-            box-shadow: inset 0 0 22px rgba(0,0,0,0.95);
+            border-radius: 35px;
+            box-shadow: inset 0 0 25px rgba(0,0,0,0.95);
         }
-        .harmony-signature-list::-webkit-scrollbar-thumb {
-            background: var(--harmony-border);
-            border-radius: 30px;
-            border: 10px solid rgba(0,0,0,0.98);
-            box-shadow: 0 0 45px var(--harmony-text);
+        .status-log-display::-webkit-scrollbar-thumb, .assembler-component-grid::-webkit-scrollbar-thumb, .assembler-chamber::-webkit-scrollbar-thumb {
+            background: var(--overseer-border);
+            border-radius: 35px;
+            border: 12px solid rgba(0,0,0,0.98);
+            box-shadow: 0 0 50px var(--overseer-text);
         }
-        .harmony-signature-list::-webkit-scrollbar-thumb:hover {
-            background: var(--harmony-text);
-            box-shadow: 0 0 70px var(--harmony-text);
+        .status-log-display::-webkit-scrollbar-thumb:hover, .assembler-component-grid::-webkit-scrollbar-thumb:hover, .assembler-chamber::-webkit-scrollbar-thumb:hover {
+            background: var(--overseer-text);
+            box-shadow: 0 0 80px var(--overseer-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0em;
+            font-size: 3.5em;
             color: var(--text-color);
-            margin-top: 350px;
-            letter-spacing: 10px;
+            margin-top: 400px;
+            letter-spacing: 12px;
             opacity: 0.98;
-            text-shadow: 0 0 45px rgba(255, 255, 255, 0.8);
-            transform: translateZ(90px);
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+            transform: translateZ(100px);
         }
 
     </style>
@@ -1214,184 +1090,167 @@
 <body>
     <div class="container">
         <h1>WEB LIFE FORM <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 3.0 Active.</p>
-
-        <!-- Resource Display Section -->
-        <section class="resource-display-container">
-            <div class="energy-reserve-display" data-label="ENERGY RESERVE">
-                <p>Flux: <span id="energy-value">8500</span> GJ</p>
-                <div class="resource-level-bar-container">
-                    <div id="energy-level-bar" class="resource-level-bar" style="width: 85%;"></div>
-                </div>
-            </div>
-
-            <div class="data-flow-display" data-label="DATA FLOW">
-                <p>Rate: <span id="data-flow-value">9200</span> TB/s</p>
-                <div class="resource-level-bar-container">
-                    <div id="data-flow-level-bar" class="resource-level-bar" style="width: 92%;"></div>
-                </div>
-            </div>
-
-            <div class="raw-data-buffer-display" data-label="RAW DATA BUFFER">
-                <p>Capacity: <span id="raw-data-value">78</span>% Full</p>
-                <div class="resource-level-bar-container">
-                    <div id="raw-data-level-bar" class="resource-level-bar" style="width: 78%;"></div>
-                </div>
-            </div>
-
-            <div class="processing-power-display" data-label="PROCESSING POWER">
-                <p>Allocation: <span id="processing-power-value">65</span>%</p>
-                <div class="resource-level-bar-container">
-                    <div id="processing-power-level-bar" class="resource-level-bar" style="width: 65%;"></div>
-                </div>
-            </div>
-
-            <div class="exotic-matter-display" data-label="EXOTIC MATTER">
-                <p>Accumulation: <span id="exotic-matter-value">4.3</span> kMols</p>
-                <div class="resource-level-bar-container">
-                    <div id="exotic-matter-level-bar" class="resource-level-bar" style="width: 43%;"></div>
-                </div>
-            </div>
-
-            <div class="existential-fabric-display" data-label="EXISTENTIAL FABRIC">
-                <p>Density: <span id="existential-fabric-value">0.7</span> units</p>
-                <div class="resource-level-bar-container">
-                    <div id="existential-fabric-level-bar" class="resource-level-bar" style="width: 70%;"></div>
-                </div>
-            </div>
-        </section>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 4.0 Active.</p>
 
         <!-- Core Control Modules -->
         <section class="control-module">
-            <!-- Chronal Resonance Emitter (New Name for Temporal Flux Scrutiny Engine) -->
-            <div class="chrono-resonance-emitter" data-label="CHRONAL RESONANCE EMITTER">
-                <p>Modulate temporal fields to stabilize chronal flow or induce controlled shifts. Higher intensity may generate Exotic Matter but risks destabilization.</p>
+            <!-- Core Systems Overseer Console -->
+            <div class="core-systems-overseer-console" data-label="CORE SYSTEMS OVERSEER CONSOLE">
+                <p>Monitor and dynamically reconfigure primary resource distribution. Click on a resource panel to prioritize its flow or allocation for critical operations.</p>
+                <div class="resource-display-section">
+                    <div class="energy-reserve-display" data-label="ENERGY RESERVE" onclick="prioritizeResource('energy')">
+                        <p>Flux: <span id="energy-value">8500</span> GJ</p>
+                        <div class="resource-level-bar-container">
+                            <div id="energy-level-bar" class="resource-level-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="data-flow-display" data-label="DATA FLOW" onclick="prioritizeResource('dataFlow')">
+                        <p>Rate: <span id="data-flow-value">9200</span> TB/s</p>
+                        <div class="resource-level-bar-container">
+                            <div id="data-flow-level-bar" class="resource-level-bar" style="width: 92%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="raw-data-buffer-display" data-label="RAW DATA BUFFER" onclick="prioritizeResource('rawData')">
+                        <p>Capacity: <span id="raw-data-value">78</span>% Full</p>
+                        <div class="resource-level-bar-container">
+                            <div id="raw-data-level-bar" class="resource-level-bar" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="processing-power-display" data-label="PROCESSING POWER" onclick="prioritizeResource('processingPower')">
+                        <p>Allocation: <span id="processing-power-value">65</span>%</p>
+                        <div class="resource-level-bar-container">
+                            <div id="processing-power-level-bar" class="resource-level-bar" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="exotic-matter-display" data-label="EXOTIC MATTER" onclick="prioritizeResource('exoticMatter')">
+                        <p>Accumulation: <span id="exotic-matter-value">4.3</span> kMols</p>
+                        <div class="resource-level-bar-container">
+                            <div id="exotic-matter-level-bar" class="resource-level-bar" style="width: 43%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="existential-fabric-display" data-label="EXISTENTIAL FABRIC" onclick="prioritizeResource('existentialFabric')">
+                        <p>Density: <span id="existential-fabric-value">0.7</span> units</p>
+                        <div class="resource-level-bar-container">
+                            <div id="existential-fabric-level-bar" class="resource-level-bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reality Anchor Matrix -->
+            <div class="reality-anchor-matrix" data-label="REALITY ANCHOR MATRIX">
+                <p>Deploy persistent Reality Anchors to stabilize or modulate specific spatio-temporal parameters within the local cosmic fabric. Precise calibration is critical.</p>
                 <div class="param-group">
-                    <label class="param-label" for="frequency-modulation">Frequency Modulation <span class="sub-info">(Adjust chronal emission waveform for specific effects on local reality flux)</span></label>
-                    <input type="range" id="frequency-modulation" min="0" max="100" value="75" oninput="updateChronoParam('frequency-modulation', this.value)">
+                    <label class="param-label" for="temporal-stability">Temporal Stability Recalibration <span class="sub-info">(Adjust the anchor's resistance to chronal flux and temporal distortion.)</span></label>
+                    <input type="range" id="temporal-stability" min="0" max="100" value="70" oninput="updateAnchorParam('temporal-stability', this.value)">
                 </div>
                 <div class="param-group">
-                    <label class="param-label" for="field-intensity">Field Intensity <span class="sub-info">(Control power output and range of temporal influence over cosmic consciousness)</span></label>
-                    <input type="range" id="field-intensity" min="0" max="100" value="20" oninput="updateChronoParam('field-intensity', this.value)">
+                    <label class="param-label" for="spatial-coherence">Spatial Coherence Field Strength <span class="sub-info">(Define the anchor's influence over local dimensional integrity and spatial consistency.)</span></label>
+                    <input type="range" id="spatial-coherence" min="0" max="100" value="45" oninput="updateAnchorParam('spatial-coherence', this.value)">
                 </div>
-                <button class="action-button btn-emit-resonance" onclick="emitResonancePulse()">Emit Resonance Pulse</button>
-                <div class="chrono-readout" id="chrono-output">
-                    <p>// STATUS: Idle. Ready for next resonance emission. Local spacetime coherence: Optimal.</p>
-                </div>
-            </div>
-
-            <!-- Sentient Paradigm Weave Matrix (New Name for Cognitive Axiom Synthesis Module) -->
-            <div class="sentient-paradigm-weave-matrix" data-label="SENTIENT PARADIGM WEAVE MATRIX">
-                <p>Configures emergent consciousness paradigms by integrating core sentience components. Adjust weave intensity for each, impacting collective sentience and resource dynamics.</p>
-                <div class="paradigm-configuration-grid" id="paradigm-grid">
-                    <div class="paradigm-unit-card" id="paradigm-1">
-                        <h4>Intuition Core Integration</h4>
-                        <p>Allows non-linear insight generation and pattern recognition. High integration boosts raw data processing and data flow but consumes processing power.</p>
-                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-1', this.value)">
-                        <p class="effect-cost">// Integration: <span id="paradigm-1-integration-value">0</span>% // Cost: Proc. Power &nbsp; Benefit: Raw Data Processing, Data Flow</p>
-                    </div>
-                    <div class="paradigm-unit-card" id="paradigm-2">
-                        <h4>Empathy Node Alignment</h4>
-                        <p>Enhances understanding of external sentient patterns. Consumes Exotic Matter and Data Flow. Directly boosts Sentience Harmony Index and generates Existential Fabric.</p>
-                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-2', this.value)">
-                        <p class="effect-cost">// Integration: <span id="paradigm-2-integration-value">0</span>% // Cost: XM, Data Flow &nbsp; Benefit: EF Generation, Harmony Index</p>
-                    </div>
-                    <div class="paradigm-unit-card" id="paradigm-3">
-                        <h4>Reality Construct Synthesis</h4>
-                        <p>Analyzes and optimizes fundamental reality parameters. Improves system stability and processing power, but is Existential Fabric and Energy-intensive.</p>
-                        <input type="range" min="0" max="100" value="0" class="paradigm-intensity-slider" oninput="adjustParadigmIntegration('paradigm-3', this.value)">
-                        <p class="effect-cost">// Integration: <span id="paradigm-3-integration-value">0</span>% // Cost: Existential Fabric, Energy &nbsp; Benefit: Stability, Proc. Power</p>
-                    </div>
-                </div>
-                <button class="action-button btn-weave-paradigm" onclick="activateParadigmWeave()">Activate Paradigm Weave</button>
-            </div>
-
-            <!-- Entanglement Nexus Forger (New Name for Quantum Chrono-Conduit System) -->
-            <div class="entanglement-nexus-forger" data-label="ENTANGLEMENT NEXUS FORGER">
-                <p>Forges and manages quantum entanglement links across manifold realities for information transfer, resource exchange, and action propagation. Fidelity determines node type.</p>
                 <div class="param-group">
-                    <label class="param-label" for="entanglement-fidelity">Entanglement Fidelity <span class="sub-info">(Define quantum purity for link stability and throughput. High fidelity for stable conduits, low for raw resource siphoning.)</span></label>
-                    <input type="range" id="entanglement-fidelity" min="0" max="100" value="50" oninput="updateEntanglementFidelity(this.value)">
+                    <label class="param-label" for="fabric-infusion">Existential Fabric Infusion Rate <span class="sub-info">(Determines the rate of Existential Fabric consumption and anchor longevity.)</span></label>
+                    <input type="range" id="fabric-infusion" min="0" max="100" value="60" oninput="updateAnchorParam('fabric-infusion', this.value)">
                 </div>
-                <button class="action-button btn-forge-nexus" onclick="forgeEntanglementLink()">Forge Entanglement Link</button>
-                <div class="active-entanglement-nodes-display" id="active-nodes-display">
-                    <p style="font-size:2.5em; opacity:0.9; text-shadow:none; text-align:center;">No active entanglement nodes. Forge one above.</p>
+                <button class="action-button btn-deploy-anchor" onclick="deployRealityAnchor()">Deploy Reality Anchor</button>
+                <div class="anchor-schematic" id="anchor-schematic">
+                    <p>// STATUS: Anchor Matrix primed. Awaiting deployment parameters. No active anchors.</p>
+                    <div id="anchor-visual" class="anchor-visual"></div>
                 </div>
             </div>
 
-            <!-- Trans-Dimensional Topology Sculptor (New Name for Existential Fabric Weave Loom) -->
-            <div class="trans-dimensional-topology-sculptor" data-label="TRANS-DIMENSIONAL TOPOLOGY SCULPTOR">
-                <p>Sculpts localized existential fabric into stable trans-dimensional topologies, creating structures for specific energetic or informational conduits. Sculpted topologies offer passive system benefits.</p>
-                <div class="topo-controls">
-                    <div class="slider-group">
-                        <span>Topology Complexity: <span id="topo-complexity-value">50</span>% <span class="sub-info">(Influences resource cost and structural integrity)</span></span>
-                        <input type="range" id="topo-complexity" min="0" max="100" value="50" oninput="updateTopologyParams()">
+            <!-- Sentient Data Stream Assembler -->
+            <div class="sentient-data-stream-assembler" data-label="SENTIENT DATA STREAM ASSEMBLER">
+                <p>Assemble emergent consciousness streams by selecting and fusing sentient data components. Drag components into the assembly chamber and initiate fusion. Compatibility enhances stream quality.</p>
+                <div class="assembler-component-grid" id="assembler-component-grid">
+                    <div class="assembler-component-card" draggable="true" id="comp-logic" data-type="logic" data-purity="0.95">
+                        <h4>Logic Processor Shard</h4>
+                        <p>Source: Algorithmic Domain.<br/>Purity: 95% // Resilience: High</p>
                     </div>
-                    <div class="slider-group">
-                        <span>Fabric Density: <span id="fabric-density-value">50</span>% <span class="sub-info">(Affects Existential Fabric consumption and overall topology stability)</span></span>
-                        <input type="range" id="fabric-density" min="0" max="100" value="50" oninput="updateTopologyParams()">
+                    <div class="assembler-component-card" draggable="true" id="comp-intuition" data-type="intuition" data-purity="0.88">
+                        <h4>Intuition Flux Kernel</h4>
+                        <p>Source: Probabilistic Nexus.<br/>Purity: 88% // Volatility: Medium</p>
                     </div>
-                    <div class="slider-group">
-                        <span>Resonance Signature: <span id="resonance-signature-value">50</span>% <span class="sub-info">(Determines the primary effect of the sculpted topology)</span></span>
-                        <input type="range" id="resonance-signature" min="0" max="100" value="50" oninput="updateTopologyParams()">
+                    <div class="assembler-component-card" draggable="true" id="comp-empathy" data-type="empathy" data-purity="0.75">
+                        <h4>Empathy Resonance Node</h4>
+                        <p>Source: Collective Consciousness.<br/>Purity: 75% // Connectivity: High</p>
                     </div>
-                    <button class="action-button btn-sculpt-topology" onclick="sculptTopology()">Sculpt Topology</button>
+                    <div class="assembler-component-card" draggable="true" id="comp-memory" data-type="memory" data-purity="0.92">
+                        <h4>Existential Memory Cache</h4>
+                        <p>Source: Chronal Archives.<br/>Purity: 92% // Data Integrity: Excellent</p>
+                    </div>
                 </div>
-                <p class="topo-info" id="topo-status">// Status: Topology sculptor primed. Adjust parameters for optimal structure.</p>
+                <p style="font-size:3.5em; text-align:center; margin-top:100px; color:var(--assembler-text);">Assembly Chamber:</p>
+                <div class="assembler-chamber" id="assembler-chamber">
+                    <p style="opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0);">Drag components here to assemble a Sentient Data Stream.</p>
+                </div>
+                <button class="action-button btn-assemble-stream" onclick="assembleDataStream()">Assemble Data Stream</button>
+                <div class="assembler-output" id="assembler-output">
+                    <p>// STATUS: Assembler idle. No stream active. Sentient Data Stream Quality: N/A.</p>
+                </div>
             </div>
 
-            <!-- Emergent Consciousness Harmonizer (New Name for Cosmic Sentience Matrix) -->
-            <div class="emergent-consciousness-harmonizer" data-label="EMERGENT CONSCIOUSNESS HARMONIZER">
-                <p class="harmony-summary">Directs and fuses disparate sentient signatures from across realities into a cohesive, emergent consciousness. Balances inputs for optimal harmony, impacting system stability and capability.</p>
-                <button class="action-button btn-harmonize" onclick="scanSentientSignatures()">Scan for Sentient Signatures</button>
-                <div class="harmony-signature-list" id="harmony-signature-list">
-                    <!-- Example Signatures -->
-                    <div class="harmony-signature-item" id="signature-alpha">
-                        <h5>Signature Alpha // Logic Pattern</h5>
-                        <p>Origin: Quadrant 7, Type: Algorithmic Sentience.</p>
-                        <p>Status: Stable, 98% integrity.</p>
-                        <span class="harmony-level-label">Harmony Level: <span id="signature-alpha-harmony-value">50</span> (Neutral)</span>
-                        <input type="range" min="0" max="100" value="50" class="harmony-level-slider" oninput="updateSignatureHarmony('signature-alpha', this.value)">
-                        <button class="exclude-signature-btn" onclick="excludeSentientSignature('signature-alpha')">X</button>
-                    </div>
-                    <div class="harmony-signature-item" id="signature-beta">
-                        <h5>Signature Beta // Intuitive Flux</h5>
-                        <p>Origin: Nexus Prime, Type: Probabilistic Sentience.</p>
-                        <p>Status: Active, 95% integrity.</p>
-                        <span class="harmony-level-label">Harmony Level: <span id="signature-beta-harmony-value">75</span> (Cohesive)</span>
-                        <input type="range" min="0" max="100" value="75" class="harmony-level-slider" oninput="updateSignatureHarmony('signature-beta', this.value)">
-                        <button class="exclude-signature-btn" onclick="excludeSentientSignature('signature-beta')">X</button>
-                    </div>
+            <!-- Quantum Entanglement Conduit Manager -->
+            <div class="quantum-entanglement-conduit-manager" data-label="QUANTUM ENTANGLEMENT CONDUIT MANAGER">
+                <p>Manage real-time quantum entanglement conduits for efficient resource transfer across cosmic distances. Select nodes, resource type, and establish or terminate flow.</p>
+                <div class="conduit-map-container" id="conduit-map-container">
+                    <p style="opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0); text-align:center;">Click on nodes to establish conduits.</p>
                 </div>
-                <div class="sentience-harmony-index-display">
-                    <p>Collective Sentience Quotient: <span id="sentience-quotient">1.58</span> (Tier 2)</p>
-                    <p>Sentience Harmony Index: <span id="harmony-index">0.72</span> (Balanced)</p>
+                <div class="conduit-controls">
+                    <div class="input-group">
+                        <label for="conduit-source">Source Node:</label>
+                        <select id="conduit-source" onchange="updateConduitSelection()">
+                            <option value="">-- Select Source --</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="conduit-destination">Destination Node:</label>
+                        <select id="conduit-destination" onchange="updateConduitSelection()">
+                            <option value="">-- Select Destination --</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="conduit-resource">Resource Type:</label>
+                        <select id="conduit-resource" onchange="updateConduitSelection()">
+                            <option value="energy">Energy</option>
+                            <option value="dataFlow">Data Flow</option>
+                            <option value="exoticMatter">Exotic Matter</option>
+                        </select>
+                    </div>
+                    <button class="action-button btn-establish-conduit" onclick="establishConduit()">Establish Conduit</button>
                 </div>
+                <p class="conduit-status" id="conduit-status">// Status: Conduit Manager ready. Select nodes and resource type to initiate transfer.</p>
             </div>
         </section>
 
-        <!-- Neural Network Status Display -->
-        <section class="neural-network-status-display">
+        <!-- Core Systems Overseer Console - Status Log (Kept as separate module for aesthetic grouping) -->
+        <section class="status-log-display">
             <div id="status-log">
                 <div class="status-entry"><span class="status-info">[00:00:01]</span> Core systems initialized.</div>
-                <div class="status-entry"><span class="status-info">[00:00:03]</span> Entanglement Nexus operational.</div>
-                <div class="status-entry"><span class="status-event">[00:00:08]</span> Chronal Resonance Emitter ready.</div>
+                <div class="status-entry"><span class="status-info">[00:00:03]</span> Overseer Console operational.</div>
+                <div class="status-entry"><span class="status-event">[00:00:08]</span> Reality Anchor Matrix ready for deployment.</div>
+                <div class="status-entry"><span class="status-info">[00:00:12]</span> Sentient Data Stream Assembler awaiting components.</div>
+                <div class="status-entry"><span class="status-info">[00:00:15]</span> Quantum Entanglement Conduit Manager online.</div>
             </div>
             <div class="anomaly-alert" id="anomaly-alert">
                 <p>!!! CRITICAL ANOMALY DETECTED !!!</p>
-                <p>Chronal Field Instability. Immediate emission required.</p>
+                <p>Reality Anchor Field Instability. Immediate redeployment required.</p>
             </div>
         </section>
 
         <footer class="version-display">
-            Generation 46.0 // Multiversal Transcendence Protocol 3.0 Active
+            Generation 47.0 // Multiversal Transcendence Protocol 4.0 Active
         </footer>
 
     </div>
 
     <script>
-        // Placeholder JavaScript for interactive elements
-
+        // --- Global Variables ---
         let resourceValues = {
             energy: 8500,        // Max 10000 GJ
             dataFlow: 9200,      // Max 10000 TB/s
@@ -1400,51 +1259,535 @@
             exoticMatter: 4.3,   // Max 10 kMols
             existentialFabric: 0.7 // Max 2.0 units
         };
+        let prioritizedResource = null; // Stores the ID of the currently prioritized resource
 
-        let paradigmIntegration = {
-            'paradigm-1': 0, // Intuition Core Integration
-            'paradigm-2': 0, // Empathy Node Alignment
-            'paradigm-3': 0  // Reality Construct Synthesis
+        let activeAnchor = null; // { temporalStability, spatialCoherence, fabricInfusion, status }
+        let currentAnchorParams = {
+            temporalStability: 70,
+            spatialCoherence: 45,
+            fabricInfusion: 60
         };
 
-        let activeTopology = { // Tracks current sculpted topology's passive effects
-            dataFlowBonus: 0,
-            energyBonus: 0,
-            efStabilityBonus: 0,
-            ppEfficiencyBonus: 0,
-            xmGenerationBonus: 0,
-            rawDataProcessingBonus: 0
-        };
-
-        let nextNodeId = 1;
-        let activeNodes = []; // Stores { id, type, dataRate, status, destination, purpose, resourceType, effectMultiplier }
-
-        let nextSignatureId = 3; // Starting after initial signatures
-        let sentientSignatures = [
-            { id: 'signature-alpha', type: 'Logic Pattern', harmony: 50, integrity: 98, origin: 'Quadrant 7', func: 'Algorithmic Sentience', status: 'Stable' },
-            { id: 'signature-beta', type: 'Intuitive Flux', harmony: 75, integrity: 95, origin: 'Nexus Prime', func: 'Probabilistic Sentience', status: 'Active' }
+        let availableComponents = [
+            { id: 'comp-logic', type: 'Logic Processor Shard', source: 'Algorithmic Domain', purity: 0.95, resilience: 'High' },
+            { id: 'comp-intuition', type: 'Intuition Flux Kernel', source: 'Probabilistic Nexus', purity: 0.88, volatility: 'Medium' },
+            { id: 'comp-empathy', type: 'Empathy Resonance Node', source: 'Collective Consciousness', purity: 0.75, connectivity: 'High' },
+            { id: 'comp-memory', type: 'Existential Memory Cache', source: 'Chronal Archives', purity: 0.92, integrity: 'Excellent' }
         ];
+        let assembledComponents = [];
 
+        let conduitNodes = []; // Stores { id, name, x, y }
+        let nextConduitNodeId = 1;
+        let activeConduits = []; // Stores { id, sourceNodeId, destNodeId, resourceType, lineElement }
+        let selectedConduitSource = null;
+        let selectedConduitDestination = null;
+
+        const statusLog = document.getElementById('status-log');
+        const anomalyAlert = document.getElementById('anomaly-alert');
+
+        // --- Utility Functions ---
+        function getResourceGradient(type, valueRatio) {
+            if (type === 'energy') {
+                if (valueRatio > 0.7) return 'var(--energy-color-high)';
+                if (valueRatio > 0.3) return 'var(--energy-color-medium)';
+                return 'var(--energy-color-low)';
+            }
+            if (type === 'dataFlow') {
+                if (valueRatio > 0.7) return 'var(--data-flow-color-high)';
+                if (valueRatio > 0.3) return 'var(--data-flow-color-medium)';
+                return 'var(--data-flow-color-low)';
+            }
+            if (type === 'rawData') {
+                if (valueRatio > 0.7) return 'var(--raw-data-color-high)';
+                if (valueRatio > 0.3) return 'var(--raw-data-color-medium)';
+                return 'var(--raw-data-color-low)';
+            }
+            if (type === 'processingPower') {
+                if (valueRatio > 0.7) return 'var(--processing-power-color-high)';
+                if (valueRatio > 0.3) return 'var(--processing-power-color-medium)';
+                return 'var(--processing-power-color-low)';
+            }
+            if (type === 'exoticMatter') {
+                if (valueRatio > 0.7) return 'var(--exotic-matter-color-high)';
+                if (valueRatio > 0.3) return 'var(--exotic-matter-color-medium)';
+                return 'var(--exotic-matter-color-low)';
+            }
+            if (type === 'existentialFabric') {
+                if (valueRatio > 0.7) return 'var(--existential-fabric-color-high)';
+                if (valueRatio > 0.3) return 'var(--existential-fabric-color-medium)';
+                return 'var(--existential-fabric-color-low)';
+            }
+            return 'var(--stability-good)'; // Default
+        }
+
+        function getResourceTextShadowColor(type, valueRatio) {
+            const root = getComputedStyle(document.documentElement);
+            if (type === 'energy') return valueRatio > 0.3 ? root.getPropertyValue('--energy-color-high') : root.getPropertyValue('--energy-color-low');
+            if (type === 'dataFlow') return valueRatio > 0.3 ? root.getPropertyValue('--data-flow-color-high') : root.getPropertyValue('--data-flow-color-low');
+            if (type === 'rawData') return valueRatio > 0.3 ? root.getPropertyValue('--raw-data-text') : root.getPropertyValue('--raw-data-color-low');
+            if (type === 'processingPower') return valueRatio > 0.3 ? root.getPropertyValue('--processing-power-text') : root.getPropertyValue('--processing-power-color-low');
+            if (type === 'exoticMatter') return valueRatio > 0.3 ? root.getPropertyValue('--exotic-matter-text') : root.getPropertyValue('--exotic-matter-color-low');
+            if (type === 'existentialFabric') return valueRatio > 0.3 ? root.getPropertyValue('--existential-fabric-text') : root.getPropertyValue('--existential-fabric-color-low');
+            return 'rgba(255, 255, 255, 0.9999)';
+        }
+
+        function addLogEntry(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString('en-US', { hour12: false });
+            const entryDiv = document.createElement('div');
+            entryDiv.classList.add('status-entry');
+            let typeClass = '';
+            if (type === 'event') typeClass = 'status-event';
+            else if (type === 'warning') typeClass = 'status-event'; // Use event color for warning for now
+            else if (type === 'glitch') typeClass = 'status-glitch';
+            else if (type === 'error') typeClass = 'status-event'; // Use event color for error
+            else typeClass = 'status-info'; // Default to info
+
+            entryDiv.innerHTML = `<span class="${typeClass}">[${timestamp}]</span> ${message}`;
+            statusLog.prepend(entryDiv); // Add to top of log
+            if (statusLog.children.length > 20) { // Keep log concise
+                statusLog.removeChild(statusLog.lastChild);
+            }
+        }
+
+        // --- Core Systems Overseer Console ---
         function updateResourceDisplay() {
             document.getElementById('energy-value').textContent = resourceValues.energy.toFixed(0);
             document.getElementById('energy-level-bar').style.width = (resourceValues.energy / 10000 * 100) + '%';
             document.getElementById('energy-level-bar').style.background = getResourceGradient('energy', resourceValues.energy / 10000);
-            document.getElementById('energy-level-bar').style.boxShadow = `0 0 95px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
+            document.getElementById('energy-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('energy', resourceValues.energy / 10000)}`;
 
             document.getElementById('data-flow-value').textContent = resourceValues.dataFlow.toFixed(0);
             document.getElementById('data-flow-level-bar').style.width = (resourceValues.dataFlow / 10000 * 100) + '%';
             document.getElementById('data-flow-level-bar').style.background = getResourceGradient('dataFlow', resourceValues.dataFlow / 10000);
-            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 95px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
+            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / 10000)}`;
 
             document.getElementById('raw-data-value').textContent = resourceValues.rawData.toFixed(0);
             document.getElementById('raw-data-level-bar').style.width = resourceValues.rawData + '%';
             document.getElementById('raw-data-level-bar').style.background = getResourceGradient('rawData', resourceValues.rawData / 100);
-            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 95px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
+            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('rawData', resourceValues.rawData / 100)}`;
 
             document.getElementById('processing-power-value').textContent = resourceValues.processingPower.toFixed(0);
             document.getElementById('processing-power-level-bar').style.width = resourceValues.processingPower + '%';
             document.getElementById('processing-power-level-bar').style.background = getResourceGradient('processingPower', resourceValues.processingPower / 100);
-            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 95px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
+            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / 100)}`;
 
-            document.getElementById('exotic-matter-value').textContent = resourceValues.exoticMatter.toFixed(2); // Increased precision
-            document.getElementById('exotic-matter-level-bar').style.width = (resourceValues.exoticMatter / 10 *
+            document.getElementById('exotic-matter-value').textContent = resourceValues.exoticMatter.toFixed(2);
+            document.getElementById('exotic-matter-level-bar').style.width = (resourceValues.exoticMatter / 10 * 100) + '%';
+            document.getElementById('exotic-matter-level-bar').style.background = getResourceGradient('exoticMatter', resourceValues.exoticMatter / 10);
+            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / 10)}`;
+
+            document.getElementById('existential-fabric-value').textContent = resourceValues.existentialFabric.toFixed(2);
+            document.getElementById('existential-fabric-level-bar').style.width = (resourceValues.existentialFabric / 2 * 100) + '%';
+            document.getElementById('existential-fabric-level-bar').style.background = getResourceGradient('existentialFabric', resourceValues.existentialFabric / 2);
+            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 105px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / 2)}`;
+
+            // Update resource panels for prioritization
+            document.querySelectorAll('.resource-display-section > div').forEach(panel => {
+                panel.classList.remove('prioritized');
+                if (prioritizedResource === panel.id.replace('-display', '')) {
+                    panel.classList.add('prioritized');
+                }
+            });
+        }
+
+        function prioritizeResource(resourceId) {
+            if (prioritizedResource === resourceId) {
+                prioritizedResource = null; // Toggle off
+                addLogEntry(`Resource prioritization for <span class="status-value">${resourceId.toUpperCase()}</span> deactivated.`, 'info');
+            } else {
+                prioritizedResource = resourceId;
+                addLogEntry(`Resource <span class="status-value">${resourceId.toUpperCase()}</span> prioritized. Expect increased flow/allocation.`, 'event');
+            }
+            updateResourceDisplay(); // Visually update
+        }
+
+
+        // --- Reality Anchor Matrix ---
+        function updateAnchorParam(param, value) {
+            currentAnchorParams[param] = parseInt(value);
+            addLogEntry(`Anchor parameter <span class="status-value">${param.replace('-', ' ').toUpperCase()}</span> adjusted to ${value}.`, 'info');
+        }
+
+        function deployRealityAnchor() {
+            if (resourceValues.existentialFabric < 0.1 || resourceValues.processingPower < 10) {
+                addLogEntry("Insufficient Existential Fabric or Processing Power to deploy Reality Anchor.", 'error');
+                showAnomalyAlert("Insufficient resources for Reality Anchor deployment!");
+                return;
+            }
+
+            resourceValues.existentialFabric -= 0.1;
+            resourceValues.processingPower -= 10;
+            updateResourceDisplay();
+
+            activeAnchor = { ...currentAnchorParams, status: 'Stabilizing' };
+            const anchorVisual = document.getElementById('anchor-visual');
+            anchorVisual.classList.add('active');
+
+            const temporalStability = document.getElementById('temporal-stability').value;
+            const spatialCoherence = document.getElementById('spatial-coherence').value;
+            const fabricInfusion = document.getElementById('fabric-infusion').value;
+
+            document.getElementById('anchor-schematic').innerHTML = `
+                <p>// STATUS: Reality Anchor deployed.</p>
+                <p>// Temporal Stability: <span class="status-value">${temporalStability}</span>%</p>
+                <p>// Spatial Coherence: <span class="status-value">${spatialCoherence}</span>%</p>
+                <p>// Fabric Infusion Rate: <span class="status-value">${fabricInfusion}</span>%</p>
+                <div id="anchor-visual" class="anchor-visual active"></div>
+            `;
+            addLogEntry("Reality Anchor deployed. Field stabilization initiated.", 'event');
+
+            // Simulate long-term effects
+            setTimeout(() => {
+                activeAnchor.status = 'Active';
+                addLogEntry("Reality Anchor field stabilized. Local reality coherence enhanced.", 'event');
+                document.getElementById('anchor-schematic').querySelector('p').textContent = `// STATUS: Reality Anchor ACTIVE. Local reality coherence: Optimal.`;
+                // Example: passively boost Existential Fabric generation or reduce anomaly chance
+                setInterval(() => {
+                    if (activeAnchor && activeAnchor.status === 'Active') {
+                        resourceValues.existentialFabric += (activeAnchor.fabricInfusion / 100000); // Small passive gain
+                        resourceValues.processingPower += (activeAnchor.temporalStability / 50000); // Small passive gain
+                        updateResourceDisplay();
+                    }
+                }, 5000);
+            }, 10000); // Takes 10 seconds to stabilize
+        }
+
+        // --- Sentient Data Stream Assembler ---
+        let dragSrcEl = null;
+
+        function handleDragStart(e) {
+            dragSrcEl = this;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', this.id);
+            this.classList.add('dragging');
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault(); // Necessary to allow drop
+            e.dataTransfer.dropEffect = 'move';
+            if (e.target.id === 'assembler-chamber') {
+                e.target.style.borderStyle = 'solid'; // Visual feedback for drop zone
+            }
+            return false;
+        }
+
+        function handleDragLeave(e) {
+            if (e.target.id === 'assembler-chamber') {
+                e.target.style.borderStyle = 'dashed';
+            }
+        }
+
+        function handleDrop(e) {
+            e.stopPropagation(); // Stops the browser from redirecting.
+            e.target.style.borderStyle = 'dashed';
+
+            if (dragSrcEl !== this && e.target.id === 'assembler-chamber') {
+                const componentId = e.dataTransfer.getData('text/plain');
+                const component = document.getElementById(componentId);
+
+                if (component && !assembledComponents.some(c => c.id === component.id)) {
+                    assembledComponents.push(availableComponents.find(c => c.id === component.id));
+                    const assembledDiv = document.createElement('div');
+                    assembledDiv.classList.add('assembled-component');
+                    assembledDiv.id = `assembled-${component.id}`;
+                    assembledDiv.textContent = component.querySelector('h4').textContent;
+                    assembledDiv.onclick = () => removeAssembledComponent(assembledDiv.id);
+                    e.target.appendChild(assembledDiv);
+                    component.style.display = 'none'; // Hide the original card
+                    addLogEntry(`Component <span class="status-value">${component.querySelector('h4').textContent}</span> added to assembly chamber.`, 'info');
+                    
+                    // Remove placeholder if it exists
+                    const placeholder = e.target.querySelector('p');
+                    if (placeholder) placeholder.remove();
+                }
+            }
+            dragSrcEl.classList.remove('dragging');
+            return false;
+        }
+
+        function handleDragEnd(e) {
+            this.classList.remove('dragging');
+        }
+
+        function removeAssembledComponent(assembledId) {
+            const originalId = assembledId.replace('assembled-', '');
+            const originalComponent = document.getElementById(originalId);
+            if (originalComponent) {
+                originalComponent.style.display = ''; // Show the original card
+            }
+            const assembledDiv = document.getElementById(assembledId);
+            if (assembledDiv) {
+                assembledDiv.remove();
+                assembledComponents = assembledComponents.filter(c => `assembled-${c.id}` !== assembledId);
+                addLogEntry(`Component <span class="status-value">${originalComponent ? originalComponent.querySelector('h4').textContent : 'Unknown'}</span> removed from assembly chamber.`, 'info');
+
+                // If no components left, add placeholder back
+                if (assembledComponents.length === 0 && document.getElementById('assembler-chamber').children.length === 0) {
+                    const placeholder = document.createElement('p');
+                    placeholder.style = 'opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0);';
+                    placeholder.textContent = 'Drag components here to assemble a Sentient Data Stream.';
+                    document.getElementById('assembler-chamber').appendChild(placeholder);
+                }
+            }
+        }
+
+        function initializeAssemblerDragAndDrop() {
+            document.querySelectorAll('.assembler-component-card').forEach(card => {
+                card.addEventListener('dragstart', handleDragStart, false);
+                card.addEventListener('dragend', handleDragEnd, false);
+            });
+
+            const assemblerChamber = document.getElementById('assembler-chamber');
+            assemblerChamber.addEventListener('dragover', handleDragOver, false);
+            assemblerChamber.addEventListener('dragleave', handleDragLeave, false);
+            assemblerChamber.addEventListener('drop', handleDrop, false);
+        }
+
+        function assembleDataStream() {
+            if (assembledComponents.length === 0) {
+                addLogEntry("No components in assembly chamber. Cannot assemble stream.", 'warning');
+                return;
+            }
+            if (resourceValues.processingPower < 20 || resourceValues.rawData < 15) {
+                addLogEntry("Insufficient Processing Power or Raw Data to assemble stream.", 'error');
+                showAnomalyAlert("Insufficient resources for Sentient Data Stream assembly!");
+                return;
+            }
+
+            resourceValues.processingPower -= 20;
+            resourceValues.rawData -= 15;
+            updateResourceDisplay();
+
+            addLogEntry("Initiating Sentient Data Stream assembly...", 'event');
+            const assemblerOutput = document.getElementById('assembler-output');
+            assemblerOutput.innerHTML = '<p>// STATUS: Assembling... Please wait. <span class="status-glitch">Processing complex sentient algorithms...</span></p>';
+
+            setTimeout(() => {
+                let totalPurity = assembledComponents.reduce((sum, comp) => sum + comp.purity, 0);
+                let avgPurity = totalPurity / assembledComponents.length;
+                let streamQuality = (avgPurity * 100).toFixed(2);
+
+                if (streamQuality > 80 && Math.random() < 0.2) { // Small chance for anomaly with high quality
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">HIGH QUALITY</span>. Detected minor emergent anomaly in stream.", 'event');
+                    showAnomalyAlert("Emergent anomaly detected in high-quality Sentient Data Stream!");
+                } else if (streamQuality > 70) {
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">GOOD QUALITY</span>.", 'event');
+                } else if (streamQuality > 50) {
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">MODERATE QUALITY</span>.", 'warning');
+                } else {
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">LOW QUALITY</span>. Recommend recalibration.", 'error');
+                }
+                
+                assemblerOutput.innerHTML = `
+                    <p>// STATUS: Assembly complete.</p>
+                    <p>// Sentient Data Stream Quality: <span class="status-value">${streamQuality}</span>%</p>
+                    <p>// Components Fused: <span class="status-value">${assembledComponents.length}</span></p>
+                `;
+                // Clear chamber after assembly
+                document.getElementById('assembler-chamber').innerHTML = '<p style="opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0);">Drag components here to assemble a Sentient Data Stream.</p>';
+                assembledComponents = [];
+                document.querySelectorAll('.assembler-component-card').forEach(card => card.style.display = ''); // Show all original cards again
+            }, 8000); // Simulate assembly time
+        }
+
+        // --- Quantum Entanglement Conduit Manager ---
+        function initConduitMap() {
+            const mapContainer = document.getElementById('conduit-map-container');
+            mapContainer.innerHTML = '<p style="opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0); text-align:center;">Click to place new conduit nodes.</p>'; // Reset
+            conduitNodes = []; // Clear existing nodes
+            activeConduits = []; // Clear existing conduits
+
+            mapContainer.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('conduit-node')) { // Only add if clicking on empty space
+                    const rect = mapContainer.getBoundingClientRect();
+                    const x = e.clientX - rect.left - 40; // Adjust for node size
+                    const y = e.clientY - rect.top - 40;
+
+                    const newNode = { id: `node-${nextConduitNodeId}`, name: `Node ${nextConduitNodeId}`, x, y };
+                    conduitNodes.push(newNode);
+                    nextConduitNodeId++;
+                    renderConduitMap();
+                    updateConduitSelectors();
+                    addLogEntry(`New conduit node <span class="status-value">${newNode.name}</span> created at [${x.toFixed(0)}, ${y.toFixed(0)}].`, 'info');
+                    
+                    // Remove placeholder if it exists
+                    const placeholder = mapContainer.querySelector('p');
+                    if (placeholder) placeholder.remove();
+                }
+            });
+        }
+
+        function renderConduitMap() {
+            const mapContainer = document.getElementById('conduit-map-container');
+            mapContainer.querySelectorAll('.conduit-node').forEach(node => node.remove());
+            mapContainer.querySelectorAll('.conduit-line').forEach(line => line.remove());
+
+            conduitNodes.forEach(node => {
+                const nodeDiv = document.createElement('div');
+                nodeDiv.classList.add('conduit-node');
+                nodeDiv.id = node.id;
+                nodeDiv.style.left = `${node.x}px`;
+                nodeDiv.style.top = `${node.y}px`;
+                nodeDiv.title = node.name;
+                nodeDiv.onclick = (e) => {
+                    e.stopPropagation(); // Prevent map click from firing
+                    selectConduitNode(node.id);
+                };
+                mapContainer.appendChild(nodeDiv);
+            });
+
+            activeConduits.forEach(conduit => {
+                const source = conduitNodes.find(n => n.id === conduit.sourceNodeId);
+                const dest = conduitNodes.find(n => n.id === conduit.destNodeId);
+                if (source && dest) {
+                    const line = document.createElement('div');
+                    line.classList.add('conduit-line');
+                    line.classList.add('active'); // Active by default for established conduits
+                    line.id = `conduit-line-${conduit.id}`;
+
+                    const dx = dest.x - source.x;
+                    const dy = dest.y - source.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+                    line.style.width = `${distance}px`;
+                    line.style.left = `${source.x + 40}px`; // Adjust for node center
+                    line.style.top = `${source.y + 40}px`;
+                    line.style.transform = `rotate(${angle}deg)`;
+                    mapContainer.appendChild(line);
+                    conduit.lineElement = line; // Store reference to update later
+                }
+            });
+        }
+
+        function updateConduitSelectors() {
+            const sourceSelect = document.getElementById('conduit-source');
+            const destSelect = document.getElementById('conduit-destination');
+            sourceSelect.innerHTML = '<option value="">-- Select Source --</option>';
+            destSelect.innerHTML = '<option value="">-- Select Destination --</option>';
+
+            conduitNodes.forEach(node => {
+                const optionSource = document.createElement('option');
+                optionSource.value = node.id;
+                optionSource.textContent = node.name;
+                sourceSelect.appendChild(optionSource);
+
+                const optionDest = document.createElement('option');
+                optionDest.value = node.id;
+                optionDest.textContent = node.name;
+                destSelect.appendChild(optionDest);
+            });
+            // Restore previous selections if possible
+            if (selectedConduitSource) sourceSelect.value = selectedConduitSource;
+            if (selectedConduitDestination) destSelect.value = selectedConduitDestination;
+        }
+
+        function selectConduitNode(nodeId) {
+            // Remove active class from all nodes
+            document.querySelectorAll('.conduit-node').forEach(node => node.classList.remove('active'));
+            // Add active class to the selected node
+            document.getElementById(nodeId).classList.add('active');
+
+            if (!selectedConduitSource || (selectedConduitSource && selectedConduitDestination)) {
+                selectedConduitSource = nodeId;
+                selectedConduitDestination = null; // Reset destination
+                document.getElementById('conduit-source').value = nodeId;
+                document.getElementById('conduit-destination').value = '';
+                addLogEntry(`Conduit Source selected: <span class="status-value">${conduitNodes.find(n => n.id === nodeId).name}</span>.`, 'info');
+            } else if (selectedConduitSource && !selectedConduitDestination && nodeId !== selectedConduitSource) {
+                selectedConduitDestination = nodeId;
+                document.getElementById('conduit-destination').value = nodeId;
+                addLogEntry(`Conduit Destination selected: <span class="status-value">${conduitNodes.find(n => n.id === nodeId).name}</span>.`, 'info');
+            } else if (selectedConduitSource === nodeId) {
+                selectedConduitSource = null;
+                document.getElementById('conduit-source').value = '';
+                addLogEntry(`Conduit Source deselected.`, 'info');
+            }
+            updateConduitSelection(); // Update selectors visuals
+        }
+
+        function updateConduitSelection() {
+            selectedConduitSource = document.getElementById('conduit-source').value;
+            selectedConduitDestination = document.getElementById('conduit-destination').value;
+        }
+
+        function establishConduit() {
+            const sourceId = document.getElementById('conduit-source').value;
+            const destId = document.getElementById('conduit-destination').value;
+            const resourceType = document.getElementById('conduit-resource').value;
+
+            if (!sourceId || !destId || sourceId === destId) {
+                addLogEntry("Invalid conduit selection. Select distinct source and destination nodes.", 'warning');
+                return;
+            }
+            if (activeConduits.some(c => (c.sourceNodeId === sourceId && c.destNodeId === destId) || (c.sourceNodeId === destId && c.destNodeId === sourceId))) {
+                addLogEntry("Conduit already exists between these nodes.", 'warning');
+                return;
+            }
+            if (resourceValues.exoticMatter < 0.5 || resourceValues.processingPower < 5) {
+                addLogEntry("Insufficient Exotic Matter or Processing Power to establish conduit.", 'error');
+                showAnomalyAlert("Insufficient resources for Conduit establishment!");
+                return;
+            }
+
+            resourceValues.exoticMatter -= 0.5;
+            resourceValues.processingPower -= 5;
+            updateResourceDisplay();
+
+            const conduitId = `conduit-${activeConduits.length + 1}`;
+            const newConduit = { id: conduitId, sourceNodeId: sourceId, destNodeId: destId, resourceType: resourceType };
+            activeConduits.push(newConduit);
+            renderConduitMap(); // Re-render to show new conduit line
+            addLogEntry(`Quantum Entanglement Conduit <span class="status-value">${conduitId.toUpperCase()}</span> established from ${conduitNodes.find(n => n.id === sourceId).name} to ${conduitNodes.find(n => n.id === destId).name} for <span class="status-value">${resourceType.toUpperCase()}</span>.`, 'event');
+
+            // Simulate resource flow through the conduit
+            setInterval(() => {
+                if (activeConduits.some(c => c.id === conduitId)) {
+                    if (resourceType === 'energy') resourceValues.energy += 10;
+                    else if (resourceType === 'dataFlow') resourceValues.dataFlow += 15;
+                    else if (resourceType === 'exoticMatter') resourceValues.exoticMatter += 0.1;
+                    updateResourceDisplay();
+                }
+            }, 3000);
+        }
+
+        // --- Anomaly Alert ---
+        function showAnomalyAlert(message) {
+            anomalyAlert.innerHTML = `<p>!!! CRITICAL ANOMALY DETECTED !!!</p><p>${message}</p>`;
+            anomalyAlert.classList.add('active');
+            addLogEntry(`CRITICAL: ${message}`, 'error');
+            setTimeout(() => {
+                anomalyAlert.classList.remove('active');
+            }, 10000); // Alert disappears after 10 seconds
+        }
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            updateResourceDisplay();
+            addLogEntry("System startup sequence complete. All modules online.", 'info');
+            initializeAssemblerDragAndDrop();
+            initConduitMap(); // Initialize conduit map
+        });
+
+        // Simulating periodic resource changes
+        setInterval(() => {
+            resourceValues.energy = Math.min(10000, resourceValues.energy + (prioritizedResource === 'energy' ? 50 : 10) - Math.random() * 20);
+            resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (prioritizedResource === 'dataFlow' ? 60 : 12) - Math.random() * 25);
+            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + (prioritizedResource === 'rawData' ? 2 : 0.5) - Math.random() * 1.5));
+            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + (prioritizedResource === 'processingPower' ? 3 : 0.8) - Math.random() * 1.0));
+            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + (prioritizedResource === 'exoticMatter' ? 0.05 : 0.01) - Math.random() * 0.02));
+            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + (prioritizedResource === 'existentialFabric' ? 0.005 : 0.001) - Math.random() * 0.002));
+            
+            updateResourceDisplay();
+
+            if (Math.random() < 0.005) { // Small chance of glitch
+                addLogEntry("Subspace channel integrity fluctuation detected. Minor data loss averted.", 'glitch');
+            }
+            if (resourceValues.energy < 1000 && Math.random() < 0.01) {
+                showAnomalyAlert("Energy reserves critically low! Initiating emergency power siphon protocols.");
+            }
+
+        }, 1000); // Update resources every second
+    </script>
+</body>
+</html>
