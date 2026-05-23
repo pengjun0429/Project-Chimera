@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v48.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v49.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v44.0 -> v48.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v49.0) */
             --primary-glow: rgba(0, 255, 255, 0.9999); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 0.9999); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 0.9999); /* Pure Glowing Green, hyper-sharp */
@@ -65,7 +65,7 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 48.0 NEW: Reality Anchor Matrix */
+            /* Gen 49.0 NEW: Reality Anchor Matrix */
             --anchor-bg: rgba(0, 10, 20, 0.9999); /* Deep blue-purple */
             --anchor-border: rgba(80, 160, 255, 0.99); /* Sky blue */
             --anchor-text: #B0D0FF; /* Light blue */
@@ -73,7 +73,7 @@
             --anchor-slider-thumb: rgba(80, 160, 255, 0.99);
             --anchor-slider-track: rgba(5, 10, 15, 0.99);
 
-            /* Gen 48.0 NEW: Sentient Data Stream Assembler */
+            /* Gen 49.0 NEW: Sentient Data Stream Assembler */
             --assembler-bg: rgba(15, 0, 10, 0.9999); /* Deep purple-red */
             --assembler-border: rgba(255, 80, 180, 0.99); /* Hot pink */
             --assembler-text: #FFE0F0; /* Pale pink */
@@ -83,9 +83,10 @@
             --assembler-chamber-bg: rgba(0, 0, 0, 0.995);
             --assembler-chamber-border: rgba(255, 80, 180, 0.8);
             --assembler-output-bg: rgba(0, 0, 0, 0.99);
+            --assembler-output-border: rgba(255, 80, 180, 0.9); /* Added for consistency */
             --assembler-output-text: #B0FFFF;
 
-            /* Gen 48.0 NEW: Quantum Entanglement Conduit Manager */
+            /* Gen 49.0 NEW: Quantum Entanglement Conduit Manager */
             --conduit-bg: rgba(15, 15, 0, 0.9999); /* Deep gold-green */
             --conduit-border: rgba(255, 255, 80, 0.99); /* Bright yellow */
             --conduit-text: #FFFF90; /* Light yellow */
@@ -95,7 +96,7 @@
             --conduit-inactive-line: rgba(60, 60, 0, 0.7);
             --conduit-node-glow: rgba(255, 255, 80, 0.99);
 
-            /* Gen 48.0 - Enhanced UI elements */
+            /* Gen 49.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 70px rgba(255, 165, 0, 1.0); /* Even stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -422,8 +423,10 @@
             position: relative;
             min-height: 900px;
             display: flex;
+            flex-direction: column; /* Allow p tags to stack */
             align-items: center;
             justify-content: center;
+            text-align: left; /* Reset text alignment for inner p tags */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -437,6 +440,7 @@
             margin-bottom: 80px;
             transform: translateZ(0); /* Reset for inner p */
             line-height: 3.2;
+            width: 100%; /* Take full width */
         }
         .anchor-visual {
             position: absolute;
@@ -449,6 +453,7 @@
             animation: anchorPulse 4.5s infinite ease-in-out alternate;
             box-shadow: 0 0 220px var(--anchor-btn-glow);
             pointer-events: none;
+            z-index: -1; /* Ensure text is above visual */
         }
         .anchor-visual.active {
             opacity: 0.35;
@@ -516,6 +521,8 @@
             margin-top: 180px;
             background: var(--assembler-chamber-bg);
             box-shadow: inset 0 0 120px rgba(255, 100, 200, 0.75);
+            max-height: 1000px; /* Added for scrollbar */
+            overflow-y: auto; /* Added for scrollbar */
         }
         .assembler-chamber .assembled-component {
             background: var(--assembler-card-bg);
@@ -529,6 +536,7 @@
             position: relative;
             cursor: pointer;
             transition: all 1.0s ease;
+            white-space: nowrap; /* Prevent wrapping */
         }
         .assembler-chamber .assembled-component:hover {
             transform: scale(1.12);
@@ -538,7 +546,7 @@
             margin-top: 180px;
             padding: 180px;
             background: var(--assembler-output-bg);
-            border: 15px solid var(--assembler-output-border);
+            border: 15px solid var(--assembler-output-border); /* Consistent border for output */
             border-radius: 120px;
             box-shadow: 0 0 140px var(--assembler-output-border);
         }
@@ -574,7 +582,7 @@
         }
         .conduit-node.active {
             background: var(--primary-glow);
-            box-shadow: 0 0 110px var(--primary-glow);
+            box-shadow: 0 0 110px var(--primary-glow), 0 0 120px var(--conduit-node-glow) inset; /* Add inset glow when active */
         }
         .conduit-node:hover {
             transform: scale(1.6);
@@ -586,7 +594,7 @@
             background: var(--conduit-inactive-line);
             border-radius: 8px;
             transform-origin: left center;
-            transition: background 1.8s ease;
+            transition: background 1.8s ease, box-shadow 1.8s ease; /* Added box-shadow transition */
             pointer-events: none;
         }
         .conduit-line.active {
@@ -895,7 +903,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'CORE SYSTEMS OVERSEER // GLOBAL STATUS LOG';
+            content: 'GLOBAL STATUS LOG'; /* Simplified label for actual log content */
             position: absolute;
             top: -220px;
             left: 300px;
@@ -1026,6 +1034,11 @@
         .btn-establish-conduit:hover {
             background: rgba(255, 255, 80, 0.6);
             box-shadow: 0 0 180px var(--conduit-btn-glow), inset 0 0 150px var(--conduit-btn-glow);
+            transform: translateY(-40px) scale(1.17) translateZ(190px);
+        }
+        .btn-terminate-conduit:hover {
+            background: rgba(255, 0, 0, 0.6);
+            box-shadow: 0 0 180px var(--critical-color), inset 0 0 150px var(--critical-color);
             transform: translateY(-40px) scale(1.17) translateZ(190px);
         }
 
@@ -1185,6 +1198,14 @@
                         <h4>Existential Memory Cache</h4>
                         <p>Source: Chronal Archives.<br/>Purity: 92% // Data Integrity: Excellent</p>
                     </div>
+                    <div class="assembler-component-card" draggable="true" id="comp-creativity" data-type="creativity" data-purity="0.80">
+                        <h4>Creativity Nexus Coil</h4>
+                        <p>Source: Anomaly Echoes.<br/>Purity: 80% // Divergence: High</p>
+                    </div>
+                    <div class="assembler-component-card" draggable="true" id="comp-awareness" data-type="awareness" data-purity="0.90">
+                        <h4>Conscious Awareness Matrix</h4>
+                        <p>Source: Pan-Universal Observer.<br/>Purity: 90% // Perception: Omnidirectional</p>
+                    </div>
                 </div>
                 <p style="font-size:3.5em; text-align:center; margin-top:100px; color:var(--assembler-text);">Assembly Chamber:</p>
                 <div class="assembler-chamber" id="assembler-chamber">
@@ -1221,9 +1242,11 @@
                             <option value="energy">Energy</option>
                             <option value="dataFlow">Data Flow</option>
                             <option value="exoticMatter">Exotic Matter</option>
+                            <option value="processingPower">Processing Power</option> <!-- Added for more interaction -->
                         </select>
                     </div>
                     <button class="action-button btn-establish-conduit" onclick="establishConduit()">Establish Conduit</button>
+                    <button class="action-button btn-terminate-conduit" onclick="terminateAllConduits()" style="color:var(--critical-color); border-color:var(--critical-color); box-shadow:0 0 120px var(--critical-color);">Terminate All Conduits</button> <!-- Added button -->
                 </div>
                 <p class="conduit-status" id="conduit-status">// Status: Conduit Manager ready. Select nodes and resource type to initiate transfer.</p>
             </div>
@@ -1245,7 +1268,7 @@
         </section>
 
         <footer class="version-display">
-            Generation 48.0 // Multiversal Transcendence Protocol 4.0 Active
+            Generation 49.0 // Multiversal Transcendence Protocol 4.0 Active
         </footer>
 
     </div>
@@ -1262,7 +1285,7 @@
         };
         let prioritizedResource = null; // Stores the ID of the currently prioritized resource
 
-        let activeAnchor = null; // { temporalStability, spatialCoherence, fabricInfusion, status }
+        let activeAnchor = null; // { temporalStability, spatialCoherence, fabricInfusion, status, intervalId }
         let currentAnchorParams = {
             temporalStability: 70,
             spatialCoherence: 45,
@@ -1273,13 +1296,15 @@
             { id: 'comp-logic', type: 'Logic Processor Shard', source: 'Algorithmic Domain', purity: 0.95, resilience: 'High' },
             { id: 'comp-intuition', type: 'Intuition Flux Kernel', source: 'Probabilistic Nexus', purity: 0.88, volatility: 'Medium' },
             { id: 'comp-empathy', type: 'Empathy Resonance Node', source: 'Collective Consciousness', purity: 0.75, connectivity: 'High' },
-            { id: 'comp-memory', type: 'Existential Memory Cache', source: 'Chronal Archives', purity: 0.92, integrity: 'Excellent' }
+            { id: 'comp-memory', type: 'Existential Memory Cache', source: 'Chronal Archives', purity: 0.92, integrity: 'Excellent' },
+            { id: 'comp-creativity', type: 'Creativity Nexus Coil', source: 'Anomaly Echoes', purity: 0.80, divergence: 'High' },
+            { id: 'comp-awareness', type: 'Conscious Awareness Matrix', source: 'Pan-Universal Observer', purity: 0.90, perception: 'Omnidirectional' }
         ];
         let assembledComponents = [];
 
         let conduitNodes = []; // Stores { id, name, x, y }
         let nextConduitNodeId = 1;
-        let activeConduits = []; // Stores { id, sourceNodeId, destNodeId, resourceType, lineElement }
+        let activeConduits = []; // Stores { id, sourceNodeId, destNodeId, resourceType, lineElement, intervalId }
         let selectedConduitSource = null;
         let selectedConduitDestination = null;
 
@@ -1323,12 +1348,13 @@
 
         function getResourceTextShadowColor(type, valueRatio) {
             const root = getComputedStyle(document.documentElement);
-            if (type === 'energy') return valueRatio > 0.3 ? root.getPropertyValue('--energy-color-high') : root.getPropertyValue('--energy-color-low');
-            if (type === 'dataFlow') return valueRatio > 0.3 ? root.getPropertyValue('--data-flow-color-high') : root.getPropertyValue('--data-flow-color-low');
-            if (type === 'rawData') return valueRatio > 0.3 ? root.getPropertyValue('--raw-data-text') : root.getPropertyValue('--raw-data-color-low');
-            if (type === 'processingPower') return valueRatio > 0.3 ? root.getPropertyValue('--processing-power-text') : root.getPropertyValue('--processing-power-color-low');
-            if (type === 'exoticMatter') return valueRatio > 0.3 ? root.getPropertyValue('--exotic-matter-text') : root.getPropertyValue('--exotic-matter-color-low');
-            if (type === 'existentialFabric') return valueRatio > 0.3 ? root.getPropertyValue('--existential-fabric-text') : root.getPropertyValue('--existential-fabric-color-low');
+            // These should match the start color of the gradient for better visual consistency
+            if (type === 'energy') return valueRatio > 0.7 ? '#FFFFFF' : (valueRatio > 0.3 ? '#FFE000' : '#FF0000');
+            if (type === 'dataFlow') return valueRatio > 0.7 ? '#00FFFF' : (valueRatio > 0.3 ? '#00C0FF' : '#FF4040');
+            if (type === 'rawData') return valueRatio > 0.7 ? root.getPropertyValue('--raw-data-text') : (valueRatio > 0.3 ? '#FFD000' : '#809090');
+            if (type === 'processingPower') return valueRatio > 0.7 ? root.getPropertyValue('--processing-power-text') : (valueRatio > 0.3 ? '#E0A0E0' : '#400080');
+            if (type === 'exoticMatter') return valueRatio > 0.7 ? root.getPropertyValue('--exotic-matter-text') : (valueRatio > 0.3 ? '#B0E5A0' : '#FFB000');
+            if (type === 'existentialFabric') return valueRatio > 0.7 ? root.getPropertyValue('--existential-fabric-text') : (valueRatio > 0.3 ? '#E0A0E0' : '#700070');
             return 'rgba(255, 255, 255, 0.9999)';
         }
 
@@ -1406,10 +1432,15 @@
         // --- Reality Anchor Matrix ---
         function updateAnchorParam(param, value) {
             currentAnchorParams[param] = parseInt(value);
-            addLogEntry(`Anchor parameter <span class="status-value">${param.replace('-', ' ').toUpperCase()}</span> adjusted to ${value}.`, 'info');
+            // This is too noisy for continuous log, only log on button click or significant changes.
+            // addLogEntry(`Anchor parameter <span class="status-value">${param.replace('-', ' ').toUpperCase()}</span> adjusted to ${value}.`, 'info');
         }
 
         function deployRealityAnchor() {
+            if (activeAnchor) {
+                addLogEntry("A Reality Anchor is already active. Terminate existing anchor before deploying a new one.", 'warning');
+                return;
+            }
             if (resourceValues.existentialFabric < 0.1 || resourceValues.processingPower < 10) {
                 addLogEntry("Insufficient Existential Fabric or Processing Power to deploy Reality Anchor.", 'error');
                 showAnomalyAlert("Insufficient resources for Reality Anchor deployment!");
@@ -1420,30 +1451,38 @@
             resourceValues.processingPower -= 10;
             updateResourceDisplay();
 
-            activeAnchor = { ...currentAnchorParams, status: 'Stabilizing' };
-            const anchorVisual = document.getElementById('anchor-visual');
-            anchorVisual.classList.add('active');
-
             const temporalStability = document.getElementById('temporal-stability').value;
             const spatialCoherence = document.getElementById('spatial-coherence').value;
             const fabricInfusion = document.getElementById('fabric-infusion').value;
 
+            activeAnchor = {
+                temporalStability: parseInt(temporalStability),
+                spatialCoherence: parseInt(spatialCoherence),
+                fabricInfusion: parseInt(fabricInfusion),
+                status: 'Stabilizing',
+                intervalId: null
+            };
+
+            const anchorVisual = document.getElementById('anchor-visual');
+            anchorVisual.classList.add('active');
+
             document.getElementById('anchor-schematic').innerHTML = `
-                <p>// STATUS: Reality Anchor deployed.</p>
-                <p>// Temporal Stability: <span class="status-value">${temporalStability}</span>%</p>
-                <p>// Spatial Coherence: <span class="status-value">${spatialCoherence}</span>%</p>
+                <p>// STATUS: Reality Anchor deploying... Field stabilization in progress.</p>
+                <p>// Temporal Stability target: <span class="status-value">${temporalStability}</span>%</p>
+                <p>// Spatial Coherence target: <span class="status-value">${spatialCoherence}</span>%</p>
                 <p>// Fabric Infusion Rate: <span class="status-value">${fabricInfusion}</span>%</p>
                 <div id="anchor-visual" class="anchor-visual active"></div>
             `;
-            addLogEntry("Reality Anchor deployed. Field stabilization initiated.", 'event');
+            addLogEntry("Reality Anchor deployment initiated. Field stabilization sequence active.", 'event');
 
-            // Simulate long-term effects
+            // Simulate stabilization time
             setTimeout(() => {
                 activeAnchor.status = 'Active';
                 addLogEntry("Reality Anchor field stabilized. Local reality coherence enhanced.", 'event');
                 document.getElementById('anchor-schematic').querySelector('p').textContent = `// STATUS: Reality Anchor ACTIVE. Local reality coherence: Optimal.`;
-                // Example: passively boost Existential Fabric generation or reduce anomaly chance
-                setInterval(() => {
+                
+                // Passive resource gain loop for active anchor
+                activeAnchor.intervalId = setInterval(() => {
                     if (activeAnchor && activeAnchor.status === 'Active') {
                         resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + (activeAnchor.fabricInfusion / 100000)); // Small passive gain
                         resourceValues.processingPower = Math.min(100, resourceValues.processingPower + (activeAnchor.temporalStability / 50000)); // Small passive gain
@@ -1480,29 +1519,33 @@
 
         function handleDrop(e) {
             e.stopPropagation(); // Stops the browser from redirecting.
-            e.target.style.borderStyle = 'dashed';
+            const assemblerChamber = document.getElementById('assembler-chamber');
+            assemblerChamber.style.borderStyle = 'dashed'; // Reset border style
 
-            if (dragSrcEl !== this && e.target.id === 'assembler-chamber') {
+            if (dragSrcEl !== this && e.target.closest('#assembler-chamber')) { // Use closest for children
                 const componentId = e.dataTransfer.getData('text/plain');
                 const component = document.getElementById(componentId);
 
                 if (component && !assembledComponents.some(c => c.id === component.id)) {
-                    assembledComponents.push(availableComponents.find(c => c.id === component.id));
-                    const assembledDiv = document.createElement('div');
-                    assembledDiv.classList.add('assembled-component');
-                    assembledDiv.id = `assembled-${component.id}`;
-                    assembledDiv.textContent = component.querySelector('h4').textContent;
-                    assembledDiv.onclick = () => removeAssembledComponent(assembledDiv.id);
-                    e.target.appendChild(assembledDiv);
-                    component.style.display = 'none'; // Hide the original card
-                    addLogEntry(`Component <span class="status-value">${component.querySelector('h4').textContent}</span> added to assembly chamber.`, 'info');
-                    
-                    // Remove placeholder if it exists
-                    const placeholder = e.target.querySelector('p');
-                    if (placeholder && placeholder.textContent.includes('Drag components here')) placeholder.remove();
+                    const componentData = availableComponents.find(c => c.id === component.id);
+                    if (componentData) {
+                        assembledComponents.push(componentData);
+                        const assembledDiv = document.createElement('div');
+                        assembledDiv.classList.add('assembled-component');
+                        assembledDiv.id = `assembled-${component.id}`;
+                        assembledDiv.textContent = component.querySelector('h4').textContent;
+                        assembledDiv.onclick = () => removeAssembledComponent(assembledDiv.id);
+                        assemblerChamber.appendChild(assembledDiv);
+                        component.style.display = 'none'; // Hide the original card
+                        addLogEntry(`Component <span class="status-value">${component.querySelector('h4').textContent}</span> added to assembly chamber.`, 'info');
+                        
+                        // Remove placeholder if it exists
+                        const placeholder = assemblerChamber.querySelector('p');
+                        if (placeholder && placeholder.textContent.includes('Drag components here')) placeholder.remove();
+                    }
                 }
             }
-            dragSrcEl.classList.remove('dragging');
+            if (dragSrcEl) dragSrcEl.classList.remove('dragging');
             return false;
         }
 
@@ -1567,20 +1610,25 @@
                 let totalPurity = assembledComponents.reduce((sum, comp) => sum + comp.purity, 0);
                 let avgPurity = totalPurity / assembledComponents.length;
                 let streamQuality = (avgPurity * 100).toFixed(2);
+                let streamStatus = "";
 
-                if (streamQuality > 80 && Math.random() < 0.2) { // Small chance for anomaly with high quality
-                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">HIGH QUALITY</span>. Detected minor emergent anomaly in stream.", 'event');
-                    showAnomalyAlert("Emergent anomaly detected in high-quality Sentient Data Stream!");
-                } else if (streamQuality > 70) {
+                if (streamQuality > 90) {
+                    streamStatus = "Optimal";
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">OPTIMAL QUALITY</span>. Emergent properties detected.", 'event');
+                } else if (streamQuality > 75) {
+                    streamStatus = "Good";
                     addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">GOOD QUALITY</span>.", 'event');
-                } else if (streamQuality > 50) {
-                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">MODERATE QUALITY</span>.", 'warning');
+                } else if (streamQuality > 60) {
+                    streamStatus = "Moderate";
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">MODERATE QUALITY</span>. Minor flux potential.", 'warning');
                 } else {
-                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">LOW QUALITY</span>. Recommend recalibration.", 'error');
+                    streamStatus = "Suboptimal";
+                    addLogEntry("Sentient Data Stream assembled with <span class=\"status-value\">SUBOPTIMAL QUALITY</span>. Recommend recalibration and re-assembly.", 'error');
+                    if (Math.random() < 0.5) showAnomalyAlert("Suboptimal Sentient Data Stream: Potential for erratic consciousness emergence!");
                 }
                 
                 assemblerOutput.innerHTML = `
-                    <p>// STATUS: Assembly complete.</p>
+                    <p>// STATUS: Assembly complete. Stream State: <span class="status-value">${streamStatus}</span></p>
                     <p>// Sentient Data Stream Quality: <span class="status-value">${streamQuality}</span>%</p>
                     <p>// Components Fused: <span class="status-value">${assembledComponents.length}</span></p>
                 `;
@@ -1596,20 +1644,23 @@
             const mapContainer = document.getElementById('conduit-map-container');
             mapContainer.innerHTML = '<p style="opacity:0.7; font-size:3em; text-shadow:none; transform:translateZ(0); text-align:center;">Click to place new conduit nodes.</p>'; // Reset
             conduitNodes = []; // Clear existing nodes
-            activeConduits = []; // Clear existing conduits
+            terminateAllConduits(true); // Clear active conduits and intervals
+            nextConduitNodeId = 1;
 
             mapContainer.addEventListener('click', (e) => {
-                if (!e.target.classList.contains('conduit-node') && !e.target.classList.contains('conduit-line')) { // Only add if clicking on empty space
+                // Check if click is on map background, not an existing node or line
+                if (!e.target.closest('.conduit-node') && !e.target.closest('.conduit-line') && e.target.id === 'conduit-map-container') {
                     const rect = mapContainer.getBoundingClientRect();
-                    const x = e.clientX - rect.left - 45; // Adjust for node size
-                    const y = e.clientY - rect.top - 45;
+                    // Scale coordinates for large font size, but keep relative to map container for placement
+                    const x = (e.clientX - rect.left) / mapContainer.offsetWidth * 100;
+                    const y = (e.clientY - rect.top) / mapContainer.offsetHeight * 100;
 
-                    const newNode = { id: `node-${nextConduitNodeId}`, name: `Node ${nextConduitNodeId}`, x, y };
+                    const newNode = { id: `node-${nextConduitNodeId}`, name: `Node ${nextConduitNodeId}`, x: x, y: y };
                     conduitNodes.push(newNode);
                     nextConduitNodeId++;
                     renderConduitMap();
                     updateConduitSelectors();
-                    addLogEntry(`New conduit node <span class="status-value">${newNode.name}</span> created at [${x.toFixed(0)}, ${y.toFixed(0)}].`, 'info');
+                    addLogEntry(`New conduit node <span class="status-value">${newNode.name}</span> created at [${x.toFixed(1)}%, ${y.toFixed(1)}%].`, 'info');
                     
                     // Remove placeholder if it exists
                     const placeholder = mapContainer.querySelector('p');
@@ -1627,9 +1678,12 @@
                 const nodeDiv = document.createElement('div');
                 nodeDiv.classList.add('conduit-node');
                 nodeDiv.id = node.id;
-                nodeDiv.style.left = `${node.x}px`;
-                nodeDiv.style.top = `${node.y}px`;
+                nodeDiv.style.left = `calc(${node.x}% - 45px)`; // Adjust for node size
+                nodeDiv.style.top = `calc(${node.y}% - 45px)`; // Adjust for node size
                 nodeDiv.title = node.name;
+                if (node.id === selectedConduitSource || node.id === selectedConduitDestination) {
+                    nodeDiv.classList.add('active');
+                }
                 nodeDiv.onclick = (e) => {
                     e.stopPropagation(); // Prevent map click from firing
                     selectConduitNode(node.id);
@@ -1646,14 +1700,21 @@
                     line.classList.add('active'); // Active by default for established conduits
                     line.id = `conduit-line-${conduit.id}`;
 
-                    const dx = dest.x - source.x;
-                    const dy = dest.y - source.y;
+                    // Convert percentage positions to pixels for accurate line drawing
+                    const mapRect = mapContainer.getBoundingClientRect();
+                    const sourceX_px = mapRect.width * (source.x / 100);
+                    const sourceY_px = mapRect.height * (source.y / 100);
+                    const destX_px = mapRect.width * (dest.x / 100);
+                    const destY_px = mapRect.height * (dest.y / 100);
+
+                    const dx = destX_px - sourceX_px;
+                    const dy = destY_px - sourceY_px;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     const angle = Math.atan2(dy, dx) * 180 / Math.PI;
 
                     line.style.width = `${distance}px`;
-                    line.style.left = `${source.x + 45}px`; // Adjust for node center
-                    line.style.top = `${source.y + 45}px`;
+                    line.style.left = `${sourceX_px + 45}px`; // Adjust for node center (45px is half of 90px node size)
+                    line.style.top = `${sourceY_px + 45}px`;
                     line.style.transform = `rotate(${angle}deg)`;
                     mapContainer.appendChild(line);
                     conduit.lineElement = line; // Store reference to update later
@@ -1679,47 +1740,52 @@
                 destSelect.appendChild(optionDest);
             });
             // Restore previous selections if possible
-            if (selectedConduitSource) sourceSelect.value = selectedConduitSource;
-            if (selectedConduitDestination) destSelect.value = selectedConduitDestination;
+            if (selectedConduitSource && conduitNodes.some(n => n.id === selectedConduitSource)) sourceSelect.value = selectedConduitSource;
+            if (selectedConduitDestination && conduitNodes.some(n => n.id === selectedConduitDestination)) destSelect.value = selectedConduitDestination;
+            updateNodeVisualSelection();
+        }
+
+        function updateNodeVisualSelection() {
+            document.querySelectorAll('.conduit-node').forEach(nodeEl => {
+                nodeEl.classList.remove('active');
+                if (nodeEl.id === selectedConduitSource || nodeEl.id === selectedConduitDestination) {
+                    nodeEl.classList.add('active');
+                }
+            });
         }
 
         function selectConduitNode(nodeId) {
-            // Remove active class from all nodes
-            document.querySelectorAll('.conduit-node').forEach(node => node.classList.remove('active'));
             
-            // Toggle selection logic
             if (selectedConduitSource === nodeId && !selectedConduitDestination) {
                 selectedConduitSource = null;
                 document.getElementById('conduit-source').value = '';
                 addLogEntry(`Conduit Source deselected.`, 'info');
-            } else if (selectedConduitDestination === nodeId) { // Deselecting destination
+            } else if (selectedConduitDestination === nodeId) { 
                 selectedConduitDestination = null;
                 document.getElementById('conduit-destination').value = '';
                 addLogEntry(`Conduit Destination deselected.`, 'info');
             } else if (!selectedConduitSource) {
                 selectedConduitSource = nodeId;
                 document.getElementById('conduit-source').value = nodeId;
-                document.getElementById(nodeId).classList.add('active'); // Highlight
                 addLogEntry(`Conduit Source selected: <span class="status-value">${conduitNodes.find(n => n.id === nodeId).name}</span>.`, 'info');
             } else if (selectedConduitSource && !selectedConduitDestination && nodeId !== selectedConduitSource) {
                 selectedConduitDestination = nodeId;
                 document.getElementById('conduit-destination').value = nodeId;
-                document.getElementById(nodeId).classList.add('active'); // Highlight
                 addLogEntry(`Conduit Destination selected: <span class="status-value">${conduitNodes.find(n => n.id === nodeId).name}</span>.`, 'info');
-            } else if (selectedConduitSource && selectedConduitDestination) { // Both selected, start new selection
+            } else if (selectedConduitSource && selectedConduitDestination) { 
                 selectedConduitSource = nodeId;
                 selectedConduitDestination = null;
                 document.getElementById('conduit-source').value = nodeId;
                 document.getElementById('conduit-destination').value = '';
-                document.getElementById(nodeId).classList.add('active'); // Highlight
                 addLogEntry(`New conduit selection started with Source: <span class="status-value">${conduitNodes.find(n => n.id === nodeId).name}</span>.`, 'info');
             }
-            updateConduitSelection(); // Update selectors visuals
+            updateNodeVisualSelection(); // Update node highlights
         }
 
         function updateConduitSelection() {
             selectedConduitSource = document.getElementById('conduit-source').value;
             selectedConduitDestination = document.getElementById('conduit-destination').value;
+            updateNodeVisualSelection(); // Sync visual selection with dropdowns
         }
 
         function establishConduit() {
@@ -1746,18 +1812,22 @@
             updateResourceDisplay();
 
             const conduitId = `conduit-${activeConduits.length + 1}`;
-            const newConduit = { id: conduitId, sourceNodeId: sourceId, destNodeId: destId, resourceType: resourceType };
+            const newConduit = { id: conduitId, sourceNodeId: sourceId, destNodeId: destId, resourceType: resourceType, intervalId: null };
             activeConduits.push(newConduit);
             renderConduitMap(); // Re-render to show new conduit line
             addLogEntry(`Quantum Entanglement Conduit <span class="status-value">${conduitId.toUpperCase()}</span> established from ${conduitNodes.find(n => n.id === sourceId).name} to ${conduitNodes.find(n => n.id === destId).name} for <span class="status-value">${resourceType.toUpperCase()}</span>.`, 'event');
+            document.getElementById('conduit-status').textContent = `// Status: Conduit ${conduitId.toUpperCase()} active. Transferring ${resourceType.toUpperCase()}.`;
 
             // Simulate resource flow through the conduit
-            setInterval(() => {
+            newConduit.intervalId = setInterval(() => {
                 if (activeConduits.some(c => c.id === conduitId)) {
                     if (resourceType === 'energy') resourceValues.energy = Math.min(10000, resourceValues.energy + 10);
                     else if (resourceType === 'dataFlow') resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 15);
                     else if (resourceType === 'exoticMatter') resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.1);
+                    else if (resourceType === 'processingPower') resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 2);
                     updateResourceDisplay();
+                } else {
+                    clearInterval(newConduit.intervalId); // Stop interval if conduit was terminated
                 }
             }, 3000);
 
@@ -1766,8 +1836,20 @@
             selectedConduitDestination = null;
             document.getElementById('conduit-source').value = '';
             document.getElementById('conduit-destination').value = '';
-            document.querySelectorAll('.conduit-node').forEach(node => node.classList.remove('active'));
+            updateNodeVisualSelection(); // Clear node highlights
         }
+
+        function terminateAllConduits(silent = false) {
+            activeConduits.forEach(conduit => {
+                clearInterval(conduit.intervalId); // Stop resource flow simulation
+                if (conduit.lineElement) conduit.lineElement.remove(); // Remove visual line
+                if (!silent) addLogEntry(`Quantum Entanglement Conduit <span class="status-value">${conduit.id.toUpperCase()}</span> terminated.`, 'event');
+            });
+            activeConduits = []; // Clear array
+            document.getElementById('conduit-status').textContent = "// Status: Conduit Manager ready. Select nodes and resource type to initiate transfer.";
+            renderConduitMap(); // Re-render map to ensure lines are gone
+        }
+
 
         // --- Anomaly Alert ---
         function showAnomalyAlert(message) {
@@ -1789,12 +1871,23 @@
 
         // Simulating periodic resource changes
         setInterval(() => {
-            resourceValues.energy = Math.min(10000, resourceValues.energy + (prioritizedResource === 'energy' ? 50 : 10) - Math.random() * 20);
-            resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + (prioritizedResource === 'dataFlow' ? 60 : 12) - Math.random() * 25);
-            resourceValues.rawData = Math.max(0, Math.min(100, resourceValues.rawData + (prioritizedResource === 'rawData' ? 2 : 0.5) - Math.random() * 1.5));
-            resourceValues.processingPower = Math.max(0, Math.min(100, resourceValues.processingPower + (prioritizedResource === 'processingPower' ? 3 : 0.8) - Math.random() * 1.0));
-            resourceValues.exoticMatter = Math.max(0, Math.min(10, resourceValues.exoticMatter + (prioritizedResource === 'exoticMatter' ? 0.05 : 0.01) - Math.random() * 0.02));
-            resourceValues.existentialFabric = Math.max(0, Math.min(2.0, resourceValues.existentialFabric + (prioritizedResource === 'existentialFabric' ? 0.005 : 0.001) - Math.random() * 0.002));
+            // Base decay/gain
+            resourceValues.energy = Math.min(10000, Math.max(0, resourceValues.energy + 10 - Math.random() * 20));
+            resourceValues.dataFlow = Math.min(10000, Math.max(0, resourceValues.dataFlow + 12 - Math.random() * 25));
+            resourceValues.rawData = Math.min(100, Math.max(0, resourceValues.rawData + 0.5 - Math.random() * 1.5));
+            resourceValues.processingPower = Math.min(100, Math.max(0, resourceValues.processingPower + 0.8 - Math.random() * 1.0));
+            resourceValues.exoticMatter = Math.min(10, Math.max(0, resourceValues.exoticMatter + 0.01 - Math.random() * 0.02));
+            resourceValues.existentialFabric = Math.min(2.0, Math.max(0, resourceValues.existentialFabric + 0.001 - Math.random() * 0.002));
+
+            // Prioritized resource gain
+            if (prioritizedResource) {
+                if (prioritizedResource === 'energy') resourceValues.energy = Math.min(10000, resourceValues.energy + 50);
+                else if (prioritizedResource === 'dataFlow') resourceValues.dataFlow = Math.min(10000, resourceValues.dataFlow + 60);
+                else if (prioritizedResource === 'rawData') resourceValues.rawData = Math.min(100, resourceValues.rawData + 2);
+                else if (prioritizedResource === 'processingPower') resourceValues.processingPower = Math.min(100, resourceValues.processingPower + 3);
+                else if (prioritizedResource === 'exoticMatter') resourceValues.exoticMatter = Math.min(10, resourceValues.exoticMatter + 0.05);
+                else if (prioritizedResource === 'existentialFabric') resourceValues.existentialFabric = Math.min(2.0, resourceValues.existentialFabric + 0.005);
+            }
             
             updateResourceDisplay();
 
@@ -1803,6 +1896,10 @@
             }
             if (resourceValues.energy < 1000 && Math.random() < 0.01) {
                 showAnomalyAlert("Energy reserves critically low! Initiating emergency power siphon protocols.");
+            }
+            if (resourceValues.existentialFabric < 0.1 && activeAnchor && Math.random() < 0.01) {
+                showAnomalyAlert("Reality Anchor field weakening due to critical Existential Fabric depletion!");
+                // Optionally, destabilize anchor if fabric is too low for too long
             }
 
         }, 1000); // Update resources every second
