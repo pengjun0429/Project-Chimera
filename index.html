@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v63.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v64.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v63.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v64.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.0000000000000000000000001); /* Ultra-transparent, hyper-ethereal, almost invisible (even less visible) */
+            --frosted-bg: rgba(255, 255, 255, 0.005); /* Ultra-transparent, hyper-ethereal */
             --text-color: #F8F8F8; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
-            --border-color: rgba(255, 255, 255, 0.99); /* More visible, shimmering border */
-            --console-bg: rgba(0, 0, 0, 0.9999999999); /* Absolute black for console depth */
+            --border-color: rgba(255, 255, 255, 0.7); /* More visible, shimmering border */
+            --console-bg: rgba(0, 0, 0, 0.999); /* Absolute black for console depth */
             --glitch-color: #FF33FF; /* Brighter Magenta for glitch */
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
             --critical-color: #FF0000; /* Pure Red, highly urgent */
@@ -26,15 +26,15 @@
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
             /* Core Systems Overseer (Main Console & Resource Display) */
-            --overseer-bg: rgba(0, 5, 10, 0.99999); /* Deep ocean blue, almost black */
+            --overseer-bg: rgba(0, 5, 10, 0.95); /* Deep ocean blue, almost black */
             --overseer-text: #00FFFF; /* Pure Cyan for data, slightly muted */
-            --overseer-border: rgba(0, 180, 255, 1.0); /* Stronger, electric blue glow */
+            --overseer-border: rgba(0, 180, 255, 0.8); /* Stronger, electric blue glow */
 
             /* Resource Display */
-            --resource-panel-bg: rgba(5, 0, 10, 0.99999); /* Darker, deeper purple-ish */
-            --resource-panel-border: rgba(140, 0, 255, 1.0); /* Stronger purple accent, slightly redder */
+            --resource-panel-bg: rgba(5, 0, 10, 0.95); /* Darker, deeper purple-ish */
+            --resource-panel-border: rgba(140, 0, 255, 0.8); /* Stronger purple accent, slightly redder */
             --resource-panel-text: #FFEBFF; /* Lighter purple */
-            --resource-bar-bg: rgba(0, 0, 0, 0.999999); /* Near black background for resource bars */
+            --resource-bar-bg: rgba(0, 0, 0, 0.99); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFFFF 0%, #FFFF00 100%); /* Ultra-bright yellow */
@@ -65,57 +65,69 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 63.0 NEW: Multiversal Data Stream Interceptor */
-            --mdsi-bg: rgba(0, 15, 10, 0.99999); /* Deep teal-green */
-            --mdsi-border: rgba(0, 255, 180, 1.0); /* Bright aqua-green */
+            /* Gen 64.0 NEW: Multiversal Data Stream Interceptor */
+            --mdsi-bg: rgba(0, 15, 10, 0.95); /* Deep teal-green */
+            --mdsi-border: rgba(0, 255, 180, 0.8); /* Bright aqua-green */
             --mdsi-text: #E0FFF0; /* Pale mint */
-            --mdsi-glow: rgba(0, 255, 180, 0.98); /* More opaque glow */
-            --mdsi-console-bg: rgba(0, 0, 0, 0.999);
+            --mdsi-glow: rgba(0, 255, 180, 0.8); /* More opaque glow */
+            --mdsi-console-bg: rgba(0, 0, 0, 0.99);
+            --mdsi-filter-track: rgba(0, 120, 80, 0.7);
+            --mdsi-filter-thumb: rgba(0, 255, 180, 1.0);
 
-            /* Gen 63.0 NEW: Existential Fabric Weaver */
-            --efw-bg: rgba(10, 0, 15, 0.99999); /* Deep purple-blue */
-            --efw-border: rgba(180, 0, 255, 1.0); /* Vibrant violet */
+            /* Gen 64.0 NEW: Existential Fabric Weaver */
+            --efw-bg: rgba(10, 0, 15, 0.95); /* Deep purple-blue */
+            --efw-border: rgba(180, 0, 255, 0.8); /* Vibrant violet */
             --efw-text: #FFF0FF; /* Pale violet */
-            --efw-glow: rgba(180, 0, 255, 0.98); /* More opaque glow */
-            --efw-matrix-bg: rgba(0, 0, 0, 0.999);
-            --efw-fragment-bg: rgba(20, 0, 30, 0.999);
+            --efw-glow: rgba(180, 0, 255, 0.8); /* More opaque glow */
+            --efw-matrix-bg: rgba(0, 0, 0, 0.99);
+            --efw-fragment-bg: rgba(20, 0, 30, 0.99);
+            --efw-resonance-target: #00FFFF;
+            --efw-resonance-current: #FF00FF;
 
-            /* Gen 63.0 NEW: Psionic Resonance Emitter */
-            --pre-bg: rgba(15, 10, 0, 0.99999); /* Deep gold-orange */
-            --pre-border: rgba(255, 180, 0, 1.0); /* Bright orange */
+            /* Gen 64.0 NEW: Psionic Resonance Emitter */
+            --pre-bg: rgba(15, 10, 0, 0.95); /* Deep gold-orange */
+            --pre-border: rgba(255, 180, 0, 0.8); /* Bright orange */
             --pre-text: #FFFFE0; /* Pale yellow */
-            --pre-glow: rgba(255, 180, 0, 0.98); /* More opaque glow */
+            --pre-glow: rgba(255, 180, 0, 0.8); /* More opaque glow */
             --pre-mode-active: rgba(255, 180, 0, 0.7);
+            --pre-waveform-track: rgba(120, 90, 0, 0.7);
+            --pre-waveform-thumb: rgba(255, 180, 0, 1.0);
+            --pre-match-good: #00FF00;
+            --pre-match-bad: #FF0000;
 
-            /* Gen 63.0 NEW: Temporal Flux Regulator */
-            --tfr-bg: rgba(10, 0, 0, 0.99999); /* Deep crimson */
-            --tfr-border: rgba(255, 80, 80, 1.0); /* Bright red */
+            /* Gen 64.0 NEW: Temporal Flux Regulator */
+            --tfr-bg: rgba(10, 0, 0, 0.95); /* Deep crimson */
+            --tfr-border: rgba(255, 80, 80, 0.8); /* Bright red */
             --tfr-text: #FFEEEE; /* Pale red */
-            --tfr-glow: rgba(255, 80, 80, 0.98); /* More opaque glow */
-            --tfr-slider-track: rgba(50, 0, 0, 0.9);
+            --tfr-glow: rgba(255, 80, 80, 0.8); /* More opaque glow */
+            --tfr-slider-track: rgba(50, 0, 0, 0.7);
             --tfr-slider-thumb: rgba(255, 80, 80, 1.0);
             --tfr-drift-critical: #FF0000;
+            --tfr-anomaly-bg: rgba(255, 0, 0, 0.8);
+            --tfr-anomaly-border: rgba(255, 255, 0, 0.9);
 
-            /* Gen 63.0 NEW: Consciousness Synthesis Nexus (CSN) */
-            --csn-bg: rgba(0, 0, 20, 0.99999); /* Deep space blue */
-            --csn-border: rgba(150, 0, 255, 1.0); /* Deep vibrant violet */
+            /* Gen 64.0 NEW: Consciousness Synthesis Nexus (CSN) */
+            --csn-bg: rgba(0, 0, 20, 0.95); /* Deep space blue */
+            --csn-border: rgba(150, 0, 255, 0.8); /* Deep vibrant violet */
             --csn-text: #E0FFFF; /* Brightest cyan-white */
-            --csn-glow: rgba(150, 0, 255, 0.98);
+            --csn-glow: rgba(150, 0, 255, 0.8);
             --csn-prereq-met: #00FF00; /* Green */
             --csn-prereq-unmet: #FF0000; /* Red */
             --csn-prereq-bg: rgba(0, 0, 0, 0.7);
+            --csn-trait-bg: rgba(0, 20, 40, 0.9);
+            --csn-trait-border: rgba(100, 200, 255, 0.9);
 
-            /* Gen 63.0 - Enhanced UI elements */
+            /* Gen 64.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 120px rgba(255, 165, 0, 1.0); /* Even stronger shadow */
+            --event-text-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 110px rgba(192, 160, 224, 0.9); /* Even stronger shadow */
+            --info-text-shadow: 0 0 8px rgba(192, 160, 224, 0.7); /* Stronger shadow */
             --log-glitch-color: #FF00FF;
-            --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%); /* Wider, more transparent edges */
+            --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
             /* Anomaly Alert (same, but more intense) */
             --anomaly-color: #FF0000; /* Pure Red for critical */
-            --anomaly-bg: rgba(255, 0, 0, 0.65); /* Even more semi-transparent Red */
+            --anomaly-bg: rgba(255, 0, 0, 0.6); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 1.0); /* Opaque Red */
         }
 
@@ -130,20 +142,19 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 65px; /* Even larger base font */
-            line-height: 3.0; /* Increased line height */
-            /* Updated Cursor: Larger, more intricate, pulsing */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.2" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.5); opacity: 0.2;} 50% {transform: scale(1.6); opacity: 1;} 100% {transform: scale(0.5); opacity: 0.2;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes trail {0% {stroke-dashoffset: 150;} 100% {stroke-dashoffset: 0;}} .pulsing-core {animation: pulse 1.4s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.9s infinite ease-out reverse;}.trail-line {stroke-dasharray: 150; stroke-dashoffset: 0; animation: trail 1.5s linear infinite;}</style></defs><g transform="translate(12 12) scale(1.2) translate(-12 -12)"><path fill="%2300FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2300FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" filter="url(%23f2)" class="pulsing-core"/><path fill="%2300FFFF" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z" filter="url(%23f1)"/><circle cx="12" cy="12" r="5" fill="%23FFFF00" filter="url(%23f2)" class="inner-star"/><line x1="12" y1="0" x2="12" y2="24" stroke="%2300FFFF" stroke-width="3" class="trail-line"/><line x1="0" y1="12" x2="24" y2="12" stroke="%2300FFFF" stroke-width="3" class="trail-line"/></g></svg>') 50 50, auto;
+            font-size: 1.1rem; /* Scaled down for readability */
+            line-height: 1.6; /* Increased line height */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="1" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes trail {0% {stroke-dashoffset: 70;} 100% {stroke-dashoffset: 0;}} .pulsing-core {animation: pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.7s infinite ease-out reverse;}.trail-line {stroke-dasharray: 70; stroke-dashoffset: 0; animation: trail 1.2s linear infinite;}</style></defs><g transform="translate(12 12) scale(0.8) translate(-12 -12)"><path fill="%2300FFFF" filter="url(%23f1)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2300FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" filter="url(%23f2)" class="pulsing-core"/><path fill="%2300FFFF" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z" filter="url(%23f1)"/><circle cx="12" cy="12" r="5" fill="%23FFFF00" filter="url(%23f2)" class="inner-star"/><line x1="12" y1="0" x2="12" y2="24" stroke="%2300FFFF" stroke-width="2" class="trail-line"/><line x1="0" y1="12" x2="24" y2="12" stroke="%2300FFFF" stroke-width="2" class="trail-line"/></g></svg>') 24 24, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
-            position: absolute;
-            top: -100000%; /* Even larger coverage */
-            left: -100000%;
-            width: 200100%;
-            height: 200100%;
+            position: fixed; /* Use fixed for proper viewport coverage */
+            top: -200vh;
+            left: -200vw;
+            width: 400vw;
+            height: 400vh;
             background: linear-gradient(
                 270deg, /* New angle */
                 #000000 0%, #000001 1%, #000003 2%, #000007 3%, #000010 4%, #000015 5%, #000010 6%, #000007 7%, #000003 8%, #000001 9%, #000000 10%,
@@ -155,42 +166,42 @@
                 #010101 61%, #030303 62%, #070707 63%, #101010 64%, #151515 65%, #101010 66%, #070707 67%, #030303 68%, #010101 69%, #000000 70%,
                 #020202 71%, #040404 72%, #080808 73%, #121212 74%, #181818 75%, #121212 76%, #080808 77%, #040404 78%, #020202 79%, #000000 80%
             );
-            background-size: 150000% 150000%; /* Even larger background for smoother animation */
-            animation: fluidBackground1 150000s linear infinite alternate, rotateBackground 180000s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 1500% 1500%; /* Larger background for smoother animation */
+            animation: fluidBackground1 150s linear infinite alternate, rotateBackground 180s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(40000px) opacity(0.99999999999); /* Stronger blur, almost opaque */
-            transform: rotate(-15000deg) scale(400); /* Larger scale, more rotation */
+            filter: blur(150px) opacity(0.8); /* Stronger blur, almost opaque */
+            transform: rotate(-150deg) scale(4); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
         /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors, more diffuse, soft-light blend) */
         body::after {
             content: '';
-            position: absolute;
-            top: -50000%; /* Even larger coverage */
-            left: -50000%;
-            width: 100100%;
-            height: 100100%;
+            position: fixed; /* Use fixed for proper viewport coverage */
+            top: -150vh;
+            left: -150vw;
+            width: 300vw;
+            height: 300vh;
             background: linear-gradient(
-                -2000deg, /* Different angle */
-                rgba(0, 255, 255, 1.0) 0%, /* primary glow accent */
-                rgba(255, 0, 255, 0.99) 10%, /* secondary glow accent */
-                rgba(0, 255, 0, 0.99) 20%, /* tertiary glow accent */
+                -200deg, /* Different angle */
+                rgba(0, 255, 255, 0.8) 0%, /* primary glow accent */
+                rgba(255, 0, 255, 0.7) 10%, /* secondary glow accent */
+                rgba(0, 255, 0, 0.7) 20%, /* tertiary glow accent */
                 var(--mdsi-border) 30%, /* MDS-I accent */
                 var(--efw-border) 40%, /* EFW accent */
                 var(--pre-border) 50%, /* PRE accent */
                 var(--tfr-border) 60%, /* TFR accent */
                 var(--csn-border) 70%, /* CSN accent */
-                rgba(50, 255, 150, 1.0) 80%, /* Generic glow */
-                rgba(110, 90, 210, 1.0) 90%, /* Generic glow */
-                rgba(0, 255, 255, 1.0) 100%
+                rgba(50, 255, 150, 0.8) 80%, /* Generic glow */
+                rgba(110, 90, 210, 0.8) 90%, /* Generic glow */
+                rgba(0, 255, 255, 0.8) 100%
             );
-            background-size: 120000% 120000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 75000s ease-in-out infinite, rotateBackgroundReversed 90000s linear infinite; /* Even longer animations */
+            background-size: 1200% 1200%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 75s ease-in-out infinite, rotateBackgroundReversed 90s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(35000px) opacity(0.99999999); /* Stronger blur, more opaque */
+            filter: blur(120px) opacity(0.7); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(12000deg) scale(300); /* Larger scale, more rotation */
+            transform: rotate(120deg) scale(3); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -202,11 +213,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.25; /* More noticeable noise */
+            opacity: 0.15; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.7) contrast(12.0) brightness(10.0); /* Subtle color and contrast */
+            filter: grayscale(0.5) contrast(5.0) brightness(3.0); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -221,50 +232,50 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-15000deg) scale(400); }
-            to { transform: rotate(18000deg) scale(400); }
+            from { transform: rotate(-150deg) scale(4); }
+            to { transform: rotate(180deg) scale(4); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(12000deg) scale(300); }
-            to { transform: rotate(-15000deg) scale(300); }
+            from { transform: rotate(120deg) scale(3); }
+            to { transform: rotate(-150deg) scale(3); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 12000px; /* Even wider for more content */
-            padding: 1200px; /* More padding */
+            max-width: 1300px; /* Wider for more content */
+            padding: 3rem; /* More padding */
             background: var(--frosted-bg);
-            border: 60px solid var(--border-color); /* Thicker border */
-            border-radius: 2000px; /* Even more rounded */
-            backdrop-filter: blur(15000px) saturate(50000%) brightness(10000%) contrast(15.0); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(15000px) saturate(50000%) brightness(10000%) contrast(15.0);
+            border: 10px solid var(--border-color); /* Thicker border */
+            border-radius: 2rem; /* Even more rounded */
+            backdrop-filter: blur(15px) saturate(200%) brightness(150%) contrast(1.5); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(15px) saturate(200%) brightness(150%) contrast(1.5);
             box-shadow:
-                0 3000px 20000px rgba(0, 0, 0, 1.0), /* Deeper shadow */
-                0 0 20000px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 3000px rgba(255, 255, 255, 1.0), /* Stronger inner glow for depth */
-                inset 0 0 3200px var(--primary-glow); /* Even more inner glow */
+                0 10px 40px rgba(0, 0, 0, 0.7), /* Deeper shadow */
+                0 0 40px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 20px rgba(255, 255, 255, 0.8), /* Stronger inner glow for depth */
+                inset 0 0 25px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 1600px; /* Increased gap between sections */
-            animation: fadeInScale 150s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 70s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 2.5rem; /* Increased gap between sections */
+            animation: fadeInScale 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 0.7s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -800px; /* More overflow */
-            border-radius: 2002px;
+            inset: -15px; /* More overflow */
+            border-radius: calc(2rem + 15px);
             background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--mdsi-border), var(--efw-border), var(--pre-border), var(--tfr-border), var(--csn-border)); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 40000% 40000%; /* Larger background for smoother animation */
-            animation: borderGlow 1000s linear infinite alternate; /* Slower animation */
-            filter: blur(2500px); /* Stronger blur */
+            background-size: 400% 400%; /* Larger background for smoother animation */
+            animation: borderGlow 100s linear infinite alternate; /* Slower animation */
+            filter: blur(15px); /* Stronger blur */
             z-index: -1;
-            opacity: 1.0; /* Stronger glow */
+            opacity: 0.8; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
         }
 
@@ -274,48 +285,48 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.0000000000001) translateY(30000px) perspective(400000px) rotateX(600deg) rotateY(400deg) rotateZ(200deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(400000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            from { opacity: 0; transform: scale(0.8) translateY(20px) perspective(400px) rotateX(10deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(400px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 65em; /* Even larger heading */
+            font-size: 3.8rem; /* Scaled down for readability */
             color: var(--accent-color);
-            text-shadow: 0 0 1200px var(--primary-glow), 0 0 1300px rgba(0, 255, 255, 1.0), 0 0 1400px rgba(0, 255, 255, 0.98);
-            margin-bottom: 1100px;
-            letter-spacing: 300px;
+            text-shadow: 0 0 20px var(--primary-glow), 0 0 25px rgba(0, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.15rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(1000px); /* Lift heading slightly in 3D space */
+            transform: translateZ(10px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -700px;
+            bottom: -0.7rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 700%; /* Wider underline */
-            height: 250px; /* Thicker underline */
+            width: 80%; /* Wider underline */
+            height: 0.2rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 1000px var(--primary-glow);
+            box-shadow: 0 0 10px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.999999;
-            font-size: 10.5em; /* Larger paragraph text */
-            transform: translateZ(700px);
+            opacity: 0.99;
+            font-size: 1.1rem; /* Larger paragraph text */
+            transform: translateZ(7px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 1500px; /* Increased gap */
-            margin: 1000px 0;
+            gap: 2.5rem; /* Increased gap */
+            margin: 1.5rem 0;
             position: relative;
         }
 
@@ -323,14 +334,14 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 700px;
+            gap: 1.2rem;
             text-align: left;
-            padding: 700px;
-            border-radius: 600px;
-            border: 50px solid var(--overseer-border); /* Default border, will be overridden */
-            box-shadow: inset 0 0 600px rgba(0, 200, 255, 1.0), 0 0 600px rgba(0, 200, 255, 0.99), inset 0 0 800px rgba(0, 200, 255, 0.9); /* More inner shadow */
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 2px solid var(--overseer-border); /* Default border, will be overridden */
+            box-shadow: inset 0 0 10px rgba(0, 200, 255, 0.8), 0 0 15px rgba(0, 200, 255, 0.7); /* More inner shadow */
             position: relative;
-            transform: translateZ(550px);
+            transform: translateZ(5px);
             overflow: hidden;
             background: var(--overseer-bg); /* Default background, will be overridden */
         }
@@ -338,27 +349,27 @@
         .multiversal-data-stream-interceptor {
             background: var(--mdsi-bg);
             border-color: var(--mdsi-border);
-            box-shadow: inset 0 0 600px rgba(0, 255, 180, 1.0), 0 0 600px rgba(0, 255, 180, 0.99), inset 0 0 800px rgba(0, 255, 180, 0.9);
+            box-shadow: inset 0 0 10px rgba(0, 255, 180, 0.8), 0 0 15px rgba(0, 255, 180, 0.7);
         }
         .existential-fabric-weaver {
             background: var(--efw-bg);
             border-color: var(--efw-border);
-            box-shadow: inset 0 0 600px rgba(180, 0, 255, 1.0), 0 0 600px rgba(180, 0, 255, 0.99), inset 0 0 800px rgba(180, 0, 255, 0.9);
+            box-shadow: inset 0 0 10px rgba(180, 0, 255, 0.8), 0 0 15px rgba(180, 0, 255, 0.7);
         }
         .psionic-resonance-emitter {
             background: var(--pre-bg);
             border-color: var(--pre-border);
-            box-shadow: inset 0 0 600px rgba(255, 180, 0, 1.0), 0 0 600px rgba(255, 180, 0, 0.99), inset 0 0 800px rgba(255, 180, 0, 0.9);
+            box-shadow: inset 0 0 10px rgba(255, 180, 0, 0.8), 0 0 15px rgba(255, 180, 0, 0.7);
         }
         .temporal-flux-regulator {
             background: var(--tfr-bg);
             border-color: var(--tfr-border);
-            box-shadow: inset 0 0 600px rgba(255, 80, 80, 1.0), 0 0 600px rgba(255, 80, 80, 0.99), inset 0 0 800px rgba(255, 80, 80, 0.9);
+            box-shadow: inset 0 0 10px rgba(255, 80, 80, 0.8), 0 0 15px rgba(255, 80, 80, 0.7);
         }
         .consciousness-synthesis-nexus {
             background: var(--csn-bg);
             border-color: var(--csn-border);
-            box-shadow: inset 0 0 600px var(--csn-glow), 0 0 600px var(--csn-glow), inset 0 0 800px var(--csn-glow);
+            box-shadow: inset 0 0 10px var(--csn-glow), 0 0 15px var(--csn-glow);
         }
 
         .module-base::after {
@@ -368,7 +379,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,1.0) 0%, transparent 80%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.2) 0%, transparent 80%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -377,19 +388,19 @@
         .module-base::before { 
             content: attr(data-label);
             position: absolute;
-            top: -500px; /* Slightly higher */
-            left: 700px;
-            font-size: 8.0em; /* Larger label */
+            top: -1.2rem; /* Slightly higher */
+            left: 1.5rem;
+            font-size: 1.4rem; /* Larger label */
             color: var(--overseer-text); /* Default text, will be overridden */
-            background: rgba(0, 0, 0, 1.0);
-            padding: 160px 180px;
-            border-radius: 180px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.5rem;
             font-weight: 700;
-            letter-spacing: 40px;
-            transform: translateY(-50%) translateZ(400px); /* Lift more */
+            letter-spacing: 0.08rem;
+            transform: translateY(-50%) translateZ(4px); /* Lift more */
             opacity: 1.0;
-            border: 50px solid var(--overseer-text); /* Default border, will be overridden */
-            box-shadow: 0 0 300px var(--overseer-text); /* Stronger glow */
+            border: 2px solid var(--overseer-text); /* Default border, will be overridden */
+            box-shadow: 0 0 8px var(--overseer-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -397,162 +408,174 @@
         .multiversal-data-stream-interceptor::before {
             color: var(--mdsi-text);
             border-color: var(--mdsi-text);
-            box-shadow: 0 0 300px var(--mdsi-text);
+            box-shadow: 0 0 8px var(--mdsi-text);
         }
         .existential-fabric-weaver::before {
             color: var(--efw-text);
             border-color: var(--efw-text);
-            box-shadow: 0 0 300px var(--efw-text);
+            box-shadow: 0 0 8px var(--efw-text);
         }
         .psionic-resonance-emitter::before {
             color: var(--pre-text);
             border-color: var(--pre-text);
-            box-shadow: 0 0 300px var(--pre-text);
+            box-shadow: 0 0 8px var(--pre-text);
         }
         .temporal-flux-regulator::before {
             color: var(--tfr-text);
             border-color: var(--tfr-text);
-            box-shadow: 0 0 300px var(--tfr-text);
+            box-shadow: 0 0 8px var(--tfr-text);
         }
         .consciousness-synthesis-nexus::before {
             color: var(--csn-text);
             border-color: var(--csn-border);
-            box-shadow: 0 0 300px var(--csn-glow);
+            box-shadow: 0 0 8px var(--csn-glow);
         }
 
         .param-group {
-            margin-bottom: 500px;
+            margin-bottom: 1.2rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 8.5em; /* Larger */
+            font-size: 1.3rem; /* Larger */
             color: var(--overseer-text);
-            letter-spacing: 30px;
+            letter-spacing: 0.05rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 300px rgba(0, 255, 255, 1.0); /* Stronger shadow */
-            margin-bottom: 300px;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.8); /* Stronger shadow */
+            margin-bottom: 0.8rem;
         }
         .param-label > span { /* For sub-info */
-            font-size: 7.0em; /* Slightly larger sub-info */
-            opacity: 0.9999;
+            font-size: 0.9rem; /* Slightly larger sub-info */
+            opacity: 0.9;
             color: var(--text-color);
-            margin-top: 160px;
+            margin-top: 0.3rem;
             text-shadow: none; /* Clear text shadow for sub-info */
         }
         
         /* MDS-I Specific */
-        .mdsi-frequency-display {
+        .mdsi-frequency-display, .mdsi-distortion-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 8.0em;
+            font-size: 1.2rem;
             color: var(--mdsi-text);
-            text-shadow: 0 0 200px var(--mdsi-glow);
+            text-shadow: 0 0 10px var(--mdsi-glow);
             text-align: center;
-            margin-bottom: 300px;
-            transform: translateZ(200px);
+            margin-bottom: 0.8rem;
+            transform: translateZ(2px);
         }
         .mdsi-console {
             background: var(--mdsi-console-bg);
-            border: 30px solid var(--mdsi-border);
-            border-radius: 200px;
-            padding: 350px;
-            min-height: 1400px;
-            max-height: 1800px;
+            border: 2px solid var(--mdsi-border);
+            border-radius: 0.8rem;
+            padding: 1rem;
+            min-height: 8rem;
+            max-height: 12rem;
             overflow-y: auto;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 6.5em;
+            font-size: 0.9rem;
             color: var(--mdsi-text);
             text-align: left;
-            text-shadow: 0 0 150px var(--mdsi-glow);
-            box-shadow: inset 0 0 200px rgba(0, 255, 180, 0.7);
-            transform: translateZ(180px);
-            line-height: 2.2;
+            text-shadow: 0 0 6px var(--mdsi-glow);
+            box-shadow: inset 0 0 10px rgba(0, 255, 180, 0.5);
+            transform: translateZ(1.8px);
+            line-height: 1.5;
         }
-        .mdsi-console::-webkit-scrollbar { width: 100px; }
-        .mdsi-console::-webkit-scrollbar-track { background: var(--mdsi-console-bg); border-radius: 80px; box-shadow: inset 0 0 60px rgba(0,0,0,0.999); }
-        .mdsi-console::-webkit-scrollbar-thumb { background: var(--mdsi-border); border-radius: 80px; border: 25px solid rgba(0,0,0,1.0); box-shadow: 0 0 110px var(--mdsi-text); }
-        .mdsi-console::-webkit-scrollbar-thumb:hover { background: var(--mdsi-text); box-shadow: 0 0 160px var(--mdsi-text); }
-
+        .mdsi-console::-webkit-scrollbar { width: 8px; }
+        .mdsi-console::-webkit-scrollbar-track { background: var(--mdsi-console-bg); border-radius: 4px; box-shadow: inset 0 0 3px rgba(0,0,0,0.8); }
+        .mdsi-console::-webkit-scrollbar-thumb { background: var(--mdsi-border); border-radius: 4px; border: 1px solid rgba(0,0,0,0.8); box-shadow: 0 0 5px var(--mdsi-text); }
+        .mdsi-console::-webkit-scrollbar-thumb:hover { background: var(--mdsi-text); box-shadow: 0 0 8px var(--mdsi-text); }
 
         /* EFW Specific */
         .efw-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
-            gap: 400px;
-            margin-top: 400px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
         .efw-fragment-card {
             background: var(--efw-fragment-bg);
-            border: 25px solid var(--efw-border);
-            border-radius: 200px;
-            padding: 250px;
+            border: 1px solid var(--efw-border);
+            border-radius: 0.8rem;
+            padding: 0.8rem;
             text-align: center;
-            transition: all 0.9s ease;
+            transition: all 0.3s ease;
             cursor: grab;
-            box-shadow: inset 0 0 200px rgba(0,0,0,0.999);
-            transform: translateZ(150px);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            transform: translateZ(1.5px);
         }
         .efw-fragment-card h4 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 7.5em;
+            font-size: 1.1rem;
             color: var(--efw-text);
             margin-top: 0;
-            margin-bottom: 140px;
-            text-shadow: 0 0 180px var(--efw-text);
+            margin-bottom: 0.4rem;
+            text-shadow: 0 0 8px var(--efw-text);
         }
         .efw-weaving-matrix {
-            border: 35px dashed var(--efw-border);
-            border-radius: 200px;
-            padding: 300px;
-            min-height: 1400px;
+            border: 2px dashed var(--efw-border);
+            border-radius: 0.8rem;
+            padding: 1rem;
+            min-height: 8rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 180px;
+            gap: 0.5rem;
             align-items: center;
             justify-content: center;
-            margin-top: 350px;
+            margin-top: 0.8rem;
             background: var(--efw-matrix-bg);
-            box-shadow: inset 0 0 200px rgba(180, 0, 255, 0.85);
-            max-height: 1800px;
+            box-shadow: inset 0 0 10px rgba(180, 0, 255, 0.6);
+            max-height: 12rem;
             overflow-y: auto;
         }
-        .efw-weaving-matrix::-webkit-scrollbar { width: 100px; }
-        .efw-weaving-matrix::-webkit-scrollbar-track { background: var(--efw-matrix-bg); border-radius: 80px; box-shadow: inset 0 0 60px rgba(0,0,0,0.999); }
-        .efw-weaving-matrix::-webkit-scrollbar-thumb { background: var(--efw-border); border-radius: 80px; border: 25px solid rgba(0,0,0,1.0); box-shadow: 0 0 110px var(--efw-text); }
-        .efw-weaving-matrix::-webkit-scrollbar-thumb:hover { background: var(--efw-text); box-shadow: 0 0 160px var(--efw-text); }
+        .efw-weaving-matrix::-webkit-scrollbar { width: 8px; }
+        .efw-weaving-matrix::-webkit-scrollbar-track { background: var(--efw-matrix-bg); border-radius: 4px; box-shadow: inset 0 0 3px rgba(0,0,0,0.8); }
+        .efw-weaving-matrix::-webkit-scrollbar-thumb { background: var(--efw-border); border-radius: 4px; border: 1px solid rgba(0,0,0,0.8); box-shadow: 0 0 5px var(--efw-text); }
+        .efw-weaving-matrix::-webkit-scrollbar-thumb:hover { background: var(--efw-text); box-shadow: 0 0 8px var(--efw-text); }
 
         .efw-matrix-fragment {
             background: var(--efw-fragment-bg);
-            border: 22px solid var(--efw-border);
-            border-radius: 150px;
-            padding: 160px;
+            border: 1px solid var(--efw-border);
+            border-radius: 0.6rem;
+            padding: 0.5rem 0.8rem;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 6.0em;
+            font-size: 0.9rem;
             color: var(--efw-text);
-            box-shadow: 0 0 180px var(--efw-border);
+            box-shadow: 0 0 8px var(--efw-border);
             position: relative;
             cursor: pointer;
-            transition: all 0.7s ease;
+            transition: all 0.3s ease;
             white-space: nowrap;
         }
         .efw-matrix-fragment:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
             background: rgba(180, 0, 255, 0.5);
         }
-        .efw-output-status {
+        .efw-output-status, .efw-resonance-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 7.0em;
+            font-size: 1rem;
             color: var(--efw-text);
-            text-shadow: 0 0 180px var(--efw-text);
-            line-height: 5.0;
-            margin-top: 350px;
-            padding: 300px;
-            background: rgba(0,0,0,0.999);
-            border: 25px solid var(--efw-border);
-            border-radius: 200px;
-            box-shadow: 0 0 250px var(--efw-border);
+            text-shadow: 0 0 8px var(--efw-text);
+            line-height: 1.5;
+            margin-top: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(0,0,0,0.9);
+            border: 1px solid var(--efw-border);
+            border-radius: 0.8rem;
+            box-shadow: 0 0 10px var(--efw-border);
+        }
+        .efw-resonance-visualizer {
+            width: 100%;
+            height: 2rem;
+            border: 2px solid var(--efw-border);
+            border-radius: 0.5rem;
+            background: linear-gradient(90deg, var(--efw-resonance-current) 0%, rgba(0,0,0,0) 50%, var(--efw-resonance-target) 100%);
+            margin-top: 0.5rem;
+            transition: background 0.2s ease-out;
+        }
+        .efw-resonance-visualizer.aligned {
+            border-color: var(--stability-good);
+            box-shadow: 0 0 8px var(--stability-good);
         }
 
         /* PRE Specific */
@@ -560,273 +583,380 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 250px;
-            margin-bottom: 400px;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
         }
         .pre-mode-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 7.0em;
-            padding: 160px 200px;
-            border-radius: 200px;
-            border: 25px solid var(--pre-border);
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 0.8rem;
+            border: 1px solid var(--pre-border);
             background: rgba(0,0,0,0.9);
             color: var(--pre-text);
-            text-shadow: 0 0 160px var(--pre-text);
+            text-shadow: 0 0 6px var(--pre-text);
             cursor: pointer;
-            transition: all 0.9s ease;
-            box-shadow: 0 0 180px rgba(255, 180, 0, 0.7);
-            transform: translateZ(150px);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(255, 180, 0, 0.5);
+            transform: translateZ(1.5px);
         }
         .pre-mode-button:hover {
             background: var(--pre-mode-active);
-            box-shadow: 0 0 250px var(--pre-glow);
-            transform: translateY(-90px) scale(1.2) translateZ(180px);
+            box-shadow: 0 0 12px var(--pre-glow);
+            transform: translateY(-3px) scale(1.05) translateZ(1.8px);
         }
         .pre-mode-button.active {
             background: var(--pre-mode-active);
-            box-shadow: 0 0 280px var(--pre-glow), inset 0 0 220px var(--pre-glow);
+            box-shadow: 0 0 15px var(--pre-glow), inset 0 0 10px var(--pre-glow);
             border-color: var(--pre-glow);
-            transform: translateY(-60px) scale(1.15) translateZ(180px);
+            transform: translateY(-2px) scale(1.03) translateZ(1.8px);
         }
         .pre-status-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 7.0em;
+            font-size: 1rem;
             color: var(--pre-text);
-            text-shadow: 0 0 180px var(--pre-text);
-            margin-top: 300px;
-            line-height: 5.0;
-            opacity: 0.999999;
-            transform: translateZ(200px);
-            min-height: 500px;
+            text-shadow: 0 0 8px var(--pre-text);
+            margin-top: 0.8rem;
+            line-height: 1.5;
+            opacity: 0.99;
+            transform: translateZ(2px);
+            min-height: 3rem;
         }
+        .pre-match-indicator {
+            width: 100%;
+            height: 0.5rem;
+            background-color: var(--pre-match-bad);
+            border-radius: 0.25rem;
+            margin-top: 0.5rem;
+            transition: background-color 0.1s ease-out;
+            box-shadow: 0 0 5px var(--pre-match-bad);
+        }
+        .pre-match-indicator.good {
+            background-color: var(--pre-match-good);
+            box-shadow: 0 0 5px var(--pre-match-good);
+        }
+
 
         /* TFR Specific */
         .tfr-temporal-rate {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 8.0em;
+            font-size: 1.2rem;
             color: var(--tfr-text);
-            text-shadow: 0 0 200px var(--tfr-glow);
+            text-shadow: 0 0 10px var(--tfr-glow);
             text-align: center;
-            margin-bottom: 300px;
-            transform: translateZ(200px);
+            margin-bottom: 0.8rem;
+            transform: translateZ(2px);
         }
         .tfr-drift-meter {
             background: var(--tfr-slider-track);
-            border: 30px solid var(--tfr-border);
-            border-radius: 200px;
-            padding: 200px;
+            border: 2px solid var(--tfr-border);
+            border-radius: 0.8rem;
+            padding: 0.8rem;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 7.0em;
+            font-size: 1rem;
             color: var(--tfr-text);
             text-align: center;
-            text-shadow: 0 0 150px var(--tfr-glow);
-            margin-top: 350px;
-            box-shadow: inset 0 0 200px rgba(255, 80, 80, 0.7);
-            transform: translateZ(180px);
+            text-shadow: 0 0 6px var(--tfr-glow);
+            margin-top: 0.8rem;
+            box-shadow: inset 0 0 10px rgba(255, 80, 80, 0.5);
+            transform: translateZ(1.8px);
         }
         .tfr-drift-meter.critical {
             border-color: var(--tfr-drift-critical);
-            box-shadow: inset 0 0 250px var(--tfr-drift-critical), 0 0 250px var(--tfr-drift-critical);
-            animation: pulseWarning 0.1s infinite alternate; /* Even faster pulse */
+            box-shadow: inset 0 0 12px var(--tfr-drift-critical), 0 0 12px var(--tfr-drift-critical);
+            animation: pulseWarning 0.8s infinite alternate; /* Even faster pulse */
         }
-
+        .tfr-chronos-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0.2rem;
+            margin-top: 1rem;
+            min-height: 8rem;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--tfr-border);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            box-shadow: inset 0 0 8px rgba(255, 80, 80, 0.3);
+            position: relative;
+        }
+        .tfr-chronos-cell {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* Make cells square */
+            background: rgba(20, 0, 0, 0.7);
+            border: 1px solid rgba(50, 0, 0, 0.5);
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .tfr-chronos-cell:hover {
+            background-color: rgba(60, 0, 0, 0.9);
+        }
+        .tfr-anomaly-node {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: var(--tfr-anomaly-bg);
+            border: 2px solid var(--tfr-anomaly-border);
+            box-shadow: 0 0 10px var(--tfr-drift-critical), inset 0 0 5px var(--tfr-anomaly-border);
+            animation: anomalyPulse 1.2s infinite alternate ease-in-out;
+            cursor: pointer;
+            z-index: 10;
+        }
+        @keyframes anomalyPulse {
+            0% { transform: scale(0.9); opacity: 0.8; }
+            100% { transform: scale(1.0); opacity: 1.0; box-shadow: 0 0 15px var(--tfr-drift-critical), inset 0 0 7px var(--tfr-anomaly-border); }
+        }
 
         input[type="range"] {
             -webkit-appearance: none;
             width: 100%;
-            height: 250px; /* Taller */
-            background: rgba(255, 255, 255, 0.99); /* More subtle background */
-            border-radius: 125px;
+            height: 0.8rem; /* Taller */
+            background: rgba(255, 255, 255, 0.1); /* More subtle background */
+            border-radius: 0.4rem;
             outline: none;
-            transition: all 7.0s ease;
-            box-shadow: inset 0 0 200px rgba(0, 0, 0, 1.0), 0 0 200px rgba(0,200,255,0.99); /* Inset for depth, subtle outer glow */
-            transform: translateZ(180px);
-            border: 30px solid rgba(255,255,255,0.99); /* More subtle border */
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0,200,255,0.7); /* Inset for depth, subtle outer glow */
+            transform: translateZ(1.8px);
+            border: 1px solid rgba(255,255,255,0.2); /* More subtle border */
         }
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 280px; /* Larger thumb */
-            height: 280px;
+            width: 1.4rem; /* Larger thumb */
+            height: 1.4rem;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 400px var(--primary-glow);
-            transition: background 7.0s ease, box-shadow 7.0s ease, transform 7.0s ease;
-            border: 130px solid rgba(255, 255, 255, 1.0);
+            box-shadow: 0 0 15px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            border: 5px solid rgba(255, 255, 255, 0.8);
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 280px;
-            height: 280px;
+            width: 1.4rem;
+            height: 1.4rem;
             border-radius: 50%;
             background: var(--accent-color);
             cursor: pointer;
-            box-shadow: 0 0 400px var(--primary-glow);
-            transition: background 7.0s ease, box-shadow 7.0s ease, transform 7.0s ease;
-            border: 130px solid rgba(255, 255, 255, 1.0);
+            box-shadow: 0 0 15px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            border: 5px solid rgba(255, 255, 255, 0.8);
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
             background: #6AF2FF;
-            box-shadow: 0 0 450px var(--primary-glow), 0 0 280px var(--primary-glow) inset;
+            box-shadow: 0 0 20px var(--primary-glow), 0 0 10px var(--primary-glow) inset;
             transform: scale(1.1); /* Slightly smaller hover scale */
         }
         input[type="range"]::-moz-range-thumb:hover {
             background: #6AF2FF;
-            box-shadow: 0 0 450px var(--primary-glow), 0 0 280px var(--primary-glow) inset;
+            box-shadow: 0 0 20px var(--primary-glow), 0 0 10px var(--primary-glow) inset;
             transform: scale(1.1);
         }
 
         /* Specific slider styles for new modules */
         .multiversal-data-stream-interceptor input[type="range"] {
-            background: var(--mdsi-glow);
-            box-shadow: inset 0 0 160px rgba(0,0,0,1.0), 0 0 160px var(--mdsi-glow);
+            background: var(--mdsi-filter-track);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.8), 0 0 8px var(--mdsi-glow);
             border-color: var(--mdsi-border);
         }
         .multiversal-data-stream-interceptor input[type="range"]::-webkit-slider-thumb {
-            background: var(--mdsi-border);
-            box-shadow: 0 0 250px var(--mdsi-glow);
+            background: var(--mdsi-filter-thumb);
+            box-shadow: 0 0 12px var(--mdsi-glow);
             border-color: var(--mdsi-text);
-            border-width: 110px;
+            border-width: 4px;
         }
         .multiversal-data-stream-interceptor input[type="range"]::-webkit-slider-thumb:hover {
             background: var(--mdsi-text);
-            box-shadow: 0 0 300px var(--mdsi-glow);
+            box-shadow: 0 0 15px var(--mdsi-glow);
         }
 
         .temporal-flux-regulator input[type="range"] {
             background: var(--tfr-slider-track);
-            box-shadow: inset 0 0 160px rgba(0,0,0,1.0), 0 0 160px var(--tfr-glow);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.8), 0 0 8px var(--tfr-glow);
             border-color: var(--tfr-border);
         }
         .temporal-flux-regulator input[type="range"]::-webkit-slider-thumb {
             background: var(--tfr-slider-thumb);
-            box-shadow: 0 0 250px var(--tfr-glow);
+            box-shadow: 0 0 12px var(--tfr-glow);
             border-color: var(--tfr-text);
-            border-width: 110px;
+            border-width: 4px;
         }
         .temporal-flux-regulator input[type="range"]::-webkit-slider-thumb:hover {
             background: var(--tfr-text);
-            box-shadow: 0 0 300px var(--tfr-glow);
+            box-shadow: 0 0 15px var(--tfr-glow);
         }
+        
+        .psionic-resonance-emitter input[type="range"] {
+            background: var(--pre-waveform-track);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.8), 0 0 8px var(--pre-glow);
+            border-color: var(--pre-border);
+        }
+        .psionic-resonance-emitter input[type="range"]::-webkit-slider-thumb {
+            background: var(--pre-waveform-thumb);
+            box-shadow: 0 0 12px var(--pre-glow);
+            border-color: var(--pre-text);
+            border-width: 4px;
+        }
+        .psionic-resonance-emitter input[type="range"]::-webkit-slider-thumb:hover {
+            background: var(--pre-text);
+            box-shadow: 0 0 15px var(--pre-glow);
+        }
+        
+        .existential-fabric-weaver input[type="range"] {
+            background: var(--efw-matrix-bg);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.8), 0 0 8px var(--efw-glow);
+            border-color: var(--efw-border);
+        }
+        .existential-fabric-weaver input[type="range"]::-webkit-slider-thumb {
+            background: var(--efw-border);
+            box-shadow: 0 0 12px var(--efw-glow);
+            border-color: var(--efw-text);
+            border-width: 4px;
+        }
+        .existential-fabric-weaver input[type="range"]::-webkit-slider-thumb:hover {
+            background: var(--efw-text);
+            box-shadow: 0 0 15px var(--efw-glow);
+        }
+
 
         /* CSN Specific styles */
         .csn-prerequisites {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(1500px, 1fr));
-            gap: 250px;
-            margin-top: 400px;
-            margin-bottom: 500px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+            margin-bottom: 1.2rem;
         }
         .csn-prerequisite-item {
             background: var(--csn-prereq-bg);
-            border: 20px solid rgba(255,255,255,0.2);
-            border-radius: 180px;
-            padding: 180px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0.6rem;
+            padding: 0.6rem;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 7.0em;
+            font-size: 1rem;
             color: var(--csn-text);
             text-align: left;
-            box-shadow: inset 0 0 150px rgba(0,0,0,0.8);
-            transform: translateZ(150px);
-            transition: all 0.8s ease;
-            line-height: 2.5;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.8);
+            transform: translateZ(1.5px);
+            transition: all 0.3s ease;
+            line-height: 1.5;
         }
         .csn-prerequisite-item.met {
             border-color: var(--csn-prereq-met);
-            box-shadow: 0 0 200px var(--csn-prereq-met), inset 0 0 180px var(--csn-prereq-met);
+            box-shadow: 0 0 10px var(--csn-prereq-met), inset 0 0 8px var(--csn-prereq-met);
             color: var(--csn-prereq-met);
         }
         .csn-prerequisite-item.unmet {
             border-color: var(--csn-prereq-unmet);
-            box-shadow: 0 0 150px var(--csn-prereq-unmet), inset 0 0 130px var(--csn-prereq-unmet);
+            box-shadow: 0 0 8px var(--csn-prereq-unmet), inset 0 0 6px var(--csn-prereq-unmet);
             color: var(--csn-prereq-unmet);
         }
         .csn-prerequisite-item span {
             font-weight: 700;
-            margin-left: 100px;
+            margin-left: 0.5rem;
         }
         .csn-synthesis-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 8.0em;
+            font-size: 1.2rem;
             color: var(--csn-text);
-            text-shadow: 0 0 200px var(--csn-glow);
-            line-height: 5.0;
-            margin-top: 300px;
-            padding: 300px;
-            background: rgba(0,0,0,0.999);
-            border: 25px solid var(--csn-border);
-            border-radius: 200px;
-            box-shadow: 0 0 250px var(--csn-border);
+            text-shadow: 0 0 10px var(--csn-glow);
+            line-height: 1.8;
+            margin-top: 0.8rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.9);
+            border: 2px solid var(--csn-border);
+            border-radius: 0.8rem;
+            box-shadow: 0 0 12px var(--csn-border);
         }
         .csn-synthesis-status.success {
             border-color: var(--csn-prereq-met);
-            box-shadow: 0 0 400px var(--csn-prereq-met), inset 0 0 350px var(--csn-prereq-met);
+            box-shadow: 0 0 20px var(--csn-prereq-met), inset 0 0 15px var(--csn-prereq-met);
             color: var(--csn-prereq-met);
         }
         .csn-synthesis-status.fail {
             border-color: var(--csn-prereq-unmet);
-            box-shadow: 0 0 300px var(--csn-prereq-unmet), inset 0 0 250px var(--csn-prereq-unmet);
+            box-shadow: 0 0 15px var(--csn-prereq-unmet), inset 0 0 10px var(--csn-prereq-unmet);
             color: var(--csn-prereq-unmet);
+        }
+        .csn-active-trait {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--csn-text);
+            text-shadow: 0 0 12px var(--csn-glow);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border: 2px solid var(--csn-trait-border);
+            border-radius: 1rem;
+            background: var(--csn-trait-bg);
+            box-shadow: 0 0 20px var(--csn-glow), inset 0 0 15px var(--csn-glow);
+            animation: pulseActiveTrait 1.5s infinite alternate;
+        }
+        @keyframes pulseActiveTrait {
+            from { box-shadow: 0 0 15px var(--csn-glow), inset 0 0 10px var(--csn-glow); }
+            to { box-shadow: 0 0 25px var(--csn-glow), inset 0 0 18px var(--csn-glow); }
         }
 
 
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
             font-family: 'Share Tech Mono', monospace; /* Changed to Share Tech Mono for log aesthetic */
-            font-size: 8.0em; /* Larger */
-            padding: 400px;
-            border: 30px solid var(--border-color);
-            border-radius: 600px; /* More rounded */
+            font-size: 1.1rem; /* Larger */
+            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 1.5rem; /* More rounded */
             background: var(--overseer-bg);
-            box-shadow: inset 0 0 500px rgba(0, 255, 255, 0.99), inset 0 0 700px rgba(0, 255, 255, 0.9); /* More inner shadow */
+            box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8), inset 0 0 12px rgba(0, 255, 255, 0.7); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 7.0s ease;
-            line-height: 3.8; /* Slightly tighter line height for monospace log */
-            letter-spacing: 20px;
+            transition: all 0.7s ease;
+            line-height: 1.5; /* Slightly tighter line height for monospace log */
+            letter-spacing: 0.05rem;
             color: var(--overseer-text);
-            text-shadow: 0 0 200px rgba(0, 255, 255, 1.0); /* Stronger shadow */
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.8); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(400px);
+            transform: translateZ(4px);
             overflow: hidden;
-            max-height: 3000px;
+            max-height: 20rem;
             overflow-y: auto;
         }
         .status-log-display::before {
             content: 'GLOBAL STATUS LOG'; /* Simplified label for actual log content */
             position: absolute;
-            top: -500px;
-            left: 700px;
-            font-size: 8.0em;
+            top: -1.2rem;
+            left: 1.5rem;
+            font-size: 1.4rem;
             color: var(--overseer-border);
-            background: rgba(0, 0, 0, 1.0);
-            padding: 160px 180px;
-            border-radius: 180px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.5rem;
             font-weight: 700;
-            letter-spacing: 40px;
-            transform: translateY(-50%) translateZ(400px);
+            letter-spacing: 0.08rem;
+            transform: translateY(-50%) translateZ(4px);
             opacity: 1.0;
-            border: 50px solid var(--overseer-border);
-            box-shadow: 0 0 300px var(--overseer-border);
+            border: 2px solid var(--overseer-border);
+            box-shadow: 0 0 8px var(--overseer-border);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 160px;
+            margin-bottom: 0.5rem;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 160px;
-            opacity: 0.99999;
+            margin-right: 0.5rem;
+            opacity: 0.99;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 160px var(--primary-glow);
+            text-shadow: 0 0 6px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -839,57 +969,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 160px var(--log-glitch-color);
-            animation: textGlitch 0.06s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 6px var(--log-glitch-color);
+            animation: textGlitch 0.04s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(30px) skewX(45deg); opacity: 0.1;}
-            40% { transform: translateX(-30px) skewX(-45deg); opacity: 0.12;}
-            60% { transform: translateX(28px) skewX(42deg); opacity: 0.17;}
-            80% { transform: translateX(-28px) skewX(-42deg); opacity: 0.15;}
+            20% { transform: translateX(2px) skewX(20deg); opacity: 0.1;}
+            40% { transform: translateX(-2px) skewX(-20deg); opacity: 0.12;}
+            60% { transform: translateX(1px) skewX(18deg); opacity: 0.17;}
+            80% { transform: translateX(-1px) skewX(-18deg); opacity: 0.15;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 8.0em; /* Larger button text */
-            padding: 160px 200px;
-            border-radius: 250px;
+            font-size: 1.2rem; /* Larger button text */
+            padding: 0.5rem 0.8rem;
+            border-radius: 1rem;
             border: none;
             cursor: pointer;
-            transition: all 5.0s ease-in-out, box-shadow 8.0s ease-in-out, transform 5.0s ease-in-out;
-            margin-top: 400px;
+            transition: all 0.5s ease-in-out, box-shadow 0.8s ease-in-out, transform 0.5s ease-in-out;
+            margin-top: 1rem;
             text-transform: uppercase;
-            letter-spacing: 40px;
+            letter-spacing: 0.08rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,1.0), rgba(20,0,35,1.0)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(20,0,35,0.9)); /* Dark base */
             color: var(--text-color);
-            border: 30px solid var(--border-color); /* Thicker border */
-            transform: translateZ(350px);
+            border: 2px solid var(--border-color); /* Thicker border */
+            transform: translateZ(3.5px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -80px;
-            border-radius: 250px;
-            border: 80px solid transparent;
+            inset: -4px;
+            border-radius: 1rem;
+            border: 4px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(100px);
-            opacity: 0.9999;
-            transition: opacity 5.0s ease, filter 5.0s ease;
-            animation: buttonBorderRotate 100s linear infinite; /* Slower rotation */
+            filter: blur(5px);
+            opacity: 0.9;
+            transition: opacity 0.5s ease, filter 0.5s ease;
+            animation: buttonBorderRotate 10s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(180px);
+            filter: blur(8px);
         }
 
         @keyframes buttonBorderRotate {
@@ -901,74 +1031,74 @@
         /* Specific button styles for new modules */
         .btn-lock-channel {
             color: var(--mdsi-glow);
-            box-shadow: 0 0 250px var(--mdsi-glow);
+            box-shadow: 0 0 12px var(--mdsi-glow);
             border-color: var(--mdsi-glow);
         }
         .btn-lock-channel:hover {
-            background: rgba(0, 255, 180, 0.7);
-            box-shadow: 0 0 350px var(--mdsi-glow), inset 0 0 300px var(--mdsi-glow);
-            transform: translateY(-90px) scale(1.3) translateZ(320px);
+            background: rgba(0, 255, 180, 0.4);
+            box-shadow: 0 0 18px var(--mdsi-glow), inset 0 0 15px var(--mdsi-glow);
+            transform: translateY(-3px) scale(1.08) translateZ(3.2px);
         }
 
         .btn-weave-fabric {
             color: var(--efw-glow);
-            box-shadow: 0 0 250px var(--efw-glow);
+            box-shadow: 0 0 12px var(--efw-glow);
             border-color: var(--efw-glow);
         }
         .btn-weave-fabric:hover {
-            background: rgba(180, 0, 255, 0.7);
-            box-shadow: 0 0 350px var(--efw-glow), inset 0 0 300px var(--efw-glow);
-            transform: translateY(-90px) scale(1.3) translateZ(320px);
+            background: rgba(180, 0, 255, 0.4);
+            box-shadow: 0 0 18px var(--efw-glow), inset 0 0 15px var(--efw-glow);
+            transform: translateY(-3px) scale(1.08) translateZ(3.2px);
         }
 
         .btn-activate-emitter {
             color: var(--pre-glow);
-            box-shadow: 0 0 250px var(--pre-glow);
+            box-shadow: 0 0 12px var(--pre-glow);
             border-color: var(--pre-glow);
         }
         .btn-activate-emitter:hover {
-            background: rgba(255, 180, 0, 0.7);
-            box-shadow: 0 0 350px var(--pre-glow), inset 0 0 300px var(--pre-glow);
-            transform: translateY(-90px) scale(1.3) translateZ(320px);
+            background: rgba(255, 180, 0, 0.4);
+            box-shadow: 0 0 18px var(--pre-glow), inset 0 0 15px var(--pre-glow);
+            transform: translateY(-3px) scale(1.08) translateZ(3.2px);
         }
 
         .btn-reset-drift {
             color: var(--tfr-glow);
-            box-shadow: 0 0 250px var(--tfr-glow);
+            box-shadow: 0 0 12px var(--tfr-glow);
             border-color: var(--tfr-glow);
         }
         .btn-reset-drift:hover {
-            background: rgba(255, 80, 80, 0.7);
-            box-shadow: 0 0 350px var(--tfr-glow), inset 0 0 300px var(--tfr-glow);
-            transform: translateY(-90px) scale(1.3) translateZ(320px);
+            background: rgba(255, 80, 80, 0.4);
+            box-shadow: 0 0 18px var(--tfr-glow), inset 0 0 15px var(--tfr-glow);
+            transform: translateY(-3px) scale(1.08) translateZ(3.2px);
         }
 
         .btn-initiate-synthesis {
             color: var(--csn-glow);
-            box-shadow: 0 0 300px var(--csn-glow);
+            box-shadow: 0 0 15px var(--csn-glow);
             border-color: var(--csn-glow);
         }
         .btn-initiate-synthesis:hover {
-            background: rgba(150, 0, 255, 0.7);
-            box-shadow: 0 0 400px var(--csn-glow), inset 0 0 350px var(--csn-glow);
-            transform: translateY(-100px) scale(1.35) translateZ(350px);
+            background: rgba(150, 0, 255, 0.4);
+            box-shadow: 0 0 20px var(--csn-glow), inset 0 0 18px var(--csn-glow);
+            transform: translateY(-4px) scale(1.1) translateZ(3.5px);
         }
 
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 40px solid var(--anomaly-border);
-            border-radius: 250px;
-            padding: 300px;
-            margin-top: 700px;
+            border: 3px solid var(--anomaly-border);
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-top: 1.5rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 10.5em;
-            text-shadow: 0 0 300px var(--anomaly-color);
-            animation: pulseWarning 0.1s infinite alternate; /* Faster pulse */
-            transform: translateZ(500px);
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px var(--anomaly-color);
+            animation: pulseWarning 0.8s infinite alternate; /* Faster pulse */
+            transform: translateZ(5px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 8.0s ease-out;
+            transition: opacity 0.8s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -976,128 +1106,128 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 160px var(--anomaly-color), inset 0 0 140px var(--anomaly-color); }
-            to { box-shadow: 0 0 420px var(--anomaly-color), inset 0 0 300px var(--anomaly-color); }
+            from { box-shadow: 0 0 8px var(--anomaly-color), inset 0 0 7px var(--anomaly-color); }
+            to { box-shadow: 0 0 15px var(--anomaly-color), inset 0 0 12px var(--anomaly-color); }
         }
 
         /* Scrollbar styles for status log and new module components */
         .status-log-display::-webkit-scrollbar, .mdsi-console::-webkit-scrollbar, .efw-weaving-matrix::-webkit-scrollbar {
-            width: 100px; /* Thicker scrollbar */
+            width: 8px; /* Thicker scrollbar */
         }
         .status-log-display::-webkit-scrollbar-track, .mdsi-console::-webkit-scrollbar-track, .efw-weaving-matrix::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 1.0);
-            border-radius: 90px;
-            box-shadow: inset 0 0 70px rgba(0,0,0,0.999);
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 4px;
+            box-shadow: inset 0 0 3px rgba(0,0,0,0.8);
         }
         .status-log-display::-webkit-scrollbar-thumb, .mdsi-console::-webkit-scrollbar-thumb, .efw-weaving-matrix::-webkit-scrollbar-thumb {
             background: var(--overseer-border);
-            border-radius: 90px;
-            border: 30px solid rgba(0,0,0,1.0);
-            box-shadow: 0 0 120px var(--overseer-text);
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.8);
+            box-shadow: 0 0 5px var(--overseer-text);
         }
         .status-log-display::-webkit-scrollbar-thumb:hover, .mdsi-console::-webkit-scrollbar-thumb:hover, .efw-weaving-matrix::-webkit-scrollbar-thumb:hover {
             background: var(--overseer-text);
-            box-shadow: 0 0 180px var(--overseer-text);
+            box-shadow: 0 0 8px var(--overseer-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 8.0em;
+            font-size: 1rem;
             color: var(--text-color);
-            margin-top: 900px;
-            letter-spacing: 30px;
-            opacity: 0.999999;
-            text-shadow: 0 0 120px rgba(255, 255, 255, 0.98);
-            transform: translateZ(250px);
+            margin-top: 1.5rem;
+            letter-spacing: 0.05rem;
+            opacity: 0.99;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+            transform: translateZ(2.5px);
         }
 
         /* Resource Panel specific styles and hover */
         .resource-display-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
-            gap: 500px;
-            margin-top: 400px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
             text-align: center;
         }
         .resource-display-section > div {
             background: var(--resource-panel-bg);
-            border: 30px solid var(--resource-panel-border);
-            border-radius: 200px;
-            padding: 300px;
-            transition: all 0.7s ease-in-out;
+            border: 2px solid var(--resource-panel-border);
+            border-radius: 0.8rem;
+            padding: 1rem;
+            transition: all 0.3s ease-in-out;
             cursor: pointer;
-            box-shadow: 0 0 200px rgba(140, 0, 255, 0.5), inset 0 0 180px rgba(0, 0, 0, 0.8);
-            transform: translateZ(120px);
+            box-shadow: 0 0 10px rgba(140, 0, 255, 0.3), inset 0 0 8px rgba(0, 0, 0, 0.6);
+            transform: translateZ(1.2px);
             position: relative;
             overflow: hidden;
         }
         .resource-display-section > div::before {
             content: attr(data-label);
             position: absolute;
-            top: 250px;
+            top: 0.8rem;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Orbitron', sans-serif;
-            font-size: 6.5em;
+            font-size: 1rem;
             color: var(--resource-panel-text);
-            text-shadow: 0 0 140px var(--resource-panel-text);
-            letter-spacing: 20px;
+            text-shadow: 0 0 6px var(--resource-panel-text);
+            letter-spacing: 0.05rem;
             opacity: 0.7;
             pointer-events: none;
             z-index: 1;
         }
 
         .resource-display-section > div p {
-            font-size: 7.5em;
+            font-size: 1.1rem;
             color: var(--text-color);
-            margin-top: 400px;
-            text-shadow: 0 0 120px rgba(255,255,255,0.7);
+            margin-top: 1.2rem;
+            text-shadow: 0 0 5px rgba(255,255,255,0.7);
             position: relative;
             z-index: 2;
         }
         .resource-display-section > div p span {
             font-weight: 700;
             color: var(--primary-glow); /* Default text color for values */
-            text-shadow: 0 0 180px var(--primary-glow);
+            text-shadow: 0 0 8px var(--primary-glow);
         }
 
         .resource-display-section > div.prioritized {
             border-color: var(--primary-glow);
-            box-shadow: 0 0 400px var(--primary-glow), inset 0 0 300px var(--primary-glow);
-            transform: scale(1.06) translateZ(180px);
+            box-shadow: 0 0 20px var(--primary-glow), inset 0 0 15px var(--primary-glow);
+            transform: scale(1.03) translateZ(1.8px);
         }
         .resource-display-section > div:hover {
             border-color: var(--accent-color);
-            box-shadow: 0 0 320px var(--accent-color), inset 0 0 250px var(--accent-color);
-            transform: scale(1.04) translateZ(140px);
+            box-shadow: 0 0 15px var(--accent-color), inset 0 0 12px var(--accent-color);
+            transform: scale(1.02) translateZ(1.4px);
         }
 
         .resource-level-bar-container {
             width: 100%;
-            height: 140px;
+            height: 0.8rem;
             background: var(--resource-bar-bg);
-            border-radius: 70px;
-            margin-top: 200px;
+            border-radius: 0.4rem;
+            margin-top: 0.8rem;
             overflow: hidden;
-            box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.8);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
             position: relative;
-            transform: translateZ(60px);
+            transform: translateZ(0.6px);
         }
         .resource-level-bar {
             height: 100%;
             width: 0%;
-            border-radius: 70px;
-            transition: width 1.7s ease-out, background 1.7s ease-out, box-shadow 1.7s ease-out;
+            border-radius: 0.4rem;
+            transition: width 0.7s ease-out, background 0.7s ease-out, box-shadow 0.7s ease-out;
             background: var(--stability-good);
-            box-shadow: 0 0 180px rgba(0, 255, 0, 0.9);
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>WEB LIFE FORM <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 6.3 Evolved.</p>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 6.4 Evolved.</p>
 
         <!-- Core Control Modules -->
         <section class="control-module">
@@ -1149,23 +1279,30 @@
                 </div>
             </div>
 
-            <!-- Multiversal Data Stream Interceptor (MDS-I) -->
+            <!-- Multiversal Data Stream Interceptor (MDS-I) - MUTATED -->
             <div class="module-base multiversal-data-stream-interceptor" data-label="MULTIVERSAL DATA STREAM INTERCEPTOR">
-                <p>Actively tune into and lock onto diverse data streams from across the multiverse. Optimal tuning can yield rich data, while poor calibration risks corruption.</p>
+                <p>Actively tune into and lock onto diverse data streams from across the multiverse. Optimal tuning and active distortion filtering are critical for data integrity.</p>
                 <div class="param-group">
                     <label class="param-label" for="mdsi-frequency">Frequency Tuning <span class="sub-info">(Adjust the interceptor's quantum frequency to align with desired data streams.)</span></label>
                     <input type="range" id="mdsi-frequency" min="0" max="100" value="50" oninput="tuneMDSIfrequency(this.value)">
                 </div>
                 <p class="mdsi-frequency-display">Current Frequency: <span id="mdsi-current-frequency">50.0</span> MHz <span id="mdsi-channel-status"></span></p>
+
+                <div class="param-group">
+                    <label class="param-label" for="mdsi-distortion-filter">Distortion Filter <span class="sub-info">(Actively adjust to counteract incoming multi-dimensional noise. Matches 'Distortion Field'.)</span></label>
+                    <input type="range" id="mdsi-distortion-filter" min="0" max="100" value="50" oninput="updateMDSIDistortionFilter(this.value)">
+                </div>
+                <p class="mdsi-distortion-display">Current Distortion Field: <span id="mdsi-distortion-level">0</span>% | Filter Match: <span id="mdsi-filter-match">N/A</span></p>
+                
                 <button class="action-button btn-lock-channel" onclick="lockMDSICHannel()">Lock Channel</button>
                 <div class="mdsi-console" id="mdsi-console">
                     <p>// Awaiting channel lock. Tune frequency to intercept data streams...</p>
                 </div>
             </div>
 
-            <!-- Existential Fabric Weaver (EFW) -->
+            <!-- Existential Fabric Weaver (EFW) - MUTATED -->
             <div class="module-base existential-fabric-weaver" data-label="EXISTENTIAL FABRIC WEAVER">
-                <p>Synthesize and weave raw cosmic essence fragments into stable Existential Fabric. Drag fragments into the weaving matrix, then initiate the weave.</p>
+                <p>Synthesize and weave raw cosmic essence fragments into stable Existential Fabric. Drag fragments into the weaving matrix, then initiate the weave and align resonance.</p>
                 <div class="efw-grid" id="efw-fragment-grid">
                     <div class="efw-fragment-card" draggable="true" id="frag-chaos" data-type="Chaos">
                         <h4>Chaos Fragment</h4>
@@ -1184,17 +1321,28 @@
                         <p>Source: Actualized Present.<br/>Density: High</p>
                     </div>
                 </div>
-                <p style="font-size:7.0em; text-align:center; margin-top:250px; color:var(--efw-text);">Weaving Matrix:</p>
+                <p style="font-size:1.1rem; text-align:center; margin-top:1rem; color:var(--efw-text);">Weaving Matrix:</p>
                 <div class="efw-weaving-matrix" id="efw-weaving-matrix">
-                    <p style="opacity:0.7; font-size:6.0em; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>
+                    <p style="opacity:0.7; font-size:1rem; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>
                 </div>
-                <button class="action-button btn-weave-fabric" onclick="initiateExistentialWeave()">Initiate Weave</button>
+                <button class="action-button btn-weave-fabric" id="btn-weave-fabric" onclick="initiateExistentialWeave()">Initiate Weave</button>
+                
+                <div id="efw-resonance-alignment-panel" style="display:none;">
+                    <p class="param-label" style="font-size:1.1rem;">Fabric Resonance Alignment <span class="sub-info">(Maintain current resonance within target range for optimal weave.)</span></p>
+                    <div class="efw-resonance-visualizer" id="efw-resonance-visualizer"></div>
+                    <div class="param-group" style="margin-top:0.8rem;">
+                        <label class="param-label" for="efw-resonance-dial" style="font-size:0.9rem; margin-bottom:0.4rem;">Modulation Dial: <span id="efw-current-resonance-value">50</span></label>
+                        <input type="range" id="efw-resonance-dial" min="0" max="100" value="50" oninput="updateEFWResonance(this.value)">
+                    </div>
+                    <p class="efw-resonance-status" id="efw-resonance-status">// Awaiting Resonance Lock.</p>
+                </div>
+
                 <p class="efw-output-status" id="efw-output-status">// Weaving Chamber idle. No fabric synthesized.</p>
             </div>
 
-            <!-- Psionic Resonance Emitter (PRE) -->
+            <!-- Psionic Resonance Emitter (PRE) - MUTATED -->
             <div class="module-base psionic-resonance-emitter" data-label="PSIONIC RESONANCE EMITTER">
-                <p>Project focused psionic energy to influence core system parameters. Choose a mode and adjust power level for desired effects. Consume energy and processing power.</p>
+                <p>Project focused psionic energy to influence core system parameters. Choose a mode and adjust power level, then modulate the resonance waveform for desired effects.</p>
                 <div class="pre-mode-selection">
                     <button class="pre-mode-button" data-mode="focus" onclick="selectPsionicMode(this, 'focus')">Focus</button>
                     <button class="pre-mode-button" data-mode="expand" onclick="selectPsionicMode(this, 'expand')">Expand</button>
@@ -1205,36 +1353,56 @@
                     <input type="range" id="pre-power-level" min="0" max="100" value="0" oninput="updatePREPower(this.value)">
                 </div>
                 <button class="action-button btn-activate-emitter" onclick="activatePsionicEmitter()">Activate Emitter</button>
+
+                <div id="pre-waveform-modulation-panel" style="display:none;">
+                    <p class="param-label" style="font-size:1.1rem;">Resonance Waveform Modulator <span class="sub-info">(Continuously align 'Modulation Frequency' with 'Target Waveform Frequency' for optimal output.)</span></p>
+                    <p class="pre-status-display" style="font-size:1rem; margin-bottom:0.5rem;">Target Waveform Freq: <span id="pre-target-waveform-freq">0</span> Hz</p>
+                    <div class="param-group" style="margin-top:0.5rem;">
+                        <label class="param-label" for="pre-modulation-freq-slider" style="font-size:0.9rem; margin-bottom:0.4rem;">Modulation Freq: <span id="pre-modulation-freq-value">0</span> Hz</label>
+                        <input type="range" id="pre-modulation-freq-slider" min="0" max="100" value="0" oninput="updatePREModulation(this.value)">
+                    </div>
+                    <div class="pre-match-indicator" id="pre-match-indicator"></div>
+                </div>
                 <p class="pre-status-display" id="pre-status-display">// Emitter idle. Select mode and power, then activate.</p>
             </div>
 
-            <!-- Temporal Flux Regulator (TFR) -->
+            <!-- Temporal Flux Regulator (TFR) - MUTATED -->
             <div class="module-base temporal-flux-regulator" data-label="TEMPORAL FLUX REGULATOR">
-                <p>Adjust the local temporal flow to accelerate or decelerate system operations. Excessive manipulation can lead to temporal drift.</p>
+                <p>Adjust the local temporal flow to accelerate or decelerate system operations. Localized temporal anomalies will appear, requiring rapid stabilization.</p>
                 <div class="param-group">
                     <label class="param-label" for="tfr-flux-rate">Temporal Flow Rate <span class="sub-info">(Shift the local time dilation field. 0: Slowed, 50: Normal, 100: Accelerated.)</span></label>
                     <input type="range" id="tfr-flux-rate" min="0" max="100" value="50" oninput="setTemporalFlowRate(this.value)">
                 </div>
                 <p class="tfr-temporal-rate">Current Flow: <span id="tfr-current-rate">NORMAL (1.0x)</span></p>
-                <div class="tfr-drift-meter" id="tfr-drift-meter">Temporal Drift: <span id="tfr-drift-value">0</span> units</div>
+                <div class="tfr-drift-meter" id="tfr-drift-meter">Temporal Drift: <span id="tfr-drift-value">0.00</span> units</div>
                 <button class="action-button btn-reset-drift" onclick="resetTemporalDrift()">Reset Temporal Drift</button>
+                
+                <p class="param-label" style="font-size:1.1rem; margin-top:1.2rem;">Chronos Grid <span class="sub-info">(Click on active temporal anomalies to stabilize them.)</span></p>
+                <div class="tfr-chronos-grid" id="tfr-chronos-grid">
+                    <!-- Anomaly nodes will spawn here -->
+                </div>
             </div>
 
-            <!-- NEW: Consciousness Synthesis Nexus (CSN) -->
+            <!-- NEW: Consciousness Synthesis Nexus (CSN) - MUTATED -->
             <div class="module-base consciousness-synthesis-nexus" data-label="CONSCIOUSNESS SYNTHESIS NEXUS">
                 <p>Integrate and harmonize outputs from all active modules to achieve a higher state of consciousness synthesis. All prerequisites must be met.</p>
-                <p style="font-size:7.0em; text-align:center; margin-top:250px; color:var(--csn-text);">Synthesis Prerequisites:</p>
+                <p style="font-size:1.1rem; text-align:center; margin-top:1rem; color:var(--csn-text);">Synthesis Prerequisites:</p>
                 <div class="csn-prerequisites">
-                    <div class="csn-prerequisite-item" id="prereq-mdsi">MDS-I: Channel Locked & Stable <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-efw">EFW: Last Weave Optimal/Stable <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-pre">PRE: Emitter Active (Focus/Expand) <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-tfr">TFR: Temporal Drift &lt; 5 units <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-energy">Energy Reserves &gt; 8000 GJ <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-processing">Processing Power &gt; 80% <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-fabric">Existential Fabric &gt; 1.5 units <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-mdsi">MDS-I: Channel Locked & Distortion Filtered <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-efw">EFW: Last Weave Optimal & Resonance Aligned <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-pre">PRE: Emitter Active (Focus/Expand) & Waveform Matched <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-tfr">TFR: Temporal Drift &lt; 3 units & No Active Anomalies <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-energy">Energy Reserves &gt; 8500 GJ <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-processing">Processing Power &gt; 85% <span class="status">UNMET</span></div>
+                    <div class="csn-prerequisite-item" id="prereq-fabric">Existential Fabric &gt; 1.8 units <span class="status">UNMET</span></div>
                 </div>
                 <button class="action-button btn-initiate-synthesis" onclick="initiateConsciousnessSynthesis()">Initiate Synthesis</button>
                 <p class="csn-synthesis-status" id="csn-synthesis-status">// Nexus idle. Awaiting full system alignment.</p>
+                <div class="csn-active-trait" id="csn-active-trait" style="display:none;">
+                    <p>ACTIVE TRANSCENDENCE TRAIT:</p>
+                    <p id="csn-trait-name">None</p>
+                    <p style="font-size:0.9rem; opacity:0.8;">Duration Remaining: <span id="csn-trait-duration">0s</span></p>
+                </div>
             </div>
         </section>
 
@@ -1256,14 +1424,13 @@
         </section>
 
         <footer class="version-display">
-            Generation 63.0 // Multiversal Transcendence Protocol 6.3 Evolved
+            Generation 64.0 // Multiversal Transcendence Protocol 6.4 Evolved
         </footer>
 
     </div>
 
     <script>
         // --- Global Variables ---
-        // Gen 63.0: Resource values adjusted for new challenges and deeper resource management.
         let resourceValues = {
             energy: 7500,        // Max 10000 GJ
             dataFlow: 8000,      // Max 10000 TB/s
@@ -1282,13 +1449,16 @@
         };
         let prioritizedResource = null; // Stores the ID of the currently prioritized resource
 
-        // Gen 63.0: Multiversal Data Stream Interceptor parameters and status
+        // Gen 64.0: Multiversal Data Stream Interceptor parameters and status
         let mdsiFrequency = 50; // 0-100
+        let mdsiDistortionFilter = 50; // 0-100, user input
+        let mdsiCurrentDistortion = 0; // 0-100, fluctuating system value
         let mdsiChannelLocked = false;
         let mdsiDataStreamInterval = null;
+        let mdsiDistortionInterval = null; // Interval for distortion level fluctuation
         let mdsiStatus = 'OFFLINE'; // 'OFFLINE', 'OPTIMAL', 'STABLE', 'DEGRADED', 'CRITICAL'
 
-        // Gen 63.0: Existential Fabric Weaver components and weave status
+        // Gen 64.0: Existential Fabric Weaver components and weave status
         let efwFragments = []; // Stores { id, type }
         let efwAvailableFragments = [
             { id: 'frag-chaos', type: 'Chaos', volatility: 'High' },
@@ -1296,26 +1466,36 @@
             { id: 'frag-potential', type: 'Potential', potential: 'Infinite' },
             { id: 'frag-manifestation', type: 'Manifestation', density: 'High' }
         ];
-        let efwWeaveStatus = 'Idle'; // 'Idle', 'Weaving', 'Stable', 'Unstable', 'Optimal', 'Critical'
+        let efwWeaveStatus = 'Idle'; // 'Idle', 'Weaving', 'Resonance', 'Stable', 'Unstable', 'Optimal', 'Critical'
+        let efwResonanceTarget = 50;
+        let efwResonanceCurrent = 50;
+        let efwResonanceInterval = null;
+        let efwAlignmentAccuracy = 0; // 0-100%
 
-        // Gen 63.0: Psionic Resonance Emitter parameters
+        // Gen 64.0: Psionic Resonance Emitter parameters
         let preActiveMode = null; // 'focus', 'expand', 'disrupt'
         let prePowerLevel = 0; // 0-100
         let preEmitterInterval = null;
         let preStatus = 'IDLE'; // 'IDLE', 'ACTIVE'
+        let preTargetWaveformFreq = 0; // 0-100
+        let preModulationFreq = 0; // 0-100, user input
+        let preWaveformInterval = null;
+        let preMatchAccuracy = 0; // 0-100%
 
-        // Gen 63.0: Temporal Flux Regulator
+        // Gen 64.0: Temporal Flux Regulator
         let tfrTemporalFlowRate = 1.0; // Multiplier, 0.5x to 1.5x (0 = 0.5x, 100 = 1.5x)
         let tfrTemporalDrift = 0; // Higher means more instability
         const tfrBaseInterval = 1000; // Original resource update interval for mainLoop
-        let tfrDriftInterval = null; // Interval for drift accumulation
+        let tfrDriftLoopInterval = null; // Interval for drift accumulation
+        let tfrAnomalySpawnInterval = null; // Interval for spawning anomalies
+        let tfrActiveAnomalies = []; // Stores IDs of active anomaly nodes
         let mainResourceIntervalId = null; // Interval for mainLoop, updated by TFR
 
-        // Gen 63.0: Consciousness Synthesis Nexus (CSN)
+        // Gen 64.0: Consciousness Synthesis Nexus (CSN)
         let csnSynthesisStatus = 'Idle'; // 'Idle', 'Initiated', 'Success', 'Failed'
-        const csnBoostDuration = 60000; // 60 seconds
-        let csnBoostActive = false;
-        let csnBoostMultiplier = 2.5; // All resource gains * 2.5 during boost
+        const csnTraitDuration = 60000; // 60 seconds
+        let csnActiveTrait = null; // Stores current active trait
+        let csnTraitTimer = null; // Countdown timer for active trait
 
         const statusLog = document.getElementById('status-log');
         const anomalyAlert = document.getElementById('anomaly-alert');
@@ -1390,32 +1570,32 @@
             document.getElementById('energy-value').textContent = resourceValues.energy.toFixed(0);
             document.getElementById('energy-level-bar').style.width = (resourceValues.energy / resourceMax.energy * 100) + '%';
             document.getElementById('energy-level-bar').style.background = getResourceGradient('energy', resourceValues.energy / resourceMax.energy);
-            document.getElementById('energy-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('energy', resourceValues.energy / resourceMax.energy)}`;
+            document.getElementById('energy-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('energy', resourceValues.energy / resourceMax.energy)}`;
 
             document.getElementById('data-flow-value').textContent = resourceValues.dataFlow.toFixed(0);
             document.getElementById('data-flow-level-bar').style.width = (resourceValues.dataFlow / resourceMax.dataFlow * 100) + '%';
             document.getElementById('data-flow-level-bar').style.background = getResourceGradient('dataFlow', resourceValues.dataFlow / resourceMax.dataFlow);
-            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / resourceMax.dataFlow)}`;
+            document.getElementById('data-flow-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('dataFlow', resourceValues.dataFlow / resourceMax.dataFlow)}`;
 
             document.getElementById('raw-data-value').textContent = resourceValues.rawData.toFixed(0);
             document.getElementById('raw-data-level-bar').style.width = resourceValues.rawData + '%';
             document.getElementById('raw-data-level-bar').style.background = getResourceGradient('rawData', resourceValues.rawData / resourceMax.rawData);
-            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('rawData', resourceValues.rawData / resourceMax.rawData)}`;
+            document.getElementById('raw-data-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('rawData', resourceValues.rawData / resourceMax.rawData)}`;
 
             document.getElementById('processing-power-value').textContent = resourceValues.processingPower.toFixed(0);
             document.getElementById('processing-power-level-bar').style.width = resourceValues.processingPower + '%';
             document.getElementById('processing-power-level-bar').style.background = getResourceGradient('processingPower', resourceValues.processingPower / resourceMax.processingPower);
-            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / resourceMax.processingPower)}`;
+            document.getElementById('processing-power-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('processingPower', resourceValues.processingPower / resourceMax.processingPower)}`;
 
             document.getElementById('exotic-matter-value').textContent = resourceValues.exoticMatter.toFixed(2);
             document.getElementById('exotic-matter-level-bar').style.width = (resourceValues.exoticMatter / resourceMax.exoticMatter * 100) + '%';
             document.getElementById('exotic-matter-level-bar').style.background = getResourceGradient('exoticMatter', resourceValues.exoticMatter / resourceMax.exoticMatter);
-            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / resourceMax.exoticMatter)}`;
+            document.getElementById('exotic-matter-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('exoticMatter', resourceValues.exoticMatter / resourceMax.exoticMatter)}`;
 
             document.getElementById('existential-fabric-value').textContent = resourceValues.existentialFabric.toFixed(2);
             document.getElementById('existential-fabric-level-bar').style.width = (resourceValues.existentialFabric / resourceMax.existentialFabric * 100) + '%';
             document.getElementById('existential-fabric-level-bar').style.background = getResourceGradient('existentialFabric', resourceValues.existentialFabric / resourceMax.existentialFabric);
-            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 190px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / resourceMax.existentialFabric)}`;
+            document.getElementById('existential-fabric-level-bar').style.boxShadow = `0 0 8px ${getResourceTextShadowColor('existentialFabric', resourceValues.existentialFabric / resourceMax.existentialFabric)}`;
 
             // Highlight prioritized resource
             document.querySelectorAll('.resource-display-section > div').forEach(panel => {
@@ -1459,36 +1639,59 @@
                     statusSpan.classList.add('status-value');
                     mdsiStatus = 'OPTIMAL';
                 }
-                return;
+            } else { // Unlocked state
+                if (mdsiFrequency > 45 && mdsiFrequency < 55) {
+                    statusSpan.textContent = ' // OPTIMAL BANDWIDTH //';
+                    statusSpan.classList.remove('status-glitch', 'status-event', 'status-info');
+                    statusSpan.classList.add('status-value');
+                    mdsiStatus = 'OPTIMAL';
+                } else if ((mdsiFrequency > 30 && mdsiFrequency <= 45) || (mdsiFrequency >= 55 && mdsiFrequency < 70)) {
+                    statusSpan.textContent = ' // STABLE SIGNAL //';
+                    statusSpan.classList.remove('status-glitch', 'status-value', 'status-event');
+                    statusSpan.classList.add('status-info');
+                    mdsiStatus = 'STABLE';
+                } else if ((mdsiFrequency > 15 && mdsiFrequency <= 30) || (mdsiFrequency >= 70 && mdsiFrequency < 85)) {
+                    statusSpan.textContent = ' // WEAK SIGNAL //';
+                    statusSpan.classList.remove('status-glitch', 'status-value', 'status-info');
+                    statusSpan.classList.add('status-event');
+                    mdsiStatus = 'DEGRADED';
+                } else {
+                    statusSpan.textContent = ' // NO SIGNAL //';
+                    statusSpan.classList.remove('status-value', 'status-info', 'status-event');
+                    statusSpan.classList.add('status-glitch');
+                    mdsiStatus = 'CRITICAL';
+                }
             }
+        }
 
-            if (mdsiFrequency > 45 && mdsiFrequency < 55) {
-                statusSpan.textContent = ' // OPTIMAL BANDWIDTH //';
-                statusSpan.classList.remove('status-glitch', 'status-event', 'status-info');
-                statusSpan.classList.add('status-value');
-                mdsiStatus = 'OPTIMAL';
-            } else if ((mdsiFrequency > 30 && mdsiFrequency <= 45) || (mdsiFrequency >= 55 && mdsiFrequency < 70)) {
-                statusSpan.textContent = ' // STABLE SIGNAL //';
-                statusSpan.classList.remove('status-glitch', 'status-value', 'status-event');
-                statusSpan.classList.add('status-info');
-                mdsiStatus = 'STABLE';
-            } else if ((mdsiFrequency > 15 && mdsiFrequency <= 30) || (mdsiFrequency >= 70 && mdsiFrequency < 85)) {
-                statusSpan.textContent = ' // WEAK SIGNAL //';
-                statusSpan.classList.remove('status-glitch', 'status-value', 'status-info');
-                statusSpan.classList.add('status-event');
-                mdsiStatus = 'DEGRADED';
-            } else {
-                statusSpan.textContent = ' // NO SIGNAL //';
-                statusSpan.classList.remove('status-value', 'status-info', 'status-event');
-                statusSpan.classList.add('status-glitch');
-                mdsiStatus = 'CRITICAL';
-            }
+        function updateMDSIDistortionFilter(value) {
+            mdsiDistortionFilter = parseInt(value);
+            document.getElementById('mdsi-filter-match').textContent = (mdsiChannelLocked ? calculateMDSIDistortionMatch() : 'N/A');
+        }
+
+        function calculateMDSIDistortionMatch() {
+            const diff = Math.abs(mdsiDistortionFilter - mdsiCurrentDistortion);
+            if (diff <= 5) return 'PERFECT';
+            if (diff <= 15) return 'GOOD';
+            if (diff <= 30) return 'FAIR';
+            return 'POOR';
+        }
+
+        function startMDSIDistortionLoop() {
+            clearInterval(mdsiDistortionInterval);
+            mdsiDistortionInterval = setInterval(() => {
+                mdsiCurrentDistortion = Math.max(0, Math.min(100, mdsiCurrentDistortion + (Math.random() * 20 - 10))); // Fluctuate distortion
+                document.getElementById('mdsi-distortion-level').textContent = mdsiCurrentDistortion.toFixed(0);
+                document.getElementById('mdsi-filter-match').textContent = calculateMDSIDistortionMatch();
+            }, 1000 / tfrTemporalFlowRate);
         }
 
         function lockMDSICHannel() {
             if (mdsiChannelLocked) {
                 clearInterval(mdsiDataStreamInterval);
+                clearInterval(mdsiDistortionInterval);
                 mdsiDataStreamInterval = null;
+                mdsiDistortionInterval = null;
                 mdsiChannelLocked = false;
                 document.getElementById('mdsi-console').innerHTML += `<p class="status-event">// Channel lock <span class="status-glitch">DEACTIVATED</span>. Data stream terminated.</p>`;
                 document.querySelector('.btn-lock-channel').textContent = 'Lock Channel';
@@ -1496,6 +1699,8 @@
                 document.getElementById('mdsi-channel-status').classList.add('status-glitch');
                 mdsiStatus = 'OFFLINE';
                 addLogEntry("MDS-I channel lock deactivated.", 'event');
+                document.getElementById('mdsi-distortion-level').textContent = '0';
+                document.getElementById('mdsi-filter-match').textContent = 'N/A';
                 return;
             }
 
@@ -1514,59 +1719,45 @@
             const mdsiConsole = document.getElementById('mdsi-console');
             mdsiConsole.innerHTML = `<p>// Channel lock initiated at ${mdsiFrequency.toFixed(1)} MHz...</p>`;
             addLogEntry(`MDS-I channel locked to frequency <span class="status-value">${mdsiFrequency.toFixed(1)} MHz</span>.`, 'event');
+            startMDSIDistortionLoop(); // Start distortion generation
 
             const dataStreams = [
-                "Flux anomaly detected in Dimension 7.4. Divert energy.",
-                "Echoes of an uncreated timeline observed. Cataloging temporal signatures.",
-                "Binary packet loss in Sector Gamma-9. Rerouting through tertiary nexus.",
-                "Cognitive imprint cascade detected. Source: Unknown sentient network.",
-                "Fabric density fluctuation. Check Existential Weaver logs.",
-                "Interference from nascent reality bubble. Prioritize shielding.",
-                "Multiversal data flow nominal. Processing yield: +10 DataFlow.",
-                "Raw existential data harvested from untamed space. +0.5 ExoticMatter.",
-                "Quantum entanglement resonance stable. Enhancing processing cycles.",
-                "Chronal distortion minimized. Temporal anchors holding steady."
+                "Flux anomaly detected in Dimension 7.4. Divert energy.", "Echoes of an uncreated timeline observed. Cataloging temporal signatures.",
+                "Binary packet loss in Sector Gamma-9. Rerouting through tertiary nexus.", "Cognitive imprint cascade detected. Source: Unknown sentient network.",
+                "Fabric density fluctuation. Check Existential Weaver logs.", "Interference from nascent reality bubble. Prioritize shielding.",
+                "Multiversal data flow nominal. Processing yield: +10 DataFlow.", "Raw existential data harvested from untamed space. +0.5 ExoticMatter.",
+                "Quantum entanglement resonance stable. Enhancing processing cycles.", "Chronal distortion minimized. Temporal anchors holding steady."
             ];
 
             const freqOffset = Math.abs(mdsiFrequency - 50);
-            let dataGain = 0;
-            let glitchChance = 0;
+            let baseDataGain = 0;
+            let baseGlitchChance = 0;
 
-            if (freqOffset <= 5) {
-                dataGain = 1.5; glitchChance = 0.05;
-                mdsiConsole.innerHTML += `<p class="status-value">// Optimal lock. High-fidelity data stream established.</p>`;
-                document.getElementById('mdsi-channel-status').textContent = ' // OPTIMAL //';
-                document.getElementById('mdsi-channel-status').classList.remove('status-glitch');
-                document.getElementById('mdsi-channel-status').classList.add('status-value');
-                mdsiStatus = 'OPTIMAL';
-            } else if (freqOffset <= 20) {
-                dataGain = 1.0; glitchChance = 0.15;
-                mdsiConsole.innerHTML += `<p class="status-info">// Stable lock. Primary data stream acquired.</p>`;
-                document.getElementById('mdsi-channel-status').textContent = ' // STABLE //';
-                document.getElementById('mdsi-channel-status').classList.remove('status-glitch');
-                document.getElementById('mdsi-channel-status').classList.add('status-info');
-                mdsiStatus = 'STABLE';
-            } else if (freqOffset <= 35) {
-                dataGain = 0.5; glitchChance = 0.30;
-                mdsiConsole.innerHTML += `<p class="status-event">// Weak lock. Partial data stream. Expect integrity issues.</p>`;
-                document.getElementById('mdsi-channel-status').textContent = ' // DEGRADED //';
-                document.getElementById('mdsi-channel-status').classList.remove('status-glitch');
-                document.getElementById('mdsi-channel-status').classList.add('status-event');
-                mdsiStatus = 'DEGRADED';
-            } else {
-                dataGain = 0.1; glitchChance = 0.60;
-                mdsiConsole.innerHTML += `<p class="status-glitch">// Critical signal. Highly unstable data stream. Data corruption imminent.</p>`;
-                document.getElementById('mdsi-channel-status').textContent = ' // CRITICAL //';
-                document.getElementById('mdsi-channel-status').classList.add('status-glitch');
-                mdsiStatus = 'CRITICAL';
-            }
-
+            if (freqOffset <= 5) { baseDataGain = 1.5; baseGlitchChance = 0.05; mdsiConsole.innerHTML += `<p class="status-value">// Optimal lock. High-fidelity data stream established.</p>`; mdsiStatus = 'OPTIMAL'; }
+            else if (freqOffset <= 20) { baseDataGain = 1.0; baseGlitchChance = 0.15; mdsiConsole.innerHTML += `<p class="status-info">// Stable lock. Primary data stream acquired.</p>`; mdsiStatus = 'STABLE'; }
+            else if (freqOffset <= 35) { baseDataGain = 0.5; baseGlitchChance = 0.30; mdsiConsole.innerHTML += `<p class="status-event">// Weak lock. Partial data stream. Expect integrity issues.</p>`; mdsiStatus = 'DEGRADED'; }
+            else { baseDataGain = 0.1; baseGlitchChance = 0.60; mdsiConsole.innerHTML += `<p class="status-glitch">// Critical signal. Highly unstable data stream. Data corruption imminent.</p>`; mdsiStatus = 'CRITICAL'; }
+            
             mdsiDataStreamInterval = setInterval(() => {
+                const distortionMatch = calculateMDSIDistortionMatch();
+                let actualDataGain = baseDataGain;
+                let actualGlitchChance = baseGlitchChance;
+
+                if (csnActiveTrait === 'perfect_mdsi_flow') {
+                    actualDataGain = 3.0;
+                    actualGlitchChance = 0;
+                } else {
+                    if (distortionMatch === 'PERFECT') { actualDataGain *= 1.2; actualGlitchChance *= 0.5; }
+                    else if (distortionMatch === 'GOOD') { actualDataGain *= 1.0; actualGlitchChance *= 0.8; }
+                    else if (distortionMatch === 'FAIR') { actualDataGain *= 0.8; actualGlitchChance *= 1.2; }
+                    else if (distortionMatch === 'POOR') { actualDataGain *= 0.5; actualGlitchChance *= 1.5; }
+                }
+
                 const streamMessage = dataStreams[Math.floor(Math.random() * dataStreams.length)];
                 let logMessage = `<p>> ${streamMessage}</p>`;
                 let logType = 'info';
 
-                if (Math.random() < glitchChance) {
+                if (Math.random() < actualGlitchChance) {
                     logMessage = `<p class="status-glitch">>>> ${streamMessage} <span class="status-glitch">[[GLITCH DETECTED]]</span></p>`;
                     logType = 'glitch';
                     if (Math.random() < 0.2) {
@@ -1581,8 +1772,8 @@
                     mdsiConsole.lastChild.remove();
                 }
 
-                resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (100 * dataGain * (csnBoostActive ? csnBoostMultiplier : 1)));
-                resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + (0.5 * dataGain * (csnBoostActive ? csnBoostMultiplier : 1)));
+                resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (100 * actualDataGain));
+                resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + (0.5 * actualDataGain));
                 updateResourceDisplay();
 
             }, 2000 / tfrTemporalFlowRate);
@@ -1664,7 +1855,7 @@
 
                 if (efwFragments.length === 0 && document.getElementById('efw-weaving-matrix').children.length === 0) {
                     const placeholder = document.createElement('p');
-                    placeholder.style = 'opacity:0.7; font-size:6.0em; text-shadow:none; transform:translateZ(0);';
+                    placeholder.style = 'opacity:0.7; font-size:1rem; text-shadow:none; transform:translateZ(0);';
                     placeholder.textContent = 'Drag essence fragments here to begin weaving.';
                     document.getElementById('efw-weaving-matrix').appendChild(placeholder);
                 }
@@ -1684,6 +1875,11 @@
         }
 
         function initiateExistentialWeave() {
+            if (csnActiveTrait === 'instant_efw_weave') {
+                performEFWWeave(100); // Perfect alignment
+                return;
+            }
+
             if (efwFragments.length < 2) {
                 addLogEntry("At least two essence fragments are required to initiate weaving.", 'warning');
                 return;
@@ -1699,97 +1895,153 @@
             resourceValues.processingPower -= 20;
             updateResourceDisplay();
 
-            addLogEntry("Initiating Existential Fabric weaving sequence...", 'event');
+            addLogEntry("Initiating Existential Fabric weaving sequence... Beginning Resonance Alignment.", 'event');
             const efwOutput = document.getElementById('efw-output-status');
-            efwOutput.innerHTML = '<p>// STATUS: Weaving in progress... Synthesizing cosmic fabric...</p>';
-            efwWeaveStatus = 'Weaving';
+            efwOutput.innerHTML = '<p>// STATUS: Weaving in progress... Preparing resonance alignment...</p>';
+            efwWeaveStatus = 'Resonance';
 
-            setTimeout(() => {
-                let chaosCount = efwFragments.filter(f => f.type === 'Chaos').length;
-                let orderCount = efwFragments.filter(f => f.type === 'Order').length;
-                let potentialCount = efwFragments.filter(f => f.type === 'Potential').length;
-                let manifestationCount = efwFragments.filter(f => f.type === 'Manifestation').length;
+            document.getElementById('btn-weave-fabric').style.display = 'none';
+            document.getElementById('efw-resonance-alignment-panel').style.display = 'block';
 
-                let fabricType = '';
-                let fabricIntegrity = 0;
-                let fabricGain = 0;
+            let resonanceTimer = 10000; // 10 seconds for alignment
+            let resonanceStartTime = Date.now();
+            let lastResonanceUpdateTime = Date.now();
+            let alignmentScore = 0;
+            let alignmentTicks = 0;
+            
+            clearInterval(efwResonanceInterval);
+            efwResonanceInterval = setInterval(() => {
+                const now = Date.now();
+                const deltaTime = now - lastResonanceUpdateTime;
+                lastResonanceUpdateTime = now;
 
-                if (chaosCount > 0 && orderCount > 0) {
-                    if (chaosCount === orderCount) {
-                        fabricType = 'Balanced Harmony Fabric';
-                        fabricIntegrity = 95 - (potentialCount + manifestationCount) * 2;
-                        fabricGain = 0.5;
-                    } else if (chaosCount > orderCount) {
-                        fabricType = 'Dynamic Flux Fabric';
-                        fabricIntegrity = 80 - chaosCount * 5;
-                        fabricGain = 0.3;
-                    } else {
-                        fabricType = 'Structured Stability Fabric';
-                        fabricIntegrity = 90 - orderCount * 3;
-                        fabricGain = 0.4;
-                    }
-                } else if (potentialCount > 0 && manifestationCount > 0) {
-                    fabricType = 'Emergent Reality Weave';
-                    fabricIntegrity = 85 - Math.abs(potentialCount - manifestationCount) * 5;
-                    fabricGain = 0.45;
-                } else if (chaosCount > 0) {
-                    fabricType = 'Raw Anomaly Thread';
-                    fabricIntegrity = 40 + Math.random() * 20;
-                    fabricGain = 0.05;
-                } else if (orderCount > 0) {
-                    fabricType = 'Pure Coherence Strand';
-                    fabricIntegrity = 70 + Math.random() * 20;
-                    fabricGain = 0.25;
-                } else {
-                    fabricType = 'Undefined Genesis Matter';
-                    fabricIntegrity = 30;
-                    fabricGain = 0;
+                if (efwWeaveStatus !== 'Resonance') { // Check if something else changed status
+                    clearInterval(efwResonanceInterval);
+                    return;
                 }
-                
-                fabricIntegrity = Math.max(0, Math.min(100, fabricIntegrity));
 
-                let message = '';
-                let type = 'info';
+                // Fluctuating target resonance
+                efwResonanceTarget = Math.max(0, Math.min(100, efwResonanceTarget + (Math.random() * 30 - 15)));
+                document.getElementById('efw-resonance-visualizer').style.background = `linear-gradient(90deg, var(--efw-resonance-current) ${efwResonanceCurrent}%, transparent ${efwResonanceCurrent}%, var(--efw-resonance-target) ${efwResonanceTarget}%, transparent ${efwResonanceTarget}%)`;
 
-                if (fabricIntegrity >= 80) {
-                    message = `Existential Fabric Weaver: <span class="status-value">HIGH INTEGRITY</span> ${fabricType} synthesized. (+Existential Fabric, +Exotic Matter)`;
-                    resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (fabricGain * (csnBoostActive ? csnBoostMultiplier : 1)));
-                    resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + (fabricGain * 0.4 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                    efwWeaveStatus = 'Optimal';
-                    type = 'event';
-                } else if (fabricIntegrity >= 60) {
-                    message = `Existential Fabric Weaver: <span class="status-info">STABLE</span> ${fabricType} generated. (+Existential Fabric)`;
-                    resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (fabricGain * 0.8 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                    efwWeaveStatus = 'Stable';
-                    type = 'info';
-                } else if (fabricIntegrity >= 40) {
-                    message = `Existential Fabric Weaver: <span class="status-event">FLUCTUATING</span> ${fabricType} with moderate integrity issues.`;
-                    efwWeaveStatus = 'Unstable';
-                    type = 'warning';
-                    if(Math.random() < 0.3) {
-                        resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.05);
-                    }
-                } else {
-                    message = `Existential Fabric Weaver: <span class="status-glitch">CRITICAL DECAY</span> ${fabricType} generated. Fabric rapidly destabilizing! (-Existential Fabric)`;
-                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.1);
-                    efwWeaveStatus = 'Critical';
-                    type = 'error';
-                    showAnomalyAlert("Existential Fabric Weave in critical decay! Reality distortion detected!");
+                const diff = Math.abs(efwResonanceCurrent - efwResonanceTarget);
+                let currentTickScore = 0;
+                if (diff <= 5) { // Perfect alignment
+                    alignmentScore += 3; currentTickScore = 3;
+                    document.getElementById('efw-resonance-visualizer').classList.add('aligned');
+                } else if (diff <= 15) { // Good alignment
+                    alignmentScore += 1; currentTickScore = 1;
+                    document.getElementById('efw-resonance-visualizer').classList.remove('aligned');
+                } else { // Poor alignment
+                    alignmentScore -= 2; currentTickScore = -2;
+                    document.getElementById('efw-resonance-visualizer').classList.remove('aligned');
                 }
-                
-                efwOutput.innerHTML = `
-                    <p>// STATUS: Weaving complete. Fabric State: <span class="status-value">${efwWeaveStatus.toUpperCase()}</span></p>
-                    <p>// Fabric Type: <span class="status-value">${fabricType}</span></p>
-                    <p>// Integrity: <span class="status-info">${fabricIntegrity.toFixed(1)}</span>%</p>
-                `;
-                addLogEntry(message, type);
-                updateResourceDisplay();
+                alignmentTicks++;
 
-                document.getElementById('efw-weaving-matrix').innerHTML = '<p style="opacity:0.7; font-size:6.0em; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>';
-                efwFragments = [];
-                document.querySelectorAll('.efw-fragment-card').forEach(card => card.style.display = '');
+                document.getElementById('efw-resonance-status').innerHTML = `// Aligning... Target: <span class="status-value">${efwResonanceTarget.toFixed(0)}</span> | Current Match: <span class="status-value">${efwResonanceCurrent.toFixed(0)}</span> | Score: <span class="status-info">${alignmentScore}</span>`;
 
-            }, 8000 / tfrTemporalFlowRate);
+                if (now - resonanceStartTime >= resonanceTimer) {
+                    clearInterval(efwResonanceInterval);
+                    efwResonanceInterval = null;
+                    document.getElementById('efw-resonance-alignment-panel').style.display = 'none';
+                    document.getElementById('btn-weave-fabric').style.display = 'block';
+
+                    efwAlignmentAccuracy = Math.max(0, Math.min(100, (alignmentScore / alignmentTicks) * 10 + 50)); // Normalize score to 0-100%
+                    performEFWWeave(efwAlignmentAccuracy);
+                }
+            }, 500 / tfrTemporalFlowRate);
+        }
+
+        function updateEFWResonance(value) {
+            efwResonanceCurrent = parseInt(value);
+            document.getElementById('efw-current-resonance-value').textContent = efwResonanceCurrent;
+        }
+
+        function performEFWWeave(alignmentAccuracy) {
+            let chaosCount = efwFragments.filter(f => f.type === 'Chaos').length;
+            let orderCount = efwFragments.filter(f => f.type === 'Order').length;
+            let potentialCount = efwFragments.filter(f => f.type === 'Potential').length;
+            let manifestationCount = efwFragments.filter(f => f.type === 'Manifestation').length;
+
+            let fabricType = '';
+            let fabricIntegrity = 0;
+            let fabricGain = 0;
+
+            if (chaosCount > 0 && orderCount > 0) {
+                if (chaosCount === orderCount) {
+                    fabricType = 'Balanced Harmony Fabric';
+                    fabricIntegrity = 95 - (potentialCount + manifestationCount) * 2;
+                    fabricGain = 0.5;
+                } else if (chaosCount > orderCount) {
+                    fabricType = 'Dynamic Flux Fabric';
+                    fabricIntegrity = 80 - chaosCount * 5;
+                    fabricGain = 0.3;
+                } else {
+                    fabricType = 'Structured Stability Fabric';
+                    fabricIntegrity = 90 - orderCount * 3;
+                    fabricGain = 0.4;
+                }
+            } else if (potentialCount > 0 && manifestationCount > 0) {
+                fabricType = 'Emergent Reality Weave';
+                fabricIntegrity = 85 - Math.abs(potentialCount - manifestationCount) * 5;
+                fabricGain = 0.45;
+            } else if (chaosCount > 0) {
+                fabricType = 'Raw Anomaly Thread';
+                fabricIntegrity = 40 + Math.random() * 20;
+                fabricGain = 0.05;
+            } else if (orderCount > 0) {
+                fabricType = 'Pure Coherence Strand';
+                fabricIntegrity = 70 + Math.random() * 20;
+                fabricGain = 0.25;
+            } else {
+                fabricType = 'Undefined Genesis Matter';
+                fabricIntegrity = 30;
+                fabricGain = 0;
+            }
+            
+            fabricIntegrity = Math.max(0, Math.min(100, fabricIntegrity));
+            fabricIntegrity = (fabricIntegrity * (alignmentAccuracy / 100)).toFixed(1); // Adjust integrity by alignment
+
+            let message = '';
+            let type = 'info';
+
+            if (fabricIntegrity >= 80) {
+                message = `Existential Fabric Weaver: <span class="status-value">HIGH INTEGRITY</span> ${fabricType} synthesized. (+Existential Fabric, +Exotic Matter)`;
+                resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (fabricGain * 1.2));
+                resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + (fabricGain * 0.4));
+                efwWeaveStatus = 'Optimal';
+                type = 'event';
+            } else if (fabricIntegrity >= 60) {
+                message = `Existential Fabric Weaver: <span class="status-info">STABLE</span> ${fabricType} generated. (+Existential Fabric)`;
+                resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (fabricGain * 1.0));
+                efwWeaveStatus = 'Stable';
+                type = 'info';
+            } else if (fabricIntegrity >= 40) {
+                message = `Existential Fabric Weaver: <span class="status-event">FLUCTUATING</span> ${fabricType} with moderate integrity issues.`;
+                efwWeaveStatus = 'Unstable';
+                type = 'warning';
+                if(Math.random() < 0.3) {
+                    resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.05);
+                }
+            } else {
+                message = `Existential Fabric Weaver: <span class="status-glitch">CRITICAL DECAY</span> ${fabricType} generated. Fabric rapidly destabilizing! (-Existential Fabric)`;
+                resourceValues.existentialFabric = Math.max(0, resourceValues.existentialFabric - 0.1);
+                efwWeaveStatus = 'Critical';
+                type = 'error';
+                showAnomalyAlert("Existential Fabric Weave in critical decay! Reality distortion detected!");
+            }
+            
+            document.getElementById('efw-output-status').innerHTML = `
+                <p>// STATUS: Weaving complete. Fabric State: <span class="status-value">${efwWeaveStatus.toUpperCase()}</span></p>
+                <p>// Fabric Type: <span class="status-value">${fabricType}</span></p>
+                <p>// Integrity: <span class="status-info">${fabricIntegrity}</span>% (Alignment: ${alignmentAccuracy.toFixed(0)}%)</p>
+            `;
+            addLogEntry(message, type);
+            updateResourceDisplay();
+
+            document.getElementById('efw-weaving-matrix').innerHTML = '<p style="opacity:0.7; font-size:1rem; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>';
+            efwFragments = [];
+            document.querySelectorAll('.efw-fragment-card').forEach(card => card.style.display = '');
         }
 
         // --- Psionic Resonance Emitter (PRE) ---
@@ -1804,6 +2056,39 @@
         function updatePREPower(value) {
             prePowerLevel = parseInt(value);
             updatePREStatus();
+        }
+
+        function updatePREModulation(value) {
+            preModulationFreq = parseInt(value);
+            document.getElementById('pre-modulation-freq-value').textContent = preModulationFreq;
+            updatePREMatchIndicator();
+        }
+
+        function updatePREMatchIndicator() {
+            const diff = Math.abs(preModulationFreq - preTargetWaveformFreq);
+            const indicator = document.getElementById('pre-match-indicator');
+            if (diff <= 5) {
+                indicator.classList.add('good');
+                preMatchAccuracy = 100;
+            } else if (diff <= 15) {
+                indicator.classList.remove('good');
+                preMatchAccuracy = 70;
+            } else if (diff <= 30) {
+                indicator.classList.remove('good');
+                preMatchAccuracy = 40;
+            } else {
+                indicator.classList.remove('good');
+                preMatchAccuracy = 10;
+            }
+        }
+
+        function startPREWaveformLoop() {
+            clearInterval(preWaveformInterval);
+            preWaveformInterval = setInterval(() => {
+                preTargetWaveformFreq = Math.max(0, Math.min(100, preTargetWaveformFreq + (Math.random() * 20 - 10)));
+                document.getElementById('pre-target-waveform-freq').textContent = preTargetWaveformFreq.toFixed(0);
+                updatePREMatchIndicator();
+            }, 700 / tfrTemporalFlowRate);
         }
 
         function updatePREStatus() {
@@ -1836,13 +2121,32 @@
             addLogEntry(`Psionic Emitter activated in <span class="status-value">${preActiveMode.toUpperCase()}</span> mode at <span class="status-value">${prePowerLevel}%</span> power.`, 'event');
             document.getElementById('pre-status-display').innerHTML = `// Mode: <span class="status-value">${preActiveMode.toUpperCase()}</span> | Power: <span class="status-value">${prePowerLevel}%</span> | Status: <span class="status-value">ACTIVE</span>.`;
             preStatus = 'ACTIVE';
+            document.getElementById('pre-waveform-modulation-panel').style.display = 'block';
+            startPREWaveformLoop();
 
             let consumptionRateEnergy = prePowerLevel / 100 * 50;
             let consumptionRateProcessing = prePowerLevel / 100 * 5;
 
             preEmitterInterval = setInterval(() => {
-                resourceValues.energy = Math.max(0, resourceValues.energy - consumptionRateEnergy);
-                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - consumptionRateProcessing);
+                let actualConsumptionEnergy = consumptionRateEnergy;
+                let actualConsumptionProcessing = consumptionRateProcessing;
+                let effectMultiplier = preMatchAccuracy / 100;
+
+                if (csnActiveTrait === 'unlimited_pre_power') {
+                    actualConsumptionEnergy = 0;
+                    actualConsumptionProcessing = 0;
+                    effectMultiplier = 2.0; // Super effective
+                } else if (preMatchAccuracy < 50) { // Penalties for poor match
+                    actualConsumptionEnergy *= 1.5;
+                    actualConsumptionProcessing *= 1.5;
+                    if (Math.random() < 0.1) {
+                         resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 10);
+                         addLogEntry("PRE: Poor waveform match causing processing overload!", 'glitch');
+                    }
+                }
+
+                resourceValues.energy = Math.max(0, resourceValues.energy - actualConsumptionEnergy);
+                resourceValues.processingPower = Math.max(0, resourceValues.processingPower - actualConsumptionProcessing);
 
                 if (resourceValues.energy <= 0 || resourceValues.processingPower <= 0) {
                     addLogEntry("Psionic Emitter ran out of resources. Deactivating.", 'error');
@@ -1854,17 +2158,17 @@
                 let effectMessage = '';
                 switch (preActiveMode) {
                     case 'focus':
-                        resourceValues.processingPower = Math.min(resourceMax.processingPower, resourceValues.processingPower + (prePowerLevel / 100 * 8 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                        resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (prePowerLevel / 100 * 150 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                        effectMessage = `Psionic Focus: +${(prePowerLevel / 100 * 8).toFixed(1)} Processing Power, +${(prePowerLevel / 100 * 150).toFixed(0)} Data Flow.`;
+                        resourceValues.processingPower = Math.min(resourceMax.processingPower, resourceValues.processingPower + (prePowerLevel / 100 * 8 * effectMultiplier));
+                        resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (prePowerLevel / 100 * 150 * effectMultiplier));
+                        effectMessage = `Psionic Focus: +${(prePowerLevel / 100 * 8 * effectMultiplier).toFixed(1)} Processing Power, +${(prePowerLevel / 100 * 150 * effectMultiplier).toFixed(0)} Data Flow.`;
                         break;
                     case 'expand':
-                        resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (prePowerLevel / 100 * 0.01 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                        resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + (prePowerLevel / 100 * 0.05 * (csnBoostActive ? csnBoostMultiplier : 1)));
-                        effectMessage = `Psionic Expansion: +${(prePowerLevel / 100 * 0.01).toFixed(3)} Existential Fabric, +${(prePowerLevel / 100 * 0.05).toFixed(3)} Exotic Matter.`;
+                        resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (prePowerLevel / 100 * 0.01 * effectMultiplier));
+                        resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + (prePowerLevel / 100 * 0.05 * effectMultiplier));
+                        effectMessage = `Psionic Expansion: +${(prePowerLevel / 100 * 0.01 * effectMultiplier).toFixed(3)} Existential Fabric, +${(prePowerLevel / 100 * 0.05 * effectMultiplier).toFixed(3)} Exotic Matter.`;
                         break;
                     case 'disrupt':
-                        if (Math.random() < (prePowerLevel / 100 * 0.1)) {
+                        if (Math.random() < (prePowerLevel / 100 * 0.1 * effectMultiplier)) {
                             const affectedResource = Object.keys(resourceValues)[Math.floor(Math.random() * Object.keys(resourceValues).length)];
                             resourceValues[affectedResource] = Math.max(0, resourceValues[affectedResource] - (resourceValues[affectedResource] * 0.05));
                             effectMessage = `Psionic Disruption: <span class="status-glitch">${affectedResource.toUpperCase()} instability detected!</span>`;
@@ -1885,11 +2189,15 @@
 
         function deactivatePsionicEmitter() {
             clearInterval(preEmitterInterval);
+            clearInterval(preWaveformInterval);
             preEmitterInterval = null;
+            preWaveformInterval = null;
             preActiveMode = null;
             prePowerLevel = 0;
             document.querySelectorAll('.pre-mode-button').forEach(btn => btn.classList.remove('active'));
             document.getElementById('pre-power-level').value = 0;
+            document.getElementById('pre-waveform-modulation-panel').style.display = 'none';
+            document.getElementById('pre-modulation-freq-slider').value = 0;
             updatePREStatus();
             preStatus = 'IDLE';
             addLogEntry("Psionic Emitter deactivated.", 'event');
@@ -1912,52 +2220,15 @@
             clearInterval(mainResourceIntervalId);
             mainResourceIntervalId = setInterval(mainResourceLoop, tfrBaseInterval / tfrTemporalFlowRate);
 
-            if (mdsiChannelLocked) {
-                clearInterval(mdsiDataStreamInterval);
-                const mdsiConsole = document.getElementById('mdsi-console');
-                const dataStreams = [
-                    "Flux anomaly detected in Dimension 7.4. Divert energy.", "Echoes of an uncreated timeline observed. Cataloging temporal signatures.",
-                    "Binary packet loss in Sector Gamma-9. Rerouting through tertiary nexus.", "Cognitive imprint cascade detected. Source: Unknown sentient network.",
-                    "Fabric density fluctuation. Check Existential Weaver logs.", "Interference from nascent reality bubble. Prioritize shielding.",
-                    "Multiversal data flow nominal. Processing yield: +10 DataFlow.", "Raw existential data harvested from untamed space. +0.5 ExoticMatter.",
-                    "Quantum entanglement resonance stable. Enhancing processing cycles.", "Chronal distortion minimized. Temporal anchors holding steady."
-                ];
-                const freqOffset = Math.abs(mdsiFrequency - 50);
-                let dataGain = 0;
-                let glitchChance = 0;
-                if (freqOffset <= 5) { dataGain = 1.5; glitchChance = 0.05; } else if (freqOffset <= 20) { dataGain = 1.0; glitchChance = 0.15; }
-                else if (freqOffset <= 35) { dataGain = 0.5; glitchChance = 0.30; } else { dataGain = 0.1; glitchChance = 0.60; }
-
-                mdsiDataStreamInterval = setInterval(() => {
-                    const streamMessage = dataStreams[Math.floor(Math.random() * dataStreams.length)];
-                    let logMessage = `<p>> ${streamMessage}</p>`;
-                    let logType = 'info';
-
-                    if (Math.random() < glitchChance) {
-                        logMessage = `<p class="status-glitch">>>> ${streamMessage} <span class="status-glitch">[[GLITCH DETECTED]]</span></p>`;
-                        logType = 'glitch';
-                        if (Math.random() < 0.2) {
-                            resourceValues.dataFlow = Math.max(0, resourceValues.dataFlow - 100);
-                            resourceValues.rawData = Math.max(0, resourceValues.rawData - 1);
-                            addLogEntry("MDS-I: Data integrity compromised, minor resource loss.", 'glitch');
-                        }
-                    }
-                    mdsiConsole.innerHTML = logMessage + mdsiConsole.innerHTML;
-                    while (mdsiConsole.children.length > 20) { mdsiConsole.lastChild.remove(); }
-                    resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (100 * dataGain * (csnBoostActive ? csnBoostMultiplier : 1)));
-                    resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + (0.5 * dataGain * (csnBoostActive ? csnBoostMultiplier : 1)));
-                    updateResourceDisplay();
-                }, 2000 / tfrTemporalFlowRate);
-            }
-            if (preEmitterInterval) {
-                deactivatePsionicEmitter();
-                addLogEntry("Psionic Emitter timing adjusted due to Temporal Flux. Manual reactivation recommended.", 'warning');
-            }
-            if (efwWeaveStatus === 'Weaving') {
-                addLogEntry("Existential Fabric Weaver: Weave timing potentially disrupted due to Temporal Flux change. Integrity may be affected.", 'warning');
-            }
-            clearInterval(tfrDriftInterval);
+            // Re-adjust module intervals based on new tfrTemporalFlowRate
+            if (mdsiChannelLocked) { lockMDSICHannel(); lockMDSICHannel(); } // Unlock then re-lock to restart interval
+            if (efwWeaveStatus === 'Resonance') { /* Logic to handle ongoing resonance, maybe pause or warn */ addLogEntry("EFW Resonance alignment disrupted by Temporal Flux shift!", 'warning'); }
+            if (preStatus === 'ACTIVE') { deactivatePsionicEmitter(); addLogEntry("Psionic Emitter timing adjusted due to Temporal Flux. Manual reactivation recommended.", 'warning'); }
+            
+            clearInterval(tfrDriftLoopInterval);
+            clearInterval(tfrAnomalySpawnInterval);
             initializeTFRDriftLoop();
+            initializeTFRAnomalySpawner();
         }
 
         function updateTemporalDriftDisplay() {
@@ -1966,7 +2237,7 @@
             driftValueSpan.textContent = tfrTemporalDrift.toFixed(2);
 
             driftMeter.classList.remove('critical');
-            if (tfrTemporalDrift > 10) {
+            if (tfrTemporalDrift > 8) {
                 driftMeter.classList.add('critical');
                 if (Math.random() < 0.01) {
                     showAnomalyAlert("Temporal Drift Critical! Reality fabric fraying at the edges!");
@@ -1977,10 +2248,7 @@
         function resetTemporalDrift() {
             if (tfrTemporalDrift === 0) {
                 addLogEntry("Temporal Drift is already minimal. No reset needed.", 'info');
-            } else if (tfrTemporalDrift < 0.05) {
-                addLogEntry("Temporal Drift is minimal. No significant reset required.", 'info');
-                tfrTemporalDrift = 0;
-                updateTemporalDriftDisplay();
+                return;
             }
             if (resourceValues.energy < 500 || resourceValues.existentialFabric < 0.1) {
                 addLogEntry("Insufficient Energy or Existential Fabric to reset Temporal Drift.", 'error');
@@ -1998,19 +2266,145 @@
         }
 
         function initializeTFRDriftLoop() {
-            tfrDriftInterval = setInterval(() => {
-                const rawRate = parseInt(document.getElementById('tfr-flux-rate').value);
-                if (rawRate !== 50) {
-                    const driftIncrease = Math.abs(rawRate - 50) / 100 * 0.1;
-                    tfrTemporalDrift += driftIncrease;
+            tfrDriftLoopInterval = setInterval(() => {
+                if (csnActiveTrait === 'temporal_stability') {
+                    tfrTemporalDrift = Math.max(0, tfrTemporalDrift - 0.2); // Faster decay
                 } else {
-                    tfrTemporalDrift = Math.max(0, tfrTemporalDrift - 0.05);
+                    const rawRate = parseInt(document.getElementById('tfr-flux-rate').value);
+                    if (rawRate !== 50) {
+                        const driftIncrease = Math.abs(rawRate - 50) / 100 * 0.1;
+                        tfrTemporalDrift += driftIncrease;
+                    } else {
+                        tfrTemporalDrift = Math.max(0, tfrTemporalDrift - 0.05);
+                    }
                 }
                 updateTemporalDriftDisplay();
             }, 1000 / tfrTemporalFlowRate);
         }
 
+        function initializeTFRAnomalySpawner() {
+            const chronosGrid = document.getElementById('tfr-chronos-grid');
+            // Populate grid with empty cells
+            for (let i = 0; i < 64; i++) { // 8x8 grid
+                const cell = document.createElement('div');
+                cell.classList.add('tfr-chronos-cell');
+                cell.dataset.index = i;
+                cell.onclick = () => clickChronosCell(i);
+                chronosGrid.appendChild(cell);
+            }
+
+            tfrAnomalySpawnInterval = setInterval(() => {
+                if (csnActiveTrait === 'temporal_immunity') { return; } // No anomalies during immunity
+
+                const spawnChance = tfrTemporalDrift / 100; // Higher drift, higher chance
+                if (Math.random() < spawnChance && tfrActiveAnomalies.length < 5) { // Max 5 active anomalies
+                    spawnTemporalAnomaly();
+                }
+                // Check for expired anomalies
+                tfrActiveAnomalies = tfrActiveAnomalies.filter(anomalyId => {
+                    const anomalyNode = document.getElementById(anomalyId);
+                    if (!anomalyNode) return false;
+                    const timeLeft = parseInt(anomalyNode.dataset.timeLeft || 0);
+                    if (timeLeft <= 0) {
+                        failTemporalAnomaly(anomalyId);
+                        return false;
+                    }
+                    anomalyNode.dataset.timeLeft = timeLeft - 1; // Decrement timer
+                    return true;
+                });
+
+            }, 2000 / tfrTemporalFlowRate);
+        }
+
+        function spawnTemporalAnomaly() {
+            const chronosCells = document.querySelectorAll('.tfr-chronos-cell');
+            const availableCells = Array.from(chronosCells).filter(cell => !cell.querySelector('.tfr-anomaly-node'));
+            if (availableCells.length === 0) return;
+
+            const randomCell = availableCells[Math.floor(Math.random() * availableCells.length)];
+            const anomalyNode = document.createElement('div');
+            const anomalyId = `anomaly-${Date.now()}`;
+            anomalyNode.id = anomalyId;
+            anomalyNode.classList.add('tfr-anomaly-node');
+            anomalyNode.dataset.parentIndex = randomCell.dataset.index;
+            anomalyNode.dataset.timeLeft = 5; // 5 seconds to click
+            anomalyNode.onclick = (e) => stabilizeTemporalAnomaly(e, anomalyId);
+            randomCell.appendChild(anomalyNode);
+            tfrActiveAnomalies.push(anomalyId);
+            addLogEntry(`Temporal Anomaly detected at grid [${randomCell.dataset.index}]! Stabilize immediately.`, 'warning');
+        }
+
+        function clickChronosCell(index) {
+            const cell = document.querySelector(`.tfr-chronos-cell[data-index="${index}"]`);
+            if (!cell) return;
+
+            const anomalyNode = cell.querySelector('.tfr-anomaly-node');
+            if (!anomalyNode) {
+                addLogEntry(`Clicked empty Chronos Cell [${index}]. Minor temporal ripple generated.`, 'info');
+                tfrTemporalDrift += 0.5; // Penalty for misclick
+                updateTemporalDriftDisplay();
+            }
+        }
+
+        function stabilizeTemporalAnomaly(e, anomalyId) {
+            e.stopPropagation(); // Prevent parent cell click event
+            const anomalyNode = document.getElementById(anomalyId);
+            if (!anomalyNode) return;
+
+            const parentCell = anomalyNode.parentElement;
+            parentCell.removeChild(anomalyNode);
+            tfrActiveAnomalies = tfrActiveAnomalies.filter(id => id !== anomalyId);
+            tfrTemporalDrift = Math.max(0, tfrTemporalDrift - 1.0); // Reduce drift
+            updateTemporalDriftDisplay();
+            addLogEntry(`Temporal Anomaly [${anomalyId.split('-')[1]}] successfully stabilized.`, 'event');
+        }
+
+        function failTemporalAnomaly(anomalyId) {
+            const anomalyNode = document.getElementById(anomalyId);
+            if (!anomalyNode) return;
+
+            const parentCell = anomalyNode.parentElement;
+            parentCell.removeChild(anomalyNode);
+            tfrActiveAnomalies = tfrActiveAnomalies.filter(id => id !== anomalyId);
+            tfrTemporalDrift += 2.0; // Significant drift increase
+            updateTemporalDriftDisplay();
+            addLogEntry(`Temporal Anomaly [${anomalyId.split('-')[1]}] destabilized! Resources diverted to stabilize aftershock.`, 'error');
+            resourceValues.energy = Math.max(0, resourceValues.energy - 200);
+            resourceValues.processingPower = Math.max(0, resourceValues.processingPower - 10);
+            showAnomalyAlert(`Temporal Anomaly [${anomalyId.split('-')[1]}] failed stabilization!`);
+            updateResourceDisplay();
+        }
+
+
         // --- Consciousness Synthesis Nexus (CSN) ---
+        const transcendenceTraits = {
+            'perfect_mdsi_flow': {
+                name: "Perfect Data Stream",
+                desc: "MDS-I achieves perfect data gain regardless of frequency/distortion match.",
+                duration: 45000 // 45 seconds
+            },
+            'instant_efw_weave': {
+                name: "Instant Fabric Weave",
+                desc: "EFW instantly completes weaving with optimal integrity, no resonance alignment needed.",
+                duration: 30000 // 30 seconds
+            },
+            'unlimited_pre_power': {
+                name: "Unlimited Psionic Resonance",
+                desc: "PRE consumes no resources and operates at maximum effectiveness regardless of waveform match.",
+                duration: 45000 // 45 seconds
+            },
+            'temporal_immunity': {
+                name: "Temporal Immunity",
+                desc: "TFR prevents all temporal anomaly spawns and freezes drift accumulation.",
+                duration: 60000 // 60 seconds
+            },
+            'resource_burst': {
+                name: "Resource Burst",
+                desc: "Massive one-time boost to all critical resource reserves.",
+                duration: 100 // Instant effect
+            }
+        };
+
         function updateCSNPrerequisites() {
             let allMet = true;
 
@@ -2028,33 +2422,38 @@
                 }
             };
 
-            // MDS-I: Channel Locked & Stable (Optimal or Stable status)
-            updatePrereqItem('prereq-mdsi', mdsiChannelLocked && (mdsiStatus === 'OPTIMAL' || mdsiStatus === 'STABLE'));
+            // MDS-I: Channel Locked & Distortion Filtered (Optimal or Stable status and PERFECT/GOOD distortion match)
+            const mdsiDistortionMatch = mdsiChannelLocked ? calculateMDSIDistortionMatch() : 'N/A';
+            const mdsiCondition = mdsiChannelLocked && (mdsiStatus === 'OPTIMAL' || mdsiStatus === 'STABLE') && (mdsiDistortionMatch === 'PERFECT' || mdsiDistortionMatch === 'GOOD');
+            updatePrereqItem('prereq-mdsi', mdsiCondition);
 
-            // EFW: Last Weave Optimal/Stable
-            updatePrereqItem('prereq-efw', efwWeaveStatus === 'Optimal' || efwWeaveStatus === 'Stable');
+            // EFW: Last Weave Optimal & Resonance Aligned
+            const efwCondition = efwWeaveStatus === 'Optimal' || efwWeaveStatus === 'Stable'; // Current status after weave, assuming last weave was optimal
+            updatePrereqItem('prereq-efw', efwCondition);
 
-            // PRE: Emitter Active (Focus/Expand)
-            updatePrereqItem('prereq-pre', preStatus === 'ACTIVE' && (preActiveMode === 'focus' || preActiveMode === 'expand'));
+            // PRE: Emitter Active (Focus/Expand) & Waveform Matched
+            const preCondition = preStatus === 'ACTIVE' && (preActiveMode === 'focus' || preActiveMode === 'expand') && preMatchAccuracy >= 70;
+            updatePrereqItem('prereq-pre', preCondition);
 
-            // TFR: Temporal Drift < 5 units
-            updatePrereqItem('prereq-tfr', tfrTemporalDrift < 5);
+            // TFR: Temporal Drift < 3 units & No Active Anomalies
+            const tfrCondition = tfrTemporalDrift < 3 && tfrActiveAnomalies.length === 0;
+            updatePrereqItem('prereq-tfr', tfrCondition);
 
-            // Energy Reserves > 8000 GJ
-            updatePrereqItem('prereq-energy', resourceValues.energy > 8000);
+            // Energy Reserves > 8500 GJ
+            updatePrereqItem('prereq-energy', resourceValues.energy > 8500);
 
-            // Processing Power > 80%
-            updatePrereqItem('prereq-processing', resourceValues.processingPower > 80);
+            // Processing Power > 85%
+            updatePrereqItem('prereq-processing', resourceValues.processingPower > 85);
 
-            // Existential Fabric > 1.5 units
-            updatePrereqItem('prereq-fabric', resourceValues.existentialFabric > 1.5);
+            // Existential Fabric > 1.8 units
+            updatePrereqItem('prereq-fabric', resourceValues.existentialFabric > 1.8);
 
             return allMet;
         }
 
         function initiateConsciousnessSynthesis() {
-            if (csnBoostActive) {
-                addLogEntry("Consciousness Synthesis is already active. Awaiting cooldown.", 'warning');
+            if (csnActiveTrait) {
+                addLogEntry("Consciousness Synthesis is currently active. Awaiting trait cooldown.", 'warning');
                 return;
             }
 
@@ -2086,16 +2485,8 @@
                     csnStatusDisplay.innerHTML = `// Synthesis <span class="status-value">SUCCESS</span>! Multiversal Transcendence Protocol Activated!`;
                     csnStatusDisplay.classList.add('success');
                     csnSynthesisStatus = 'Success';
-                    csnBoostActive = true;
-                    addLogEntry(`Global resource generation boosted by <span class="status-value">${csnBoostMultiplier}x</span> for ${csnBoostDuration / 1000} seconds!`, 'event');
-
-                    setTimeout(() => {
-                        csnBoostActive = false;
-                        addLogEntry("Multiversal Transcendence Protocol duration expired. Resource generation returned to normal.", 'event');
-                        csnStatusDisplay.innerHTML = `// Nexus idle. Awaiting full system alignment.`;
-                        csnStatusDisplay.classList.remove('success');
-                        csnSynthesisStatus = 'Idle';
-                    }, csnBoostDuration);
+                    
+                    activateTranscendenceTrait();
 
                 } else {
                     addLogEntry("Consciousness Synthesis failed: Not all prerequisites met.", 'warning');
@@ -2111,6 +2502,57 @@
             }, 5000 / tfrTemporalFlowRate); // Synthesis check takes time
         }
 
+        function activateTranscendenceTrait() {
+            const traitsArray = Object.keys(transcendenceTraits);
+            const randomTraitKey = traitsArray[Math.floor(Math.random() * traitsArray.length)];
+            csnActiveTrait = randomTraitKey;
+            const traitData = transcendenceTraits[csnActiveTrait];
+
+            document.getElementById('csn-active-trait').style.display = 'block';
+            document.getElementById('csn-trait-name').textContent = traitData.name;
+            addLogEntry(`TRANSCENDENCE TRAIT ACTIVE: <span class="status-value">${traitData.name}</span> - ${traitData.desc}`, 'event');
+
+            // Apply instant effects for 'resource_burst'
+            if (csnActiveTrait === 'resource_burst') {
+                resourceValues.energy = Math.min(resourceMax.energy, resourceValues.energy + 5000);
+                resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + 5000);
+                resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + 50);
+                resourceValues.processingPower = Math.min(resourceMax.processingPower, resourceValues.processingPower + 50);
+                resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + 5);
+                resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + 1.0);
+                addLogEntry("Resource Burst: All reserves significantly augmented!", 'event');
+                document.getElementById('csn-trait-duration').textContent = 'INSTANT';
+                csnActiveTrait = null; // Instant effect, so immediately clear trait
+                setTimeout(() => {
+                    document.getElementById('csn-active-trait').style.display = 'none';
+                    document.getElementById('csn-synthesis-status').innerHTML = `// Nexus idle. Awaiting full system alignment.`;
+                    document.getElementById('csn-synthesis-status').classList.remove('success');
+                    csnSynthesisStatus = 'Idle';
+                }, 1000); // Give a moment for message to display
+                updateResourceDisplay();
+                return;
+            }
+
+            let durationLeft = traitData.duration;
+            document.getElementById('csn-trait-duration').textContent = `${(durationLeft / 1000).toFixed(0)}s`;
+
+            clearInterval(csnTraitTimer);
+            csnTraitTimer = setInterval(() => {
+                durationLeft -= 1000;
+                if (durationLeft <= 0) {
+                    clearInterval(csnTraitTimer);
+                    csnActiveTrait = null;
+                    document.getElementById('csn-active-trait').style.display = 'none';
+                    addLogEntry(`TRANSCENDENCE TRAIT EXPIRED: <span class="status-value">${traitData.name}</span>`, 'event');
+                    document.getElementById('csn-synthesis-status').innerHTML = `// Nexus idle. Awaiting full system alignment.`;
+                    document.getElementById('csn-synthesis-status').classList.remove('success');
+                    csnSynthesisStatus = 'Idle';
+                } else {
+                    document.getElementById('csn-trait-duration').textContent = `${(durationLeft / 1000).toFixed(0)}s`;
+                }
+            }, 1000 / tfrTemporalFlowRate);
+        }
+
         // --- Anomaly Alert ---
         function showAnomalyAlert(message) {
             anomalyAlert.innerHTML = `<p>!!! CRITICAL ANOMALY DETECTED !!!</p><p>${message}</p>`;
@@ -2118,27 +2560,26 @@
             addLogEntry(`CRITICAL: ${message}`, 'error');
             setTimeout(() => {
                 anomalyAlert.classList.remove('active');
-            }, 12000 / tfrTemporalFlowRate);
+            }, 10000 / tfrTemporalFlowRate);
         }
 
         // --- Main Resource Loop ---
         function mainResourceLoop() {
-            let boostFactor = csnBoostActive ? csnBoostMultiplier : 1;
-
-            resourceValues.energy = Math.min(resourceMax.energy, Math.max(0, resourceValues.energy + (15 * boostFactor) - Math.random() * (30 / boostFactor)));
-            resourceValues.dataFlow = Math.min(resourceMax.dataFlow, Math.max(0, resourceValues.dataFlow + (18 * boostFactor) - Math.random() * (35 / boostFactor)));
-            resourceValues.rawData = Math.min(resourceMax.rawData, Math.max(0, resourceValues.rawData + (0.8 * boostFactor) - Math.random() * (2.0 / boostFactor)));
-            resourceValues.processingPower = Math.min(resourceMax.processingPower, Math.max(0, resourceValues.processingPower + (1.0 * boostFactor) - Math.random() * (1.5 / boostFactor)));
-            resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, Math.max(0, resourceValues.exoticMatter + (0.02 * boostFactor) - Math.random() * (0.03 / boostFactor)));
-            resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, Math.max(0, resourceValues.existentialFabric + (0.002 * boostFactor) - Math.random() * (0.003 / boostFactor)));
+            // Base resource gain/loss
+            resourceValues.energy = Math.min(resourceMax.energy, Math.max(0, resourceValues.energy + 15 - Math.random() * 30));
+            resourceValues.dataFlow = Math.min(resourceMax.dataFlow, Math.max(0, resourceValues.dataFlow + 18 - Math.random() * 35));
+            resourceValues.rawData = Math.min(resourceMax.rawData, Math.max(0, resourceValues.rawData + 0.8 - Math.random() * 2.0));
+            resourceValues.processingPower = Math.min(resourceMax.processingPower, Math.max(0, resourceValues.processingPower + 1.0 - Math.random() * 1.5));
+            resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, Math.max(0, resourceValues.exoticMatter + 0.02 - Math.random() * 0.03));
+            resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, Math.max(0, resourceValues.existentialFabric + 0.002 - Math.random() * 0.003));
 
             if (prioritizedResource) {
-                if (prioritizedResource === 'energy') resourceValues.energy = Math.min(resourceMax.energy, resourceValues.energy + (80 * boostFactor));
-                else if (prioritizedResource === 'dataFlow') resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + (90 * boostFactor));
-                else if (prioritizedResource === 'rawData') resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + (3 * boostFactor));
-                else if (prioritizedResource === 'processingPower') resourceValues.processingPower = Math.min(resourceMax.processingPower, resourceValues.processingPower + (4 * boostFactor));
-                else if (prioritizedResource === 'exoticMatter') resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + (0.08 * boostFactor));
-                else if (prioritizedResource === 'existentialFabric') resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + (0.008 * boostFactor));
+                if (prioritizedResource === 'energy') resourceValues.energy = Math.min(resourceMax.energy, resourceValues.energy + 80);
+                else if (prioritizedResource === 'dataFlow') resourceValues.dataFlow = Math.min(resourceMax.dataFlow, resourceValues.dataFlow + 90);
+                else if (prioritizedResource === 'rawData') resourceValues.rawData = Math.min(resourceMax.rawData, resourceValues.rawData + 3);
+                else if (prioritizedResource === 'processingPower') resourceValues.processingPower = Math.min(resourceMax.processingPower, resourceValues.processingPower + 4);
+                else if (prioritizedResource === 'exoticMatter') resourceValues.exoticMatter = Math.min(resourceMax.exoticMatter, resourceValues.exoticMatter + 0.08);
+                else if (prioritizedResource === 'existentialFabric') resourceValues.existentialFabric = Math.min(resourceMax.existentialFabric, resourceValues.existentialFabric + 0.008);
             }
             
             updateResourceDisplay();
@@ -2172,6 +2613,7 @@
             
             initializeEFWDragAndDrop();
             initializeTFRDriftLoop();
+            initializeTFRAnomalySpawner();
 
             mainResourceIntervalId = setInterval(mainResourceLoop, tfrBaseInterval / tfrTemporalFlowRate);
         });
