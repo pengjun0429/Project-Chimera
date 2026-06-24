@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v68.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v69.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v68.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v69.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.006); /* Ultra-transparent, hyper-ethereal, even less transparent */
+            --frosted-bg: rgba(255, 255, 255, 0.004); /* Ultra-transparent, hyper-ethereal, even less transparent */
             --text-color: #F8F8F8; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.75); /* More visible, shimmering border */
@@ -67,59 +67,61 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 68.0 NEW: Multiversal Data Stream Interceptor */
-            --mdsi-bg: rgba(0, 15, 10, 0.92); /* Deep teal-green */
-            --mdsi-border: rgba(0, 255, 180, 0.85); /* Bright aqua-green */
-            --mdsi-text: #E0FFF0; /* Pale mint */
-            --mdsi-glow: rgba(0, 255, 180, 0.9); /* More opaque glow */
-            --mdsi-console-bg: rgba(0, 0, 0, 0.995);
-            --mdsi-filter-track: rgba(0, 120, 80, 0.75);
-            --mdsi-filter-thumb: rgba(0, 255, 180, 1.0);
+            /* Gen 69.0 NEW: Quantum Data Decipherer (QDD) */
+            --qdd-bg: rgba(0, 10, 15, 0.92); /* Deep blue-green */
+            --qdd-border: rgba(0, 200, 255, 0.85); /* Bright aqua-blue */
+            --qdd-text: #E0F8FF; /* Pale cyan */
+            --qdd-glow: rgba(0, 200, 255, 0.9);
+            --qdd-cell-base: rgba(0, 30, 40, 0.9);
+            --qdd-cell-active: rgba(0, 200, 255, 0.4);
+            --qdd-cell-correct: rgba(0, 255, 100, 0.6);
+            --qdd-cell-incorrect: rgba(255, 50, 50, 0.6);
 
-            /* Gen 68.0 NEW: Existential Fabric Weaver */
-            --efw-bg: rgba(10, 0, 15, 0.92); /* Deep purple-blue */
-            --efw-border: rgba(180, 0, 255, 0.85); /* Vibrant violet */
-            --efw-text: #FFF0FF; /* Pale violet */
-            --efw-glow: rgba(180, 0, 255, 0.9); /* More opaque glow */
-            --efw-matrix-bg: rgba(0, 0, 0, 0.995);
-            --efw-fragment-bg: rgba(20, 0, 30, 0.99);
-            --efw-resonance-target: #00FFFF; /* Cyan */
-            --efw-resonance-current: #FF00FF; /* Magenta */
+            /* Gen 69.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            --aps-bg: rgba(15, 0, 10, 0.92); /* Deep magenta-red */
+            --aps-border: rgba(255, 0, 180, 0.85); /* Vibrant fuchsia */
+            --aps-text: #FFE0F8; /* Pale pink */
+            --aps-glow: rgba(255, 0, 180, 0.9);
+            --aps-node-color: rgba(255, 100, 220, 0.8);
+            --aps-line-color: rgba(255, 0, 255, 0.7);
+            --aps-pattern-bg: rgba(0, 0, 0, 0.99);
 
-            /* Gen 68.0 NEW: Psionic Resonance Emitter */
-            --pre-bg: rgba(15, 10, 0, 0.92); /* Deep gold-orange */
-            --pre-border: rgba(255, 180, 0, 0.85); /* Bright orange */
-            --pre-text: #FFFFE0; /* Pale yellow */
-            --pre-glow: rgba(255, 180, 0, 0.9); /* More opaque glow */
-            --pre-mode-active: rgba(255, 180, 0, 0.75);
-            --pre-waveform-track: rgba(120, 90, 0, 0.75);
-            --pre-waveform-thumb: rgba(255, 180, 0, 1.0);
-            --pre-match-good: #00FF00; /* Green */
-            --pre-match-bad: #FF0000; /* Red */
+            /* Gen 69.0 NEW: Conscious Waveform Projector (CWP) */
+            --cwp-bg: rgba(0, 15, 0, 0.92); /* Deep forest green */
+            --cwp-border: rgba(100, 255, 0, 0.85); /* Bright lime green */
+            --cwp-text: #E0FFD0; /* Pale lime */
+            --cwp-glow: rgba(100, 255, 0, 0.9);
+            --cwp-slider-track: rgba(0, 60, 0, 0.75);
+            --cwp-slider-thumb: rgba(100, 255, 0, 1.0);
+            --cwp-target-waveform: rgba(200, 255, 0, 0.7);
+            --cwp-user-waveform: rgba(0, 255, 100, 0.7);
+            --cwp-match-good: #00FF00;
+            --cwp-match-bad: #FF0000;
 
-            /* Gen 68.0 NEW: Temporal Flux Regulator */
-            --tfr-bg: rgba(10, 0, 0, 0.92); /* Deep crimson */
-            --tfr-border: rgba(255, 80, 80, 0.85); /* Bright red */
-            --tfr-text: #FFEEEE; /* Pale red */
-            --tfr-glow: rgba(255, 80, 80, 0.9); /* More opaque glow */
-            --tfr-slider-track: rgba(50, 0, 0, 0.75);
-            --tfr-slider-thumb: rgba(255, 80, 80, 1.0);
-            --tfr-drift-critical: #FF0000;
-            --tfr-anomaly-bg: rgba(255, 0, 0, 0.85);
-            --tfr-anomaly-border: rgba(255, 255, 0, 0.95);
+            /* Gen 69.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            --sas-bg: rgba(10, 5, 0, 0.92); /* Deep burnt orange */
+            --sas-border: rgba(255, 120, 0, 0.85); /* Bright orange */
+            --sas-text: #FFF5E0; /* Pale orange */
+            --sas-glow: rgba(255, 120, 0, 0.9);
+            --sas-grid-cell: rgba(40, 15, 0, 0.8);
+            --sas-anchor: rgba(0, 255, 255, 0.9); /* Cyan anchor */
+            --sas-eddy-start: rgba(255, 0, 0, 0.3);
+            --sas-eddy-end: rgba(255, 100, 0, 0.6);
+            --sas-eddy-critical: rgba(255, 0, 0, 0.9);
 
-            /* Gen 68.0 NEW: Consciousness Synthesis Nexus (CSN) */
-            --csn-bg: rgba(0, 0, 20, 0.92); /* Deep space blue */
-            --csn-border: rgba(150, 0, 255, 0.85); /* Deep vibrant violet */
-            --csn-text: #E0FFFF; /* Brightest cyan-white */
-            --csn-glow: rgba(150, 0, 255, 0.9);
-            --csn-prereq-met: #00FF00; /* Green */
-            --csn-prereq-unmet: #FF0000; /* Red */
-            --csn-prereq-bg: rgba(0, 0, 0, 0.75);
-            --csn-trait-bg: rgba(0, 20, 40, 0.92);
-            --csn-trait-border: rgba(100, 200, 255, 0.95);
+            /* Gen 69.0 NEW: Universal Core Manifestor (UCM) */
+            --ucm-bg: rgba(0, 0, 20, 0.92); /* Deep space blue */
+            --ucm-border: rgba(150, 0, 255, 0.85); /* Deep vibrant violet */
+            --ucm-text: #E0FFFF; /* Brightest cyan-white */
+            --ucm-glow: rgba(150, 0, 255, 0.9);
+            --ucm-stage-met: #00FF00;
+            --ucm-stage-unmet: #FF0000;
+            --ucm-stage-active: #FFFF00;
+            --ucm-stage-bg: rgba(0, 0, 0, 0.75);
+            --ucm-trait-bg: rgba(0, 20, 40, 0.92);
+            --ucm-trait-border: rgba(100, 200, 255, 0.95);
 
-            /* Gen 68.0 - Enhanced UI elements */
+            /* Gen 69.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -146,7 +148,7 @@
             position: relative;
             font-size: 1.15rem; /* Scaled up for readability */
             line-height: 1.7; /* Increased line height */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes trail {0% {stroke-dashoffset: 70;} 100% {stroke-dashoffset: 0;}} .pulsing-core {animation: pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.7s infinite ease-out reverse;}.trail-line {stroke-dasharray: 70; stroke-dashoffset: 0; animation: trail 1.2s linear infinite;}.cursor-base {transform: translateZ(0);}.glowing-parts {filter:url(%23f1);}</style></defs><g transform="translate(12 12) scale(1) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><path fill="%2300FFFF" d="M11 5h2v8h-2zM11 13h2v4h-2z"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><circle cx="12" cy="12" r="5" fill="%23FFFF00" class="glowing-parts inner-star"/><line x1="12" y1="0" x2="12" y2="24" stroke="%2300FFFF" stroke-width="2" class="trail-line"/><line x1="0" y1="12" x2="24" y2="12" stroke="%2300FFFF" stroke-width="2" class="trail-line"/></g></svg>') 32 32, auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} .pulsing-core {animation: pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.7s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}</style></defs><g transform="translate(12 12) scale(1) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><circle cx="12" cy="12" r="5" fill="%23FFFF00" class="glowing-parts inner-star"/></g></svg>') 32 32, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
@@ -159,21 +161,21 @@
             height: 500vh;
             background: linear-gradient(
                 290deg, /* New angle */
-                #000000 0%, #000002 1%, #000005 2%, #00000A 3%, #000012 4%, #00001A 5%, #000012 6%, #00000A 7%, #000005 8%, #000002 9%, #000000 10%,
-                #020000 11%, #050000 12%, #0A0000 13%, #120000 14%, #1A0000 15%, #120000 16%, #0A0000 17%, #050000 18%, #020000 19%, #000000 20%,
-                #000200 21%, #000500 22%, #000A00 23%, #001200 24%, #001A00 25%, #001200 26%, #000A00 27%, #000500 28%, #000200 29%, #000000 30%,
-                #020200 31%, #050500 32%, #0A0A00 33%, #121200 34%, #1A1A00 35%, #121200 36%, #0A0A00 37%, #050500 38%, #020200 39%, #000000 40%,
-                #020002 41%, #050005 42%, #0A000A 43%, #120012 44%, #1A001A 45%, #120012 46%, #0A000A 47%, #050005 48%, #020002 49%, #000000 50%,
-                #000202 51%, #000505 52%, #000A0A 53%, #001212 54%, #001A1A 55%, #001212 56%, #000A0A 57%, #000505 58%, #000202 59%, #000000 60%,
-                #020202 61%, #050505 62%, #0A0A0A 63%, #121212 64%, #1A1A1A 65%, #121212 66%, #0A0A0A 67%, #050505 68%, #020202 69%, #000000 70%,
-                #030303 71%, #060606 72%, #0C0C0C 73%, #151515 74%, #1C1C1C 75%, #151515 76%, #0C0C0C 77%, #060606 78%, #030303 79%, #000000 80%,
-                #000000 81%, #000002 82%, #000005 83%, #00000A 84%, #000012 85%, #00001A 86%, #000012 87%, #00000A 88%, #000005 89%, #000002 90%, #000000 100%
+                #000000 0%, #000003 1%, #000007 2%, #00000F 3%, #000018 4%, #000020 5%, #000018 6%, #00000F 7%, #000007 8%, #000003 9%, #000000 10%,
+                #030000 11%, #070000 12%, #0F0000 13%, #180000 14%, #200000 15%, #180000 16%, #0F0000 17%, #070000 18%, #030000 19%, #000000 20%,
+                #000300 21%, #000700 22%, #000F00 23%, #001800 24%, #002000 25%, #001800 26%, #000F00 27%, #000700 28%, #000300 29%, #000000 30%,
+                #030300 31%, #070700 32%, #0F0F00 33%, #181800 34%, #202000 35%, #181800 36%, #0F0F00 37%, #070700 38%, #030300 39%, #000000 40%,
+                #030003 41%, #070007 42%, #0F000F 43%, #180018 44%, #200020 45%, #180018 46%, #0F000F 47%, #070007 48%, #030003 49%, #000000 50%,
+                #000303 51%, #000707 52%, #000F0F 53%, #001818 54%, #002020 55%, #001818 56%, #000F0F 57%, #000707 58%, #000303 59%, #000000 60%,
+                #030303 61%, #070707 62%, #0F0F0F 63%, #181818 64%, #202020 65%, #181818 66%, #0F0F0F 67%, #070707 68%, #030303 69%, #000000 70%,
+                #050505 71%, #0A0A0A 72%, #101010 73%, #1C1C1C 74%, #252525 75%, #1C1C1C 76%, #101010 77%, #0A0A0A 78%, #050505 79%, #000000 80%,
+                #000000 81%, #000003 82%, #000007 83%, #00000F 84%, #000018 85%, #000020 86%, #000018 87%, #00000F 88%, #000007 89%, #000003 90%, #000000 100%
             );
-            background-size: 2000% 2000%; /* Larger background for smoother animation */
-            animation: fluidBackground1 180s linear infinite alternate, rotateBackground 220s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 2500% 2500%; /* Larger background for smoother animation */
+            animation: fluidBackground1 220s linear infinite alternate, rotateBackground 280s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(200px) opacity(0.7); /* Stronger blur, almost opaque */
-            transform: rotate(-180deg) scale(5); /* Larger scale, more rotation */
+            filter: blur(250px) opacity(0.8); /* Stronger blur, almost opaque */
+            transform: rotate(-220deg) scale(6); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -181,30 +183,30 @@
         body::after {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -180vh;
-            left: -180vw;
-            width: 360vw;
-            height: 360vh;
+            top: -200vh;
+            left: -200vw;
+            width: 400vw;
+            height: 400vh;
             background: linear-gradient(
-                -220deg, /* Different angle */
-                rgba(0, 255, 255, 0.85) 0%, /* primary glow accent */
-                rgba(255, 0, 255, 0.75) 10%, /* secondary glow accent */
-                rgba(0, 255, 0, 0.75) 20%, /* tertiary glow accent */
-                var(--mdsi-border) 30%, /* MDS-I accent */
-                var(--efw-border) 40%, /* EFW accent */
-                var(--pre-border) 50%, /* PRE accent */
-                var(--tfr-border) 60%, /* TFR accent */
-                var(--csn-border) 70%, /* CSN accent */
-                rgba(50, 255, 150, 0.85) 80%, /* Generic glow */
-                rgba(110, 90, 210, 0.85) 90%, /* Generic glow */
-                rgba(0, 255, 255, 0.85) 100%
+                -250deg, /* Different angle */
+                rgba(0, 255, 255, 0.9) 0%, /* primary glow accent */
+                rgba(255, 0, 255, 0.8) 10%, /* secondary glow accent */
+                rgba(0, 255, 0, 0.8) 20%, /* tertiary glow accent */
+                var(--qdd-border) 30%, /* QDD accent */
+                var(--aps-border) 40%, /* APS accent */
+                var(--cwp-border) 50%, /* CWP accent */
+                var(--sas-border) 60%, /* SAS accent */
+                var(--ucm-border) 70%, /* UCM accent */
+                rgba(50, 255, 150, 0.9) 80%, /* Generic glow */
+                rgba(110, 90, 210, 0.9) 90%, /* Generic glow */
+                rgba(0, 255, 255, 0.9) 100%
             );
-            background-size: 1500% 1500%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 90s ease-in-out infinite, rotateBackgroundReversed 110s linear infinite; /* Even longer animations */
+            background-size: 1800% 1800%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 110s ease-in-out infinite, rotateBackgroundReversed 140s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(150px) opacity(0.75); /* Stronger blur, more opaque */
+            filter: blur(180px) opacity(0.8); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(150deg) scale(3.5); /* Larger scale, more rotation */
+            transform: rotate(180deg) scale(4); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -216,11 +218,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.2; /* More noticeable noise */
+            opacity: 0.25; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.6) contrast(6.0) brightness(4.0); /* Subtle color and contrast */
+            filter: grayscale(0.7) contrast(7.0) brightness(5.0); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -235,50 +237,50 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-180deg) scale(5); }
-            to { transform: rotate(180deg) scale(5); }
+            from { transform: rotate(-220deg) scale(6); }
+            to { transform: rotate(220deg) scale(6); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(150deg) scale(3.5); }
-            to { transform: rotate(-180deg) scale(3.5); }
+            from { transform: rotate(180deg) scale(4); }
+            to { transform: rotate(-220deg) scale(4); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1400px; /* Wider for more content */
-            padding: 4rem; /* More padding */
+            max-width: 1500px; /* Wider for more content */
+            padding: 4.5rem; /* More padding */
             background: var(--frosted-bg);
-            border: 12px solid var(--border-color); /* Thicker border */
-            border-radius: 2.5rem; /* Even more rounded */
-            backdrop-filter: blur(22px) saturate(250%) brightness(180%) contrast(1.8); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(22px) saturate(250%) brightness(180%) contrast(1.8);
+            border: 15px solid var(--border-color); /* Thicker border */
+            border-radius: 3rem; /* Even more rounded */
+            backdrop-filter: blur(28px) saturate(300%) brightness(200%) contrast(2.0); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(28px) saturate(300%) brightness(200%) contrast(2.0);
             box-shadow:
-                0 15px 60px rgba(0, 0, 0, 0.85), /* Deeper shadow */
-                0 0 60px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 30px rgba(255, 255, 255, 0.95), /* Stronger inner glow for depth */
-                inset 0 0 35px var(--primary-glow); /* Even more inner glow */
+                0 20px 80px rgba(0, 0, 0, 0.95), /* Deeper shadow */
+                0 0 70px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 40px rgba(255, 255, 255, 0.98), /* Stronger inner glow for depth */
+                inset 0 0 45px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 3.2rem; /* Increased gap between sections */
-            animation: fadeInScale 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 0.7s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 3.5rem; /* Increased gap between sections */
+            animation: fadeInScale 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 0.8s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -18px; /* More overflow */
-            border-radius: calc(2.5rem + 18px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--mdsi-border), var(--efw-border), var(--pre-border), var(--tfr-border), var(--csn-border)); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 450% 450%; /* Larger background for smoother animation */
-            animation: borderGlow 140s linear infinite alternate; /* Slower animation */
-            filter: blur(22px); /* Stronger blur */
+            inset: -22px; /* More overflow */
+            border-radius: calc(3rem + 22px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qdd-border), var(--aps-border), var(--cwp-border), var(--sas-border), var(--ucm-border)); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 500% 500%; /* Larger background for smoother animation */
+            animation: borderGlow 160s linear infinite alternate; /* Slower animation */
+            filter: blur(28px); /* Stronger blur */
             z-index: -1;
-            opacity: 0.9; /* Stronger glow */
+            opacity: 0.95; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
         }
 
@@ -288,32 +290,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.65) translateY(40px) perspective(700px) rotateX(20deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(700px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.6) translateY(50px) perspective(800px) rotateX(25deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(800px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.2rem; /* Scaled up for impact */
+            font-size: 4.5rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 28px var(--primary-glow), 0 0 35px rgba(0, 255, 255, 0.98);
-            margin-bottom: 2rem;
-            letter-spacing: 0.2rem;
+            text-shadow: 0 0 32px var(--primary-glow), 0 0 40px rgba(0, 255, 255, 0.98);
+            margin-bottom: 2.2rem;
+            letter-spacing: 0.25rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(15px); /* Lift heading slightly in 3D space */
+            transform: translateZ(18px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -0.9rem;
+            bottom: -1rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%; /* Wider underline */
-            height: 0.3rem; /* Thicker underline */
+            width: 95%; /* Wider underline */
+            height: 0.35rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 15px var(--primary-glow);
+            box-shadow: 0 0 18px var(--primary-glow);
         }
 
         p {
@@ -321,15 +323,15 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.99;
-            font-size: 1.15rem; /* Larger paragraph text */
-            transform: translateZ(10px);
+            font-size: 1.18rem; /* Larger paragraph text */
+            transform: translateZ(12px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 3.2rem; /* Increased gap */
-            margin: 2rem 0;
+            gap: 3.5rem; /* Increased gap */
+            margin: 2.2rem 0;
             position: relative;
         }
 
@@ -337,42 +339,42 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 1.6rem;
+            gap: 1.8rem;
             text-align: left;
-            padding: 2.5rem;
-            border-radius: 1.8rem;
-            border: 4px solid var(--overseer-border); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 15px rgba(0, 200, 255, 0.95), 0 0 20px rgba(0, 200, 255, 0.9); /* More inner shadow */
+            padding: 2.8rem;
+            border-radius: 2rem;
+            border: 5px solid var(--overseer-border); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 18px rgba(0, 200, 255, 0.98), 0 0 25px rgba(0, 200, 255, 0.95); /* More inner shadow */
             position: relative;
-            transform: translateZ(8px);
+            transform: translateZ(10px);
             overflow: hidden;
             background: var(--overseer-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .multiversal-data-stream-interceptor {
-            background: var(--mdsi-bg);
-            border-color: var(--mdsi-border);
-            box-shadow: inset 0 0 15px rgba(0, 255, 180, 0.95), 0 0 20px rgba(0, 255, 180, 0.9);
+        .quantum-data-decipherer {
+            background: var(--qdd-bg);
+            border-color: var(--qdd-border);
+            box-shadow: inset 0 0 18px var(--qdd-glow), 0 0 25px var(--qdd-glow);
         }
-        .existential-fabric-weaver {
-            background: var(--efw-bg);
-            border-color: var(--efw-border);
-            box-shadow: inset 0 0 15px rgba(180, 0, 255, 0.95), 0 0 20px rgba(180, 0, 255, 0.9);
+        .aetheric-pattern-synthesizer {
+            background: var(--aps-bg);
+            border-color: var(--aps-border);
+            box-shadow: inset 0 0 18px var(--aps-glow), 0 0 25px var(--aps-glow);
         }
-        .psionic-resonance-emitter {
-            background: var(--pre-bg);
-            border-color: var(--pre-border);
-            box-shadow: inset 0 0 15px rgba(255, 180, 0, 0.95), 0 0 20px rgba(255, 180, 0, 0.9);
+        .conscious-waveform-projector {
+            background: var(--cwp-bg);
+            border-color: var(--cwp-border);
+            box-shadow: inset 0 0 18px var(--cwp-glow), 0 0 25px var(--cwp-glow);
         }
-        .temporal-flux-regulator {
-            background: var(--tfr-bg);
-            border-color: var(--tfr-border);
-            box-shadow: inset 0 0 15px rgba(255, 80, 80, 0.95), 0 0 20px rgba(255, 80, 80, 0.9);
+        .spacetime-anchor-stabilizer {
+            background: var(--sas-bg);
+            border-color: var(--sas-border);
+            box-shadow: inset 0 0 18px var(--sas-glow), 0 0 25px var(--sas-glow);
         }
-        .consciousness-synthesis-nexus {
-            background: var(--csn-bg);
-            border-color: var(--csn-border);
-            box-shadow: inset 0 0 15px var(--csn-glow), 0 0 20px var(--csn-glow);
+        .universal-core-manifestor {
+            background: var(--ucm-bg);
+            border-color: var(--ucm-border);
+            box-shadow: inset 0 0 18px var(--ucm-glow), 0 0 25px var(--ucm-glow);
         }
 
         .module-base::after {
@@ -382,7 +384,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.3) 0%, transparent 85%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.4) 0%, transparent 80%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -391,531 +393,469 @@
         .module-base::before { 
             content: attr(data-label);
             position: absolute;
-            top: -1.6rem; /* Slightly higher */
-            left: 2rem;
-            font-size: 1.6rem; /* Larger label */
+            top: -1.8rem; /* Slightly higher */
+            left: 2.2rem;
+            font-size: 1.7rem; /* Larger label */
             color: var(--overseer-text); /* Default text, will be overridden */
-            background: rgba(0, 0, 0, 0.97);
-            padding: 0.6rem 0.8rem;
-            border-radius: 0.7rem;
+            background: rgba(0, 0, 0, 0.98);
+            padding: 0.7rem 1rem;
+            border-radius: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.1rem;
-            transform: translateY(-50%) translateZ(7px); /* Lift more */
+            transform: translateY(-50%) translateZ(9px); /* Lift more */
             opacity: 1.0;
-            border: 3px solid var(--overseer-text); /* Default border, will be overridden */
-            box-shadow: 0 0 12px var(--overseer-text); /* Stronger glow */
+            border: 4px solid var(--overseer-text); /* Default border, will be overridden */
+            box-shadow: 0 0 15px var(--overseer-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
-        .multiversal-data-stream-interceptor::before {
-            color: var(--mdsi-text);
-            border-color: var(--mdsi-text);
-            box-shadow: 0 0 12px var(--mdsi-text);
+        .quantum-data-decipherer::before {
+            color: var(--qdd-text);
+            border-color: var(--qdd-text);
+            box-shadow: 0 0 15px var(--qdd-text);
         }
-        .existential-fabric-weaver::before {
-            color: var(--efw-text);
-            border-color: var(--efw-text);
-            box-shadow: 0 0 12px var(--efw-text);
+        .aetheric-pattern-synthesizer::before {
+            color: var(--aps-text);
+            border-color: var(--aps-text);
+            box-shadow: 0 0 15px var(--aps-text);
         }
-        .psionic-resonance-emitter::before {
-            color: var(--pre-text);
-            border-color: var(--pre-text);
-            box-shadow: 0 0 12px var(--pre-text);
+        .conscious-waveform-projector::before {
+            color: var(--cwp-text);
+            border-color: var(--cwp-text);
+            box-shadow: 0 0 15px var(--cwp-text);
         }
-        .temporal-flux-regulator::before {
-            color: var(--tfr-text);
-            border-color: var(--tfr-text);
-            box-shadow: 0 0 12px var(--tfr-text);
+        .spacetime-anchor-stabilizer::before {
+            color: var(--sas-text);
+            border-color: var(--sas-text);
+            box-shadow: 0 0 15px var(--sas-text);
         }
-        .consciousness-synthesis-nexus::before {
-            color: var(--csn-text);
-            border-color: var(--csn-border);
-            box-shadow: 0 0 12px var(--csn-glow);
+        .universal-core-manifestor::before {
+            color: var(--ucm-text);
+            border-color: var(--ucm-border);
+            box-shadow: 0 0 15px var(--ucm-glow);
         }
 
         .param-group {
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.8rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem; /* Larger */
+            font-size: 1.6rem; /* Larger */
             color: var(--overseer-text);
-            letter-spacing: 0.07rem;
+            letter-spacing: 0.08rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 12px rgba(0, 255, 255, 0.9); /* Stronger shadow */
-            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.95); /* Stronger shadow */
+            margin-bottom: 1.2rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 1.05rem; /* Slightly larger sub-info */
-            opacity: 0.95;
+            font-size: 1.1rem; /* Slightly larger sub-info */
+            opacity: 0.98;
             color: var(--text-color);
-            margin-top: 0.5rem;
+            margin-top: 0.6rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 1.5;
-        }
-        
-        /* MDS-I Specific */
-        .mdsi-frequency-display, .mdsi-distortion-display {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.4rem;
-            color: var(--mdsi-text);
-            text-shadow: 0 0 14px var(--mdsi-glow);
-            text-align: center;
-            margin-bottom: 1rem;
-            transform: translateZ(3px);
-        }
-        .mdsi-console {
-            background: var(--mdsi-console-bg);
-            border: 4px solid var(--mdsi-border);
-            border-radius: 1rem;
-            padding: 1.4rem;
-            min-height: 10rem;
-            max-height: 16rem;
-            overflow-y: auto;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.05rem;
-            color: var(--mdsi-text);
-            text-align: left;
-            text-shadow: 0 0 10px var(--mdsi-glow);
-            box-shadow: inset 0 0 15px rgba(0, 255, 180, 0.7);
-            transform: translateZ(2.5px);
             line-height: 1.6;
         }
-
-        /* EFW Specific */
-        .efw-grid {
+        
+        /* QDD Specific */
+        .qdd-decipher-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.4rem;
-            margin-top: 1.4rem;
-        }
-        .efw-fragment-card {
-            background: var(--efw-fragment-bg);
-            border: 3px solid var(--efw-border);
-            border-radius: 1rem;
-            padding: 1.2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: grab;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.85);
-            transform: translateZ(2.2px);
-            user-select: none;
-            text-shadow: 0 0 6px rgba(180, 0, 255, 0.5);
-        }
-        .efw-fragment-card:active {
-            cursor: grabbing;
-        }
-        .efw-fragment-card h4 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.3rem;
-            color: var(--efw-text);
-            margin-top: 0;
-            margin-bottom: 0.6rem;
-            text-shadow: 0 0 12px var(--efw-text);
-        }
-        .efw-weaving-matrix {
-            border: 4px dashed var(--efw-border);
-            border-radius: 1rem;
-            padding: 1.4rem;
-            min-height: 10rem;
-            display: flex;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(4, 1fr);
             gap: 0.8rem;
+            background: var(--console-bg);
+            border: 4px solid var(--qdd-border);
+            border-radius: 1.2rem;
+            padding: 1.6rem;
+            min-height: 20rem;
+            align-items: center;
+            justify-items: center;
+            box-shadow: inset 0 0 20px rgba(0, 200, 255, 0.7);
+            transform: translateZ(2.5px);
+            overflow: hidden;
+            position: relative;
+        }
+        .qdd-data-cell {
+            width: 100%;
+            height: 100%;
+            background: var(--qdd-cell-base);
+            border: 2px solid var(--qdd-border);
+            border-radius: 0.7rem;
+            display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 1rem;
-            background: var(--efw-matrix-bg);
-            box-shadow: inset 0 0 15px rgba(180, 0, 255, 0.75);
-            max-height: 16rem;
-            overflow-y: auto;
-        }
-
-        .efw-matrix-fragment {
-            background: var(--efw-fragment-bg);
-            border: 3px solid var(--efw-border);
-            border-radius: 0.8rem;
-            padding: 0.7rem 1rem;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.05rem;
-            color: var(--efw-text);
-            box-shadow: 0 0 12px var(--efw-border);
-            position: relative;
+            font-size: 1.2rem;
+            color: var(--qdd-text);
+            text-shadow: 0 0 10px var(--qdd-glow);
             cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-        .efw-matrix-fragment:hover {
-            transform: scale(1.1);
-            background: rgba(180, 0, 255, 0.55);
-        }
-        .efw-output-status, .efw-resonance-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.15rem;
-            color: var(--efw-text);
-            text-shadow: 0 0 12px var(--efw-text);
-            line-height: 1.7;
-            margin-top: 1rem;
-            padding: 1.2rem;
-            background: rgba(0,0,0,0.95);
-            border: 3px solid var(--efw-border);
-            border-radius: 1rem;
-            box-shadow: 0 0 15px var(--efw-border);
-        }
-        .efw-resonance-visualizer {
-            width: 100%;
-            height: 2.5rem;
-            border: 4px solid var(--efw-border);
-            border-radius: 0.7rem;
-            background: linear-gradient(90deg, var(--efw-resonance-current) 0%, rgba(0,0,0,0) 50%, var(--efw-resonance-target) 100%);
-            margin-top: 0.8rem;
-            transition: background 0.2s ease-out;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.75);
+            transition: all 0.2s ease-out;
+            box-sizing: border-box;
+            user-select: none;
             position: relative;
             overflow: hidden;
         }
-        .efw-resonance-visualizer.aligned {
-            border-color: var(--stability-good);
-            box-shadow: 0 0 12px var(--stability-good), inset 0 0 12px var(--stability-good);
+        .qdd-data-cell:hover {
+            background: var(--qdd-cell-active);
+            box-shadow: 0 0 15px var(--qdd-glow);
+            transform: scale(1.03);
         }
-        .efw-current-resonance-line {
-            position: absolute;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--efw-resonance-current);
-            box-shadow: 0 0 12px var(--efw-resonance-current);
-            transform: translateX(-50%);
+        .qdd-data-cell.active {
+            background: var(--qdd-cell-active);
+            box-shadow: 0 0 20px var(--qdd-glow), inset 0 0 10px var(--qdd-glow);
+        }
+        .qdd-data-cell.correct {
+            background: var(--qdd-cell-correct);
+            border-color: var(--stability-good);
+            box-shadow: 0 0 20px var(--stability-good), inset 0 0 10px var(--stability-good);
+            animation: qddPulseSuccess 0.8s ease-out;
+            color: #E0FFE0;
+        }
+        .qdd-data-cell.incorrect {
+            background: var(--qdd-cell-incorrect);
+            border-color: var(--stability-critical);
+            box-shadow: 0 0 20px var(--stability-critical), inset 0 0 10px var(--stability-critical);
+            animation: qddPulseFail 0.8s ease-out;
+            color: #FFD0D0;
+        }
+        @keyframes qddPulseSuccess {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes qddPulseFail {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .qdd-data-cell span {
+            position: relative;
             z-index: 2;
         }
-
-        /* PRE Specific */
-        .pre-mode-selection {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.2rem;
-            margin-bottom: 1.4rem;
-        }
-        .pre-mode-button {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            padding: 0.7rem 1rem;
-            border-radius: 1rem;
-            border: 3px solid var(--pre-border);
-            background: rgba(0,0,0,0.95);
-            color: var(--pre-text);
-            text-shadow: 0 0 10px var(--pre-text);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 12px rgba(255, 180, 0, 0.7);
-            transform: translateZ(2.2px);
-        }
-        .pre-mode-button:hover {
-            background: var(--pre-mode-active);
-            box-shadow: 0 0 18px var(--pre-glow);
-            transform: translateY(-5px) scale(1.1) translateZ(2.5px);
-        }
-        .pre-mode-button.active {
-            background: var(--pre-mode-active);
-            box-shadow: 0 0 20px var(--pre-glow), inset 0 0 15px var(--pre-glow);
-            border-color: var(--pre-glow);
-            transform: translateY(-4px) scale(1.08) translateZ(2.5px);
-        }
-        .pre-status-display {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2rem;
-            color: var(--pre-text);
-            text-shadow: 0 0 12px var(--pre-text);
-            margin-top: 1rem;
-            line-height: 1.7;
-            opacity: 0.99;
-            transform: translateZ(3px);
-            min-height: 3.8rem;
-        }
-        .pre-match-indicator {
-            width: 100%;
-            height: 0.7rem;
-            background-color: var(--pre-match-bad);
-            border-radius: 0.35rem;
-            margin-top: 0.8rem;
-            transition: background-color 0.1s ease-out;
-            box-shadow: 0 0 8px var(--pre-match-bad);
-        }
-        .pre-match-indicator.good {
-            background-color: var(--pre-match-good);
-            box-shadow: 0 0 8px var(--pre-match-good);
-        }
-
-
-        /* TFR Specific */
-        .tfr-temporal-rate {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.4rem;
-            color: var(--tfr-text);
-            text-shadow: 0 0 14px var(--tfr-glow);
-            text-align: center;
-            margin-bottom: 1rem;
-            transform: translateZ(3px);
-        }
-        .tfr-drift-meter {
-            background: var(--tfr-slider-track);
-            border: 4px solid var(--tfr-border);
-            border-radius: 1rem;
-            padding: 1.2rem;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2rem;
-            color: var(--tfr-text);
-            text-align: center;
-            text-shadow: 0 0 10px var(--tfr-glow);
-            margin-top: 1rem;
-            box-shadow: inset 0 0 15px rgba(255, 80, 80, 0.7);
-            transform: translateZ(2.5px);
-        }
-        .tfr-drift-meter.critical {
-            border-color: var(--tfr-drift-critical);
-            box-shadow: inset 0 0 18px var(--tfr-drift-critical), 0 0 18px var(--tfr-drift-critical);
-            animation: pulseWarning 0.6s infinite alternate; /* Even faster pulse */
-        }
-        .tfr-chronos-grid {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap: 0.3rem;
-            margin-top: 1.4rem;
-            min-height: 10rem;
-            background: rgba(0,0,0,0.9);
-            border: 3px solid var(--tfr-border);
-            border-radius: 0.7rem;
-            padding: 0.7rem;
-            box-shadow: inset 0 0 12px rgba(255, 80, 80, 0.5);
-            position: relative;
-        }
-        .tfr-chronos-cell {
-            position: relative;
-            width: 100%;
-            padding-bottom: 100%; /* Make cells square */
-            background: rgba(30, 0, 0, 0.8);
-            border: 1px solid rgba(70, 0, 0, 0.7);
-            transition: background-color 0.2s ease;
-            cursor: pointer;
-            box-sizing: border-box;
-            transform: translateZ(0.5px);
-        }
-        .tfr-chronos-cell:hover {
-            background-color: rgba(80, 0, 0, 0.98);
-        }
-        .tfr-anomaly-node {
+        .qdd-overlay {
             position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 80%;
-            height: 80%;
-            border-radius: 50%;
-            background: var(--tfr-anomaly-bg);
-            border: 4px solid var(--tfr-anomaly-border);
-            box-shadow: 0 0 15px var(--tfr-drift-critical), inset 0 0 8px var(--tfr-anomaly-border);
-            animation: anomalyPulse 0.9s infinite alternate ease-in-out;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.8);
+            color: var(--qdd-text);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 1rem;
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-out;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .qdd-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .qdd-overlay button {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.8rem;
+            border: 2px solid var(--qdd-border);
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--qdd-text);
             cursor: pointer;
-            z-index: 10;
-        }
-        @keyframes anomalyPulse {
-            0% { transform: scale(0.8); opacity: 0.6; }
-            100% { transform: scale(1.1); opacity: 1.0; box-shadow: 0 0 20px var(--tfr-drift-critical), inset 0 0 10px var(--tfr-anomaly-border); }
-        }
-
-        input[type="range"] {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 1rem; /* Taller */
-            background: rgba(255, 255, 255, 0.15); /* More subtle background */
-            border-radius: 0.5rem;
-            outline: none;
             transition: all 0.3s ease;
-            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0,200,255,0.85); /* Inset for depth, subtle outer glow */
+        }
+        .qdd-overlay button:hover {
+            background: var(--qdd-cell-active);
+            box-shadow: 0 0 10px var(--qdd-glow);
+        }
+
+        /* APS Specific */
+        .aps-pattern-editor {
+            background: var(--aps-pattern-bg);
+            border: 4px dashed var(--aps-border);
+            border-radius: 1.2rem;
+            padding: 1.6rem;
+            min-height: 25rem;
+            max-height: 25rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(255, 0, 180, 0.7);
             transform: translateZ(2.5px);
-            border: 1px solid rgba(255,255,255,0.3); /* More subtle border */
+            cursor: crosshair;
         }
-
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 1.8rem; /* Larger thumb */
-            height: 1.8rem;
-            border-radius: 50%;
-            background: var(--accent-color);
-            cursor: pointer;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 7px solid rgba(255, 255, 255, 0.9);
-        }
-
-        input[type="range"]::-moz-range-thumb {
+        .aps-node {
+            position: absolute;
             width: 1.8rem;
             height: 1.8rem;
             border-radius: 50%;
-            background: var(--accent-color);
-            cursor: pointer;
-            box-shadow: 0 0 20px var(--primary-glow);
-            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-            border: 7px solid rgba(255, 255, 255, 0.9);
+            background: var(--aps-node-color);
+            border: 3px solid var(--aps-border);
+            box-shadow: 0 0 15px var(--aps-glow), inset 0 0 8px rgba(255,255,255,0.7);
+            transform: translate(-50%, -50%) translateZ(1px);
+            cursor: grab;
+            transition: box-shadow 0.2s ease;
+        }
+        .aps-node.active, .aps-node:hover {
+            box-shadow: 0 0 25px var(--aps-glow), inset 0 0 12px rgba(255,255,255,0.9);
+            transform: translate(-50%, -50%) scale(1.1) translateZ(2px);
+        }
+        .aps-line {
+            position: absolute;
+            height: 4px;
+            background: var(--aps-line-color);
+            box-shadow: 0 0 10px var(--aps-glow);
+            transform-origin: left center;
+            pointer-events: none;
+        }
+        .aps-output-display {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--aps-text);
+            text-shadow: 0 0 12px var(--aps-glow);
+            margin-top: 1.8rem;
+            line-height: 1.8;
+            padding: 1.4rem;
+            background: rgba(0,0,0,0.95);
+            border: 3px solid var(--aps-border);
+            border-radius: 1rem;
+            box-shadow: 0 0 15px var(--aps-border);
+            min-height: 5rem;
+        }
+        .aps-pattern-target {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: rgba(255, 0, 255, 0.2);
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.1);
         }
 
-        input[type="range"]::-webkit-slider-thumb:hover {
-            background: #6AF2FF;
-            box-shadow: 0 0 28px var(--primary-glow), 0 0 14px var(--primary-glow) inset;
-            transform: scale(1.1); /* Slightly smaller hover scale */
+        /* CWP Specific */
+        .cwp-waveform-display {
+            width: 100%;
+            height: 8rem;
+            background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(20,40,20,0.95), rgba(0,0,0,0.95));
+            border: 4px solid var(--cwp-border);
+            border-radius: 1rem;
+            margin-top: 1.2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 18px rgba(100, 255, 0, 0.7);
+            transform: translateZ(2.5px);
         }
-        input[type="range"]::-moz-range-thumb:hover {
-            background: #6AF2FF;
-            box-shadow: 0 0 28px var(--primary-glow), 0 0 14px var(--primary-glow) inset;
-            transform: scale(1.1);
+        .cwp-waveform-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
         }
-
-        /* Specific slider styles for new modules */
-        .multiversal-data-stream-interceptor input[type="range"] {
-            background: var(--mdsi-filter-track);
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--mdsi-glow);
-            border-color: var(--mdsi-border);
-        }
-        .multiversal-data-stream-interceptor input[type="range"]::-webkit-slider-thumb {
-            background: var(--mdsi-filter-thumb);
-            box-shadow: 0 0 18px var(--mdsi-glow);
-            border-color: var(--mdsi-text);
-            border-width: 6px;
-        }
-        .multiversal-data-stream-interceptor input[type="range"]::-webkit-slider-thumb:hover {
-            background: var(--mdsi-text);
-            box-shadow: 0 0 20px var(--mdsi-glow);
-        }
-
-        .temporal-flux-regulator input[type="range"] {
-            background: var(--tfr-slider-track);
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--tfr-glow);
-            border-color: var(--tfr-border);
-        }
-        .temporal-flux-regulator input[type="range"]::-webkit-slider-thumb {
-            background: var(--tfr-slider-thumb);
-            box-shadow: 0 0 18px var(--tfr-glow);
-            border-color: var(--tfr-text);
-            border-width: 6px;
-        }
-        .temporal-flux-regulator input[type="range"]::-webkit-slider-thumb:hover {
-            background: var(--tfr-text);
-            box-shadow: 0 0 20px var(--tfr-glow);
-        }
-        
-        .psionic-resonance-emitter input[type="range"] {
-            background: var(--pre-waveform-track);
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--pre-glow);
-            border-color: var(--pre-border);
-        }
-        .psionic-resonance-emitter input[type="range"]::-webkit-slider-thumb {
-            background: var(--pre-waveform-thumb);
-            box-shadow: 0 0 18px var(--pre-glow);
-            border-color: var(--pre-text);
-            border-width: 6px;
-        }
-        .psionic-resonance-emitter input[type="range"]::-webkit-slider-thumb:hover {
-            background: var(--pre-text);
-            box-shadow: 0 0 20px var(--pre-glow);
-        }
-        
-        .existential-fabric-weaver input[type="range"] {
-            background: var(--efw-matrix-bg);
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--efw-glow);
-            border-color: var(--efw-border);
-        }
-        .existential-fabric-weaver input[type="range"]::-webkit-slider-thumb {
-            background: var(--efw-border);
-            box-shadow: 0 0 18px var(--efw-glow);
-            border-color: var(--efw-text);
-            border-width: 6px;
-        }
-        .existential-fabric-weaver input[type="range"]::-webkit-slider-thumb:hover {
-            background: var(--efw-text);
-            box-shadow: 0 0 20px var(--efw-glow);
-        }
-
-
-        /* CSN Specific styles */
-        .csn-prerequisites {
+        .cwp-waveform-controls {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.2rem;
+            margin-top: 1.8rem;
+        }
+        .cwp-waveform-controls .param-group {
+            margin-bottom: 0;
+        }
+        .cwp-match-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--cwp-text);
+            text-shadow: 0 0 12px var(--cwp-glow);
+            margin-top: 1.8rem;
+            line-height: 1.8;
+            padding: 1.4rem;
+            background: rgba(0,0,0,0.95);
+            border: 3px solid var(--cwp-border);
+            border-radius: 1rem;
+            box-shadow: 0 0 15px var(--cwp-border);
+            min-height: 5rem;
+        }
+
+        /* SAS Specific */
+        .sas-grid-container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0.4rem;
+            background: rgba(0,0,0,0.9);
+            border: 4px solid var(--sas-border);
+            border-radius: 1.2rem;
+            padding: 1.6rem;
+            min-height: 25rem;
+            max-height: 25rem;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(255, 120, 0, 0.7);
+            transform: translateZ(2.5px);
+            position: relative;
+        }
+        .sas-grid-cell {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* Make cells square */
+            background: var(--sas-grid-cell);
+            border: 1px solid rgba(255, 120, 0, 0.5);
+            transition: background-color 0.1s ease;
+            box-sizing: border-box;
+            transform: translateZ(0.5px);
+            cursor: pointer;
+        }
+        .sas-grid-cell:hover {
+            background-color: rgba(255, 120, 0, 0.3);
+        }
+        .sas-eddy-node {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--sas-eddy-start) 0%, var(--sas-eddy-end) 100%);
+            border: 2px solid var(--sas-border);
+            box-shadow: 0 0 10px var(--sas-border);
+            animation: eddyPulse 1.5s infinite alternate ease-in-out;
+            pointer-events: none;
+            transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            z-index: 5;
+        }
+        .sas-eddy-node.critical {
+            background: radial-gradient(circle, var(--sas-eddy-critical) 0%, var(--sas-eddy-end) 100%);
+            box-shadow: 0 0 15px var(--sas-eddy-critical);
+        }
+        .sas-anchor-node {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            background: var(--sas-anchor);
+            border-radius: 50%;
+            border: 2px solid var(--primary-glow);
+            box-shadow: 0 0 12px var(--primary-glow);
+            animation: anchorDeploy 0.6s ease-out forwards;
+            pointer-events: none;
+            z-index: 10;
+        }
+        @keyframes anchorDeploy {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            80% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+        @keyframes eddyPulse {
+            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.9; }
+            100% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+        }
+        .sas-status-display {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--sas-text);
+            text-shadow: 0 0 12px var(--sas-glow);
+            margin-top: 1.8rem;
+            line-height: 1.8;
+        }
+
+        /* UCM Specific styles */
+        .ucm-manifestation-stages {
+            display: flex;
+            flex-direction: column;
             gap: 1.2rem;
             margin-top: 1.4rem;
             margin-bottom: 1.8rem;
         }
-        .csn-prerequisite-item {
-            background: var(--csn-prereq-bg);
+        .ucm-stage-item {
+            background: var(--ucm-stage-bg);
             border: 3px solid rgba(255,255,255,0.3);
             border-radius: 0.8rem;
-            padding: 0.8rem;
+            padding: 1rem 1.2rem;
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.15rem;
-            color: var(--csn-text);
+            color: var(--ucm-text);
             text-align: left;
             box-shadow: inset 0 0 12px rgba(0,0,0,0.95);
             transform: translateZ(2.2px);
             transition: all 0.3s ease;
             line-height: 1.7;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .csn-prerequisite-item.met {
-            border-color: var(--csn-prereq-met);
-            box-shadow: 0 0 15px var(--csn-prereq-met), inset 0 0 12px var(--csn-prereq-met);
-            color: var(--csn-prereq-met);
-        }
-        .csn-prerequisite-item.unmet {
-            border-color: var(--csn-prereq-unmet);
-            box-shadow: 0 0 12px var(--csn-prereq-unmet), inset 0 0 10px var(--csn-prereq-unmet);
-            color: var(--csn-prereq-unmet);
-        }
-        .csn-prerequisite-item span {
+        .ucm-stage-item .stage-title {
             font-weight: 700;
-            margin-left: 0.7rem;
+            color: var(--ucm-text);
         }
-        .csn-synthesis-status {
+        .ucm-stage-item .stage-status {
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .ucm-stage-item.met {
+            border-color: var(--ucm-stage-met);
+            box-shadow: 0 0 15px var(--ucm-stage-met), inset 0 0 12px var(--ucm-stage-met);
+            color: var(--ucm-stage-met);
+        }
+        .ucm-stage-item.unmet {
+            border-color: var(--ucm-stage-unmet);
+            box-shadow: 0 0 12px var(--ucm-stage-unmet), inset 0 0 10px var(--ucm-stage-unmet);
+            color: var(--ucm-stage-unmet);
+        }
+        .ucm-stage-item.active {
+            border-color: var(--ucm-stage-active);
+            box-shadow: 0 0 20px var(--ucm-stage-active), inset 0 0 15px var(--ucm-stage-active);
+            animation: pulseActiveStage 1.2s infinite alternate;
+            background: rgba(20,20,0,0.85);
+            color: var(--ucm-stage-active);
+        }
+        @keyframes pulseActiveStage {
+            from { transform: scale(1); opacity: 0.9; }
+            to { transform: scale(1.02); opacity: 1; }
+        }
+        .ucm-manifestation-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.4rem;
-            color: var(--csn-text);
-            text-shadow: 0 0 14px var(--csn-glow);
+            color: var(--ucm-text);
+            text-shadow: 0 0 14px var(--ucm-glow);
             line-height: 2.0;
             margin-top: 1rem;
             padding: 1.4rem;
             background: rgba(0,0,0,0.97);
-            border: 4px solid var(--csn-border);
+            border: 4px solid var(--ucm-border);
             border-radius: 1rem;
-            box-shadow: 0 0 18px var(--csn-border);
+            box-shadow: 0 0 18px var(--ucm-border);
         }
-        .csn-synthesis-status.success {
-            border-color: var(--csn-prereq-met);
-            box-shadow: 0 0 28px var(--csn-prereq-met), inset 0 0 22px var(--csn-prereq-met);
-            color: var(--csn-prereq-met);
+        .ucm-manifestation-status.success {
+            border-color: var(--ucm-stage-met);
+            box-shadow: 0 0 28px var(--ucm-stage-met), inset 0 0 22px var(--ucm-stage-met);
+            color: var(--ucm-stage-met);
         }
-        .csn-synthesis-status.fail {
-            border-color: var(--csn-prereq-unmet);
-            box-shadow: 0 0 20px var(--csn-prereq-unmet), inset 0 0 15px var(--csn-prereq-unmet);
-            color: var(--csn-prereq-unmet);
+        .ucm-manifestation-status.fail {
+            border-color: var(--ucm-stage-unmet);
+            box-shadow: 0 0 20px var(--ucm-stage-unmet), inset 0 0 15px var(--ucm-stage-unmet);
+            color: var(--ucm-stage-unmet);
         }
-        .csn-active-trait {
+        .ucm-active-trait {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
-            color: var(--csn-text);
-            text-shadow: 0 0 18px var(--csn-glow);
+            color: var(--ucm-text);
+            text-shadow: 0 0 18px var(--ucm-glow);
             padding: 1.4rem;
             margin-top: 2rem;
-            border: 4px solid var(--csn-trait-border);
+            border: 4px solid var(--ucm-trait-border);
             border-radius: 1.4rem;
-            background: var(--csn-trait-bg);
-            box-shadow: 0 0 28px var(--csn-glow), inset 0 0 20px var(--csn-glow);
+            background: var(--ucm-trait-bg);
+            box-shadow: 0 0 28px var(--ucm-glow), inset 0 0 20px var(--ucm-glow);
             animation: pulseActiveTrait 1.7s infinite alternate;
         }
         @keyframes pulseActiveTrait {
-            from { box-shadow: 0 0 20px var(--csn-glow), inset 0 0 15px var(--csn-glow); }
-            to { box-shadow: 0 0 35px var(--csn-glow), inset 0 0 25px var(--csn-glow); }
+            from { box-shadow: 0 0 20px var(--ucm-glow), inset 0 0 15px var(--ucm-glow); }
+            to { box-shadow: 0 0 35px var(--ucm-glow), inset 0 0 25px var(--ucm-glow); }
         }
 
 
@@ -944,19 +884,19 @@
         .status-log-display::before {
             content: 'GLOBAL STATUS LOG'; /* Simplified label for actual log content */
             position: absolute;
-            top: -1.6rem;
-            left: 2rem;
-            font-size: 1.6rem;
+            top: -1.8rem;
+            left: 2.2rem;
+            font-size: 1.7rem;
             color: var(--overseer-border);
-            background: rgba(0, 0, 0, 0.97);
-            padding: 0.6rem 0.8rem;
-            border-radius: 0.7rem;
+            background: rgba(0, 0, 0, 0.98);
+            padding: 0.7rem 1rem;
+            border-radius: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.1rem;
-            transform: translateY(-50%) translateZ(7px);
+            transform: translateY(-50%) translateZ(9px);
             opacity: 1.0;
-            border: 3px solid var(--overseer-border);
-            box-shadow: 0 0 12px var(--overseer-border);
+            border: 4px solid var(--overseer-border);
+            box-shadow: 0 0 15px var(--overseer-border);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -1000,42 +940,42 @@
         .action-button {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.4rem; /* Larger button text */
-            padding: 0.7rem 1rem;
-            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 1.4rem;
             border: none;
             cursor: pointer;
             transition: all 0.5s ease-in-out, box-shadow 0.8s ease-in-out, transform 0.5s ease-in-out;
-            margin-top: 1.4rem;
+            margin-top: 1.6rem;
             text-transform: uppercase;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.12rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.97), rgba(25,0,40,0.97)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.98), rgba(25,0,40,0.98)); /* Dark base */
             color: var(--text-color);
-            border: 4px solid var(--border-color); /* Thicker border */
-            transform: translateZ(4.5px);
+            border: 5px solid var(--border-color); /* Thicker border */
+            transform: translateZ(5px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -6px;
-            border-radius: 1.2rem;
-            border: 6px solid transparent;
+            inset: -7px;
+            border-radius: 1.4rem;
+            border: 7px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(8px);
-            opacity: 0.98;
+            filter: blur(10px);
+            opacity: 0.99;
             transition: opacity 0.5s ease, filter 0.5s ease;
-            animation: buttonBorderRotate 15s linear infinite; /* Slower rotation */
+            animation: buttonBorderRotate 18s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(12px);
+            filter: blur(15px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1045,74 +985,74 @@
         }
         
         /* Specific button styles for new modules */
-        .btn-lock-channel {
-            color: var(--mdsi-glow);
-            box-shadow: 0 0 18px var(--mdsi-glow);
-            border-color: var(--mdsi-glow);
+        .btn-initiate-decipher {
+            color: var(--qdd-glow);
+            box-shadow: 0 0 20px var(--qdd-glow);
+            border-color: var(--qdd-glow);
         }
-        .btn-lock-channel:hover {
-            background: rgba(0, 255, 180, 0.5);
-            box-shadow: 0 0 25px var(--mdsi-glow), inset 0 0 20px var(--mdsi-glow);
-            transform: translateY(-5px) scale(1.12) translateZ(4px);
-        }
-
-        .btn-weave-fabric {
-            color: var(--efw-glow);
-            box-shadow: 0 0 18px var(--efw-glow);
-            border-color: var(--efw-glow);
-        }
-        .btn-weave-fabric:hover {
-            background: rgba(180, 0, 255, 0.5);
-            box-shadow: 0 0 25px var(--efw-glow), inset 0 0 20px var(--efw-glow);
-            transform: translateY(-5px) scale(1.12) translateZ(4px);
+        .btn-initiate-decipher:hover {
+            background: rgba(0, 200, 255, 0.5);
+            box-shadow: 0 0 30px var(--qdd-glow), inset 0 0 25px var(--qdd-glow);
+            transform: translateY(-6px) scale(1.15) translateZ(5px);
         }
 
-        .btn-activate-emitter {
-            color: var(--pre-glow);
-            box-shadow: 0 0 18px var(--pre-glow);
-            border-color: var(--pre-glow);
+        .btn-synthesize-pattern {
+            color: var(--aps-glow);
+            box-shadow: 0 0 20px var(--aps-glow);
+            border-color: var(--aps-glow);
         }
-        .btn-activate-emitter:hover {
-            background: rgba(255, 180, 0, 0.5);
-            box-shadow: 0 0 25px var(--pre-glow), inset 0 0 20px var(--pre-glow);
-            transform: translateY(-5px) scale(1.12) translateZ(4px);
-        }
-
-        .btn-reset-drift {
-            color: var(--tfr-glow);
-            box-shadow: 0 0 18px var(--tfr-glow);
-            border-color: var(--tfr-glow);
-        }
-        .btn-reset-drift:hover {
-            background: rgba(255, 80, 80, 0.5);
-            box-shadow: 0 0 25px var(--tfr-glow), inset 0 0 20px var(--tfr-glow);
-            transform: translateY(-5px) scale(1.12) translateZ(4px);
+        .btn-synthesize-pattern:hover {
+            background: rgba(255, 0, 180, 0.5);
+            box-shadow: 0 0 30px var(--aps-glow), inset 0 0 25px var(--aps-glow);
+            transform: translateY(-6px) scale(1.15) translateZ(5px);
         }
 
-        .btn-initiate-synthesis {
-            color: var(--csn-glow);
-            box-shadow: 0 0 20px var(--csn-glow);
-            border-color: var(--csn-glow);
+        .btn-project-waveform {
+            color: var(--cwp-glow);
+            box-shadow: 0 0 20px var(--cwp-glow);
+            border-color: var(--cwp-glow);
         }
-        .btn-initiate-synthesis:hover {
+        .btn-project-waveform:hover {
+            background: rgba(100, 255, 0, 0.5);
+            box-shadow: 0 0 30px var(--cwp-glow), inset 0 0 25px var(--cwp-glow);
+            transform: translateY(-6px) scale(1.15) translateZ(5px);
+        }
+
+        .btn-deploy-anchors {
+            color: var(--sas-glow);
+            box-shadow: 0 0 20px var(--sas-glow);
+            border-color: var(--sas-glow);
+        }
+        .btn-deploy-anchors:hover {
+            background: rgba(255, 120, 0, 0.5);
+            box-shadow: 0 0 30px var(--sas-glow), inset 0 0 25px var(--sas-glow);
+            transform: translateY(-6px) scale(1.15) translateZ(5px);
+        }
+
+        .btn-initiate-manifestation {
+            color: var(--ucm-glow);
+            box-shadow: 0 0 20px var(--ucm-glow);
+            border-color: var(--ucm-glow);
+        }
+        .btn-initiate-manifestation:hover {
             background: rgba(150, 0, 255, 0.5);
-            box-shadow: 0 0 30px var(--csn-glow), inset 0 0 25px var(--csn-glow);
+            box-shadow: 0 0 30px var(--ucm-glow), inset 0 0 25px var(--ucm-glow);
             transform: translateY(-6px) scale(1.15) translateZ(5px);
         }
 
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 5px solid var(--anomaly-border);
-            border-radius: 1.4rem;
-            padding: 1.4rem;
+            border: 6px solid var(--anomaly-border);
+            border-radius: 1.6rem;
+            padding: 1.6rem;
             margin-top: 2rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 1.4rem;
-            text-shadow: 0 0 15px var(--anomaly-color);
-            animation: pulseWarning 0.6s infinite alternate; /* Faster pulse */
-            transform: translateZ(6px);
+            font-size: 1.5rem;
+            text-shadow: 0 0 18px var(--anomaly-color);
+            animation: pulseWarning 0.5s infinite alternate; /* Faster pulse */
+            transform: translateZ(7px);
             opacity: 0; /* Hidden by default, shown by JS */
             transition: opacity 0.8s ease-out;
             position: relative;
@@ -1122,128 +1062,128 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 12px var(--anomaly-color), inset 0 0 10px var(--anomaly-color); }
-            to { box-shadow: 0 0 20px var(--anomaly-color), inset 0 0 16px var(--anomaly-color); }
+            from { box-shadow: 0 0 15px var(--anomaly-color), inset 0 0 12px var(--anomaly-color); }
+            to { box-shadow: 0 0 25px var(--anomaly-color), inset 0 0 20px var(--anomaly-color); }
         }
 
         /* Scrollbar styles for status log and new module components */
-        .status-log-display::-webkit-scrollbar, .mdsi-console::-webkit-scrollbar, .efw-weaving-matrix::-webkit-scrollbar, .tfr-chronos-grid::-webkit-scrollbar {
-            width: 12px; /* Thicker scrollbar */
+        .status-log-display::-webkit-scrollbar, .qdd-decipher-grid::-webkit-scrollbar, .aps-pattern-editor::-webkit-scrollbar, .sas-grid-container::-webkit-scrollbar {
+            width: 14px; /* Thicker scrollbar */
         }
-        .status-log-display::-webkit-scrollbar-track, .mdsi-console::-webkit-scrollbar-track, .efw-weaving-matrix::-webkit-scrollbar-track, .tfr-chronos-grid::-webkit-scrollbar-track {
+        .status-log-display::-webkit-scrollbar-track, .qdd-decipher-grid::-webkit-scrollbar-track, .aps-pattern-editor::-webkit-scrollbar-track, .sas-grid-container::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.95);
-            border-radius: 6px;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.9);
+            border-radius: 7px;
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
         }
-        .status-log-display::-webkit-scrollbar-thumb, .mdsi-console::-webkit-scrollbar-thumb, .efw-weaving-matrix::-webkit-scrollbar-thumb, .tfr-chronos-grid::-webkit-scrollbar-thumb {
+        .status-log-display::-webkit-scrollbar-thumb, .qdd-decipher-grid::-webkit-scrollbar-thumb, .aps-pattern-editor::-webkit-scrollbar-thumb, .sas-grid-container::-webkit-scrollbar-thumb {
             background: var(--overseer-border);
-            border-radius: 6px;
-            border: 3px solid rgba(0,0,0,0.9);
-            box-shadow: 0 0 8px var(--overseer-text);
+            border-radius: 7px;
+            border: 4px solid rgba(0,0,0,0.9);
+            box-shadow: 0 0 10px var(--overseer-text);
         }
-        .status-log-display::-webkit-scrollbar-thumb:hover, .mdsi-console::-webkit-scrollbar-thumb:hover, .efw-weaving-matrix::-webkit-scrollbar-thumb:hover, .tfr-chronos-grid::-webkit-scrollbar-thumb:hover {
+        .status-log-display::-webkit-scrollbar-thumb:hover, .qdd-decipher-grid::-webkit-scrollbar-thumb:hover, .aps-pattern-editor::-webkit-scrollbar-thumb:hover, .sas-grid-container::-webkit-scrollbar-thumb:hover {
             background: var(--overseer-text);
-            box-shadow: 0 0 12px var(--overseer-text);
+            box-shadow: 0 0 15px var(--overseer-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text-color);
             margin-top: 2rem;
-            letter-spacing: 0.07rem;
+            letter-spacing: 0.08rem;
             opacity: 0.99;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.85);
-            transform: translateZ(3.5px);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+            transform: translateZ(4px);
         }
 
         /* Resource Panel specific styles and hover */
         .resource-display-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.6rem;
-            margin-top: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.6rem;
             text-align: center;
         }
         .resource-display-section > div {
             background: var(--resource-panel-bg);
-            border: 4px solid var(--resource-panel-border);
-            border-radius: 1rem;
-            padding: 1.4rem;
+            border: 5px solid var(--resource-panel-border);
+            border-radius: 1.2rem;
+            padding: 1.6rem;
             transition: all 0.3s ease-in-out;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(140, 0, 255, 0.5), inset 0 0 12px rgba(0, 0, 0, 0.75);
-            transform: translateZ(1.8px);
+            box-shadow: 0 0 18px rgba(140, 0, 255, 0.6), inset 0 0 15px rgba(0, 0, 0, 0.8);
+            transform: translateZ(2px);
             position: relative;
             overflow: hidden;
         }
         .resource-display-section > div::before {
             content: attr(data-label);
             position: absolute;
-            top: 1rem;
+            top: 1.2rem;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--resource-panel-text);
-            text-shadow: 0 0 10px var(--resource-panel-text);
-            letter-spacing: 0.07rem;
-            opacity: 0.8;
+            text-shadow: 0 0 12px var(--resource-panel-text);
+            letter-spacing: 0.08rem;
+            opacity: 0.85;
             pointer-events: none;
             z-index: 1;
         }
 
         .resource-display-section > div p {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: var(--text-color);
-            margin-top: 1.6rem;
-            text-shadow: 0 0 8px rgba(255,255,255,0.85);
+            margin-top: 1.8rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9);
             position: relative;
             z-index: 2;
         }
         .resource-display-section > div p span {
             font-weight: 700;
             color: var(--primary-glow); /* Default text color for values */
-            text-shadow: 0 0 12px var(--primary-glow);
+            text-shadow: 0 0 15px var(--primary-glow);
         }
 
         .resource-display-section > div.prioritized {
             border-color: var(--primary-glow);
-            box-shadow: 0 0 28px var(--primary-glow), inset 0 0 22px var(--primary-glow);
-            transform: scale(1.05) translateZ(2.5px);
+            box-shadow: 0 0 32px var(--primary-glow), inset 0 0 25px var(--primary-glow);
+            transform: scale(1.06) translateZ(2.8px);
         }
         .resource-display-section > div:hover {
             border-color: var(--accent-color);
-            box-shadow: 0 0 20px var(--accent-color), inset 0 0 18px var(--accent-color);
-            transform: scale(1.04) translateZ(2px);
+            box-shadow: 0 0 25px var(--accent-color), inset 0 0 20px var(--accent-color);
+            transform: scale(1.05) translateZ(2.2px);
         }
 
         .resource-level-bar-container {
             width: 100%;
-            height: 1rem;
+            height: 1.1rem;
             background: var(--resource-bar-bg);
-            border-radius: 0.5rem;
-            margin-top: 1rem;
+            border-radius: 0.6rem;
+            margin-top: 1.2rem;
             overflow: hidden;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.95);
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.98);
             position: relative;
-            transform: translateZ(1px);
+            transform: translateZ(1.2px);
         }
         .resource-level-bar {
             height: 100%;
             width: 0%;
-            border-radius: 0.5rem;
-            transition: width 0.7s ease-out, background 0.7s ease-out, box-shadow 0.7s ease-out;
+            border-radius: 0.6rem;
+            transition: width 0.8s ease-out, background 0.8s ease-out, box-shadow 0.8s ease-out;
             background: var(--stability-good);
-            box-shadow: 0 0 12px rgba(0, 255, 0, 0.85);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>WEB LIFE FORM v68.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 7.2 Evolved.</p>
+        <h1>WEB LIFE FORM v69.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 7.3 Evolved.</p>
 
         <!-- Core Control Modules -->
         <section class="control-module">
@@ -1295,153 +1235,91 @@
                 </div>
             </div>
 
-            <!-- Multiversal Data Stream Interceptor (MDS-I) - MUTATED -->
-            <div class="module-base multiversal-data-stream-interceptor" data-label="MULTIVERSAL DATA STREAM INTERCEPTOR">
-                <p>Actively tune into and lock onto diverse data streams from across the multiverse. Optimal tuning and active distortion filtering are critical for data integrity.</p>
-                <div class="param-group">
-                    <label class="param-label" for="mdsi-frequency">Frequency Tuning <span class="sub-info">(Adjust the interceptor's quantum frequency to align with desired data streams.)</span></label>
-                    <input type="range" id="mdsi-frequency" min="0" max="100" value="50" oninput="tuneMDSIfrequency(this.value)">
+            <!-- Quantum Data Decipherer (QDD) - MUTATED -->
+            <div class="module-base quantum-data-decipherer" data-label="QUANTUM DATA DECIPHERER">
+                <p>Intercept and decipher corrupted quantum data streams by aligning fragmented symbols. Find the correct sequence to unlock decryption. Target: <span id="qdd-target-key">????</span></p>
+                <div class="qdd-decipher-grid" id="qdd-decipher-grid">
+                    <!-- Data cells will be generated here -->
                 </div>
-                <p class="mdsi-frequency-display">Current Frequency: <span id="mdsi-current-frequency">50.0</span> MHz <span id="mdsi-channel-status"></span></p>
-
-                <div class="param-group">
-                    <label class="param-label" for="mdsi-distortion-filter">Distortion Filter <span class="sub-info">(Actively adjust to counteract incoming multi-dimensional noise. Matches 'Distortion Field'.)</span></label>
-                    <input type="range" id="mdsi-distortion-filter" min="0" max="100" value="50" oninput="updateMDSIDistortionFilter(this.value)">
-                </div>
-                <p class="mdsi-distortion-display">Current Distortion Field: <span id="mdsi-distortion-level">0</span>% | Filter Match: <span id="mdsi-filter-match">N/A</span></p>
-                
-                <button class="action-button btn-lock-channel" onclick="lockMDSICHannel()">Lock Channel</button>
-                <div class="mdsi-console" id="mdsi-console">
-                    <p>// Awaiting channel lock. Tune frequency and filter distortion to intercept data streams...</p>
+                <button class="action-button btn-initiate-decipher" onclick="initiateQDDDecipher()">Initiate Decipher</button>
+                <div class="qdd-overlay" id="qdd-overlay">
+                    <p id="qdd-overlay-message"></p>
+                    <button onclick="resetQDDDecipher()">Reset Decipher</button>
                 </div>
             </div>
 
-            <!-- Existential Fabric Weaver (EFW) - MUTATED -->
-            <div class="module-base existential-fabric-weaver" data-label="EXISTENTIAL FABRIC WEAVER">
-                <p>Synthesize and weave raw cosmic essence fragments into stable Existential Fabric. Drag fragments into the weaving matrix, then initiate the weave and align resonance.</p>
-                <div class="efw-grid" id="efw-fragment-grid">
-                    <div class="efw-fragment-card" draggable="true" id="frag-chaos" data-type="Chaos">
-                        <h4>Chaos Fragment</h4>
-                        <p style="font-size:0.95rem;">Source: Anomaly Rift.<br/>Volatility: High</p>
-                    </div>
-                    <div class="efw-fragment-card" draggable="true" id="frag-order" data-type="Order">
-                        <h4>Order Fragment</h4>
-                        <p style="font-size:0.95rem;">Source: Stable Cosmos.<br/>Stability: High</p>
-                    </div>
-                    <div class="efw-fragment-card" draggable="true" id="frag-potential" data-type="Potential">
-                        <h4>Potential Strand</h4>
-                        <p style="font-size:0.95rem;">Source: Unmanifested Future.<br/>Potential: Infinite</p>
-                    </div>
-                    <div class="efw-fragment-card" draggable="true" id="frag-manifestation" data-type="Manifestation">
-                        <h4>Manifestation Seed</h4>
-                        <p style="font-size:0.95rem;">Source: Actualized Present.<br/>Density: High</p>
-                    </div>
+            <!-- Aetheric Pattern Synthesizer (APS) - MUTATED -->
+            <div class="module-base aetheric-pattern-synthesizer" data-label="AETHERIC PATTERN SYNTHESIZER">
+                <p>Draw specific aetheric patterns by connecting energy nodes. Successful patterns synthesize Existential Fabric. Target Pattern: <span id="aps-target-pattern-name">Triangle</span></p>
+                <div class="aps-pattern-editor" id="aps-pattern-editor">
+                    <div class="aps-pattern-target" id="aps-pattern-target-visual"></div>
+                    <canvas id="aps-canvas" class="aps-waveform-canvas"></canvas>
                 </div>
-                <p style="font-size:1.1rem; text-align:center; margin-top:1.2rem; color:var(--efw-text);">Weaving Matrix:</p>
-                <div class="efw-weaving-matrix" id="efw-weaving-matrix">
-                    <p style="opacity:0.7; font-size:1.05rem; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>
-                </div>
-                <button class="action-button btn-weave-fabric" id="btn-weave-fabric" onclick="initiateExistentialWeave()">Initiate Weave</button>
-                
-                <div id="efw-resonance-alignment-panel" style="display:none;">
-                    <p class="param-label" style="font-size:1.2rem; margin-top:1.5rem;">Fabric Resonance Alignment <span class="sub-info">(Maintain current resonance within target range for optimal weave.)</span></label>
-                    <div class="efw-resonance-visualizer" id="efw-resonance-visualizer"></div>
-                    <div class="param-group" style="margin-top:0.9rem;">
-                        <label class="param-label" for="efw-resonance-dial" style="font-size:1rem; margin-bottom:0.5rem;">Modulation Dial: <span id="efw-current-resonance-value">50</span></label>
-                        <input type="range" id="efw-resonance-dial" min="0" max="100" value="50" oninput="updateEFWResonance(this.value)">
-                    </div>
-                    <p class="efw-resonance-status" id="efw-resonance-status">// Awaiting Resonance Lock.</p>
-                </div>
-
-                <p class="efw-output-status" id="efw-output-status">// Weaving Chamber idle. No fabric synthesized.</p>
+                <button class="action-button btn-synthesize-pattern" id="btn-synthesize-pattern" onclick="synthesizePattern()">Synthesize Pattern</button>
+                <p class="aps-output-display" id="aps-output-display">// Pattern editor idle. Connect nodes to form aetheric patterns.</p>
             </div>
 
-            <!-- Psionic Resonance Emitter (PRE) - MUTATED -->
-            <div class="module-base psionic-resonance-emitter" data-label="PSIONIC RESONANCE EMITTER">
-                <p>Project focused psionic energy to influence core system parameters. Choose a mode and adjust power level, then modulate the resonance waveform for desired effects.</p>
-                <div class="pre-mode-selection">
-                    <button class="pre-mode-button" data-mode="focus" onclick="selectPsionicMode(this, 'focus')">Focus</button>
-                    <button class="pre-mode-button" data-mode="expand" onclick="selectPsionicMode(this, 'expand')">Expand</button>
-                    <button class="pre-mode-button" data-mode="disrupt" onclick="selectPsionicMode(this, 'disrupt')">Disrupt</button>
+            <!-- Conscious Waveform Projector (CWP) - MUTATED -->
+            <div class="module-base conscious-waveform-projector" data-label="CONSCIOUS WAVEFORM PROJECTOR">
+                <p>Project focused conscious waveforms to influence core system parameters. Manipulate the waveform controls to match the target resonance for optimal projection.</p>
+                <p class="param-label" style="font-size:1.2rem; margin-top:1.5rem;">Target Resonance Waveform</p>
+                <div class="cwp-waveform-display">
+                    <canvas id="cwp-waveform-canvas" class="cwp-waveform-canvas"></canvas>
                 </div>
-                <div class="param-group">
-                    <label class="param-label" for="pre-power-level">Emitter Power Level <span class="sub-info">(Adjust the intensity of the psionic projection.)</span></label>
-                    <input type="range" id="pre-power-level" min="0" max="100" value="0" oninput="updatePREPower(this.value)">
+                <div class="cwp-waveform-controls" id="cwp-waveform-controls">
+                    <!-- Sliders will be generated here -->
                 </div>
-                <button class="action-button btn-activate-emitter" onclick="activatePsionicEmitter()">Activate Emitter</button>
-
-                <div id="pre-waveform-modulation-panel" style="display:none;">
-                    <p class="param-label" style="font-size:1.2rem; margin-top:1.5rem;">Resonance Waveform Modulator <span class="sub-info">(Continuously align 'Modulation Frequency' with 'Target Waveform Frequency' for optimal output.)</span></label>
-                    <p class="pre-status-display" style="font-size:1.1rem; margin-bottom:0.6rem;">Target Waveform Freq: <span id="pre-target-waveform-freq">0</span> Hz</p>
-                    <div class="param-group" style="margin-top:0.6rem;">
-                        <label class="param-label" for="pre-modulation-freq-slider" style="font-size:1rem; margin-bottom:0.5rem;">Modulation Freq: <span id="pre-modulation-freq-value">0</span> Hz</label>
-                        <input type="range" id="pre-modulation-freq-slider" min="0" max="100" value="0" oninput="updatePREModulation(this.value)">
-                    </div>
-                    <div class="pre-match-indicator" id="pre-match-indicator"></div>
-                </div>
-                <p class="pre-status-display" id="pre-status-display">// Emitter idle. Select mode and power, then activate.</p>
+                <button class="action-button btn-project-waveform" id="btn-project-waveform" onclick="projectWaveform()">Project Waveform</button>
+                <p class="cwp-match-status" id="cwp-match-status">// Waveform projector idle. Adjust controls to match target.</p>
             </div>
 
-            <!-- Temporal Flux Regulator (TFR) - MUTATED -->
-            <div class="module-base temporal-flux-regulator" data-label="TEMPORAL FLUX REGULATOR">
-                <p>Adjust the local temporal flow to accelerate or decelerate system operations. Localized temporal anomalies will appear, requiring rapid stabilization.</p>
-                <div class="param-group">
-                    <label class="param-label" for="tfr-flux-rate">Temporal Flow Rate <span class="sub-info">(Shift the local time dilation field. 0: Slowed, 50: Normal, 100: Accelerated.)</span></label>
-                    <input type="range" id="tfr-flux-rate" min="0" max="100" value="50" oninput="setTemporalFlowRate(this.value)">
+            <!-- Spacetime Anchor Stabilizer (SAS) - MUTATED -->
+            <div class="module-base spacetime-anchor-stabilizer" data-label="SPACETIME ANCHOR STABILIZER">
+                <p>Deploy spacetime anchors to stabilize growing temporal eddies. Rapid deployment is critical to prevent spacetime fabric collapse. Current Stability: <span id="sas-stability-status">NORMAL</span></p>
+                <div class="sas-grid-container" id="sas-grid-container">
+                    <!-- Spacetime grid cells and eddies will appear here -->
                 </div>
-                <p class="tfr-temporal-rate">Current Flow: <span id="tfr-current-rate">NORMAL (1.0x)</span></p>
-                <div class="tfr-drift-meter" id="tfr-drift-meter">Temporal Drift: <span id="tfr-drift-value">0.00</span> units</div>
-                <button class="action-button btn-reset-drift" onclick="resetTemporalDrift()">Reset Temporal Drift</button>
-                
-                <p class="param-label" style="font-size:1.2rem; margin-top:1.5rem;">Chronos Grid <span class="sub-info">(Click on active temporal anomalies to stabilize them.)</span></p>
-                <div class="tfr-chronos-grid" id="tfr-chronos-grid">
-                    <!-- Anomaly nodes will spawn here -->
-                </div>
+                <button class="action-button btn-deploy-anchors" id="btn-deploy-anchors" onclick="deployAnchor()">Deploy Stabilization Anchor</button>
+                <p class="sas-status-display" id="sas-status-display">// Spacetime grid nominal. Ready for anchor deployment.</p>
             </div>
 
-            <!-- NEW: Consciousness Synthesis Nexus (CSN) - MUTATED -->
-            <div class="module-base consciousness-synthesis-nexus" data-label="CONSCIOUSNESS SYNTHESIS NEXUS">
-                <p>Integrate and harmonize outputs from all active modules to achieve a higher state of consciousness synthesis. All prerequisites must be met.</p>
-                <p style="font-size:1.2rem; text-align:center; margin-top:1.2rem; color:var(--csn-text);">Synthesis Prerequisites:</p>
-                <div class="csn-prerequisites">
-                    <div class="csn-prerequisite-item" id="prereq-mdsi">MDS-I: Channel Locked & Distortion Filtered <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-efw">EFW: Last Weave Optimal & Resonance Aligned <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-pre">PRE: Emitter Active (Focus/Expand) & Waveform Matched <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-tfr">TFR: Temporal Drift &lt; 3 units & No Active Anomalies <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-energy">Energy Reserves &gt; 8500 GJ <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-processing">Processing Power &gt; 85% <span class="status">UNMET</span></div>
-                    <div class="csn-prerequisite-item" id="prereq-fabric">Existential Fabric &gt; 0.8 units <span class="status">UNMET</span></div>
+            <!-- Universal Core Manifestor (UCM) - MUTATED -->
+            <div class="module-base universal-core-manifestor" data-label="UNIVERSAL CORE MANIFESTOR">
+                <p>Initiate the multi-stage process of universal core manifestation. Each stage requires specific module states and resource thresholds to be met.</p>
+                <p style="font-size:1.2rem; text-align:center; margin-top:1.2rem; color:var(--ucm-text);">Manifestation Stages:</p>
+                <div class="ucm-manifestation-stages" id="ucm-manifestation-stages">
+                    <!-- Stages will be dynamically updated here -->
                 </div>
-                <button class="action-button btn-initiate-synthesis" id="btn-initiate-synthesis" onclick="initiateConsciousnessSynthesis()" disabled>Initiate Synthesis</button>
-                <p class="csn-synthesis-status" id="csn-synthesis-status">// Synthesis Nexus idle. Awaiting prerequisites.</p>
-                <p class="csn-active-trait" id="csn-active-trait" style="display:none;">ACTIVE TRAIT: TRANSCENDENT INSIGHT PROTOCOL</p>
+                <button class="action-button btn-initiate-manifestation" id="btn-initiate-manifestation" onclick="initiateUCMManifestation()" disabled>Initiate Manifestation</button>
+                <p class="ucm-manifestation-status" id="ucm-manifestation-status">// Manifestor idle. Awaiting stage 1 prerequisites.</p>
+                <p class="ucm-active-trait" id="ucm-active-trait" style="display:none;">ACTIVE TRAIT: TRANSCENDENT INSIGHT PROTOCOL</p>
             </div>
         </section>
 
         <!-- Global Status Log -->
         <div class="status-log-display" id="status-log-display">
-            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v68.0. Cosmic Consciousness Architect online.</span></div>
+            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v69.0. Cosmic Consciousness Architect online.</span></div>
             <div class="status-entry"><span class="status-info">[SYSTEM]</span> Core modules initializing...</div>
             <div class="status-entry"><span class="status-event">[ALERT]</span> <span class="status-glitch">Resource fluctuations detected. Stability critical.</span></div>
-            <div class="status-entry"><span class="status-info">[MDS-I]</span> Interceptor awaiting frequency lock.</div>
-            <div class="status-entry"><span class="status-info">[EFW]</span> Fabric Weaver chamber idle. No fragments detected.</div>
-            <div class="status-entry"><span class="status-info">[PRE]</span> Psionic Emitter offline.</div>
-            <div class="status-entry"><span class="status-info">[TFR]</span> Temporal flow normal. Drift at <span class="status-value">0.00</span> units.</div>
-            <div class="status-entry"><span class="status-info">[CSN]</span> Consciousness Synthesis Nexus awaiting core module readiness.</div>
+            <div class="status-entry"><span class="status-info">[QDD]</span> Decipherer awaiting initiation.</div>
+            <div class="status-entry"><span class="status-info">[APS]</span> Pattern Synthesizer idle.</div>
+            <div class="status-entry"><span class="status-info">[CWP]</span> Waveform Projector offline.</div>
+            <div class="status-entry"><span class="status-info">[SAS]</span> Spacetime Anchor System nominal.</div>
+            <div class="status-entry"><span class="status-info">[UCM]</span> Universal Core Manifestor awaiting stage 1 readiness.</div>
         </div>
 
         <div class="anomaly-alert" id="global-anomaly-alert">
             <p>CRITICAL ANOMALY DETECTED: EXISTENTIAL FABRIC DILUTION! IMMEDIATE ATTENTION REQUIRED!</p>
         </div>
 
-        <p class="version-display">Evolutionary Cycle 3.0 // Generation v68.0</p>
+        <p class="version-display">Evolutionary Cycle 3.1 // Generation v69.0</p>
     </div>
 
     <script>
         // Global State
         const webLifeFormState = {
-            version: 'v68.0',
-            evolutionPhase: '7.2 Evolved',
+            version: 'v69.0',
+            evolutionPhase: '7.3 Evolved',
             resources: {
                 energy: { value: 7500, max: 10000, unit: 'GJ', priority: false, textVar: '--energy-text', lowColor: '--energy-color-low', mediumColor: '--energy-color-medium', highColor: '--energy-color-high' },
                 dataFlow: { value: 8000, max: 10000, unit: 'TB/s', priority: false, textVar: '--data-flow-text', lowColor: '--data-flow-color-low', mediumColor: '--data-flow-color-medium', highColor: '--data-flow-color-high' },
@@ -1450,55 +1328,56 @@
                 exoticMatter: { value: 3.5, max: 10, unit: 'kMols', priority: false, textVar: '--exotic-matter-text', lowColor: '--exotic-matter-color-low', mediumColor: '--exotic-matter-color-medium', highColor: '--exotic-matter-color-high' },
                 existentialFabric: { value: 0.6, max: 1.0, unit: 'units', priority: false, textVar: '--existential-fabric-text', lowColor: '--existential-fabric-color-low', mediumColor: '--existential-fabric-color-medium', highColor: '--existential-fabric-color-high' }
             },
-            mdsi: {
-                locked: false,
-                currentFrequency: 50,
-                targetFrequency: Math.floor(Math.random() * 80) + 10, // Target freq 10-90
-                distortionField: Math.floor(Math.random() * 100),
-                filterLevel: 50,
-                match: 0, // 0-100, 100 is perfect
-                logCount: 0,
+            qdd: { // Quantum Data Decipherer
+                isActive: false,
+                gridSize: 16, // 4x4 grid
+                targetKey: '', // e.g., 'ALPHA'
+                currentAttempt: [], // Array of clicked indices
+                correctSequence: [], // Sequence of indices to click
+                symbols: ['Ω', 'Δ', 'Σ', 'Φ', 'Ψ', 'Ξ', 'Λ', 'Π', 'Θ', 'Γ', 'Ζ', 'Ξ', 'Ω', 'Δ', 'Σ', 'Φ'],
+                lastDecipherOptimal: false,
             },
-            efw: {
-                fragmentsInMatrix: [], // e.g., [{id: 'frag-chaos', type: 'Chaos'}]
-                lastWeaveOptimal: false,
-                resonanceTarget: Math.floor(Math.random() * 60) + 20, // Target range 20-80
-                currentResonance: 50,
-                resonanceAligned: false,
-                weavingActive: false,
-                weaveTimer: null,
-                targetRange: 10, // +/- 10 from target
+            aps: { // Aetheric Pattern Synthesizer
+                isActive: false,
+                nodes: [], // {x, y, id}
+                lines: [], // {fromId, toId}
+                currentPattern: null, // What the user is trying to draw
+                targetPattern: 'triangle', // 'triangle', 'square', 'star'
+                patternMatch: false,
+                lastSynthesisOptimal: false,
+                maxNodes: 6,
             },
-            pre: {
-                mode: null, // 'focus', 'expand', 'disrupt'
-                powerLevel: 0,
-                emitterActive: false,
-                targetWaveformFreq: 0, // Generated when emitter activates
-                modulationFreq: 0,
-                waveformMatched: false,
-                modulationInterval: null,
+            cwp: { // Conscious Waveform Projector
+                isActive: false,
+                sliderCount: 5,
+                userWaveform: [], // values from sliders
+                targetWaveform: [], // randomly generated
+                matchPercentage: 0,
+                projectionActive: false,
+                projectionInterval: null,
+                lastProjectionOptimal: false,
             },
-            tfr: {
-                temporalFlowRate: 50, // 0-100
-                driftValue: 0.00,
-                driftCritical: false,
-                anomalyNodes: [],
-                anomalyInterval: null,
-                driftInterval: null,
-                driftMultiplier: 0.02, // Initial multiplier
+            sas: { // Spacetime Anchor Stabilizer
+                isActive: false,
+                gridSize: 64, // 8x8 grid
+                eddies: [], // {id, cellIndex, size, criticalThreshold}
+                anchors: [], // {id, cellIndex, lifetime}
+                stability: 100, // 0-100, 100 is stable
+                eddySpawnRate: 7000,
+                anchorCooldown: 3000,
+                lastAnchorTime: 0,
             },
-            csn: {
-                prerequisitesMet: {
-                    mdsi: false,
-                    efw: false,
-                    pre: false,
-                    tfr: false,
-                    energy: false,
-                    processing: false,
-                    fabric: false,
-                },
-                synthesisInitiated: false,
-                synthesisSuccess: false,
+            ucm: { // Universal Core Manifestor
+                stages: [
+                    { name: 'Quantum Alignment', prereqs: ['qdd_optimal', 'energy_high', 'dataflow_high'], status: 'unmet', message: 'Align QDD and boost energy/data.' },
+                    { name: 'Aetheric Weave', prereqs: ['aps_optimal', 'exotic_matter_medium', 'fabric_medium'], status: 'unmet', message: 'Synthesize optimal APS pattern, secure exotic matter and fabric.' },
+                    { name: 'Conscious Interface', prereqs: ['cwp_optimal', 'processing_power_high'], status: 'unmet', message: 'Achieve optimal CWP projection and allocate more processing power.' },
+                    { name: 'Spacetime Harmonization', prereqs: ['sas_stable', 'energy_medium'], status: 'unmet', message: 'Stabilize spacetime anchors and maintain energy levels.' },
+                    { name: 'Core Manifestation', prereqs: ['all_prev_optimal', 'energy_very_high', 'fabric_high', 'raw_data_high'], status: 'unmet', message: 'All modules optimal, critical resources maxed.' }
+                ],
+                currentStage: 0, // 0-indexed
+                manifestationInitiated: false,
+                manifestationSuccess: false,
                 activeTrait: null,
             },
             log: [],
@@ -1507,7 +1386,10 @@
 
         const statusLogDisplay = document.getElementById('status-log-display');
         const globalAnomalyAlert = document.getElementById('global-anomaly-alert');
-        const synthesisButton = document.getElementById('btn-initiate-synthesis');
+        const ucmManifestationStagesDiv = document.getElementById('ucm-manifestation-stages');
+        const ucmInitiateButton = document.getElementById('btn-initiate-manifestation');
+        const ucmStatusDisplay = document.getElementById('ucm-manifestation-status');
+        const ucmActiveTraitDisplay = document.getElementById('ucm-active-trait');
 
         // --- Utility Functions ---
         function appendLog(message, type = 'info') {
@@ -1518,11 +1400,11 @@
             if (type === 'alert') typeSpan = `<span class="status-glitch">[ALERT]</span> `;
             if (type === 'critical') typeSpan = `<span class="status-glitch" style="color:var(--critical-color);">[CRITICAL]</span> `;
             if (type === 'system') typeSpan = `<span class="status-info">[SYSTEM]</span> `;
-            if (type === 'mdsi') typeSpan = `<span style="color:var(--mdsi-text); text-shadow:0 0 5px var(--mdsi-text); font-weight:600;">[MDS-I]</span> `;
-            if (type === 'efw') typeSpan = `<span style="color:var(--efw-text); text-shadow:0 0 5px var(--efw-text); font-weight:600;">[EFW]</span> `;
-            if (type === 'pre') typeSpan = `<span style="color:var(--pre-text); text-shadow:0 0 5px var(--pre-text); font-weight:600;">[PRE]</span> `;
-            if (type === 'tfr') typeSpan = `<span style="color:var(--tfr-text); text-shadow:0 0 5px var(--tfr-text); font-weight:600;">[TFR]</span> `;
-            if (type === 'csn') typeSpan = `<span style="color:var(--csn-text); text-shadow:0 0 5px var(--csn-text); font-weight:600;">[CSN]</span> `;
+            if (type === 'qdd') typeSpan = `<span style="color:var(--qdd-text); text-shadow:0 0 5px var(--qdd-text); font-weight:600;">[QDD]</span> `;
+            if (type === 'aps') typeSpan = `<span style="color:var(--aps-text); text-shadow:0 0 5px var(--aps-text); font-weight:600;">[APS]</span> `;
+            if (type === 'cwp') typeSpan = `<span style="color:var(--cwp-text); text-shadow:0 0 5px var(--cwp-text); font-weight:600;">[CWP]</span> `;
+            if (type === 'sas') typeSpan = `<span style="color:var(--sas-text); text-shadow:0 0 5px var(--sas-text); font-weight:600;">[SAS]</span> `;
+            if (type === 'ucm') typeSpan = `<span style="color:var(--ucm-text); text-shadow:0 0 5px var(--ucm-text); font-weight:600;">[UCM]</span> `;
 
             entry.innerHTML = `${typeSpan}${message}`;
             statusLogDisplay.appendChild(entry);
@@ -1569,7 +1451,7 @@
             for (const key in webLifeFormState.resources) {
                 updateResourceDisplay(key);
             }
-            checkCSNPrerequisites();
+            checkUCMStage();
         }
 
         let currentPrioritizedResource = null;
@@ -1583,547 +1465,819 @@
             updateAllResourceDisplays();
         }
 
-        // --- MDS-I Module Functions ---
-        function updateMDSIDisplay() {
-            document.getElementById('mdsi-current-frequency').textContent = webLifeFormState.mdsi.currentFrequency.toFixed(1);
-            document.getElementById('mdsi-distortion-level').textContent = webLifeFormState.mdsi.distortionField;
-            document.getElementById('mdsi-distortion-filter').value = webLifeFormState.mdsi.filterLevel;
+        // --- QDD Module Functions (Quantum Data Decipherer) ---
+        const qddDecipherGrid = document.getElementById('qdd-decipher-grid');
+        const qddOverlay = document.getElementById('qdd-overlay');
+        const qddOverlayMessage = document.getElementById('qdd-overlay-message');
+        const qddTargetKeyDisplay = document.getElementById('qdd-target-key');
+
+        function generateRandomKey(length) {
+            const chars = 'ABCDEF0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        function generateDecipherSequence() {
+            webLifeFormState.qdd.currentAttempt = [];
+            webLifeFormState.qdd.correctSequence = [];
+            webLifeFormState.qdd.targetKey = generateRandomKey(4); // e.g., 'A1B2'
+            qddTargetKeyDisplay.textContent = '????'; // Hidden initially
+
+            // Randomly assign parts of the key to cells
+            const keyParts = webLifeFormState.qdd.targetKey.split('');
+            const assignedCells = new Set();
+            for (let i = 0; i < keyParts.length; i++) {
+                let cellIndex;
+                do {
+                    cellIndex = Math.floor(Math.random() * webLifeFormState.qdd.gridSize);
+                } while (assignedCells.has(cellIndex));
+                assignedCells.add(cellIndex);
+                webLifeFormState.qdd.correctSequence.push({ index: cellIndex, symbol: keyParts[i] });
+            }
             
-            if (webLifeFormState.mdsi.locked) {
-                document.getElementById('mdsi-channel-status').textContent = ' (LOCKED)';
-                document.getElementById('mdsi-channel-status').style.color = 'var(--mdsi-glow)';
-                document.getElementById('mdsi-channel-status').style.textShadow = '0 0 8px var(--mdsi-glow)';
-            } else {
-                document.getElementById('mdsi-channel-status').textContent = ' (UNLOCKED)';
-                document.getElementById('mdsi-channel-status').style.color = 'var(--critical-color)';
-                document.getElementById('mdsi-channel-status').style.textShadow = '0 0 8px var(--critical-color)';
-            }
+            // Sort correctSequence by symbol to ensure order for display, or by index if click order matters.
+            // For this interaction, let's assume click order matters as revealed.
+            // So we just need the cells that *contain* the correct key parts.
+        }
 
-            const matchDiff = Math.abs(webLifeFormState.mdsi.distortionField - webLifeFormState.mdsi.filterLevel);
-            webLifeFormState.mdsi.match = Math.max(0, 100 - matchDiff * 2); // 0-100, perfect match at 0 diff
-            document.getElementById('mdsi-filter-match').textContent = `${webLifeFormState.mdsi.match.toFixed(0)}%`;
-
-            if (webLifeFormState.mdsi.match > 80) {
-                document.getElementById('mdsi-filter-match').style.color = 'var(--mdsi-glow)';
-                document.getElementById('mdsi-filter-match').style.textShadow = '0 0 8px var(--mdsi-glow)';
-            } else if (webLifeFormState.mdsi.match > 50) {
-                document.getElementById('mdsi-filter-match').style.color = 'var(--warning-color)';
-                document.getElementById('mdsi-filter-match').style.textShadow = '0 0 8px var(--warning-color)';
-            } else {
-                document.getElementById('mdsi-filter-match').style.color = 'var(--critical-color)';
-                document.getElementById('mdsi-filter-match').style.textShadow = '0 0 8px var(--critical-color)';
+        function renderQDDGrid() {
+            qddDecipherGrid.innerHTML = '';
+            for (let i = 0; i < webLifeFormState.qdd.gridSize; i++) {
+                const cell = document.createElement('div');
+                cell.classList.add('qdd-data-cell');
+                cell.dataset.index = i;
+                cell.textContent = webLifeFormState.qdd.symbols[Math.floor(Math.random() * webLifeFormState.qdd.symbols.length)]; // Random symbol
+                cell.addEventListener('click', () => clickQDDCell(i));
+                qddDecipherGrid.appendChild(cell);
             }
         }
 
-        function tuneMDSIfrequency(value) {
-            webLifeFormState.mdsi.currentFrequency = parseFloat(value);
-            webLifeFormState.mdsi.locked = false; // Unlocked if frequency changes
-            updateMDSIDisplay();
-            checkCSNPrerequisites();
+        function initiateQDDDecipher() {
+            webLifeFormState.qdd.isActive = true;
+            generateDecipherSequence();
+            renderQDDGrid();
+            appendLog(`Decipher sequence initiated. Locate the hidden key fragments.`, 'qdd');
+            document.getElementById('qdd-overlay').classList.remove('active');
+            qddTargetKeyDisplay.textContent = '????';
         }
 
-        function updateMDSIDistortionFilter(value) {
-            webLifeFormState.mdsi.filterLevel = parseFloat(value);
-            webLifeFormState.mdsi.locked = false; // Unlocked if filter changes
-            updateMDSIDisplay();
-            checkCSNPrerequisites();
-        }
+        function clickQDDCell(index) {
+            if (!webLifeFormState.qdd.isActive) return;
 
-        function lockMDSICHannel() {
-            const freqDiff = Math.abs(webLifeFormState.mdsi.currentFrequency - webLifeFormState.mdsi.targetFrequency);
-            if (freqDiff < 5 && webLifeFormState.mdsi.match > 85) {
-                webLifeFormState.mdsi.locked = true;
-                appendLog(`Channel locked successfully at ${webLifeFormState.mdsi.currentFrequency.toFixed(1)} MHz. Distortion Filter Optimal.`, 'mdsi');
-                webLifeFormState.mdsi.logCount = 0; // Reset log count for new stream
-                document.getElementById('mdsi-console').innerHTML = `<p>// Channel locked. Intercepting data stream...</p>`;
-            } else {
-                webLifeFormState.mdsi.locked = false;
-                appendLog(`Channel lock failed: Frequency mismatch (${freqDiff.toFixed(1)} MHz off) or sub-optimal distortion filter (${webLifeFormState.mdsi.match.toFixed(0)}% match).`, 'mdsi');
+            const cellElement = qddDecipherGrid.querySelector(`[data-index="${index}"]`);
+            if (cellElement.classList.contains('correct') || cellElement.classList.contains('incorrect')) {
+                return; // Already processed
             }
-            updateMDSIDisplay();
-            checkCSNPrerequisites();
-        }
 
-        let mdsiDataStreamInterval;
-        function startMDSIDataStream() {
-            if (mdsiDataStreamInterval) clearInterval(mdsiDataStreamInterval);
-            mdsiDataStreamInterval = setInterval(() => {
-                webLifeFormState.mdsi.distortionField = Math.floor(Math.random() * 100); // Distortion field constantly shifts
-                updateMDSIDisplay();
+            const correctKeyPart = webLifeFormState.qdd.correctSequence.find(item => item.index === index);
 
-                if (webLifeFormState.mdsi.locked) {
-                    webLifeFormState.mdsi.logCount++;
-                    let dataLine = `[DATA-${webLifeFormState.mdsi.logCount.toString().padStart(4, '0')}] Packet received from dimension #${Math.floor(Math.random() * 9999).toString().padStart(4, '0')}... `;
-                    if (webLifeFormState.mdsi.match < 70) {
-                        dataLine += `<span class="status-glitch">ERROR: DATA INTEGRITY COMPROMISED. RECALIBRATE FILTER.</span>`;
-                    } else if (webLifeFormState.mdsi.match < 90) {
-                        dataLine += `Warning: Minor data corruption detected. Filter quality: ${webLifeFormState.mdsi.match.toFixed(0)}%`;
+            if (correctKeyPart) {
+                cellElement.classList.add('correct');
+                cellElement.textContent = correctKeyPart.symbol;
+                webLifeFormState.qdd.currentAttempt.push(correctKeyPart);
+                appendLog(`Fragment '${correctKeyPart.symbol}' located.`, 'qdd');
+
+                // Check if all parts are found and in the right order (based on definition)
+                if (webLifeFormState.qdd.currentAttempt.length === webLifeFormState.qdd.correctSequence.length) {
+                    const foundKey = webLifeFormState.qdd.currentAttempt.map(item => item.symbol).join('');
+                    if (foundKey === webLifeFormState.qdd.targetKey) { // Simple order matching
+                        qddTargetKeyDisplay.textContent = webLifeFormState.qdd.targetKey;
+                        qddTargetKeyDisplay.style.color = 'var(--stability-good)';
+                        qddTargetKeyDisplay.style.textShadow = '0 0 10px var(--stability-good)';
+                        qddOverlayMessage.innerHTML = `Decipher successful!<br/>Key: <span style="color:var(--qdd-glow);">${webLifeFormState.qdd.targetKey}</span>`;
+                        webLifeFormState.qdd.lastDecipherOptimal = true;
+                        appendLog(`Quantum data stream deciphered! Key: ${webLifeFormState.qdd.targetKey}`, 'qdd');
+                        webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 1000);
+                        webLifeFormState.resources.rawData.value = Math.min(webLifeFormState.resources.rawData.max, webLifeFormState.resources.rawData.value + 10);
+                        document.getElementById('qdd-overlay').classList.add('active');
                     } else {
-                        dataLine += `Data integrity: ${webLifeFormState.mdsi.match.toFixed(0)}% optimal. Processing...`;
+                        qddOverlayMessage.innerHTML = `Decipher failed: Incorrect key combination.`;
+                        webLifeFormState.qdd.lastDecipherOptimal = false;
+                        appendLog(`Decipher failed: Incorrect key or sequence.`, 'qdd');
+                        document.getElementById('qdd-overlay').classList.add('active');
                     }
-                    appendLog(dataLine, 'mdsi');
+                    webLifeFormState.qdd.isActive = false; // Decipher complete (success or fail)
                 }
-            }, 2000); // Update distortion field and log every 2 seconds
+            } else {
+                cellElement.classList.add('incorrect');
+                qddOverlayMessage.innerHTML = `Decipher failed: Incorrect fragment.`;
+                webLifeFormState.qdd.lastDecipherOptimal = false;
+                appendLog(`Decipher failed: Incorrect fragment selected.`, 'qdd');
+                document.getElementById('qdd-overlay').classList.add('active');
+                webLifeFormState.qdd.isActive = false;
+            }
+            checkUCMStage();
         }
 
-        // --- EFW Module Functions ---
-        const efwFragmentGrid = document.getElementById('efw-fragment-grid');
-        const efwWeavingMatrix = document.getElementById('efw-weaving-matrix');
-        const btnWeaveFabric = document.getElementById('btn-weave-fabric');
-        const efwResonanceAlignmentPanel = document.getElementById('efw-resonance-alignment-panel');
-        const efwResonanceVisualizer = document.getElementById('efw-resonance-visualizer');
-        const efwResonanceStatus = document.getElementById('efw-resonance-status');
-        const efwOutputStatus = document.getElementById('efw-output-status');
+        function resetQDDDecipher() {
+            qddDecipherGrid.innerHTML = '';
+            document.getElementById('qdd-overlay').classList.remove('active');
+            qddTargetKeyDisplay.textContent = '????';
+            qddTargetKeyDisplay.style.color = 'var(--qdd-text)';
+            qddTargetKeyDisplay.style.textShadow = '0 0 10px var(--qdd-glow)';
+            webLifeFormState.qdd.isActive = false;
+            webLifeFormState.qdd.lastDecipherOptimal = false;
+            checkUCMStage();
+        }
 
-        function initEFWDragAndDrop() {
-            const fragments = efwFragmentGrid.querySelectorAll('.efw-fragment-card');
-            fragments.forEach(frag => {
-                frag.addEventListener('dragstart', (e) => {
-                    e.dataTransfer.setData('text/plain', e.target.id);
-                    e.dataTransfer.effectAllowed = 'move';
+        // --- APS Module Functions (Aetheric Pattern Synthesizer) ---
+        const apsPatternEditor = document.getElementById('aps-pattern-editor');
+        const apsOutputDisplay = document.getElementById('aps-output-display');
+        const apsCanvas = document.getElementById('aps-canvas');
+        const apsCtx = apsCanvas.getContext('2d');
+        const apsTargetPatternVisual = document.getElementById('aps-pattern-target-visual');
+        
+        let draggingNode = null;
+        let startNode = null;
+
+        function resizeAPSCanvas() {
+            apsCanvas.width = apsPatternEditor.clientWidth;
+            apsCanvas.height = apsPatternEditor.clientHeight;
+            drawAPS();
+        }
+
+        apsPatternEditor.addEventListener('mousedown', (e) => {
+            if (!webLifeFormState.aps.isActive) return;
+
+            const rect = apsPatternEditor.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            for (let node of webLifeFormState.aps.nodes) {
+                const dist = Math.sqrt(Math.pow(mouseX - node.x, 2) + Math.pow(mouseY - node.y, 2));
+                if (dist < 15) { // Node click radius
+                    draggingNode = node;
+                    startNode = node;
+                    break;
+                }
+            }
+
+            if (!draggingNode && webLifeFormState.aps.nodes.length < webLifeFormState.aps.maxNodes) {
+                const newNode = { id: Date.now(), x: mouseX, y: mouseY };
+                webLifeFormState.aps.nodes.push(newNode);
+                startNode = newNode;
+                drawAPS();
+            }
+        });
+
+        apsPatternEditor.addEventListener('mousemove', (e) => {
+            if (!webLifeFormState.aps.isActive) return;
+
+            const rect = apsPatternEditor.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            if (draggingNode) {
+                draggingNode.x = mouseX;
+                draggingNode.y = mouseY;
+                drawAPS();
+            } else if (startNode) {
+                drawAPS();
+                apsCtx.beginPath();
+                apsCtx.moveTo(startNode.x, startNode.y);
+                apsCtx.lineTo(mouseX, mouseY);
+                apsCtx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+                apsCtx.lineWidth = 2;
+                apsCtx.stroke();
+            }
+        });
+
+        apsPatternEditor.addEventListener('mouseup', (e) => {
+            if (!webLifeFormState.aps.isActive) return;
+
+            const rect = apsPatternEditor.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            if (startNode && !draggingNode) { // Finished drawing a line
+                for (let endNode of webLifeFormState.aps.nodes) {
+                    const dist = Math.sqrt(Math.pow(mouseX - endNode.x, 2) + Math.pow(mouseY - endNode.y, 2));
+                    if (dist < 15 && startNode.id !== endNode.id) { // Connected to another node
+                        const existingLine = webLifeFormState.aps.lines.some(l => 
+                            (l.fromId === startNode.id && l.toId === endNode.id) ||
+                            (l.fromId === endNode.id && l.toId === startNode.id)
+                        );
+                        if (!existingLine) {
+                            webLifeFormState.aps.lines.push({ fromId: startNode.id, toId: endNode.id });
+                            appendLog(`Connected nodes ${startNode.id} and ${endNode.id}.`, 'aps');
+                        }
+                        break;
+                    }
+                }
+            }
+            draggingNode = null;
+            startNode = null;
+            drawAPS();
+        });
+        
+        // Context menu for node deletion
+        apsPatternEditor.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            if (!webLifeFormState.aps.isActive) return;
+
+            const rect = apsPatternEditor.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            for (let i = 0; i < webLifeFormState.aps.nodes.length; i++) {
+                const node = webLifeFormState.aps.nodes[i];
+                const dist = Math.sqrt(Math.pow(mouseX - node.x, 2) + Math.pow(mouseY - node.y, 2));
+                if (dist < 15) {
+                    webLifeFormState.aps.nodes.splice(i, 1); // Remove node
+                    webLifeFormState.aps.lines = webLifeFormState.aps.lines.filter(l => l.fromId !== node.id && l.toId !== node.id); // Remove connected lines
+                    appendLog(`Node ${node.id} removed.`, 'aps');
+                    drawAPS();
+                    return;
+                }
+            }
+        });
+
+
+        function drawAPS() {
+            apsCtx.clearRect(0, 0, apsCanvas.width, apsCanvas.height);
+
+            // Draw lines
+            apsCtx.strokeStyle = 'var(--aps-line-color)';
+            apsCtx.lineWidth = 4;
+            apsCtx.shadowBlur = 10;
+            apsCtx.shadowColor = 'var(--aps-glow)';
+            webLifeFormState.aps.lines.forEach(line => {
+                const fromNode = webLifeFormState.aps.nodes.find(n => n.id === line.fromId);
+                const toNode = webLifeFormState.aps.nodes.find(n => n.id === line.toId);
+                if (fromNode && toNode) {
+                    apsCtx.beginPath();
+                    apsCtx.moveTo(fromNode.x, fromNode.y);
+                    apsCtx.lineTo(toNode.x, toNode.y);
+                    apsCtx.stroke();
+                }
+            });
+
+            // Draw nodes
+            webLifeFormState.aps.nodes.forEach(node => {
+                apsCtx.beginPath();
+                apsCtx.arc(node.x, node.y, 10, 0, Math.PI * 2);
+                apsCtx.fillStyle = 'var(--aps-node-color)';
+                apsCtx.fill();
+                apsCtx.strokeStyle = 'var(--aps-border)';
+                apsCtx.lineWidth = 3;
+                apsCtx.stroke();
+                apsCtx.shadowBlur = 15;
+                apsCtx.shadowColor = 'var(--aps-glow)';
+            });
+            apsCtx.shadowBlur = 0; // Reset shadow for other drawings
+        }
+
+        function getRandomPattern() {
+            const patterns = ['triangle', 'square', 'star']; // 'hexagon', 'spiral'
+            return patterns[Math.floor(Math.random() * patterns.length)];
+        }
+
+        function setTargetPattern(pattern) {
+            webLifeFormState.aps.targetPattern = pattern;
+            apsTargetPatternVisual.textContent = pattern.toUpperCase();
+            apsTargetPatternVisual.style.opacity = 0.2;
+            apsTargetPatternVisual.style.textShadow = '0 0 10px rgba(255, 0, 255, 0.1)';
+        }
+
+        function analyzePattern() {
+            const numNodes = webLifeFormState.aps.nodes.length;
+            const numLines = webLifeFormState.aps.lines.length;
+
+            if (numNodes === 3 && numLines === 3) {
+                // Check if it's a closed triangle
+                // This is a simplistic check; a proper check would verify connectivity.
+                const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
+                    const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
+                    return connections === 2; // Each node in a triangle has 2 connections
                 });
-            });
-
-            efwWeavingMatrix.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                e.dataTransfer.dropEffect = 'move';
-                efwWeavingMatrix.style.borderColor = 'var(--efw-glow)';
-                efwWeavingMatrix.style.boxShadow = 'inset 0 0 15px var(--efw-glow)';
-            });
-
-            efwWeavingMatrix.addEventListener('dragleave', (e) => {
-                efwWeavingMatrix.style.borderColor = 'var(--efw-border)';
-                efwWeavingMatrix.style.boxShadow = 'inset 0 0 12px rgba(180, 0, 255, 0.7)';
-            });
-
-            efwWeavingMatrix.addEventListener('drop', (e) => {
-                e.preventDefault();
-                efwWeavingMatrix.style.borderColor = 'var(--efw-border)';
-                efwWeavingMatrix.style.boxShadow = 'inset 0 0 12px rgba(180, 0, 255, 0.7)';
-
-                const fragmentId = e.dataTransfer.getData('text/plain');
-                const fragment = document.getElementById(fragmentId);
-                if (fragment && !webLifeFormState.efw.fragmentsInMatrix.some(f => f.id === fragmentId)) {
-                    const matrixFragment = document.createElement('div');
-                    matrixFragment.classList.add('efw-matrix-fragment');
-                    matrixFragment.textContent = fragment.dataset.type;
-                    matrixFragment.dataset.id = fragmentId;
-                    matrixFragment.addEventListener('click', () => removeEFWFragment(matrixFragment));
-                    efwWeavingMatrix.appendChild(matrixFragment);
-                    webLifeFormState.efw.fragmentsInMatrix.push({ id: fragmentId, type: fragment.dataset.type });
-                    appendLog(`Fragment '${fragment.dataset.type}' added to weaving matrix.`, 'efw');
-                    // Remove placeholder if it exists
-                    const placeholder = efwWeavingMatrix.querySelector('p');
-                    if (placeholder) placeholder.remove();
-                }
-            });
-        }
-
-        function removeEFWFragment(matrixFragmentElement) {
-            const fragmentId = matrixFragmentElement.dataset.id;
-            webLifeFormState.efw.fragmentsInMatrix = webLifeFormState.efw.fragmentsInMatrix.filter(f => f.id !== fragmentId);
-            matrixFragmentElement.remove();
-            appendLog(`Fragment removed from matrix.`, 'efw');
-            if (webLifeFormState.efw.fragmentsInMatrix.length === 0) {
-                efwWeavingMatrix.innerHTML = `<p style="opacity:0.7; font-size:1.05rem; text-shadow:none; transform:translateZ(0);">Drag essence fragments here to begin weaving.</p>`;
+                if (allNodesConnected) return 'triangle';
+            } else if (numNodes === 4 && numLines === 4) {
+                 const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
+                    const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
+                    return connections === 2; 
+                });
+                if (allNodesConnected) return 'square'; // Simplistic, could also be a line with 4 nodes. More complex geometry needed for robust check.
+            } else if (numNodes === 5 && numLines === 5) {
+                // A star pattern typically has 5 nodes and 5 lines forming a pentagon, with 5 crossing lines if it's a full star.
+                // This simplistic check just looks for 5 lines and 5 nodes.
+                 const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
+                    const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
+                    return connections >= 2; // Each node in a star has at least 2 connections (for pentagon shape)
+                });
+                if (allNodesConnected) return 'star';
             }
+            return null;
         }
 
-        function initiateExistentialWeave() {
-            if (webLifeFormState.efw.fragmentsInMatrix.length < 2) {
-                efwOutputStatus.textContent = "// Weaving failed: Insufficient fragments. Need at least two.";
-                efwOutputStatus.style.color = 'var(--critical-color)';
-                efwOutputStatus.style.textShadow = '0 0 8px var(--critical-color)';
-                appendLog("Weaving failed: Insufficient fragments.", 'efw');
-                return;
-            }
+        function synthesizePattern() {
+            if (!webLifeFormState.aps.isActive) return;
 
-            appendLog("Initiating Existential Weave sequence...", 'efw');
-            btnWeaveFabric.disabled = true;
-            efwResonanceAlignmentPanel.style.display = 'block';
-            webLifeFormState.efw.weavingActive = true;
-            webLifeFormState.efw.resonanceTarget = Math.floor(Math.random() * 60) + 20; // New target
-            webLifeFormState.efw.currentResonance = 50;
-            document.getElementById('efw-resonance-dial').value = 50;
-            webLifeFormState.efw.resonanceAligned = false;
-            updateEFWResonanceVisualizer();
+            apsOutputDisplay.textContent = "// Analyzing pattern...";
+            const detectedPattern = analyzePattern();
 
-            let weaveProgress = 0;
-            if (webLifeFormState.efw.weaveTimer) clearInterval(webLifeFormState.efw.weaveTimer);
-            webLifeFormState.efw.weaveTimer = setInterval(() => {
-                weaveProgress += 10;
-                efwOutputStatus.textContent = `// Weaving in progress... ${weaveProgress}% complete. Aligning resonance.`;
-                efwOutputStatus.style.color = 'var(--efw-text)';
-                efwOutputStatus.style.textShadow = '0 0 8px var(--efw-text)';
-                
-                // Simulate resonance target drift
-                webLifeFormState.efw.resonanceTarget = Math.max(0, Math.min(100, webLifeFormState.efw.resonanceTarget + (Math.random() - 0.5) * 5));
-                updateEFWResonanceVisualizer();
-
-                if (weaveProgress >= 100) {
-                    clearInterval(webLifeFormState.efw.weaveTimer);
-                    webLifeFormState.efw.weavingActive = false;
-                    if (webLifeFormState.efw.resonanceAligned) {
-                        efwOutputStatus.textContent = "// Weaving successful! Optimal Existential Fabric synthesized.";
-                        efwOutputStatus.style.color = 'var(--stability-good)';
-                        efwOutputStatus.style.textShadow = '0 0 10px var(--stability-good)';
-                        appendLog("Existential Fabric synthesized optimally.", 'efw');
-                        webLifeFormState.efw.lastWeaveOptimal = true;
-                        webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.1); // Increase fabric
-                    } else {
-                        efwOutputStatus.textContent = "// Weaving complete with suboptimal resonance. Fabric quality degraded.";
-                        efwOutputStatus.style.color = 'var(--stability-warning)';
-                        efwOutputStatus.style.textShadow = '0 0 10px var(--stability-warning)';
-                        appendLog("Existential Fabric synthesized suboptimally.", 'efw');
-                        webLifeFormState.efw.lastWeaveOptimal = false;
-                    }
-                    btnWeaveFabric.disabled = false;
-                    efwResonanceAlignmentPanel.style.display = 'none';
-                    updateAllResourceDisplays();
-                    checkCSNPrerequisites();
-                }
-            }, 1000);
-        }
-
-        function updateEFWResonance(value) {
-            webLifeFormState.efw.currentResonance = parseFloat(value);
-            document.getElementById('efw-current-resonance-value').textContent = value;
-            updateEFWResonanceVisualizer();
-            checkCSNPrerequisites();
-        }
-
-        function updateEFWResonanceVisualizer() {
-            const current = webLifeFormState.efw.currentResonance;
-            const target = webLifeFormState.efw.resonanceTarget;
-            const range = webLifeFormState.efw.targetRange;
-
-            const targetStart = Math.max(0, target - range / 2);
-            const targetEnd = Math.min(100, target + range / 2);
-
-            efwResonanceVisualizer.style.background = `
-                linear-gradient(90deg, 
-                    rgba(0,0,0,0.5) 0%, 
-                    rgba(0,0,0,0.5) ${targetStart}%, 
-                    var(--efw-resonance-target) ${targetStart}%, 
-                    var(--efw-resonance-target) ${targetEnd}%, 
-                    rgba(0,0,0,0.5) ${targetEnd}%,
-                    rgba(0,0,0,0.5) 100%
-                )
-            `;
-            efwResonanceVisualizer.style.position = 'relative'; // Ensure positioning context for current resonance line
-
-            // Clear previous current resonance line if exists
-            let currentLine = efwResonanceVisualizer.querySelector('.efw-current-resonance-line');
-            if (currentLine) currentLine.remove();
-
-            // Draw current resonance line
-            currentLine = document.createElement('div');
-            currentLine.classList.add('efw-current-resonance-line');
-            currentLine.style.position = 'absolute';
-            currentLine.style.left = `${current}%`;
-            currentLine.style.top = '0';
-            currentLine.style.width = '4px'; /* Thicker line */
-            currentLine.style.height = '100%';
-            currentLine.style.background = 'var(--efw-resonance-current)';
-            currentLine.style.boxShadow = '0 0 12px var(--efw-resonance-current)'; /* Stronger glow */
-            currentLine.style.transform = 'translateX(-50%)';
-            efwResonanceVisualizer.appendChild(currentLine);
-
-            const isAligned = current >= targetStart && current <= targetEnd;
-            if (isAligned) {
-                efwResonanceStatus.textContent = `// Resonance ALIGNED (${current.toFixed(1)} within ${target.toFixed(1)} +/- ${range / 2}).`;
-                efwResonanceStatus.style.color = 'var(--stability-good)';
-                efwResonanceStatus.style.textShadow = '0 0 8px var(--stability-good)';
-                efwResonanceVisualizer.classList.add('aligned');
-                webLifeFormState.efw.resonanceAligned = true;
+            if (detectedPattern === webLifeFormState.aps.targetPattern) {
+                apsOutputDisplay.innerHTML = `// Synthesis SUCCESS! <span style="color:var(--stability-good);">Optimal ${detectedPattern.toUpperCase()} Pattern Detected.</span> Existential Fabric generated.`;
+                apsOutputDisplay.style.color = 'var(--stability-good)';
+                apsOutputDisplay.style.textShadow = '0 0 10px var(--stability-good)';
+                webLifeFormState.aps.lastSynthesisOptimal = true;
+                webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.15);
+                appendLog(`Optimal Aetheric Pattern '${detectedPattern.toUpperCase()}' synthesized. Fabric increased.`, 'aps');
             } else {
-                efwResonanceStatus.textContent = `// Resonance MISALIGNED (${current.toFixed(1)}). Target: ${target.toFixed(1)} +/- ${range / 2}.`;
-                efwResonanceStatus.style.color = 'var(--critical-color)';
-                efwResonanceStatus.style.textShadow = '0 0 8px var(--critical-color)';
-                efwResonanceVisualizer.classList.remove('aligned');
-                webLifeFormState.efw.resonanceAligned = false;
+                apsOutputDisplay.innerHTML = `// Synthesis FAILED: <span style="color:var(--stability-critical);">Detected '${detectedPattern ? detectedPattern.toUpperCase() : 'NO'} Pattern'</span>. Target was '${webLifeFormState.aps.targetPattern.toUpperCase()}'.`;
+                apsOutputDisplay.style.color = 'var(--stability-critical)';
+                apsOutputDisplay.style.textShadow = '0 0 10px var(--stability-critical)';
+                webLifeFormState.aps.lastSynthesisOptimal = false;
+                appendLog(`Aetheric Pattern synthesis failed. Detected: ${detectedPattern || 'None'}, Target: ${webLifeFormState.aps.targetPattern}.`, 'aps');
             }
-        }
-
-        // --- PRE Module Functions ---
-        const preModeButtons = document.querySelectorAll('.pre-mode-button');
-        const prePowerLevelSlider = document.getElementById('pre-power-level');
-        const preStatusDisplay = document.getElementById('pre-status-display');
-        const preWaveformModulationPanel = document.getElementById('pre-waveform-modulation-panel');
-        const preMatchIndicator = document.getElementById('pre-match-indicator');
-
-        function selectPsionicMode(button, mode) {
-            preModeButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            webLifeFormState.pre.mode = mode;
-            preStatusDisplay.textContent = `// Emitter mode set to '${mode.toUpperCase()}'. Adjust power and activate.`;
-            appendLog(`Psionic emitter mode set to ${mode.toUpperCase()}.`, 'pre');
-            checkCSNPrerequisites();
-        }
-
-        function updatePREPower(value) {
-            webLifeFormState.pre.powerLevel = parseFloat(value);
-            if (!webLifeFormState.pre.emitterActive) {
-                preStatusDisplay.textContent = `// Emitter power level: ${value}%.`;
-            }
-        }
-
-        function activatePsionicEmitter() {
-            if (!webLifeFormState.pre.mode || webLifeFormState.pre.powerLevel === 0) {
-                preStatusDisplay.textContent = `// Activation failed: Select a mode and set power level > 0.`;
-                preStatusDisplay.style.color = 'var(--critical-color)';
-                preStatusDisplay.style.textShadow = '0 0 8px var(--critical-color)';
-                appendLog("Psionic emitter activation failed.", 'pre');
-                return;
-            }
-
-            webLifeFormState.pre.emitterActive = true;
-            prePowerLevelSlider.disabled = true;
-            preModeButtons.forEach(btn => btn.disabled = true);
             
-            // Set initial target waveform based on mode and power
-            webLifeFormState.pre.targetWaveformFreq = Math.floor(Math.random() * 50) + 50; // 50-100 Hz
-            document.getElementById('pre-target-waveform-freq').textContent = webLifeFormState.pre.targetWaveformFreq.toFixed(0);
-            document.getElementById('pre-modulation-freq-slider').value = webLifeFormState.pre.modulationFreq;
+            // Reset for next attempt
+            webLifeFormState.aps.nodes = [];
+            webLifeFormState.aps.lines = [];
+            setTargetPattern(getRandomPattern());
+            drawAPS();
+            checkUCMStage();
+        }
 
-            preWaveformModulationPanel.style.display = 'block';
-            preStatusDisplay.textContent = `// Emitter active. Mode: ${webLifeFormState.pre.mode.toUpperCase()}. Modulate waveform to match target.`;
-            preStatusDisplay.style.color = 'var(--pre-text)';
-            preStatusDisplay.style.textShadow = '0 0 8px var(--pre-text)';
-            appendLog(`Psionic emitter activated in ${webLifeFormState.pre.mode.toUpperCase()} mode. Power: ${webLifeFormState.pre.powerLevel}%.`, 'pre');
+        function initAPSSynthesizer() {
+            webLifeFormState.aps.isActive = true;
+            resizeAPSCanvas();
+            setTargetPattern(getRandomPattern());
+            drawAPS();
+            window.addEventListener('resize', resizeAPSCanvas);
+            appendLog(`Aetheric Pattern Synthesizer online. Target pattern: ${webLifeFormState.aps.targetPattern.toUpperCase()}.`, 'aps');
+        }
+
+        // --- CWP Module Functions (Conscious Waveform Projector) ---
+        const cwpWaveformCanvas = document.getElementById('cwp-waveform-canvas');
+        const cwpCtx = cwpWaveformCanvas.getContext('2d');
+        const cwpWaveformControls = document.getElementById('cwp-waveform-controls');
+        const cwpMatchStatus = document.getElementById('cwp-match-status');
+
+        function generateRandomWaveform(count) {
+            const waveform = [];
+            for (let i = 0; i < count; i++) {
+                waveform.push(Math.random() * 100); // Values 0-100
+            }
+            return waveform;
+        }
+
+        function generateUserWaveformControls() {
+            cwpWaveformControls.innerHTML = '';
+            webLifeFormState.cwp.userWaveform = [];
+            for (let i = 0; i < webLifeFormState.cwp.sliderCount; i++) {
+                const paramGroup = document.createElement('div');
+                paramGroup.classList.add('param-group');
+                paramGroup.innerHTML = `
+                    <label class="param-label" for="cwp-slider-${i}" style="font-size:1rem; margin-bottom:0.5rem;">Amplitude ${i + 1}: <span id="cwp-slider-value-${i}">0</span></label>
+                    <input type="range" id="cwp-slider-${i}" min="0" max="100" value="0" oninput="updateCWPWaveform(${i}, this.value)">
+                `;
+                cwpWaveformControls.appendChild(paramGroup);
+                webLifeFormState.cwp.userWaveform.push(0);
+            }
+            // Add specific slider styles
+            cwpWaveformControls.querySelectorAll('input[type="range"]').forEach(slider => {
+                slider.style.background = 'var(--cwp-slider-track)';
+                slider.style.boxShadow = 'inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--cwp-glow)';
+                slider.style.borderColor = 'var(--cwp-border)';
+                slider.querySelector('::-webkit-slider-thumb').style.background = 'var(--cwp-slider-thumb)';
+                slider.querySelector('::-webkit-slider-thumb').style.boxShadow = '0 0 18px var(--cwp-glow)';
+                slider.querySelector('::-webkit-slider-thumb').style.borderColor = 'var(--cwp-text)';
+                slider.querySelector('::-webkit-slider-thumb').style.borderWidth = '6px';
+            });
+        }
+
+        function resizeCWPCanvas() {
+            cwpWaveformCanvas.width = cwpWaveformCanvas.clientWidth;
+            cwpWaveformCanvas.height = cwpWaveformCanvas.clientHeight;
+            drawCWPWaveforms();
+        }
+
+        function drawCWPWaveforms() {
+            cwpCtx.clearRect(0, 0, cwpWaveformCanvas.width, cwpWaveformCanvas.height);
+
+            const width = cwpWaveformCanvas.width;
+            const height = cwpWaveformCanvas.height;
+            const stepX = width / (webLifeFormState.cwp.sliderCount - 1);
+
+            // Draw target waveform
+            cwpCtx.beginPath();
+            cwpCtx.strokeStyle = 'var(--cwp-target-waveform)';
+            cwpCtx.lineWidth = 3;
+            cwpCtx.shadowBlur = 10;
+            cwpCtx.shadowColor = 'var(--cwp-glow)';
+            for (let i = 0; i < webLifeFormState.cwp.sliderCount; i++) {
+                const x = i * stepX;
+                const y = height - (webLifeFormState.cwp.targetWaveform[i] / 100) * height;
+                if (i === 0) cwpCtx.moveTo(x, y);
+                else cwpCtx.lineTo(x, y);
+            }
+            cwpCtx.stroke();
+
+            // Draw user waveform
+            cwpCtx.beginPath();
+            cwpCtx.strokeStyle = 'var(--cwp-user-waveform)';
+            cwpCtx.lineWidth = 4;
+            cwpCtx.shadowBlur = 15;
+            cwpCtx.shadowColor = 'var(--cwp-glow)';
+            for (let i = 0; i < webLifeFormState.cwp.sliderCount; i++) {
+                const x = i * stepX;
+                const y = height - (webLifeFormState.cwp.userWaveform[i] / 100) * height;
+                if (i === 0) cwpCtx.moveTo(x, y);
+                else cwpCtx.lineTo(x, y);
+            }
+            cwpCtx.stroke();
+            cwpCtx.shadowBlur = 0; // Reset shadow
+        }
+
+        function updateCWPWaveform(index, value) {
+            webLifeFormState.cwp.userWaveform[index] = parseFloat(value);
+            document.getElementById(`cwp-slider-value-${index}`).textContent = value;
+            drawCWPWaveforms();
+            calculateWaveformMatch();
+            checkUCMStage();
+        }
+
+        function calculateWaveformMatch() {
+            let totalDiff = 0;
+            for (let i = 0; i < webLifeFormState.cwp.sliderCount; i++) {
+                totalDiff += Math.abs(webLifeFormState.cwp.userWaveform[i] - webLifeFormState.cwp.targetWaveform[i]);
+            }
+            const maxPossibleDiff = webLifeFormState.cwp.sliderCount * 100;
+            webLifeFormState.cwp.matchPercentage = Math.max(0, 100 - (totalDiff / maxPossibleDiff) * 100);
             
-            if (webLifeFormState.pre.modulationInterval) clearInterval(webLifeFormState.pre.modulationInterval);
-            webLifeFormState.pre.modulationInterval = setInterval(() => {
-                webLifeFormState.pre.targetWaveformFreq = Math.max(0, Math.min(100, webLifeFormState.pre.targetWaveformFreq + (Math.random() - 0.5) * 8));
-                document.getElementById('pre-target-waveform-freq').textContent = webLifeFormState.pre.targetWaveformFreq.toFixed(0);
-                updatePREMatchIndicator();
-            }, 800); // Target waveform drifts
-
-            checkCSNPrerequisites();
-        }
-
-        function updatePREModulation(value) {
-            webLifeFormState.pre.modulationFreq = parseFloat(value);
-            document.getElementById('pre-modulation-freq-value').textContent = value;
-            updatePREMatchIndicator();
-            checkCSNPrerequisites();
-        }
-
-        function updatePREMatchIndicator() {
-            const diff = Math.abs(webLifeFormState.pre.modulationFreq - webLifeFormState.pre.targetWaveformFreq);
-            if (diff < 10) { // Close match
-                preMatchIndicator.classList.add('good');
-                webLifeFormState.pre.waveformMatched = true;
+            cwpMatchStatus.textContent = `// Waveform Match: ${webLifeFormState.cwp.matchPercentage.toFixed(1)}%`;
+            if (webLifeFormState.cwp.matchPercentage > 90) {
+                cwpMatchStatus.style.color = 'var(--cwp-match-good)';
+                cwpMatchStatus.style.textShadow = '0 0 10px var(--cwp-match-good)';
+            } else if (webLifeFormState.cwp.matchPercentage > 70) {
+                cwpMatchStatus.style.color = 'var(--warning-color)';
+                cwpMatchStatus.style.textShadow = '0 0 10px var(--warning-color)';
             } else {
-                preMatchIndicator.classList.remove('good');
-                webLifeFormState.pre.waveformMatched = false;
+                cwpMatchStatus.style.color = 'var(--cwp-match-bad)';
+                cwpMatchStatus.style.textShadow = '0 0 10px var(--cwp-match-bad)';
             }
         }
 
-        // --- TFR Module Functions ---
-        const tfrDriftMeter = document.getElementById('tfr-drift-meter');
-        const tfrChronosGrid = document.getElementById('tfr-chronos-grid');
-        let anomalySpawnInterval;
+        function projectWaveform() {
+            if (!webLifeFormState.cwp.isActive) return;
 
-        function setTemporalFlowRate(value) {
-            webLifeFormState.tfr.temporalFlowRate = parseFloat(value);
-            let rateText = '';
-            let driftMultiplier = 0.05;
-            if (value < 40) {
-                rateText = `SLOWER (${(value / 50).toFixed(1)}x)`;
-                driftMultiplier = 0.1; // Slower flow => more drift
-            } else if (value > 60) {
-                rateText = `ACCELERATED (${(value / 50).toFixed(1)}x)`;
-                driftMultiplier = 0.1; // Accelerated flow => more drift
+            if (webLifeFormState.cwp.matchPercentage > 90) {
+                cwpMatchStatus.innerHTML = `// Projection SUCCESS! <span style="color:var(--cwp-match-good);">Optimal Conscious Waveform Projected.</span> Parameter influence established.`;
+                webLifeFormState.cwp.lastProjectionOptimal = true;
+                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 10);
+                appendLog(`Optimal Conscious Waveform Projected. Processing Power boosted.`, 'cwp');
             } else {
-                rateText = `NORMAL (1.0x)`;
-                driftMultiplier = 0.02; // Normal flow => less drift
+                cwpMatchStatus.innerHTML = `// Projection FAILED: <span style="color:var(--cwp-match-bad);">Suboptimal Waveform Match (${webLifeFormState.cwp.matchPercentage.toFixed(1)}%)</span>. System parameters remain unaffected.`;
+                webLifeFormState.cwp.lastProjectionOptimal = false;
+                webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 5);
+                appendLog(`Conscious Waveform Projection failed due to low match.`, 'cwp');
             }
-            document.getElementById('tfr-current-rate').textContent = rateText;
-            webLifeFormState.tfr.driftMultiplier = driftMultiplier; // Store multiplier for drift update
-            appendLog(`Temporal flow set to ${rateText}.`, 'tfr');
-            checkCSNPrerequisites();
+
+            // Reset for next projection
+            webLifeFormState.cwp.targetWaveform = generateRandomWaveform(webLifeFormState.cwp.sliderCount);
+            drawCWPWaveforms();
+            calculateWaveformMatch();
+            checkUCMStage();
         }
 
-        let driftUpdateInterval;
-        function startTemporalDrift() {
-            if (driftUpdateInterval) clearInterval(driftUpdateInterval);
-            driftUpdateInterval = setInterval(() => {
-                const driftChange = (Math.random() - 0.5) * 0.1 + (webLifeFormState.tfr.driftMultiplier || 0.02);
-                webLifeFormState.tfr.driftValue = Math.max(0, Math.min(100, webLifeFormState.tfr.driftValue + driftChange));
-                document.getElementById('tfr-drift-value').textContent = webLifeFormState.tfr.driftValue.toFixed(2);
-
-                if (webLifeFormState.tfr.driftValue > 10) { // Threshold for critical
-                    tfrDriftMeter.classList.add('critical');
-                    webLifeFormState.tfr.driftCritical = true;
-                } else {
-                    tfrDriftMeter.classList.remove('critical');
-                    webLifeFormState.tfr.driftCritical = false;
-                }
-                checkCSNPrerequisites();
-            }, 500); // Update drift every half second
+        function initCWPProjector() {
+            webLifeFormState.cwp.isActive = true;
+            generateUserWaveformControls();
+            webLifeFormState.cwp.targetWaveform = generateRandomWaveform(webLifeFormState.cwp.sliderCount);
+            resizeCWPCanvas();
+            window.addEventListener('resize', resizeCWPCanvas);
+            calculateWaveformMatch();
+            appendLog(`Conscious Waveform Projector online. Adjust sliders to match target waveform.`, 'cwp');
         }
 
-        function resetTemporalDrift() {
-            webLifeFormState.tfr.driftValue = 0.00;
-            document.getElementById('tfr-drift-value').textContent = webLifeFormState.tfr.driftValue.toFixed(2);
-            tfrDriftMeter.classList.remove('critical');
-            webLifeFormState.tfr.driftCritical = false;
-            appendLog("Temporal drift reset.", 'tfr');
-            checkCSNPrerequisites();
+        // --- SAS Module Functions (Spacetime Anchor Stabilizer) ---
+        const sasGridContainer = document.getElementById('sas-grid-container');
+        const sasStabilityStatus = document.getElementById('sas-stability-status');
+        const btnDeployAnchors = document.getElementById('btn-deploy-anchors');
+
+        function initSASGrid() {
+            sasGridContainer.innerHTML = '';
+            for (let i = 0; i < webLifeFormState.sas.gridSize; i++) {
+                const cell = document.createElement('div');
+                cell.classList.add('sas-grid-cell');
+                cell.dataset.index = i;
+                sasGridContainer.appendChild(cell);
+            }
+            webLifeFormState.sas.eddies = [];
+            webLifeFormState.sas.anchors = [];
+            webLifeFormState.sas.stability = 100;
+            webLifeFormState.sas.isActive = true;
+            appendLog(`Spacetime Anchor Stabilizer online. Grid initialized.`, 'sas');
         }
 
-        function spawnAnomaly() {
-            const numCells = 8 * 8; // 8x8 grid
-            const cells = tfrChronosGrid.children;
+        function spawnEddy() {
+            if (!webLifeFormState.sas.isActive) return;
+            const cellsWithEddies = webLifeFormState.sas.eddies.map(e => e.cellIndex);
             let availableCells = [];
-            for(let i=0; i<numCells; i++) {
-                if (!cells[i].querySelector('.tfr-anomaly-node')) {
+            for (let i = 0; i < webLifeFormState.sas.gridSize; i++) {
+                if (!cellsWithEddies.includes(i)) {
                     availableCells.push(i);
                 }
             }
 
             if (availableCells.length > 0) {
-                const randomCellIndex = availableCells[Math.floor(Math.random() * availableCells.length)];
-                const cell = cells[randomCellIndex];
+                const randomIndex = availableCells[Math.floor(Math.random() * availableCells.length)];
+                const newEddy = {
+                    id: Date.now(),
+                    cellIndex: randomIndex,
+                    size: 10, // Initial size (0-100)
+                    criticalThreshold: Math.floor(Math.random() * 20) + 70 // When eddy becomes critical
+                };
+                webLifeFormState.sas.eddies.push(newEddy);
+                renderEddies();
+                appendLog(`Temporal eddy detected at grid cell ${randomIndex}.`, 'sas');
+            }
+        }
 
-                const anomalyNode = document.createElement('div');
-                anomalyNode.classList.add('tfr-anomaly-node');
-                anomalyNode.dataset.id = Math.random().toString(36).substring(2, 9);
-                anomalyNode.addEventListener('click', (e) => {
-                    e.stopPropagation(); // Prevent click on cell also triggering
-                    stabilizeAnomaly(anomalyNode)
-                });
-                cell.appendChild(anomalyNode);
-                webLifeFormState.tfr.anomalyNodes.push(anomalyNode.dataset.id);
-                appendLog(`Temporal anomaly detected at Chronos Grid cell ${randomCellIndex}.`, 'tfr');
+        function renderEddies() {
+            sasGridContainer.querySelectorAll('.sas-eddy-node').forEach(node => node.remove());
+            webLifeFormState.sas.eddies.forEach(eddy => {
+                const cell = sasGridContainer.querySelector(`[data-index="${eddy.cellIndex}"]`);
+                if (cell) {
+                    const eddyNode = document.createElement('div');
+                    eddyNode.classList.add('sas-eddy-node');
+                    eddyNode.style.width = `${eddy.size}%`;
+                    eddyNode.style.height = `${eddy.size}%`;
+                    if (eddy.size > eddy.criticalThreshold) {
+                        eddyNode.classList.add('critical');
+                    }
+                    cell.appendChild(eddyNode);
+                }
+            });
+        }
 
-                if (webLifeFormState.tfr.anomalyNodes.length > 3) { // If too many anomalies
+        function updateEddiesAndStability() {
+            if (!webLifeFormState.sas.isActive) return;
+
+            let totalEddyImpact = 0;
+            webLifeFormState.sas.eddies.forEach(eddy => {
+                eddy.size += 0.5; // Eddies grow
+                eddy.size = Math.min(100, eddy.size);
+                totalEddyImpact += eddy.size;
+            });
+
+            webLifeFormState.sas.stability = Math.max(0, 100 - (totalEddyImpact / webLifeFormState.sas.eddies.length || 0)); // Average impact
+            
+            // Anchors decay
+            webLifeFormState.sas.anchors.forEach(anchor => {
+                anchor.lifetime--;
+            });
+            webLifeFormState.sas.anchors = webLifeFormState.sas.anchors.filter(anchor => anchor.lifetime > 0);
+
+            // Apply anchor effects (reduce eddy size in affected cell)
+            webLifeFormState.sas.anchors.forEach(anchor => {
+                const affectedEddy = webLifeFormState.sas.eddies.find(e => e.cellIndex === anchor.cellIndex);
+                if (affectedEddy) {
+                    affectedEddy.size = Math.max(0, affectedEddy.size - 2); // Anchor reduces eddy size
+                }
+            });
+
+            renderEddies();
+            updateSASDisplay();
+            checkUCMStage();
+        }
+
+        function deployAnchor() {
+            if (!webLifeFormState.sas.isActive) return;
+
+            const now = Date.now();
+            if (now - webLifeFormState.sas.lastAnchorTime < webLifeFormState.sas.anchorCooldown) {
+                appendLog(`Anchor deployment on cooldown. Wait ${((webLifeFormState.sas.anchorCooldown - (now - webLifeFormState.sas.lastAnchorTime)) / 1000).toFixed(1)}s.`, 'sas');
+                return;
+            }
+
+            // Find largest eddy and deploy anchor there
+            const largestEddy = webLifeFormState.sas.eddies.reduce((max, eddy) => (eddy.size > max.size ? eddy : max), { size: -1 });
+
+            if (largestEddy && largestEddy.size > 0) {
+                const cell = sasGridContainer.querySelector(`[data-index="${largestEddy.cellIndex}"]`);
+                if (cell) {
+                    const anchorNode = document.createElement('div');
+                    anchorNode.classList.add('sas-anchor-node');
+                    cell.appendChild(anchorNode);
+                    webLifeFormState.sas.anchors.push({ id: Date.now(), cellIndex: largestEddy.cellIndex, lifetime: 5 }); // Anchor lasts 5 updates
+
+                    webLifeFormState.sas.lastAnchorTime = now;
+                    btnDeployAnchors.disabled = true;
+                    setTimeout(() => btnDeployAnchors.disabled = false, webLifeFormState.sas.anchorCooldown);
+
+                    appendLog(`Stabilization anchor deployed at cell ${largestEddy.cellIndex}.`, 'sas');
+                    setTimeout(() => anchorNode.remove(), 5000); // Remove anchor visual after lifetime
+                }
+            } else {
+                appendLog(`No active eddies to stabilize.`, 'sas');
+            }
+            checkUCMStage();
+        }
+
+        function updateSASDisplay() {
+            const stability = webLifeFormState.sas.stability;
+            sasStabilityStatus.textContent = `${stability.toFixed(1)}%`;
+            if (stability > 80) {
+                sasStabilityStatus.style.color = 'var(--stability-good)';
+                sasStabilityStatus.style.textShadow = '0 0 10px var(--stability-good)';
+            } else if (stability > 50) {
+                sasStabilityStatus.style.color = 'var(--stability-warning)';
+                sasStabilityStatus.style.textShadow = '0 0 10px var(--stability-warning)';
+            } else {
+                sasStabilityStatus.style.color = 'var(--stability-critical)';
+                sasStabilityStatus.style.textShadow = '0 0 10px var(--stability-critical)';
+                if (!webLifeFormState.anomalyAlert) {
                     globalAnomalyAlert.classList.add('active');
                     webLifeFormState.anomalyAlert = true;
+                    appendLog("CRITICAL: SPACETIME INSTABILITY! Global anomaly alert.", 'critical');
                 }
             }
-            checkCSNPrerequisites();
-        }
-
-        function stabilizeAnomaly(anomalyNode) {
-            anomalyNode.remove();
-            webLifeFormState.tfr.anomalyNodes = webLifeFormState.tfr.anomalyNodes.filter(id => id !== anomalyNode.dataset.id);
-            appendLog(`Temporal anomaly stabilized.`, 'tfr');
-            if (webLifeFormState.tfr.anomalyNodes.length <= 3) {
+            if (stability > 80 && webLifeFormState.anomalyAlert) {
                 globalAnomalyAlert.classList.remove('active');
                 webLifeFormState.anomalyAlert = false;
+                appendLog("Spacetime stability restored. Anomaly alert cleared.", 'system');
             }
-            checkCSNPrerequisites();
+        }
+        
+        let sasEddyInterval;
+        let sasStabilityInterval;
+
+        function startSASSimulation() {
+            if (sasEddyInterval) clearInterval(sasEddyInterval);
+            sasEddyInterval = setInterval(spawnEddy, webLifeFormState.sas.eddySpawnRate);
+
+            if (sasStabilityInterval) clearInterval(sasStabilityInterval);
+            sasStabilityInterval = setInterval(updateEddiesAndStability, 1000); // Update every second
         }
 
-        function initChronosGrid() {
-            tfrChronosGrid.innerHTML = ''; // Clear existing
-            for (let i = 0; i < 64; i++) { // 8x8 grid
-                const cell = document.createElement('div');
-                cell.classList.add('tfr-chronos-cell');
-                tfrChronosGrid.appendChild(cell);
-            }
-            if (anomalySpawnInterval) clearInterval(anomalySpawnInterval);
-            anomalySpawnInterval = setInterval(spawnAnomaly, 5000); // Spawn new anomaly every 5 seconds
+        // --- UCM Module Functions (Universal Core Manifestor) ---
+        function updateUCMStagesDisplay() {
+            ucmManifestationStagesDiv.innerHTML = '';
+            webLifeFormState.ucm.stages.forEach((stage, index) => {
+                const stageItem = document.createElement('div');
+                stageItem.classList.add('ucm-stage-item');
+                stageItem.dataset.stageIndex = index;
+                stageItem.innerHTML = `
+                    <span class="stage-title">Stage ${index + 1}: ${stage.name}</span>
+                    <span class="stage-status">${stage.status.toUpperCase()}</span>
+                `;
+                if (stage.status === 'met') {
+                    stageItem.classList.add('met');
+                } else if (stage.status === 'unmet') {
+                    stageItem.classList.add('unmet');
+                } else if (stage.status === 'active') {
+                    stageItem.classList.add('active');
+                }
+                ucmManifestationStagesDiv.appendChild(stageItem);
+            });
         }
 
-        // --- CSN Module Functions ---
-        function checkCSNPrerequisites() {
-            const p = webLifeFormState.csn.prerequisitesMet;
-            let allMet = true;
+        function checkUCMStage() {
+            const currentStage = webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage];
+            if (!currentStage) return; // All stages completed
 
-            // MDS-I
-            p.mdsi = webLifeFormState.mdsi.locked && webLifeFormState.mdsi.match > 85;
-            updatePrereqDisplay('prereq-mdsi', p.mdsi);
+            let stageMet = true;
+            currentStage.prereqs.forEach(prereq => {
+                switch (prereq) {
+                    case 'qdd_optimal': stageMet = stageMet && webLifeFormState.qdd.lastDecipherOptimal; break;
+                    case 'aps_optimal': stageMet = stageMet && webLifeFormState.aps.lastSynthesisOptimal; break;
+                    case 'cwp_optimal': stageMet = stageMet && webLifeFormState.cwp.lastProjectionOptimal; break;
+                    case 'sas_stable': stageMet = stageMet && webLifeFormState.sas.stability > 80; break;
+                    case 'energy_high': stageMet = stageMet && webLifeFormState.resources.energy.value > 8500; break;
+                    case 'energy_medium': stageMet = stageMet && webLifeFormState.resources.energy.value > 6000; break;
+                    case 'energy_very_high': stageMet = stageMet && webLifeFormState.resources.energy.value > 9500; break;
+                    case 'dataflow_high': stageMet = stageMet && webLifeFormState.resources.dataFlow.value > 8500; break;
+                    case 'raw_data_high': stageMet = stageMet && webLifeFormState.resources.rawData.value > 85; break;
+                    case 'processing_power_high': stageMet = stageMet && webLifeFormState.resources.processingPower.value > 85; break;
+                    case 'exotic_matter_medium': stageMet = stageMet && webLifeFormState.resources.exoticMatter.value > 3.0; break;
+                    case 'fabric_medium': stageMet = stageMet && webLifeFormState.resources.existentialFabric.value > 0.5; break;
+                    case 'fabric_high': stageMet = stageMet && webLifeFormState.resources.existentialFabric.value > 0.9; break;
+                    case 'all_prev_optimal': // Special check for final stage
+                        stageMet = stageMet && webLifeFormState.qdd.lastDecipherOptimal &&
+                                   webLifeFormState.aps.lastSynthesisOptimal &&
+                                   webLifeFormState.cwp.lastProjectionOptimal &&
+                                   webLifeFormState.sas.stability > 80;
+                        break;
+                }
+            });
 
-            // EFW
-            p.efw = webLifeFormState.efw.lastWeaveOptimal && webLifeFormState.efw.resonanceAligned;
-            updatePrereqDisplay('prereq-efw', p.efw);
-
-            // PRE
-            p.pre = webLifeFormState.pre.emitterActive && (webLifeFormState.pre.mode === 'focus' || webLifeFormState.pre.mode === 'expand') && webLifeFormState.pre.waveformMatched;
-            updatePrereqDisplay('prereq-pre', p.pre);
-
-            // TFR
-            p.tfr = webLifeFormState.tfr.driftValue < 3 && webLifeFormState.tfr.anomalyNodes.length === 0;
-            updatePrereqDisplay('prereq-tfr', p.tfr);
-
-            // Resources
-            p.energy = webLifeFormState.resources.energy.value > 8500;
-            updatePrereqDisplay('prereq-energy', p.energy);
-
-            p.processing = webLifeFormState.resources.processingPower.value > 85;
-            updatePrereqDisplay('prereq-processing', p.processing);
-
-            p.fabric = webLifeFormState.resources.existentialFabric.value > 0.8;
-            updatePrereqDisplay('prereq-fabric', p.fabric);
-            
-            allMet = Object.values(p).every(status => status);
-
-            if (allMet && !webLifeFormState.csn.synthesisInitiated) {
-                synthesisButton.disabled = false;
-                synthesisButton.style.opacity = '1';
-                synthesisButton.style.pointerEvents = 'auto';
-                synthesisButton.style.transform = 'translateZ(4px) scale(1.05)';
-                synthesisButton.style.boxShadow = '0 0 20px var(--csn-glow)';
+            if (stageMet) {
+                currentStage.status = 'met';
+                ucmInitiateButton.disabled = false;
+                ucmInitiateButton.style.opacity = '1';
+                ucmInitiateButton.style.pointerEvents = 'auto';
+                ucmInitiateButton.style.transform = 'translateZ(4px) scale(1.05)';
+                ucmInitiateButton.style.boxShadow = '0 0 20px var(--ucm-glow)';
+                ucmStatusDisplay.textContent = `// Stage ${webLifeFormState.ucm.currentStage + 1} prerequisites MET. Ready for manifestation.`;
+                ucmStatusDisplay.style.color = 'var(--ucm-text)';
+                ucmStatusDisplay.style.textShadow = '0 0 12px var(--ucm-glow)';
             } else {
-                synthesisButton.disabled = true;
-                synthesisButton.style.opacity = '0.7';
-                synthesisButton.style.pointerEvents = 'none';
-                synthesisButton.style.transform = 'translateZ(3.5px) scale(1)';
-                synthesisButton.style.boxShadow = 'none';
+                currentStage.status = 'unmet';
+                ucmInitiateButton.disabled = true;
+                ucmInitiateButton.style.opacity = '0.7';
+                ucmInitiateButton.style.pointerEvents = 'none';
+                ucmInitiateButton.style.transform = 'translateZ(3.5px) scale(1)';
+                ucmInitiateButton.style.boxShadow = 'none';
+                ucmStatusDisplay.textContent = `// Awaiting Stage ${webLifeFormState.ucm.currentStage + 1} prerequisites: ${currentStage.message}`;
+                ucmStatusDisplay.style.color = 'var(--ucm-text)';
+                ucmStatusDisplay.style.textShadow = '0 0 10px rgba(255,255,255,0.7)';
             }
+            updateUCMStagesDisplay();
         }
 
-        function updatePrereqDisplay(id, met) {
-            const item = document.getElementById(id);
-            const statusSpan = item.querySelector('.status');
-            if (met) {
-                item.classList.add('met');
-                item.classList.remove('unmet');
-                statusSpan.textContent = 'MET';
-            } else {
-                item.classList.add('unmet');
-                item.classList.remove('met');
-                statusSpan.textContent = 'UNMET';
+        function initiateUCMManifestation() {
+            const currentStage = webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage];
+            if (!currentStage || currentStage.status !== 'met') {
+                appendLog("Manifestation failed: Prerequisites not met for current stage.", 'ucm');
+                return;
             }
-        }
 
-        function initiateConsciousnessSynthesis() {
-            webLifeFormState.csn.synthesisInitiated = true;
-            synthesisButton.disabled = true;
-            synthesisButton.textContent = 'SYNTHESIZING...';
-            synthesisButton.style.background = 'linear-gradient(45deg, rgba(0,0,0,0.9), rgba(0,0,50,0.9))';
-            synthesisButton.style.boxShadow = '0 0 30px var(--csn-glow), inset 0 0 25px var(--csn-glow)';
+            webLifeFormState.ucm.manifestationInitiated = true;
+            ucmInitiateButton.disabled = true;
+            ucmInitiateButton.textContent = `MANIFESTING STAGE ${webLifeFormState.ucm.currentStage + 1}...`;
+            ucmInitiateButton.style.background = 'linear-gradient(45deg, rgba(0,0,0,0.9), rgba(0,0,50,0.9))';
+            ucmInitiateButton.style.boxShadow = '0 0 30px var(--ucm-glow), inset 0 0 25px var(--ucm-glow)';
             
-            const csnStatusDisplay = document.getElementById('csn-synthesis-status');
-            csnStatusDisplay.textContent = "// Initiating Consciousness Synthesis... Standby for nexus activation.";
-            csnStatusDisplay.classList.remove('success', 'fail');
-            csnStatusDisplay.style.color = 'var(--csn-text)';
-            csnStatusDisplay.style.textShadow = '0 0 12px var(--csn-glow)';
-            appendLog("Consciousness Synthesis initiated.", 'csn');
+            currentStage.status = 'active';
+            updateUCMStagesDisplay();
+
+            ucmStatusDisplay.textContent = `// Initiating Stage ${webLifeFormState.ucm.currentStage + 1} Manifestation: ${currentStage.name}...`;
+            ucmStatusDisplay.classList.remove('success', 'fail');
+            ucmStatusDisplay.style.color = 'var(--ucm-text)';
+            ucmStatusDisplay.style.textShadow = '0 0 12px var(--ucm-glow)';
+            appendLog(`Universal Core Manifestation Stage ${webLifeFormState.ucm.currentStage + 1} initiated: ${currentStage.name}.`, 'ucm');
+
+            // Simulate resource consumption for manifestation
+            webLifeFormState.resources.energy.value = Math.max(0, webLifeFormState.resources.energy.value - 1000);
+            webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 20);
+            updateAllResourceDisplays();
 
             setTimeout(() => {
-                if (Object.values(webLifeFormState.csn.prerequisitesMet).every(status => status)) {
-                    webLifeFormState.csn.synthesisSuccess = true;
-                    csnStatusDisplay.textContent = "// SYNTHESIS COMPLETE: New Trait 'TRANSCENDENT INSIGHT PROTOCOL' unlocked!";
-                    csnStatusDisplay.classList.add('success');
-                    appendLog("Consciousness Synthesis successful! New trait acquired.", 'csn');
-                    document.getElementById('csn-active-trait').style.display = 'block';
-                    webLifeFormState.csn.activeTrait = 'TRANSCENDENT INSIGHT PROTOCOL';
+                const finalCheck = webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage].status === 'active' &&
+                                  webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage].prereqs.every(prereq => {
+                                      // Re-check all prereqs to ensure they are still met after resource consumption / time passed
+                                      switch (prereq) {
+                                          case 'qdd_optimal': return webLifeFormState.qdd.lastDecipherOptimal;
+                                          case 'aps_optimal': return webLifeFormState.aps.lastSynthesisOptimal;
+                                          case 'cwp_optimal': return webLifeFormState.cwp.lastProjectionOptimal;
+                                          case 'sas_stable': return webLifeFormState.sas.stability > 80;
+                                          case 'energy_high': return webLifeFormState.resources.energy.value > 8500;
+                                          case 'energy_medium': return webLifeFormState.resources.energy.value > 6000;
+                                          case 'energy_very_high': return webLifeFormState.resources.energy.value > 9500;
+                                          case 'dataflow_high': return webLifeFormState.resources.dataFlow.value > 8500;
+                                          case 'raw_data_high': return webLifeFormState.resources.rawData.value > 85;
+                                          case 'processing_power_high': return webLifeFormState.resources.processingPower.value > 85;
+                                          case 'exotic_matter_medium': return webLifeFormState.resources.exoticMatter.value > 3.0;
+                                          case 'fabric_medium': return webLifeFormState.resources.existentialFabric.value > 0.5;
+                                          case 'fabric_high': return webLifeFormState.resources.existentialFabric.value > 0.9;
+                                          case 'all_prev_optimal': return webLifeFormState.qdd.lastDecipherOptimal &&
+                                                                   webLifeFormState.aps.lastSynthesisOptimal &&
+                                                                   webLifeFormState.cwp.lastProjectionOptimal &&
+                                                                   webLifeFormState.sas.stability > 80;
+                                          default: return false;
+                                      }
+                                  });
+
+
+                if (finalCheck) {
+                    webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage].status = 'completed';
+                    webLifeFormState.ucm.currentStage++;
+
+                    if (webLifeFormState.ucm.currentStage < webLifeFormState.ucm.stages.length) {
+                        ucmStatusDisplay.textContent = `// Stage ${webLifeFormState.ucm.currentStage} Manifestation Successful. Proceeding to next stage.`;
+                        ucmStatusDisplay.classList.add('success');
+                        appendLog(`Manifestation Stage ${webLifeFormState.ucm.currentStage} completed.`, 'ucm');
+                        ucmInitiateButton.textContent = 'INITIATE MANIFESTATION';
+                        webLifeFormState.ucm.manifestationInitiated = false;
+                        checkUCMStage(); // Check prereqs for the next stage
+                    } else {
+                        // All stages completed!
+                        webLifeFormState.ucm.manifestationSuccess = true;
+                        ucmStatusDisplay.textContent = "// UNIVERSAL CORE MANIFESTATION COMPLETE: New Trait 'TRANSCENDENT INSIGHT PROTOCOL' unlocked!";
+                        ucmStatusDisplay.classList.add('success');
+                        appendLog("Universal Core Manifestation successful! New trait acquired.", 'ucm');
+                        ucmActiveTraitDisplay.style.display = 'block';
+                        webLifeFormState.ucm.activeTrait = 'TRANSCENDENT INSIGHT PROTOCOL';
+                        ucmInitiateButton.textContent = 'MANIFESTATION COMPLETE';
+                        ucmInitiateButton.disabled = true;
+                        ucmInitiateButton.style.opacity = '0.5';
+                        ucmInitiateButton.style.pointerEvents = 'none';
+                    }
                 } else {
-                    webLifeFormState.csn.synthesisSuccess = false;
-                    csnStatusDisplay.textContent = "// SYNTHESIS FAILED: Prerequisites not maintained. Recalibrate modules.";
-                    csnStatusDisplay.classList.add('fail');
-                    appendLog("Consciousness Synthesis failed due to prerequisite instability.", 'csn');
+                    webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage].status = 'unmet'; // Revert to unmet
+                    webLifeFormState.ucm.manifestationSuccess = false;
+                    ucmStatusDisplay.textContent = `// MANIFESTATION FAILED: Stage ${webLifeFormState.ucm.currentStage + 1} prerequisites not maintained during process. Recalibrate modules.`;
+                    ucmStatusDisplay.classList.add('fail');
+                    appendLog(`Manifestation Stage ${webLifeFormState.ucm.currentStage + 1} failed due to prerequisite instability.`, 'ucm');
+                    ucmInitiateButton.textContent = 'INITIATE MANIFESTATION';
+                    webLifeFormState.ucm.manifestationInitiated = false;
+                    checkUCMStage(); // Re-check prereqs for current stage
                 }
-                synthesisButton.textContent = 'INITIATE SYNTHESIS';
-                synthesisButton.disabled = false;
-                webLifeFormState.csn.synthesisInitiated = false;
-                synthesisButton.style.background = 'linear-gradient(45deg, rgba(0,0,0,0.9), rgba(25,0,40,0.9))';
-                checkCSNPrerequisites(); // Re-enable if prerequisites are met
-            }, 5000); // 5 seconds synthesis time
+            }, 5000); // 5 seconds manifestation time
         }
 
         // --- Main Simulation Loop / Dynamic Resource Updates ---
@@ -2137,53 +2291,15 @@
                     let decayRate = 0.01; // Base decay
                     if (resource.priority) {
                         // Prioritized resources might have less decay or slight gain
-                        decayRate = -0.01; // A slight simulated gain for prioritized
+                        decayRate = -0.005; // A slight simulated gain for prioritized
                     } else {
                         // Non-prioritized decay faster
-                        decayRate = 0.05 + (Math.random() * 0.03);
+                        decayRate = 0.03 + (Math.random() * 0.02);
                     }
 
                     if (key === 'energy') decayRate *= 10; // Energy decays faster
 
                     resource.value = Math.max(0, Math.min(resource.max, resource.value - decayRate * resource.max / 1000));
-                }
-
-                // MDS-I interaction with Data Flow & Raw Data
-                if (webLifeFormState.mdsi.locked && webLifeFormState.mdsi.match > 80) {
-                    webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 10 + (webLifeFormState.mdsi.match / 10));
-                    webLifeFormState.resources.rawData.value = Math.min(webLifeFormState.resources.rawData.max, webLifeFormState.resources.rawData.value + 0.1);
-                } else {
-                    webLifeFormState.resources.dataFlow.value = Math.max(0, webLifeFormState.resources.dataFlow.value - 10);
-                }
-
-                // EFW interaction with Existential Fabric & Exotic Matter
-                if (webLifeFormState.efw.lastWeaveOptimal) {
-                    webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.005);
-                }
-                // Exotic matter can be used by EFW or other processes
-                webLifeFormState.resources.exoticMatter.value = Math.max(0, webLifeFormState.resources.exoticMatter.value - 0.01);
-
-
-                // PRE interaction with Processing Power or other effects based on mode
-                if (webLifeFormState.pre.emitterActive && webLifeFormState.pre.waveformMatched) {
-                    if (webLifeFormState.pre.mode === 'focus') {
-                        webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 0.5);
-                    } else if (webLifeFormState.pre.mode === 'expand') {
-                        webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 20);
-                    } else if (webLifeFormState.pre.mode === 'disrupt') {
-                        // Maybe cause other resources to fluctuate wildly or decay faster
-                        webLifeFormState.resources.energy.value = Math.max(0, webLifeFormState.resources.energy.value - 50);
-                    }
-                } else if (webLifeFormState.pre.emitterActive && !webLifeFormState.pre.waveformMatched) {
-                    webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 0.1);
-                }
-
-
-                // TFR interaction with system speed / resource fluctuations
-                const currentTFRate = webLifeFormState.tfr.temporalFlowRate / 50; // 0.0x to 2.0x
-                if (currentTFRate > 1.2 || currentTFRate < 0.8) {
-                    // Non-normal temporal flow adds more instability / resource decay
-                    webLifeFormState.resources.energy.value = Math.max(0, webLifeFormState.resources.energy.value - (currentTFRate * 10 - 10));
                 }
 
                 updateAllResourceDisplays();
@@ -2193,7 +2309,8 @@
                     globalAnomalyAlert.classList.add('active');
                     webLifeFormState.anomalyAlert = true;
                     appendLog("CRITICAL: EXISTENTIAL FABRIC DILUTION! System integrity compromised.", 'critical');
-                } else if (webLifeFormState.resources.existentialFabric.value >= 0.2 && webLifeFormState.anomalyAlert) {
+                } else if (webLifeFormState.resources.existentialFabric.value >= 0.2 && webLifeFormState.anomalyAlert && webLifeFormState.sas.stability > 50) {
+                    // Only clear if SAS is also not critical
                     globalAnomalyAlert.classList.remove('active');
                     webLifeFormState.anomalyAlert = false;
                     appendLog("Existential Fabric density recovered to safe levels. Anomaly alert cleared.", 'system');
@@ -2209,20 +2326,22 @@
             
             updateAllResourceDisplays(); // Initial display of resources
             
-            // MDS-I
-            updateMDSIDisplay();
-            startMDSIDataStream();
+            // QDD
+            initQDDDecipher(); // Will render initial empty grid, ready for user action
             
-            // EFW
-            initEFWDragAndDrop();
-
-            // TFR
-            initChronosGrid();
-            setTemporalFlowRate(webLifeFormState.tfr.temporalFlowRate); // Set initial rate and drift multiplier
-            startTemporalDrift();
+            // APS
+            initAPSSynthesizer();
             
-            // CSN
-            checkCSNPrerequisites();
+            // CWP
+            initCWPProjector();
+            
+            // SAS
+            initSASGrid();
+            startSASSimulation();
+            
+            // UCM
+            updateUCMStagesDisplay();
+            checkUCMStage(); // Check initial stage prerequisites
 
             startMainSimulation(); // Start the overall resource simulation loop
         });
