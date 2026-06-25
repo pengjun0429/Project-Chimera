@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v69.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v70.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v69.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v70.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
@@ -67,7 +67,7 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 69.0 NEW: Quantum Data Decipherer (QDD) */
+            /* Gen 70.0 NEW: Quantum Data Decipherer (QDD) */
             --qdd-bg: rgba(0, 10, 15, 0.92); /* Deep blue-green */
             --qdd-border: rgba(0, 200, 255, 0.85); /* Bright aqua-blue */
             --qdd-text: #E0F8FF; /* Pale cyan */
@@ -77,7 +77,7 @@
             --qdd-cell-correct: rgba(0, 255, 100, 0.6);
             --qdd-cell-incorrect: rgba(255, 50, 50, 0.6);
 
-            /* Gen 69.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            /* Gen 70.0 NEW: Aetheric Pattern Synthesizer (APS) */
             --aps-bg: rgba(15, 0, 10, 0.92); /* Deep magenta-red */
             --aps-border: rgba(255, 0, 180, 0.85); /* Vibrant fuchsia */
             --aps-text: #FFE0F8; /* Pale pink */
@@ -86,7 +86,7 @@
             --aps-line-color: rgba(255, 0, 255, 0.7);
             --aps-pattern-bg: rgba(0, 0, 0, 0.99);
 
-            /* Gen 69.0 NEW: Conscious Waveform Projector (CWP) */
+            /* Gen 70.0 NEW: Conscious Waveform Projector (CWP) */
             --cwp-bg: rgba(0, 15, 0, 0.92); /* Deep forest green */
             --cwp-border: rgba(100, 255, 0, 0.85); /* Bright lime green */
             --cwp-text: #E0FFD0; /* Pale lime */
@@ -98,7 +98,7 @@
             --cwp-match-good: #00FF00;
             --cwp-match-bad: #FF0000;
 
-            /* Gen 69.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            /* Gen 70.0 NEW: Spacetime Anchor Stabilizer (SAS) */
             --sas-bg: rgba(10, 5, 0, 0.92); /* Deep burnt orange */
             --sas-border: rgba(255, 120, 0, 0.85); /* Bright orange */
             --sas-text: #FFF5E0; /* Pale orange */
@@ -109,7 +109,7 @@
             --sas-eddy-end: rgba(255, 100, 0, 0.6);
             --sas-eddy-critical: rgba(255, 0, 0, 0.9);
 
-            /* Gen 69.0 NEW: Universal Core Manifestor (UCM) */
+            /* Gen 70.0 NEW: Universal Core Manifestor (UCM) */
             --ucm-bg: rgba(0, 0, 20, 0.92); /* Deep space blue */
             --ucm-border: rgba(150, 0, 255, 0.85); /* Deep vibrant violet */
             --ucm-text: #E0FFFF; /* Brightest cyan-white */
@@ -121,7 +121,7 @@
             --ucm-trait-bg: rgba(0, 20, 40, 0.92);
             --ucm-trait-border: rgba(100, 200, 255, 0.95);
 
-            /* Gen 69.0 - Enhanced UI elements */
+            /* Gen 70.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -351,6 +351,11 @@
             background: var(--overseer-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
+        .resource-overseer-console {
+            background: var(--overseer-bg);
+            border-color: var(--overseer-border);
+            box-shadow: inset 0 0 18px var(--overseer-text), 0 0 25px var(--overseer-text);
+        }
         .quantum-data-decipherer {
             background: var(--qdd-bg);
             border-color: var(--qdd-border);
@@ -410,6 +415,11 @@
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
+        .resource-overseer-console::before {
+            color: var(--overseer-text);
+            border-color: var(--overseer-border);
+            box-shadow: 0 0 15px var(--overseer-border);
+        }
         .quantum-data-decipherer::before {
             color: var(--qdd-text);
             border-color: var(--qdd-text);
@@ -640,6 +650,11 @@
             font-family: 'Orbitron', sans-serif;
             text-shadow: 0 0 10px rgba(255, 0, 255, 0.1);
         }
+        .aps-waveform-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
 
         /* CWP Specific */
         .cwp-waveform-display {
@@ -654,11 +669,6 @@
             box-shadow: inset 0 0 18px rgba(100, 255, 0, 0.7);
             transform: translateZ(2.5px);
         }
-        .cwp-waveform-canvas {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-        }
         .cwp-waveform-controls {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -667,6 +677,31 @@
         }
         .cwp-waveform-controls .param-group {
             margin-bottom: 0;
+        }
+        .cwp-waveform-controls input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 0.6rem;
+            border-radius: 0.3rem;
+            outline: none;
+            transition: all 0.2s ease;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.7);
+            border: 1px solid var(--cwp-border);
+        }
+        .cwp-waveform-controls input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            cursor: grab;
+            transition: all 0.2s ease;
+            transform: scale(1.0);
+            border: 3px solid var(--cwp-text);
+        }
+        .cwp-waveform-controls input[type="range"]:hover::-webkit-slider-thumb {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--cwp-glow);
         }
         .cwp-match-status {
             font-family: 'Share Tech Mono', monospace;
@@ -1182,13 +1217,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>WEB LIFE FORM v69.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 7.3 Evolved.</p>
+        <h1>WEB LIFE FORM v70.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Multiversal Transcendence Protocol 7.4 Evolved.</p>
 
         <!-- Core Control Modules -->
         <section class="control-module">
             <!-- Core Systems Overseer Console -->
-            <div class="module-base" data-label="CORE SYSTEMS OVERSEER CONSOLE">
+            <div class="module-base resource-overseer-console" data-label="CORE SYSTEMS OVERSEER CONSOLE">
                 <p>Monitor and dynamically reconfigure primary resource distribution. Click on a resource panel to prioritize its flow or allocation for critical operations.</p>
                 <div class="resource-display-section">
                     <div class="energy-reserve-display" id="energy-display" data-label="ENERGY RESERVE" onclick="prioritizeResource('energy')">
@@ -1298,7 +1333,7 @@
 
         <!-- Global Status Log -->
         <div class="status-log-display" id="status-log-display">
-            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v69.0. Cosmic Consciousness Architect online.</span></div>
+            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v70.0. Cosmic Consciousness Architect online.</span></div>
             <div class="status-entry"><span class="status-info">[SYSTEM]</span> Core modules initializing...</div>
             <div class="status-entry"><span class="status-event">[ALERT]</span> <span class="status-glitch">Resource fluctuations detected. Stability critical.</span></div>
             <div class="status-entry"><span class="status-info">[QDD]</span> Decipherer awaiting initiation.</div>
@@ -1312,14 +1347,14 @@
             <p>CRITICAL ANOMALY DETECTED: EXISTENTIAL FABRIC DILUTION! IMMEDIATE ATTENTION REQUIRED!</p>
         </div>
 
-        <p class="version-display">Evolutionary Cycle 3.1 // Generation v69.0</p>
+        <p class="version-display">Evolutionary Cycle 3.2 // Generation v70.0</p>
     </div>
 
     <script>
         // Global State
         const webLifeFormState = {
-            version: 'v69.0',
-            evolutionPhase: '7.3 Evolved',
+            version: 'v70.0',
+            evolutionPhase: '7.4 Evolved',
             resources: {
                 energy: { value: 7500, max: 10000, unit: 'GJ', priority: false, textVar: '--energy-text', lowColor: '--energy-color-low', mediumColor: '--energy-color-medium', highColor: '--energy-color-high' },
                 dataFlow: { value: 8000, max: 10000, unit: 'TB/s', priority: false, textVar: '--data-flow-text', lowColor: '--data-flow-color-low', mediumColor: '--data-flow-color-medium', highColor: '--data-flow-color-high' },
@@ -1498,9 +1533,8 @@
                 webLifeFormState.qdd.correctSequence.push({ index: cellIndex, symbol: keyParts[i] });
             }
             
-            // Sort correctSequence by symbol to ensure order for display, or by index if click order matters.
-            // For this interaction, let's assume click order matters as revealed.
-            // So we just need the cells that *contain* the correct key parts.
+            // Sort correctSequence by index to ensure click order matters
+            webLifeFormState.qdd.correctSequence.sort((a, b) => a.index - b.index);
         }
 
         function renderQDDGrid() {
@@ -1532,18 +1566,18 @@
                 return; // Already processed
             }
 
-            const correctKeyPart = webLifeFormState.qdd.correctSequence.find(item => item.index === index);
+            const expectedKeyPart = webLifeFormState.qdd.correctSequence[webLifeFormState.qdd.currentAttempt.length];
 
-            if (correctKeyPart) {
+            if (expectedKeyPart && expectedKeyPart.index === index) {
                 cellElement.classList.add('correct');
-                cellElement.textContent = correctKeyPart.symbol;
-                webLifeFormState.qdd.currentAttempt.push(correctKeyPart);
-                appendLog(`Fragment '${correctKeyPart.symbol}' located.`, 'qdd');
+                cellElement.textContent = expectedKeyPart.symbol;
+                webLifeFormState.qdd.currentAttempt.push(expectedKeyPart);
+                appendLog(`Fragment '${expectedKeyPart.symbol}' located.`, 'qdd');
 
-                // Check if all parts are found and in the right order (based on definition)
+                // Check if all parts are found and in the right order
                 if (webLifeFormState.qdd.currentAttempt.length === webLifeFormState.qdd.correctSequence.length) {
                     const foundKey = webLifeFormState.qdd.currentAttempt.map(item => item.symbol).join('');
-                    if (foundKey === webLifeFormState.qdd.targetKey) { // Simple order matching
+                    if (foundKey === webLifeFormState.qdd.targetKey) {
                         qddTargetKeyDisplay.textContent = webLifeFormState.qdd.targetKey;
                         qddTargetKeyDisplay.style.color = 'var(--stability-good)';
                         qddTargetKeyDisplay.style.textShadow = '0 0 10px var(--stability-good)';
@@ -1563,13 +1597,13 @@
                 }
             } else {
                 cellElement.classList.add('incorrect');
-                qddOverlayMessage.innerHTML = `Decipher failed: Incorrect fragment.`;
+                qddOverlayMessage.innerHTML = `Decipher failed: Incorrect fragment or sequence.`;
                 webLifeFormState.qdd.lastDecipherOptimal = false;
-                appendLog(`Decipher failed: Incorrect fragment selected.`, 'qdd');
+                appendLog(`Decipher failed: Incorrect fragment or sequence selected.`, 'qdd');
                 document.getElementById('qdd-overlay').classList.add('active');
                 webLifeFormState.qdd.isActive = false;
             }
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to update resources and check UCM stage
         }
 
         function resetQDDDecipher() {
@@ -1580,7 +1614,7 @@
             qddTargetKeyDisplay.style.textShadow = '0 0 10px var(--qdd-glow)';
             webLifeFormState.qdd.isActive = false;
             webLifeFormState.qdd.lastDecipherOptimal = false;
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         // --- APS Module Functions (Aetheric Pattern Synthesizer) ---
@@ -1747,25 +1781,24 @@
             const numLines = webLifeFormState.aps.lines.length;
 
             if (numNodes === 3 && numLines === 3) {
-                // Check if it's a closed triangle
-                // This is a simplistic check; a proper check would verify connectivity.
+                // Check if it's a closed triangle (each node connected to 2 others)
                 const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
                     const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
-                    return connections === 2; // Each node in a triangle has 2 connections
+                    return connections === 2;
                 });
                 if (allNodesConnected) return 'triangle';
             } else if (numNodes === 4 && numLines === 4) {
+                 // Check for a square (each node connected to 2 others, simplistic)
                  const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
                     const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
                     return connections === 2; 
                 });
-                if (allNodesConnected) return 'square'; // Simplistic, could also be a line with 4 nodes. More complex geometry needed for robust check.
+                if (allNodesConnected) return 'square';
             } else if (numNodes === 5 && numLines === 5) {
-                // A star pattern typically has 5 nodes and 5 lines forming a pentagon, with 5 crossing lines if it's a full star.
-                // This simplistic check just looks for 5 lines and 5 nodes.
+                // Check for a star (each node connected to 2 others, forming a pentagon, very simplistic check)
                  const allNodesConnected = webLifeFormState.aps.nodes.every(node => {
                     const connections = webLifeFormState.aps.lines.filter(l => l.fromId === node.id || l.toId === node.id).length;
-                    return connections >= 2; // Each node in a star has at least 2 connections (for pentagon shape)
+                    return connections === 2;
                 });
                 if (allNodesConnected) return 'star';
             }
@@ -1798,7 +1831,7 @@
             webLifeFormState.aps.lines = [];
             setTargetPattern(getRandomPattern());
             drawAPS();
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         function initAPSSynthesizer() {
@@ -1842,10 +1875,17 @@
                 slider.style.background = 'var(--cwp-slider-track)';
                 slider.style.boxShadow = 'inset 0 0 12px rgba(0,0,0,0.95), 0 0 12px var(--cwp-glow)';
                 slider.style.borderColor = 'var(--cwp-border)';
-                slider.querySelector('::-webkit-slider-thumb').style.background = 'var(--cwp-slider-thumb)';
-                slider.querySelector('::-webkit-slider-thumb').style.boxShadow = '0 0 18px var(--cwp-glow)';
-                slider.querySelector('::-webkit-slider-thumb').style.borderColor = 'var(--cwp-text)';
-                slider.querySelector('::-webkit-slider-thumb').style.borderWidth = '6px';
+                // Accessing shadow DOM for thumb styling
+                const sheet = new CSSStyleSheet();
+                sheet.insertRule(`
+                    #${slider.id}::-webkit-slider-thumb {
+                        background: var(--cwp-slider-thumb);
+                        box-shadow: 0 0 18px var(--cwp-glow);
+                        border-color: var(--cwp-text);
+                        border-width: 3px;
+                    }
+                `);
+                document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
             });
         }
 
@@ -1897,7 +1937,7 @@
             document.getElementById(`cwp-slider-value-${index}`).textContent = value;
             drawCWPWaveforms();
             calculateWaveformMatch();
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         function calculateWaveformMatch() {
@@ -1940,7 +1980,7 @@
             webLifeFormState.cwp.targetWaveform = generateRandomWaveform(webLifeFormState.cwp.sliderCount);
             drawCWPWaveforms();
             calculateWaveformMatch();
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         function initCWPProjector() {
@@ -2012,6 +2052,16 @@
                     cell.appendChild(eddyNode);
                 }
             });
+            // Also render anchors
+            sasGridContainer.querySelectorAll('.sas-anchor-node').forEach(node => node.remove()); // Clear old anchors
+            webLifeFormState.sas.anchors.forEach(anchor => {
+                const cell = sasGridContainer.querySelector(`[data-index="${anchor.cellIndex}"]`);
+                if (cell) {
+                    const anchorNode = document.createElement('div');
+                    anchorNode.classList.add('sas-anchor-node');
+                    cell.appendChild(anchorNode);
+                }
+            });
         }
 
         function updateEddiesAndStability() {
@@ -2024,25 +2074,24 @@
                 totalEddyImpact += eddy.size;
             });
 
-            webLifeFormState.sas.stability = Math.max(0, 100 - (totalEddyImpact / webLifeFormState.sas.eddies.length || 0)); // Average impact
-            
-            // Anchors decay
+            // Anchors decay and apply effects
             webLifeFormState.sas.anchors.forEach(anchor => {
                 anchor.lifetime--;
+                const affectedEddy = webLifeFormState.sas.eddies.find(e => e.cellIndex === anchor.cellIndex);
+                if (affectedEddy) {
+                    affectedEddy.size = Math.max(0, affectedEddy.size - 2.5); // Anchor reduces eddy size more effectively
+                }
             });
             webLifeFormState.sas.anchors = webLifeFormState.sas.anchors.filter(anchor => anchor.lifetime > 0);
 
-            // Apply anchor effects (reduce eddy size in affected cell)
-            webLifeFormState.sas.anchors.forEach(anchor => {
-                const affectedEddy = webLifeFormState.sas.eddies.find(e => e.cellIndex === anchor.cellIndex);
-                if (affectedEddy) {
-                    affectedEddy.size = Math.max(0, affectedEddy.size - 2); // Anchor reduces eddy size
-                }
-            });
+            // Filter out eddies that are too small (stabilized)
+            webLifeFormState.sas.eddies = webLifeFormState.sas.eddies.filter(eddy => eddy.size > 5);
 
+            webLifeFormState.sas.stability = Math.max(0, 100 - (totalEddyImpact / webLifeFormState.sas.gridSize) * 2); // More aggressive stability calculation
+            
             renderEddies();
             updateSASDisplay();
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         function deployAnchor() {
@@ -2054,28 +2103,28 @@
                 return;
             }
 
-            // Find largest eddy and deploy anchor there
-            const largestEddy = webLifeFormState.sas.eddies.reduce((max, eddy) => (eddy.size > max.size ? eddy : max), { size: -1 });
+            // Find largest eddy (prioritize critical ones)
+            let targetEddy = webLifeFormState.sas.eddies.find(e => e.size > e.criticalThreshold);
+            if (!targetEddy) {
+                targetEddy = webLifeFormState.sas.eddies.reduce((max, eddy) => (eddy.size > max.size ? eddy : max), { size: -1 });
+            }
 
-            if (largestEddy && largestEddy.size > 0) {
-                const cell = sasGridContainer.querySelector(`[data-index="${largestEddy.cellIndex}"]`);
+            if (targetEddy && targetEddy.size > 0) {
+                const cell = sasGridContainer.querySelector(`[data-index="${targetEddy.cellIndex}"]`);
                 if (cell) {
-                    const anchorNode = document.createElement('div');
-                    anchorNode.classList.add('sas-anchor-node');
-                    cell.appendChild(anchorNode);
-                    webLifeFormState.sas.anchors.push({ id: Date.now(), cellIndex: largestEddy.cellIndex, lifetime: 5 }); // Anchor lasts 5 updates
+                    webLifeFormState.sas.anchors.push({ id: Date.now(), cellIndex: targetEddy.cellIndex, lifetime: 5 }); // Anchor lasts 5 updates
 
                     webLifeFormState.sas.lastAnchorTime = now;
                     btnDeployAnchors.disabled = true;
                     setTimeout(() => btnDeployAnchors.disabled = false, webLifeFormState.sas.anchorCooldown);
 
-                    appendLog(`Stabilization anchor deployed at cell ${largestEddy.cellIndex}.`, 'sas');
-                    setTimeout(() => anchorNode.remove(), 5000); // Remove anchor visual after lifetime
+                    appendLog(`Stabilization anchor deployed at cell ${targetEddy.cellIndex}.`, 'sas');
+                    renderEddies(); // Re-render to show new anchor
                 }
             } else {
                 appendLog(`No active eddies to stabilize.`, 'sas');
             }
-            checkUCMStage();
+            updateAllResourceDisplays(); // Call to check UCM stage
         }
 
         function updateSASDisplay() {
@@ -2131,15 +2180,25 @@
                     stageItem.classList.add('unmet');
                 } else if (stage.status === 'active') {
                     stageItem.classList.add('active');
+                } else if (stage.status === 'completed') {
+                    stageItem.classList.add('met'); // Completed stages are still 'met' state
                 }
                 ucmManifestationStagesDiv.appendChild(stageItem);
             });
         }
 
         function checkUCMStage() {
-            const currentStage = webLifeFormState.ucm.stages[webLifeFormState.ucm.currentStage];
-            if (!currentStage) return; // All stages completed
+            const currentStageIndex = webLifeFormState.ucm.currentStage;
+            if (currentStageIndex >= webLifeFormState.ucm.stages.length) {
+                // All stages completed
+                ucmInitiateButton.disabled = true;
+                ucmInitiateButton.style.opacity = '0.5';
+                ucmInitiateButton.style.pointerEvents = 'none';
+                return;
+            }
 
+            const currentStage = webLifeFormState.ucm.stages[currentStageIndex];
+            
             let stageMet = true;
             currentStage.prereqs.forEach(prereq => {
                 switch (prereq) {
@@ -2165,7 +2224,7 @@
                 }
             });
 
-            if (stageMet) {
+            if (stageMet && currentStage.status !== 'completed') {
                 currentStage.status = 'met';
                 ucmInitiateButton.disabled = false;
                 ucmInitiateButton.style.opacity = '1';
@@ -2175,7 +2234,7 @@
                 ucmStatusDisplay.textContent = `// Stage ${webLifeFormState.ucm.currentStage + 1} prerequisites MET. Ready for manifestation.`;
                 ucmStatusDisplay.style.color = 'var(--ucm-text)';
                 ucmStatusDisplay.style.textShadow = '0 0 12px var(--ucm-glow)';
-            } else {
+            } else if (!stageMet && currentStage.status !== 'completed') {
                 currentStage.status = 'unmet';
                 ucmInitiateButton.disabled = true;
                 ucmInitiateButton.style.opacity = '0.7';
