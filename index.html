@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v77.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v78.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v77.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v78.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.015); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
+            --frosted-bg: rgba(255, 255, 255, 0.008); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
             --text-color: #E8E8E8; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
-            --border-color: rgba(255, 255, 255, 0.98); /* More visible, shimmering border */
+            --border-color: rgba(255, 255, 255, 0.99); /* More visible, shimmering border */
             --console-bg: rgba(0, 0, 0, 0.999); /* Absolute black for console depth */
             --glitch-color: #FF33FF; /* Brighter Magenta for glitch */
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
@@ -26,15 +26,15 @@
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
             /* Core Systems Overseer (Main Console & Resource Display) */
-            --overseer-bg: rgba(0, 5, 10, 0.98); /* Deep ocean blue, almost black */
+            --overseer-bg: rgba(0, 5, 10, 0.99); /* Deep ocean blue, almost black */
             --overseer-text: #00FFFF; /* Pure Cyan for data, slightly muted */
-            --overseer-border: rgba(0, 200, 255, 0.98); /* Stronger, electric blue glow */
+            --overseer-border: rgba(0, 200, 255, 0.99); /* Stronger, electric blue glow */
 
             /* Resource Display */
-            --resource-panel-bg: rgba(5, 0, 10, 0.98); /* Darker, deeper purple-ish */
-            --resource-panel-border: rgba(160, 0, 255, 0.98); /* Stronger purple accent, slightly redder */
+            --resource-panel-bg: rgba(5, 0, 10, 0.99); /* Darker, deeper purple-ish */
+            --resource-panel-border: rgba(160, 0, 255, 0.99); /* Stronger purple accent, slightly redder */
             --resource-panel-text: #FFEBFF; /* Lighter purple */
-            --resource-bar-bg: rgba(0, 0, 0, 0.99); /* Near black background for resource bars */
+            --resource-bar-bg: rgba(0, 0, 0, 0.999); /* Near black background for resource bars */
 
             /* Resource Specific Colors */
             --energy-color-high: linear-gradient(90deg, #FFFFFF 0%, #FFFF00 100%); /* Ultra-bright yellow */
@@ -67,54 +67,54 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 77.0 NEW: Quantum Data Decipherer (QDD) */
-            --qdd-bg: rgba(0, 10, 15, 0.98); /* Deep blue-green */
-            --qdd-border: rgba(0, 220, 255, 0.99); /* Bright aqua-blue, stronger */
+            /* Gen 78.0 NEW: Quantum Data Decipherer (QDD) */
+            --qdd-bg: rgba(0, 10, 15, 0.99); /* Deep blue-green */
+            --qdd-border: rgba(0, 220, 255, 0.999); /* Bright aqua-blue, stronger */
             --qdd-text: #E0F8FF; /* Pale cyan */
-            --qdd-glow: rgba(0, 220, 255, 0.99); /* Stronger glow */
+            --qdd-glow: rgba(0, 220, 255, 0.999); /* Stronger glow */
             --qdd-cell-base: rgba(0, 30, 40, 0.9);
-            --qdd-cell-active: rgba(0, 200, 255, 0.65); /* More active visibility */
+            --qdd-cell-active: rgba(0, 200, 255, 0.75); /* More active visibility */
             --qdd-cell-correct: rgba(0, 255, 120, 0.9); /* Stronger correct indication */
             --qdd-cell-incorrect: rgba(255, 60, 60, 0.9); /* Stronger incorrect indication */
 
-            /* Gen 77.0 NEW: Aetheric Pattern Synthesizer (APS) */
-            --aps-bg: rgba(15, 0, 10, 0.98); /* Deep magenta-red */
-            --aps-border: rgba(255, 0, 200, 0.99); /* Vibrant fuchsia, stronger */
+            /* Gen 78.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            --aps-bg: rgba(15, 0, 10, 0.99); /* Deep magenta-red */
+            --aps-border: rgba(255, 0, 200, 0.999); /* Vibrant fuchsia, stronger */
             --aps-text: #FFE0F8; /* Pale pink */
-            --aps-glow: rgba(255, 0, 200, 0.99); /* Stronger glow */
+            --aps-glow: rgba(255, 0, 200, 0.999); /* Stronger glow */
             --aps-cell-bg: rgba(30, 0, 20, 0.9); /* Slightly darker cell bg */
             --aps-pattern-line: rgba(255, 170, 230, 0.99); /* Stronger line */
             --aps-pattern-glow: rgba(255, 170, 230, 0.95); /* Stronger glow */
-            --aps-target-overlay: rgba(255, 0, 255, 0.2); /* More visible target overlay */
+            --aps-target-overlay: rgba(255, 0, 255, 0.25); /* More visible target overlay */
 
-            /* Gen 77.0 NEW: Conscious Waveform Projector (CWP) */
-            --cwp-bg: rgba(0, 15, 0, 0.98); /* Deep forest green */
-            --cwp-border: rgba(120, 255, 0, 0.99); /* Bright lime green, stronger */
+            /* Gen 78.0 NEW: Conscious Waveform Projector (CWP) */
+            --cwp-bg: rgba(0, 15, 0, 0.99); /* Deep forest green */
+            --cwp-border: rgba(120, 255, 0, 0.999); /* Bright lime green, stronger */
             --cwp-text: #E0FFD0; /* Pale lime */
-            --cwp-glow: rgba(120, 255, 0, 0.99); /* Stronger glow */
+            --cwp-glow: rgba(120, 255, 0, 0.999); /* Stronger glow */
             --cwp-pulse-indicator: rgba(220, 255, 0, 0.95); /* Stronger indicator */
-            --cwp-pulse-zone: rgba(0, 255, 120, 0.8); /* Stronger zone visibility */
+            --cwp-pulse-zone: rgba(0, 255, 120, 0.9); /* Stronger zone visibility */
             --cwp-hit-good: #00FF00;
             --cwp-hit-perfect: #00FFFF;
             --cwp-hit-bad: #FF0000;
 
-            /* Gen 77.0 NEW: Spacetime Anchor Stabilizer (SAS) */
-            --sas-bg: rgba(10, 5, 0, 0.98); /* Deep burnt orange */
-            --sas-border: rgba(255, 140, 0, 0.99); /* Bright orange, stronger */
+            /* Gen 78.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            --sas-bg: rgba(10, 5, 0, 0.99); /* Deep burnt orange */
+            --sas-border: rgba(255, 140, 0, 0.999); /* Bright orange, stronger */
             --sas-text: #FFF5E0; /* Pale orange */
-            --sas-glow: rgba(255, 140, 0, 0.99); /* Stronger glow */
-            --sas-flux-bar-bg: rgba(40, 15, 0, 0.97); /* Slightly more opaque */
+            --sas-glow: rgba(255, 140, 0, 0.999); /* Stronger glow */
+            --sas-flux-bar-bg: rgba(40, 15, 0, 0.98); /* Slightly more opaque */
             --sas-flux-thumb: rgba(255, 180, 0, 1.0);
             --sas-indicator-good: #00FF00;
             --sas-indicator-warn: #FFFF00;
             --sas-indicator-crit: #FF0000;
 
-            /* Gen 77.0 NEW: Universal Core Manifestor (UCM) */
-            --ucm-bg: rgba(0, 0, 20, 0.98); /* Deep space blue */
-            --ucm-border: rgba(170, 0, 255, 0.99); /* Deep vibrant violet, stronger */
+            /* Gen 78.0 NEW: Universal Core Manifestor (UCM) */
+            --ucm-bg: rgba(0, 0, 20, 0.99); /* Deep space blue */
+            --ucm-border: rgba(170, 0, 255, 0.999); /* Deep vibrant violet, stronger */
             --ucm-text: #E0FFFF; /* Brightest cyan-white */
-            --ucm-glow: rgba(170, 0, 255, 0.99); /* Stronger glow */
-            --ucm-trait-bg: rgba(0, 20, 40, 0.98); /* More opaque */
+            --ucm-glow: rgba(170, 0, 255, 0.999); /* Stronger glow */
+            --ucm-trait-bg: rgba(0, 20, 40, 0.99); /* More opaque */
             --ucm-trait-border: rgba(120, 220, 255, 0.99);
             --ucm-trait-active: #00FF88;
             --ucm-trait-inactive: #808080;
@@ -125,17 +125,17 @@
             --ucm-budget-medium: #FFFF00;
             --ucm-budget-low: #FF0000;
 
-            /* Gen 77.0 - Enhanced UI elements */
+            /* Gen 78.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 16px rgba(255, 165, 0, 1.0); /* Stronger shadow */
+            --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 14px rgba(192, 160, 224, 0.9); /* Stronger shadow */
+            --info-text-shadow: 0 0 16px rgba(192, 160, 224, 0.9); /* Stronger shadow */
             --log-glitch-color: #FF00FF;
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
             /* Anomaly Alert (same, but more intense) */
             --anomaly-color: #FF0000; /* Pure Red for critical */
-            --anomaly-bg: rgba(255, 0, 0, 0.96); /* Even more semi-transparent Red */
+            --anomaly-bg: rgba(255, 0, 0, 0.98); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 1.0); /* Opaque Red */
         }
 
@@ -150,9 +150,9 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 1.3rem; /* Scaled up for readability */
-            line-height: 2.0; /* Increased line height */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.8" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} .pulsing-core {animation: pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.7s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}</style></defs><g transform="translate(12 12) scale(1.05) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 5h2v14h-2zm-6 6h14v2h-14z"/><circle cx="12" cy="12" r="4" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 32 32, auto;
+            font-size: 1.4rem; /* Scaled up for readability */
+            line-height: 2.1; /* Increased line height */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.2" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} .pulsing-core {animation: pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 3s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.7s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}</style></defs><g transform="translate(12 12) scale(1.08) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 5h2v14h-2zm-6 6h14v2h-14z"/><circle cx="12" cy="12" r="4" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 32 32, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
@@ -178,8 +178,8 @@
             background-size: 5000% 5000%; /* Larger background for smoother animation */
             animation: fluidBackground1 600s linear infinite alternate, rotateBackground 620s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(500px) opacity(0.98); /* Stronger blur, almost opaque */
-            transform: rotate(-350deg) scale(10.0); /* Larger scale, more rotation */
+            filter: blur(550px) opacity(0.99); /* Stronger blur, almost opaque */
+            transform: rotate(-350deg) scale(11.0); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -193,24 +193,24 @@
             height: 800vh;
             background: linear-gradient(
                 -310deg, /* Different angle */
-                rgba(0, 255, 255, 0.99) 0%, /* primary glow accent */
-                rgba(255, 0, 255, 0.98) 10%, /* secondary glow accent */
-                rgba(0, 255, 0, 0.98) 20%, /* tertiary glow accent */
+                rgba(0, 255, 255, 0.999) 0%, /* primary glow accent */
+                rgba(255, 0, 255, 0.998) 10%, /* secondary glow accent */
+                rgba(0, 255, 0, 0.998) 20%, /* tertiary glow accent */
                 var(--qdd-border) 30%, /* QDD accent */
                 var(--aps-border) 40%, /* APS accent */
                 var(--cwp-border) 50%, /* CWP accent */
                 var(--sas-border) 60%, /* SAS accent */
                 var(--ucm-border) 70%, /* UCM accent */
-                rgba(50, 255, 150, 0.99) 80%, /* Generic glow */
-                rgba(110, 90, 210, 0.99) 90%, /* Generic glow */
-                rgba(0, 255, 255, 0.99) 100%
+                rgba(50, 255, 150, 0.999) 80%, /* Generic glow */
+                rgba(110, 90, 210, 0.999) 90%, /* Generic glow */
+                rgba(0, 255, 255, 0.999) 100%
             );
             background-size: 4000% 4000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 240s ease-in-out infinite, rotateBackgroundReversed 280s linear infinite; /* Even longer animations */
+            animation: fluidBackground2 280s ease-in-out infinite, rotateBackgroundReversed 320s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(350px) opacity(0.97); /* Stronger blur, more opaque */
+            filter: blur(400px) opacity(0.98); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(300deg) scale(8.0); /* Larger scale, more rotation */
+            transform: rotate(300deg) scale(9.0); /* Larger scale, more rotation */
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -222,11 +222,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.55; /* More noticeable noise */
+            opacity: 0.65; /* More noticeable noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.8) contrast(11.0) brightness(8.0); /* Subtle color and contrast */
+            filter: grayscale(0.7) contrast(12.0) brightness(9.0); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -241,48 +241,48 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-350deg) scale(10.0); }
-            to { transform: rotate(350deg) scale(10.0); }
+            from { transform: rotate(-350deg) scale(11.0); }
+            to { transform: rotate(350deg) scale(11.0); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(300deg) scale(8.0); }
-            to { transform: rotate(-350deg) scale(8.0); }
+            from { transform: rotate(300deg) scale(9.0); }
+            to { transform: rotate(-350deg) scale(9.0); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1920px; /* Wider for more content */
-            padding: 7rem; /* More padding */
+            max-width: 2100px; /* Wider for more content */
+            padding: 8rem; /* More padding */
             background: var(--frosted-bg);
-            border: 28px solid var(--border-color); /* Thicker border */
-            border-radius: 5rem; /* Even more rounded */
-            backdrop-filter: blur(50px) saturate(550%) brightness(350%) contrast(4.0); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(50px) saturate(550%) brightness(350%) contrast(4.0);
+            border: 32px solid var(--border-color); /* Thicker border */
+            border-radius: 6rem; /* Even more rounded */
+            backdrop-filter: blur(60px) saturate(650%) brightness(450%) contrast(4.5); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(60px) saturate(650%) brightness(450%) contrast(4.5);
             box-shadow:
-                0 50px 150px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 120px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 80px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
-                inset 0 0 90px var(--primary-glow); /* Even more inner glow */
+                0 60px 180px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 140px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 90px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
+                inset 0 0 100px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 6rem; /* Increased gap between sections */
-            animation: fadeInScale 4.0s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 1.5s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 7rem; /* Increased gap between sections */
+            animation: fadeInScale 4.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 1.8s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -40px; /* More overflow */
-            border-radius: calc(5rem + 40px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qdd-border), var(--aps-border), var(--cwp-border), var(--sas-border), var(--ucm-border)); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 1000% 1000%; /* Larger background for smoother animation */
-            animation: borderGlow 300s linear infinite alternate; /* Slower animation */
-            filter: blur(48px); /* Stronger blur */
+            inset: -45px; /* More overflow */
+            border-radius: calc(6rem + 45px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qdd-border), var(--aps-border), var(--cwp-border), var(--sas-border), var(--ucm-border), #00FFFF); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 1200% 1200%; /* Larger background for smoother animation */
+            animation: borderGlow 360s linear infinite alternate; /* Slower animation */
+            filter: blur(52px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -294,32 +294,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.25) translateY(100px) perspective(1000px) rotateX(45deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(1000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.20) translateY(120px) perspective(1200px) rotateX(50deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(1200px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 6rem; /* Scaled up for impact */
+            font-size: 6.5rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 55px var(--primary-glow), 0 0 70px rgba(0, 255, 255, 0.99);
-            margin-bottom: 3.5rem;
-            letter-spacing: 0.4rem;
+            text-shadow: 0 0 60px var(--primary-glow), 0 0 80px rgba(0, 255, 255, 0.999);
+            margin-bottom: 4.0rem;
+            letter-spacing: 0.45rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(32px); /* Lift heading slightly in 3D space */
+            transform: translateZ(35px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -1.6rem;
+            bottom: -1.8rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 108%; /* Wider underline */
-            height: 0.6rem; /* Thicker underline */
+            width: 110%; /* Wider underline */
+            height: 0.7rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 30px var(--primary-glow);
+            box-shadow: 0 0 35px var(--primary-glow);
         }
 
         p {
@@ -327,15 +327,15 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.998;
-            font-size: 1.5rem; /* Larger paragraph text */
-            transform: translateZ(20px);
+            font-size: 1.6rem; /* Larger paragraph text */
+            transform: translateZ(22px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 6rem; /* Increased gap */
-            margin: 4rem 0;
+            gap: 7rem; /* Increased gap */
+            margin: 4.5rem 0;
             position: relative;
         }
 
@@ -343,14 +343,14 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 3.5rem;
             text-align: left;
-            padding: 4rem;
-            border-radius: 3rem;
-            border: 10px solid var(--overseer-border); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 35px rgba(0, 200, 255, 0.99), 0 0 50px rgba(0, 200, 255, 0.99); /* More inner shadow */
+            padding: 4.5rem;
+            border-radius: 3.5rem;
+            border: 12px solid var(--overseer-border); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 40px rgba(0, 200, 255, 0.99), 0 0 60px rgba(0, 200, 255, 0.99); /* More inner shadow */
             position: relative;
-            transform: translateZ(18px);
+            transform: translateZ(20px);
             overflow: hidden;
             background: var(--overseer-bg); /* Default background, will be overridden */
         }
@@ -358,32 +358,32 @@
         .resource-overseer-console {
             background: var(--overseer-bg);
             border-color: var(--overseer-border);
-            box-shadow: inset 0 0 35px var(--overseer-text), 0 0 50px var(--overseer-text);
+            box-shadow: inset 0 0 40px var(--overseer-text), 0 0 60px var(--overseer-text);
         }
         .quantum-data-decipherer {
             background: var(--qdd-bg);
             border-color: var(--qdd-border);
-            box-shadow: inset 0 0 35px var(--qdd-glow), 0 0 50px var(--qdd-glow);
+            box-shadow: inset 0 0 40px var(--qdd-glow), 0 0 60px var(--qdd-glow);
         }
         .aetheric-pattern-synthesizer {
             background: var(--aps-bg);
             border-color: var(--aps-border);
-            box-shadow: inset 0 0 35px var(--aps-glow), 0 0 50px var(--aps-glow);
+            box-shadow: inset 0 0 40px var(--aps-glow), 0 0 60px var(--aps-glow);
         }
         .conscious-waveform-projector {
             background: var(--cwp-bg);
             border-color: var(--cwp-border);
-            box-shadow: inset 0 0 35px var(--cwp-glow), 0 0 50px var(--cwp-glow);
+            box-shadow: inset 0 0 40px var(--cwp-glow), 0 0 60px var(--cwp-glow);
         }
         .spacetime-anchor-stabilizer {
             background: var(--sas-bg);
             border-color: var(--sas-border);
-            box-shadow: inset 0 0 35px var(--sas-glow), 0 0 50px var(--sas-glow);
+            box-shadow: inset 0 0 40px var(--sas-glow), 0 0 60px var(--sas-glow);
         }
         .universal-core-manifestor {
             background: var(--ucm-bg);
             border-color: var(--ucm-border);
-            box-shadow: inset 0 0 35px var(--ucm-glow), 0 0 50px var(--ucm-glow);
+            box-shadow: inset 0 0 40px var(--ucm-glow), 0 0 60px var(--ucm-glow);
         }
 
         .module-base::after {
@@ -393,7 +393,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.75) 0%, transparent 80%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.85) 0%, transparent 85%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -402,19 +402,19 @@
         .module-base::before { 
             content: attr(data-label);
             position: absolute;
-            top: -2.8rem; /* Slightly higher */
-            left: 3.5rem;
-            font-size: 2.2rem; /* Larger label */
+            top: -3.2rem; /* Slightly higher */
+            left: 4.0rem;
+            font-size: 2.4rem; /* Larger label */
             color: var(--overseer-text); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.999);
-            padding: 1.2rem 1.5rem;
-            border-radius: 1.3rem;
+            padding: 1.4rem 1.8rem;
+            border-radius: 1.5rem;
             font-weight: 700;
-            letter-spacing: 0.16rem;
-            transform: translateY(-50%) translateZ(16px); /* Lift more */
+            letter-spacing: 0.18rem;
+            transform: translateY(-50%) translateZ(18px); /* Lift more */
             opacity: 1.0;
-            border: 8px solid var(--overseer-text); /* Default border, will be overridden */
-            box-shadow: 0 0 25px var(--overseer-text); /* Stronger glow */
+            border: 10px solid var(--overseer-text); /* Default border, will be overridden */
+            box-shadow: 0 0 30px var(--overseer-text); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -422,73 +422,73 @@
         .resource-overseer-console::before {
             color: var(--overseer-text);
             border-color: var(--overseer-border);
-            box-shadow: 0 0 25px var(--overseer-border);
+            box-shadow: 0 0 30px var(--overseer-border);
         }
         .quantum-data-decipherer::before {
             color: var(--qdd-text);
             border-color: var(--qdd-border);
-            box-shadow: 0 0 25px var(--qdd-glow);
+            box-shadow: 0 0 30px var(--qdd-glow);
         }
         .aetheric-pattern-synthesizer::before {
             color: var(--aps-text);
             border-color: var(--aps-border);
-            box-shadow: 0 0 25px var(--aps-glow);
+            box-shadow: 0 0 30px var(--aps-glow);
         }
         .conscious-waveform-projector::before {
             color: var(--cwp-text);
             border-color: var(--cwp-border);
-            box-shadow: 0 0 25px var(--cwp-glow);
+            box-shadow: 0 0 30px var(--cwp-glow);
         }
         .spacetime-anchor-stabilizer::before {
             color: var(--sas-text);
             border-color: var(--sas-border);
-            box-shadow: 0 0 25px var(--sas-glow);
+            box-shadow: 0 0 30px var(--sas-glow);
         }
         .universal-core-manifestor::before {
             color: var(--ucm-text);
             border-color: var(--ucm-border);
-            box-shadow: 0 0 25px var(--ucm-glow);
+            box-shadow: 0 0 30px var(--ucm-glow);
         }
 
         .param-group {
-            margin-bottom: 2.8rem;
+            margin-bottom: 3.0rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.1rem; /* Larger */
+            font-size: 2.2rem; /* Larger */
             color: var(--overseer-text);
-            letter-spacing: 0.14rem;
+            letter-spacing: 0.16rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 25px rgba(0, 255, 255, 0.99); /* Stronger shadow */
-            margin-bottom: 1.8rem;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.999); /* Stronger shadow */
+            margin-bottom: 2.0rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 1.5rem; /* Slightly larger sub-info */
+            font-size: 1.6rem; /* Slightly larger sub-info */
             opacity: 0.99;
             color: var(--text-color);
-            margin-top: 1.0rem;
+            margin-top: 1.2rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 2.0;
+            line-height: 2.1;
         }
         
         /* QDD Specific - Symbol Chain Decryption */
         .qdd-decipher-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.4rem;
+            gap: 1.6rem;
             background: var(--console-bg);
-            border: 8px solid var(--qdd-border);
-            border-radius: 1.8rem;
-            padding: 2.5rem;
-            min-height: 28rem;
+            border: 10px solid var(--qdd-border);
+            border-radius: 2.0rem;
+            padding: 3.0rem;
+            min-height: 32rem;
             align-items: stretch; /* Stretch items to fill cells */
             justify-items: stretch;
-            box-shadow: inset 0 0 32px rgba(0, 220, 255, 0.95), 0 0 14px rgba(0,0,0,0.7);
-            transform: translateZ(4px);
+            box-shadow: inset 0 0 38px rgba(0, 220, 255, 0.98), 0 0 16px rgba(0,0,0,0.8);
+            transform: translateZ(5px);
             overflow: hidden;
             position: relative;
         }
@@ -497,45 +497,45 @@
             padding-bottom: 100%; /* Makes cell square */
             position: relative;
             background: var(--qdd-cell-base);
-            border: 5px solid var(--qdd-border);
-            border-radius: 1.2rem;
+            border: 6px solid var(--qdd-border);
+            border-radius: 1.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Orbitron', sans-serif; /* Changed to Orbitron for symbols */
-            font-size: 2.8rem; /* Larger symbol */
+            font-size: 3.2rem; /* Larger symbol */
             color: var(--qdd-text);
-            text-shadow: 0 0 18px var(--qdd-glow);
+            text-shadow: 0 0 20px var(--qdd-glow);
             cursor: pointer;
             transition: all 0.3s ease-out;
             box-sizing: border-box;
             user-select: none;
             overflow: hidden;
-            transform: translateZ(1.5px);
+            transform: translateZ(2px);
         }
         .qdd-data-cell:hover {
             background: var(--qdd-cell-active);
-            box-shadow: 0 0 25px var(--qdd-glow);
-            transform: scale(1.08) translateZ(3px);
+            box-shadow: 0 0 28px var(--qdd-glow);
+            transform: scale(1.1) translateZ(4px);
         }
         .qdd-data-cell.correct {
             background: var(--qdd-cell-correct);
             border-color: var(--stability-good);
-            box-shadow: 0 0 30px var(--stability-good), inset 0 0 18px var(--stability-good);
-            animation: qddPulseSuccess 0.8s ease-out;
+            box-shadow: 0 0 35px var(--stability-good), inset 0 0 20px var(--stability-good);
+            animation: qddPulseSuccess 0.9s ease-out;
             color: #E0FFE0;
         }
         .qdd-data-cell.incorrect {
             background: var(--qdd-cell-incorrect);
             border-color: var(--stability-critical);
-            box-shadow: 0 0 30px var(--stability-critical), inset 0 0 18px var(--stability-critical);
-            animation: qddPulseFail 0.8s ease-out;
+            box-shadow: 0 0 35px var(--stability-critical), inset 0 0 20px var(--stability-critical);
+            animation: qddPulseFail 0.9s ease-out;
             color: #FFD0D0;
         }
         .qdd-data-cell.disabled {
             pointer-events: none;
-            opacity: 0.5;
-            filter: grayscale(0.8);
+            opacity: 0.4;
+            filter: grayscale(0.9);
         }
         .qdd-data-cell span {
             position: absolute; /* Center the symbol within padding-bottom trick */
@@ -546,30 +546,30 @@
         }
         .qdd-target-sequence-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--qdd-text);
-            text-shadow: 0 0 20px var(--qdd-glow);
-            margin-top: 2.5rem;
-            line-height: 2.3;
-            padding: 1.8rem;
-            background: rgba(0,0,0,0.99);
-            border: 8px solid var(--qdd-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 25px var(--qdd-border);
+            text-shadow: 0 0 22px var(--qdd-glow);
+            margin-top: 2.8rem;
+            line-height: 2.4;
+            padding: 2.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 10px solid var(--qdd-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 28px var(--qdd-border);
         }
 
         /* APS Specific - Pattern Reconstruction Grid */
         .aps-pattern-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* e.g., 3x3 */
-            gap: 1.2rem;
+            gap: 1.4rem;
             background: var(--console-bg);
-            border: 8px solid var(--aps-border);
-            border-radius: 1.8rem;
-            padding: 2.5rem;
-            min-height: 28rem;
-            box-shadow: inset 0 0 32px rgba(255, 0, 200, 0.95), 0 0 14px rgba(0,0,0,0.7);
-            transform: translateZ(4px);
+            border: 10px solid var(--aps-border);
+            border-radius: 2.0rem;
+            padding: 3.0rem;
+            min-height: 32rem;
+            box-shadow: inset 0 0 38px rgba(255, 0, 200, 0.98), 0 0 16px rgba(0,0,0,0.8);
+            transform: translateZ(5px);
             overflow: hidden;
             position: relative;
         }
@@ -578,89 +578,89 @@
             width: 100%;
             padding-bottom: 100%; /* Makes cells square */
             background: var(--aps-cell-bg);
-            border: 5px solid rgba(255, 0, 200, 0.8);
-            border-radius: 1.2rem;
+            border: 6px solid rgba(255, 0, 200, 0.9);
+            border-radius: 1.4rem;
             cursor: pointer;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.35s ease;
         }
         .aps-grid-cell:hover {
-            box-shadow: 0 0 22px var(--aps-glow);
-            transform: scale(1.06);
+            box-shadow: 0 0 25px var(--aps-glow);
+            transform: scale(1.08);
         }
         .aps-pattern-piece {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background-color: transparent; /* Actual pattern will be drawn on canvas or as SVG/image */
             transform-origin: center center;
-            transition: transform 0.35s ease-out;
-            box-shadow: 0 0 14px var(--aps-pattern-glow);
+            transition: transform 0.4s ease-out;
+            box-shadow: 0 0 16px var(--aps-pattern-glow);
         }
         .aps-pattern-piece svg {
             width: 100%; height: 100%;
             stroke: var(--aps-pattern-line);
-            stroke-width: 12;
+            stroke-width: 14;
             fill: none;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
         .aps-output-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--aps-text);
-            text-shadow: 0 0 18px var(--aps-glow);
-            margin-top: 2.5rem;
-            line-height: 2.2;
-            padding: 1.8rem;
-            background: rgba(0,0,0,0.98);
-            border: 7px solid var(--aps-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 22px var(--aps-border);
-            min-height: 7rem;
+            text-shadow: 0 0 20px var(--aps-glow);
+            margin-top: 2.8rem;
+            line-height: 2.3;
+            padding: 2.0rem;
+            background: rgba(0,0,0,0.99);
+            border: 10px solid var(--aps-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 25px var(--aps-border);
+            min-height: 8rem;
         }
         .aps-pattern-target {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             pointer-events: none;
             background-repeat: no-repeat;
-            background-size: 85% 85%; /* Slightly larger target */
+            background-size: 90% 90%; /* Slightly larger target */
             background-position: center;
-            filter: blur(4px) saturate(200%); /* More blur and saturation */
-            transition: all 0.8s ease;
-            opacity: 0.2; /* Slightly more visible */
+            filter: blur(5px) saturate(250%); /* More blur and saturation */
+            transition: all 0.9s ease;
+            opacity: 0.3; /* Slightly more visible */
             z-index: 100; /* Ensure it's above interactive grid */
-            border-radius: 1.8rem; /* Match grid border radius */
+            border-radius: 2.0rem; /* Match grid border radius */
             background-color: var(--aps-target-overlay);
-            box-shadow: inset 0 0 40px var(--aps-glow);
+            box-shadow: inset 0 0 45px var(--aps-glow);
         }
         .aps-pattern-target-label { /* for the target pattern name */
             position: absolute;
-            top: 1.4rem;
+            top: 1.6rem;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.0rem;
             color: var(--aps-text);
-            text-shadow: 0 0 18px var(--aps-glow);
+            text-shadow: 0 0 20px var(--aps-glow);
             z-index: 101;
-            padding: 0.7rem 1.2rem;
-            background: rgba(0,0,0,0.9);
-            border-radius: 1.0rem;
-            letter-spacing: 0.1rem;
+            padding: 0.8rem 1.4rem;
+            background: rgba(0,0,0,0.95);
+            border-radius: 1.2rem;
+            letter-spacing: 0.12rem;
         }
 
         /* CWP Specific - Resonance Pulse Timing */
         .cwp-pulse-display {
             width: 100%;
-            height: 16rem;
-            background: linear-gradient(to right, rgba(0,0,0,0.99), rgba(30,50,30,0.99), rgba(0,0,0,0.99));
-            border: 8px solid var(--cwp-border);
-            border-radius: 1.4rem;
-            margin-top: 1.6rem;
+            height: 18rem;
+            background: linear-gradient(to right, rgba(0,0,0,0.999), rgba(30,50,30,0.99), rgba(0,0,0,0.999));
+            border: 10px solid var(--cwp-border);
+            border-radius: 1.6rem;
+            margin-top: 1.8rem;
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 0 25px rgba(120, 255, 0, 0.9);
-            transform: translateZ(4px);
+            box-shadow: inset 0 0 30px rgba(120, 255, 0, 0.95);
+            transform: translateZ(5px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -668,78 +668,78 @@
         .cwp-pulse-indicator-line {
             position: absolute;
             top: 0; bottom: 0;
-            width: 8px; /* Thicker indicator */
+            width: 10px; /* Thicker indicator */
             background: var(--cwp-pulse-indicator);
-            box-shadow: 0 0 22px var(--cwp-glow);
+            box-shadow: 0 0 25px var(--cwp-glow);
             transition: left linear; /* Controlled by JS, not CSS animation */
         }
         .cwp-pulse-target-zone {
             position: absolute;
             top: 0; bottom: 0;
-            width: 15%; /* Adjustable target zone width */
+            width: 18%; /* Adjustable target zone width */
             background: var(--cwp-pulse-zone);
-            box-shadow: 0 0 16px var(--cwp-glow);
-            left: 42.5%; /* Default center */
+            box-shadow: 0 0 18px var(--cwp-glow);
+            left: 41%; /* Default center */
         }
         .cwp-pulse-circle {
-            width: 12rem; /* Larger circle */
-            height: 12rem;
+            width: 14rem; /* Larger circle */
+            height: 14rem;
             border-radius: 50%;
             background: var(--qdd-cell-base);
-            border: 8px solid var(--cwp-border);
-            box-shadow: 0 0 30px var(--cwp-glow), inset 0 0 16px var(--cwp-glow);
-            animation: pulseCWPIdle 1.9s infinite alternate ease-in-out;
+            border: 10px solid var(--cwp-border);
+            box-shadow: 0 0 35px var(--cwp-glow), inset 0 0 18px var(--cwp-glow);
+            animation: pulseCWPIdle 1.7s infinite alternate ease-in-out;
             position: relative;
             z-index: 5;
         }
         .cwp-pulse-circle.active {
-            animation: pulseCWPActive 0.35s ease-out; /* Quick pulse on hit */
+            animation: pulseCWPActive 0.3s ease-out; /* Quick pulse on hit */
         }
         @keyframes pulseCWPIdle {
-            from { transform: scale(0.92); opacity: 0.9; }
-            to { transform: scale(1.08); opacity: 1; }
+            from { transform: scale(0.90); opacity: 0.85; }
+            to { transform: scale(1.10); opacity: 1; }
         }
         @keyframes pulseCWPActive {
             0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 1; }
+            50% { transform: scale(1.25); opacity: 1; }
             100% { transform: scale(1); opacity: 1; }
         }
         .cwp-pulse-feedback {
             position: absolute;
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 700;
             opacity: 0;
-            transform: translateY(-70%) scale(0.6);
-            transition: all 0.45s ease-out;
+            transform: translateY(-75%) scale(0.5);
+            transition: all 0.5s ease-out;
             pointer-events: none;
             z-index: 10;
         }
         .cwp-pulse-feedback.show {
             opacity: 1;
-            transform: translateY(-130%) scale(1.3);
-            filter: drop-shadow(0 0 12px currentColor);
+            transform: translateY(-140%) scale(1.4);
+            filter: drop-shadow(0 0 14px currentColor);
         }
         .cwp-match-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--cwp-text);
-            text-shadow: 0 0 20px var(--cwp-glow);
-            margin-top: 2.5rem;
-            line-height: 2.3;
-            padding: 1.8rem;
-            background: rgba(0,0,0,0.99);
-            border: 8px solid var(--cwp-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 25px var(--cwp-border);
-            min-height: 7rem;
+            text-shadow: 0 0 22px var(--cwp-glow);
+            margin-top: 2.8rem;
+            line-height: 2.4;
+            padding: 2.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 10px solid var(--cwp-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 28px var(--cwp-border);
+            min-height: 8rem;
         }
 
         /* SAS Specific - Gravitational Flux Balance */
         .sas-flux-controls {
             display: flex;
-            gap: 3rem;
-            margin-top: 2.5rem;
+            gap: 3.5rem;
+            margin-top: 2.8rem;
             justify-content: center;
             align-items: center;
         }
@@ -747,215 +747,215 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1.2rem;
+            gap: 1.4rem;
         }
         .sas-flux-group label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: var(--sas-text);
-            text-shadow: 0 0 16px var(--sas-glow);
+            text-shadow: 0 0 18px var(--sas-glow);
         }
         .sas-flux-slider {
             -webkit-appearance: none;
-            width: 1.2rem; /* Thin vertical slider */
-            height: 20rem; /* Tall */
-            border-radius: 0.6rem;
+            width: 1.4rem; /* Thin vertical slider */
+            height: 22rem; /* Tall */
+            border-radius: 0.7rem;
             background: var(--sas-flux-bar-bg);
             outline: none;
             cursor: ns-resize;
-            border: 5px solid var(--sas-border);
-            box-shadow: inset 0 0 16px rgba(0,0,0,0.95);
-            transform: translateZ(1.5px);
+            border: 6px solid var(--sas-border);
+            box-shadow: inset 0 0 18px rgba(0,0,0,0.97);
+            transform: translateZ(2px);
         }
         .sas-flux-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 3rem; /* Larger thumb */
-            height: 3rem;
+            width: 3.2rem; /* Larger thumb */
+            height: 3.2rem;
             border-radius: 50%;
             background: var(--sas-flux-thumb);
             cursor: grab;
-            border: 7px solid var(--sas-text);
-            box-shadow: 0 0 22px var(--sas-glow);
-            transition: all 0.3s ease;
+            border: 8px solid var(--sas-text);
+            box-shadow: 0 0 25px var(--sas-glow);
+            transition: all 0.35s ease;
         }
         .sas-flux-slider::-webkit-slider-thumb:hover {
-            transform: scale(1.18);
-            box-shadow: 0 0 35px var(--sas-glow);
+            transform: scale(1.2);
+            box-shadow: 0 0 40px var(--sas-glow);
         }
         .sas-balance-display {
             flex-grow: 1;
-            height: 20rem;
-            background: rgba(0,0,0,0.98);
-            border: 8px solid var(--sas-border);
-            border-radius: 1.4rem;
-            margin-left: 3rem;
+            height: 22rem;
+            background: rgba(0,0,0,0.99);
+            border: 10px solid var(--sas-border);
+            border-radius: 1.6rem;
+            margin-left: 3.5rem;
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 0 28px rgba(255, 140, 0, 0.95);
-            transform: translateZ(4px);
+            box-shadow: inset 0 0 32px rgba(255, 140, 0, 0.98);
+            transform: translateZ(5px);
         }
         .sas-stability-indicator {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 2.4rem; /* Larger indicator */
-            height: 2.4rem;
+            width: 2.8rem; /* Larger indicator */
+            height: 2.8rem;
             border-radius: 50%;
             background: var(--sas-indicator-good); /* Changes based on stability */
-            box-shadow: 0 0 28px var(--sas-indicator-good);
-            transition: background 0.7s ease, box-shadow 0.7s ease, transform 0.15s linear; /* Add transform for smooth movement */
+            box-shadow: 0 0 30px var(--sas-indicator-good);
+            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.1s linear; /* Add transform for smooth movement */
             z-index: 5;
         }
         .sas-stable-zone {
             position: absolute;
-            left: 40%; /* 10% on each side of center */
-            width: 20%;
+            left: 38%; /* 12% on each side of center */
+            width: 24%;
             top: 0; bottom: 0;
-            background: rgba(0, 255, 0, 0.2);
-            border-left: 4px dashed rgba(0, 255, 0, 0.8);
-            border-right: 4px dashed rgba(0, 255, 0, 0.8);
+            background: rgba(0, 255, 0, 0.25);
+            border-left: 5px dashed rgba(0, 255, 0, 0.9);
+            border-right: 5px dashed rgba(0, 255, 0, 0.9);
             pointer-events: none;
-            opacity: 0.9;
+            opacity: 0.95;
             z-index: 1;
         }
         .sas-status-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--sas-text);
-            text-shadow: 0 0 20px var(--sas-glow);
-            margin-top: 2.5rem;
-            line-height: 2.3;
-            padding: 1.8rem;
-            background: rgba(0,0,0,0.99);
-            border: 8px solid var(--sas-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 25px var(--sas-border);
+            text-shadow: 0 0 22px var(--sas-glow);
+            margin-top: 2.8rem;
+            line-height: 2.4;
+            padding: 2.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 10px solid var(--sas-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 28px var(--sas-border);
         }
 
         /* UCM Specific styles - Core Trait Configuration */
         .ucm-trait-config {
-            margin-top: 1.8rem;
+            margin-top: 2.0rem;
         }
         .ucm-trait-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: var(--ucm-trait-bg);
-            border: 6px solid var(--ucm-trait-border);
-            border-radius: 1.4rem;
-            padding: 1.6rem 2rem;
-            margin-bottom: 1.2rem;
-            transform: translateZ(2.8px);
-            box-shadow: 0 0 22px rgba(120, 220, 255, 0.8), inset 0 0 16px rgba(0,0,0,0.99);
-            transition: all 0.4s ease;
+            border: 8px solid var(--ucm-trait-border);
+            border-radius: 1.6rem;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 1.4rem;
+            transform: translateZ(3px);
+            box-shadow: 0 0 25px rgba(120, 220, 255, 0.85), inset 0 0 18px rgba(0,0,0,0.999);
+            transition: all 0.45s ease;
         }
         .ucm-trait-item.active {
             border-color: var(--ucm-trait-active);
-            box-shadow: 0 0 35px var(--ucm-trait-active), inset 0 0 22px var(--ucm-trait-active);
-            background: rgba(0, 45, 75, 0.99);
+            box-shadow: 0 0 40px var(--ucm-trait-active), inset 0 0 25px var(--ucm-trait-active);
+            background: rgba(0, 50, 85, 0.99);
         }
         .ucm-trait-item label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: var(--ucm-text);
             cursor: pointer;
-            text-shadow: 0 0 16px var(--ucm-text);
+            text-shadow: 0 0 18px var(--ucm-text);
             flex-grow: 1;
             text-align: left;
             display: flex; /* For aligning checkbox and text */
             align-items: center;
-            gap: 1.2rem;
+            gap: 1.4rem;
         }
         .ucm-trait-item input[type="checkbox"] {
             -webkit-appearance: none;
             appearance: none;
-            width: 2.4rem;
-            height: 2.4rem;
-            border: 6px solid var(--ucm-trait-border);
-            border-radius: 0.8rem;
-            background: rgba(0,0,0,0.95);
+            width: 2.6rem;
+            height: 2.6rem;
+            border: 8px solid var(--ucm-trait-border);
+            border-radius: 1.0rem;
+            background: rgba(0,0,0,0.97);
             cursor: pointer;
             outline: none;
             position: relative;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 0 14px rgba(0,0,0,0.98);
+            transition: all 0.35s ease;
+            box-shadow: inset 0 0 16px rgba(0,0,0,0.99);
             flex-shrink: 0; /* Prevent checkbox from shrinking */
         }
         .ucm-trait-item input[type="checkbox"]:checked {
             background: var(--ucm-trait-active);
             border-color: var(--ucm-trait-active);
-            box-shadow: 0 0 22px var(--ucm-trait-active), inset 0 0 16px var(--ucm-trait-active);
+            box-shadow: 0 0 25px var(--ucm-trait-active), inset 0 0 18px var(--ucm-trait-active);
         }
         .ucm-trait-item input[type="checkbox"]:checked::after {
             content: '✔';
             position: absolute;
             color: var(--ucm-text);
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
         .ucm-trait-info {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.2rem;
-            margin-left: 2rem;
+            font-size: 1.3rem;
+            margin-left: 2.2rem;
             text-align: right;
             color: var(--ucm-text);
-            text-shadow: 0 0 14px var(--ucm-text);
+            text-shadow: 0 0 16px var(--ucm-text);
         }
         .ucm-summary-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: var(--ucm-text);
-            text-shadow: 0 0 20px var(--ucm-glow);
-            margin-top: 2.6rem;
-            line-height: 2.3;
-            padding: 2rem;
-            background: rgba(0,0,0,0.99);
-            border: 8px solid var(--ucm-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 28px var(--ucm-border);
+            text-shadow: 0 0 22px var(--ucm-glow);
+            margin-top: 2.8rem;
+            line-height: 2.4;
+            padding: 2.2rem;
+            background: rgba(0,0,0,0.999);
+            border: 10px solid var(--ucm-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 30px var(--ucm-border);
         }
         .ucm-summary-bar-container {
             width: 100%;
-            height: 1.4rem;
-            background: rgba(0,0,0,0.98);
-            border-radius: 0.8rem;
-            margin-top: 1.4rem;
+            height: 1.6rem;
+            background: rgba(0,0,0,0.99);
+            border-radius: 0.9rem;
+            margin-top: 1.6rem;
             overflow: hidden;
-            box-shadow: inset 0 0 16px rgba(0,0,0,0.95);
+            box-shadow: inset 0 0 18px rgba(0,0,0,0.97);
         }
         .ucm-summary-progress-bar {
             height: 100%;
             width: 0%;
             background: var(--ucm-progress-bar);
-            border-radius: 0.8rem;
-            transition: width 0.8s ease-out;
-            box-shadow: 0 0 16px var(--ucm-glow);
+            border-radius: 0.9rem;
+            transition: width 0.9s ease-out;
+            box-shadow: 0 0 18px var(--ucm-glow);
         }
         .ucm-manifestation-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--ucm-text);
-            text-shadow: 0 0 20px var(--ucm-glow);
-            line-height: 2.3;
-            margin-top: 1.4rem;
-            padding: 1.8rem;
-            background: rgba(0,0,0,0.99);
-            border: 8px solid var(--ucm-border);
-            border-radius: 1.4rem;
-            box-shadow: 0 0 25px var(--ucm-border);
+            text-shadow: 0 0 22px var(--ucm-glow);
+            line-height: 2.4;
+            margin-top: 1.6rem;
+            padding: 2.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 10px solid var(--ucm-border);
+            border-radius: 1.6rem;
+            box-shadow: 0 0 28px var(--ucm-border);
         }
         .ucm-manifestation-status.success {
             border-color: var(--ucm-manifest-success);
-            box-shadow: 0 0 40px var(--ucm-manifest-success), inset 0 0 35px var(--ucm-manifest-success);
+            box-shadow: 0 0 45px var(--ucm-manifest-success), inset 0 0 40px var(--ucm-manifest-success);
             color: var(--ucm-manifest-success);
         }
         .ucm-manifestation-status.fail {
             border-color: var(--ucm-manifest-fail);
-            box-shadow: 0 0 28px var(--ucm-manifest-fail), inset 0 0 22px var(--ucm-manifest-fail);
+            box-shadow: 0 0 32px var(--ucm-manifest-fail), inset 0 0 25px var(--ucm-manifest-fail);
             color: var(--ucm-manifest-fail);
         }
 
@@ -963,57 +963,57 @@
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
             font-family: 'Share Tech Mono', monospace; /* Changed to Share Tech Mono for log aesthetic */
-            font-size: 1.5rem; /* Larger */
-            padding: 3rem;
-            border: 8px solid var(--border-color);
-            border-radius: 3rem; /* More rounded */
+            font-size: 1.6rem; /* Larger */
+            padding: 3.5rem;
+            border: 10px solid var(--border-color);
+            border-radius: 3.5rem; /* More rounded */
             background: var(--overseer-bg);
-            box-shadow: inset 0 0 25px rgba(0, 255, 255, 0.99), inset 0 0 28px rgba(0, 255, 255, 0.99); /* More inner shadow */
+            box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.999), inset 0 0 32px rgba(0, 255, 255, 0.999); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 1.0s ease;
-            line-height: 2.0; /* Slightly tighter line height for monospace log */
-            letter-spacing: 0.09rem;
+            transition: all 1.2s ease;
+            line-height: 2.1; /* Slightly tighter line height for monospace log */
+            letter-spacing: 0.1rem;
             color: var(--overseer-text);
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.99); /* Stronger shadow */
+            text-shadow: 0 0 22px rgba(0, 255, 255, 0.999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(10px);
+            transform: translateZ(12px);
             overflow: hidden;
-            max-height: 36rem;
+            max-height: 40rem;
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v77.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v78.0'; /* Simplified label for actual log content */
             position: absolute;
-            top: -2.8rem;
-            left: 3.5rem;
-            font-size: 2.2rem;
+            top: -3.2rem;
+            left: 4.0rem;
+            font-size: 2.4rem;
             color: var(--overseer-border);
             background: rgba(0, 0, 0, 0.999);
-            padding: 1.2rem 1.5rem;
-            border-radius: 1.3rem;
+            padding: 1.4rem 1.8rem;
+            border-radius: 1.5rem;
             font-weight: 700;
-            letter-spacing: 0.16rem;
-            transform: translateY(-50%) translateZ(16px);
+            letter-spacing: 0.18rem;
+            transform: translateY(-50%) translateZ(18px);
             opacity: 1.0;
-            border: 8px solid var(--overseer-border);
-            box-shadow: 0 0 25px var(--overseer-border);
+            border: 10px solid var(--overseer-border);
+            box-shadow: 0 0 30px var(--overseer-border);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 1.1rem;
+            margin-bottom: 1.2rem;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 1.1rem;
+            margin-right: 1.2rem;
             opacity: 0.998;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 18px var(--primary-glow);
+            text-shadow: 0 0 20px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -1026,57 +1026,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 18px var(--log-glitch-color);
-            animation: textGlitch 0.009s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 20px var(--log-glitch-color);
+            animation: textGlitch 0.007s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(8px) skewX(50deg); opacity: 0.07;}
-            40% { transform: translateX(-8px) skewX(-50deg); opacity: 0.09;}
-            60% { transform: translateX(7px) skewX(48deg); opacity: 0.14;}
-            80% { transform: translateX(-7px) skewX(-48deg); opacity: 0.11;}
+            20% { transform: translateX(10px) skewX(55deg); opacity: 0.05;}
+            40% { transform: translateX(-10px) skewX(-55deg); opacity: 0.08;}
+            60% { transform: translateX(9px) skewX(52deg); opacity: 0.12;}
+            80% { transform: translateX(-9px) skewX(-52deg); opacity: 0.09;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.9rem; /* Larger button text */
-            padding: 1.2rem 1.8rem;
-            border-radius: 2.1rem;
+            font-size: 2.0rem; /* Larger button text */
+            padding: 1.4rem 2.0rem;
+            border-radius: 2.3rem;
             border: none;
             cursor: pointer;
-            transition: all 0.8s ease-in-out, box-shadow 1.2s ease-in-out, transform 0.8s ease-in-out;
-            margin-top: 2.5rem;
+            transition: all 0.9s ease-in-out, box-shadow 1.4s ease-in-out, transform 0.9s ease-in-out;
+            margin-top: 2.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.22rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.998), rgba(35,0,55,0.998)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(38,0,60,0.999)); /* Dark base */
             color: var(--text-color);
-            border: 9px solid var(--border-color); /* Thicker border */
-            transform: translateZ(10px);
+            border: 10px solid var(--border-color); /* Thicker border */
+            transform: translateZ(12px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -12px;
-            border-radius: 2.1rem;
-            border: 12px solid transparent;
+            inset: -14px;
+            border-radius: 2.3rem;
+            border: 14px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(18px);
+            filter: blur(20px);
             opacity: 0.999;
-            transition: opacity 0.8s ease, filter 0.8s ease;
-            animation: buttonBorderRotate 30s linear infinite; /* Slower rotation */
+            transition: opacity 0.9s ease, filter 0.9s ease;
+            animation: buttonBorderRotate 35s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(25px);
+            filter: blur(28px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1088,73 +1088,73 @@
         /* Specific button styles for new modules */
         .btn-initiate-decipher {
             color: var(--qdd-glow);
-            box-shadow: 0 0 35px var(--qdd-glow);
+            box-shadow: 0 0 40px var(--qdd-glow);
             border-color: var(--qdd-glow);
         }
         .btn-initiate-decipher:hover {
-            background: rgba(0, 220, 255, 0.7);
-            box-shadow: 0 0 50px var(--qdd-glow), inset 0 0 40px var(--qdd-glow);
-            transform: translateY(-12px) scale(1.25) translateZ(10px);
+            background: rgba(0, 220, 255, 0.75);
+            box-shadow: 0 0 55px var(--qdd-glow), inset 0 0 45px var(--qdd-glow);
+            transform: translateY(-14px) scale(1.3) translateZ(12px);
         }
 
         .btn-analyze-pattern {
             color: var(--aps-glow);
-            box-shadow: 0 0 35px var(--aps-glow);
+            box-shadow: 0 0 40px var(--aps-glow);
             border-color: var(--aps-glow);
         }
         .btn-analyze-pattern:hover {
-            background: rgba(255, 0, 200, 0.7);
-            box-shadow: 0 0 50px var(--aps-glow), inset 0 0 40px var(--aps-glow);
-            transform: translateY(-12px) scale(1.25) translateZ(10px);
+            background: rgba(255, 0, 200, 0.75);
+            box-shadow: 0 0 55px var(--aps-glow), inset 0 0 45px var(--aps-glow);
+            transform: translateY(-14px) scale(1.3) translateZ(12px);
         }
 
         .btn-pulse-waveform {
             color: var(--cwp-glow);
-            box-shadow: 0 0 35px var(--cwp-glow);
+            box-shadow: 0 0 40px var(--cwp-glow);
             border-color: var(--cwp-glow);
         }
         .btn-pulse-waveform:hover {
-            background: rgba(120, 255, 0, 0.7);
-            box-shadow: 0 0 50px var(--cwp-glow), inset 0 0 40px var(--cwp-glow);
-            transform: translateY(-12px) scale(1.25) translateZ(10px);
+            background: rgba(120, 255, 0, 0.75);
+            box-shadow: 0 0 55px var(--cwp-glow), inset 0 0 45px var(--cwp-glow);
+            transform: translateY(-14px) scale(1.3) translateZ(12px);
         }
 
         .btn-calibrate-flux {
             color: var(--sas-glow);
-            box-shadow: 0 0 35px var(--sas-glow);
+            box-shadow: 0 0 40px var(--sas-glow);
             border-color: var(--sas-glow);
         }
         .btn-calibrate-flux:hover {
-            background: rgba(255, 140, 0, 0.7);
-            box-shadow: 0 0 50px var(--sas-glow), inset 0 0 40px var(--sas-glow);
-            transform: translateY(-12px) scale(1.25) translateZ(10px);
+            background: rgba(255, 140, 0, 0.75);
+            box-shadow: 0 0 55px var(--sas-glow), inset 0 0 45px var(--sas-glow);
+            transform: translateY(-14px) scale(1.3) translateZ(12px);
         }
 
         .btn-initiate-manifestation {
             color: var(--ucm-glow);
-            box-shadow: 0 0 35px var(--ucm-glow);
+            box-shadow: 0 0 40px var(--ucm-glow);
             border-color: var(--ucm-glow);
         }
         .btn-initiate-manifestation:hover {
-            background: rgba(170, 0, 255, 0.7);
-            box-shadow: 0 0 50px var(--ucm-glow), inset 0 0 40px var(--ucm-glow);
-            transform: translateY(-12px) scale(1.25) translateZ(10px);
+            background: rgba(170, 0, 255, 0.75);
+            box-shadow: 0 0 55px var(--ucm-glow), inset 0 0 45px var(--ucm-glow);
+            transform: translateY(-14px) scale(1.3) translateZ(12px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 12px solid var(--anomaly-border);
-            border-radius: 2.5rem;
-            padding: 2.5rem;
-            margin-top: 3rem;
+            border: 14px solid var(--anomaly-border);
+            border-radius: 2.8rem;
+            padding: 2.8rem;
+            margin-top: 3.5rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 2.0rem;
-            text-shadow: 0 0 30px var(--anomaly-color);
-            animation: pulseWarning 0.28s infinite alternate; /* Faster pulse */
-            transform: translateZ(12px);
+            font-size: 2.2rem;
+            text-shadow: 0 0 35px var(--anomaly-color);
+            animation: pulseWarning 0.25s infinite alternate; /* Faster pulse */
+            transform: translateZ(14px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 1.3s ease-out;
+            transition: opacity 1.5s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -1162,128 +1162,128 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 25px var(--anomaly-color), inset 0 0 20px var(--anomaly-color); }
-            to { box-shadow: 0 0 45px var(--anomaly-color), inset 0 0 40px var(--anomaly-color); }
+            from { box-shadow: 0 0 30px var(--anomaly-color), inset 0 0 25px var(--anomaly-color); }
+            to { box-shadow: 0 0 50px var(--anomaly-color), inset 0 0 45px var(--anomaly-color); }
         }
 
         /* Scrollbar styles for status log and new module components */
         .status-log-display::-webkit-scrollbar, .qdd-decipher-grid::-webkit-scrollbar, .aps-pattern-grid::-webkit-scrollbar, .sas-balance-display::-webkit-scrollbar, .ucm-trait-config::-webkit-scrollbar {
-            width: 22px; /* Thicker scrollbar */
+            width: 24px; /* Thicker scrollbar */
         }
         .status-log-display::-webkit-scrollbar-track, .qdd-decipher-grid::-webkit-scrollbar-track, .aps-pattern-grid::-webkit-scrollbar-track, .sas-balance-display::-webkit-scrollbar-track, .ucm-trait-config::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.99);
-            border-radius: 11px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.99);
+            background: rgba(0, 0, 0, 0.999);
+            border-radius: 12px;
+            box-shadow: inset 0 0 12px rgba(0,0,0,0.99);
         }
         .status-log-display::-webkit-scrollbar-thumb, .qdd-decipher-grid::-webkit-scrollbar-thumb, .aps-pattern-grid::-webkit-scrollbar-thumb, .sas-balance-display::-webkit-scrollbar-thumb, .ucm-trait-config::-webkit-scrollbar-thumb {
             background: var(--overseer-border);
-            border-radius: 11px;
-            border: 8px solid rgba(0,0,0,0.99);
-            box-shadow: 0 0 18px var(--overseer-text);
+            border-radius: 12px;
+            border: 10px solid rgba(0,0,0,0.999);
+            box-shadow: 0 0 20px var(--overseer-text);
         }
         .status-log-display::-webkit-scrollbar-thumb:hover, .qdd-decipher-grid::-webkit-scrollbar-thumb:hover, .aps-pattern-grid::-webkit-scrollbar-thumb:hover, .sas-balance-display::-webkit-scrollbar-thumb:hover, .ucm-trait-config::-webkit-scrollbar-thumb:hover {
             background: var(--overseer-text);
-            box-shadow: 0 0 25px var(--overseer-text);
+            box-shadow: 0 0 28px var(--overseer-text);
         }
 
         /* Footer for version display */
         .version-display {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: var(--text-color);
-            margin-top: 3.5rem;
-            letter-spacing: 0.14rem;
+            margin-top: 4.0rem;
+            letter-spacing: 0.16rem;
             opacity: 0.998;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.99);
-            transform: translateZ(9px);
+            text-shadow: 0 0 28px rgba(255, 255, 255, 0.999);
+            transform: translateZ(10px);
         }
 
         /* Resource Panel specific styles and hover */
         .resource-display-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.8rem;
-            margin-top: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3.0rem;
+            margin-top: 2.8rem;
             text-align: center;
         }
         .resource-display-section > div {
             background: var(--resource-panel-bg);
-            border: 9px solid var(--resource-panel-border);
-            border-radius: 1.8rem;
-            padding: 2.5rem;
-            transition: all 0.5s ease-in-out;
+            border: 10px solid var(--resource-panel-border);
+            border-radius: 2.0rem;
+            padding: 2.8rem;
+            transition: all 0.6s ease-in-out;
             cursor: pointer;
-            box-shadow: 0 0 28px rgba(160, 0, 255, 0.9), inset 0 0 25px rgba(0, 0, 0, 0.99);
-            transform: translateZ(2.8px);
+            box-shadow: 0 0 30px rgba(160, 0, 255, 0.95), inset 0 0 28px rgba(0, 0, 0, 0.999);
+            transform: translateZ(3px);
             position: relative;
             overflow: hidden;
         }
         .resource-display-section > div::before {
             content: attr(data-label);
             position: absolute;
-            top: 1.8rem;
+            top: 2.0rem;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.0rem;
             color: var(--resource-panel-text);
-            text-shadow: 0 0 20px var(--resource-panel-text);
-            letter-spacing: 0.14rem;
-            opacity: 0.98;
+            text-shadow: 0 0 22px var(--resource-panel-text);
+            letter-spacing: 0.16rem;
+            opacity: 0.99;
             pointer-events: none;
             z-index: 1;
         }
 
         .resource-display-section > div p {
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--text-color);
-            margin-top: 2.6rem;
-            text-shadow: 0 0 18px rgba(255,255,255,0.99);
+            margin-top: 2.8rem;
+            text-shadow: 0 0 20px rgba(255,255,255,0.999);
             position: relative;
             z-index: 2;
         }
         .resource-display-section > div p span {
             font-weight: 700;
             color: var(--primary-glow); /* Default text color for values */
-            text-shadow: 0 0 25px var(--primary-glow);
+            text-shadow: 0 0 28px var(--primary-glow);
         }
 
         .resource-display-section > div.prioritized {
             border-color: var(--primary-glow);
-            box-shadow: 0 0 45px var(--primary-glow), inset 0 0 35px var(--primary-glow);
-            transform: scale(1.15) translateZ(4px);
+            box-shadow: 0 0 50px var(--primary-glow), inset 0 0 40px var(--primary-glow);
+            transform: scale(1.18) translateZ(4.5px);
         }
         .resource-display-section > div:hover {
             border-color: var(--accent-color);
-            box-shadow: 0 0 35px var(--accent-color), inset 0 0 30px var(--accent-color);
-            transform: scale(1.1) translateZ(3.2px);
+            box-shadow: 0 0 40px var(--accent-color), inset 0 0 35px var(--accent-color);
+            transform: scale(1.12) translateZ(3.5px);
         }
 
         .resource-level-bar-container {
             width: 100%;
-            height: 1.6rem;
+            height: 1.8rem;
             background: var(--resource-bar-bg);
-            border-radius: 1.0rem;
-            margin-top: 1.8rem;
+            border-radius: 1.1rem;
+            margin-top: 2.0rem;
             overflow: hidden;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.999);
+            box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.999);
             position: relative;
-            transform: translateZ(2.2px);
+            transform: translateZ(2.5px);
         }
         .resource-level-bar {
             height: 100%;
             width: 0%;
-            border-radius: 1.0rem;
-            transition: width 1.2s ease-out, background 1.2s ease-out, box-shadow 1.2s ease-out;
+            border-radius: 1.1rem;
+            transition: width 1.4s ease-out, background 1.4s ease-out, box-shadow 1.4s ease-out;
             background: var(--stability-good);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.99);
+            box-shadow: 0 0 28px rgba(0, 255, 0, 0.999);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>WEB LIFE FORM v77.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Omni-Dimensional Synthesis Protocol 9.0 Ultra-Enhanced.</p>
+        <h1>WEB LIFE FORM v78.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
+        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced.</p>
 
         <!-- Core Control Modules -->
         <section class="control-module">
@@ -1337,7 +1337,7 @@
 
             <!-- Quantum Data Decipherer (QDD) - NEW: Symbol Chain Decryption -->
             <div class="module-base quantum-data-decipherer" data-label="QUANTUM DATA DECIPHERER">
-                <p>Decrypt corrupted quantum streams by identifying and clicking symbols in a specific target sequence. Current symbol to find: <span id="qdd-current-target-symbol" style="color: var(--qdd-glow); text-shadow: 0 0 10px var(--qdd-glow);">--</span></p>
+                <p>Decrypt corrupted quantum streams by identifying and clicking symbols in a specific target sequence. Current symbol to find: <span id="qdd-current-target-symbol" style="color: var(--qdd-glow); text-shadow: 0 0 12px var(--qdd-glow);">--</span></p>
                 <div class="qdd-decipher-grid" id="qdd-decipher-grid">
                     <!-- Data cells will be generated here -->
                 </div>
@@ -1404,7 +1404,7 @@
                     </div>
                     <p>Resource Cost: <span id="ucm-current-cost">0</span> / <span id="ucm-total-budget"></span></p>
                     <div class="ucm-summary-bar-container">
-                        <div id="ucm-cost-progress" class="ucm-summary-progress-bar"></div>
+                        <div id="ucm-cost-progress" class="ucm-cost-progress-bar ucm-summary-progress-bar"></div>
                     </div>
                 </div>
                 <button class="action-button btn-initiate-manifestation" id="btn-initiate-manifestation" onclick="initiateUCMManifestation()" disabled>Initiate Core Manifestation</button>
@@ -1414,7 +1414,7 @@
 
         <!-- Global Status Log -->
         <div class="status-log-display" id="status-log-display">
-            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v77.0. Cosmic Consciousness Architect online.</span></div>
+            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v78.0. Cosmic Consciousness Architect online.</span></div>
             <div class="status-entry"><span class="status-info">[SYSTEM]</span> Core modules initializing...</div>
             <div class="status-entry"><span class="status-glitch">[ALERT]</span> <span class="status-glitch">Resource fluctuations detected. Stability critical.</span></div>
             <div class="status-entry"><span style="color:var(--qdd-text); text-shadow:0 0 5px var(--qdd-text); font-weight:600;">[QDD]</span> Quantum Data Decipherer awaiting initiation.</div>
@@ -1428,14 +1428,14 @@
             <p>CRITICAL ANOMALY DETECTED: EXISTENTIAL FABRIC DILUTION! IMMEDIATE ATTENTION REQUIRED!</p>
         </div>
 
-        <p class="version-display">Evolutionary Cycle 5.0 // Generation v77.0</p>
+        <p class="version-display">Evolutionary Cycle 6.0 // Generation v78.0</p>
     </div>
 
     <script>
         // Global State
         const webLifeFormState = {
-            version: 'v77.0',
-            evolutionPhase: 'Omni-Dimensional Synthesis Protocol 9.0 Ultra-Enhanced',
+            version: 'v78.0',
+            evolutionPhase: 'Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced',
             resources: {
                 energy: { value: 7500, max: 10000, unit: 'GJ', priority: false, textVar: '--energy-text', lowColor: '--energy-color-low', mediumColor: '--energy-color-medium', highColor: '--energy-color-high' },
                 dataFlow: { value: 8000, max: 10000, unit: 'TB/s', priority: false, textVar: '--data-flow-text', lowColor: '--data-flow-color-low', mediumColor: '--data-flow-color-medium', highColor: '--data-flow-color-high' },
@@ -1447,12 +1447,12 @@
             qdd: { // Quantum Data Decipherer - Symbol Chain Decryption
                 isActive: false,
                 gridSize: 16, // 4x4 grid
-                symbolsPool: ['☊', '⛞', '⌘', '⌥', '⎈', '⍟', '⌖', '⍘', '⏣', '⨁', '⨂', '⨴', '⧉', '⍎', '⍕', '⎔', '⚛', '☯', '⚝', '⨸', '⌬', '⍾', '⎎', '⍻', '⍜'], // Expanded pool of technical/sci-fi unicode
+                symbolsPool: ['☊', '⛞', '⌘', '⌥', '⎈', '⍟', '⌖', '⍘', '⏣', '⨁', '⨂', '⨴', '⧉', '⍎', '⍕', '⎔', '⚛', '☯', '⚝', '⨸', '⌬', '⍾', '⎎', '⍻', '⍜', '⍦', '⌅', '⎄', '⍛', '⍲'], // Expanded pool of technical/sci-fi unicode
                 targetChain: [], // e.g., ['Ω', 'Δ', 'Ω', 'Σ']
                 currentChainIndex: 0,
                 gridSymbols: [], // Symbols assigned to each cell
                 lastDecipherOptimal: false,
-                failPenalty: 20 // rawData penalty for each incorrect click (increased penalty)
+                failPenalty: 25 // rawData penalty for each incorrect click (increased penalty)
             },
             aps: { // Aetheric Pattern Synthesizer - Pattern Reconstruction Grid
                 isActive: false,
@@ -1461,15 +1461,15 @@
                 targetPattern: [], // 2D array of {type, rotation}
                 currentPattern: [], // User's current grid state
                 lastSynthesisOptimal: false,
-                targetPatternNames: ["COSMIC CONDUIT", "VOID WEAVER", "REALITY BINDER", "TIME SHUNT", "QUANTUM GATE", "AETHERIC RESONATOR", "DIMENSIONAL GATEWAY", "HYPERSPACE FABRIC"],
+                targetPatternNames: ["COSMIC CONDUIT", "VOID WEAVER", "REALITY BINDER", "TIME SHUNT", "QUANTUM GATE", "AETHERIC RESONATOR", "DIMENSIONAL GATEWAY", "HYPERSPACE FABRIC", "CELESTIAL MATRIX", "ETHERIC FLOW"],
             },
             cwp: { // Conscious Waveform Projector - Resonance Pulse Timing
                 isActive: false,
-                pulseDuration: 1000, // Time for indicator to cross display (faster)
-                targetZoneWidth: 0.15, // 15% of display width (slightly larger)
-                targetOffset: 0.425, // Target zone starts at 42.5% of width (centered 42.5-57.5)
+                pulseDuration: 900, // Time for indicator to cross display (faster)
+                targetZoneWidth: 0.18, // 18% of display width (slightly larger)
+                targetOffset: 0.41, // Target zone starts at 41% of width (centered 41-59)
                 chainCount: 0,
-                maxChain: 10, // Target chain length for success (increased difficulty)
+                maxChain: 12, // Target chain length for success (increased difficulty)
                 isPulsing: false,
                 pulseTimer: null,
                 nextPulseTime: 0,
@@ -1482,13 +1482,13 @@
                 temporalFlux: 50, // 0-100
                 integrity: 100, // 0-100
                 perturbation: 0, // Random noise
-                perturbationRate: 1.5, // How much perturbation changes per tick (increased)
+                perturbationRate: 2.0, // How much perturbation changes per tick (increased)
                 perturbationInterval: null,
-                stableZoneThreshold: 5, // Max diff from center for stable (slightly stricter)
-                integrityDecayRate: 0.4, // Decay per tick when unstable (increased)
-                integrityGainRate: 0.1, // Gain per tick when stable (slightly increased)
+                stableZoneThreshold: 4, // Max diff from center for stable (slightly stricter)
+                integrityDecayRate: 0.5, // Decay per tick when unstable (increased)
+                integrityGainRate: 0.12, // Gain per tick when stable (slightly increased)
                 lastOptimalTime: 0,
-                minOptimalTime: 30000, // 30 seconds of optimal for success (increased)
+                minOptimalTime: 35000, // 35 seconds of optimal for success (increased)
                 lastCalibrationOptimal: false,
             },
             ucm: { // Universal Core Manifestor - Core Trait Configuration
@@ -1501,10 +1501,11 @@
                     { name: 'Energy Nexus Link', potential: 30, cost: { energy: 600, processingPower: 10 }, isActive: false },
                     { name: 'Existential Resonance', potential: 80, cost: { dataFlow: 1000, exoticMatter: 2.5, existentialFabric: 0.4 }, isActive: false },
                     { name: 'Cosmic Fabrication', potential: 90, cost: { energy: 2500, rawData: 40, exoticMatter: 3.0, existentialFabric: 0.45, processingPower: 30}, isActive: false}, // New trait
-                    { name: 'Multiversal Weaving', potential: 110, cost: { energy: 3000, rawData: 50, exoticMatter: 4.0, existentialFabric: 0.5, processingPower: 40, dataFlow: 1500 }, isActive: false} // Another new trait
+                    { name: 'Multiversal Weaving', potential: 110, cost: { energy: 3000, rawData: 50, exoticMatter: 4.0, existentialFabric: 0.5, processingPower: 40, dataFlow: 1500 }, isActive: false}, // Another new trait
+                    { name: 'Singularity Alignment', potential: 130, cost: { energy: 4000, rawData: 60, exoticMatter: 5.0, existentialFabric: 0.6, processingPower: 50, dataFlow: 2000 }, isActive: false} // Yet another new trait
                 ],
-                manifestationBudget: { energy: 7000, dataFlow: 3500, rawData: 90, processingPower: 90, exoticMatter: 8.0, existentialFabric: 0.8 }, // Increased budget
-                targetPotential: 250, // Increased target
+                manifestationBudget: { energy: 8000, dataFlow: 4000, rawData: 95, processingPower: 95, exoticMatter: 9.0, existentialFabric: 0.9 }, // Increased budget
+                targetPotential: 300, // Increased target
                 currentPotential: 0,
                 currentCost: { energy: 0, dataFlow: 0, rawData: 0, processingPower: 0, exoticMatter: 0, existentialFabric: 0 },
                 manifestationSuccess: false,
@@ -1564,7 +1565,7 @@
                 barShadowColor = 'rgba(255, 165, 0, 0.9)';
             }
             levelBar.style.background = `var(${barColorVar})`;
-            levelBar.style.boxShadow = `0 0 16px ${barShadowColor}`;
+            levelBar.style.boxShadow = `0 0 20px ${barShadowColor}`;
 
             if (resource.priority) {
                 displayDiv.classList.add('prioritized');
@@ -1628,7 +1629,7 @@
         function generateTargetChain() {
             webLifeFormState.qdd.targetChain = [];
             const symbols = webLifeFormState.qdd.symbolsPool;
-            const chainLength = 7 + Math.floor(Math.random() * 3); // 7-9 symbols in chain
+            const chainLength = 9 + Math.floor(Math.random() * 3); // 9-11 symbols in chain
             for (let i = 0; i < chainLength; i++) {
                 webLifeFormState.qdd.targetChain.push(symbols[Math.floor(Math.random() * symbols.length)]);
             }
@@ -1671,9 +1672,9 @@
                     qddCurrentTargetSymbol.textContent = 'COMPLETE';
                     qddOutputDisplay.innerHTML = `// Decipher SUCCESS! Quantum stream stabilized. <span style="color:var(--stability-good);">DATA FLOW BOOSTED!</span>`;
                     webLifeFormState.qdd.lastDecipherOptimal = true;
-                    webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 2500);
-                    webLifeFormState.resources.rawData.value = Math.min(webLifeFormState.resources.rawData.max, webLifeFormState.resources.rawData.value + 30);
-                    webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 15);
+                    webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 3000);
+                    webLifeFormState.resources.rawData.value = Math.min(webLifeFormState.resources.rawData.max, webLifeFormState.resources.rawData.value + 35);
+                    webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 18);
                     appendLog(`Quantum Data Decipher successful. Data flow, raw data, and processing power increased.`, 'qdd');
                     webLifeFormState.qdd.isActive = false;
                 } else {
@@ -1704,11 +1705,11 @@
         const btnAnalyzePattern = document.querySelector('.btn-analyze-pattern');
 
         const patternSVGs = {
-            'straight': `<path d="M0 50 L100 50" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'corner': `<path d="M0 50 L50 50 L50 100" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            't-junction': `<path d="M50 0 L50 100 M0 50 L50 50" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'cross': `<path d="M50 0 L50 100 M0 50 L100 50" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'end': `<path d="M0 50 L50 50" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+            'straight': `<path d="M0 50 L100 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+            'corner': `<path d="M0 50 L50 50 L50 100" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+            't-junction': `<path d="M50 0 L50 100 M0 50 L50 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+            'cross': `<path d="M50 0 L50 100 M0 50 L100 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+            'end': `<path d="M0 50 L50 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
             'void': `` // No path for empty
         };
 
@@ -1794,7 +1795,7 @@
             for (let r = 0; r < dims; r++) {
                 for (let c = 0; c < dims; c++) {
                     if (pattern[r][c] === null) {
-                        const randomPieceType = Math.random() < 0.75 ? 'void' : webLifeFormState.aps.patternTypes[Math.floor(Math.random() * (webLifeFormState.aps.patternTypes.length - 2))]; // Exclude 'end', 'void' for fillers
+                        const randomPieceType = Math.random() < 0.8 ? 'void' : webLifeFormState.aps.patternTypes[Math.floor(Math.random() * (webLifeFormState.aps.patternTypes.length - 2))]; // Exclude 'end', 'void' for fillers
                         pattern[r][c] = { type: randomPieceType, rotation: Math.floor(Math.random() * 4) * 90 };
                     }
                 }
@@ -1810,11 +1811,11 @@
 
         function generateFullSVGPattern(patternData, dims, isTarget=false) {
             let svgContent = '';
-            const strokeColor = isTarget ? `rgba(255, 0, 255, 0.45)` : `var(--aps-pattern-line)`;
-            const strokeWidth = isTarget ? `18` : `12`; // Thicker for target
+            const strokeColor = isTarget ? `rgba(255, 0, 255, 0.55)` : `var(--aps-pattern-line)`;
+            const strokeWidth = isTarget ? `20` : `14`; // Thicker for target
             let filterDef = '';
             if (isTarget) {
-                 filterDef = `<defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="8" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>`;
+                 filterDef = `<defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>`;
             }
 
             for (let r = 0; r < dims; r++) {
@@ -1906,13 +1907,13 @@
             if (match) {
                 apsOutputDisplay.innerHTML = `// Synthesis SUCCESS! <span style="color:var(--stability-good);">Aetheric Pattern Reconstructed!</span> Existential Fabric generated.`;
                 webLifeFormState.aps.lastSynthesisOptimal = true;
-                webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.35);
-                webLifeFormState.resources.exoticMatter.value = Math.min(webLifeFormState.resources.exoticMatter.max, webLifeFormState.resources.exoticMatter.value + 0.8);
+                webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.4);
+                webLifeFormState.resources.exoticMatter.value = Math.min(webLifeFormState.resources.exoticMatter.max, webLifeFormState.resources.exoticMatter.value + 0.9);
                 appendLog(`Aetheric Pattern Synthesis successful. Fabric and exotic matter increased.`, 'aps');
             } else {
                 apsOutputDisplay.innerHTML = `// Synthesis FAILED: <span style="color:var(--stability-critical);">Pattern Mismatch!</span> Recalibrate segments.`;
                 webLifeFormState.aps.lastSynthesisOptimal = false;
-                webLifeFormState.resources.existentialFabric.value = Math.max(0, webLifeFormState.resources.existentialFabric.value - 0.15); // Penalty
+                webLifeFormState.resources.existentialFabric.value = Math.max(0, webLifeFormState.resources.existentialFabric.value - 0.2); // Penalty
                 appendLog(`Aetheric Pattern synthesis failed. Existential Fabric reduced.`, 'aps');
             }
             webLifeFormState.aps.isActive = false; // End game after analysis
@@ -1966,23 +1967,23 @@
             const now = Date.now();
             const timeDiff = now - webLifeFormState.cwp.nextPulseTime;
             const threshold = (webLifeFormState.cwp.pulseDuration * webLifeFormState.cwp.targetZoneWidth) / 2; // Half target zone width in ms
-            const perfectThreshold = threshold * 0.25; // Smaller perfect zone (25% of half zone width)
+            const perfectThreshold = threshold * 0.20; // Smaller perfect zone (20% of half zone width)
 
             if (Math.abs(timeDiff) < perfectThreshold) {
                 showCWPFeedback('PERFECT!', 'var(--cwp-hit-perfect)');
                 webLifeFormState.cwp.chainCount++;
                 cwpMatchStatus.textContent = `// PERFECT HIT! Resonance Chain: ${webLifeFormState.cwp.chainCount}`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 10);
+                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 12);
             } else if (Math.abs(timeDiff) < threshold) {
                 showCWPFeedback('GOOD!', 'var(--cwp-hit-good)');
                 webLifeFormState.cwp.chainCount++;
                 cwpMatchStatus.textContent = `// GOOD HIT! Resonance Chain: ${webLifeFormState.cwp.chainCount}`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 5);
+                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 6);
             } else {
                 showCWPFeedback('MISS!', 'var(--cwp-hit-bad)');
                 webLifeFormState.cwp.chainCount = 0; // Reset chain
                 cwpMatchStatus.textContent = `// MISS! Resonance Chain BROKEN.`;
-                webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 10);
+                webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 12);
             }
 
             webLifeFormState.cwp.lastPulseHitTime = now;
@@ -1990,8 +1991,8 @@
             if (webLifeFormState.cwp.chainCount >= webLifeFormState.cwp.maxChain) {
                 webLifeFormState.cwp.lastProjectionOptimal = true;
                 cwpMatchStatus.innerHTML = `// PROJECTION SUCCESS! <span style="color:var(--stability-good);">Target Resonance Achieved!</span> Processing power surged.`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 35);
-                webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 1500);
+                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 40);
+                webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 1800);
                 appendLog(`Conscious Waveform Projection successful. Processing power and data flow increased.`, 'cwp');
                 stopCWPInterval();
                 webLifeFormState.cwp.isActive = false;
@@ -2067,9 +2068,9 @@
 
             // Apply a slight transform for visual jitter when unstable
             let jitterX = 0, jitterY = 0;
-            if (Math.abs(balanceOffset) > webLifeFormState.sas.stableZoneThreshold * 1.5) {
-                jitterX = (Math.random() - 0.5) * 8; // 8px max jitter
-                jitterY = (Math.random() - 0.5) * 8;
+            if (Math.abs(balanceOffset) > webLifeFormState.sas.stableZoneThreshold * 1.8) { // Increased jitter trigger threshold
+                jitterX = (Math.random() - 0.5) * 10; // 10px max jitter
+                jitterY = (Math.random() - 0.5) * 10;
             }
             sasStabilityIndicator.style.transform = `translate(calc(-50% + ${jitterX}px), calc(-50% + ${jitterY}px)) translateX(${indicatorPosition - 50}%)`;
 
@@ -2078,40 +2079,40 @@
             if (inStableZone) {
                 webLifeFormState.sas.integrity = Math.min(100, webLifeFormState.sas.integrity + webLifeFormState.sas.integrityGainRate);
                 sasStabilityIndicator.style.background = 'var(--sas-indicator-good)';
-                sasStabilityIndicator.style.boxShadow = '0 0 28px var(--sas-indicator-good)';
+                sasStabilityIndicator.style.boxShadow = '0 0 30px var(--sas-indicator-good)';
                 if (webLifeFormState.sas.lastOptimalTime === 0) {
                     webLifeFormState.sas.lastOptimalTime = Date.now();
                 }
             } else {
                 webLifeFormState.sas.integrity = Math.max(0, webLifeFormState.sas.integrity - webLifeFormState.sas.integrityDecayRate);
-                if (webLifeFormState.sas.integrity > 50) {
+                if (webLifeFormState.sas.integrity > 55) { // Adjusted warning threshold
                     sasStabilityIndicator.style.background = 'var(--sas-indicator-warn)';
-                    sasStabilityIndicator.style.boxShadow = '0 0 22px var(--sas-indicator-warn)';
+                    sasStabilityIndicator.style.boxShadow = '0 0 25px var(--sas-indicator-warn)';
                 } else {
                     sasStabilityIndicator.style.background = 'var(--sas-indicator-crit)';
-                    sasStabilityIndicator.style.boxShadow = '0 0 30px var(--sas-indicator-crit)';
+                    sasStabilityIndicator.style.boxShadow = '0 0 35px var(--sas-indicator-crit)';
                 }
                 webLifeFormState.sas.lastOptimalTime = 0; // Reset optimal timer
             }
 
             // Update stability text
             sasStabilityStatus.textContent = `${webLifeFormState.sas.integrity.toFixed(1)}%`;
-            if (webLifeFormState.sas.integrity > 80) {
+            if (webLifeFormState.sas.integrity > 85) { // Adjusted thresholds
                 sasStabilityStatus.style.color = 'var(--stability-good)';
-                sasStabilityStatus.style.textShadow = '0 0 16px var(--stability-good)';
-            } else if (webLifeFormState.sas.integrity > 50) {
+                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-good)';
+            } else if (webLifeFormState.sas.integrity > 55) {
                 sasStabilityStatus.style.color = 'var(--stability-warning)';
-                sasStabilityStatus.style.textShadow = '0 0 16px var(--stability-warning)';
+                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-warning)';
             } else {
                 sasStabilityStatus.style.color = 'var(--stability-critical)';
-                sasStabilityStatus.style.textShadow = '0 0 16px var(--stability-critical)';
+                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-critical)';
                 if (!webLifeFormState.anomalyAlert) {
                     globalAnomalyAlert.classList.add('active');
                     webLifeFormState.anomalyAlert = true;
                     appendLog("CRITICAL: SPACETIME INTEGRITY COLLAPSE IMMINENT! Global anomaly alert.", 'critical');
                 }
             }
-            if (webLifeFormState.sas.integrity > 88 && webLifeFormState.anomalyAlert && webLifeFormState.resources.existentialFabric.value >= 0.28) {
+            if (webLifeFormState.sas.integrity > 90 && webLifeFormState.anomalyAlert && webLifeFormState.resources.existentialFabric.value >= 0.3) {
                 // Only clear if SAS is also not critical
                 globalAnomalyAlert.classList.remove('active');
                 webLifeFormState.anomalyAlert = false;
@@ -2119,7 +2120,7 @@
             }
 
             // Check for optimal state for UCM
-            if (webLifeFormState.sas.lastOptimalTime !== 0 && (Date.now() - webLifeFormState.sas.lastOptimalTime) >= webLifeFormState.sas.minOptimalTime && webLifeFormState.sas.integrity >= 93) {
+            if (webLifeFormState.sas.lastOptimalTime !== 0 && (Date.now() - webLifeFormState.sas.lastOptimalTime) >= webLifeFormState.sas.minOptimalTime && webLifeFormState.sas.integrity >= 95) { // Higher threshold for optimal
                 webLifeFormState.sas.lastCalibrationOptimal = true;
                 sasStatusDisplay.innerHTML = `// CALIBRATION OPTIMAL! <span style="color:var(--stability-good);">Spacetime Integrity Maintained.</span>`;
             } else {
@@ -2129,8 +2130,8 @@
         }
 
         function updateSASPerturbation() {
-            webLifeFormState.sas.perturbation += (Math.random() - 0.5) * webLifeFormState.sas.perturbationRate * 25; // -12.5 to 12.5
-            webLifeFormState.sas.perturbation = Math.max(-30, Math.min(30, webLifeFormState.sas.perturbation)); // Keep perturbation within reasonable bounds
+            webLifeFormState.sas.perturbation += (Math.random() - 0.5) * webLifeFormState.sas.perturbationRate * 30; // -15 to 15
+            webLifeFormState.sas.perturbation = Math.max(-35, Math.min(35, webLifeFormState.sas.perturbation)); // Keep perturbation within reasonable bounds
         }
 
         function initSASStabilizer() {
@@ -2139,9 +2140,9 @@
             temporalFluxSlider.addEventListener('input', updateFluxValues);
 
             if (webLifeFormState.sas.perturbationInterval) clearInterval(webLifeFormState.sas.perturbationInterval);
-            webLifeFormState.sas.perturbationInterval = setInterval(updateSASPerturbation, 1200); // Perturbation changes every 1.2 seconds
+            webLifeFormState.sas.perturbationInterval = setInterval(updateSASPerturbation, 1000); // Perturbation changes every 1 second
 
-            setInterval(updateSASDisplay, 60); // Update display every 60ms for smoother indicator movement
+            setInterval(updateSASDisplay, 50); // Update display every 50ms for smoother indicator movement
             appendLog(`Spacetime Anchor Stabilizer online. Begin flux calibration.`, 'sas');
         }
 
@@ -2158,7 +2159,7 @@
 
         function renderUCMTraits() {
             ucmTraitConfig.innerHTML = '';
-            ucmTraitConfig.style.maxHeight = '28rem'; // Make scrollable if many traits
+            ucmTraitConfig.style.maxHeight = '32rem'; // Make scrollable if many traits
             ucmTraitConfig.style.overflowY = 'auto';
 
             webLifeFormState.ucm.traits.forEach(trait => {
@@ -2213,7 +2214,7 @@
             webLifeFormState.ucm.traits.filter(t => t.isActive).forEach(trait => {
                 totalPotential += trait.potential;
                 for (const res in trait.cost) {
-                    totalCost[res] += trait.cost[res];
+                    totalCost[res] += trait.cost[res] || 0; // Ensure cost is numeric
                 }
             });
 
@@ -2283,7 +2284,7 @@
             btnInitiateManifestation.textContent = 'MANIFESTING...';
             ucmManifestationStatus.classList.remove('success', 'fail');
             ucmManifestationStatus.style.color = 'var(--ucm-text)';
-            ucmManifestationStatus.style.textShadow = '0 0 18px var(--ucm-glow)';
+            ucmManifestationStatus.style.textShadow = '0 0 20px var(--ucm-glow)';
             appendLog(`Universal Core Manifestation initiated with current configuration.`, 'ucm');
 
             // Simulate resource consumption
@@ -2317,7 +2318,7 @@
                 }
                 btnInitiateManifestation.textContent = 'Initiate Core Manifestation';
                 calculateUCMSummary(); // Re-enable/disable button based on new state
-            }, 4500); // 4.5 seconds manifestation time
+            }, 5000); // 5 seconds manifestation time
         }
 
         function initUCManifestor() {
@@ -2337,17 +2338,17 @@
                     let decayRate = 0.01; // Base decay
                     if (resource.priority) {
                         // Prioritized resources might have less decay or slight gain
-                        decayRate = -0.008; // A slight simulated gain for prioritized
+                        decayRate = -0.01; // A slight simulated gain for prioritized
                     } else {
                         // Non-prioritized decay faster
-                        decayRate = 0.05 + (Math.random() * 0.04); // Slightly faster overall decay
+                        decayRate = 0.06 + (Math.random() * 0.05); // Slightly faster overall decay
                     }
 
-                    if (key === 'energy') decayRate *= 15; // Energy decays faster
-                    if (key === 'existentialFabric') decayRate *= 0.7; // Fabric decays slower
-                    if (key === 'rawData') decayRate *= 2; // Raw data decays faster
-                    if (key === 'processingPower') decayRate *= 0.9; // Processing power slightly slower decay
-                    if (key === 'exoticMatter') decayRate *= 1.3; // Exotic matter decays faster
+                    if (key === 'energy') decayRate *= 18; // Energy decays faster
+                    if (key === 'existentialFabric') decayRate *= 0.8; // Fabric decays slower
+                    if (key === 'rawData') decayRate *= 2.5; // Raw data decays faster
+                    if (key === 'processingPower') decayRate *= 1.0; // Processing power slightly slower decay
+                    if (key === 'exoticMatter') decayRate *= 1.5; // Exotic matter decays faster
 
                     resource.value = Math.max(0, Math.min(resource.max, resource.value - decayRate * resource.max / 1000));
                 }
@@ -2355,18 +2356,18 @@
                 updateAllResourceDisplays();
 
                 // Simple anomaly alert activation if fabric is too low
-                if (webLifeFormState.resources.existentialFabric.value < 0.12 && !webLifeFormState.anomalyAlert) {
+                if (webLifeFormState.resources.existentialFabric.value < 0.10 && !webLifeFormState.anomalyAlert) {
                     globalAnomalyAlert.classList.add('active');
                     webLifeFormState.anomalyAlert = true;
                     appendLog("CRITICAL: EXISTENTIAL FABRIC DILUTION! System integrity compromised.", 'critical');
-                } else if (webLifeFormState.resources.existentialFabric.value >= 0.25 && webLifeFormState.anomalyAlert && webLifeFormState.sas.integrity > 65) {
+                } else if (webLifeFormState.resources.existentialFabric.value >= 0.30 && webLifeFormState.anomalyAlert && webLifeFormState.sas.integrity > 70) {
                     // Only clear if SAS is also not critical and fabric is recovering
                     globalAnomalyAlert.classList.remove('active');
                     webLifeFormState.anomalyAlert = false;
                     appendLog("Existential Fabric density recovered to safe levels. Anomaly alert cleared.", 'system');
                 }
 
-            }, 750); // Update resources every 750ms
+            }, 700); // Update resources every 700ms
         }
 
 
