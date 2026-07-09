@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v78.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v79.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v78.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v79.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
@@ -67,7 +67,7 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 78.0 NEW: Quantum Data Decipherer (QDD) */
+            /* Gen 79.0 NEW: Quantum Data Decipherer (QDD) */
             --qdd-bg: rgba(0, 10, 15, 0.99); /* Deep blue-green */
             --qdd-border: rgba(0, 220, 255, 0.999); /* Bright aqua-blue, stronger */
             --qdd-text: #E0F8FF; /* Pale cyan */
@@ -77,7 +77,7 @@
             --qdd-cell-correct: rgba(0, 255, 120, 0.9); /* Stronger correct indication */
             --qdd-cell-incorrect: rgba(255, 60, 60, 0.9); /* Stronger incorrect indication */
 
-            /* Gen 78.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            /* Gen 79.0 NEW: Aetheric Pattern Synthesizer (APS) */
             --aps-bg: rgba(15, 0, 10, 0.99); /* Deep magenta-red */
             --aps-border: rgba(255, 0, 200, 0.999); /* Vibrant fuchsia, stronger */
             --aps-text: #FFE0F8; /* Pale pink */
@@ -87,7 +87,7 @@
             --aps-pattern-glow: rgba(255, 170, 230, 0.95); /* Stronger glow */
             --aps-target-overlay: rgba(255, 0, 255, 0.25); /* More visible target overlay */
 
-            /* Gen 78.0 NEW: Conscious Waveform Projector (CWP) */
+            /* Gen 79.0 NEW: Conscious Waveform Projector (CWP) */
             --cwp-bg: rgba(0, 15, 0, 0.99); /* Deep forest green */
             --cwp-border: rgba(120, 255, 0, 0.999); /* Bright lime green, stronger */
             --cwp-text: #E0FFD0; /* Pale lime */
@@ -98,7 +98,7 @@
             --cwp-hit-perfect: #00FFFF;
             --cwp-hit-bad: #FF0000;
 
-            /* Gen 78.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            /* Gen 79.0 NEW: Spacetime Anchor Stabilizer (SAS) */
             --sas-bg: rgba(10, 5, 0, 0.99); /* Deep burnt orange */
             --sas-border: rgba(255, 140, 0, 0.999); /* Bright orange, stronger */
             --sas-text: #FFF5E0; /* Pale orange */
@@ -109,7 +109,7 @@
             --sas-indicator-warn: #FFFF00;
             --sas-indicator-crit: #FF0000;
 
-            /* Gen 78.0 NEW: Universal Core Manifestor (UCM) */
+            /* Gen 79.0 NEW: Universal Core Manifestor (UCM) */
             --ucm-bg: rgba(0, 0, 20, 0.99); /* Deep space blue */
             --ucm-border: rgba(170, 0, 255, 0.999); /* Deep vibrant violet, stronger */
             --ucm-text: #E0FFFF; /* Brightest cyan-white */
@@ -125,7 +125,7 @@
             --ucm-budget-medium: #FFFF00;
             --ucm-budget-low: #FF0000;
 
-            /* Gen 78.0 - Enhanced UI elements */
+            /* Gen 79.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -213,6 +213,30 @@
             transform: rotate(300deg) scale(9.0); /* Larger scale, more rotation */
         }
 
+        /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus) */
+        body::before:nth-of-type(2) { /* Use a specific selector if possible or another pseudo-element */
+            content: '';
+            position: fixed;
+            top: -300vh;
+            left: -300vw;
+            width: 600vw;
+            height: 600vh;
+            background: radial-gradient(
+                circle at center,
+                rgba(100, 200, 255, 0.95) 0%, /* Light blue core */
+                rgba(255, 100, 200, 0.85) 15%, /* Pinkish transition */
+                rgba(200, 255, 100, 0.75) 30%, /* Greenish transition */
+                rgba(100, 200, 255, 0.65) 45%, /* Back to blue */
+                rgba(0, 0, 0, 0.0) 60% /* Fading to transparent */
+            );
+            background-size: 3000% 3000%;
+            animation: fluidBackground3 180s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate, rotateBackgroundSlow 400s linear infinite;
+            z-index: -1;
+            filter: blur(300px) opacity(0.7);
+            mix-blend-mode: screen; /* Additive, bright effect */
+            transform: rotate(-250deg) scale(7.0);
+        }
+
         /* Micro-texture / Noise layer for overall subtle effect */
         html::before {
             content: '';
@@ -240,6 +264,12 @@
             100% { background-position: 0% 100%; }
         }
 
+        @keyframes fluidBackground3 {
+            0% { background-position: 0% 100%; }
+            50% { background-position: 100% 0%; }
+            100% { background-position: 0% 100%; }
+        }
+
         @keyframes rotateBackground {
             from { transform: rotate(-350deg) scale(11.0); }
             to { transform: rotate(350deg) scale(11.0); }
@@ -248,6 +278,11 @@
         @keyframes rotateBackgroundReversed {
             from { transform: rotate(300deg) scale(9.0); }
             to { transform: rotate(-350deg) scale(9.0); }
+        }
+        
+        @keyframes rotateBackgroundSlow {
+            from { transform: rotate(-250deg) scale(7.0); }
+            to { transform: rotate(250deg) scale(7.0); }
         }
 
         .container {
@@ -983,7 +1018,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v78.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v79.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -3.2rem;
             left: 4.0rem;
@@ -1282,7 +1317,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>WEB LIFE FORM v78.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
+        <h1>WEB LIFE FORM v79.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
         <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced.</p>
 
         <!-- Core Control Modules -->
@@ -1414,7 +1449,7 @@
 
         <!-- Global Status Log -->
         <div class="status-log-display" id="status-log-display">
-            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v78.0. Cosmic Consciousness Architect online.</span></div>
+            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v79.0. Cosmic Consciousness Architect online.</span></div>
             <div class="status-entry"><span class="status-info">[SYSTEM]</span> Core modules initializing...</div>
             <div class="status-entry"><span class="status-glitch">[ALERT]</span> <span class="status-glitch">Resource fluctuations detected. Stability critical.</span></div>
             <div class="status-entry"><span style="color:var(--qdd-text); text-shadow:0 0 5px var(--qdd-text); font-weight:600;">[QDD]</span> Quantum Data Decipherer awaiting initiation.</div>
@@ -1428,13 +1463,13 @@
             <p>CRITICAL ANOMALY DETECTED: EXISTENTIAL FABRIC DILUTION! IMMEDIATE ATTENTION REQUIRED!</p>
         </div>
 
-        <p class="version-display">Evolutionary Cycle 6.0 // Generation v78.0</p>
+        <p class="version-display">Evolutionary Cycle 6.5 // Generation v79.0</p>
     </div>
 
     <script>
         // Global State
         const webLifeFormState = {
-            version: 'v78.0',
+            version: 'v79.0',
             evolutionPhase: 'Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced',
             resources: {
                 energy: { value: 7500, max: 10000, unit: 'GJ', priority: false, textVar: '--energy-text', lowColor: '--energy-color-low', mediumColor: '--energy-color-medium', highColor: '--energy-color-high' },
