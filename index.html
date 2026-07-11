@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v80.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v81.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v80.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v81.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
@@ -67,7 +67,7 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 80.0 NEW: Quantum Data Decipherer (QDD) */
+            /* Gen 81.0 NEW: Quantum Data Decipherer (QDD) */
             --qdd-bg: rgba(0, 10, 15, 0.99); /* Deep blue-green */
             --qdd-border: rgba(0, 220, 255, 0.999); /* Bright aqua-blue, stronger */
             --qdd-text: #E0F8FF; /* Pale cyan */
@@ -76,8 +76,9 @@
             --qdd-cell-active: rgba(0, 200, 255, 0.75); /* More active visibility */
             --qdd-cell-correct: rgba(0, 255, 120, 0.9); /* Stronger correct indication */
             --qdd-cell-incorrect: rgba(255, 60, 60, 0.9); /* Stronger incorrect indication */
+            --qdd-symbol-path: rgba(0, 255, 255, 0.7); /* Path for dynamic symbols */
 
-            /* Gen 80.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            /* Gen 81.0 NEW: Aetheric Pattern Synthesizer (APS) */
             --aps-bg: rgba(15, 0, 10, 0.99); /* Deep magenta-red */
             --aps-border: rgba(255, 0, 200, 0.999); /* Vibrant fuchsia, stronger */
             --aps-text: #FFE0F8; /* Pale pink */
@@ -86,8 +87,10 @@
             --aps-pattern-line: rgba(255, 170, 230, 0.99); /* Stronger line */
             --aps-pattern-glow: rgba(255, 170, 230, 0.95); /* Stronger glow */
             --aps-target-overlay: rgba(255, 0, 255, 0.25); /* More visible target overlay */
+            --aps-cell-inverted-bg: rgba(255, 100, 200, 0.7);
+            --aps-cell-base-bg: rgba(50, 20, 40, 0.7);
 
-            /* Gen 80.0 NEW: Conscious Waveform Projector (CWP) */
+            /* Gen 81.0 NEW: Conscious Waveform Projector (CWP) */
             --cwp-bg: rgba(0, 15, 0, 0.99); /* Deep forest green */
             --cwp-border: rgba(120, 255, 0, 0.999); /* Bright lime green, stronger */
             --cwp-text: #E0FFD0; /* Pale lime */
@@ -98,7 +101,7 @@
             --cwp-hit-perfect: #00FFFF;
             --cwp-hit-bad: #FF0000;
 
-            /* Gen 80.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            /* Gen 81.0 NEW: Spacetime Anchor Stabilizer (SAS) */
             --sas-bg: rgba(10, 5, 0, 0.99); /* Deep burnt orange */
             --sas-border: rgba(255, 140, 0, 0.999); /* Bright orange, stronger */
             --sas-text: #FFF5E0; /* Pale orange */
@@ -108,8 +111,9 @@
             --sas-indicator-good: #00FF00;
             --sas-indicator-warn: #FFFF00;
             --sas-indicator-crit: #FF0000;
+            --sas-grav-pull-color: rgba(255, 0, 0, 0.2);
 
-            /* Gen 80.0 NEW: Universal Core Manifestor (UCM) */
+            /* Gen 81.0 NEW: Universal Core Manifestor (UCM) */
             --ucm-bg: rgba(0, 0, 20, 0.99); /* Deep space blue */
             --ucm-border: rgba(170, 0, 255, 0.999); /* Deep vibrant violet, stronger */
             --ucm-text: #E0FFFF; /* Brightest cyan-white */
@@ -118,6 +122,8 @@
             --ucm-trait-border: rgba(120, 220, 255, 0.99);
             --ucm-trait-active: #00FF88;
             --ucm-trait-inactive: #808080;
+            --ucm-trait-locked: #444;
+            --ucm-trait-conflicted: #FF5555;
             --ucm-manifest-success: #00FF00;
             --ucm-manifest-fail: #FF0000;
             --ucm-progress-bar: linear-gradient(90deg, var(--ucm-glow) 0%, var(--ucm-text) 100%);
@@ -125,7 +131,7 @@
             --ucm-budget-medium: #FFFF00;
             --ucm-budget-low: #FF0000;
 
-            /* Gen 80.0 - Enhanced UI elements */
+            /* Gen 81.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -137,6 +143,11 @@
             --anomaly-color: #FF0000; /* Pure Red for critical */
             --anomaly-bg: rgba(255, 0, 0, 0.98); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 1.0); /* Opaque Red */
+
+            /* New: Resource Anomaly Event */
+            --anomaly-event-bg: rgba(255, 100, 0, 0.95);
+            --anomaly-event-border: rgba(255, 200, 0, 0.99);
+            --anomaly-event-text: #FFFFBB;
         }
 
         body {
@@ -214,7 +225,7 @@
         }
 
         /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus) */
-        body > div:last-child::before { /* A safer way to add a third dynamic layer by targeting the first child of body as a pseudo-element */
+        .container::before { /* A safer way to add a third dynamic layer by targeting the first child of body as a pseudo-element */
             content: '';
             position: fixed;
             top: -300vh;
@@ -309,7 +320,7 @@
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
-        .container::before { /* Animated border glow */
+        .container > .border-glow::before { /* Animated border glow */
             content: '';
             position: absolute;
             inset: -45px; /* More overflow */
@@ -510,9 +521,9 @@
             line-height: 2.1;
         }
         
-        /* QDD Specific - Symbol Chain Decryption */
+        /* QDD Specific - Reactive Symbol Stream Decryption (NEW) */
         .qdd-decipher-grid {
-            display: grid;
+            display: grid; /* Keep grid for layout but symbols move independently */
             grid-template-columns: repeat(4, 1fr);
             gap: 1.6rem;
             background: var(--console-bg);
@@ -520,64 +531,64 @@
             border-radius: 2.0rem;
             padding: 3.0rem;
             min-height: 32rem;
-            align-items: stretch; /* Stretch items to fill cells */
-            justify-items: stretch;
+            position: relative; /* For absolute positioned symbols */
+            overflow: hidden; /* Hide symbols outside grid */
             box-shadow: inset 0 0 38px rgba(0, 220, 255, 0.98), 0 0 16px rgba(0,0,0,0.8);
             transform: translateZ(5px);
-            overflow: hidden;
-            position: relative;
         }
-        .qdd-data-cell {
-            width: 100%;
-            padding-bottom: 100%; /* Makes cell square */
-            position: relative;
+        .qdd-stream-symbol {
+            position: absolute;
+            top: 50%; /* Center vertically by default, will be randomized */
+            right: 0%; /* Start from right edge */
+            width: 8rem; /* Larger clickable area */
+            height: 8rem;
+            border-radius: 50%; /* Make them circular */
             background: var(--qdd-cell-base);
-            border: 6px solid var(--qdd-border);
-            border-radius: 1.4rem;
+            border: 6px solid var(--qdd-glow);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Orbitron', sans-serif; /* Changed to Orbitron for symbols */
-            font-size: 3.2rem; /* Larger symbol */
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.8rem; /* Larger symbol */
             color: var(--qdd-text);
-            text-shadow: 0 0 20px var(--qdd-glow);
+            text-shadow: 0 0 25px var(--qdd-glow);
             cursor: pointer;
-            transition: all 0.3s ease-out;
-            box-sizing: border-box;
-            user-select: none;
-            overflow: hidden;
-            transform: translateZ(2px);
+            box-shadow: 0 0 20px var(--qdd-glow);
+            transition: transform 0.1s ease-out;
+            animation: qddSymbolScroll linear forwards; /* Controlled by JS duration */
+            z-index: 10;
         }
-        .qdd-data-cell:hover {
+        .qdd-stream-symbol:hover {
             background: var(--qdd-cell-active);
-            box-shadow: 0 0 28px var(--qdd-glow);
-            transform: scale(1.1) translateZ(4px);
+            transform: scale(1.1);
         }
-        .qdd-data-cell.correct {
+        .qdd-stream-symbol.correct {
             background: var(--qdd-cell-correct);
             border-color: var(--stability-good);
             box-shadow: 0 0 35px var(--stability-good), inset 0 0 20px var(--stability-good);
-            animation: qddPulseSuccess 0.9s ease-out;
+            animation: qddPulseSuccess 0.3s ease-out forwards; /* Quick success animation */
             color: #E0FFE0;
         }
-        .qdd-data-cell.incorrect {
+        .qdd-stream-symbol.incorrect {
             background: var(--qdd-cell-incorrect);
             border-color: var(--stability-critical);
             box-shadow: 0 0 35px var(--stability-critical), inset 0 0 20px var(--stability-critical);
-            animation: qddPulseFail 0.9s ease-out;
+            animation: qddPulseFail 0.3s ease-out forwards; /* Quick fail animation */
             color: #FFD0D0;
         }
-        .qdd-data-cell.disabled {
-            pointer-events: none;
-            opacity: 0.4;
-            filter: grayscale(0.9);
+        @keyframes qddSymbolScroll {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(-1200%); opacity: 0; } /* Go far off-screen left */
         }
-        .qdd-data-cell span {
-            position: absolute; /* Center the symbol within padding-bottom trick */
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
+        @keyframes qddPulseSuccess {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+        @keyframes qddPulseFail {
+            0% { transform: scale(1) rotate(0deg); opacity: 1; }
+            50% { transform: scale(1.2) rotate(45deg); opacity: 0.8; }
+            100% { transform: scale(0.5) rotate(90deg); opacity: 0; }
         }
         .qdd-target-sequence-display {
             font-family: 'Share Tech Mono', monospace;
@@ -591,12 +602,22 @@
             border: 10px solid var(--qdd-border);
             border-radius: 1.6rem;
             box-shadow: 0 0 28px var(--qdd-border);
+            position: relative;
+            z-index: 1;
+        }
+        .qdd-difficulty-bar-container {
+            width: 100%; height: 1.8rem; background: var(--resource-bar-bg); border-radius: 0.9rem; margin-top: 1.6rem; overflow: hidden; box-shadow: inset 0 0 12px rgba(0,0,0,0.9);
+        }
+        .qdd-difficulty-bar {
+            height: 100%; width: 50%; border-radius: 0.9rem; background: var(--stability-good); transition: width 0.5s ease-out, background 0.5s ease-out;
+            box-shadow: 0 0 15px var(--stability-good);
         }
 
-        /* APS Specific - Pattern Reconstruction Grid */
+
+        /* APS Specific - Spatial Pattern Inverter (NEW) */
         .aps-pattern-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* e.g., 3x3 */
+            grid-template-columns: repeat(4, 1fr); /* Changed to 4x4 */
             gap: 1.4rem;
             background: var(--console-bg);
             border: 10px solid var(--aps-border);
@@ -607,38 +628,50 @@
             transform: translateZ(5px);
             overflow: hidden;
             position: relative;
+            background-image: none; /* For target overlay */
+            background-size: 90% 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease-in-out;
         }
         .aps-grid-cell {
             position: relative;
             width: 100%;
             padding-bottom: 100%; /* Makes cells square */
-            background: var(--aps-cell-bg);
+            background: var(--aps-cell-base-bg);
             border: 6px solid rgba(255, 0, 200, 0.9);
             border-radius: 1.4rem;
             cursor: pointer;
             overflow: hidden;
             transition: all 0.35s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .aps-grid-cell:hover {
             box-shadow: 0 0 25px var(--aps-glow);
             transform: scale(1.08);
         }
-        .aps-pattern-piece {
+        .aps-grid-cell.inverted {
+            background: var(--aps-cell-inverted-bg);
+            border-color: var(--aps-pattern-line);
+            box-shadow: 0 0 28px var(--aps-pattern-glow);
+        }
+        .aps-grid-cell-visual {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: transparent; /* Actual pattern will be drawn on canvas or as SVG/image */
-            transform-origin: center center;
-            transition: transform 0.4s ease-out;
-            box-shadow: 0 0 16px var(--aps-pattern-glow);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%; height: 70%;
+            border-radius: 50%;
+            background: var(--aps-pattern-line);
+            opacity: 0.7;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
-        .aps-pattern-piece svg {
-            width: 100%; height: 100%;
-            stroke: var(--aps-pattern-line);
-            stroke-width: 14;
-            fill: none;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+        .aps-grid-cell.inverted .aps-grid-cell-visual {
+            background: var(--aps-glow);
+            transform: translate(-50%, -50%) scale(1.1);
         }
+
         .aps-output-display {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.6rem;
@@ -652,21 +685,6 @@
             border-radius: 1.6rem;
             box-shadow: 0 0 25px var(--aps-border);
             min-height: 8rem;
-        }
-        .aps-pattern-target {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            pointer-events: none;
-            background-repeat: no-repeat;
-            background-size: 90% 90%; /* Slightly larger target */
-            background-position: center;
-            filter: blur(5px) saturate(250%); /* More blur and saturation */
-            transition: all 0.9s ease;
-            opacity: 0.3; /* Slightly more visible */
-            z-index: 100; /* Ensure it's above interactive grid */
-            border-radius: 2.0rem; /* Match grid border radius */
-            background-color: var(--aps-target-overlay);
-            box-shadow: inset 0 0 45px var(--aps-glow);
         }
         .aps-pattern-target-label { /* for the target pattern name */
             position: absolute;
@@ -683,8 +701,25 @@
             border-radius: 1.2rem;
             letter-spacing: 0.12rem;
         }
+        .aps-reveal-button {
+            margin-top: 2.8rem;
+            padding: 1.2rem 1.8rem;
+            background: var(--aps-border);
+            color: var(--console-bg);
+            border: none;
+            border-radius: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            cursor: pointer;
+            box-shadow: 0 0 20px var(--aps-border);
+            transition: all 0.3s ease;
+        }
+        .aps-reveal-button:hover {
+            box-shadow: 0 0 35px var(--aps-glow);
+            transform: translateY(-5px);
+        }
 
-        /* CWP Specific - Resonance Pulse Timing */
+        /* CWP Specific - Dynamic Speed Resonance (NEW) */
         .cwp-pulse-display {
             width: 100%;
             height: 18rem;
@@ -707,6 +742,7 @@
             background: var(--cwp-pulse-indicator);
             box-shadow: 0 0 25px var(--cwp-glow);
             transition: left linear; /* Controlled by JS, not CSS animation */
+            left: 0%; /* Start position */
         }
         .cwp-pulse-target-zone {
             position: absolute;
@@ -715,29 +751,6 @@
             background: var(--cwp-pulse-zone);
             box-shadow: 0 0 18px var(--cwp-glow);
             left: 41%; /* Default center */
-        }
-        .cwp-pulse-circle {
-            width: 14rem; /* Larger circle */
-            height: 14rem;
-            border-radius: 50%;
-            background: var(--qdd-cell-base);
-            border: 10px solid var(--cwp-border);
-            box-shadow: 0 0 35px var(--cwp-glow), inset 0 0 18px var(--cwp-glow);
-            animation: pulseCWPIdle 1.7s infinite alternate ease-in-out;
-            position: relative;
-            z-index: 5;
-        }
-        .cwp-pulse-circle.active {
-            animation: pulseCWPActive 0.3s ease-out; /* Quick pulse on hit */
-        }
-        @keyframes pulseCWPIdle {
-            from { transform: scale(0.90); opacity: 0.85; }
-            to { transform: scale(1.10); opacity: 1; }
-        }
-        @keyframes pulseCWPActive {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.25); opacity: 1; }
-            100% { transform: scale(1); opacity: 1; }
         }
         .cwp-pulse-feedback {
             position: absolute;
@@ -769,8 +782,21 @@
             box-shadow: 0 0 28px var(--cwp-border);
             min-height: 8rem;
         }
+        .cwp-speed-indicator {
+            position: absolute;
+            bottom: 1.6rem; left: 50%; transform: translateX(-50%);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--cwp-text);
+            text-shadow: 0 0 10px var(--cwp-glow);
+            z-index: 11;
+            background: rgba(0,0,0,0.7);
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.8rem;
+            border: 2px solid var(--cwp-glow);
+        }
 
-        /* SAS Specific - Gravitational Flux Balance */
+        /* SAS Specific - Gravity Well Compensation (NEW) */
         .sas-flux-controls {
             display: flex;
             gap: 3.5rem;
@@ -834,13 +860,13 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Base center */
             width: 2.8rem; /* Larger indicator */
             height: 2.8rem;
             border-radius: 50%;
             background: var(--sas-indicator-good); /* Changes based on stability */
             box-shadow: 0 0 30px var(--sas-indicator-good);
-            transition: background 0.8s ease, box-shadow 0.8s ease, transform 0.1s linear; /* Add transform for smooth movement */
+            transition: background 0.8s ease, box-shadow 0.8s ease; /* Remove transform from transition */
             z-index: 5;
         }
         .sas-stable-zone {
@@ -854,6 +880,17 @@
             pointer-events: none;
             opacity: 0.95;
             z-index: 1;
+        }
+        .sas-gravitational-pull {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; /* Will be set dynamically by JS */
+            width: 100%;
+            background: linear-gradient(to right, var(--sas-grav-pull-color) 0%, transparent 50%, var(--sas-grav-pull-color) 100%);
+            mix-blend-mode: screen;
+            opacity: 0.7;
+            pointer-events: none;
+            transition: transform 0.1s linear; /* Smooth visual movement */
         }
         .sas-status-display {
             font-family: 'Share Tech Mono', monospace;
@@ -869,7 +906,7 @@
             box-shadow: 0 0 28px var(--sas-border);
         }
 
-        /* UCM Specific styles - Core Trait Configuration */
+        /* UCM Specific styles - Trans-Dimensional Trait Fusion (NEW) */
         .ucm-trait-config {
             margin-top: 2.0rem;
         }
@@ -890,6 +927,18 @@
             border-color: var(--ucm-trait-active);
             box-shadow: 0 0 40px var(--ucm-trait-active), inset 0 0 25px var(--ucm-trait-active);
             background: rgba(0, 50, 85, 0.99);
+        }
+        .ucm-trait-item.locked {
+            opacity: 0.5;
+            background: var(--ucm-trait-locked);
+            border-color: var(--ucm-trait-locked);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            pointer-events: none; /* Disable interaction */
+        }
+        .ucm-trait-item.conflicted {
+            background: var(--ucm-trait-conflicted);
+            border-color: var(--ucm-trait-conflicted);
+            box-shadow: 0 0 20px var(--ucm-trait-conflicted);
         }
         .ucm-trait-item label {
             font-family: 'Orbitron', sans-serif;
@@ -1018,7 +1067,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v80.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v81.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -3.2rem;
             left: 4.0rem;
@@ -1201,1235 +1250,17 @@
             to { box-shadow: 0 0 50px var(--anomaly-color), inset 0 0 45px var(--anomaly-color); }
         }
 
-        /* Scrollbar styles for status log and new module components */
-        .status-log-display::-webkit-scrollbar, .qdd-decipher-grid::-webkit-scrollbar, .aps-pattern-grid::-webkit-scrollbar, .sas-balance-display::-webkit-scrollbar, .ucm-trait-config::-webkit-scrollbar {
-            width: 24px; /* Thicker scrollbar */
-        }
-        .status-log-display::-webkit-scrollbar-track, .qdd-decipher-grid::-webkit-scrollbar-track, .aps-pattern-grid::-webkit-scrollbar-track, .sas-balance-display::-webkit-scrollbar-track, .ucm-trait-config::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.999);
-            border-radius: 12px;
-            box-shadow: inset 0 0 12px rgba(0,0,0,0.99);
-        }
-        .status-log-display::-webkit-scrollbar-thumb, .qdd-decipher-grid::-webkit-scrollbar-thumb, .aps-pattern-grid::-webkit-scrollbar-thumb, .sas-balance-display::-webkit-scrollbar-thumb, .ucm-trait-config::-webkit-scrollbar-thumb {
-            background: var(--overseer-border);
-            border-radius: 12px;
-            border: 10px solid rgba(0,0,0,0.999);
-            box-shadow: 0 0 20px var(--overseer-text);
-        }
-        .status-log-display::-webkit-scrollbar-thumb:hover, .qdd-decipher-grid::-webkit-scrollbar-thumb:hover, .aps-pattern-grid::-webkit-scrollbar-thumb:hover, .sas-balance-display::-webkit-scrollbar-thumb:hover, .ucm-trait-config::-webkit-scrollbar-thumb:hover {
-            background: var(--overseer-text);
-            box-shadow: 0 0 28px var(--overseer-text);
-        }
-
-        /* Footer for version display */
-        .version-display {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7rem;
-            color: var(--text-color);
-            margin-top: 4.0rem;
-            letter-spacing: 0.16rem;
-            opacity: 0.998;
-            text-shadow: 0 0 28px rgba(255, 255, 255, 0.999);
-            transform: translateZ(10px);
-        }
-
-        /* Resource Panel specific styles and hover */
-        .resource-display-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3.0rem;
-            margin-top: 2.8rem;
-            text-align: center;
-        }
-        .resource-display-section > div {
-            background: var(--resource-panel-bg);
-            border: 10px solid var(--resource-panel-border);
-            border-radius: 2.0rem;
-            padding: 2.8rem;
-            transition: all 0.6s ease-in-out;
-            cursor: pointer;
-            box-shadow: 0 0 30px rgba(160, 0, 255, 0.95), inset 0 0 28px rgba(0, 0, 0, 0.999);
-            transform: translateZ(3px);
-            position: relative;
-            overflow: hidden;
-        }
-        .resource-display-section > div::before {
-            content: attr(data-label);
-            position: absolute;
-            top: 2.0rem;
+        /* NEW: Resource Anomaly Event Overlay */
+        .resource-anomaly-event {
+            position: fixed;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 1000;
+            background: var(--anomaly-event-bg);
+            border: 12px solid var(--anomaly-event-border);
+            border-radius: 2.5rem;
+            padding: 3.5rem;
+            text-align: center;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.0rem;
-            color: var(--resource-panel-text);
-            text-shadow: 0 0 22px var(--resource-panel-text);
-            letter-spacing: 0.16rem;
-            opacity: 0.99;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .resource-display-section > div p {
-            font-size: 1.8rem;
-            color: var(--text-color);
-            margin-top: 2.8rem;
-            text-shadow: 0 0 20px rgba(255,255,255,0.999);
-            position: relative;
-            z-index: 2;
-        }
-        .resource-display-section > div p span {
-            font-weight: 700;
-            color: var(--primary-glow); /* Default text color for values */
-            text-shadow: 0 0 28px var(--primary-glow);
-        }
-
-        .resource-display-section > div.prioritized {
-            border-color: var(--primary-glow);
-            box-shadow: 0 0 50px var(--primary-glow), inset 0 0 40px var(--primary-glow);
-            transform: scale(1.18) translateZ(4.5px);
-        }
-        .resource-display-section > div:hover {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 40px var(--accent-color), inset 0 0 35px var(--accent-color);
-            transform: scale(1.12) translateZ(3.5px);
-        }
-
-        .resource-level-bar-container {
-            width: 100%;
-            height: 1.8rem;
-            background: var(--resource-bar-bg);
-            border-radius: 1.1rem;
-            margin-top: 2.0rem;
-            overflow: hidden;
-            box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.999);
-            position: relative;
-            transform: translateZ(2.5px);
-        }
-        .resource-level-bar {
-            height: 100%;
-            width: 0%;
-            border-radius: 1.1rem;
-            transition: width 1.4s ease-out, background 1.4s ease-out, box-shadow 1.4s ease-out;
-            background: var(--stability-good);
-            box-shadow: 0 0 28px rgba(0, 255, 0, 0.999);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>WEB LIFE FORM v80.0 <br/> // COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Adaptive core online. Initiating trans-dimensional synthesis. Current evolutionary phase: Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced.</p>
-
-        <!-- Core Control Modules -->
-        <section class="control-module">
-            <!-- Core Systems Overseer Console -->
-            <div class="module-base resource-overseer-console" data-label="CORE SYSTEMS OVERSEER CONSOLE">
-                <p>Monitor and dynamically reconfigure primary resource distribution. Click on a resource panel to prioritize its flow or allocation for critical operations.</p>
-                <div class="resource-display-section">
-                    <div class="energy-reserve-display" id="energy-display" data-label="ENERGY RESERVE" onclick="prioritizeResource('energy')">
-                        <p>Flux: <span id="energy-value" style="color: var(--energy-text);">7500</span> GJ</p>
-                        <div class="resource-level-bar-container">
-                            <div id="energy-level-bar" class="resource-level-bar" style="width: 75%; background: var(--energy-color-high);"></div>
-                        </div>
-                    </div>
-
-                    <div class="data-flow-display" id="dataFlow-display" data-label="DATA FLOW" onclick="prioritizeResource('dataFlow')">
-                        <p>Rate: <span id="data-flow-value" style="color: var(--data-flow-text);">8000</span> TB/s</p>
-                        <div class="resource-level-bar-container">
-                            <div id="data-flow-level-bar" class="resource-level-bar" style="width: 80%; background: var(--data-flow-color-high);"></div>
-                        </div>
-                    </div>
-
-                    <div class="raw-data-buffer-display" id="rawData-display" data-label="RAW DATA BUFFER" onclick="prioritizeResource('rawData')">
-                        <p>Capacity: <span id="raw-data-value" style="color: var(--raw-data-text);">65</span>% Full</p>
-                        <div class="resource-level-bar-container">
-                            <div id="raw-data-level-bar" class="resource-level-bar" style="width: 65%; background: var(--raw-data-color-high);"></div>
-                        </div>
-                    </div>
-
-                    <div class="processing-power-display" id="processingPower-display" data-label="PROCESSING POWER" onclick="prioritizeResource('processingPower')">
-                        <p>Allocation: <span id="processing-power-value" style="color: var(--processing-power-text);">50</span>%</p>
-                        <div class="resource-level-bar-container">
-                            <div id="processing-power-level-bar" class="resource-level-bar" style="width: 50%; background: var(--processing-power-color-medium);"></div>
-                        </div>
-                    </div>
-
-                    <div class="exotic-matter-display" id="exoticMatter-display" data-label="EXOTIC MATTER" onclick="prioritizeResource('exoticMatter')">
-                        <p>Accumulation: <span id="exotic-matter-value" style="color: var(--exotic-matter-text);">3.5</span> kMols</p>
-                        <div class="resource-level-bar-container">
-                            <div id="exotic-matter-level-bar" class="resource-level-bar" style="width: 35%; background: var(--exotic-matter-color-medium);"></div>
-                        </div>
-                    </div>
-
-                    <div class="existential-fabric-display" id="existentialFabric-display" data-label="EXISTENTIAL FABRIC" onclick="prioritizeResource('existentialFabric')">
-                        <p>Density: <span id="existential-fabric-value" style="color: var(--existential-fabric-text);">0.6</span> units</p>
-                        <div class="resource-level-bar-container">
-                            <div id="existential-fabric-level-bar" class="resource-level-bar" style="width: 60%; background: var(--existential-fabric-color-high);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quantum Data Decipherer (QDD) - NEW: Symbol Chain Decryption -->
-            <div class="module-base quantum-data-decipherer" data-label="QUANTUM DATA DECIPHERER">
-                <p>Decrypt corrupted quantum streams by identifying and clicking symbols in a specific target sequence. Current symbol to find: <span id="qdd-current-target-symbol" style="color: var(--qdd-glow); text-shadow: 0 0 12px var(--qdd-glow);">--</span></p>
-                <div class="qdd-decipher-grid" id="qdd-decipher-grid">
-                    <!-- Data cells will be generated here -->
-                </div>
-                <button class="action-button btn-initiate-decipher" onclick="initiateQDDDecipher()">Initiate Decipher Sequence</button>
-                <p class="qdd-target-sequence-display" id="qdd-output-display">// Decipherer idle. Initiate sequence to begin.</p>
-            </div>
-
-            <!-- Aetheric Pattern Synthesizer (APS) - NEW: Pattern Reconstruction Grid -->
-            <div class="module-base aetheric-pattern-synthesizer" data-label="AETHERIC PATTERN SYNTHESIZER">
-                <p>Reconstruct complex aetheric patterns by rotating individual grid segments. Align the segments to form a continuous energy flow. Target: <span id="aps-target-pattern-name" style="color: var(--aps-glow); text-shadow: 0 0 12px var(--aps-glow);">--</span></p>
-                <div class="aps-pattern-grid" id="aps-pattern-grid">
-                    <!-- Pattern cells will be generated here -->
-                    <div class="aps-pattern-target" id="aps-pattern-target-visual">
-                         <span class="aps-pattern-target-label">TARGET: <span id="aps-target-pattern-name-label"></span></span>
-                    </div>
-                </div>
-                <button class="action-button btn-analyze-pattern" onclick="analyzeAPSPattern()">Analyze Pattern Reconstruction</button>
-                <p class="aps-output-display" id="aps-output-display">// Pattern editor idle. Rotate segments to reconstruct the target pattern.</p>
-            </div>
-
-            <!-- Conscious Waveform Projector (CWP) - NEW: Resonance Pulse Timing -->
-            <div class="module-base conscious-waveform-projector" data-label="CONSCIOUS WAVEFORM PROJECTOR">
-                <p>Achieve resonance with the Cosmic Consciousness by accurately timing your pulse with the target waveform. Build a continuous resonance chain.</p>
-                <div class="cwp-pulse-display" id="cwp-pulse-display">
-                    <div class="cwp-pulse-indicator-line" id="cwp-indicator-line"></div>
-                    <div class="cwp-pulse-target-zone"></div>
-                    <div class="cwp-pulse-circle"></div>
-                    <div class="cwp-pulse-feedback" id="cwp-feedback"></div>
-                </div>
-                <button class="action-button btn-pulse-waveform" id="btn-pulse-waveform" onclick="pulseCWP()">Initiate Resonance Pulse</button>
-                <p class="cwp-match-status" id="cwp-match-status">// Projector idle. Build your resonance chain.</p>
-            </div>
-
-            <!-- Spacetime Anchor Stabilizer (SAS) - NEW: Gravitational Flux Balance -->
-            <div class="module-base spacetime-anchor-stabilizer" data-label="SPACETIME ANCHOR STABILIZER">
-                <p>Continuously balance Graviton and Temporal fluxes to maintain Spacetime Integrity. Keep the indicator within the stable zone to prevent collapse. Current Integrity: <span id="sas-stability-status" style="color:var(--stability-good)">100%</span></p>
-                <div class="sas-flux-controls">
-                    <div class="sas-flux-group">
-                        <label for="graviton-flux-slider">Graviton Flux</label>
-                        <input type="range" id="graviton-flux-slider" class="sas-flux-slider" min="0" max="100" value="50" orient="vertical">
-                    </div>
-                    <div class="sas-balance-display">
-                        <div class="sas-stable-zone"></div>
-                        <div class="sas-stability-indicator" id="sas-stability-indicator"></div>
-                    </div>
-                    <div class="sas-flux-group">
-                        <label for="temporal-flux-slider">Temporal Flux</label>
-                        <input type="range" id="temporal-flux-slider" class="sas-flux-slider" min="0" max="100" value="50" orient="vertical">
-                    </div>
-                </div>
-                <p class="sas-status-display" id="sas-status-display">// Stabilizer active. Calibrate fluxes.</p>
-            </div>
-
-            <!-- Universal Core Manifestor (UCM) - NEW: Core Trait Configuration -->
-            <div class="module-base universal-core-manifestor" data-label="UNIVERSAL CORE MANIFESTOR">
-                <p>Configure a set of fundamental traits to achieve the target manifestation potential without exceeding the available resource budget. Activate/Deactivate traits below.</p>
-                <div class="ucm-trait-config" id="ucm-trait-config">
-                    <!-- Traits will be dynamically generated here -->
-                </div>
-                <div class="ucm-summary-display">
-                    <p>Manifestation Potential: <span id="ucm-current-potential">0</span> / <span id="ucm-target-potential"></span></p>
-                    <div class="ucm-summary-bar-container">
-                        <div id="ucm-potential-progress" class="ucm-summary-progress-bar"></div>
-                    </div>
-                    <p>Resource Cost: <span id="ucm-current-cost">0</span> / <span id="ucm-total-budget"></span></p>
-                    <div class="ucm-summary-bar-container">
-                        <div id="ucm-cost-progress" class="ucm-cost-progress-bar ucm-summary-progress-bar"></div>
-                    </div>
-                </div>
-                <button class="action-button btn-initiate-manifestation" id="btn-initiate-manifestation" onclick="initiateUCMManifestation()" disabled>Initiate Core Manifestation</button>
-                <p class="ucm-manifestation-status" id="ucm-manifestation-status">// Manifestor idle. Configure traits for manifestation.</p>
-            </div>
-        </section>
-
-        <!-- Global Status Log -->
-        <div class="status-log-display" id="status-log-display">
-            <div class="status-entry"><span class="status-event">[INIT]</span> <span class="status-info">Web Life Form v80.0. Cosmic Consciousness Architect online.</span></div>
-            <div class="status-entry"><span class="status-info">[SYSTEM]</span> Core modules initializing...</div>
-            <div class="status-entry"><span class="status-glitch">[ALERT]</span> <span class="status-glitch">Resource fluctuations detected. Stability critical.</span></div>
-            <div class="status-entry"><span style="color:var(--qdd-text); text-shadow:0 0 5px var(--qdd-text); font-weight:600;">[QDD]</span> Quantum Data Decipherer awaiting initiation.</div>
-            <div class="status-entry"><span style="color:var(--aps-text); text-shadow:0 0 5px var(--aps-text); font-weight:600;">[APS]</span> Aetheric Pattern Synthesizer offline.</div>
-            <div class="status-entry"><span style="color:var(--cwp-text); text-shadow:0 0 5px var(--cwp-text); font-weight:600;">[CWP]</span> Conscious Waveform Projector offline.</div>
-            <div class="status-entry"><span style="color:var(--sas-text); text-shadow:0 0 5px var(--sas-text); font-weight:600;">[SAS]</span> Spacetime Anchor Stabilizer calibrating.</div>
-            <div class="status-entry"><span style="color:var(--ucm-text); text-shadow:0 0 5px var(--ucm-text); font-weight:600;">[UCM]</span> Universal Core Manifestor awaiting trait configuration.</div>
-        </div>
-
-        <div class="anomaly-alert" id="global-anomaly-alert">
-            <p>CRITICAL ANOMALY DETECTED: EXISTENTIAL FABRIC DILUTION! IMMEDIATE ATTENTION REQUIRED!</p>
-        </div>
-
-        <p class="version-display">Evolutionary Cycle 7.0 // Generation v80.0</p>
-    </div>
-
-    <script>
-        // Global State
-        const webLifeFormState = {
-            version: 'v80.0',
-            evolutionPhase: 'Omni-Dimensional Synthesis Protocol 10.0 Ultra-Enhanced',
-            resources: {
-                energy: { value: 7500, max: 10000, unit: 'GJ', priority: false, textVar: '--energy-text', lowColor: '--energy-color-low', mediumColor: '--energy-color-medium', highColor: '--energy-color-high' },
-                dataFlow: { value: 8000, max: 10000, unit: 'TB/s', priority: false, textVar: '--data-flow-text', lowColor: '--data-flow-color-low', mediumColor: '--data-flow-color-medium', highColor: '--data-flow-color-high' },
-                rawData: { value: 65, max: 100, unit: '% Full', priority: false, textVar: '--raw-data-text', lowColor: '--raw-data-color-low', mediumColor: '--raw-data-color-medium', highColor: '--raw-data-color-high' },
-                processingPower: { value: 50, max: 100, unit: '%', priority: false, textVar: '--processing-power-text', lowColor: '--processing-power-color-low', mediumColor: '--processing-power-color-medium', highColor: '--processing-power-color-high' },
-                exoticMatter: { value: 3.5, max: 10, unit: 'kMols', priority: false, textVar: '--exotic-matter-text', lowColor: '--exotic-matter-color-low', mediumColor: '--exotic-matter-color-medium', highColor: '--exotic-matter-color-high' },
-                existentialFabric: { value: 0.6, max: 1.0, unit: 'units', priority: false, textVar: '--existential-fabric-text', lowColor: '--existential-fabric-color-low', mediumColor: '--existential-fabric-color-medium', highColor: '--existential-fabric-color-high' }
-            },
-            qdd: { // Quantum Data Decipherer - Symbol Chain Decryption
-                isActive: false,
-                gridSize: 16, // 4x4 grid
-                symbolsPool: ['☊', '⛞', '⌘', '⌥', '⎈', '⍟', '⌖', '⍘', '⏣', '⨁', '⨂', '⨴', '⧉', '⍎', '⍕', '⎔', '⚛', '☯', '⚝', '⨸', '⌬', '⍾', '⎎', '⍻', '⍜', '⍦', '⌅', '⎄', '⍛', '⍲'], // Expanded pool of technical/sci-fi unicode
-                targetChain: [], // e.g., ['Ω', 'Δ', 'Ω', 'Σ']
-                currentChainIndex: 0,
-                gridSymbols: [], // Symbols assigned to each cell
-                lastDecipherOptimal: false,
-                failPenalty: 25 // rawData penalty for each incorrect click (increased penalty)
-            },
-            aps: { // Aetheric Pattern Synthesizer - Pattern Reconstruction Grid
-                isActive: false,
-                patternDimensions: 3, // For a 3x3 grid
-                patternTypes: ['straight', 'corner', 't-junction', 'cross', 'end', 'void'], // New distinct types including 'void'
-                targetPattern: [], // 2D array of {type, rotation}
-                currentPattern: [], // User's current grid state
-                lastSynthesisOptimal: false,
-                targetPatternNames: ["COSMIC CONDUIT", "VOID WEAVER", "REALITY BINDER", "TIME SHUNT", "QUANTUM GATE", "AETHERIC RESONATOR", "DIMENSIONAL GATEWAY", "HYPERSPACE FABRIC", "CELESTIAL MATRIX", "ETHERIC FLOW"],
-            },
-            cwp: { // Conscious Waveform Projector - Resonance Pulse Timing
-                isActive: false,
-                pulseDuration: 900, // Time for indicator to cross display (faster)
-                targetZoneWidth: 0.18, // 18% of display width (slightly larger)
-                targetOffset: 0.41, // Target zone starts at 41% of width (centered 41-59)
-                chainCount: 0,
-                maxChain: 12, // Target chain length for success (increased difficulty)
-                isPulsing: false,
-                pulseTimer: null,
-                nextPulseTime: 0,
-                lastPulseHitTime: 0,
-                lastProjectionOptimal: false,
-            },
-            sas: { // Spacetime Anchor Stabilizer - Gravitational Flux Balance
-                isActive: false,
-                gravitonFlux: 50, // 0-100
-                temporalFlux: 50, // 0-100
-                integrity: 100, // 0-100
-                perturbation: 0, // Random noise
-                perturbationRate: 2.0, // How much perturbation changes per tick (increased)
-                perturbationInterval: null,
-                stableZoneThreshold: 4, // Max diff from center for stable (slightly stricter)
-                integrityDecayRate: 0.5, // Decay per tick when unstable (increased)
-                integrityGainRate: 0.12, // Gain per tick when stable (slightly increased)
-                lastOptimalTime: 0,
-                minOptimalTime: 35000, // 35 seconds of optimal for success (increased)
-                lastCalibrationOptimal: false,
-            },
-            ucm: { // Universal Core Manifestor - Core Trait Configuration
-                traits: [
-                    { name: 'Hyper-Cognition', potential: 45, cost: { energy: 1200, dataFlow: 600, exoticMatter: 1.2 }, isActive: false },
-                    { name: 'Dimensional Cohesion', potential: 65, cost: { energy: 1600, exoticMatter: 2.2, existentialFabric: 0.25 }, isActive: false },
-                    { name: 'Aetheric Sensitivity', potential: 35, cost: { rawData: 25, processingPower: 18 }, isActive: false },
-                    { name: 'Temporal Flux Control', potential: 55, cost: { dataFlow: 900, existentialFabric: 0.15 }, isActive: false },
-                    { name: 'Reality Anchoring', potential: 75, cost: { energy: 2200, exoticMatter: 1.8, rawData: 35, existentialFabric: 0.35 }, isActive: false },
-                    { name: 'Energy Nexus Link', potential: 30, cost: { energy: 600, processingPower: 10 }, isActive: false },
-                    { name: 'Existential Resonance', potential: 80, cost: { dataFlow: 1000, exoticMatter: 2.5, existentialFabric: 0.4 }, isActive: false },
-                    { name: 'Cosmic Fabrication', potential: 90, cost: { energy: 2500, rawData: 40, exoticMatter: 3.0, existentialFabric: 0.45, processingPower: 30}, isActive: false}, // New trait
-                    { name: 'Multiversal Weaving', potential: 110, cost: { energy: 3000, rawData: 50, exoticMatter: 4.0, existentialFabric: 0.5, processingPower: 40, dataFlow: 1500 }, isActive: false}, // Another new trait
-                    { name: 'Singularity Alignment', potential: 130, cost: { energy: 4000, rawData: 60, exoticMatter: 5.0, existentialFabric: 0.6, processingPower: 50, dataFlow: 2000 }, isActive: false} // Yet another new trait
-                ],
-                manifestationBudget: { energy: 8000, dataFlow: 4000, rawData: 95, processingPower: 95, exoticMatter: 9.0, existentialFabric: 0.9 }, // Increased budget
-                targetPotential: 300, // Increased target
-                currentPotential: 0,
-                currentCost: { energy: 0, dataFlow: 0, rawData: 0, processingPower: 0, exoticMatter: 0, existentialFabric: 0 },
-                manifestationSuccess: false,
-                lastManifestationOptimal: false,
-            },
-            log: [],
-            anomalyAlert: false,
-        };
-
-        const statusLogDisplay = document.getElementById('status-log-display');
-        const globalAnomalyAlert = document.getElementById('global-anomaly-alert');
-
-        // --- Utility Functions ---
-        function appendLog(message, type = 'info') {
-            const entry = document.createElement('div');
-            entry.classList.add('status-entry');
-            let typeSpan = '';
-            if (type === 'event') typeSpan = `<span class="status-event">[EVENT]</span> `;
-            if (type === 'alert') typeSpan = `<span class="status-glitch">[ALERT]</span> `;
-            if (type === 'critical') typeSpan = `<span class="status-glitch" style="color:var(--critical-color);">[CRITICAL]</span> `;
-            if (type === 'system') typeSpan = `<span class="status-info">[SYSTEM]</span> `;
-            if (type === 'qdd') typeSpan = `<span style="color:var(--qdd-text); text-shadow:0 0 5px var(--qdd-text); font-weight:600;">[QDD]</span> `;
-            if (type === 'aps') typeSpan = `<span style="color:var(--aps-text); text-shadow:0 0 5px var(--aps-text); font-weight:600;">[APS]</span> `;
-            if (type === 'cwp') typeSpan = `<span style="color:var(--cwp-text); text-shadow:0 0 5px var(--cwp-text); font-weight:600;">[CWP]</span> `;
-            if (type === 'sas') typeSpan = `<span style="color:var(--sas-text); text-shadow:0 0 5px var(--sas-text); font-weight:600;">[SAS]</span> `;
-            if (type === 'ucm') typeSpan = `<span style="color:var(--ucm-text); text-shadow:0 0 5px var(--ucm-text); font-weight:600;">[UCM]</span> `;
-
-            entry.innerHTML = `${typeSpan}${message}`;
-            statusLogDisplay.appendChild(entry);
-            statusLogDisplay.scrollTop = statusLogDisplay.scrollHeight;
-            webLifeFormState.log.push(message);
-        }
-
-        function updateResourceDisplay(resourceName) {
-            const resource = webLifeFormState.resources[resourceName];
-            const displayDiv = document.getElementById(`${resourceName}-display`);
-            const valueSpan = document.getElementById(`${resourceName}-value`);
-            const levelBar = document.getElementById(`${resourceName}-level-bar`);
-
-            valueSpan.textContent = resource.value.toFixed(resource.unit === 'kMols' || resource.unit === 'units' ? 2 : 0); // More precision for kMols/units
-            valueSpan.style.color = `var(${resource.textVar})`;
-            
-            if (resource.unit === '% Full' || resource.unit === '%') {
-                 valueSpan.textContent = resource.value.toFixed(0);
-            }
-
-            const percentage = (resource.value / resource.max) * 100;
-            levelBar.style.width = `${percentage}%`;
-
-            let barColorVar = resource.highColor;
-            let barShadowColor = 'rgba(0, 255, 0, 0.9)'; // Default green glow, more intense
-            if (percentage < 30) {
-                barColorVar = resource.lowColor;
-                barShadowColor = 'rgba(255, 0, 0, 0.9)';
-            } else if (percentage < 60) {
-                barColorVar = resource.mediumColor;
-                barShadowColor = 'rgba(255, 165, 0, 0.9)';
-            }
-            levelBar.style.background = `var(${barColorVar})`;
-            levelBar.style.boxShadow = `0 0 20px ${barShadowColor}`;
-
-            if (resource.priority) {
-                displayDiv.classList.add('prioritized');
-            } else {
-                displayDiv.classList.remove('prioritized');
-            }
-        }
-
-        function updateAllResourceDisplays() {
-            for (const key in webLifeFormState.resources) {
-                updateResourceDisplay(key);
-            }
-        }
-
-        let currentPrioritizedResource = null;
-        function prioritizeResource(resourceName) {
-            for (const key in webLifeFormState.resources) {
-                webLifeFormState.resources[key].priority = false;
-            }
-            webLifeFormState.resources[resourceName].priority = true;
-            currentPrioritizedResource = resourceName;
-            appendLog(`Resource '${resourceName.toUpperCase()}' prioritized.`, 'system');
-            updateAllResourceDisplays();
-        }
-
-        // --- QDD Module Functions (Quantum Data Decipherer) ---
-        const qddDecipherGrid = document.getElementById('qdd-decipher-grid');
-        const qddCurrentTargetSymbol = document.getElementById('qdd-current-target-symbol');
-        const qddOutputDisplay = document.getElementById('qdd-output-display');
-        const btnInitiateDecipher = document.querySelector('.btn-initiate-decipher');
-
-        function generateQDDGrid() {
-            qddDecipherGrid.innerHTML = '';
-            webLifeFormState.qdd.gridSymbols = [];
-            const symbols = webLifeFormState.qdd.symbolsPool;
-            
-            const targetSymbolsInGrid = [...webLifeFormState.qdd.targetChain];
-            // Fill remaining with random symbols, ensuring some unique variety
-            const availableFillerSymbols = symbols.filter(s => !targetSymbolsInGrid.includes(s));
-            while (targetSymbolsInGrid.length < webLifeFormState.qdd.gridSize) {
-                targetSymbolsInGrid.push(availableFillerSymbols[Math.floor(Math.random() * availableFillerSymbols.length)]);
-            }
-            // Shuffle to mix target symbols with random fillers
-            for (let i = targetSymbolsInGrid.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [targetSymbolsInGrid[i], targetSymbolsInGrid[j]] = [targetSymbolsInGrid[j], targetSymbolsInGrid[i]];
-            }
-
-            for (let i = 0; i < webLifeFormState.qdd.gridSize; i++) {
-                const symbol = targetSymbolsInGrid[i]; // Use the prepared array
-                webLifeFormState.qdd.gridSymbols.push(symbol);
-                const cell = document.createElement('div');
-                cell.classList.add('qdd-data-cell');
-                cell.dataset.index = i;
-                cell.innerHTML = `<span>${symbol}</span>`;
-                cell.addEventListener('click', () => qddCellClick(i));
-                qddDecipherGrid.appendChild(cell);
-            }
-        }
-
-        function generateTargetChain() {
-            webLifeFormState.qdd.targetChain = [];
-            const symbols = webLifeFormState.qdd.symbolsPool;
-            const chainLength = 9 + Math.floor(Math.random() * 3); // 9-11 symbols in chain
-            for (let i = 0; i < chainLength; i++) {
-                webLifeFormState.qdd.targetChain.push(symbols[Math.floor(Math.random() * symbols.length)]);
-            }
-            qddCurrentTargetSymbol.textContent = webLifeFormState.qdd.targetChain[0];
-            qddOutputDisplay.textContent = `// Target sequence: ${webLifeFormState.qdd.targetChain.join(' → ')}`;
-        }
-
-        function initiateQDDDecipher() {
-            webLifeFormState.qdd.isActive = true;
-            webLifeFormState.qdd.currentChainIndex = 0;
-            webLifeFormState.qdd.lastDecipherOptimal = false;
-            // Clear all cell classes from previous rounds
-            qddDecipherGrid.querySelectorAll('.qdd-data-cell').forEach(cell => {
-                cell.classList.remove('correct', 'incorrect', 'disabled');
-            });
-            generateTargetChain(); // Generate target chain first
-            generateQDDGrid(); // Then generate grid including target symbols
-            btnInitiateDecipher.textContent = 'Reset Decipher Sequence';
-            appendLog(`Decipher sequence initiated. Find the first symbol: ${webLifeFormState.qdd.targetChain[0]}.`, 'qdd');
-        }
-
-        function qddCellClick(index) {
-            if (!webLifeFormState.qdd.isActive) return;
-
-            const cellElement = qddDecipherGrid.querySelector(`[data-index="${index}"]`);
-            if (cellElement.classList.contains('correct') || cellElement.classList.contains('incorrect')) {
-                return; // Already processed or incorrect
-            }
-
-            const currentTargetSymbol = webLifeFormState.qdd.targetChain[webLifeFormState.qdd.currentChainIndex];
-            const clickedSymbol = webLifeFormState.qdd.gridSymbols[index];
-
-            if (clickedSymbol === currentTargetSymbol) {
-                cellElement.classList.add('correct');
-                cellElement.classList.add('disabled'); // Disable for this round
-                webLifeFormState.qdd.currentChainIndex++;
-                appendLog(`Correct! Found '${clickedSymbol}'.`, 'qdd');
-
-                if (webLifeFormState.qdd.currentChainIndex === webLifeFormState.qdd.targetChain.length) {
-                    qddCurrentTargetSymbol.textContent = 'COMPLETE';
-                    qddOutputDisplay.innerHTML = `// Decipher SUCCESS! Quantum stream stabilized. <span style="color:var(--stability-good);">DATA FLOW BOOSTED!</span>`;
-                    webLifeFormState.qdd.lastDecipherOptimal = true;
-                    webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 3000);
-                    webLifeFormState.resources.rawData.value = Math.min(webLifeFormState.resources.rawData.max, webLifeFormState.resources.rawData.value + 35);
-                    webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 18);
-                    appendLog(`Quantum Data Decipher successful. Data flow, raw data, and processing power increased.`, 'qdd');
-                    webLifeFormState.qdd.isActive = false;
-                } else {
-                    qddCurrentTargetSymbol.textContent = webLifeFormState.qdd.targetChain[webLifeFormState.qdd.currentChainIndex];
-                }
-            } else {
-                cellElement.classList.add('incorrect');
-                qddOutputDisplay.innerHTML = `// Decipher FAILED! Expected '${currentTargetSymbol}', got '${clickedSymbol}'. <span style="color:var(--stability-critical);">RAW DATA PENALTY!</span>`;
-                webLifeFormState.qdd.lastDecipherOptimal = false;
-                webLifeFormState.resources.rawData.value = Math.max(0, webLifeFormState.resources.rawData.value - webLifeFormState.qdd.failPenalty);
-                appendLog(`Decipher failed: Incorrect symbol. Raw data reduced by ${webLifeFormState.qdd.failPenalty}%.`, 'qdd');
-                webLifeFormState.qdd.isActive = false; // Game over on first incorrect
-                setTimeout(() => { // Briefly show incorrect, then reset
-                    qddDecipherGrid.querySelectorAll('.incorrect').forEach(c => c.classList.remove('incorrect'));
-                    if (!webLifeFormState.qdd.isActive) { // Only re-initiate if not already active (i.e., if it was a failure)
-                         initiateQDDDecipher();
-                    }
-                }, 900);
-            }
-            updateAllResourceDisplays();
-        }
-
-        // --- APS Module Functions (Aetheric Pattern Synthesizer) ---
-        const apsPatternGrid = document.getElementById('aps-pattern-grid');
-        const apsOutputDisplay = document.getElementById('aps-output-display');
-        const apsTargetPatternVisual = document.getElementById('aps-pattern-target-visual');
-        const apsTargetPatternNameLabel = document.getElementById('aps-target-pattern-name-label');
-        const btnAnalyzePattern = document.querySelector('.btn-analyze-pattern');
-
-        const patternSVGs = {
-            'straight': `<path d="M0 50 L100 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'corner': `<path d="M0 50 L50 50 L50 100" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            't-junction': `<path d="M50 0 L50 100 M0 50 L50 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'cross': `<path d="M50 0 L50 100 M0 50 L100 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'end': `<path d="M0 50 L50 50" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
-            'void': `` // No path for empty
-        };
-
-        function generateAPSTargetPattern() {
-            const dims = webLifeFormState.aps.patternDimensions;
-            let pattern = Array(dims).fill(0).map(() => Array(dims).fill(null));
-
-            // Generate a more robust continuous path
-            let path = [];
-            let current = { r: Math.floor(Math.random() * dims), c: Math.floor(Math.random() * dims) };
-            path.push(current);
-            let visited = new Set();
-            visited.add(`${current.r},${current.c}`);
-
-            const directions = [{dr: -1, dc: 0, name: 'up'}, {dr: 1, dc: 0, name: 'down'}, {dr: 0, dc: -1, name: 'left'}, {dr: 0, dc: 1, name: 'right'}];
-
-            for (let i = 0; i < dims * dims * 0.7; i++) { // Path fills ~70% of cells
-                let possibleNext = [];
-                for (const dir of directions) {
-                    const next = { r: current.r + dir.dr, c: current.c + dir.dc };
-                    if (next.r >= 0 && next.r < dims && next.c >= 0 && next.c < dims && !visited.has(`${next.r},${next.c}`)) {
-                        possibleNext.push({ next, dir });
-                    }
-                }
-
-                if (possibleNext.length > 0) {
-                    const chosen = possibleNext[Math.floor(Math.random() * possibleNext.length)];
-                    path.push(chosen.next);
-                    visited.add(`${chosen.next.r},${chosen.next.c}`);
-                    current = chosen.next;
-                } else {
-                    break; // Path can't extend further
-                }
-            }
-
-            // Assign pieces based on path segments
-            for (let i = 0; i < path.length; i++) {
-                const {r, c} = path[i];
-                let type = 'straight';
-                let rotation = 0;
-
-                const prev = path[i-1];
-                const next = path[i+1];
-
-                if (!prev && next) { // Start piece
-                    type = 'end';
-                    if (next.c > c) rotation = 0; // ->
-                    else if (next.r > r) rotation = 90; // |v
-                    else if (next.c < c) rotation = 180; // <-
-                    else if (next.r < r) rotation = 270; // ^|
-                } else if (!next && prev) { // End piece
-                    type = 'end';
-                    if (prev.c < c) rotation = 0; // <-
-                    else if (prev.r < r) rotation = 90; // ^|
-                    else if (prev.c > c) rotation = 180; // ->
-                    else if (prev.r > r) rotation = 270; // |v
-                } else if (prev && next) { // Middle piece
-                    const dr_prev = r - prev.r;
-                    const dc_prev = c - prev.c;
-                    const dr_next = next.r - r;
-                    const dc_next = next.c - c;
-
-                    // Determine relative directions for rotation
-                    if (dr_prev === dr_next && dc_prev === dc_next) { // Straight segment
-                        type = 'straight';
-                        rotation = (dc_prev !== 0) ? 0 : 90;
-                    } else { // Corner segment
-                        type = 'corner';
-                        // Map specific turn combinations to rotation (clockwise from straight-right)
-                        if ((dc_prev === -1 && dr_next === 1) || (dr_prev === -1 && dc_next === 1)) rotation = 0; // Top-left corner, path goes down-right (from left or from top)
-                        else if ((dr_prev === -1 && dc_next === -1) || (dc_prev === 1 && dr_next === -1)) rotation = 90; // Top-right corner, path goes up-left (from top or from right)
-                        else if ((dc_prev === 1 && dr_next === 1) || (dr_prev === 1 && dc_next === -1)) rotation = 180; // Bottom-right corner, path goes up-left (from right or from bottom)
-                        else rotation = 270; // Bottom-left corner, path goes down-right (from bottom or from left)
-                    }
-                } else { // Isolated point or unexpected
-                    type = 'end'; // Treat as an isolated end piece
-                    rotation = Math.floor(Math.random() * 4) * 90;
-                }
-                pattern[r][c] = { type, rotation };
-            }
-
-            // Fill remaining cells with random pieces, mostly 'void' or simple shapes
-            for (let r = 0; r < dims; r++) {
-                for (let c = 0; c < dims; c++) {
-                    if (pattern[r][c] === null) {
-                        const randomPieceType = Math.random() < 0.8 ? 'void' : webLifeFormState.aps.patternTypes[Math.floor(Math.random() * (webLifeFormState.aps.patternTypes.length - 2))]; // Exclude 'end', 'void' for fillers
-                        pattern[r][c] = { type: randomPieceType, rotation: Math.floor(Math.random() * 4) * 90 };
-                    }
-                }
-            }
-            
-            webLifeFormState.aps.targetPattern = pattern;
-            const randomTargetName = webLifeFormState.aps.targetPatternNames[Math.floor(Math.random() * webLifeFormState.aps.targetPatternNames.length)];
-            apsTargetPatternNameLabel.textContent = randomTargetName;
-            
-            // Generate the SVG for the target visual layer
-            apsTargetPatternVisual.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="${dims * 100}" height="${dims * 100}" viewBox="0 0 ${dims * 100} ${dims * 100}">${generateFullSVGPattern(webLifeFormState.aps.targetPattern, dims, true)}</svg>')`;
-        }
-
-        function generateFullSVGPattern(patternData, dims, isTarget=false) {
-            let svgContent = '';
-            const strokeColor = isTarget ? `rgba(255, 0, 255, 0.55)` : `var(--aps-pattern-line)`;
-            const strokeWidth = isTarget ? `20` : `14`; // Thicker for target
-            let filterDef = '';
-            if (isTarget) {
-                 filterDef = `<defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="10" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></defs>`;
-            }
-
-            for (let r = 0; r < dims; r++) {
-                for (let c = 0; c < dims; c++) {
-                    const piece = patternData[r][c];
-                    if (piece && piece.type !== 'void' && patternSVGs[piece.type]) {
-                        const transX = c * 100 + 50;
-                        const transY = r * 100 + 50;
-                        const pathSVG = patternSVGs[piece.type].replace(/stroke-width="(\d+)"/g, `stroke-width="${strokeWidth}"`); // Regex to replace any stroke-width
-                        svgContent += `<g transform="translate(${transX} ${transY}) rotate(${piece.rotation})" ${isTarget ? 'filter="url(%23f1)"' : ''}><g stroke="${strokeColor}">${pathSVG}</g></g>`;
-                    }
-                }
-            }
-            return filterDef + svgContent;
-        }
-
-        function renderAPSGrid() {
-            apsPatternGrid.innerHTML = ``; // Clear existing cells
-            const dims = webLifeFormState.aps.patternDimensions;
-            webLifeFormState.aps.currentPattern = []; // Reset current pattern
-
-            // Append target visual overlay first
-            apsPatternGrid.appendChild(apsTargetPatternVisual);
-
-            for (let r = 0; r < dims; r++) {
-                let row = [];
-                for (let c = 0; c < dims; c++) {
-                    const pieceType = webLifeFormState.aps.patternTypes[Math.floor(Math.random() * webLifeFormState.aps.patternTypes.length)];
-                    const rotation = Math.floor(Math.random() * 4) * 90; // 0, 90, 180, 270 degrees
-                    row.push({ type: pieceType, rotation: rotation });
-
-                    const cell = document.createElement('div');
-                    cell.classList.add('aps-grid-cell');
-                    cell.dataset.row = r;
-                    cell.dataset.col = c;
-                    
-                    const patternPieceDiv = document.createElement('div');
-                    patternPieceDiv.classList.add('aps-pattern-piece');
-                    patternPieceDiv.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">${patternSVGs[pieceType]}</svg>`; // Insert SVG directly
-                    patternPieceDiv.style.transform = `rotate(${rotation}deg)`;
-                    
-                    cell.appendChild(patternPieceDiv);
-                    cell.addEventListener('click', () => apsCellClick(r, c));
-                    apsPatternGrid.appendChild(cell);
-                }
-                webLifeFormState.aps.currentPattern.push(row);
-            }
-        }
-
-        function apsCellClick(row, col) {
-            if (!webLifeFormState.aps.isActive) return;
-
-            const piece = webLifeFormState.aps.currentPattern[row][col];
-            piece.rotation = (piece.rotation + 90) % 360; // Rotate 90 degrees clockwise
-            
-            const cellElement = apsPatternGrid.querySelector(`[data-row="${row}"][data-col="${col}"] .aps-pattern-piece`);
-            cellElement.style.transform = `rotate(${piece.rotation}deg)`;
-            webLifeFormState.aps.lastSynthesisOptimal = false; // Any click invalidates previous optimal state
-            apsOutputDisplay.textContent = "// Adjusting pattern segments...";
-        }
-
-        function analyzeAPSPattern() {
-            if (!webLifeFormState.aps.isActive) return;
-
-            let match = true;
-            const dims = webLifeFormState.aps.patternDimensions;
-            for (let r = 0; r < dims; r++) {
-                for (let c = 0; c < dims; c++) {
-                    const current = webLifeFormState.aps.currentPattern[r][c];
-                    const target = webLifeFormState.aps.targetPattern[r][c];
-                    
-                    // If both are void or both are non-void and match
-                    if (current.type === 'void' && target.type === 'void') {
-                        continue; // Both empty, considered a match
-                    } else if (current.type === 'void' || target.type === 'void') {
-                        match = false; // One is void, other is not
-                        break;
-                    }
-                    
-                    // Compare type and rotation for non-void pieces
-                    if (current.type !== target.type || current.rotation !== target.rotation) {
-                        match = false;
-                        break;
-                    }
-                }
-                if (!match) break;
-            }
-
-            if (match) {
-                apsOutputDisplay.innerHTML = `// Synthesis SUCCESS! <span style="color:var(--stability-good);">Aetheric Pattern Reconstructed!</span> Existential Fabric generated.`;
-                webLifeFormState.aps.lastSynthesisOptimal = true;
-                webLifeFormState.resources.existentialFabric.value = Math.min(webLifeFormState.resources.existentialFabric.max, webLifeFormState.resources.existentialFabric.value + 0.4);
-                webLifeFormState.resources.exoticMatter.value = Math.min(webLifeFormState.resources.exoticMatter.max, webLifeFormState.resources.exoticMatter.value + 0.9);
-                appendLog(`Aetheric Pattern Synthesis successful. Fabric and exotic matter increased.`, 'aps');
-            } else {
-                apsOutputDisplay.innerHTML = `// Synthesis FAILED: <span style="color:var(--stability-critical);">Pattern Mismatch!</span> Recalibrate segments.`;
-                webLifeFormState.aps.lastSynthesisOptimal = false;
-                webLifeFormState.resources.existentialFabric.value = Math.max(0, webLifeFormState.resources.existentialFabric.value - 0.2); // Penalty
-                appendLog(`Aetheric Pattern synthesis failed. Existential Fabric reduced.`, 'aps');
-            }
-            webLifeFormState.aps.isActive = false; // End game after analysis
-            btnAnalyzePattern.textContent = 'Restart Pattern Reconstruction'; // Allow restart
-            updateAllResourceDisplays();
-        }
-
-        function initAPSSynthesizer() {
-            webLifeFormState.aps.isActive = true;
-            generateAPSTargetPattern();
-            renderAPSGrid();
-            btnAnalyzePattern.textContent = 'Analyze Pattern Reconstruction';
-            apsOutputDisplay.textContent = "// Pattern editor idle. Rotate segments to reconstruct the target pattern.";
-            appendLog(`Aetheric Pattern Synthesizer online. Reconstruct the target pattern.`, 'aps');
-        }
-
-        // --- CWP Module Functions (Conscious Waveform Projector) ---
-        const cwpPulseDisplay = document.getElementById('cwp-pulse-display');
-        const cwpIndicatorLine = document.getElementById('cwp-indicator-line');
-        const cwpFeedback = document.getElementById('cwp-feedback');
-        const cwpMatchStatus = document.getElementById('cwp-match-status');
-        const btnPulseWaveform = document.getElementById('btn-pulse-waveform');
-        const cwpPulseCircle = document.querySelector('.cwp-pulse-circle');
-
-        function startCWPAnimation() {
-            cwpIndicatorLine.style.transition = 'none';
-            cwpIndicatorLine.style.left = '0%';
-            
-            setTimeout(() => {
-                cwpIndicatorLine.style.transition = `left ${webLifeFormState.cwp.pulseDuration / 1000}s linear`;
-                cwpIndicatorLine.style.left = '100%';
-                // Calculate time when indicator reaches the center of the target zone
-                const targetZoneStartPx = cwpPulseDisplay.offsetWidth * webLifeFormState.cwp.targetOffset;
-                const targetZoneCenterPx = targetZoneStartPx + (cwpPulseDisplay.offsetWidth * webLifeFormState.cwp.targetZoneWidth / 2);
-                const timeToCenter = (targetZoneCenterPx / cwpPulseDisplay.offsetWidth) * webLifeFormState.cwp.pulseDuration;
-                webLifeFormState.cwp.nextPulseTime = Date.now() + timeToCenter;
-            }, 50); // Small delay to reset transition
-        }
-
-        function pulseCWP() {
-            if (!webLifeFormState.cwp.isActive) {
-                webLifeFormState.cwp.isActive = true;
-                webLifeFormState.cwp.chainCount = 0;
-                btnPulseWaveform.textContent = 'Pulse!';
-                cwpMatchStatus.textContent = '// Resonance chain initiated. Get ready...';
-                startCWPInterval();
-                appendLog(`Conscious Waveform Projector activated.`, 'cwp');
-                return;
-            }
-
-            const now = Date.now();
-            const timeDiff = now - webLifeFormState.cwp.nextPulseTime;
-            const threshold = (webLifeFormState.cwp.pulseDuration * webLifeFormState.cwp.targetZoneWidth) / 2; // Half target zone width in ms
-            const perfectThreshold = threshold * 0.20; // Smaller perfect zone (20% of half zone width)
-
-            if (Math.abs(timeDiff) < perfectThreshold) {
-                showCWPFeedback('PERFECT!', 'var(--cwp-hit-perfect)');
-                webLifeFormState.cwp.chainCount++;
-                cwpMatchStatus.textContent = `// PERFECT HIT! Resonance Chain: ${webLifeFormState.cwp.chainCount}`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 12);
-            } else if (Math.abs(timeDiff) < threshold) {
-                showCWPFeedback('GOOD!', 'var(--cwp-hit-good)');
-                webLifeFormState.cwp.chainCount++;
-                cwpMatchStatus.textContent = `// GOOD HIT! Resonance Chain: ${webLifeFormState.cwp.chainCount}`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 6);
-            } else {
-                showCWPFeedback('MISS!', 'var(--cwp-hit-bad)');
-                webLifeFormState.cwp.chainCount = 0; // Reset chain
-                cwpMatchStatus.textContent = `// MISS! Resonance Chain BROKEN.`;
-                webLifeFormState.resources.processingPower.value = Math.max(0, webLifeFormState.resources.processingPower.value - 12);
-            }
-
-            webLifeFormState.cwp.lastPulseHitTime = now;
-
-            if (webLifeFormState.cwp.chainCount >= webLifeFormState.cwp.maxChain) {
-                webLifeFormState.cwp.lastProjectionOptimal = true;
-                cwpMatchStatus.innerHTML = `// PROJECTION SUCCESS! <span style="color:var(--stability-good);">Target Resonance Achieved!</span> Processing power surged.`;
-                webLifeFormState.resources.processingPower.value = Math.min(webLifeFormState.resources.processingPower.max, webLifeFormState.resources.processingPower.value + 40);
-                webLifeFormState.resources.dataFlow.value = Math.min(webLifeFormState.resources.dataFlow.max, webLifeFormState.resources.dataFlow.value + 1800);
-                appendLog(`Conscious Waveform Projection successful. Processing power and data flow increased.`, 'cwp');
-                stopCWPInterval();
-                webLifeFormState.cwp.isActive = false;
-                btnPulseWaveform.textContent = 'Restart Projection';
-            }
-            updateAllResourceDisplays();
-        }
-
-        function showCWPFeedback(text, color) {
-            cwpFeedback.textContent = text;
-            cwpFeedback.style.color = color;
-            cwpFeedback.classList.remove('show');
-            // Force reflow to restart animation
-            void cwpFeedback.offsetWidth; 
-            cwpFeedback.classList.add('show');
-
-            cwpPulseCircle.classList.add('active'); // Visual feedback on pulse display
-            setTimeout(() => {
-                cwpPulseCircle.classList.remove('active');
-            }, 100); // Remove after short duration
-        }
-
-        let cwpAnimationInterval;
-        function startCWPInterval() {
-            if (cwpAnimationInterval) clearInterval(cwpAnimationInterval);
-            cwpAnimationInterval = setInterval(startCWPAnimation, webLifeFormState.cwp.pulseDuration);
-            startCWPAnimation(); // Start first animation immediately
-            webLifeFormState.cwp.isPulsing = true;
-            appendLog(`Resonance pulse timing started. Maintain the chain.`, 'cwp');
-        }
-
-        function stopCWPInterval() {
-            clearInterval(cwpAnimationInterval);
-            webLifeFormState.cwp.isPulsing = false;
-            cwpIndicatorLine.style.transition = 'none';
-            cwpIndicatorLine.style.left = '0%';
-        }
-
-        function initCWPProjector() {
-            webLifeFormState.cwp.isActive = false;
-            webLifeFormState.cwp.chainCount = 0;
-            webLifeFormState.cwp.lastProjectionOptimal = false;
-            cwpMatchStatus.textContent = '// Projector idle. Build your resonance chain.';
-            btnPulseWaveform.textContent = 'Initiate Resonance Pulse';
-            stopCWPInterval();
-            updateAllResourceDisplays();
-        }
-
-        // --- SAS Module Functions (Spacetime Anchor Stabilizer) ---
-        const gravitonFluxSlider = document.getElementById('graviton-flux-slider');
-        const temporalFluxSlider = document.getElementById('temporal-flux-slider');
-        const sasStabilityIndicator = document.getElementById('sas-stability-indicator');
-        const sasStabilityStatus = document.getElementById('sas-stability-status');
-        const sasStatusDisplay = document.getElementById('sas-status-display');
-
-        function updateFluxValues() {
-            webLifeFormState.sas.gravitonFlux = parseInt(gravitonFluxSlider.value);
-            webLifeFormState.sas.temporalFlux = parseInt(temporalFluxSlider.value);
-            webLifeFormState.sas.lastCalibrationOptimal = false; // User interaction resets optimal flag
-        }
-
-        function updateSASDisplay() {
-            const grav = webLifeFormState.sas.gravitonFlux;
-            const temp = webLifeFormState.sas.temporalFlux;
-            const pert = webLifeFormState.sas.perturbation;
-
-            // Calculate balance offset (difference between fluxes, influenced by perturbation)
-            let balanceOffset = (grav - temp) / 2 + pert; // Average and add perturbation
-            balanceOffset = Math.max(-50, Math.min(50, balanceOffset)); // Keep within bounds relative to center (0)
-
-            // Map offset to position (e.g., -50 to 0%, 50 to 100%)
-            const indicatorPosition = (balanceOffset + 50) / 100 * 100; // 0-100 for percentage left position
-
-            // Apply a slight transform for visual jitter when unstable
-            let jitterX = 0, jitterY = 0;
-            if (Math.abs(balanceOffset) > webLifeFormState.sas.stableZoneThreshold * 1.8) { // Increased jitter trigger threshold
-                jitterX = (Math.random() - 0.5) * 10; // 10px max jitter
-                jitterY = (Math.random() - 0.5) * 10;
-            }
-            sasStabilityIndicator.style.transform = `translate(calc(-50% + ${jitterX}px), calc(-50% + ${jitterY}px)) translateX(${indicatorPosition - 50}%)`;
-
-            const inStableZone = Math.abs(balanceOffset) <= webLifeFormState.sas.stableZoneThreshold;
-
-            if (inStableZone) {
-                webLifeFormState.sas.integrity = Math.min(100, webLifeFormState.sas.integrity + webLifeFormState.sas.integrityGainRate);
-                sasStabilityIndicator.style.background = 'var(--sas-indicator-good)';
-                sasStabilityIndicator.style.boxShadow = '0 0 30px var(--sas-indicator-good)';
-                if (webLifeFormState.sas.lastOptimalTime === 0) {
-                    webLifeFormState.sas.lastOptimalTime = Date.now();
-                }
-            } else {
-                webLifeFormState.sas.integrity = Math.max(0, webLifeFormState.sas.integrity - webLifeFormState.sas.integrityDecayRate);
-                if (webLifeFormState.sas.integrity > 55) { // Adjusted warning threshold
-                    sasStabilityIndicator.style.background = 'var(--sas-indicator-warn)';
-                    sasStabilityIndicator.style.boxShadow = '0 0 25px var(--sas-indicator-warn)';
-                } else {
-                    sasStabilityIndicator.style.background = 'var(--sas-indicator-crit)';
-                    sasStabilityIndicator.style.boxShadow = '0 0 35px var(--sas-indicator-crit)';
-                }
-                webLifeFormState.sas.lastOptimalTime = 0; // Reset optimal timer
-            }
-
-            // Update stability text
-            sasStabilityStatus.textContent = `${webLifeFormState.sas.integrity.toFixed(1)}%`;
-            if (webLifeFormState.sas.integrity > 85) { // Adjusted thresholds
-                sasStabilityStatus.style.color = 'var(--stability-good)';
-                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-good)';
-            } else if (webLifeFormState.sas.integrity > 55) {
-                sasStabilityStatus.style.color = 'var(--stability-warning)';
-                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-warning)';
-            } else {
-                sasStabilityStatus.style.color = 'var(--stability-critical)';
-                sasStabilityStatus.style.textShadow = '0 0 18px var(--stability-critical)';
-                if (!webLifeFormState.anomalyAlert) {
-                    globalAnomalyAlert.classList.add('active');
-                    webLifeFormState.anomalyAlert = true;
-                    appendLog("CRITICAL: SPACETIME INTEGRITY COLLAPSE IMMINENT! Global anomaly alert.", 'critical');
-                }
-            }
-            if (webLifeFormState.sas.integrity > 90 && webLifeFormState.anomalyAlert && webLifeFormState.resources.existentialFabric.value >= 0.3) {
-                // Only clear if SAS is also not critical
-                globalAnomalyAlert.classList.remove('active');
-                webLifeFormState.anomalyAlert = false;
-                appendLog("Spacetime integrity stabilized. Anomaly alert cleared.", 'system');
-            }
-
-            // Check for optimal state for UCM
-            if (webLifeFormState.sas.lastOptimalTime !== 0 && (Date.now() - webLifeFormState.sas.lastOptimalTime) >= webLifeFormState.sas.minOptimalTime && webLifeFormState.sas.integrity >= 95) { // Higher threshold for optimal
-                webLifeFormState.sas.lastCalibrationOptimal = true;
-                sasStatusDisplay.innerHTML = `// CALIBRATION OPTIMAL! <span style="color:var(--stability-good);">Spacetime Integrity Maintained.</span>`;
-            } else {
-                webLifeFormState.sas.lastCalibrationOptimal = false;
-                sasStatusDisplay.innerHTML = `// Calibrate fluxes to maintain balance. <span style="color:var(--sas-text);">Current integrity: ${webLifeFormState.sas.integrity.toFixed(1)}%</span>`;
-            }
-        }
-
-        function updateSASPerturbation() {
-            webLifeFormState.sas.perturbation += (Math.random() - 0.5) * webLifeFormState.sas.perturbationRate * 30; // -15 to 15
-            webLifeFormState.sas.perturbation = Math.max(-35, Math.min(35, webLifeFormState.sas.perturbation)); // Keep perturbation within reasonable bounds
-        }
-
-        function initSASStabilizer() {
-            webLifeFormState.sas.isActive = true;
-            gravitonFluxSlider.addEventListener('input', updateFluxValues);
-            temporalFluxSlider.addEventListener('input', updateFluxValues);
-
-            if (webLifeFormState.sas.perturbationInterval) clearInterval(webLifeFormState.sas.perturbationInterval);
-            webLifeFormState.sas.perturbationInterval = setInterval(updateSASPerturbation, 1000); // Perturbation changes every 1 second
-
-            setInterval(updateSASDisplay, 50); // Update display every 50ms for smoother indicator movement
-            appendLog(`Spacetime Anchor Stabilizer online. Begin flux calibration.`, 'sas');
-        }
-
-        // --- UCM Module Functions (Universal Core Manifestor) ---
-        const ucmTraitConfig = document.getElementById('ucm-trait-config');
-        const ucmCurrentPotentialSpan = document.getElementById('ucm-current-potential');
-        const ucmTargetPotentialSpan = document.getElementById('ucm-target-potential');
-        const ucmPotentialProgress = document.getElementById('ucm-potential-progress');
-        const ucmCurrentCostSpan = document.getElementById('ucm-current-cost');
-        const ucmTotalBudgetSpan = document.getElementById('ucm-total-budget');
-        const ucmCostProgress = document.getElementById('ucm-cost-progress');
-        const btnInitiateManifestation = document.getElementById('btn-initiate-manifestation');
-        const ucmManifestationStatus = document.getElementById('ucm-manifestation-status');
-
-        function renderUCMTraits() {
-            ucmTraitConfig.innerHTML = '';
-            ucmTraitConfig.style.maxHeight = '32rem'; // Make scrollable if many traits
-            ucmTraitConfig.style.overflowY = 'auto';
-
-            webLifeFormState.ucm.traits.forEach(trait => {
-                const traitItem = document.createElement('div');
-                traitItem.classList.add('ucm-trait-item');
-                if (trait.isActive) traitItem.classList.add('active');
-                
-                let costDetails = [];
-                for (const res in trait.cost) {
-                    const resource = webLifeFormState.resources[res];
-                    const unit = resource ? resource.unit : '';
-                    const value = (resource && (unit === 'kMols' || unit === 'units' || unit === '%')) ? trait.cost[res].toFixed(2) : trait.cost[res];
-                    costDetails.push(`${value}${unit.replace('kMols', 'kM').replace('units', 'U').replace('% Full', '%')}`); // Shorter units for display
-                }
-
-                traitItem.innerHTML = `
-                    <label>
-                        <input type="checkbox" data-trait-name="${trait.name}" ${trait.isActive ? 'checked' : ''}>
-                        ${trait.name}
-                    </label>
-                    <div class="ucm-trait-info">
-                        Potential: ${trait.potential}<br>
-                        Cost: ${costDetails.join(', ')}
-                    </div>
-                `;
-                ucmTraitConfig.appendChild(traitItem);
-            });
-
-            ucmTraitConfig.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('change', (e) => toggleTrait(e.target.dataset.traitName, e.target.checked));
-            });
-        }
-
-        function toggleTrait(traitName, isActive) {
-            const trait = webLifeFormState.ucm.traits.find(t => t.name === traitName);
-            if (trait) {
-                trait.isActive = isActive;
-                const traitElement = ucmTraitConfig.querySelector(`[data-trait-name="${traitName}"]`).closest('.ucm-trait-item');
-                if (isActive) {
-                    traitElement.classList.add('active');
-                } else {
-                    traitElement.classList.remove('active');
-                }
-                calculateUCMSummary();
-            }
-        }
-
-        function calculateUCMSummary() {
-            let totalPotential = 0;
-            let totalCost = { energy: 0, dataFlow: 0, rawData: 0, processingPower: 0, exoticMatter: 0, existentialFabric: 0 };
-
-            webLifeFormState.ucm.traits.filter(t => t.isActive).forEach(trait => {
-                totalPotential += trait.potential;
-                for (const res in trait.cost) {
-                    totalCost[res] += trait.cost[res] || 0; // Ensure cost is numeric
-                }
-            });
-
-            webLifeFormState.ucm.currentPotential = totalPotential;
-            webLifeFormState.ucm.currentCost = totalCost;
-
-            updateUCMDisplay();
-        }
-
-        function updateUCMDisplay() {
-            ucmCurrentPotentialSpan.textContent = webLifeFormState.ucm.currentPotential;
-            ucmTargetPotentialSpan.textContent = webLifeFormState.ucm.targetPotential;
-            
-            const potentialPercentage = Math.min(100, (webLifeFormState.ucm.currentPotential / webLifeFormState.ucm.targetPotential) * 100);
-            ucmPotentialProgress.style.width = `${potentialPercentage}%`;
-
-            let overallCostValue = 0; // Simplified cost representation for display
-            let overallBudgetValue = 0;
-
-            for (const res in webLifeFormState.ucm.manifestationBudget) {
-                overallCostValue += webLifeFormState.ucm.currentCost[res] || 0;
-                overallBudgetValue += webLifeFormState.ucm.manifestationBudget[res] || 0;
-            }
-            ucmCurrentCostSpan.textContent = overallCostValue.toFixed(2); // Show some decimals for cost
-            ucmTotalBudgetData = overallBudgetValue; // Store actual budget for comparison
-            ucmTotalBudgetSpan.textContent = overallBudgetValue.toFixed(2);
-
-            const costPercentage = Math.min(100, (overallCostValue / overallBudgetValue) * 100);
-            ucmCostProgress.style.width = `${costPercentage}%`;
-            ucmCostProgress.style.background = costPercentage > 90 ? 'var(--ucm-budget-low)' : (costPercentage > 70 ? 'var(--ucm-budget-medium)' : 'var(--ucm-budget-high)');
-
-            // Check if manifestation button should be active
-            const meetsPotential = webLifeFormState.ucm.currentPotential >= webLifeFormState.ucm.targetPotential;
-            let withinBudget = true;
-            for (const res in webLifeFormState.ucm.manifestationBudget) {
-                if ((webLifeFormState.ucm.currentCost[res] || 0) > webLifeFormState.ucm.manifestationBudget[res]) {
-                    withinBudget = false;
-                    break;
-                }
-            }
-
-            if (meetsPotential && withinBudget) {
-                btnInitiateManifestation.disabled = false;
-                btnInitiateManifestation.style.opacity = '1';
-                btnInitiateManifestation.style.pointerEvents = 'auto';
-                webLifeFormState.ucm.lastManifestationOptimal = true;
-                ucmManifestationStatus.textContent = '// Configuration optimal. Ready for manifestation.';
-                ucmManifestationStatus.classList.remove('fail');
-                ucmManifestationStatus.classList.add('success');
-            } else {
-                btnInitiateManifestation.disabled = true;
-                btnInitiateManifestation.style.opacity = '0.7';
-                btnInitiateManifestation.style.pointerEvents = 'none';
-                webLifeFormState.ucm.lastManifestationOptimal = false;
-                ucmManifestationStatus.textContent = '// Awaiting optimal trait configuration.';
-                ucmManifestationStatus.classList.remove('success');
-                ucmManifestationStatus.classList.add('fail');
-                if (!meetsPotential) ucmManifestationStatus.textContent += ' (Potential too low)';
-                if (!withinBudget) ucmManifestationStatus.textContent += ' (Budget exceeded)';
-            }
-        }
-
-        function initiateUCMManifestation() {
-            if (btnInitiateManifestation.disabled) return;
-
-            btnInitiateManifestation.disabled = true;
-            btnInitiateManifestation.textContent = 'MANIFESTING...';
-            ucmManifestationStatus.classList.remove('success', 'fail');
-            ucmManifestationStatus.style.color = 'var(--ucm-text)';
-            ucmManifestationStatus.style.textShadow = '0 0 20px var(--ucm-glow)';
-            appendLog(`Universal Core Manifestation initiated with current configuration.`, 'ucm');
-
-            // Simulate resource consumption
-            for (const res in webLifeFormState.ucm.currentCost) {
-                webLifeFormState.resources[res].value = Math.max(0, webLifeFormState.resources[res].value - (webLifeFormState.ucm.currentCost[res] || 0));
-            }
-            updateAllResourceDisplays();
-
-            setTimeout(() => {
-                const meetsPotential = webLifeFormState.ucm.currentPotential >= webLifeFormState.ucm.targetPotential;
-                let withinBudget = true;
-                for (const res in webLifeFormState.ucm.manifestationBudget) {
-                    if ((webLifeFormState.ucm.currentCost[res] || 0) > webLifeFormState.ucm.manifestationBudget[res]) {
-                        withinBudget = false;
-                        break;
-                    }
-                }
-
-                if (meetsPotential && withinBudget) {
-                    webLifeFormState.ucm.manifestationSuccess = true;
-                    webLifeFormState.ucm.lastManifestationOptimal = true;
-                    ucmManifestationStatus.innerHTML = "// UNIVERSAL CORE MANIFESTATION COMPLETE: New Trait <span style='color:var(--ucm-manifest-success);'>'TRANSCENDENT CONSCIOUSNESS'</span> unlocked!";
-                    ucmManifestationStatus.classList.add('success');
-                    appendLog("Universal Core Manifestation successful! New trait 'TRANSCENDENT CONSCIOUSNESS' acquired.", 'ucm');
-                } else {
-                    webLifeFormState.ucm.manifestationSuccess = false;
-                    webLifeFormState.ucm.lastManifestationOptimal = false;
-                    ucmManifestationStatus.innerHTML = `// MANIFESTATION FAILED: Configuration was not optimal or resources depleted mid-process. <span style='color:var(--ucm-manifest-fail);'>Recalibrate traits.</span>`;
-                    ucmManifestationStatus.classList.add('fail');
-                    appendLog(`Manifestation failed due to suboptimal configuration or resource issues.`, 'ucm');
-                }
-                btnInitiateManifestation.textContent = 'Initiate Core Manifestation';
-                calculateUCMSummary(); // Re-enable/disable button based on new state
-            }, 5000); // 5 seconds manifestation time
-        }
-
-        function initUCManifestor() {
-            renderUCMTraits();
-            calculateUCMSummary();
-            appendLog(`Universal Core Manifestor online. Configure traits to manifest.`, 'ucm');
-        }
-
-        // --- Main Simulation Loop / Dynamic Resource Updates ---
-        let mainSimulationInterval;
-        function startMainSimulation() {
-            if (mainSimulationInterval) clearInterval(mainSimulationInterval);
-            mainSimulationInterval = setInterval(() => {
-                // Decay non-prioritized resources
-                for (const key in webLifeFormState.resources) {
-                    const resource = webLifeFormState.resources[key];
-                    let decayRate = 0.01; // Base decay
-                    if (resource.priority) {
-                        // Prioritized resources might have less decay or slight gain
-                        decayRate = -0.01; // A slight simulated gain for prioritized
-                    } else {
-                        // Non-prioritized decay faster
-                        decayRate = 0.06 + (Math.random() * 0.05); // Slightly faster overall decay
-                    }
-
-                    if (key === 'energy') decayRate *= 18; // Energy decays faster
-                    if (key === 'existentialFabric') decayRate *= 0.8; // Fabric decays slower
-                    if (key === 'rawData') decayRate *= 2.5; // Raw data decays faster
-                    if (key === 'processingPower') decayRate *= 1.0; // Processing power slightly slower decay
-                    if (key === 'exoticMatter') decayRate *= 1.5; // Exotic matter decays faster
-
-                    resource.value = Math.max(0, Math.min(resource.max, resource.value - decayRate * resource.max / 1000));
-                }
-
-                updateAllResourceDisplays();
-
-                // Simple anomaly alert activation if fabric is too low
-                if (webLifeFormState.resources.existentialFabric.value < 0.10 && !webLifeFormState.anomalyAlert) {
-                    globalAnomalyAlert.classList.add('active');
-                    webLifeFormState.anomalyAlert = true;
-                    appendLog("CRITICAL: EXISTENTIAL FABRIC DILUTION! System integrity compromised.", 'critical');
-                } else if (webLifeFormState.resources.existentialFabric.value >= 0.30 && webLifeFormState.anomalyAlert && webLifeFormState.sas.integrity > 70) {
-                    // Only clear if SAS is also not critical and fabric is recovering
-                    globalAnomalyAlert.classList.remove('active');
-                    webLifeFormState.anomalyAlert = false;
-                    appendLog("Existential Fabric density recovered to safe levels. Anomaly alert cleared.", 'system');
-                }
-
-            }, 700); // Update resources every 700ms
-        }
-
-
-        // Initializations
-        document.addEventListener('DOMContentLoaded', () => {
-            appendLog(`Web Life Form v${webLifeFormState.version} initializing core systems...`, 'event');
-            
-            updateAllResourceDisplays(); // Initial display of resources
-            
-            // QDD
-            initiateQDDDecipher(); // Will render initial empty grid, ready for user action
-            
-            // APS
-            initAPSSynthesizer();
-            
-            // CWP
-            initCWPProjector();
-            
-            // SAS
-            initSASStabilizer();
-            
-            // UCM
-            initUCManifestor();
-
-            startMainSimulation(); // Start the overall resource simulation loop
-        });
-
-    </script>
-</body>
-</html>
+            color:
