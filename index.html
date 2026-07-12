@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v81.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v82.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v81.0) */
+            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v82.0) */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
@@ -20,7 +20,7 @@
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
             --critical-color: #FF0000; /* Pure Red, highly urgent */
 
-            /* Stability Bar Colors (Now resource specific) */
+            /* Stability Bar Colors (Now resource specific) - Kept for general status if needed */
             --stability-good: linear-gradient(90deg, #33FF77 0%, #00E050 100%); /* Brighter, deeper green */
             --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
@@ -30,13 +30,13 @@
             --overseer-text: #00FFFF; /* Pure Cyan for data, slightly muted */
             --overseer-border: rgba(0, 200, 255, 0.99); /* Stronger, electric blue glow */
 
-            /* Resource Display */
+            /* Resource Display - NOT USED IN 2.5 GEN, KEPT FOR REFERENCE IF OLD ELEMENTS WERE HERE */
             --resource-panel-bg: rgba(5, 0, 10, 0.99); /* Darker, deeper purple-ish */
             --resource-panel-border: rgba(160, 0, 255, 0.99); /* Stronger purple accent, slightly redder */
             --resource-panel-text: #FFEBFF; /* Lighter purple */
             --resource-bar-bg: rgba(0, 0, 0, 0.999); /* Near black background for resource bars */
 
-            /* Resource Specific Colors */
+            /* Resource Specific Colors - NOT USED IN 2.5 GEN, KEPT FOR REFERENCE IF OLD ELEMENTS WERE HERE */
             --energy-color-high: linear-gradient(90deg, #FFFFFF 0%, #FFFF00 100%); /* Ultra-bright yellow */
             --energy-color-medium: linear-gradient(90deg, #FFE000 0%, #FF9000 100%);
             --energy-color-low: linear-gradient(90deg, #FF0000 0%, #C00000 100%); /* Pure red */
@@ -67,7 +67,7 @@
             --existential-fabric-color-low: linear-gradient(90deg, #700070 0%, #300055 100%); /* Dark Magenta to Indigo */
             --existential-fabric-text: #D0B0E0; /* Soft Purple */
 
-            /* Gen 81.0 NEW: Quantum Data Decipherer (QDD) */
+            /* Gen 82.0 NEW: Quantum Data Decipherer (QDD) */
             --qdd-bg: rgba(0, 10, 15, 0.99); /* Deep blue-green */
             --qdd-border: rgba(0, 220, 255, 0.999); /* Bright aqua-blue, stronger */
             --qdd-text: #E0F8FF; /* Pale cyan */
@@ -78,7 +78,7 @@
             --qdd-cell-incorrect: rgba(255, 60, 60, 0.9); /* Stronger incorrect indication */
             --qdd-symbol-path: rgba(0, 255, 255, 0.7); /* Path for dynamic symbols */
 
-            /* Gen 81.0 NEW: Aetheric Pattern Synthesizer (APS) */
+            /* Gen 82.0 NEW: Aetheric Pattern Synthesizer (APS) */
             --aps-bg: rgba(15, 0, 10, 0.99); /* Deep magenta-red */
             --aps-border: rgba(255, 0, 200, 0.999); /* Vibrant fuchsia, stronger */
             --aps-text: #FFE0F8; /* Pale pink */
@@ -90,7 +90,7 @@
             --aps-cell-inverted-bg: rgba(255, 100, 200, 0.7);
             --aps-cell-base-bg: rgba(50, 20, 40, 0.7);
 
-            /* Gen 81.0 NEW: Conscious Waveform Projector (CWP) */
+            /* Gen 82.0 NEW: Conscious Waveform Projector (CWP) */
             --cwp-bg: rgba(0, 15, 0, 0.99); /* Deep forest green */
             --cwp-border: rgba(120, 255, 0, 0.999); /* Bright lime green, stronger */
             --cwp-text: #E0FFD0; /* Pale lime */
@@ -101,7 +101,7 @@
             --cwp-hit-perfect: #00FFFF;
             --cwp-hit-bad: #FF0000;
 
-            /* Gen 81.0 NEW: Spacetime Anchor Stabilizer (SAS) */
+            /* Gen 82.0 NEW: Spacetime Anchor Stabilizer (SAS) */
             --sas-bg: rgba(10, 5, 0, 0.99); /* Deep burnt orange */
             --sas-border: rgba(255, 140, 0, 0.999); /* Bright orange, stronger */
             --sas-text: #FFF5E0; /* Pale orange */
@@ -113,7 +113,7 @@
             --sas-indicator-crit: #FF0000;
             --sas-grav-pull-color: rgba(255, 0, 0, 0.2);
 
-            /* Gen 81.0 NEW: Universal Core Manifestor (UCM) */
+            /* Gen 82.0 NEW: Universal Core Manifestor (UCM) */
             --ucm-bg: rgba(0, 0, 20, 0.99); /* Deep space blue */
             --ucm-border: rgba(170, 0, 255, 0.999); /* Deep vibrant violet, stronger */
             --ucm-text: #E0FFFF; /* Brightest cyan-white */
@@ -131,7 +131,7 @@
             --ucm-budget-medium: #FFFF00;
             --ucm-budget-low: #FF0000;
 
-            /* Gen 81.0 - Enhanced UI elements */
+            /* Gen 82.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -1067,7 +1067,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v81.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v82.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -3.2rem;
             left: 4.0rem;
@@ -1263,4 +1263,952 @@
             padding: 3.5rem;
             text-align: center;
             font-family: 'Orbitron', sans-serif;
-            color:
+            color: var(--anomaly-event-text);
+            text-shadow: 0 0 25px var(--anomaly-event-border);
+            box-shadow: 0 0 50px var(--anomaly-event-border);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+            max-width: 80%;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+        .resource-anomaly-event.active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .resource-anomaly-event h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: var(--anomaly-event-text);
+            text-shadow: 0 0 30px var(--anomaly-event-border);
+            letter-spacing: 0.15rem;
+        }
+        .resource-anomaly-event p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            line-height: 2.5;
+            color: var(--anomaly-event-text);
+        }
+        .resource-anomaly-event button {
+            background: var(--anomaly-event-border);
+            color: var(--anomaly-event-bg);
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 1.8rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 0 25px var(--anomaly-event-border);
+            transition: all 0.3s ease;
+        }
+        .resource-anomaly-event button:hover {
+            box-shadow: 0 0 40px var(--anomaly-event-border);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container border-glow">
+        <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
+        <p>Core System Interface // Version 82.0 Beta // Operational since Cycle 3,141,592,653</p>
+        <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
+
+        <div class="control-module">
+            <!-- Quantum Data Decipherer Module -->
+            <div class="module-base quantum-data-decipherer" data-label="Quantum Data Decipherer (QDD)">
+                <div class="param-group">
+                    <label class="param-label">Decryption Stream <br><span>Intercepting highly encrypted quantum data streams. Decipher the symbols to prevent data decay.</span></label>
+                    <div class="qdd-decipher-grid" id="qddDecipherGrid">
+                        <!-- Stream symbols will be dynamically inserted here by JS -->
+                    </div>
+                    <p class="qdd-target-sequence-display">Target Sequence: <span id="qddTargetSequence">_ _ _</span></p>
+                    <div class="qdd-difficulty-bar-container"><div id="qddDifficultyBar" class="qdd-difficulty-bar"></div></div>
+                </div>
+                <button class="action-button btn-initiate-decipher" id="initiateDecipherBtn">Initiate Decipher Sequence</button>
+            </div>
+
+            <!-- Aetheric Pattern Synthesizer Module -->
+            <div class="module-base aetheric-pattern-synthesizer" data-label="Aetheric Pattern Synthesizer (APS)">
+                <div class="param-group">
+                    <label class="param-label">Pattern Inversion Matrix <br><span>Synthesize aetheric patterns by inverting grid cells to match the target resonance.</span></label>
+                    <div class="aps-pattern-grid" id="apsPatternGrid">
+                        <span class="aps-pattern-target-label" id="apsTargetLabel">LOADING...</span>
+                    </div>
+                </div>
+                <p class="aps-output-display" id="apsOutputDisplay">Awaiting pattern analysis...</p>
+                <button class="action-button btn-analyze-pattern" id="analyzePatternBtn">Analyze Pattern</button>
+            </div>
+
+            <!-- Conscious Waveform Projector Module -->
+            <div class="module-base conscious-waveform-projector" data-label="Conscious Waveform Projector (CWP)">
+                <div class="param-group">
+                    <label class="param-label">Waveform Resonance Tuning <br><span>Project conscious waveforms into reality. Tap at the peak resonance zone for optimal manifestation.</span></label>
+                    <div class="cwp-pulse-display" id="cwpPulseDisplay">
+                        <div class="cwp-pulse-indicator-line" id="cwpPulseIndicator"></div>
+                        <div class="cwp-pulse-target-zone"></div>
+                        <div class="cwp-pulse-feedback" id="cwpPulseFeedback"></div>
+                        <span class="cwp-speed-indicator">Speed: <span id="cwpSpeedValue">1.0x</span></span>
+                    </div>
+                </div>
+                <p class="cwp-match-status" id="cwpMatchStatus">Press SPACE or click the button to resonate.</p>
+                <button class="action-button btn-pulse-waveform" id="pulseWaveformBtn">Pulse Waveform</button>
+            </div>
+
+            <!-- Spacetime Anchor Stabilizer Module -->
+            <div class="module-base spacetime-anchor-stabilizer" data-label="Spacetime Anchor Stabilizer (SAS)">
+                <div class="param-group">
+                    <label class="param-label">Flux Stabilization Array <br><span>Counteract gravitational anomalies by balancing graviton flux and temporal cohesion.</span></label>
+                    <div class="sas-flux-controls">
+                        <div class="sas-flux-group">
+                            <label for="gravitonFlux">Graviton Flux</label>
+                            <input type="range" id="gravitonFlux" class="sas-flux-slider" min="0" max="100" value="50" orientation="vertical">
+                        </div>
+                        <div class="sas-balance-display" id="sasBalanceDisplay">
+                            <div class="sas-gravitational-pull" id="sasGravPull"></div>
+                            <div class="sas-stable-zone"></div>
+                            <div class="sas-stability-indicator" id="sasStabilityIndicator"></div>
+                        </div>
+                        <div class="sas-flux-group">
+                            <label for="temporalCohesion">Temporal Cohesion</label>
+                            <input type="range" id="temporalCohesion" class="sas-flux-slider" min="0" max="100" value="50" orientation="vertical">
+                        </div>
+                    </div>
+                </div>
+                <p class="sas-status-display" id="sasStatusDisplay">Adjust flux sliders to maintain stability.</p>
+                <button class="action-button btn-calibrate-flux" id="calibrateFluxBtn">Calibrate Flux</button>
+            </div>
+
+            <!-- Universal Core Manifestor Module -->
+            <div class="module-base universal-core-manifestor" data-label="Universal Core Manifestor (UCM)">
+                <div class="param-group">
+                    <label class="param-label">Trans-Dimensional Trait Fusion <br><span>Select compatible traits to manifest a new Universal Core. Conflicts will reduce manifestation probability.</span></label>
+                    <div class="ucm-trait-config" id="ucmTraitConfig">
+                        <!-- Traits will be dynamically inserted here by JS -->
+                        <div class="ucm-trait-item">
+                            <label>
+                                <input type="checkbox" name="trait" value="traitA">
+                                Accelerated Chrono-Synch
+                            </label>
+                            <span class="ucm-trait-info">[+15% Probability]</span>
+                        </div>
+                        <div class="ucm-trait-item">
+                            <label>
+                                <input type="checkbox" name="trait" value="traitB">
+                                Entropic Field Resonance
+                            </label>
+                            <span class="ucm-trait-info">[-10% Probability]</span>
+                        </div>
+                        <div class="ucm-trait-item">
+                            <label>
+                                <input type="checkbox" name="trait" value="traitC">
+                                Hyper-Spatial Folding
+                            </label>
+                            <span class="ucm-trait-info">[+20% Probability]</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="ucm-summary-display">Manifestation Probability: <span id="ucmProbability">50%</span></p>
+                <div class="ucm-summary-bar-container">
+                    <div id="ucmProgressBar" class="ucm-summary-progress-bar"></div>
+                </div>
+                <p class="ucm-manifestation-status" id="ucmManifestStatus">Ready to manifest.</p>
+                <button class="action-button btn-initiate-manifestation" id="initiateManifestationBtn">Initiate Manifestation</button>
+            </div>
+        </div>
+
+        <div class="status-log-display" id="statusLog">
+            <!-- Log entries will be inserted here by JS -->
+            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v82.0 Core Initialized.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.125]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying new generation control modules.</span></div>
+        </div>
+
+        <div class="anomaly-alert" id="anomalyAlert">
+            <h2>CRITICAL ANOMALY DETECTED!</h2>
+            <p id="anomalyMessage">Unforeseen deviations in reality fabric. Immediate corrective action required across systems!</p>
+        </div>
+    </div>
+
+    <!-- Resource Anomaly Event Overlay -->
+    <div class="resource-anomaly-event" id="resourceAnomalyEvent">
+        <h2>UNSTABLE REALITY SPIKE!</h2>
+        <p>A severe trans-dimensional flux is destabilizing existence. Your actions are paramount!</p>
+        <button id="acknowledgeAnomaly">Acknowledge</button>
+    </div>
+
+    <script>
+        // Global State & UI Elements
+        const ui = {
+            statusLog: document.getElementById('statusLog'),
+            anomalyAlert: document.getElementById('anomalyAlert'),
+            resourceAnomalyEvent: document.getElementById('resourceAnomalyEvent'),
+            acknowledgeAnomalyBtn: document.getElementById('acknowledgeAnomaly'),
+            
+            // QDD
+            qddDecipherGrid: document.getElementById('qddDecipherGrid'),
+            qddTargetSequence: document.getElementById('qddTargetSequence'),
+            qddDifficultyBar: document.getElementById('qddDifficultyBar'),
+            initiateDecipherBtn: document.getElementById('initiateDecipherBtn'),
+
+            // APS
+            apsPatternGrid: document.getElementById('apsPatternGrid'),
+            apsTargetLabel: document.getElementById('apsTargetLabel'),
+            apsOutputDisplay: document.getElementById('apsOutputDisplay'),
+            analyzePatternBtn: document.getElementById('analyzePatternBtn'),
+
+            // CWP
+            cwpPulseDisplay: document.getElementById('cwpPulseDisplay'),
+            cwpPulseIndicator: document.getElementById('cwpPulseIndicator'),
+            cwpPulseFeedback: document.getElementById('cwpPulseFeedback'),
+            cwpMatchStatus: document.getElementById('cwpMatchStatus'),
+            cwpPulseBtn: document.getElementById('pulseWaveformBtn'),
+            cwpSpeedValue: document.getElementById('cwpSpeedValue'),
+
+            // SAS
+            gravitonFluxSlider: document.getElementById('gravitonFlux'),
+            temporalCohesionSlider: document.getElementById('temporalCohesion'),
+            sasBalanceDisplay: document.getElementById('sasBalanceDisplay'),
+            sasGravPull: document.getElementById('sasGravPull'),
+            sasStabilityIndicator: document.getElementById('sasStabilityIndicator'),
+            sasStatusDisplay: document.getElementById('sasStatusDisplay'),
+            calibrateFluxBtn: document.getElementById('calibrateFluxBtn'),
+
+            // UCM
+            ucmTraitConfig: document.getElementById('ucmTraitConfig'),
+            ucmProbability: document.getElementById('ucmProbability'),
+            ucmProgressBar: document.getElementById('ucmProgressBar'),
+            ucmManifestStatus: document.getElementById('ucmManifestStatus'),
+            initiateManifestationBtn: document.getElementById('initiateManifestationBtn'),
+        };
+
+        let systemState = {
+            globalStability: 100, // Represented as a percentage
+            anomalyActive: false,
+            // QDD state
+            qdd: {
+                active: false,
+                targetSequence: [],
+                currentInput: [],
+                symbols: ['Ψ', 'Ω', 'Ξ', 'Δ', 'Σ', 'Φ'],
+                difficulty: 0.5, // 0 to 1
+                score: 0,
+                interval: null,
+                symbolGenerationInterval: null
+            },
+            // APS state
+            aps: {
+                active: false,
+                gridSize: 4,
+                currentPattern: [], // 16 cells, 0 for off, 1 for on
+                targetPattern: [],
+                patternNames: ["Cosmic Bloom", "Singularity Weave", "Quantum Knot", "Aetheric Cascade", "Void Glimmer"],
+                targetPatternName: "",
+                matches: 0
+            },
+            // CWP state
+            cwp: {
+                active: false,
+                pulseSpeed: 5000, // ms for full sweep
+                indicatorPosition: 0, // 0 to 100%
+                animationFrame: null,
+                lastPulseTime: 0,
+                pulseInterval: null,
+                currentSpeedFactor: 1.0,
+                baseSpeed: 5000,
+                hits: 0, miss: 0
+            },
+            // SAS state
+            sas: {
+                active: false,
+                gravitonFlux: 50,
+                temporalCohesion: 50,
+                stability: 0, // -100 (unstable left) to 100 (unstable right), 0 is perfect
+                gravPullOffset: 0, // dynamic offset for the ideal center
+                gravPullMagnitude: 0,
+                pullInterval: null,
+                calibrationAttempts: 0
+            },
+            // UCM state
+            ucm: {
+                active: false,
+                traits: [
+                    { id: 'chronoSynch', name: 'Accelerated Chrono-Synch', prob: 15, active: false, conflict: ['quantumDistort'], requires: [], locked: false },
+                    { id: 'entropicField', name: 'Entropic Field Resonance', prob: -10, active: false, conflict: [], requires: ['chronoSynch'], locked: false },
+                    { id: 'hyperSpatial', name: 'Hyper-Spatial Folding', prob: 20, active: false, conflict: [], requires: [], locked: false },
+                    { id: 'realityAnchor', name: 'Reality Anchor Integration', prob: 10, active: false, conflict: [], requires: [], locked: false },
+                    { id: 'quantumDistort', name: 'Quantum Distortion Field', prob: -25, active: false, conflict: ['chronoSynch'], requires: [], locked: false },
+                    { id: 'aethericConduit', name: 'Aetheric Energy Conduit', prob: 5, active: false, conflict: [], requires: [], locked: false },
+                    { id: 'cosmicHarmony', name: 'Cosmic Harmony Matrix', prob: 30, active: false, conflict: ['entropicField'], requires: ['hyperSpatial'], locked: false }
+                ],
+                baseProbability: 50,
+                manifestationAttempt: 0
+            }
+        };
+
+        // --- GLOBAL LOGGING & ANOMALY HANDLING ---
+        function addLogEntry(message, type = 'info') {
+            const timestamp = new Date().toTimeString().split(' ')[0] + '.' + String(new Date().getMilliseconds()).padStart(3, '0');
+            const entry = document.createElement('div');
+            entry.classList.add('status-entry');
+            entry.innerHTML = `<span class="status-value">[${timestamp}]</span> <span class="status-${type}">${message}</span>`;
+            ui.statusLog.prepend(entry); // Add to top
+            if (ui.statusLog.children.length > 20) { // Keep log concise
+                ui.statusLog.removeChild(ui.statusLog.lastChild);
+            }
+        }
+
+        function triggerAnomalyAlert(message) {
+            systemState.anomalyActive = true;
+            ui.anomalyAlert.classList.add('active');
+            ui.anomalyAlert.querySelector('#anomalyMessage').textContent = message;
+            addLogEntry(`CRITICAL: ${message}`, 'critical');
+        }
+
+        function resolveAnomalyAlert() {
+            systemState.anomalyActive = false;
+            ui.anomalyAlert.classList.remove('active');
+            addLogEntry('Anomaly Alert resolved. Systems returning to nominal.', 'event');
+        }
+
+        function triggerResourceAnomalyEvent() {
+            ui.resourceAnomalyEvent.classList.add('active');
+            addLogEntry('URGENT: Trans-dimensional flux detected! High-priority intervention needed.', 'warning');
+            systemState.anomalyActive = true; // Global anomaly state
+        }
+
+        ui.acknowledgeAnomalyBtn.addEventListener('click', () => {
+            ui.resourceAnomalyEvent.classList.remove('active');
+            systemState.anomalyActive = false;
+            addLogEntry('Resource anomaly acknowledged. Diverting consciousness resources.', 'event');
+        });
+
+        // --- QUANTUM DATA DECIPHERER (QDD) ---
+        function generateQDDTargetSequence(length = 3) {
+            systemState.qdd.targetSequence = [];
+            systemState.qdd.currentInput = [];
+            for (let i = 0; i < length; i++) {
+                systemState.qdd.targetSequence.push(systemState.qdd.symbols[Math.floor(Math.random() * systemState.qdd.symbols.length)]);
+            }
+            ui.qddTargetSequence.textContent = systemState.qdd.targetSequence.join(' ');
+        }
+
+        function createQDDStreamSymbol() {
+            if (!systemState.qdd.active) return;
+
+            const symbolChar = systemState.qdd.symbols[Math.floor(Math.random() * systemState.qdd.symbols.length)];
+            const symbolElement = document.createElement('div');
+            symbolElement.classList.add('qdd-stream-symbol');
+            symbolElement.textContent = symbolChar;
+            
+            // Randomize vertical position within the grid
+            const gridHeight = ui.qddDecipherGrid.clientHeight;
+            const symbolHeight = 80; // approximate height + margin
+            const randomTop = Math.random() * (gridHeight - symbolHeight) + (symbolHeight / 2); // Center of the symbol
+            symbolElement.style.top = `${randomTop}px`;
+            symbolElement.style.right = '-10%'; // Start off-screen right
+
+            // Adjust animation duration based on difficulty
+            const minDuration = 4; // seconds
+            const maxDuration = 8; // seconds
+            const duration = maxDuration - (systemState.qdd.difficulty * (maxDuration - minDuration));
+            symbolElement.style.animationDuration = `${duration}s`;
+
+            symbolElement.addEventListener('click', () => {
+                if (!systemState.qdd.active) return;
+
+                systemState.qdd.currentInput.push(symbolChar);
+                if (systemState.qdd.currentInput.length <= systemState.qdd.targetSequence.length) {
+                    if (symbolChar === systemState.qdd.targetSequence[systemState.qdd.currentInput.length - 1]) {
+                        symbolElement.classList.add('correct');
+                        addLogEntry(`QDD: Deciphered '${symbolChar}' - Match!`, 'info');
+                        systemState.qdd.score++;
+                    } else {
+                        symbolElement.classList.add('incorrect');
+                        addLogEntry(`QDD: Deciphered '${symbolChar}' - Mismatch. Expected '${systemState.qdd.targetSequence[systemState.qdd.currentInput.length - 1]}'`, 'warning');
+                        systemState.qdd.score--;
+                        systemState.globalStability -= 5;
+                        checkGlobalStability();
+                    }
+                } else {
+                    symbolElement.classList.add('incorrect'); // Clicked extra symbol after target is complete
+                    addLogEntry(`QDD: Extraneous symbol '${symbolChar}' detected after sequence completion.`, 'warning');
+                    systemState.qdd.score--;
+                    systemState.globalStability -= 2;
+                    checkGlobalStability();
+                }
+                
+                // Remove symbol after visual feedback
+                setTimeout(() => symbolElement.remove(), 500);
+
+                if (systemState.qdd.currentInput.length >= systemState.qdd.targetSequence.length) {
+                    endQDDDecipherRound();
+                }
+            });
+
+            ui.qddDecipherGrid.appendChild(symbolElement);
+            // Remove symbol when animation ends (it means it passed without interaction)
+            symbolElement.addEventListener('animationend', () => {
+                if (symbolElement.classList.contains('correct') || symbolElement.classList.contains('incorrect')) return; // Already handled
+                
+                addLogEntry(`QDD: Symbol '${symbolChar}' passed undeciphered.`, 'warning');
+                systemState.qdd.score--; // Penalty for missing a symbol
+                systemState.globalStability -= 3;
+                checkGlobalStability();
+                symbolElement.remove();
+            });
+        }
+
+        function startQDDDecipherRound() {
+            systemState.qdd.active = true;
+            systemState.qdd.score = 0;
+            ui.qddDecipherGrid.innerHTML = ''; // Clear old symbols
+            generateQDDTargetSequence(Math.floor(Math.random() * 3) + 3); // 3 to 5 symbols
+            ui.initiateDecipherBtn.textContent = 'Deciphering...';
+            ui.initiateDecipherBtn.disabled = true;
+
+            const symbolGenerationRate = 1000 + (1 - systemState.qdd.difficulty) * 2000; // Faster generation on higher difficulty
+            systemState.qdd.symbolGenerationInterval = setInterval(createQDDStreamSymbol, symbolGenerationRate);
+
+            // Round duration: 10 seconds + 5s per target symbol
+            const roundDuration = 10000 + (systemState.qdd.targetSequence.length * 5000);
+            systemState.qdd.interval = setTimeout(endQDDDecipherRound, roundDuration);
+            addLogEntry('QDD: Decryption sequence initiated. Target: ' + ui.qddTargetSequence.textContent, 'event');
+        }
+
+        function endQDDDecipherRound() {
+            clearInterval(systemState.qdd.symbolGenerationInterval);
+            clearTimeout(systemState.qdd.interval);
+            systemState.qdd.active = false;
+            ui.initiateDecipherBtn.textContent = 'Initiate Decipher Sequence';
+            ui.initiateDecipherBtn.disabled = false;
+
+            let success = systemState.qdd.score >= systemState.qdd.targetSequence.length * 0.7; // 70% accuracy for success
+            if (success) {
+                addLogEntry(`QDD: Decryption successful! Score: ${systemState.qdd.score}. Data integrity maintained.`, 'success');
+                systemState.qdd.difficulty = Math.min(1, systemState.qdd.difficulty + 0.1); // Increase difficulty
+                systemState.globalStability += 10;
+            } else {
+                addLogEntry(`QDD: Decryption failed. Score: ${systemState.qdd.score}. Data loss incurred.`, 'critical');
+                triggerAnomalyAlert('QDD: Quantum data corruption detected due to failed decryption!');
+                systemState.qdd.difficulty = Math.max(0.1, systemState.qdd.difficulty - 0.1); // Decrease difficulty
+                systemState.globalStability -= 15;
+            }
+            ui.qddDifficultyBar.style.width = `${systemState.qdd.difficulty * 100}%`;
+            ui.qddDifficultyBar.style.background = systemState.qdd.difficulty > 0.7 ? 'var(--stability-good)' : (systemState.qdd.difficulty > 0.3 ? 'var(--stability-warning)' : 'var(--stability-critical)');
+            checkGlobalStability();
+            // Clear all remaining symbols
+            ui.qddDecipherGrid.querySelectorAll('.qdd-stream-symbol').forEach(s => s.remove());
+            ui.qddTargetSequence.textContent = 'IDLE';
+        }
+
+        ui.initiateDecipherBtn.addEventListener('click', startQDDDecipherRound);
+
+        // --- AETHERIC PATTERN SYNTHESIZER (APS) ---
+        function generateAPSPattern() {
+            systemState.aps.currentPattern = Array(systemState.aps.gridSize * systemState.aps.gridSize).fill(0);
+            systemState.aps.targetPattern = [];
+            systemState.aps.matches = 0;
+
+            const patternIndex = Math.floor(Math.random() * systemState.aps.patternNames.length);
+            systemState.aps.targetPatternName = systemState.aps.patternNames[patternIndex];
+            ui.apsTargetLabel.textContent = `TARGET: ${systemState.aps.targetPatternName.toUpperCase()}`;
+            ui.apsOutputDisplay.textContent = 'Awaiting pattern analysis...';
+
+            const patterns = {
+                "Cosmic Bloom": [0,1,0,0, 1,1,1,0, 0,1,0,0, 0,0,0,0],
+                "Singularity Weave": [1,0,0,1, 0,1,1,0, 0,1,1,0, 1,0,0,1],
+                "Quantum Knot": [0,1,1,0, 1,0,0,1, 1,0,0,1, 0,1,1,0],
+                "Aetheric Cascade": [1,0,0,0, 1,1,0,0, 1,1,1,0, 1,1,1,1],
+                "Void Glimmer": [0,0,0,0, 0,1,1,0, 0,1,1,0, 0,0,0,0]
+            };
+            systemState.aps.targetPattern = patterns[systemState.aps.targetPatternName] || Array(systemState.aps.gridSize * systemState.aps.gridSize).fill(0);
+
+            renderAPSPattern();
+            addLogEntry(`APS: New pattern sequence loaded: ${systemState.aps.targetPatternName}.`, 'event');
+        }
+
+        function renderAPSPattern() {
+            ui.apsPatternGrid.innerHTML = `<span class="aps-pattern-target-label" id="apsTargetLabel">TARGET: ${systemState.aps.targetPatternName.toUpperCase()}</span>`; // Re-add label
+            systemState.aps.currentPattern.forEach((state, index) => {
+                const cell = document.createElement('div');
+                cell.classList.add('aps-grid-cell');
+                cell.setAttribute('data-index', index);
+                if (state === 1) {
+                    cell.classList.add('inverted');
+                }
+                const visual = document.createElement('div');
+                visual.classList.add('aps-grid-cell-visual');
+                cell.appendChild(visual);
+                cell.addEventListener('click', toggleAPSCell);
+                ui.apsPatternGrid.appendChild(cell);
+            });
+        }
+
+        function toggleAPSCell(event) {
+            const index = parseInt(event.currentTarget.getAttribute('data-index'));
+            systemState.aps.currentPattern[index] = systemState.aps.currentPattern[index] === 0 ? 1 : 0;
+            event.currentTarget.classList.toggle('inverted');
+        }
+
+        function analyzeAPSPattern() {
+            if (!systemState.aps.targetPattern.length) {
+                addLogEntry('APS: No target pattern loaded. Generate a new one first.', 'warning');
+                return;
+            }
+            
+            let correctCells = 0;
+            for (let i = 0; i < systemState.aps.currentPattern.length; i++) {
+                if (systemState.aps.currentPattern[i] === systemState.aps.targetPattern[i]) {
+                    correctCells++;
+                }
+            }
+
+            systemState.aps.matches = correctCells;
+            const totalCells = systemState.aps.gridSize * systemState.aps.gridSize;
+            const accuracy = (correctCells / totalCells) * 100;
+
+            if (accuracy >= 80) { // 80% match is a success
+                ui.apsOutputDisplay.innerHTML = `Pattern Synced. Accuracy: ${accuracy.toFixed(2)}%<br>Resonance established for ${systemState.aps.targetPatternName}!`;
+                addLogEntry(`APS: Pattern '${systemState.aps.targetPatternName}' synthesized with ${accuracy.toFixed(2)}% accuracy.`, 'success');
+                systemState.globalStability += 12;
+            } else {
+                ui.apsOutputDisplay.innerHTML = `Pattern Mismatch. Accuracy: ${accuracy.toFixed(2)}%<br>Failed to establish resonance. Re-evaluate and try again.`;
+                addLogEntry(`APS: Pattern '${systemState.aps.targetPatternName}' synthesis failed: ${accuracy.toFixed(2)}%.`, 'critical');
+                systemState.globalStability -= 8;
+                triggerAnomalyAlert('APS: Aetheric resonance destabilized. Potential reality tears forming.');
+            }
+            checkGlobalStability();
+            generateAPSPattern(); // Load a new pattern after analysis
+        }
+
+        ui.analyzePatternBtn.addEventListener('click', analyzeAPSPattern);
+        // Initial load for APS
+        generateAPSPattern();
+
+        // --- CONSCIOUS WAVEFORM PROJECTOR (CWP) ---
+        function startCWPPulse() {
+            if (systemState.cwp.active) return;
+            systemState.cwp.active = true;
+            systemState.cwp.hits = 0;
+            systemState.cwp.miss = 0;
+            ui.cwpMatchStatus.textContent = 'Press SPACE or click the button to resonate.';
+            ui.cwpPulseBtn.textContent = 'Pulsing...';
+            ui.cwpPulseBtn.disabled = true;
+
+            function animatePulse(timestamp) {
+                if (!systemState.cwp.lastPulseTime) systemState.cwp.lastPulseTime = timestamp;
+                const elapsed = timestamp - systemState.cwp.lastPulseTime;
+                systemState.cwp.lastPulseTime = timestamp;
+
+                systemState.cwp.indicatorPosition = (systemState.cwp.indicatorPosition + (elapsed / systemState.cwp.pulseSpeed) * 100) % 200; // Go 0-100-0
+                let currentPos = systemState.cwp.indicatorPosition;
+                if (currentPos > 100) currentPos = 200 - currentPos; // Reverse direction
+
+                ui.cwpPulseIndicator.style.left = `${currentPos}%`;
+
+                systemState.cwp.animationFrame = requestAnimationFrame(animatePulse);
+            }
+            systemState.cwp.animationFrame = requestAnimationFrame(animatePulse);
+            addLogEntry('CWP: Waveform projection initiated. Prepare to resonate.', 'event');
+
+            // Allow interaction after a short delay
+            setTimeout(() => {
+                ui.cwpPulseBtn.disabled = false;
+                ui.cwpPulseBtn.textContent = 'Pulse Waveform';
+            }, 1000); // Give user a moment to prepare
+        }
+
+        function stopCWPPulse() {
+            systemState.cwp.active = false;
+            cancelAnimationFrame(systemState.cwp.animationFrame);
+            systemState.cwp.lastPulseTime = 0;
+            ui.cwpPulseIndicator.style.left = '0%';
+            ui.cwpPulseBtn.textContent = 'Pulse Waveform';
+            ui.cwpPulseBtn.disabled = false;
+            addLogEntry('CWP: Waveform projection stopped. Analyze results.', 'event');
+        }
+
+        function hitCWPPulse() {
+            if (!systemState.cwp.active) {
+                startCWPPulse(); // Auto-start if not active
+                return;
+            }
+
+            let currentPos = parseFloat(ui.cwpPulseIndicator.style.left);
+            const targetZoneStart = 41; // CWP target zone left position
+            const targetZoneWidth = 18; // CWP target zone width
+            const targetZoneEnd = targetZoneStart + targetZoneWidth;
+
+            let feedbackText = '';
+            let feedbackColor = '';
+            let stabilityChange = 0;
+
+            if (currentPos >= targetZoneStart && currentPos <= targetZoneEnd) {
+                // Within the zone
+                const center = targetZoneStart + (targetZoneWidth / 2);
+                const distanceToCenter = Math.abs(currentPos - center);
+                const perfectHitThreshold = targetZoneWidth * 0.1; // 10% of zone width from center
+
+                if (distanceToCenter <= perfectHitThreshold) {
+                    feedbackText = 'PERFECT!';
+                    feedbackColor = 'var(--cwp-hit-perfect)';
+                    stabilityChange = 15;
+                    systemState.cwp.currentSpeedFactor = Math.min(2.5, systemState.cwp.currentSpeedFactor + 0.1);
+                    systemState.cwp.hits++;
+                } else {
+                    feedbackText = 'GOOD!';
+                    feedbackColor = 'var(--cwp-hit-good)';
+                    stabilityChange = 8;
+                    systemState.cwp.currentSpeedFactor = Math.min(2.5, systemState.cwp.currentSpeedFactor + 0.05);
+                    systemState.cwp.hits++;
+                }
+            } else {
+                feedbackText = 'MISS!';
+                feedbackColor = 'var(--cwp-hit-bad)';
+                stabilityChange = -10;
+                systemState.cwp.currentSpeedFactor = Math.max(0.5, systemState.cwp.currentSpeedFactor - 0.1);
+                systemState.cwp.miss++;
+                triggerAnomalyAlert('CWP: Waveform projection desynchronized. Reality fabric destabilizing.');
+            }
+
+            ui.cwpPulseFeedback.textContent = feedbackText;
+            ui.cwpPulseFeedback.style.color = feedbackColor;
+            ui.cwpPulseFeedback.classList.add('show');
+            setTimeout(() => ui.cwpPulseFeedback.classList.remove('show'), 800);
+
+            systemState.globalStability += stabilityChange;
+            checkGlobalStability();
+
+            systemState.cwp.pulseSpeed = systemState.cwp.baseSpeed / systemState.cwp.currentSpeedFactor;
+            ui.cwpSpeedValue.textContent = `${systemState.cwp.currentSpeedFactor.toFixed(1)}x`;
+            ui.cwpMatchStatus.textContent = `Last Hit: ${feedbackText} | Hits: ${systemState.cwp.hits} | Miss: ${systemState.cwp.miss}`;
+
+            addLogEntry(`CWP: Waveform resonated - ${feedbackText} (${currentPos.toFixed(1)}%).`, feedbackText === 'MISS!' ? 'warning' : 'info');
+        }
+
+        ui.cwpPulseBtn.addEventListener('click', hitCWPPulse);
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && systemState.cwp.active && !e.repeat) {
+                e.preventDefault();
+                hitCWPPulse();
+            }
+        });
+
+        // Initial start for CWP
+        startCWPPulse();
+
+        // --- SPACETIME ANCHOR STABILIZER (SAS) ---
+        function updateSASStability() {
+            const gravitonFlux = parseInt(ui.gravitonFluxSlider.value);
+            const temporalCohesion = parseInt(ui.temporalCohesionSlider.value);
+
+            systemState.sas.gravitonFlux = gravitonFlux;
+            systemState.sas.temporalCohesion = temporalCohesion;
+
+            // Calculate overall balance relative to the ideal center (50) and current gravitational pull offset
+            const idealGraviton = 50 + systemState.sas.gravPullOffset;
+            const idealTemporal = 50 - systemState.sas.gravPullOffset; // Temporal pulls opposite to graviton
+
+            const gravDiff = gravitonFlux - idealGraviton;
+            const tempDiff = temporalCohesion - idealTemporal;
+
+            // Simple sum for stability, trying to keep it near 0
+            systemState.sas.stability = gravDiff + tempDiff; 
+
+            // Update indicator position based on stability (mapping -100 to 100 range to display)
+            // The indicator itself moves relative to the *center* of the display, so 0 is perfect center
+            const indicatorDisplayOffset = (systemState.sas.stability / 200) * 100; // Map -200 to 200 range to -50% to 50% offset from center
+            ui.sasStabilityIndicator.style.transform = `translate(-50%, calc(-50% + ${indicatorDisplayOffset}px))`; // Y-axis movement
+
+            let indicatorColor = 'var(--sas-indicator-good)';
+            let statusMessage = 'System Stable.';
+
+            // Stable zone is 41% to 59% (center +/- 9%)
+            const stableZoneStart = -15; // Corresponds to around -15% deviation
+            const stableZoneEnd = 15; // Corresponds to around +15% deviation
+
+            if (systemState.sas.stability > stableZoneEnd * 2 || systemState.sas.stability < stableZoneStart * 2) { // 2x because stability range is wider
+                indicatorColor = 'var(--sas-indicator-crit)';
+                statusMessage = 'CRITICAL INSTABILITY! Core integrity compromised.';
+                systemState.globalStability -= 0.5; // continuous small drain
+                if (Math.random() < 0.01) triggerAnomalyAlert('SAS: Spacetime fabric tearing due to critical flux imbalance!');
+            } else if (systemState.sas.stability > stableZoneEnd || systemState.sas.stability < stableZoneStart) {
+                indicatorColor = 'var(--sas-indicator-warn)';
+                statusMessage = 'Warning: Spacetime flux highly unstable.';
+                systemState.globalStability -= 0.1; // continuous very small drain
+            } else {
+                systemState.globalStability += 0.05; // slight gain for stability
+            }
+
+            ui.sasStabilityIndicator.style.background = indicatorColor;
+            ui.sasStabilityIndicator.style.boxShadow = `0 0 30px ${indicatorColor}`;
+            ui.sasStatusDisplay.textContent = `Status: ${statusMessage} (Balance: ${systemState.sas.stability.toFixed(1)})`;
+            checkGlobalStability();
+
+            // Update gravitational pull visualization
+            const pullVisualOffset = systemState.sas.gravPullOffset * 0.5; // Scale offset for visual effect
+            ui.sasGravPull.style.transform = `translateX(${pullVisualOffset}%)`;
+            ui.sasGravPull.style.opacity = Math.min(0.9, Math.abs(systemState.sas.gravPullOffset) / 25); // More intense pull, higher opacity
+        }
+
+        function applyRandomGravPull() {
+            systemState.sas.gravPullMagnitude = Math.random() * 20 - 10; // -10 to 10
+            systemState.sas.gravPullOffset += systemState.sas.gravPullMagnitude * 0.5; // Apply gradual changes
+            systemState.sas.gravPullOffset = Math.max(-40, Math.min(40, systemState.sas.gravPullOffset)); // Clamp offset
+
+            // Apply slight automatic changes to sliders to simulate "pull"
+            const currentGrav = parseInt(ui.gravitonFluxSlider.value);
+            const currentTemp = parseInt(ui.temporalCohesionSlider.value);
+            
+            ui.gravitonFluxSlider.value = Math.max(0, Math.min(100, currentGrav + systemState.sas.gravPullMagnitude * 0.2));
+            ui.temporalCohesionSlider.value = Math.max(0, Math.min(100, currentTemp - systemState.sas.gravPullMagnitude * 0.2));
+
+            updateSASStability();
+        }
+
+        function startSASCalibration() {
+            if (systemState.sas.active) return;
+            systemState.sas.active = true;
+            ui.calibrateFluxBtn.textContent = 'Calibrating...';
+            ui.calibrateFluxBtn.disabled = true;
+
+            // Reset sliders to center
+            ui.gravitonFluxSlider.value = 50;
+            ui.temporalCohesionSlider.value = 50;
+            systemState.sas.gravPullOffset = 0;
+            systemState.sas.calibrationAttempts++;
+
+            systemState.sas.pullInterval = setInterval(applyRandomGravPull, 1000); // Apply pull every 1 second
+            addLogEntry('SAS: Spacetime Anchor calibration initiated. Counteracting dynamic gravitational pulls.', 'event');
+
+            // End calibration after 30 seconds
+            setTimeout(endSASCalibration, 30000);
+        }
+
+        function endSASCalibration() {
+            clearInterval(systemState.sas.pullInterval);
+            systemState.sas.active = false;
+            ui.calibrateFluxBtn.textContent = 'Calibrate Flux';
+            ui.calibrateFluxBtn.disabled = false;
+
+            if (Math.abs(systemState.sas.stability) < 20) { // If final stability is good
+                addLogEntry('SAS: Spacetime Anchor calibration successful! Stability within optimal parameters.', 'success');
+                systemState.globalStability += 20;
+            } else {
+                addLogEntry('SAS: Spacetime Anchor calibration failed. System remains unstable.', 'critical');
+                triggerAnomalyAlert('SAS: Spacetime Anchor lost calibration. Dimensional ripples detected.');
+                systemState.globalStability -= 20;
+            }
+            checkGlobalStability();
+            updateSASStability(); // Final update
+        }
+
+        ui.gravitonFluxSlider.addEventListener('input', updateSASStability);
+        ui.temporalCohesionSlider.addEventListener('input', updateSASStability);
+        ui.calibrateFluxBtn.addEventListener('click', startSASCalibration);
+
+        // Initial SAS state
+        updateSASStability();
+        startSASCalibration(); // Start calibration on load
+
+
+        // --- UNIVERSAL CORE MANIFESTOR (UCM) ---
+        function renderUCMTraits() {
+            ui.ucmTraitConfig.innerHTML = '';
+            systemState.ucm.traits.forEach(trait => {
+                const item = document.createElement('div');
+                item.classList.add('ucm-trait-item');
+                if (trait.active) item.classList.add('active');
+                if (trait.locked) item.classList.add('locked');
+                
+                const label = document.createElement('label');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.name = 'trait';
+                checkbox.value = trait.id;
+                checkbox.checked = trait.active;
+                checkbox.disabled = trait.locked;
+
+                checkbox.addEventListener('change', () => toggleUCMTrait(trait.id));
+
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(trait.name));
+                item.appendChild(label);
+
+                const info = document.createElement('span');
+                info.classList.add('ucm-trait-info');
+                info.textContent = `[${trait.prob > 0 ? '+' : ''}${trait.prob}% Probability]`;
+                item.appendChild(info);
+
+                ui.ucmTraitConfig.appendChild(item);
+            });
+            updateUCMProbability();
+        }
+
+        function toggleUCMTrait(traitId) {
+            const trait = systemState.ucm.traits.find(t => t.id === traitId);
+            if (!trait || trait.locked) return;
+
+            trait.active = !trait.active;
+
+            // Handle conflicts and requirements
+            systemState.ucm.traits.forEach(otherTrait => {
+                // If this trait activates and conflicts with otherTrait, deactivate otherTrait
+                if (trait.active && trait.conflict.includes(otherTrait.id) && otherTrait.active) {
+                    otherTrait.active = false;
+                    addLogEntry(`UCM: Trait '${otherTrait.name}' deactivated due to conflict with '${trait.name}'.`, 'info');
+                }
+                // If this trait activates and otherTrait requires it, make otherTrait active if it's not locked
+                if (trait.active && otherTrait.requires.includes(trait.id) && !otherTrait.locked && !otherTrait.active) {
+                    otherTrait.active = true;
+                    addLogEntry(`UCM: Trait '${otherTrait.name}' activated due to '${trait.name}' requirement.`, 'info');
+                }
+                // If this trait deactivates and otherTrait requires it, deactivate otherTrait
+                if (!trait.active && otherTrait.requires.includes(trait.id) && otherTrait.active) {
+                    otherTrait.active = false;
+                    addLogEntry(`UCM: Trait '${otherTrait.name}' deactivated as '${trait.name}' requirement removed.`, 'info');
+                }
+            });
+
+            // Re-render to update UI for all affected traits
+            renderUCMTraits();
+            updateUCMProbability();
+            addLogEntry(`UCM: Trait '${trait.name}' ${trait.active ? 'activated' : 'deactivated'}.`, 'info');
+        }
+
+        function updateUCMProbability() {
+            let totalProb = systemState.ucm.baseProbability;
+            systemState.ucm.traits.forEach(trait => {
+                if (trait.active) {
+                    totalProb += trait.prob;
+                }
+            });
+            totalProb = Math.max(0, Math.min(100, totalProb)); // Clamp between 0 and 100
+
+            ui.ucmProbability.textContent = `${totalProb}%`;
+            ui.ucmProgressBar.style.width = `${totalProb}%`;
+            
+            // Update manifest status color
+            if (totalProb >= 70) {
+                ui.ucmManifestStatus.className = 'ucm-manifestation-status success';
+                ui.ucmManifestStatus.textContent = 'High compatibility: Optimal manifestation probability.';
+            } else if (totalProb >= 40) {
+                ui.ucmManifestStatus.className = 'ucm-manifestation-status';
+                ui.ucmManifestStatus.textContent = 'Moderate compatibility: Manifestation possible, but risks exist.';
+            } else {
+                ui.ucmManifestStatus.className = 'ucm-manifestation-status fail';
+                ui.ucmManifestStatus.textContent = 'Low compatibility: Manifestation highly unstable or impossible.';
+            }
+        }
+
+        function initiateManifestation() {
+            systemState.ucm.manifestationAttempt++;
+            ui.initiateManifestationBtn.disabled = true;
+            ui.ucmManifestStatus.textContent = 'Manifesting core... Please wait.';
+            ui.ucmManifestStatus.classList.remove('success', 'fail');
+            addLogEntry('UCM: Initiating Universal Core manifestation sequence.', 'event');
+
+            setTimeout(() => {
+                const currentProb = parseInt(ui.ucmProbability.textContent);
+                const randomRoll = Math.random() * 100;
+
+                if (randomRoll <= currentProb) {
+                    ui.ucmManifestStatus.textContent = 'MANIFESTATION SUCCESSFUL! New Universal Core integrated!';
+                    ui.ucmManifestStatus.classList.add('success');
+                    addLogEntry('UCM: Universal Core manifestation succeeded! A new path is forged.', 'success');
+                    systemState.globalStability += 30;
+                } else {
+                    ui.ucmManifestStatus.textContent = 'MANIFESTATION FAILED! Core integration rejected. Recalibrate traits.';
+                    ui.ucmManifestStatus.classList.add('fail');
+                    addLogEntry('UCM: Universal Core manifestation failed. Reality feedback denied.', 'critical');
+                    triggerAnomalyAlert('UCM: Core Manifestation failed. Existential fabric destabilized!');
+                    systemState.globalStability -= 25;
+                }
+                checkGlobalStability();
+                ui.initiateManifestationBtn.disabled = false;
+            }, 3000); // Simulate manifestation delay
+        }
+
+        ui.initiateManifestationBtn.addEventListener('click', initiateManifestation);
+
+        // Initial render for UCM
+        renderUCMTraits();
+
+
+        // --- GLOBAL STABILITY CHECK ---
+        function checkGlobalStability() {
+            systemState.globalStability = Math.max(0, Math.min(100, systemState.globalStability));
+            
+            // Update border glow color based on global stability
+            const container = document.querySelector('.container');
+            if (systemState.globalStability < 20) {
+                if (!container.classList.contains('critical-stability')) {
+                    container.classList.add('critical-stability');
+                    addLogEntry('WARNING: Global Stability CRITICAL! Core systems at risk.', 'critical');
+                }
+                triggerAnomalyAlert('System Stability Critical: Existential collapse imminent!');
+            } else if (systemState.globalStability < 50) {
+                if (!container.classList.contains('warning-stability')) {
+                    container.classList.add('warning-stability');
+                    addLogEntry('Warning: Global Stability below optimal levels.', 'warning');
+                }
+            } else {
+                container.classList.remove('critical-stability', 'warning-stability');
+                if (systemState.anomalyActive && ui.anomalyAlert.querySelector('#anomalyMessage').textContent.includes('Stability')) {
+                    resolveAnomalyAlert(); // Only resolve if anomaly was stability related
+                }
+            }
+            document.documentElement.style.setProperty('--stability-status-color', 
+                systemState.globalStability < 20 ? 'var(--stability-critical)' :
+                (systemState.globalStability < 50 ? 'var(--stability-warning)' : 'var(--stability-good)')
+            );
+            // This is just a conceptual global stability meter. Not rendered as a bar directly.
+            // console.log("Global Stability:", systemState.globalStability.toFixed(2));
+        }
+
+        // Add CSS for stability states to the container.
+        const styleSheet = document.createElement("style");
+        styleSheet.type = "text/css";
+        styleSheet.innerText = `
+            .container.warning-stability {
+                border-color: var(--stability-warning);
+                box-shadow:
+                    0 60px 180px rgba(0, 0, 0, 0.999),
+                    0 0 140px var(--stability-warning),
+                    inset 0 0 90px rgba(255, 255, 255, 0.999),
+                    inset 0 0 100px var(--stability-warning);
+            }
+            .container.critical-stability {
+                border-color: var(--stability-critical);
+                box-shadow:
+                    0 60px 180px rgba(0, 0, 0, 0.999),
+                    0 0 140px var(--stability-critical),
+                    inset 0 0 90px rgba(255, 255, 255, 0.999),
+                    inset 0 0 100px var(--stability-critical);
+            }
+            .container.warning-stability > .border-glow::before {
+                background: linear-gradient(45deg, var(--stability-warning), #FFD700, var(--stability-warning), #FFA500);
+                filter: blur(55px);
+                animation-duration: 180s;
+            }
+            .container.critical-stability > .border-glow::before {
+                background: linear-gradient(45deg, var(--stability-critical), #FF4500, var(--stability-critical), #B22222);
+                filter: blur(60px);
+                animation-duration: 90s;
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+
+        // Initial setup
+        checkGlobalStability();
+        addLogEntry('Global systems online. Version v82.0 fully operational.', 'success');
+        
+        // Simulate an anomaly event after some time
+        setTimeout(triggerResourceAnomalyEvent, 15000);
+    </script>
+</body>
+</html>
