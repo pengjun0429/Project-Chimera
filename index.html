@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v91.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v92.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 6.0 Gen / v91.0) - Even brighter, deeper, more interactive */
+            /* Core Theme Colors (Hyper-Enhanced for 7.0 Gen / v92.0) - Even brighter, deeper, more interactive */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.008); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
+            --frosted-bg: rgba(255, 255, 255, 0.006); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
             --text-color: #E0FFFF; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.999); /* More visible, shimmering border */
@@ -25,69 +25,52 @@
             --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
-            /* Core Systems Overseer (Main Console & Resource Display) */
-            --overseer-bg: rgba(0, 5, 10, 0.99); /* Deep ocean blue, almost black */
-            --overseer-text: #00FFFF; /* Pure Cyan for data, slightly muted */
-            --overseer-border: rgba(0, 200, 255, 0.99); /* Stronger, electric blue glow */
+            /* Gen 92.0 NEW: Temporal Data Stream Harmonizer (TDS) */
+            --tds-bg: rgba(5, 5, 20, 0.99); /* Deep blue-violet */
+            --tds-border: rgba(100, 150, 255, 0.999); /* Bright cosmic blue */
+            --tds-text: #E0F0FF; /* Pale blue */
+            --tds-glow: rgba(100, 150, 255, 0.999);
+            --tds-packet-type1: #00FFFF;
+            --tds-packet-type2: #FF00FF;
+            --tds-packet-type3: #FFFF00;
+            --tds-lane-bg: rgba(0, 0, 0, 0.8);
+            --tds-lane-border: rgba(50, 100, 200, 0.5);
+            --tds-lane-correct: rgba(0, 255, 120, 0.5);
+            --tds-lane-incorrect: rgba(255, 50, 50, 0.5);
 
-            /* Gen 91.0 NEW: Quantum Data Decipherer (QDD) - Entropic Data Reconstruction */
-            --qdd-bg: rgba(0, 10, 15, 0.99); /* Deep blue-green */
-            --qdd-border: rgba(0, 220, 255, 0.999); /* Bright aqua-blue, stronger */
-            --qdd-text: #E0F8FF; /* Pale cyan */
-            --qdd-glow: rgba(0, 220, 255, 0.999); /* Stronger glow */
-            --qdd-fragment-bg: rgba(0, 40, 60, 0.8);
-            --qdd-fragment-border: rgba(0, 200, 255, 0.7);
-            --qdd-drop-slot-bg: rgba(0, 20, 30, 0.9);
-            --qdd-drop-slot-border: rgba(0, 100, 150, 0.5);
-            --qdd-correct-bg: rgba(0, 255, 120, 0.7);
-            --qdd-incorrect-bg: rgba(255, 60, 60, 0.7);
+            /* Gen 92.0 NEW: Resonance Grid Weave (RGW) */
+            --rgw-bg: rgba(20, 5, 5, 0.99); /* Deep red-orange */
+            --rgw-border: rgba(255, 100, 100, 0.999); /* Bright fiery red */
+            --rgw-text: #FFF0E0; /* Pale orange */
+            --rgw-glow: rgba(255, 100, 100, 0.999);
+            --rgw-node-inactive: rgba(40, 0, 0, 0.8);
+            --rgw-node-active: rgba(255, 150, 150, 0.8);
+            --rgw-path-color: rgba(255, 220, 220, 0.7);
+            --rgw-path-glow: rgba(255, 190, 190, 0.9);
+            --rgw-target-pattern: rgba(255, 255, 0, 0.5);
 
-            /* Gen 91.0 NEW: Aetheric Pattern Synthesizer (APS) - Resonance Frequency Tuner */
-            --aps-bg: rgba(15, 0, 10, 0.99); /* Deep magenta-red */
-            --aps-border: rgba(255, 0, 200, 0.999); /* Vibrant fuchsia, stronger */
-            --aps-text: #FFE0F8; /* Pale pink */
-            --aps-glow: rgba(255, 0, 200, 0.999); /* Stronger glow */
-            --aps-node-inactive: rgba(30, 0, 20, 0.8);
-            --aps-node-active: rgba(255, 100, 200, 0.8);
-            --aps-node-source: rgba(0, 255, 0, 0.9);
-            --aps-node-target: rgba(255, 0, 0, 0.9);
-            --aps-path-color: rgba(255, 200, 240, 0.7);
-            --aps-path-glow: rgba(255, 170, 230, 0.9);
+            /* Gen 92.0 NEW: Psycho-Acoustic Flux Synthesizer (PAFS) */
+            --pafs-bg: rgba(5, 20, 5, 0.99); /* Deep green-cyan */
+            --pafs-border: rgba(120, 255, 120, 0.999); /* Bright mint green */
+            --pafs-text: #E0FFE0; /* Pale green */
+            --pafs-glow: rgba(120, 255, 120, 0.999);
+            --pafs-waveform-user: #00FFFF;
+            --pafs-waveform-target: #FF00FF;
+            --pafs-waveform-canvas-bg: rgba(0, 0, 0, 0.95);
+            --pafs-slider-thumb: rgba(220, 255, 0, 1.0);
 
-            /* Gen 91.0 NEW: Conscious Waveform Projector (CWP) - Psycho-Acoustic Harmonizer */
-            --cwp-bg: rgba(0, 15, 0, 0.99); /* Deep forest green */
-            --cwp-border: rgba(120, 255, 0, 0.999); /* Bright lime green, stronger */
-            --cwp-text: #E0FFD0; /* Pale lime */
-            --cwp-glow: rgba(120, 255, 0, 0.999); /* Stronger glow */
-            --cwp-waveform-user: #00FFFF;
-            --cwp-waveform-target: #FF00FF;
-            --cwp-waveform-canvas-bg: rgba(0, 0, 0, 0.95);
-            --cwp-slider-thumb: rgba(220, 255, 0, 1.0);
+            /* Gen 92.0 NEW: Chrono-Dimensional Weaver (CDW) */
+            --cdw-bg: rgba(20, 5, 20, 0.99); /* Deep magenta-purple */
+            --cdw-border: rgba(255, 120, 255, 0.999); /* Bright orchid */
+            --cdw-text: #FFEFFD; /* Pale pink-purple */
+            --cdw-glow: rgba(255, 120, 255, 0.999);
+            --cdw-graph-bg: rgba(0, 0, 0, 0.95);
+            --cdw-fabric-line: #A0FFA0;
+            --cdw-anomaly-line: #FF6600;
+            --cdw-grid-point: #FFFF00;
+            --cdw-point-active: #FFD700;
 
-            /* Gen 91.0 NEW: Spacetime Anchor Stabilizer (SAS) - Temporal Anomaly Corrector */
-            --sas-bg: rgba(10, 5, 0, 0.99); /* Deep burnt orange */
-            --sas-border: rgba(255, 140, 0, 0.999); /* Bright orange, stronger */
-            --sas-text: #FFF5E0; /* Pale orange */
-            --sas-glow: rgba(255, 140, 0, 0.999); /* Stronger glow */
-            --sas-graph-bg: rgba(0, 0, 0, 0.95);
-            --sas-anomaly-line: #FF6600;
-            --sas-stable-line: #00FF00;
-            --sas-control-point: #FFFF00;
-            --sas-point-active: #FFD700;
-
-            /* Gen 91.0 NEW: Universal Core Manifestor (UCM) - Essence Convergence Matrix */
-            --ucm-bg: rgba(0, 0, 20, 0.99); /* Deep space blue */
-            --ucm-border: rgba(170, 0, 255, 0.999); /* Deep vibrant violet, stronger */
-            --ucm-text: #E0FFFF; /* Brightest cyan-white */
-            --ucm-glow: rgba(170, 0, 255, 0.999); /* Stronger glow */
-            --ucm-essence-bg: rgba(50, 0, 70, 0.85);
-            --ucm-essence-border: rgba(150, 0, 255, 0.7);
-            --ucm-core-receiver-bg: rgba(0, 0, 0, 0.9);
-            --ucm-core-receiver-border: rgba(170, 0, 255, 0.9);
-            --ucm-core-fused: rgba(0, 255, 120, 0.8);
-            --ucm-core-error: rgba(255, 0, 0, 0.8);
-
-            /* Gen 91.0 - Enhanced UI elements */
+            /* Gen 92.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 20px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -119,34 +102,35 @@
             position: relative;
             font-size: 1.5rem; /* Scaled up for readability */
             line-height: 2.2; /* Increased line height */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="2.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.6); opacity: 0.3;} 50% {transform: scale(1.1); opacity: 1;} 100% {transform: scale(0.6); opacity: 0.3;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} .pulsing-core {animation: pulse 0.8s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 2.5s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.6s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}</style></defs><g transform="translate(12 12) scale(1.15) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><circle cx="12" cy="12" r="8" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 5h2v14h-2zm-6 6h14v2h-14z"/><circle cx="12" cy="12" r="4" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 32 32, auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="4.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3.5" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.5); opacity: 0.2;} 50% {transform: scale(1.2); opacity: 1;} 100% {transform: scale(0.5); opacity: 0.2;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} .pulsing-core {animation: pulse 0.7s infinite cubic-bezier(0.4, 0, 0.6, 1); transform-origin: center center;}.outer-ring{animation:spin 2s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.5s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}</style></defs><g transform="translate(12 12) scale(1.2) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" class="outer-ring"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 32 32, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -600vh; /* Even larger area */
-            left: -600vw;
-            width: 1200vw;
-            height: 1200vh;
+            top: -700vh; /* Even larger area */
+            left: -700vw;
+            width: 1400vw;
+            height: 1400vh;
             background: linear-gradient(
-                350deg, /* New angle, more subtle shift */
-                #000000 0%, var(--qdd-bg) 1%, var(--aps-bg) 2%, var(--cwp-bg) 3%, var(--sas-bg) 4%, var(--ucm-bg) 5%, #00000A 6%, #000015 7%, #00000A 8%, #000005 9%, #000000 10%,
-                var(--overseer-bg) 11%, #0A0000 12%, #150000 13%, #200000 14%, #2A0000 15%, #200000 16%, #150000 17%, #0A0000 18%, #050000 19%, #000000 20%,
-                #000500 21%, #000A00 22%, #001500 23%, #002000 24%, #002A00 25%, #002000 26%, #001500 27%, #000A00 28%, #000500 29%, #000000 30%,
-                #050500 31%, #0A0A00 32%, #151500 33%, #202000 34%, #2A2A00 35%, #202000 36%, #151500 37%, #0A0A00 38%, #050500 39%, #000000 40%,
-                #050005 41%, #0A000A 42%, #150015 43%, #200020 44%, #2A002A 45%, #200020 46%, #150015 47%, #0A000A 48%, #050005 49%, #000000 50%,
-                #000505 51%, #000A0A 52%, #001515 53%, #002020 54%, #002A2A 55%, #002020 56%, #001515 57%, #000A0A 58%, #000505 59%, #000000 60%,
-                #050505 61%, #0A0A0A 62%, #151515 63%, #202020 64%, #2A2A2A 65%, #202020 66%, #151515 67%, #0A0A0A 68%, #050505 69%, #000000 70%,
-                #080808 71%, #121212 72%, #1D1D1D 73%, #2A2A2A 74%, #353535 75%, #2A2A2A 76%, #1D1D1D 77%, #121212 78%, #080808 79%, #000000 80%,
-                #000000 81%, #000005 82%, #00000A 83%, #000015 84%, #000020 85%, #00002A 86%, #000020 87%, #000015 88%, #00000A 89%, #000005 90%, #000000 100%
+                360deg, /* New angle, more subtle shift */
+                #000000 0%, var(--tds-bg) 1%, var(--rgw-bg) 2%, var(--pafs-bg) 3%, var(--cdw-bg) 4%, #00000A 5%, #000015 6%, #00000A 7%, #000005 8%, #000000 9%,
+                #0A0000 10%, #150000 11%, #200000 12%, #2A0000 13%, #200000 14%, #150000 15%, #0A0000 16%, #050000 17%, #000000 18%,
+                #000500 19%, #000A00 20%, #001500 21%, #002000 22%, #002A00 23%, #002000 24%, #001500 25%, #000A00 26%, #000500 27%, #000000 28%,
+                #050500 29%, #0A0A00 30%, #151500 31%, #202000 32%, #2A2A00 33%, #202000 34%, #151500 35%, #0A0A00 36%, #050500 37%, #000000 38%,
+                #050005 39%, #0A000A 40%, #150015 41%, #200020 42%, #2A002A 43%, #200020 44%, #150015 45%, #0A000A 46%, #050005 47%, #000000 48%,
+                #000505 49%, #000A0A 50%, #001515 51%, #002020 52%, #002A2A 53%, #002020 54%, #001515 55%, #000A0A 56%, #000505 57%, #000000 58%,
+                #050505 59%, #0A0A0A 60%, #151515 61%, #202020 62%, #2A2A2A 63%, #202020 64%, #151515 65%, #0A0A0A 66%, #050505 67%, #000000 68%,
+                #080808 69%, #121212 70%, #1D1D1D 71%, #2A2A2A 72%, #353535 73%, #2A2A2A 74%, #1D1D1D 75%, #121212 76%, #080808 77%, #000000 78%,
+                #000000 79%, #000005 80%, #00000A 81%, #000015 82%, #000020 83%, #00002A 84%, #000020 85%, #000015 86%, #00000A 87%, #000005 88%, #000000 89%,
+                #000000 90%, #050000 91%, #0A0000 92%, #150000 93%, #200000 94%, #2A0000 95%, #200000 96%, #150000 97%, #0A0000 98%, #050000 99%, #000000 100%
             );
-            background-size: 6000% 6000%; /* Larger background for smoother animation */
-            animation: fluidBackground1 600s linear infinite alternate, rotateBackground 620s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 7000% 7000%; /* Larger background for smoother animation */
+            animation: fluidBackground1 680s linear infinite alternate, rotateBackground 700s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(700px) opacity(0.99); /* Stronger blur, almost opaque */
-            transform: rotate(-360deg) scale(14.0); /* Larger scale, more rotation */
+            filter: blur(800px) opacity(0.995); /* Stronger blur, almost opaque */
+            transform: rotate(-380deg) scale(15.0); /* Larger scale, more rotation */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -154,40 +138,39 @@
         body::after {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -500vh;
-            left: -500vw;
-            width: 1000vw;
-            height: 1000vh;
+            top: -600vh;
+            left: -600vw;
+            width: 1200vw;
+            height: 1200vh;
             background: linear-gradient(
-                -320deg, /* Different angle */
+                -340deg, /* Different angle */
                 rgba(0, 255, 255, 0.999) 0%, /* primary glow accent */
                 rgba(255, 0, 255, 0.998) 10%, /* secondary glow accent */
                 rgba(0, 255, 0, 0.998) 20%, /* tertiary glow accent */
-                var(--qdd-border) 30%, /* QDD accent */
-                var(--aps-border) 40%, /* APS accent */
-                var(--cwp-border) 50%, /* CWP accent */
-                var(--sas-border) 60%, /* SAS accent */
-                var(--ucm-border) 70%, /* UCM accent */
-                rgba(50, 255, 150, 0.999) 80%, /* Generic glow */
-                rgba(110, 90, 210, 0.999) 90%, /* Generic glow */
+                var(--tds-border) 30%, /* TDS accent */
+                var(--rgw-border) 40%, /* RGW accent */
+                var(--pafs-border) 50%, /* PAFS accent */
+                var(--cdw-border) 60%, /* CDW accent */
+                rgba(50, 255, 150, 0.999) 70%, /* Generic glow */
+                rgba(110, 90, 210, 0.999) 80%, /* Generic glow */
                 rgba(0, 255, 255, 0.999) 100%
             );
-            background-size: 5000% 5000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 300s ease-in-out infinite, rotateBackgroundReversed 350s linear infinite; /* Even longer animations */
+            background-size: 6000% 6000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 380s ease-in-out infinite, rotateBackgroundReversed 400s linear infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(550px) opacity(0.98); /* Stronger blur, more opaque */
+            filter: blur(650px) opacity(0.99); /* Stronger blur, more opaque */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(310deg) scale(11.0); /* Larger scale, more rotation */
+            transform: rotate(320deg) scale(12.0); /* Larger scale, more rotation */
         }
 
         /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus) */
         .container::before { /* A safer way to add a third dynamic layer by targeting the first child of body as a pseudo-element */
             content: '';
             position: fixed;
-            top: -400vh;
-            left: -400vw;
-            width: 800vw;
-            height: 800vh;
+            top: -500vh;
+            left: -500vw;
+            width: 1000vw;
+            height: 1000vh;
             background: radial-gradient(
                 circle at center,
                 rgba(100, 200, 255, 0.99) 0%, /* Light blue core */
@@ -196,12 +179,12 @@
                 rgba(100, 200, 255, 0.7) 45%, /* Back to blue */
                 rgba(0, 0, 0, 0.0) 60% /* Fading to transparent */
             );
-            background-size: 4000% 4000%;
-            animation: fluidBackground3 180s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate, rotateBackgroundSlow 400s linear infinite;
+            background-size: 5000% 5000%;
+            animation: fluidBackground3 220s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate, rotateBackgroundSlow 450s linear infinite;
             z-index: -1;
-            filter: blur(400px) opacity(0.85);
+            filter: blur(500px) opacity(0.9);
             mix-blend-mode: screen; /* Additive, bright effect */
-            transform: rotate(-260deg) scale(9.0);
+            transform: rotate(-280deg) scale(10.0);
         }
 
         /* Micro-texture / Noise layer for overall subtle effect */
@@ -213,11 +196,11 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.18; /* More subtle noise */
+            opacity: 0.15; /* More subtle noise */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.6) contrast(15.0) brightness(10.0); /* Subtle color and contrast */
+            filter: grayscale(0.5) contrast(12.0) brightness(8.0); /* Subtle color and contrast */
         }
 
         @keyframes fluidBackground1 {
@@ -238,53 +221,53 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-360deg) scale(14.0); }
-            to { transform: rotate(360deg) scale(14.0); }
+            from { transform: rotate(-380deg) scale(15.0); }
+            to { transform: rotate(380deg) scale(15.0); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(310deg) scale(11.0); }
-            to { transform: rotate(-360deg) scale(11.0); }
+            from { transform: rotate(320deg) scale(12.0); }
+            to { transform: rotate(-380deg) scale(12.0); }
         }
         
         @keyframes rotateBackgroundSlow {
-            from { transform: rotate(-260deg) scale(9.0); }
-            to { transform: rotate(260deg) scale(9.0); }
+            from { transform: rotate(-280deg) scale(10.0); }
+            to { transform: rotate(280deg) scale(10.0); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 2400px; /* Wider for more content */
-            padding: 9.0rem; /* More padding */
+            max-width: 2500px; /* Wider for more content */
+            padding: 9.5rem; /* More padding */
             background: var(--frosted-bg);
-            border: 40px solid var(--border-color); /* Thicker border */
-            border-radius: 7.0rem; /* Even more rounded */
-            backdrop-filter: blur(70px) saturate(750%) brightness(550%) contrast(5.5); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(70px) saturate(750%) brightness(550%) contrast(5.5);
+            border: 45px solid var(--border-color); /* Thicker border */
+            border-radius: 7.5rem; /* Even more rounded */
+            backdrop-filter: blur(80px) saturate(800%) brightness(600%) contrast(6.0); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(80px) saturate(800%) brightness(600%) contrast(6.0);
             box-shadow:
-                0 80px 220px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 160px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 100px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
-                inset 0 0 120px var(--primary-glow); /* Even more inner glow */
+                0 90px 240px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 180px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 110px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
+                inset 0 0 130px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 8.0rem; /* Increased gap between sections */
-            animation: fadeInScale 4.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 1.8s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 8.5rem; /* Increased gap between sections */
+            animation: fadeInScale 4.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 2.0s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container > .border-glow::before { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -52px; /* More overflow */
-            border-radius: calc(7.0rem + 52px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qdd-border), var(--aps-border), var(--cwp-border), var(--sas-border), var(--ucm-border), #00FFFF); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 1400% 1400%; /* Larger background for smoother animation */
-            animation: borderGlow 360s linear infinite alternate; /* Slower animation */
-            filter: blur(60px); /* Stronger blur */
+            inset: -57px; /* More overflow */
+            border-radius: calc(7.5rem + 57px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--tds-border), var(--rgw-border), var(--pafs-border), var(--cdw-border), #00FFFF); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 1500% 1500%; /* Larger background for smoother animation */
+            animation: borderGlow 380s linear infinite alternate; /* Slower animation */
+            filter: blur(65px); /* Stronger blur */
             z-index: -1;
             opacity: 0.999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -296,32 +279,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.20) translateY(120px) perspective(1800px) rotateX(50deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(1800px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.18) translateY(130px) perspective(2000px) rotateX(55deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(2000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 7.0rem; /* Scaled up for impact */
+            font-size: 7.5rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 70px var(--primary-glow), 0 0 90px rgba(0, 255, 255, 0.999);
-            margin-bottom: 4.5rem;
-            letter-spacing: 0.5rem;
+            text-shadow: 0 0 75px var(--primary-glow), 0 0 95px rgba(0, 255, 255, 0.999);
+            margin-bottom: 4.8rem;
+            letter-spacing: 0.55rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(40px); /* Lift heading slightly in 3D space */
+            transform: translateZ(42px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -2.0rem;
+            bottom: -2.2rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 120%; /* Wider underline */
-            height: 0.9rem; /* Thicker underline */
+            width: 125%; /* Wider underline */
+            height: 1.0rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 45px var(--primary-glow);
+            box-shadow: 0 0 50px var(--primary-glow);
         }
 
         p {
@@ -329,15 +312,15 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.998;
-            font-size: 1.8rem; /* Larger paragraph text */
-            transform: translateZ(28px);
+            font-size: 1.9rem; /* Larger paragraph text */
+            transform: translateZ(30px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 8.0rem; /* Increased gap */
-            margin: 5.0rem 0;
+            gap: 8.5rem; /* Increased gap */
+            margin: 5.5rem 0;
             position: relative;
         }
 
@@ -345,47 +328,37 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 4.0rem;
+            gap: 4.5rem;
             text-align: left;
-            padding: 5.0rem;
-            border-radius: 4.0rem;
-            border: 15px solid var(--overseer-border); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 50px rgba(0, 200, 255, 0.99), 0 0 70px rgba(0, 200, 255, 0.99); /* More inner shadow */
+            padding: 5.5rem;
+            border-radius: 4.5rem;
+            border: 18px solid var(--primary-glow); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 55px rgba(0, 255, 255, 0.99), 0 0 75px rgba(0, 255, 255, 0.99); /* More inner shadow */
             position: relative;
-            transform: translateZ(25px);
+            transform: translateZ(28px);
             overflow: hidden;
-            background: var(--overseer-bg); /* Default background, will be overridden */
+            background: var(--console-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .resource-overseer-console {
-            background: var(--overseer-bg);
-            border-color: var(--overseer-border);
-            box-shadow: inset 0 0 50px var(--overseer-text), 0 0 70px var(--overseer-text);
+        .temporal-data-stream-harmonizer {
+            background: var(--tds-bg);
+            border-color: var(--tds-border);
+            box-shadow: inset 0 0 55px var(--tds-glow), 0 0 75px var(--tds-glow);
         }
-        .quantum-data-decipherer {
-            background: var(--qdd-bg);
-            border-color: var(--qdd-border);
-            box-shadow: inset 0 0 50px var(--qdd-glow), 0 0 70px var(--qdd-glow);
+        .resonance-grid-weave {
+            background: var(--rgw-bg);
+            border-color: var(--rgw-border);
+            box-shadow: inset 0 0 55px var(--rgw-glow), 0 0 75px var(--rgw-glow);
         }
-        .aetheric-pattern-synthesizer {
-            background: var(--aps-bg);
-            border-color: var(--aps-border);
-            box-shadow: inset 0 0 50px var(--aps-glow), 0 0 70px var(--aps-glow);
+        .psycho-acoustic-flux-synthesizer {
+            background: var(--pafs-bg);
+            border-color: var(--pafs-border);
+            box-shadow: inset 0 0 55px var(--pafs-glow), 0 0 75px var(--pafs-glow);
         }
-        .conscious-waveform-projector {
-            background: var(--cwp-bg);
-            border-color: var(--cwp-border);
-            box-shadow: inset 0 0 50px var(--cwp-glow), 0 0 70px var(--cwp-glow);
-        }
-        .spacetime-anchor-stabilizer {
-            background: var(--sas-bg);
-            border-color: var(--sas-border);
-            box-shadow: inset 0 0 50px var(--sas-glow), 0 0 70px var(--sas-glow);
-        }
-        .universal-core-manifestor {
-            background: var(--ucm-bg);
-            border-color: var(--ucm-border);
-            box-shadow: inset 0 0 50px var(--ucm-glow), 0 0 70px var(--ucm-glow);
+        .chrono-dimensional-weaver {
+            background: var(--cdw-bg);
+            border-color: var(--cdw-border);
+            box-shadow: inset 0 0 55px var(--cdw-glow), 0 0 75px var(--cdw-glow);
         }
 
         .module-base::after {
@@ -395,7 +368,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.95) 0%, transparent 85%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.98) 0%, transparent 90%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -404,212 +377,168 @@
         .module-base::before { 
             content: attr(data-label);
             position: absolute;
-            top: -3.8rem; /* Slightly higher */
-            left: 4.5rem;
-            font-size: 2.7rem; /* Larger label */
-            color: var(--overseer-text); /* Default text, will be overridden */
+            top: -4.0rem; /* Slightly higher */
+            left: 4.8rem;
+            font-size: 2.8rem; /* Larger label */
+            color: var(--text-color); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.999);
-            padding: 1.6rem 2.0rem;
-            border-radius: 1.8rem;
+            padding: 1.8rem 2.2rem;
+            border-radius: 2.0rem;
             font-weight: 700;
-            letter-spacing: 0.2rem;
-            transform: translateY(-50%) translateZ(22px); /* Lift more */
+            letter-spacing: 0.22rem;
+            transform: translateY(-50%) translateZ(24px); /* Lift more */
             opacity: 1.0;
-            border: 12px solid var(--overseer-text); /* Default border, will be overridden */
-            box-shadow: 0 0 35px var(--overseer-text); /* Stronger glow */
+            border: 14px solid var(--text-color); /* Default border, will be overridden */
+            box-shadow: 0 0 38px var(--text-color); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules before pseudo-elements */
-        .resource-overseer-console::before {
-            color: var(--overseer-text);
-            border-color: var(--overseer-border);
-            box-shadow: 0 0 35px var(--overseer-border);
+        .temporal-data-stream-harmonizer::before {
+            color: var(--tds-text);
+            border-color: var(--tds-border);
+            box-shadow: 0 0 38px var(--tds-glow);
         }
-        .quantum-data-decipherer::before {
-            color: var(--qdd-text);
-            border-color: var(--qdd-border);
-            box-shadow: 0 0 35px var(--qdd-glow);
+        .resonance-grid-weave::before {
+            color: var(--rgw-text);
+            border-color: var(--rgw-border);
+            box-shadow: 0 0 38px var(--rgw-glow);
         }
-        .aetheric-pattern-synthesizer::before {
-            color: var(--aps-text);
-            border-color: var(--aps-border);
-            box-shadow: 0 0 35px var(--aps-glow);
+        .psycho-acoustic-flux-synthesizer::before {
+            color: var(--pafs-text);
+            border-color: var(--pafs-border);
+            box-shadow: 0 0 38px var(--pafs-glow);
         }
-        .conscious-waveform-projector::before {
-            color: var(--cwp-text);
-            border-color: var(--cwp-border);
-            box-shadow: 0 0 35px var(--cwp-glow);
-        }
-        .spacetime-anchor-stabilizer::before {
-            color: var(--sas-text);
-            border-color: var(--sas-border);
-            box-shadow: 0 0 35px var(--sas-glow);
-        }
-        .universal-core-manifestor::before {
-            color: var(--ucm-text);
-            border-color: var(--ucm-border);
-            box-shadow: 0 0 35px var(--ucm-glow);
+        .chrono-dimensional-weaver::before {
+            color: var(--cdw-text);
+            border-color: var(--cdw-border);
+            box-shadow: 0 0 38px var(--cdw-glow);
         }
 
         .param-group {
-            margin-bottom: 3.5rem;
+            margin-bottom: 3.8rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem; /* Larger */
-            color: var(--overseer-text);
-            letter-spacing: 0.2rem;
+            font-size: 2.6rem; /* Larger */
+            color: var(--accent-color);
+            letter-spacing: 0.22rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 35px rgba(0, 255, 255, 0.999); /* Stronger shadow */
-            margin-bottom: 2.5rem;
+            text-shadow: 0 0 38px rgba(0, 255, 255, 0.999); /* Stronger shadow */
+            margin-bottom: 2.8rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 1.8rem; /* Slightly larger sub-info */
+            font-size: 1.9rem; /* Slightly larger sub-info */
             opacity: 0.99;
             color: var(--text-color);
-            margin-top: 1.5rem;
+            margin-top: 1.8rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 2.3;
+            line-height: 2.4;
         }
         
-        /* QDD Specific - Entropic Data Reconstruction */
-        .qdd-reconstruction-area {
+        /* TDS Specific - Temporal Data Stream Harmonizer */
+        .tds-stream-area {
+            position: relative;
+            background: var(--console-bg);
+            border: 12px solid var(--tds-border);
+            border-radius: 2.2rem;
+            box-shadow: inset 0 0 40px var(--tds-glow);
+            width: 100%;
+            height: 40rem; /* Fixed height for stream */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
             align-items: center;
+            padding-top: 2rem;
         }
-        .qdd-scrambled-fragments {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            padding: 2.5rem;
-            background: var(--console-bg);
-            border: 10px solid var(--qdd-border);
-            border-radius: 2.0rem;
-            min-height: 15rem;
-            width: 100%;
-            box-shadow: inset 0 0 35px var(--qdd-glow);
-        }
-        .qdd-fragment {
-            padding: 1.5rem 2.5rem;
-            background: var(--qdd-fragment-bg);
-            border: 5px solid var(--qdd-fragment-border);
-            border-radius: 1.2rem;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.8rem;
-            color: var(--qdd-text);
-            cursor: grab;
-            box-shadow: 0 0 15px rgba(0, 220, 255, 0.5);
-            transition: all 0.2s ease;
-            user-select: none;
-        }
-        .qdd-fragment:hover {
-            box-shadow: 0 0 25px var(--qdd-glow);
-            transform: scale(1.05);
-        }
-        .qdd-fragment.dragging {
-            opacity: 0.7;
-            transform: scale(1.1);
-            z-index: 100;
-        }
-
-        .qdd-drop-slots {
-            display: flex;
-            gap: 1.0rem;
-            padding: 2.0rem;
-            background: var(--console-bg);
-            border: 10px solid var(--qdd-border);
-            border-radius: 2.0rem;
-            min-height: 10rem;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            box-shadow: inset 0 0 35px var(--qdd-glow);
-        }
-        .qdd-drop-slot {
-            width: 10rem;
-            height: 6rem;
-            background: var(--qdd-drop-slot-bg);
-            border: 4px dashed var(--qdd-drop-slot-border);
-            border-radius: 0.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.6rem;
-            color: var(--qdd-text);
-            opacity: 0.7;
-            transition: all 0.2s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .qdd-drop-slot.hovered {
-            background: rgba(0, 200, 255, 0.2);
-            border-color: var(--qdd-glow);
-            box-shadow: 0 0 20px var(--qdd-glow);
-        }
-        .qdd-drop-slot.correct-placement {
-            background: var(--qdd-correct-bg);
-            border-color: var(--stability-good);
-            box-shadow: inset 0 0 20px var(--stability-good), 0 0 15px var(--stability-good);
-        }
-        .qdd-drop-slot.incorrect-placement {
-            background: var(--qdd-incorrect-bg);
-            border-color: var(--stability-critical);
-            box-shadow: inset 0 0 20px var(--stability-critical), 0 0 15px var(--stability-critical);
-        }
-        .qdd-placed-fragment {
+        .tds-packet {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            top: 2rem;
+            width: 5rem;
+            height: 5rem;
+            background-color: var(--tds-packet-type1); /* Default, overridden by JS */
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.7);
+            box-shadow: 0 0 20px var(--tds-packet-type1);
+            transition: transform linear; /* For smooth movement */
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.8rem;
-            color: var(--qdd-text);
-            background-color: transparent;
+            color: #000;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(255,255,255,0.8);
+            z-index: 5;
         }
-        .qdd-status-display {
+        .tds-lanes {
+            position: absolute;
+            bottom: 2rem;
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            padding: 1rem 0;
+            border-top: 5px dashed var(--tds-lane-border);
+            background: rgba(0,0,0,0.5);
+        }
+        .tds-lane-button {
+            flex: 1;
+            padding: 1.8rem 1rem;
+            background: var(--tds-lane-bg);
+            border: 6px solid var(--tds-lane-border);
+            border-radius: 1.5rem;
+            color: var(--tds-text);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.0rem;
+            text-shadow: 0 0 20px var(--tds-glow);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .tds-lane-button:hover {
+            box-shadow: 0 0 30px var(--tds-glow);
+            background: rgba(100, 150, 255, 0.2);
+        }
+        .tds-lane-button.correct { background-color: var(--tds-lane-correct); border-color: green; box-shadow: 0 0 25px green; }
+        .tds-lane-button.incorrect { background-color: var(--tds-lane-incorrect); border-color: red; box-shadow: 0 0 25px red; }
+        .tds-game-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.8rem;
-            color: var(--qdd-text);
-            text-shadow: 0 0 25px var(--qdd-glow);
+            color: var(--tds-text);
+            text-shadow: 0 0 25px var(--tds-glow);
             margin-top: 3.0rem;
             line-height: 2.5;
             padding: 2.2rem;
             background: rgba(0,0,0,0.999);
-            border: 11px solid var(--qdd-border);
+            border: 11px solid var(--tds-border);
             border-radius: 1.8rem;
-            box-shadow: 0 0 30px var(--qdd-border);
+            box-shadow: 0 0 30px var(--tds-border);
             text-align: center;
         }
 
-        /* APS Specific - Resonance Frequency Tuner */
-        .aps-tuner-grid {
+        /* RGW Specific - Resonance Grid Weave */
+        .rgw-grid-area {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5x5 grid */
-            gap: 1.5rem;
+            grid-template-columns: repeat(6, 1fr); /* 6x6 grid */
+            gap: 1.8rem;
             background: var(--console-bg);
-            border: 10px solid var(--aps-border);
-            border-radius: 2.0rem;
-            padding: 2.5rem;
-            min-height: 40rem;
-            box-shadow: inset 0 0 35px var(--aps-glow);
+            border: 12px solid var(--rgw-border);
+            border-radius: 2.2rem;
+            padding: 2.8rem;
+            min-height: 45rem;
+            box-shadow: inset 0 0 40px var(--rgw-glow);
             position: relative;
         }
-        .aps-grid-node {
+        .rgw-grid-node {
             width: 100%;
             padding-bottom: 100%; /* Makes nodes square */
-            background: var(--aps-node-inactive);
-            border: 4px solid var(--aps-border);
+            background: var(--rgw-node-inactive);
+            border: 5px solid var(--rgw-border);
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -618,271 +547,212 @@
             align-items: center;
             justify-content: center;
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            color: rgba(255,255,255,0.3);
-            text-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
-        }
-        .aps-grid-node:hover {
-            box-shadow: 0 0 20px var(--aps-glow);
-            transform: scale(1.05);
-        }
-        .aps-grid-node.active {
-            background: var(--aps-node-active);
-            border-color: var(--aps-glow);
-            box-shadow: 0 0 25px var(--aps-glow);
-            color: var(--aps-text);
-            text-shadow: 0 0 15px var(--aps-glow);
-        }
-        .aps-grid-node.source {
-            background: var(--aps-node-source);
-            border-color: var(--stability-good);
-            box-shadow: 0 0 30px var(--stability-good);
-            color: white;
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.4);
+            text-shadow: 0 0 10px rgba(255, 100, 100, 0.3);
             font-weight: 700;
         }
-        .aps-grid-node.target {
-            background: var(--aps-node-target);
-            border-color: var(--stability-critical);
-            box-shadow: 0 0 30px var(--stability-critical);
-            color: white;
-            font-weight: 700;
+        .rgw-grid-node:hover {
+            box-shadow: 0 0 25px var(--rgw-glow);
+            transform: scale(1.08);
         }
-        .aps-path-line { /* Visualizing the path */
+        .rgw-grid-node.active {
+            background: var(--rgw-node-active);
+            border-color: var(--rgw-glow);
+            box-shadow: 0 0 30px var(--rgw-glow);
+            color: var(--rgw-text);
+            text-shadow: 0 0 18px var(--rgw-glow);
+        }
+        .rgw-path-line {
             position: absolute;
-            background: var(--aps-path-color);
-            box-shadow: 0 0 15px var(--aps-path-glow);
+            background: var(--rgw-path-color);
+            box-shadow: 0 0 18px var(--rgw-path-glow);
             z-index: 1;
             pointer-events: none;
             opacity: 0.8;
         }
-        .aps-path-line.vertical { width: 8px; }
-        .aps-path-line.horizontal { height: 8px; }
-        .aps-tuner-status {
+        .rgw-path-line.vertical { width: 9px; }
+        .rgw-path-line.horizontal { height: 9px; }
+        .rgw-target-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15; /* Subtle hint */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            filter: blur(5px);
+        }
+        .rgw-weave-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.8rem;
-            color: var(--aps-text);
-            text-shadow: 0 0 25px var(--aps-glow);
+            color: var(--rgw-text);
+            text-shadow: 0 0 25px var(--rgw-glow);
             margin-top: 3.0rem;
             line-height: 2.5;
             padding: 2.2rem;
             background: rgba(0,0,0,0.999);
-            border: 11px solid var(--aps-border);
+            border: 11px solid var(--rgw-border);
             border-radius: 1.8rem;
-            box-shadow: 0 0 30px var(--aps-border);
+            box-shadow: 0 0 30px var(--rgw-border);
             text-align: center;
         }
-        /* CWP Specific - Psycho-Acoustic Harmonizer */
-        .cwp-harmonizer-area {
+
+        /* PAFS Specific - Psycho-Acoustic Flux Synthesizer */
+        .pafs-synthesizer-area {
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 2.8rem;
             align-items: center;
         }
-        .cwp-waveform-canvas {
-            background: var(--cwp-waveform-canvas-bg);
-            border: 10px solid var(--cwp-border);
-            border-radius: 2.0rem;
-            box-shadow: inset 0 0 35px var(--cwp-glow);
+        .pafs-waveform-canvas {
+            background: var(--pafs-waveform-canvas-bg);
+            border: 12px solid var(--pafs-border);
+            border-radius: 2.2rem;
+            box-shadow: inset 0 0 40px var(--pafs-glow);
             width: 100%;
-            height: 30rem; /* Fixed height for canvas */
+            height: 35rem; /* Fixed height for canvas */
         }
-        .cwp-controls {
+        .pafs-oscillator-controls {
             display: flex;
             flex-direction: column;
-            gap: 1.8rem;
-            width: 80%;
-            margin-top: 2.0rem;
+            gap: 2.0rem;
+            width: 90%;
+            margin-top: 2.2rem;
         }
-        .cwp-slider-group {
+        .pafs-oscillator-group {
+            border: 5px solid rgba(120, 255, 120, 0.4);
+            border-radius: 1.5rem;
+            padding: 2.0rem 2.5rem;
+            background: rgba(0,0,0,0.7);
+            box-shadow: inset 0 0 20px rgba(120, 255, 120, 0.3);
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 1.5rem;
         }
-        .cwp-slider-group label {
+        .pafs-oscillator-group h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.6rem;
-            color: var(--cwp-text);
-            text-shadow: 0 0 15px var(--cwp-glow);
-            min-width: 8rem;
+            font-size: 2.2rem;
+            color: var(--pafs-text);
+            text-shadow: 0 0 20px var(--pafs-glow);
+            margin: 0 0 1.5rem 0;
+            border-bottom: 2px solid var(--pafs-border);
+            padding-bottom: 1rem;
+            letter-spacing: 0.1rem;
+        }
+        .pafs-slider-group {
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+        }
+        .pafs-slider-group label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.7rem;
+            color: var(--pafs-text);
+            text-shadow: 0 0 18px var(--pafs-glow);
+            min-width: 9rem;
             text-align: right;
         }
-        .cwp-control-slider {
+        .pafs-control-slider {
             -webkit-appearance: none;
             width: 100%;
-            height: 1.2rem;
+            height: 1.3rem;
             background: rgba(0, 0, 0, 0.7);
             outline: none;
-            border-radius: 0.6rem;
-            border: 2px solid var(--cwp-border);
-            box-shadow: inset 0 0 8px rgba(0, 255, 0, 0.5);
+            border-radius: 0.7rem;
+            border: 3px solid var(--pafs-border);
+            box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.5);
         }
-        .cwp-control-slider::-webkit-slider-thumb {
+        .pafs-control-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 2.5rem;
-            height: 2.5rem;
-            background: var(--cwp-slider-thumb);
+            width: 2.8rem;
+            height: 2.8rem;
+            background: var(--pafs-slider-thumb);
             border-radius: 50%;
             cursor: pointer;
-            border: 5px solid var(--cwp-border);
-            box-shadow: 0 0 20px var(--cwp-glow);
+            border: 6px solid var(--pafs-border);
+            box-shadow: 0 0 22px var(--pafs-glow);
             transition: all 0.2s ease;
         }
-        .cwp-control-slider::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px var(--cwp-glow);
+        .pafs-control-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 35px var(--pafs-glow);
         }
-        .cwp-match-status {
+        .pafs-wave-type {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.6rem;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            background: rgba(0,0,0,0.8);
+            border: 2px solid var(--pafs-border);
+            color: var(--pafs-text);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(120, 255, 120, 0.3);
+        }
+        .pafs-flux-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.8rem;
-            color: var(--cwp-text);
-            text-shadow: 0 0 25px var(--cwp-glow);
+            color: var(--pafs-text);
+            text-shadow: 0 0 25px var(--pafs-glow);
             margin-top: 3.0rem;
             line-height: 2.5;
             padding: 2.2rem;
             background: rgba(0,0,0,0.999);
-            border: 11px solid var(--cwp-border);
+            border: 11px solid var(--pafs-border);
             border-radius: 1.8rem;
-            box-shadow: 0 0 30px var(--cwp-border);
+            box-shadow: 0 0 30px var(--pafs-border);
             text-align: center;
         }
-        /* SAS Specific - Temporal Anomaly Corrector */
-        .sas-anomaly-corrector {
+
+        /* CDW Specific - Chrono-Dimensional Weaver */
+        .cdw-weaver-area {
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 2.8rem;
             align-items: center;
         }
-        .sas-timeline-canvas {
-            background: var(--sas-graph-bg);
-            border: 10px solid var(--sas-border);
-            border-radius: 2.0rem;
-            box-shadow: inset 0 0 35px var(--sas-glow);
+        .cdw-fabric-canvas {
+            background: var(--cdw-graph-bg);
+            border: 12px solid var(--cdw-border);
+            border-radius: 2.2rem;
+            box-shadow: inset 0 0 40px var(--cdw-glow);
             width: 100%;
-            height: 35rem;
+            height: 50rem;
             position: relative;
+            cursor: grab;
         }
-        .sas-control-point {
+        .cdw-vertex {
             position: absolute;
-            width: 2.5rem;
-            height: 2.5rem;
-            background: var(--sas-control-point);
-            border: 5px solid var(--sas-border);
+            width: 3rem;
+            height: 3rem;
+            background: var(--cdw-grid-point);
+            border: 6px solid var(--cdw-border);
             border-radius: 50%;
             cursor: grab;
             z-index: 10;
-            box-shadow: 0 0 15px var(--sas-glow);
+            box-shadow: 0 0 18px var(--cdw-glow);
             transition: all 0.1s linear; /* For smooth dragging */
         }
-        .sas-control-point.active {
-            background: var(--sas-point-active);
-            box-shadow: 0 0 30px var(--sas-glow);
-            transform: scale(1.2);
+        .cdw-vertex.active {
+            background: var(--cdw-point-active);
+            box-shadow: 0 0 35px var(--cdw-glow);
+            transform: scale(1.25);
         }
-        .sas-status-display {
+        .cdw-weaver-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 1.8rem;
-            color: var(--sas-text);
-            text-shadow: 0 0 25px var(--sas-glow);
+            color: var(--cdw-text);
+            text-shadow: 0 0 25px var(--cdw-glow);
             margin-top: 3.0rem;
             line-height: 2.5;
             padding: 2.2rem;
             background: rgba(0,0,0,0.999);
-            border: 11px solid var(--sas-border);
+            border: 11px solid var(--cdw-border);
             border-radius: 1.8rem;
-            box-shadow: 0 0 30px var(--sas-border);
+            box-shadow: 0 0 30px var(--cdw-border);
             text-align: center;
-        }
-        /* UCM Specific - Essence Convergence Matrix */
-        .ucm-convergence-matrix {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        .ucm-essence-fragments {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            padding: 2.5rem;
-            background: var(--console-bg);
-            border: 10px solid var(--ucm-border);
-            border-radius: 2.0rem;
-            min-height: 15rem;
-            width: 100%;
-            box-shadow: inset 0 0 35px var(--ucm-glow);
-        }
-        .ucm-essence-fragment {
-            padding: 1.5rem 2.5rem;
-            background: var(--ucm-essence-bg);
-            border: 5px solid var(--ucm-essence-border);
-            border-radius: 1.2rem;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.0rem;
-            color: var(--ucm-text);
-            cursor: grab;
-            box-shadow: 0 0 15px rgba(170, 0, 255, 0.5);
-            transition: all 0.2s ease;
-            user-select: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 8rem;
-        }
-        .ucm-essence-fragment:hover {
-            box-shadow: 0 0 25px var(--ucm-glow);
-            transform: scale(1.05);
-        }
-        .ucm-essence-fragment.dragging {
-            opacity: 0.7;
-            transform: scale(1.1);
-            z-index: 100;
-        }
-        .ucm-core-receiver {
-            width: 25rem;
-            height: 25rem;
-            background: var(--ucm-core-receiver-bg);
-            border: 12px dashed var(--ucm-core-receiver-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            color: var(--ucm-text);
-            text-shadow: 0 0 20px var(--ucm-glow);
-            box-shadow: inset 0 0 40px var(--ucm-glow), 0 0 30px var(--ucm-glow);
-            transition: all 0.3s ease;
-        }
-        .ucm-core-receiver.hovered {
-            background: rgba(170, 0, 255, 0.2);
-            border-color: var(--ucm-glow);
-            box-shadow: inset 0 0 50px var(--ucm-glow), 0 0 40px var(--ucm-glow);
-        }
-        .ucm-manifest-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.9rem;
-            color: var(--ucm-text);
-            text-shadow: 0 0 25px var(--ucm-glow);
-            line-height: 2.5;
-            margin-top: 2.5rem;
-            padding: 2.2rem;
-            background: rgba(0,0,0,0.999);
-            border: 11px solid var(--ucm-border);
-            border-radius: 1.8rem;
-            box-shadow: 0 0 30px var(--ucm-border);
-            text-align: center;
-        }
-        .ucm-manifest-status.success {
-            border-color: var(--ucm-manifest-success);
-            box-shadow: 0 0 48px var(--ucm-manifest-success), inset 0 0 42px var(--ucm-manifest-success);
-            color: var(--ucm-manifest-success);
-        }
-        .ucm-manifest-status.fail {
-            border-color: var(--ucm-manifest-fail);
-            box-shadow: 0 0 35px var(--ucm-manifest-fail), inset 0 0 28px var(--ucm-manifest-fail);
-            color: var(--ucm-manifest-fail);
         }
 
 
@@ -893,37 +763,37 @@
             padding: 3.8rem;
             border: 11px solid var(--border-color);
             border-radius: 3.8rem; /* More rounded */
-            background: var(--overseer-bg);
+            background: rgba(0, 5, 10, 0.99); /* Deep ocean blue, almost black */
             box-shadow: inset 0 0 32px rgba(0, 255, 255, 0.999), inset 0 0 35px rgba(0, 255, 255, 0.999); /* More inner shadow */
             text-align: left;
             position: relative;
             transition: all 1.0s ease;
             line-height: 2.2; /* Slightly tighter line height for monospace log */
             letter-spacing: 0.11rem;
-            color: var(--overseer-text);
+            color: var(--primary-glow);
             text-shadow: 0 0 25px rgba(0, 255, 255, 0.999); /* Stronger shadow */
             font-weight: 400;
             transform: translateZ(14px);
             overflow: hidden;
-            max-height: 45rem;
+            max-height: 48rem; /* Slightly taller log */
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v91.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v92.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -3.5rem;
             left: 4.2rem;
-            font-size: 2.5rem;
-            color: var(--overseer-border);
+            font-size: 2.6rem;
+            color: var(--accent-color);
             background: rgba(0, 0, 0, 0.999);
-            padding: 1.5rem 1.9rem;
-            border-radius: 1.6rem;
+            padding: 1.6rem 2.0rem;
+            border-radius: 1.8rem;
             font-weight: 700;
-            letter-spacing: 0.19rem;
+            letter-spacing: 0.2rem;
             transform: translateY(-50%) translateZ(20px);
             opacity: 1.0;
-            border: 11px solid var(--overseer-border);
-            box-shadow: 0 0 32px var(--overseer-border);
+            border: 12px solid var(--accent-color);
+            box-shadow: 0 0 35px var(--accent-color);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -953,56 +823,56 @@
         .status-glitch {
             color: var(--log-glitch-color);
             text-shadow: 0 0 22px var(--log-glitch-color);
-            animation: textGlitch 0.006s infinite steps(1); /* Faster glitch */
+            animation: textGlitch 0.005s infinite steps(1); /* Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(11px) skewX(60deg); opacity: 0.04;}
-            40% { transform: translateX(-11px) skewX(-60deg); opacity: 0.07;}
-            60% { transform: translateX(10px) skewX(58deg); opacity: 0.11;}
-            80% { transform: translateX(-10px) skewX(-58deg); opacity: 0.08;}
+            20% { transform: translateX(12px) skewX(65deg); opacity: 0.03;}
+            40% { transform: translateX(-12px) skewX(-65deg); opacity: 0.06;}
+            60% { transform: translateX(11px) skewX(62deg); opacity: 0.10;}
+            80% { transform: translateX(-11px) skewX(-62deg); opacity: 0.07;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem; /* Larger button text */
-            padding: 1.6rem 2.5rem;
-            border-radius: 2.8rem;
+            font-size: 2.3rem; /* Larger button text */
+            padding: 1.8rem 2.8rem;
+            border-radius: 3.0rem;
             border: none;
             cursor: pointer;
             transition: all 0.9s ease-in-out, box-shadow 1.4s ease-in-out, transform 0.9s ease-in-out;
-            margin-top: 3.2rem;
+            margin-top: 3.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.25rem;
+            letter-spacing: 0.28rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(40,0,65,0.999)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(45,0,70,0.999)); /* Dark base */
             color: var(--text-color);
-            border: 12px solid var(--border-color); /* Thicker border */
-            transform: translateZ(16px);
+            border: 14px solid var(--border-color); /* Thicker border */
+            transform: translateZ(18px);
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -18px;
-            border-radius: 2.8rem;
-            border: 18px solid transparent;
+            inset: -20px;
+            border-radius: 3.0rem;
+            border: 20px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(25px);
+            filter: blur(28px);
             opacity: 0.999;
             transition: opacity 0.9s ease, filter 0.9s ease;
-            animation: buttonBorderRotate 35s linear infinite; /* Slower rotation */
+            animation: buttonBorderRotate 30s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(35px);
+            filter: blur(38px);
         }
 
         @keyframes buttonBorderRotate {
@@ -1012,75 +882,64 @@
         }
         
         /* Specific button styles for new modules */
-        .btn-initiate-reconstruction {
-            color: var(--qdd-glow);
-            box-shadow: 0 0 45px var(--qdd-glow);
-            border-color: var(--qdd-glow);
+        .btn-start-harmonizer {
+            color: var(--tds-glow);
+            box-shadow: 0 0 48px var(--tds-glow);
+            border-color: var(--tds-glow);
         }
-        .btn-initiate-reconstruction:hover {
-            background: rgba(0, 220, 255, 0.85);
-            box-shadow: 0 0 60px var(--qdd-glow), inset 0 0 50px var(--qdd-glow);
-            transform: translateY(-16px) scale(1.38) translateZ(16px);
-        }
-
-        .btn-tune-frequency {
-            color: var(--aps-glow);
-            box-shadow: 0 0 45px var(--aps-glow);
-            border-color: var(--aps-glow);
-        }
-        .btn-tune-frequency:hover {
-            background: rgba(255, 0, 200, 0.85);
-            box-shadow: 0 0 60px var(--aps-glow), inset 0 0 50px var(--aps-glow);
-            transform: translateY(-16px) scale(1.38) translateZ(16px);
+        .btn-start-harmonizer:hover {
+            background: rgba(100, 150, 255, 0.88);
+            box-shadow: 0 0 65px var(--tds-glow), inset 0 0 55px var(--tds-glow);
+            transform: translateY(-18px) scale(1.4) translateZ(18px);
         }
 
-        .btn-harmonize-waveform {
-            color: var(--cwp-glow);
-            box-shadow: 0 0 45px var(--cwp-glow);
-            border-color: var(--cwp-glow);
+        .btn-initiate-weave {
+            color: var(--rgw-glow);
+            box-shadow: 0 0 48px var(--rgw-glow);
+            border-color: var(--rgw-glow);
         }
-        .btn-harmonize-waveform:hover {
-            background: rgba(120, 255, 0, 0.85);
-            box-shadow: 0 0 60px var(--cwp-glow), inset 0 0 50px var(--cwp-glow);
-            transform: translateY(-16px) scale(1.38) translateZ(16px);
-        }
-
-        .btn-correct-anomaly {
-            color: var(--sas-glow);
-            box-shadow: 0 0 45px var(--sas-glow);
-            border-color: var(--sas-glow);
-        }
-        .btn-correct-anomaly:hover {
-            background: rgba(255, 140, 0, 0.85);
-            box-shadow: 0 0 60px var(--sas-glow), inset 0 0 50px var(--sas-glow);
-            transform: translateY(-16px) scale(1.38) translateZ(16px);
+        .btn-initiate-weave:hover {
+            background: rgba(255, 100, 100, 0.88);
+            box-shadow: 0 0 65px var(--rgw-glow), inset 0 0 55px var(--rgw-glow);
+            transform: translateY(-18px) scale(1.4) translateZ(18px);
         }
 
-        .btn-converge-essence {
-            color: var(--ucm-glow);
-            box-shadow: 0 0 45px var(--ucm-glow);
-            border-color: var(--ucm-glow);
+        .btn-synthesize-flux {
+            color: var(--pafs-glow);
+            box-shadow: 0 0 48px var(--pafs-glow);
+            border-color: var(--pafs-glow);
         }
-        .btn-converge-essence:hover {
-            background: rgba(170, 0, 255, 0.85);
-            box-shadow: 0 0 60px var(--ucm-glow), inset 0 0 50px var(--ucm-glow);
-            transform: translateY(-16px) scale(1.38) translateZ(16px);
+        .btn-synthesize-flux:hover {
+            background: rgba(120, 255, 120, 0.88);
+            box-shadow: 0 0 65px var(--pafs-glow), inset 0 0 55px var(--pafs-glow);
+            transform: translateY(-18px) scale(1.4) translateZ(18px);
+        }
+
+        .btn-correct-fabric {
+            color: var(--cdw-glow);
+            box-shadow: 0 0 48px var(--cdw-glow);
+            border-color: var(--cdw-glow);
+        }
+        .btn-correct-fabric:hover {
+            background: rgba(255, 120, 255, 0.88);
+            box-shadow: 0 0 65px var(--cdw-glow), inset 0 0 55px var(--cdw-glow);
+            transform: translateY(-18px) scale(1.4) translateZ(18px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 16px solid var(--anomaly-border);
-            border-radius: 3.2rem;
-            padding: 3.2rem;
-            margin-top: 4.0rem;
+            border: 18px solid var(--anomaly-border);
+            border-radius: 3.5rem;
+            padding: 3.5rem;
+            margin-top: 4.5rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 2.4rem;
-            text-shadow: 0 0 40px var(--anomaly-color);
-            animation: pulseWarning 0.20s infinite alternate; /* Faster pulse */
-            transform: translateZ(18px);
+            font-size: 2.6rem;
+            text-shadow: 0 0 45px var(--anomaly-color);
+            animation: pulseWarning 0.18s infinite alternate; /* Faster pulse */
+            transform: translateZ(20px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 1.4s ease-out;
+            transition: opacity 1.5s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -1088,8 +947,8 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 35px var(--anomaly-color), inset 0 0 30px var(--anomaly-color); }
-            to { box-shadow: 0 0 60px var(--anomaly-color), inset 0 0 50px var(--anomaly-color); }
+            from { box-shadow: 0 0 40px var(--anomaly-color), inset 0 0 35px var(--anomaly-color); }
+            to { box-shadow: 0 0 70px var(--anomaly-color), inset 0 0 60px var(--anomaly-color); }
         }
 
         /* NEW: Resource Anomaly Event Overlay */
@@ -1100,156 +959,163 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
             background: var(--anomaly-event-bg);
-            border: 14px solid var(--anomaly-event-border);
-            border-radius: 3.0rem;
-            padding: 4.0rem;
+            border: 16px solid var(--anomaly-event-border);
+            border-radius: 3.2rem;
+            padding: 4.5rem;
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 30px var(--anomaly-event-border);
-            box-shadow: 0 0 60px var(--anomaly-event-border);
+            text-shadow: 0 0 35px var(--anomaly-event-border);
+            box-shadow: 0 0 65px var(--anomaly-event-border);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.4s ease-out, visibility 0s linear 0.4s;
+            transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
             max-width: 90%;
-            transform: translate(-50%, -50%) scale(0.6);
+            transform: translate(-50%, -50%) scale(0.55);
         }
         .resource-anomaly-event.active {
             opacity: 1;
             visibility: visible;
-            transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
             transform: translate(-50%, -50%) scale(1);
         }
         .resource-anomaly-event h2 {
-            font-size: 4.0rem;
-            margin-bottom: 2.5rem;
+            font-size: 4.2rem;
+            margin-bottom: 2.8rem;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 35px var(--anomaly-event-border);
-            letter-spacing: 0.18rem;
+            text-shadow: 0 0 38px var(--anomaly-event-border);
+            letter-spacing: 0.2rem;
         }
         .resource-anomaly-event p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.0rem;
-            margin-bottom: 3.0rem;
-            line-height: 2.8;
+            font-size: 2.1rem;
+            margin-bottom: 3.2rem;
+            line-height: 3.0;
             color: var(--anomaly-event-text);
         }
         .resource-anomaly-event button {
             background: var(--anomaly-event-border);
             color: var(--anomaly-event-bg);
             border: none;
-            padding: 1.8rem 3.5rem;
-            border-radius: 2.2rem;
+            padding: 2.0rem 3.8rem;
+            border-radius: 2.5rem;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.0rem;
+            font-size: 2.2rem;
             cursor: pointer;
-            box-shadow: 0 0 30px var(--anomaly-event-border);
+            box-shadow: 0 0 35px var(--anomaly-event-border);
             transition: all 0.3s ease;
         }
         .resource-anomaly-event button:hover {
-            box-shadow: 0 0 45px var(--anomaly-event-border);
-            transform: translateY(-7px);
+            box-shadow: 0 0 50px var(--anomaly-event-border);
+            transform: translateY(-8px);
         }
     </style>
 </head>
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 91.0 Beta (6.0 Generation) // Operational since Cycle 3,141,592,654</p>
+        <p>Core System Interface // Version 92.0 Beta (7.0 Generation) // Operational since Cycle 3,141,592,654</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
-            <!-- Quantum Data Decipherer Module - Entropic Data Reconstruction (NEW FUNCTION) -->
-            <div class="module-base quantum-data-decipherer" data-label="Quantum Data Decipherer (QDD)">
+            <!-- Temporal Data Stream Harmonizer (TDS) - NEW FUNCTION -->
+            <div class="module-base temporal-data-stream-harmonizer" data-label="Temporal Data Stream Harmonizer (TDS)">
                 <div class="param-group">
-                    <label class="param-label">Entropic Data Reconstruction <br><span>Drag and drop the scrambled data fragments into the correct sequence in the slots below.</span></label>
-                    <div class="qdd-reconstruction-area">
-                        <div class="qdd-scrambled-fragments" id="qddScrambledFragments">
-                            <!-- Data fragments will be dynamically inserted here by JS -->
-                        </div>
-                        <div class="qdd-drop-slots" id="qddDropSlots">
-                            <!-- Drop slots for data fragments will be dynamically inserted here by JS -->
+                    <label class="param-label">Temporal Data Stream Harmonization <br><span>Route incoming data packets to their designated lanes by clicking the corresponding button. Act quickly!</span></label>
+                    <div class="tds-stream-area" id="tdsStreamArea">
+                        <div class="tds-lanes" id="tdsLanes">
+                            <!-- Lane buttons will be inserted here by JS -->
                         </div>
                     </div>
-                    <p class="qdd-status-display" id="qddStatusDisplay">Awaiting data reconstruction...</p>
+                    <p class="tds-game-status" id="tdsGameStatus">Awaiting stream initialization...</p>
                 </div>
-                <button class="action-button btn-initiate-reconstruction" id="initiateReconstructionBtn">Initiate Reconstruction</button>
+                <button class="action-button btn-start-harmonizer" id="startHarmonizerBtn">Start Stream Harmonizer</button>
             </div>
 
-            <!-- Aetheric Pattern Synthesizer Module - Resonance Frequency Tuner (NEW FUNCTION) -->
-            <div class="module-base aetheric-pattern-synthesizer" data-label="Aetheric Pattern Synthesizer (APS)">
+            <!-- Resonance Grid Weave (RGW) - NEW FUNCTION -->
+            <div class="module-base resonance-grid-weave" data-label="Resonance Grid Weave (RGW)">
                 <div class="param-group">
-                    <label class="param-label">Resonance Frequency Tuner <br><span>Activate nodes to create a resonant path from the Source (green) to the Target (red).</span></label>
-                    <div class="aps-tuner-grid" id="apsTunerGrid">
+                    <label class="param-label">Resonance Grid Weave Alignment <br><span>Click grid nodes sequentially to trace the glowing target pattern. Precision is key.</span></label>
+                    <div class="rgw-grid-area" id="rgwGridArea">
+                        <div class="rgw-target-overlay" id="rgwTargetOverlay"></div>
                         <!-- Grid nodes will be dynamically inserted here by JS -->
                     </div>
                 </div>
-                <p class="aps-tuner-status" id="apsTunerStatus">Path calibration pending...</p>
-                <button class="action-button btn-tune-frequency" id="tuneFrequencyBtn">Tune Frequency</button>
+                <p class="rgw-weave-status" id="rgwWeaveStatus">Pattern alignment pending...</p>
+                <button class="action-button btn-initiate-weave" id="initiateWeaveBtn">Initiate Weave</button>
             </div>
 
-            <!-- Conscious Waveform Projector Module - Psycho-Acoustic Harmonizer (NEW FUNCTION) -->
-            <div class="module-base conscious-waveform-projector" data-label="Conscious Waveform Projector (CWP)">
+            <!-- Psycho-Acoustic Flux Synthesizer (PAFS) - NEW FUNCTION -->
+            <div class="module-base psycho-acoustic-flux-synthesizer" data-label="Psycho-Acoustic Flux Synthesizer (PAFS)">
                 <div class="param-group">
-                    <label class="param-label">Psycho-Acoustic Harmonizer <br><span>Adjust amplitude, frequency, and phase to match the target waveform.</span></label>
-                    <div class="cwp-harmonizer-area">
-                        <canvas id="cwpWaveformCanvas" class="cwp-waveform-canvas"></canvas>
-                        <div class="cwp-controls">
-                            <div class="cwp-slider-group">
-                                <label for="cwpAmplitude">Amplitude:</label>
-                                <input type="range" id="cwpAmplitude" class="cwp-control-slider" min="0.1" max="1.0" step="0.01" value="0.5">
+                    <label class="param-label">Psycho-Acoustic Flux Synthesis <br><span>Manipulate multiple oscillators to synthesize a complex waveform that matches the target.</span></label>
+                    <div class="pafs-synthesizer-area">
+                        <canvas id="pafsWaveformCanvas" class="pafs-waveform-canvas"></canvas>
+                        <div class="pafs-oscillator-controls">
+                            <div class="pafs-oscillator-group">
+                                <h3>Oscillator 1</h3>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsAmp1">Amplitude:</label>
+                                    <input type="range" id="pafsAmp1" class="pafs-control-slider" min="0.0" max="1.0" step="0.01" value="0.5">
+                                </div>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsFreq1">Frequency:</label>
+                                    <input type="range" id="pafsFreq1" class="pafs-control-slider" min="0.5" max="5.0" step="0.05" value="1.0">
+                                </div>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsWave1">Wave Type:</label>
+                                    <select id="pafsWave1" class="pafs-wave-type">
+                                        <option value="sine">Sine</option>
+                                        <option value="square">Square</option>
+                                        <option value="sawtooth">Sawtooth</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="cwp-slider-group">
-                                <label for="cwpFrequency">Frequency:</label>
-                                <input type="range" id="cwpFrequency" class="cwp-control-slider" min="0.5" max="5.0" step="0.05" value="1.0">
-                            </div>
-                            <div class="cwp-slider-group">
-                                <label for="cwpPhase">Phase:</label>
-                                <input type="range" id="cwpPhase" class="cwp-control-slider" min="0" max="6.28" step="0.01" value="0">
+                            <div class="pafs-oscillator-group">
+                                <h3>Oscillator 2</h3>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsAmp2">Amplitude:</label>
+                                    <input type="range" id="pafsAmp2" class="pafs-control-slider" min="0.0" max="1.0" step="0.01" value="0.3">
+                                </div>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsFreq2">Frequency:</label>
+                                    <input type="range" id="pafsFreq2" class="pafs-control-slider" min="0.5" max="5.0" step="0.05" value="2.0">
+                                </div>
+                                <div class="pafs-slider-group">
+                                    <label for="pafsWave2">Wave Type:</label>
+                                    <select id="pafsWave2" class="pafs-wave-type">
+                                        <option value="sine">Sine</option>
+                                        <option value="square">Square</option>
+                                        <option value="sawtooth">Sawtooth</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="cwp-match-status" id="cwpMatchStatus">Waveform match: 0%</p>
-                <button class="action-button btn-harmonize-waveform" id="harmonizeWaveformBtn">Harmonize Waveform</button>
+                <p class="pafs-flux-status" id="pafsFluxStatus">Waveform flux: 0%</p>
+                <button class="action-button btn-synthesize-flux" id="synthesizeFluxBtn">Synthesize Flux</button>
             </div>
 
-            <!-- Spacetime Anchor Stabilizer Module - Temporal Anomaly Corrector (NEW FUNCTION) -->
-            <div class="module-base spacetime-anchor-stabilizer" data-label="Spacetime Anchor Stabilizer (SAS)">
+            <!-- Chrono-Dimensional Weaver (CDW) - NEW FUNCTION -->
+            <div class="module-base chrono-dimensional-weaver" data-label="Chrono-Dimensional Weaver (CDW)">
                 <div class="param-group">
-                    <label class="param-label">Temporal Anomaly Corrector <br><span>Drag the control points on the timeline to flatten the temporal anomaly curve to the stable line.</span></label>
-                    <div class="sas-anomaly-corrector">
-                        <canvas id="sasTimelineCanvas" class="sas-timeline-canvas"></canvas>
-                        <!-- Control points will be dynamically inserted by JS -->
+                    <label class="param-label">Chrono-Dimensional Fabric Weaving <br><span>Drag the fabric vertices to untangle distorted lines and restore the grid to perfect symmetry.</span></label>
+                    <div class="cdw-weaver-area">
+                        <canvas id="cdwFabricCanvas" class="cdw-fabric-canvas"></canvas>
+                        <!-- Vertices will be dynamically inserted by JS -->
                     </div>
                 </div>
-                <p class="sas-status-display" id="sasStatusDisplay">Temporal field nominal.</p>
-                <button class="action-button btn-correct-anomaly" id="correctAnomalyBtn">Correct Anomaly</button>
-            </div>
-
-            <!-- Universal Core Manifestor Module - Essence Convergence Matrix (NEW FUNCTION) -->
-            <div class="module-base universal-core-manifestor" data-label="Universal Core Manifestor (UCM)">
-                <div class="param-group">
-                    <label class="param-label">Essence Convergence Matrix <br><span>Drag the Essence Fragments into the Core Receiver in the correct sequence to manifest a new Universal Core.</span></label>
-                    <div class="ucm-convergence-matrix">
-                        <div class="ucm-essence-fragments" id="ucmEssenceFragments">
-                            <!-- Essence fragments will be dynamically inserted here by JS -->
-                        </div>
-                        <div class="ucm-core-receiver" id="ucmCoreReceiver">
-                            <span id="ucmCoreStatus">Receiver Active</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="ucm-manifest-status" id="ucmManifestStatus">Awaiting essence convergence...</p>
-                <button class="action-button btn-converge-essence" id="convergeEssenceBtn">Converge Essence</button>
+                <p class="cdw-weaver-status" id="cdwWeaverStatus">Dimensional fabric stable.</p>
+                <button class="action-button btn-correct-fabric" id="correctFabricBtn">Correct Fabric</button>
             </div>
         </div>
 
         <div class="status-log-display" id="statusLog">
             <!-- Log entries will be inserted here by JS -->
-            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v91.0 Core Initialized.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v92.0 Core Initialized.</span></div>
             <div class="status-entry"><span class="status-value">[00:00:00.125]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 6.0 Generation control modules.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 7.0 Generation control modules.</span></div>
         </div>
 
         <div class="anomaly-alert" id="anomalyAlert">
@@ -1273,86 +1139,88 @@
             resourceAnomalyEvent: document.getElementById('resourceAnomalyEvent'),
             acknowledgeAnomalyBtn: document.getElementById('acknowledgeAnomaly'),
             
-            // QDD
-            qddScrambledFragments: document.getElementById('qddScrambledFragments'),
-            qddDropSlots: document.getElementById('qddDropSlots'),
-            qddStatusDisplay: document.getElementById('qddStatusDisplay'),
-            initiateReconstructionBtn: document.getElementById('initiateReconstructionBtn'),
+            // TDS
+            tdsStreamArea: document.getElementById('tdsStreamArea'),
+            tdsLanes: document.getElementById('tdsLanes'),
+            tdsGameStatus: document.getElementById('tdsGameStatus'),
+            startHarmonizerBtn: document.getElementById('startHarmonizerBtn'),
 
-            // APS
-            apsTunerGrid: document.getElementById('apsTunerGrid'),
-            apsTunerStatus: document.getElementById('apsTunerStatus'),
-            tuneFrequencyBtn: document.getElementById('tuneFrequencyBtn'),
+            // RGW
+            rgwGridArea: document.getElementById('rgwGridArea'),
+            rgwTargetOverlay: document.getElementById('rgwTargetOverlay'),
+            rgwWeaveStatus: document.getElementById('rgwWeaveStatus'),
+            initiateWeaveBtn: document.getElementById('initiateWeaveBtn'),
 
-            // CWP
-            cwpWaveformCanvas: document.getElementById('cwpWaveformCanvas'),
-            cwpAmplitude: document.getElementById('cwpAmplitude'),
-            cwpFrequency: document.getElementById('cwpFrequency'),
-            cwpPhase: document.getElementById('cwpPhase'),
-            cwpMatchStatus: document.getElementById('cwpMatchStatus'),
-            harmonizeWaveformBtn: document.getElementById('harmonizeWaveformBtn'),
+            // PAFS
+            pafsWaveformCanvas: document.getElementById('pafsWaveformCanvas'),
+            pafsAmp1: document.getElementById('pafsAmp1'),
+            pafsFreq1: document.getElementById('pafsFreq1'),
+            pafsWave1: document.getElementById('pafsWave1'),
+            pafsAmp2: document.getElementById('pafsAmp2'),
+            pafsFreq2: document.getElementById('pafsFreq2'),
+            pafsWave2: document.getElementById('pafsWave2'),
+            pafsFluxStatus: document.getElementById('pafsFluxStatus'),
+            synthesizeFluxBtn: document.getElementById('synthesizeFluxBtn'),
 
-            // SAS
-            sasTimelineCanvas: document.getElementById('sasTimelineCanvas'),
-            sasStatusDisplay: document.getElementById('sasStatusDisplay'),
-            correctAnomalyBtn: document.getElementById('correctAnomalyBtn'),
-
-            // UCM
-            ucmEssenceFragments: document.getElementById('ucmEssenceFragments'),
-            ucmCoreReceiver: document.getElementById('ucmCoreReceiver'),
-            ucmCoreStatus: document.getElementById('ucmCoreStatus'),
-            ucmManifestStatus: document.getElementById('ucmManifestStatus'),
-            convergeEssenceBtn: document.getElementById('convergeEssenceBtn'),
+            // CDW
+            cdwFabricCanvas: document.getElementById('cdwFabricCanvas'),
+            cdwWeaverStatus: document.getElementById('cdwWeaverStatus'),
+            correctFabricBtn: document.getElementById('correctFabricBtn'),
         };
 
         let systemState = {
             globalStability: 100, // Represented as a percentage
             anomalyActive: false,
-            // QDD state: Entropic Data Reconstruction
-            qdd: {
+            // TDS state
+            tds: {
                 active: false,
-                targetSequence: [], // Correct sequence of fragments (e.g., ['ALPHA', 'BETA', 'GAMMA'])
-                scrambledFragments: [], // Shuffled fragments for dragging
-                placedFragments: [], // Fragments currently in drop slots
                 score: 0,
-                difficulty: 0.5 // Controls length of sequence
+                misses: 0,
+                maxMisses: 5,
+                gameInterval: null,
+                packetInterval: null,
+                packets: [],
+                packetSpeed: 2, // pixels per frame
+                laneCount: 3,
+                packetTypes: [
+                    { value: 'A', color: 'var(--tds-packet-type1)' },
+                    { value: 'B', color: 'var(--tds-packet-type2)' },
+                    { value: 'C', color: 'var(--tds-packet-type3)' }
+                ],
+                targetLaneMap: {}, // Maps packet value to target lane index
             },
-            // APS state: Resonance Frequency Tuner
-            aps: {
+            // RGW state
+            rgw: {
                 active: false,
-                gridSize: 5,
+                gridSize: 6,
                 nodes: [], // 2D array representing the grid
-                sourceNode: {x: 0, y: 0},
-                targetNode: {x: 0, y: 0},
-                pathLength: 0,
-                pathFound: false,
+                targetPattern: [], // Sequence of {x, y} for target
+                userPath: [], // Sequence of {x, y} clicked by user
+                patternMatches: false,
             },
-            // CWP state: Psycho-Acoustic Harmonizer
-            cwp: {
+            // PAFS state
+            pafs: {
                 active: false,
-                targetWaveform: { amplitude: 0.7, frequency: 2.0, phase: 1.57 }, // Randomly generated
-                userWaveform: { amplitude: 0.5, frequency: 1.0, phase: 0 },
+                targetWaveform: {
+                    osc1: { amp: 0.6, freq: 1.5, type: 'sine' },
+                    osc2: { amp: 0.3, freq: 3.0, type: 'square' }
+                },
+                userWaveform: {
+                    osc1: { amp: 0.5, freq: 1.0, type: 'sine' },
+                    osc2: { amp: 0.3, freq: 2.0, type: 'sine' }
+                },
                 matchPercentage: 0,
-                animationFrame: null,
                 ctx: null,
             },
-            // SAS state: Temporal Anomaly Corrector
-            sas: {
+            // CDW state
+            cdw: {
                 active: false,
                 ctx: null,
-                controlPoints: [], // Array of {x, y, originalY}
-                anomalyStrength: 0.5, // How wavy the anomaly is
-                flatnessScore: 0,
-                draggedPoint: null,
-            },
-            // UCM state: Essence Convergence Matrix
-            ucm: {
-                active: false,
-                essences: ['Δ', 'Ψ', 'Ω', 'Ξ', 'Σ', 'Φ', 'Γ', 'Λ', 'Π', 'Θ', '∝', '∇', '∫', '∑', '∅'],
-                targetSequence: [], // Correct order of essences to drop
-                currentSequenceIndex: 0,
-                score: 0,
-                difficulty: 0.5, // Controls length of sequence
+                gridWidth: 8, // N columns
+                gridHeight: 6, // M rows
+                vertices: [], // Array of {x, y, originalX, originalY, element}
+                draggedVertex: null,
+                distortionScore: 100, // 0 for perfect, 100 for max distortion
             }
         };
 
@@ -1363,7 +1231,7 @@
             entry.classList.add('status-entry');
             entry.innerHTML = `<span class="status-value">[${timestamp}]</span> <span class="status-${type}">${message}</span>`;
             ui.statusLog.prepend(entry); // Add to top
-            if (ui.statusLog.children.length > 30) { // Keep log concise
+            if (ui.statusLog.children.length > 35) { // Keep log concise
                 ui.statusLog.removeChild(ui.statusLog.lastChild);
             }
         }
@@ -1381,7 +1249,7 @@
                 }
             }
             // Trigger a resource anomaly event randomly if stability is moderate or high
-            if (systemState.globalStability > 60 && !systemState.anomalyActive && Math.random() < 0.005) { // 0.5% chance every 5 seconds
+            if (systemState.globalStability > 60 && !systemState.anomalyActive && Math.random() < 0.008) { // 0.8% chance every few seconds
                 triggerResourceAnomalyEvent();
             }
         }
@@ -1409,271 +1277,298 @@
             ui.resourceAnomalyEvent.classList.remove('active');
             systemState.anomalyActive = false; // Acknowledge means we handled the specific event, not necessarily all anomalies
             addLogEntry('Resource anomaly acknowledged. Diverting consciousness resources.', 'event');
-            systemState.globalStability -= 10; // Acknowledge comes with a small cost
+            systemState.globalStability -= 12; // Acknowledge comes with a small cost
             checkGlobalStability(); // Re-evaluate global stability after acknowledging
         });
 
-        // --- QUANTUM DATA DECIPHERER (QDD) - Entropic Data Reconstruction ---
-        function initQDD() {
-            systemState.qdd.active = true;
-            systemState.qdd.score = 0;
-            systemState.qdd.placedFragments = [];
-            ui.qddScrambledFragments.innerHTML = '';
-            ui.qddDropSlots.innerHTML = '';
-            ui.qddStatusDisplay.textContent = 'Awaiting data reconstruction...';
-            ui.initiateReconstructionBtn.textContent = 'Reconstructing...';
-            ui.initiateReconstructionBtn.disabled = true;
+        // --- TEMPORAL DATA STREAM HARMONIZER (TDS) ---
+        function initTDS() {
+            systemState.tds.active = true;
+            systemState.tds.score = 0;
+            systemState.tds.misses = 0;
+            systemState.tds.packets = [];
+            systemState.tds.packetSpeed = 2;
+            ui.tdsStreamArea.innerHTML = '<div class="tds-lanes" id="tdsLanes"></div>'; // Re-create lanes container
+            ui.tdsGameStatus.textContent = 'Score: 0 | Misses: 0';
+            ui.startHarmonizerBtn.textContent = 'Stop Stream Harmonizer';
+            ui.startHarmonizerBtn.classList.add('active-button'); // Visual feedback for active game
 
-            const sequences = [
-                ['ALPHA', 'BETA', 'GAMMA', 'DELTA'],
-                ['QUANTUM', 'FIELD', 'ENTROPY', 'FLUX'],
-                ['COSMIC', 'WAVE', 'FORM', 'HARMONY'],
-                ['REALITY', 'ANCHOR', 'STABILITY', 'PLANE'],
-                ['SYNCHRO', 'PULSE', 'TEMPORAL', 'SHIFT']
-            ];
-            const chosenSequence = sequences[Math.floor(Math.random() * sequences.length)];
-            systemState.qdd.targetSequence = chosenSequence;
+            // Set up lanes
+            ui.tdsLanes.innerHTML = '';
+            systemState.tds.targetLaneMap = {};
+            const types = [...systemState.tds.packetTypes].sort(() => Math.random() - 0.5); // Randomize lane order
+            for (let i = 0; i < systemState.tds.laneCount; i++) {
+                const laneBtn = document.createElement('button');
+                laneBtn.classList.add('tds-lane-button');
+                laneBtn.textContent = `Lane ${types[i].value}`;
+                laneBtn.setAttribute('data-lane-index', i);
+                laneBtn.setAttribute('data-packet-type', types[i].value);
+                laneBtn.style.borderColor = types[i].color; // Color the lane button border
+                laneBtn.addEventListener('click', () => routeTDSpacket(i));
+                ui.tdsLanes.appendChild(laneBtn);
+                systemState.tds.targetLaneMap[types[i].value] = i; // Map packet type to lane index
+            }
 
-            const scrambled = [...chosenSequence].sort(() => Math.random() - 0.5);
-            systemState.qdd.scrambledFragments = scrambled;
-
-            scrambled.forEach((fragment, index) => {
-                const fragEl = document.createElement('div');
-                fragEl.classList.add('qdd-fragment');
-                fragEl.textContent = fragment;
-                fragEl.setAttribute('draggable', 'true');
-                fragEl.id = `qdd-fragment-${index}`;
-                ui.qddScrambledFragments.appendChild(fragEl);
-
-                fragEl.addEventListener('dragstart', (e) => {
-                    e.dataTransfer.setData('text/plain', fragEl.id);
-                    fragEl.classList.add('dragging');
-                });
-                fragEl.addEventListener('dragend', () => {
-                    fragEl.classList.remove('dragging');
-                });
-            });
-
-            systemState.qdd.targetSequence.forEach((_, index) => {
-                const slotEl = document.createElement('div');
-                slotEl.classList.add('qdd-drop-slot');
-                slotEl.setAttribute('data-slot-index', index);
-                ui.qddDropSlots.appendChild(slotEl);
-
-                slotEl.addEventListener('dragover', (e) => {
-                    e.preventDefault();
-                    slotEl.classList.add('hovered');
-                });
-                slotEl.addEventListener('dragleave', () => {
-                    slotEl.classList.remove('hovered');
-                });
-                slotEl.addEventListener('drop', (e) => {
-                    e.preventDefault();
-                    slotEl.classList.remove('hovered');
-                    const fragmentId = e.dataTransfer.getData('text/plain');
-                    const draggedFragment = document.getElementById(fragmentId);
-                    
-                    if (draggedFragment && !slotEl.hasChildNodes()) {
-                        const fragmentValue = draggedFragment.textContent;
-                        const slotIndex = parseInt(slotEl.getAttribute('data-slot-index'));
-
-                        // Place visually
-                        const placedEl = document.createElement('div');
-                        placedEl.classList.add('qdd-placed-fragment');
-                        placedEl.textContent = fragmentValue;
-                        slotEl.appendChild(placedEl);
-                        draggedFragment.remove(); // Remove from scrambled fragments
-
-                        systemState.qdd.placedFragments[slotIndex] = fragmentValue;
-                        checkQDDCompletion();
-                    } else if (slotEl.hasChildNodes()) {
-                        addLogEntry('QDD: Slot already occupied. Remove existing fragment first.', 'warning');
-                    }
-                });
-            });
-            addLogEntry('QDD: Entropic data reconstruction initiated. Assemble the sequence.', 'event');
+            startGameTDS();
+            addLogEntry('TDS: Temporal data stream harmonizer active. Route the packets!', 'event');
         }
 
-        function checkQDDCompletion() {
-            if (ui.qddScrambledFragments.children.length > 0) { // Not all fragments placed
+        function startGameTDS() {
+            systemState.tds.gameInterval = setInterval(updateTDSgame, 25); // Faster update for smoother motion
+            systemState.tds.packetInterval = setInterval(generateTDSpacket, 1500); // New packet every 1.5 seconds
+        }
+
+        function generateTDSpacket() {
+            if (!systemState.tds.active) return;
+            const packetType = systemState.tds.packetTypes[Math.floor(Math.random() * systemState.tds.packetTypes.length)];
+            const startX = Math.random() * (ui.tdsStreamArea.offsetWidth - 50) + 25; // Random X position
+            const packetEl = document.createElement('div');
+            packetEl.classList.add('tds-packet');
+            packetEl.textContent = packetType.value;
+            packetEl.style.left = `${startX - 25}px`; // Center horizontally
+            packetEl.style.backgroundColor = packetType.color;
+            packetEl.style.boxShadow = `0 0 20px ${packetType.color}`;
+            packetEl.setAttribute('data-packet-type', packetType.value);
+            packetEl.setAttribute('data-packet-id', Date.now()); // Unique ID
+
+            ui.tdsStreamArea.appendChild(packetEl);
+            systemState.tds.packets.push({
+                id: packetEl.getAttribute('data-packet-id'),
+                element: packetEl,
+                type: packetType.value,
+                y: 0,
+                x: startX - 25,
+                routed: false // Track if packet has been routed
+            });
+        }
+
+        function updateTDSgame() {
+            if (!systemState.tds.active) return;
+            const streamAreaHeight = ui.tdsStreamArea.offsetHeight;
+
+            systemState.tds.packets.forEach(packet => {
+                if (packet.routed) return; // Skip if already routed
+
+                packet.y += systemState.tds.packetSpeed;
+                packet.element.style.transform = `translateY(${packet.y}px)`;
+
+                // Check if packet passed the bottom
+                if (packet.y > streamAreaHeight - 50) { // Packet "body" is 50px tall
+                    if (!packet.routed) {
+                        packet.element.remove();
+                        systemState.tds.packets = systemState.tds.packets.filter(p => p.id !== packet.id);
+                        systemState.tds.misses++;
+                        ui.tdsGameStatus.textContent = `Score: ${systemState.tds.score} | Misses: ${systemState.tds.misses}`;
+                        addLogEntry(`TDS: Packet of type '${packet.type}' missed its destination.`, 'warning');
+                        systemState.globalStability -= 2;
+                        checkGlobalStability();
+                        if (systemState.tds.misses >= systemState.tds.maxMisses) {
+                            endTDSgame(false); // Game over due to too many misses
+                        }
+                    }
+                }
+            });
+        }
+
+        function routeTDSpacket(laneIndex) {
+            if (!systemState.tds.active) return;
+            
+            // Find the closest unrouted packet above the lanes
+            const streamAreaHeight = ui.tdsStreamArea.offsetHeight;
+            const packetsNearBottom = systemState.tds.packets.filter(p => !p.routed && p.y > streamAreaHeight - 150 && p.y < streamAreaHeight - 50).sort((a,b) => b.y - a.y); // Closest to bottom first
+            
+            if (packetsNearBottom.length === 0) {
+                addLogEntry('TDS: No packets in range for routing.', 'info');
                 return;
             }
 
-            let correct = true;
-            systemState.qdd.placedFragments.forEach((fragment, index) => {
-                const slotEl = ui.qddDropSlots.querySelector(`[data-slot-index="${index}"]`);
-                if (fragment === systemState.qdd.targetSequence[index]) {
-                    slotEl.classList.add('correct-placement');
-                    slotEl.classList.remove('incorrect-placement');
-                } else {
-                    correct = false;
-                    slotEl.classList.add('incorrect-placement');
-                    slotEl.classList.remove('correct-placement');
-                }
-            });
+            const packetToRoute = packetsNearBottom[0];
+            const targetPacketType = packetToRoute.type;
+            const correctLaneIndex = systemState.tds.targetLaneMap[targetPacketType];
 
-            if (correct) {
-                ui.qddStatusDisplay.textContent = 'Reconstruction Complete! Data Integrity Restored.';
-                addLogEntry('QDD: Data reconstruction successful. Stability increased.', 'success');
-                systemState.globalStability += 20;
-                endQDD();
+            if (laneIndex === correctLaneIndex) {
+                packetToRoute.routed = true;
+                systemState.tds.score++;
+                ui.tdsGameStatus.textContent = `Score: ${systemState.tds.score} | Misses: ${systemState.tds.misses}`;
+                addLogEntry(`TDS: Packet of type '${targetPacketType}' successfully routed to Lane ${laneIndex+1}.`, 'info');
+                packetToRoute.element.style.transition = 'transform 0.3s ease-out, background-color 0.3s ease, box-shadow 0.3s ease';
+                packetToRoute.element.style.backgroundColor = 'var(--stability-good)';
+                packetToRoute.element.style.boxShadow = `0 0 25px var(--stability-good)`;
+                packetToRoute.element.style.transform += ` translateX(0px) scale(0.8) translateY(100px)`; // Visually "consume" it
+                setTimeout(() => packetToRoute.element.remove(), 300); // Remove after animation
+                systemState.tds.packets = systemState.tds.packets.filter(p => p.id !== packetToRoute.id); // Remove from tracking
+                systemState.globalStability += 3;
             } else {
-                ui.qddStatusDisplay.textContent = 'Sequence Incorrect. Analyze for anomalies.';
-                addLogEntry('QDD: Data reconstruction failed. Review placement.', 'critical');
-                systemState.globalStability -= 15;
-                // Allow user to re-arrange or reset for another try after a delay
-                setTimeout(() => {
-                    ui.qddStatusDisplay.textContent = 'Sequence incorrect. Drag and drop to try again.';
-                    Array.from(ui.qddDropSlots.children).forEach(slot => {
-                        slot.classList.remove('correct-placement', 'incorrect-placement');
-                    });
-                }, 2000);
+                systemState.tds.misses++;
+                ui.tdsGameStatus.textContent = `Score: ${systemState.tds.score} | Misses: ${systemState.tds.misses}`;
+                addLogEntry(`TDS: Incorrect routing for packet of type '${targetPacketType}'. Expected Lane ${correctLaneIndex+1}, got Lane ${laneIndex+1}.`, 'warning');
+                packetToRoute.element.style.transition = 'transform 0.3s ease-out, background-color 0.3s ease, box-shadow 0.3s ease';
+                packetToRoute.element.style.backgroundColor = 'var(--stability-critical)';
+                packetToRoute.element.style.boxShadow = `0 0 25px var(--stability-critical)`;
+                packetToRoute.element.style.transform += ` translateX(${Math.random() > 0.5 ? 50 : -50}px) scale(0.7) translateY(100px) rotate(45deg)`;
+                setTimeout(() => packetToRoute.element.remove(), 300);
+                systemState.tds.packets = systemState.tds.packets.filter(p => p.id !== packetToRoute.id);
+                systemState.globalStability -= 5;
             }
             checkGlobalStability();
         }
 
-        function endQDD() {
-            systemState.qdd.active = false;
-            ui.initiateReconstructionBtn.textContent = 'Initiate Reconstruction';
-            ui.initiateReconstructionBtn.disabled = false;
-            // Clear fragments and slots
-            ui.qddScrambledFragments.innerHTML = '';
-            ui.qddDropSlots.innerHTML = '';
-            addLogEntry('QDD: Reconstruction sequence completed.', 'event');
+        function endTDSgame(success = true) {
+            systemState.tds.active = false;
+            clearInterval(systemState.tds.gameInterval);
+            clearInterval(systemState.tds.packetInterval);
+            
+            systemState.tds.packets.forEach(p => p.element.remove());
+            systemState.tds.packets = [];
+
+            if (success && systemState.tds.score > 10) { // Set a reasonable score target
+                ui.tdsGameStatus.textContent = `Harmonization Complete! Final Score: ${systemState.tds.score}`;
+                addLogEntry(`TDS: Stream harmonization successful! Final Score: ${systemState.tds.score}. Stability increased.`, 'success');
+                systemState.globalStability += 20;
+            } else {
+                ui.tdsGameStatus.textContent = `Harmonization Failed! Score: ${systemState.tds.score} | Misses: ${systemState.tds.misses}. Try again.`;
+                addLogEntry(`TDS: Stream harmonization failed! Final Score: ${systemState.tds.score}, Misses: ${systemState.tds.misses}. Stability decreased.`, 'critical');
+                triggerAnomalyAlert('TDS: Temporal data stream overload! Core timeline desynchronization imminent.');
+                systemState.globalStability -= 25;
+            }
+            checkGlobalStability();
+            ui.startHarmonizerBtn.textContent = 'Start Stream Harmonizer';
+            ui.startHarmonizerBtn.classList.remove('active-button');
+            // Allow restarting
         }
 
-        ui.initiateReconstructionBtn.addEventListener('click', () => {
-            if (systemState.qdd.active) {
-                // If already active, act as a reset button
-                endQDD();
+        ui.startHarmonizerBtn.addEventListener('click', () => {
+            if (systemState.tds.active) {
+                endTDSgame(false); // Stop current game without success
+            } else {
+                initTDS();
             }
-            initQDD();
         });
 
 
-        // --- AETHERIC PATTERN SYNTHESIZER (APS) - Resonance Frequency Tuner ---
-        function initAPS() {
-            systemState.aps.active = true;
-            systemState.aps.pathFound = false;
-            ui.apsTunerGrid.innerHTML = '';
-            ui.apsTunerStatus.textContent = 'Path calibration pending...';
-            ui.tuneFrequencyBtn.textContent = 'Tune Frequency';
-            ui.tuneFrequencyBtn.disabled = true; // Disable until a path is possible
+        // --- RESONANCE GRID WEAVE (RGW) ---
+        function initRGW() {
+            systemState.rgw.active = true;
+            systemState.rgw.userPath = [];
+            systemState.rgw.patternMatches = false;
+            ui.rgwGridArea.innerHTML = '<div class="rgw-target-overlay" id="rgwTargetOverlay"></div>'; // Re-create overlay
+            ui.rgwWeaveStatus.textContent = 'Pattern alignment pending...';
+            ui.initiateWeaveBtn.textContent = 'Initiate Weave';
+            ui.initiateWeaveBtn.disabled = true;
 
-            const gridSize = systemState.aps.gridSize;
-            systemState.aps.nodes = Array(gridSize).fill(0).map(() => Array(gridSize).fill(0));
+            const gridSize = systemState.rgw.gridSize;
+            systemState.rgw.nodes = Array(gridSize).fill(0).map(() => Array(gridSize).fill(0));
 
-            // Randomly set source and target, ensuring they are not the same
-            let sx, sy, tx, ty;
-            do {
-                sx = Math.floor(Math.random() * gridSize);
-                sy = Math.floor(Math.random() * gridSize);
-                tx = Math.floor(Math.random() * gridSize);
-                ty = Math.floor(Math.random() * gridSize);
-            } while (sx === tx && sy === ty);
-
-            systemState.aps.sourceNode = { x: sx, y: sy };
-            systemState.aps.targetNode = { x: tx, y: ty };
+            // Define target patterns (simple shapes for illustration)
+            const patterns = [
+                // Z-shape
+                [{x:0, y:0}, {x:1, y:0}, {x:2, y:0}, {x:3, y:1}, {x:4, y:1}, {x:5, y:1}],
+                // Spiral-ish
+                [{x:0, y:0}, {x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}, {x:4, y:1}, {x:4, y:2}, {x:3, y:2}, {x:2, y:2}, {x:1, y:2}, {x:1, y:1}, {x:0, y:1}],
+                // Cross
+                [{x:0, y:0}, {x:1, y:1}, {x:2, y:2}, {x:3, y:3}, {x:4, y:4}, {x:5, y:5}, {x:5, y:0}, {x:4, y:1}, {x:3, y:2}, {x:2, y:3}, {x:1, y:4}, {x:0, y:5}],
+                // Square perimeter
+                [{x:1, y:1}, {x:2, y:1}, {x:3, y:1}, {x:4, y:1}, {x:4, y:2}, {x:4, y:3}, {x:4, y:4}, {x:3, y:4}, {x:2, y:4}, {x:1, y:4}, {x:1, y:3}, {x:1, y:2}]
+            ];
+            systemState.rgw.targetPattern = patterns[Math.floor(Math.random() * patterns.length)];
 
             // Create grid elements
             for (let y = 0; y < gridSize; y++) {
                 for (let x = 0; x < gridSize; x++) {
                     const nodeEl = document.createElement('div');
-                    nodeEl.classList.add('aps-grid-node');
+                    nodeEl.classList.add('rgw-grid-node');
                     nodeEl.setAttribute('data-x', x);
                     nodeEl.setAttribute('data-y', y);
-                    nodeEl.textContent = ''; // Clear text for cleaner look
-
-                    if (x === systemState.aps.sourceNode.x && y === systemState.aps.sourceNode.y) {
-                        nodeEl.classList.add('source');
-                        nodeEl.textContent = 'S';
-                        systemState.aps.nodes[y][x] = 1; // Source is always active
-                    } else if (x === systemState.aps.targetNode.x && y === systemState.aps.targetNode.y) {
-                        nodeEl.classList.add('target');
-                        nodeEl.textContent = 'T';
-                    }
-
-                    nodeEl.addEventListener('click', () => toggleAPSNode(x, y));
-                    ui.apsTunerGrid.appendChild(nodeEl);
+                    nodeEl.addEventListener('click', () => clickRGWNode(x, y));
+                    ui.rgwGridArea.appendChild(nodeEl);
                 }
             }
-            addLogEntry('APS: Resonance frequency tuner active. Connect source to target.', 'event');
-            checkAPSPath(); // Check initial state, enable button if target reachable from source (only source active)
+
+            // Visualize target pattern faintly
+            drawRGWTargetPattern(systemState.rgw.targetPattern);
+
+            addLogEntry('RGW: Resonance grid weave initiated. Match the target pattern.', 'event');
         }
 
-        function toggleAPSNode(x, y) {
-            if (!systemState.aps.active) return;
-            if ((x === systemState.aps.sourceNode.x && y === systemState.aps.sourceNode.y) || (x === systemState.aps.targetNode.x && y === systemState.aps.targetNode.y)) {
-                addLogEntry('APS: Cannot toggle Source or Target nodes.', 'warning');
-                return; // Cannot toggle source/target
-            }
+        function drawRGWTargetPattern(pattern) {
+            const canvas = document.createElement('canvas');
+            const gridSize = systemState.rgw.gridSize;
+            canvas.width = ui.rgwGridArea.offsetWidth;
+            canvas.height = ui.rgwGridArea.offsetHeight;
+            const ctx = canvas.getContext('2d');
 
-            const nodeEl = ui.apsTunerGrid.querySelector(`[data-x="${x}"][data-y="${y}"]`);
-            systemState.aps.nodes[y][x] = systemState.aps.nodes[y][x] === 0 ? 1 : 0;
-            nodeEl.classList.toggle('active');
-            addLogEntry(`APS: Node (${x},${y}) toggled to ${systemState.aps.nodes[y][x] === 1 ? 'active' : 'inactive'}.`, 'info');
-        }
+            const nodeSize = ui.rgwGridArea.offsetWidth / gridSize;
+            const centerOffset = nodeSize / 2;
 
-        function BFS(grid, start, end) {
-            const gridSize = systemState.aps.gridSize;
-            const queue = [{ x: start.x, y: start.y, path: [{x: start.x, y: start.y}] }];
-            const visited = new Set();
-            visited.add(`${start.x},${start.y}`);
+            ctx.strokeStyle = 'var(--rgw-target-pattern)';
+            ctx.lineWidth = 5;
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
 
-            const directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]; // Right, Down, Left, Up
-
-            while (queue.length > 0) {
-                const { x, y, path } = queue.shift();
-
-                if (x === end.x && y === end.y) {
-                    return path; // Path found
-                }
-
-                for (const [dx, dy] of directions) {
-                    const nx = x + dx;
-                    const ny = y + dy;
-
-                    if (nx >= 0 && nx < gridSize && ny >= 0 && ny < gridSize && !visited.has(`${nx},${ny}`)) {
-                        // Only traverse through active nodes (or the target node itself)
-                        if (grid[ny][nx] === 1 || (nx === end.x && ny === end.y)) {
-                            visited.add(`${nx},${ny}`);
-                            queue.push({ x: nx, y: ny, path: [...path, {x: nx, y: ny}] });
-                        }
-                    }
+            ctx.beginPath();
+            for (let i = 0; i < pattern.length; i++) {
+                const node = pattern[i];
+                const x = node.x * nodeSize + centerOffset;
+                const y = node.y * nodeSize + centerOffset;
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
                 }
             }
-            return null; // No path found
+            ctx.stroke();
+            ui.rgwTargetOverlay.style.backgroundImage = `url(${canvas.toDataURL()})`;
         }
 
-        function checkAPSPath() {
-            // Remove old path lines
-            document.querySelectorAll('.aps-path-line').forEach(line => line.remove());
 
-            const path = BFS(systemState.aps.nodes, systemState.aps.sourceNode, systemState.aps.targetNode);
-            systemState.aps.pathFound = path !== null;
-            systemState.aps.pathLength = path ? path.length : 0;
+        function clickRGWNode(x, y) {
+            if (!systemState.rgw.active) return;
 
-            if (systemState.aps.pathFound) {
-                ui.apsTunerStatus.textContent = `Path found! Length: ${systemState.aps.pathLength}. Ready to tune.`;
-                ui.tuneFrequencyBtn.disabled = false;
-                visualizeAPSPath(path);
-            } else {
-                ui.apsTunerStatus.textContent = 'No continuous path found. Activate more nodes.';
-                ui.tuneFrequencyBtn.disabled = true;
+            const nodeEl = ui.rgwGridArea.querySelector(`[data-x="${x}"][data-y="${y}"]`);
+            const lastNode = systemState.rgw.userPath[systemState.rgw.userPath.length - 1];
+
+            if (systemState.rgw.userPath.some(n => n.x === x && n.y === y)) { // Already in path, treat as reset for now
+                addLogEntry('RGW: Node already selected. Resetting path.', 'info');
+                resetRGWPath();
+                return;
             }
+
+            if (lastNode && Math.abs(lastNode.x - x) > 1 || Math.abs(lastNode.y - y) > 1 || (Math.abs(lastNode.x - x) === 1 && Math.abs(lastNode.y - y) === 1)) {
+                // Not adjacent or diagonal is not allowed (only cardinal directions)
+                addLogEntry('RGW: Invalid connection. Nodes must be adjacent (cardinal directions only). Resetting path.', 'warning');
+                resetRGWPath();
+                return;
+            }
+
+            systemState.rgw.userPath.push({ x, y });
+            nodeEl.classList.add('active');
+            addLogEntry(`RGW: Node (${x},${y}) added to path.`, 'info');
+            
+            drawRGWPath();
+            checkRGWPatternMatch();
         }
 
-        function visualizeAPSPath(path) {
-            const gridSize = systemState.aps.gridSize;
-            const nodeWidth = ui.apsTunerGrid.offsetWidth / gridSize;
-            const nodeHeight = ui.apsTunerGrid.offsetHeight / gridSize;
+        function resetRGWPath() {
+            systemState.rgw.userPath = [];
+            document.querySelectorAll('.rgw-grid-node').forEach(node => node.classList.remove('active'));
+            document.querySelectorAll('.rgw-path-line').forEach(line => line.remove());
+            ui.rgwWeaveStatus.textContent = 'Pattern alignment pending...';
+            ui.initiateWeaveBtn.disabled = true;
+        }
 
-            for (let i = 0; i < path.length - 1; i++) {
-                const node1 = path[i];
-                const node2 = path[i+1];
+        function drawRGWPath() {
+            document.querySelectorAll('.rgw-path-line').forEach(line => line.remove());
+
+            const gridSize = systemState.rgw.gridSize;
+            const nodeWidth = ui.rgwGridArea.offsetWidth / gridSize;
+            const nodeHeight = ui.rgwGridArea.offsetHeight / gridSize;
+
+            for (let i = 0; i < systemState.rgw.userPath.length - 1; i++) {
+                const node1 = systemState.rgw.userPath[i];
+                const node2 = systemState.rgw.userPath[i+1];
 
                 const line = document.createElement('div');
-                line.classList.add('aps-path-line');
+                line.classList.add('rgw-path-line');
 
                 let startX = node1.x * nodeWidth + nodeWidth / 2;
                 let startY = node1.y * nodeHeight + nodeHeight / 2;
@@ -1682,110 +1577,153 @@
 
                 if (node1.x === node2.x) { // Vertical line
                     line.classList.add('vertical');
-                    line.style.left = `${startX - 4}px`; // Centered
+                    line.style.left = `${startX - 4.5}px`; // Centered
                     line.style.top = `${Math.min(startY, endY)}px`;
                     line.style.height = `${Math.abs(startY - endY)}px`;
                 } else { // Horizontal line
                     line.classList.add('horizontal');
-                    line.style.top = `${startY - 4}px`; // Centered
+                    line.style.top = `${startY - 4.5}px`; // Centered
                     line.style.left = `${Math.min(startX, endX)}px`;
                     line.style.width = `${Math.abs(startX - endX)}px`;
                 }
-                ui.apsTunerGrid.appendChild(line);
+                ui.rgwGridArea.appendChild(line);
             }
         }
 
-        function endAPS() {
-            systemState.aps.active = false;
-            ui.tuneFrequencyBtn.textContent = 'Tune Frequency';
-            ui.tuneFrequencyBtn.disabled = false;
-            // Clear grid elements and path lines
-            ui.apsTunerGrid.innerHTML = '';
-            addLogEntry('APS: Resonance frequency tuning completed.', 'event');
-        }
+        function checkRGWPatternMatch() {
+            const userPath = systemState.rgw.userPath;
+            const targetPattern = systemState.rgw.targetPattern;
 
-        ui.tuneFrequencyBtn.addEventListener('click', () => {
-            if (!systemState.aps.pathFound) {
-                addLogEntry('APS: Cannot tune frequency, no valid path found!', 'critical');
+            if (userPath.length !== targetPattern.length) {
+                systemState.rgw.patternMatches = false;
+                ui.rgwWeaveStatus.textContent = `Path length mismatch. Expected ${targetPattern.length} nodes.`;
+                ui.initiateWeaveBtn.disabled = true;
                 return;
             }
-            
-            const targetLength = systemState.aps.gridSize * 2 - 1; // Example ideal path length
-            const performance = Math.max(0, 100 - Math.abs(systemState.aps.pathLength - targetLength) * 10); // Penalty for very long/short paths
 
-            if (performance >= 80) {
-                ui.apsTunerStatus.textContent = `Frequency Tuned! Performance: ${performance.toFixed(0)}%. Optimal resonance achieved!`;
-                addLogEntry(`APS: Resonance tuning successful (${performance.toFixed(0)}%). Global stability increased.`, 'success');
-                systemState.globalStability += 20;
-            } else {
-                ui.apsTunerStatus.textContent = `Tuning Failed. Performance: ${performance.toFixed(0)}%. Resonance unstable.`;
-                addLogEntry(`APS: Resonance tuning failed (${performance.toFixed(0)}%). Global stability decreased.`, 'critical');
-                triggerAnomalyAlert('APS: Aetheric resonance destabilized due to unstable frequency tuning!');
-                systemState.globalStability -= 15;
-            }
-            checkGlobalStability();
-            endAPS();
-            initAPS(); // Start a new round
-        });
-
-        // Add event listeners to check path whenever a node is toggled
-        ui.apsTunerGrid.addEventListener('click', (e) => {
-            if (e.target.classList.contains('aps-grid-node')) {
-                const x = parseInt(e.target.getAttribute('data-x'));
-                const y = parseInt(e.target.getAttribute('data-y'));
-                if (!((x === systemState.aps.sourceNode.x && y === systemState.aps.sourceNode.y) || (x === systemState.aps.targetNode.x && y === systemState.aps.targetNode.y))) {
-                    checkAPSPath();
+            let matches = true;
+            for (let i = 0; i < userPath.length; i++) {
+                if (userPath[i].x !== targetPattern[i].x || userPath[i].y !== targetPattern[i].y) {
+                    matches = false;
+                    break;
                 }
             }
+            systemState.rgw.patternMatches = matches;
+
+            if (matches) {
+                ui.rgwWeaveStatus.textContent = 'Pattern Matched! Ready to weave resonance.';
+                ui.initiateWeaveBtn.disabled = false;
+            } else {
+                ui.rgwWeaveStatus.textContent = 'Pattern mismatch. Review your path.';
+                ui.initiateWeaveBtn.disabled = true;
+            }
+        }
+
+        function endRGW() {
+            systemState.rgw.active = false;
+            ui.initiateWeaveBtn.textContent = 'Initiate Weave';
+            ui.initiateWeaveBtn.disabled = false;
+            ui.rgwGridArea.innerHTML = '<div class="rgw-target-overlay" id="rgwTargetOverlay"></div>';
+            addLogEntry('RGW: Resonance weave sequence completed.', 'event');
+        }
+
+        ui.initiateWeaveBtn.addEventListener('click', () => {
+            if (!systemState.rgw.patternMatches) {
+                addLogEntry('RGW: Cannot initiate weave, pattern mismatch!', 'critical');
+                return;
+            }
+
+            ui.rgwWeaveStatus.textContent = 'Resonance Weave Successful! Grid stabilized.';
+            addLogEntry('RGW: Resonance grid weave successful. Global stability increased.', 'success');
+            systemState.globalStability += 22;
+            checkGlobalStability();
+            endRGW();
+            initRGW(); // Start a new round
         });
 
-        // --- CONSCIOUS WAVEFORM PROJECTOR (CWP) - Psycho-Acoustic Harmonizer ---
-        function initCWP() {
-            systemState.cwp.active = true;
-            systemState.cwp.ctx = ui.cwpWaveformCanvas.getContext('2d');
-            resizeCWPCanvas();
+
+        // --- PSYCHO-ACOUSTIC FLUX SYNTHESIZER (PAFS) ---
+        function initPAFS() {
+            systemState.pafs.active = true;
+            systemState.pafs.ctx = ui.pafsWaveformCanvas.getContext('2d');
+            resizePAFSCanvas();
             
             // Randomize target waveform
-            systemState.cwp.targetWaveform = {
-                amplitude: parseFloat((Math.random() * 0.5 + 0.3).toFixed(2)), // 0.3 to 0.8
-                frequency: parseFloat((Math.random() * 3.0 + 1.0).toFixed(2)), // 1.0 to 4.0
-                phase: parseFloat((Math.random() * Math.PI * 2).toFixed(2)) // 0 to 2PI
+            systemState.pafs.targetWaveform = {
+                osc1: {
+                    amp: parseFloat((Math.random() * 0.4 + 0.3).toFixed(2)), // 0.3 to 0.7
+                    freq: parseFloat((Math.random() * 2.0 + 1.0).toFixed(2)), // 1.0 to 3.0
+                    type: ['sine', 'square', 'sawtooth'][Math.floor(Math.random() * 3)]
+                },
+                osc2: {
+                    amp: parseFloat((Math.random() * 0.3 + 0.1).toFixed(2)), // 0.1 to 0.4
+                    freq: parseFloat((Math.random() * 2.5 + 2.0).toFixed(2)), // 2.0 to 4.5
+                    type: ['sine', 'square', 'sawtooth'][Math.floor(Math.random() * 3)]
+                }
             };
             
             // Reset user waveform to defaults
-            systemState.cwp.userWaveform = { amplitude: 0.5, frequency: 1.0, phase: 0 };
-            ui.cwpAmplitude.value = systemState.cwp.userWaveform.amplitude;
-            ui.cwpFrequency.value = systemState.cwp.userWaveform.frequency;
-            ui.cwpPhase.value = systemState.cwp.userWaveform.phase;
+            systemState.pafs.userWaveform = {
+                osc1: { amp: 0.5, freq: 1.0, type: 'sine' },
+                osc2: { amp: 0.3, freq: 2.0, type: 'sine' }
+            };
+            ui.pafsAmp1.value = systemState.pafs.userWaveform.osc1.amp;
+            ui.pafsFreq1.value = systemState.pafs.userWaveform.osc1.freq;
+            ui.pafsWave1.value = systemState.pafs.userWaveform.osc1.type;
+            ui.pafsAmp2.value = systemState.pafs.userWaveform.osc2.amp;
+            ui.pafsFreq2.value = systemState.pafs.userWaveform.osc2.freq;
+            ui.pafsWave2.value = systemState.pafs.userWaveform.osc2.type;
 
-            systemState.cwp.matchPercentage = 0;
-            ui.cwpMatchStatus.textContent = 'Waveform match: 0%';
-            ui.harmonizeWaveformBtn.textContent = 'Harmonize Waveform';
-            ui.harmonizeWaveformBtn.disabled = true; // Disabled initially until good match
+            systemState.pafs.matchPercentage = 0;
+            ui.pafsFluxStatus.textContent = 'Waveform flux: 0%';
+            ui.synthesizeFluxBtn.textContent = 'Synthesize Flux';
+            ui.synthesizeFluxBtn.disabled = true;
 
-            addLogEntry('CWP: Psycho-Acoustic Harmonizer active. Match the target waveform.', 'event');
-            drawWaveforms();
+            addLogEntry('PAFS: Psycho-Acoustic Flux Synthesizer online. Match the target complex waveform.', 'event');
+            drawPAFSWaveforms();
         }
 
-        function resizeCWPCanvas() {
-            ui.cwpWaveformCanvas.width = ui.cwpWaveformCanvas.offsetWidth;
-            ui.cwpWaveformCanvas.height = ui.cwpWaveformCanvas.offsetHeight;
-            if (systemState.cwp.active) drawWaveforms();
+        function resizePAFSCanvas() {
+            ui.pafsWaveformCanvas.width = ui.pafsWaveformCanvas.offsetWidth;
+            ui.pafsWaveformCanvas.height = ui.pafsWaveformCanvas.offsetHeight;
+            if (systemState.pafs.active) drawPAFSWaveforms();
         }
-        window.addEventListener('resize', resizeCWPCanvas);
+        window.addEventListener('resize', resizePAFSCanvas);
 
-        function drawWaveforms() {
-            if (!systemState.cwp.ctx) return;
-            const ctx = systemState.cwp.ctx;
-            const canvas = ui.cwpWaveformCanvas;
+        function generateWaveSample(oscillator, time) {
+            let value;
+            const period = 1 / oscillator.freq;
+            const t = (time % period) / period; // Normalized time within one cycle
+
+            switch (oscillator.type) {
+                case 'sine':
+                    value = Math.sin(t * 2 * Math.PI);
+                    break;
+                case 'square':
+                    value = t < 0.5 ? 1 : -1;
+                    break;
+                case 'sawtooth':
+                    value = t * 2 - 1;
+                    break;
+                default:
+                    value = 0;
+            }
+            return value * oscillator.amp;
+        }
+
+        function drawPAFSWaveforms() {
+            if (!systemState.pafs.ctx) return;
+            const ctx = systemState.pafs.ctx;
+            const canvas = ui.pafsWaveformCanvas;
             const width = canvas.width;
             const height = canvas.height;
             const centerY = height / 2;
+            const scale = height / 2; // Full amplitude fills half canvas height
 
             ctx.clearRect(0, 0, width, height);
 
             // Draw grid
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
             ctx.lineWidth = 1;
             for (let i = 0; i <= 10; i++) {
                 ctx.beginPath();
@@ -1799,425 +1737,344 @@
             }
 
             // Draw target waveform
-            ctx.strokeStyle = 'var(--cwp-waveform-target)';
+            ctx.strokeStyle = 'var(--pafs-waveform-target)';
             ctx.lineWidth = 3;
             ctx.beginPath();
             for (let x = 0; x < width; x++) {
-                const angle = (x / width) * 2 * Math.PI * systemState.cwp.targetWaveform.frequency + systemState.cwp.targetWaveform.phase;
-                const y = centerY - Math.sin(angle) * (height / 2) * systemState.cwp.targetWaveform.amplitude;
+                const time = (x / width) * 4; // Simulate 4 seconds of time
+                const value1 = generateWaveSample(systemState.pafs.targetWaveform.osc1, time);
+                const value2 = generateWaveSample(systemState.pafs.targetWaveform.osc2, time);
+                const combinedValue = value1 + value2;
+                const y = centerY - combinedValue * scale * 0.5; // Scale down for visualization
+
                 if (x === 0) ctx.moveTo(x, y);
                 else ctx.lineTo(x, y);
             }
             ctx.stroke();
 
             // Draw user waveform
-            ctx.strokeStyle = 'var(--cwp-waveform-user)';
+            ctx.strokeStyle = 'var(--pafs-waveform-user)';
             ctx.lineWidth = 3;
             ctx.beginPath();
             for (let x = 0; x < width; x++) {
-                const angle = (x / width) * 2 * Math.PI * systemState.cwp.userWaveform.frequency + systemState.cwp.userWaveform.phase;
-                const y = centerY - Math.sin(angle) * (height / 2) * systemState.cwp.userWaveform.amplitude;
+                const time = (x / width) * 4; // Simulate 4 seconds of time
+                const value1 = generateWaveSample(systemState.pafs.userWaveform.osc1, time);
+                const value2 = generateWaveSample(systemState.pafs.userWaveform.osc2, time);
+                const combinedValue = value1 + value2;
+                const y = centerY - combinedValue * scale * 0.5; // Scale down for visualization
+
                 if (x === 0) ctx.moveTo(x, y);
                 else ctx.lineTo(x, y);
             }
             ctx.stroke();
 
-            calculateCWPmatch();
+            calculatePAFSMatch();
         }
 
-        function calculateCWPmatch() {
-            const target = systemState.cwp.targetWaveform;
-            const user = systemState.cwp.userWaveform;
+        function calculatePAFSMatch() {
+            const target = systemState.pafs.targetWaveform;
+            const user = systemState.pafs.userWaveform;
+            let totalError = 0;
+            const sampleCount = 200; // Number of samples to compare
+            const maxErrorPerSample = (target.osc1.amp + target.osc2.amp + user.osc1.amp + user.osc2.amp); // Max possible combined amplitude difference
 
-            // Simple comparison: closeness of parameters
-            const ampDiff = Math.abs(target.amplitude - user.amplitude);
-            const freqDiff = Math.abs(target.frequency - user.frequency);
-            const phaseDiff = Math.abs(target.phase - user.phase);
+            for (let i = 0; i < sampleCount; i++) {
+                const time = (i / sampleCount) * 4; // Sample over 4 seconds
+                const targetVal = generateWaveSample(target.osc1, time) + generateWaveSample(target.osc2, time);
+                const userVal = generateWaveSample(user.osc1, time) + generateWaveSample(user.osc2, time);
+                totalError += Math.abs(targetVal - userVal);
+            }
 
-            // Weights for each parameter
-            const ampWeight = 0.4;
-            const freqWeight = 0.4;
-            const phaseWeight = 0.2;
-
-            // Max possible difference for normalization
-            const maxAmpDiff = 0.7; // From 0.1 to 0.8
-            const maxFreqDiff = 3.0; // From 1.0 to 4.0
-            const maxPhaseDiff = Math.PI * 2;
-
-            let match = 100 - (
-                (ampDiff / maxAmpDiff) * ampWeight +
-                (freqDiff / maxFreqDiff) * freqWeight +
-                (phaseDiff / maxPhaseDiff) * phaseWeight
-            ) * 100;
+            const maxTotalError = maxErrorPerSample * sampleCount;
+            let match = 100 - (totalError / maxTotalError) * 100;
             
             match = Math.max(0, Math.min(100, match));
-            systemState.cwp.matchPercentage = match;
-            ui.cwpMatchStatus.textContent = `Waveform match: ${match.toFixed(0)}%`;
+            systemState.pafs.matchPercentage = match;
+            ui.pafsFluxStatus.textContent = `Waveform flux: ${match.toFixed(0)}%`;
 
-            if (match >= 90) { // Allow button to be active at 90%
-                ui.harmonizeWaveformBtn.disabled = false;
+            if (match >= 85) { // High accuracy required
+                ui.synthesizeFluxBtn.disabled = false;
             } else {
-                ui.harmonizeWaveformBtn.disabled = true;
+                ui.synthesizeFluxBtn.disabled = true;
             }
         }
 
-        function updateCWPUserWaveform() {
-            systemState.cwp.userWaveform.amplitude = parseFloat(ui.cwpAmplitude.value);
-            systemState.cwp.userWaveform.frequency = parseFloat(ui.cwpFrequency.value);
-            systemState.cwp.userWaveform.phase = parseFloat(ui.cwpPhase.value);
-            drawWaveforms();
+        function updatePAFSUserWaveform() {
+            systemState.pafs.userWaveform.osc1.amp = parseFloat(ui.pafsAmp1.value);
+            systemState.pafs.userWaveform.osc1.freq = parseFloat(ui.pafsFreq1.value);
+            systemState.pafs.userWaveform.osc1.type = ui.pafsWave1.value;
+            systemState.pafs.userWaveform.osc2.amp = parseFloat(ui.pafsAmp2.value);
+            systemState.pafs.userWaveform.osc2.freq = parseFloat(ui.pafsFreq2.value);
+            systemState.pafs.userWaveform.osc2.type = ui.pafsWave2.value;
+            drawPAFSWaveforms();
         }
 
-        ui.cwpAmplitude.addEventListener('input', updateCWPUserWaveform);
-        ui.cwpFrequency.addEventListener('input', updateCWPUserWaveform);
-        ui.cwpPhase.addEventListener('input', updateCWPUserWaveform);
+        ui.pafsAmp1.addEventListener('input', updatePAFSUserWaveform);
+        ui.pafsFreq1.addEventListener('input', updatePAFSUserWaveform);
+        ui.pafsWave1.addEventListener('change', updatePAFSUserWaveform);
+        ui.pafsAmp2.addEventListener('input', updatePAFSUserWaveform);
+        ui.pafsFreq2.addEventListener('input', updatePAFSUserWaveform);
+        ui.pafsWave2.addEventListener('change', updatePAFSUserWaveform);
 
-        function endCWP() {
-            systemState.cwp.active = false;
-            ui.harmonizeWaveformBtn.textContent = 'Harmonize Waveform';
-            ui.harmonizeWaveformBtn.disabled = false;
-            systemState.cwp.ctx.clearRect(0, 0, ui.cwpWaveformCanvas.width, ui.cwpWaveformCanvas.height);
-            addLogEntry('CWP: Harmonization sequence completed.', 'event');
+        function endPAFS() {
+            systemState.pafs.active = false;
+            ui.synthesizeFluxBtn.textContent = 'Synthesize Flux';
+            ui.synthesizeFluxBtn.disabled = false;
+            systemState.pafs.ctx.clearRect(0, 0, ui.pafsWaveformCanvas.width, ui.pafsWaveformCanvas.height);
+            addLogEntry('PAFS: Flux synthesis sequence completed.', 'event');
         }
 
-        ui.harmonizeWaveformBtn.addEventListener('click', () => {
-            if (systemState.cwp.matchPercentage >= 90) {
-                ui.cwpMatchStatus.textContent = `Harmonization SUCCESS! Match: ${systemState.cwp.matchPercentage.toFixed(0)}%. Cosmic harmony achieved.`;
-                addLogEntry(`CWP: Waveform harmonization successful (${systemState.cwp.matchPercentage.toFixed(0)}%). Global stability increased.`, 'success');
-                systemState.globalStability += 25;
+        ui.synthesizeFluxBtn.addEventListener('click', () => {
+            if (systemState.pafs.matchPercentage >= 85) {
+                ui.pafsFluxStatus.textContent = `Flux Synthesis SUCCESS! Match: ${systemState.pafs.matchPercentage.toFixed(0)}%. Psycho-acoustic fields harmonized.`;
+                addLogEntry(`PAFS: Flux synthesis successful (${systemState.pafs.matchPercentage.toFixed(0)}%). Global stability increased.`, 'success');
+                systemState.globalStability += 28;
             } else {
-                ui.cwpMatchStatus.textContent = `Harmonization FAILED. Match: ${systemState.cwp.matchPercentage.toFixed(0)}%. Waveform discord.`;
-                addLogEntry(`CWP: Waveform harmonization failed (${systemState.cwp.matchPercentage.toFixed(0)}%). Global stability decreased.`, 'critical');
-                triggerAnomalyAlert('CWP: Psycho-acoustic discord detected. Affecting conscious projection!');
-                systemState.globalStability -= 20;
+                ui.pafsFluxStatus.textContent = `Flux Synthesis FAILED. Match: ${systemState.pafs.matchPercentage.toFixed(0)}%. Waveform discord persists.`;
+                addLogEntry(`PAFS: Flux synthesis failed (${systemState.pafs.matchPercentage.toFixed(0)}%). Global stability decreased.`, 'critical');
+                triggerAnomalyAlert('PAFS: Psycho-acoustic dissonance detected! Disrupting conscious projection fields.');
+                systemState.globalStability -= 22;
             }
             checkGlobalStability();
-            endCWP();
-            initCWP(); // Start new round
+            endPAFS();
+            initPAFS(); // Start new round
         });
 
 
-        // --- SPACETIME ANCHOR STABILIZER (SAS) - Temporal Anomaly Corrector ---
-        function initSAS() {
-            systemState.sas.active = true;
-            systemState.sas.ctx = ui.sasTimelineCanvas.getContext('2d');
-            resizeSASCanvas();
-            systemState.sas.controlPoints = [];
-            ui.sasStatusDisplay.textContent = 'Temporal field nominal.';
-            ui.correctAnomalyBtn.textContent = 'Correct Anomaly';
-            ui.correctAnomalyBtn.disabled = true;
+        // --- CHRONO-DIMENSIONAL WEAVER (CDW) ---
+        function initCDW() {
+            systemState.cdw.active = true;
+            systemState.cdw.ctx = ui.cdwFabricCanvas.getContext('2d');
+            resizeCDWCanvas();
+            systemState.cdw.vertices = [];
+            ui.cdwWeaverStatus.textContent = 'Dimensional fabric stable.';
+            ui.correctFabricBtn.textContent = 'Correct Fabric';
+            ui.correctFabricBtn.disabled = true;
 
-            const canvas = ui.sasTimelineCanvas;
-            const numPoints = 5; // Number of control points
-            const pointSpacing = canvas.width / (numPoints + 1);
+            const canvas = ui.cdwFabricCanvas;
+            const gridWidth = systemState.cdw.gridWidth;
+            const gridHeight = systemState.cdw.gridHeight;
+            const cellWidth = canvas.width / (gridWidth - 1);
+            const cellHeight = canvas.height / (gridHeight - 1);
 
-            for (let i = 0; i < numPoints; i++) {
-                const x = (i + 1) * pointSpacing;
-                // Generate a random Y position for the anomaly, relative to center
-                const initialY = canvas.height / 2 + (Math.random() - 0.5) * canvas.height * systemState.sas.anomalyStrength;
-                systemState.sas.controlPoints.push({
-                    x: x,
-                    y: initialY,
-                    originalY: initialY, // Store for reset
-                    targetY: canvas.height / 2, // Target is the center line
-                    element: createSASControlPointElement(x, initialY, i)
-                });
+            for (let y = 0; y < gridHeight; y++) {
+                for (let x = 0; x < gridWidth; x++) {
+                    const originalX = x * cellWidth;
+                    const originalY = y * cellHeight;
+                    
+                    // Introduce random distortion
+                    const distortFactor = 0.15; // Max 15% deviation
+                    const distortedX = originalX + (Math.random() - 0.5) * cellWidth * distortFactor;
+                    const distortedY = originalY + (Math.random() - 0.5) * cellHeight * distortFactor;
+
+                    const vertex = {
+                        x: distortedX,
+                        y: distortedY,
+                        originalX: originalX,
+                        originalY: originalY,
+                        element: null // Will be assigned later
+                    };
+                    systemState.cdw.vertices.push(vertex);
+                }
             }
 
-            drawSASTimeline();
-            addLogEntry('SAS: Temporal Anomaly Corrector active. Flatten the spacetime curve.', 'event');
-        }
-
-        function resizeSASCanvas() {
-            ui.sasTimelineCanvas.width = ui.sasTimelineCanvas.offsetWidth;
-            ui.sasTimelineCanvas.height = ui.sasTimelineCanvas.offsetHeight;
-            if (systemState.sas.active) drawSASTimeline();
-        }
-        window.addEventListener('resize', resizeSASCanvas);
-
-        function createSASControlPointElement(x, y, index) {
-            const pointEl = document.createElement('div');
-            pointEl.classList.add('sas-control-point');
-            pointEl.style.left = `${x - 12.5}px`; // Center the point visually
-            pointEl.style.top = `${y - 12.5}px`;
-            pointEl.setAttribute('data-index', index);
-            ui.sasTimelineCanvas.appendChild(pointEl);
-
-            pointEl.addEventListener('mousedown', (e) => {
-                systemState.sas.draggedPoint = systemState.sas.controlPoints[index];
-                pointEl.classList.add('active');
-                addLogEntry(`SAS: Control point ${index} activated for dragging.`, 'info');
+            // Create vertex elements after all vertices are defined
+            systemState.cdw.vertices.forEach((vertex, index) => {
+                vertex.element = createCDWVertexElement(vertex.x, vertex.y, index);
             });
 
-            return pointEl;
+            drawCDWFabric();
+            addLogEntry('CDW: Chrono-Dimensional Weaver active. Untangle the fabric distortions.', 'event');
         }
 
-        ui.sasTimelineCanvas.addEventListener('mousemove', (e) => {
-            if (systemState.sas.draggedPoint) {
-                const canvasRect = ui.sasTimelineCanvas.getBoundingClientRect();
+        function resizeCDWCanvas() {
+            ui.cdwFabricCanvas.width = ui.cdwFabricCanvas.offsetWidth;
+            ui.cdwFabricCanvas.height = ui.cdwFabricCanvas.offsetHeight;
+            if (systemState.cdw.active) {
+                // Recalculate vertex positions based on new canvas size
+                const canvas = ui.cdwFabricCanvas;
+                const gridWidth = systemState.cdw.gridWidth;
+                const gridHeight = systemState.cdw.gridHeight;
+                const cellWidth = canvas.width / (gridWidth - 1);
+                const cellHeight = canvas.height / (gridHeight - 1);
+
+                systemState.cdw.vertices.forEach((vertex, index) => {
+                    const gridX = index % gridWidth;
+                    const gridY = Math.floor(index / gridWidth);
+                    vertex.originalX = gridX * cellWidth;
+                    vertex.originalY = gridY * cellHeight;
+                    // If not dragged, keep original ratio. If dragged, scale existing offset.
+                    const offsetX = vertex.x - (index % gridWidth * (canvas.oldWidth / (gridWidth - 1)));
+                    const offsetY = vertex.y - (Math.floor(index / gridWidth) * (canvas.oldHeight / (gridHeight - 1)));
+                    vertex.x = vertex.originalX + offsetX * (cellWidth / (canvas.oldWidth / (gridWidth - 1)));
+                    vertex.y = vertex.originalY + offsetY * (cellHeight / (canvas.oldHeight / (gridHeight - 1)));
+                    
+                    vertex.element.style.left = `${vertex.x - 15}px`;
+                    vertex.element.style.top = `${vertex.y - 15}px`;
+                });
+                canvas.oldWidth = canvas.width;
+                canvas.oldHeight = canvas.height;
+                drawCDWFabric();
+            } else {
+                 // Store initial dimensions for scaling after active
+                ui.cdwFabricCanvas.oldWidth = ui.cdwFabricCanvas.width;
+                ui.cdwFabricCanvas.oldHeight = ui.cdwFabricCanvas.height;
+            }
+        }
+        window.addEventListener('resize', resizeCDWCanvas);
+
+        function createCDWVertexElement(x, y, index) {
+            const vertexEl = document.createElement('div');
+            vertexEl.classList.add('cdw-vertex');
+            vertexEl.style.left = `${x - 15}px`; // Center the vertex visually
+            vertexEl.style.top = `${y - 15}px`;
+            vertexEl.setAttribute('data-index', index);
+            ui.cdwFabricCanvas.appendChild(vertexEl);
+
+            vertexEl.addEventListener('mousedown', (e) => {
+                systemState.cdw.draggedVertex = systemState.cdw.vertices[index];
+                vertexEl.classList.add('active');
+                addLogEntry(`CDW: Vertex ${index} activated for dragging.`, 'info');
+            });
+
+            return vertexEl;
+        }
+
+        ui.cdwFabricCanvas.addEventListener('mousemove', (e) => {
+            if (systemState.cdw.draggedVertex) {
+                const canvasRect = ui.cdwFabricCanvas.getBoundingClientRect();
+                const newX = e.clientX - canvasRect.left;
                 const newY = e.clientY - canvasRect.top;
-                systemState.sas.draggedPoint.y = Math.max(0, Math.min(ui.sasTimelineCanvas.height, newY));
-                systemState.sas.draggedPoint.element.style.top = `${systemState.sas.draggedPoint.y - 12.5}px`;
-                drawSASTimeline();
+                systemState.cdw.draggedVertex.x = Math.max(0, Math.min(ui.cdwFabricCanvas.width, newX));
+                systemState.cdw.draggedVertex.y = Math.max(0, Math.min(ui.cdwFabricCanvas.height, newY));
+                systemState.cdw.draggedVertex.element.style.left = `${systemState.cdw.draggedVertex.x - 15}px`;
+                systemState.cdw.draggedVertex.element.style.top = `${systemState.cdw.draggedVertex.y - 15}px`;
+                drawCDWFabric();
             }
         });
 
-        ui.sasTimelineCanvas.addEventListener('mouseup', () => {
-            if (systemState.sas.draggedPoint) {
-                systemState.sas.draggedPoint.element.classList.remove('active');
-                systemState.sas.draggedPoint = null;
-                checkSASFlatness();
+        ui.cdwFabricCanvas.addEventListener('mouseup', () => {
+            if (systemState.cdw.draggedVertex) {
+                systemState.cdw.draggedVertex.element.classList.remove('active');
+                systemState.cdw.draggedVertex = null;
+                checkCDWDistortion();
             }
         });
 
-        // Prevent default drag behavior on control points to avoid image dragging etc.
-        ui.sasTimelineCanvas.addEventListener('dragstart', (e) => {
-            if (e.target.classList.contains('sas-control-point')) {
+        // Prevent default drag behavior on vertices to avoid image dragging etc.
+        ui.cdwFabricCanvas.addEventListener('dragstart', (e) => {
+            if (e.target.classList.contains('cdw-vertex')) {
                 e.preventDefault();
             }
         });
 
+        function drawCDWFabric() {
+            if (!systemState.cdw.ctx) return;
+            const ctx = systemState.cdw.ctx;
+            const canvas = ui.cdwFabricCanvas;
+            const gridWidth = systemState.cdw.gridWidth;
+            const gridHeight = systemState.cdw.gridHeight;
 
-        function drawSASTimeline() {
-            if (!systemState.sas.ctx) return;
-            const ctx = systemState.sas.ctx;
-            const canvas = ui.sasTimelineCanvas;
-            const width = canvas.width;
-            const height = canvas.height;
-            const centerY = height / 2;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            ctx.clearRect(0, 0, width, height);
-
-            // Draw stable line
-            ctx.strokeStyle = 'var(--sas-stable-line)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(0, centerY);
-            ctx.lineTo(width, centerY);
-            ctx.stroke();
-
-            // Draw anomaly curve based on control points
-            ctx.strokeStyle = 'var(--sas-anomaly-line)';
-            ctx.lineWidth = 4;
-            ctx.beginPath();
-            
-            // Add start and end points
-            const points = [{x: 0, y: systemState.sas.controlPoints[0].y}, ...systemState.sas.controlPoints, {x: width, y: systemState.sas.controlPoints[systemState.sas.controlPoints.length-1].y}];
-
-            ctx.moveTo(points[0].x, points[0].y);
-            for (let i = 0; i < points.length - 1; i++) {
-                // Use quadratic Bézier curve for smoother lines
-                const x_mid = (points[i].x + points[i+1].x) / 2;
-                const y_mid = (points[i].y + points[i+1].y) / 2;
-                const cp_x1 = (x_mid + points[i].x) / 2;
-                const cp_y1 = (y_mid + points[i].y) / 2;
-                const cp_x2 = (x_mid + points[i+1].x) / 2;
-                const cp_y2 = (y_mid + points[i+1].y) / 2;
-                ctx.quadraticCurveTo(points[i].x, points[i].y, x_mid, y_mid);
-                ctx.quadraticCurveTo(points[i+1].x, points[i+1].y, points[i+1].x, points[i+1].y);
+            // Draw target grid (faintly)
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+            ctx.lineWidth = 1;
+            const cellWidth = canvas.width / (gridWidth - 1);
+            const cellHeight = canvas.height / (gridHeight - 1);
+            for (let i = 0; i < gridWidth; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * cellWidth, 0);
+                ctx.lineTo(i * cellWidth, canvas.height);
+                ctx.stroke();
             }
-            ctx.stroke();
+            for (let i = 0; i < gridHeight; i++) {
+                ctx.beginPath();
+                ctx.moveTo(0, i * cellHeight);
+                ctx.lineTo(canvas.width, i * cellHeight);
+                ctx.stroke();
+            }
+
+
+            ctx.strokeStyle = 'var(--cdw-fabric-line)';
+            ctx.lineWidth = 4;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Draw horizontal lines
+            for (let y = 0; y < gridHeight; y++) {
+                ctx.beginPath();
+                const startVertex = systemState.cdw.vertices[y * gridWidth];
+                ctx.moveTo(startVertex.x, startVertex.y);
+                for (let x = 1; x < gridWidth; x++) {
+                    const vertex = systemState.cdw.vertices[y * gridWidth + x];
+                    ctx.lineTo(vertex.x, vertex.y);
+                }
+                ctx.stroke();
+            }
+
+            // Draw vertical lines
+            for (let x = 0; x < gridWidth; x++) {
+                ctx.beginPath();
+                const startVertex = systemState.cdw.vertices[x];
+                ctx.moveTo(startVertex.x, startVertex.y);
+                for (let y = 1; y < gridHeight; y++) {
+                    const vertex = systemState.cdw.vertices[y * gridWidth + x];
+                    ctx.lineTo(vertex.x, vertex.y);
+                }
+                ctx.stroke();
+            }
         }
 
-        function checkSASFlatness() {
+        function checkCDWDistortion() {
             let totalDeviation = 0;
-            const centerY = ui.sasTimelineCanvas.height / 2;
-            systemState.sas.controlPoints.forEach(point => {
-                totalDeviation += Math.abs(point.y - centerY);
+            systemState.cdw.vertices.forEach(vertex => {
+                const dx = vertex.x - vertex.originalX;
+                const dy = vertex.y - vertex.originalY;
+                totalDeviation += Math.sqrt(dx * dx + dy * dy); // Euclidean distance
             });
 
-            // Normalize deviation to a 0-100 score
-            const maxDeviation = systemState.sas.controlPoints.length * ui.sasTimelineCanvas.height / 2;
-            systemState.sas.flatnessScore = Math.max(0, 100 - (totalDeviation / maxDeviation) * 100);
+            // Normalize deviation to a 0-100 score (0 = perfect, 100 = max distortion)
+            const canvas = ui.cdwFabricCanvas;
+            const maxPossibleDeviation = systemState.cdw.vertices.length * Math.sqrt(canvas.width*canvas.width + canvas.height*canvas.height); // Very rough upper bound
+            systemState.cdw.distortionScore = (totalDeviation / maxPossibleDeviation) * 100 * 2; // Multiply by 2 to make it more sensitive
+            systemState.cdw.distortionScore = Math.max(0, Math.min(100, systemState.cdw.distortionScore));
 
-            ui.sasStatusDisplay.textContent = `Temporal Anomaly Flatness: ${systemState.sas.flatnessScore.toFixed(0)}%`;
+            const flatnessPercentage = 100 - systemState.cdw.distortionScore;
+            ui.cdwWeaverStatus.textContent = `Fabric Symmetry: ${flatnessPercentage.toFixed(1)}%`;
 
-            if (systemState.sas.flatnessScore >= 95) { // High accuracy required
-                ui.correctAnomalyBtn.disabled = false;
+            if (flatnessPercentage >= 95) { // High accuracy required
+                ui.correctFabricBtn.disabled = false;
             } else {
-                ui.correctAnomalyBtn.disabled = true;
+                ui.correctFabricBtn.disabled = true;
             }
         }
 
-        function endSAS() {
-            systemState.sas.active = false;
-            ui.correctAnomalyBtn.textContent = 'Correct Anomaly';
-            ui.correctAnomalyBtn.disabled = false;
-            systemState.sas.ctx.clearRect(0, 0, ui.sasTimelineCanvas.width, ui.sasTimelineCanvas.height);
-            // Remove control point elements
-            Array.from(ui.sasTimelineCanvas.querySelectorAll('.sas-control-point')).forEach(el => el.remove());
-            addLogEntry('SAS: Temporal anomaly correction completed.', 'event');
+        function endCDW() {
+            systemState.cdw.active = false;
+            ui.correctFabricBtn.textContent = 'Correct Fabric';
+            ui.correctFabricBtn.disabled = false;
+            systemState.cdw.ctx.clearRect(0, 0, ui.cdwFabricCanvas.width, ui.cdwFabricCanvas.height);
+            // Remove vertex elements
+            Array.from(ui.cdwFabricCanvas.querySelectorAll('.cdw-vertex')).forEach(el => el.remove());
+            addLogEntry('CDW: Chrono-dimensional fabric correction completed.', 'event');
         }
 
-        ui.correctAnomalyBtn.addEventListener('click', () => {
-            if (systemState.sas.flatnessScore >= 95) {
-                ui.sasStatusDisplay.textContent = `Anomaly Corrected! Flatness: ${systemState.sas.flatnessScore.toFixed(0)}%. Spacetime fabric stabilized.`;
-                addLogEntry(`SAS: Temporal anomaly correction successful (${systemState.sas.flatnessScore.toFixed(0)}%). Global stability increased.`, 'success');
+        ui.correctFabricBtn.addEventListener('click', () => {
+            const flatnessPercentage = 100 - systemState.cdw.distortionScore;
+            if (flatnessPercentage >= 95) {
+                ui.cdwWeaverStatus.textContent = `Fabric Corrected! Symmetry: ${flatnessPercentage.toFixed(1)}%. Dimensional integrity restored.`;
+                addLogEntry(`CDW: Fabric correction successful (${flatnessPercentage.toFixed(1)}%). Global stability increased.`, 'success');
                 systemState.globalStability += 30;
             } else {
-                ui.sasStatusDisplay.textContent = `Correction Failed. Flatness: ${systemState.sas.flatnessScore.toFixed(0)}%. Temporal distortions persist.`;
-                addLogEntry(`SAS: Temporal anomaly correction failed (${systemState.sas.flatnessScore.toFixed(0)}%). Global stability decreased.`, 'critical');
-                triggerAnomalyAlert('SAS: Temporal anomaly unresolved! Chronal resonance cascade imminent.');
+                ui.cdwWeaverStatus.textContent = `Correction Failed. Symmetry: ${flatnessPercentage.toFixed(1)}%. Fabric distortions persist.`;
+                addLogEntry(`CDW: Fabric correction failed (${flatnessPercentage.toFixed(1)}%). Global stability decreased.`, 'critical');
+                triggerAnomalyAlert('CDW: Reality fabric severely distorted! Chronal-temporal collapse imminent.');
                 systemState.globalStability -= 25;
             }
             checkGlobalStability();
-            endSAS();
-            initSAS(); // Start a new round
-        });
-
-
-        // --- UNIVERSAL CORE MANIFESTOR (UCM) - Essence Convergence Matrix ---
-        function initUCM() {
-            systemState.ucm.active = true;
-            systemState.ucm.currentSequenceIndex = 0;
-            systemState.ucm.score = 0;
-            ui.ucmEssenceFragments.innerHTML = '';
-            ui.ucmCoreStatus.textContent = 'Receiver Active';
-            ui.ucmManifestStatus.textContent = 'Awaiting essence convergence...';
-            ui.convergeEssenceBtn.textContent = 'Converge Essence';
-            ui.convergeEssenceBtn.disabled = true;
-
-            const sequenceLength = Math.floor(Math.random() * 3) + 3; // 3 to 5 essences in sequence
-            systemState.ucm.targetSequence = [];
-            let availableEssences = [...systemState.ucm.essences];
-
-            for (let i = 0; i < sequenceLength; i++) {
-                const randomIndex = Math.floor(Math.random() * availableEssences.length);
-                systemState.ucm.targetSequence.push(availableEssences[randomIndex]);
-                availableEssences.splice(randomIndex, 1); // Ensure unique essences in target sequence
-            }
-            
-            // Create scrambled fragments including some extras to make it harder
-            const allFragments = [...systemState.ucm.targetSequence];
-            // Add some random extra essences not in the target sequence
-            for (let i = 0; i < 2; i++) { // Add 2 extra fragments
-                const randomExtra = systemState.ucm.essences[Math.floor(Math.random() * systemState.ucm.essences.length)];
-                if (!allFragments.includes(randomExtra)) { // Avoid duplicates if possible
-                    allFragments.push(randomExtra);
-                }
-            }
-            allFragments.sort(() => Math.random() - 0.5); // Scramble all
-
-            allFragments.forEach((essence, index) => {
-                const fragEl = document.createElement('div');
-                fragEl.classList.add('ucm-essence-fragment');
-                fragEl.textContent = essence;
-                fragEl.setAttribute('draggable', 'true');
-                fragEl.id = `ucm-essence-${index}`;
-                ui.ucmEssenceFragments.appendChild(fragEl);
-
-                fragEl.addEventListener('dragstart', (e) => {
-                    e.dataTransfer.setData('text/plain', fragEl.id);
-                    fragEl.classList.add('dragging');
-                });
-                fragEl.addEventListener('dragend', () => {
-                    fragEl.classList.remove('dragging');
-                });
-            });
-
-            ui.ucmCoreReceiver.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                ui.ucmCoreReceiver.classList.add('hovered');
-            });
-            ui.ucmCoreReceiver.addEventListener('dragleave', () => {
-                ui.ucmCoreReceiver.classList.remove('hovered');
-            });
-            ui.ucmCoreReceiver.addEventListener('drop', (e) => {
-                e.preventDefault();
-                ui.ucmCoreReceiver.classList.remove('hovered');
-                const fragmentId = e.dataTransfer.getData('text/plain');
-                const draggedFragment = document.getElementById(fragmentId);
-                
-                if (draggedFragment) {
-                    const essenceValue = draggedFragment.textContent;
-                    if (essenceValue === systemState.ucm.targetSequence[systemState.ucm.currentSequenceIndex]) {
-                        ui.ucmCoreStatus.textContent = `Essence Fused: ${essenceValue}`;
-                        ui.ucmCoreReceiver.style.borderColor = 'var(--ucm-core-fused)';
-                        ui.ucmCoreReceiver.style.boxShadow = `inset 0 0 40px var(--ucm-core-fused), 0 0 30px var(--ucm-core-fused)`;
-                        addLogEntry(`UCM: Essence '${essenceValue}' converged correctly.`, 'info');
-                        systemState.ucm.score++;
-                        systemState.globalStability += 8;
-                        draggedFragment.remove();
-                        systemState.ucm.currentSequenceIndex++;
-                        if (systemState.ucm.currentSequenceIndex === systemState.ucm.targetSequence.length) {
-                            checkUCMCompletion(); // All correct essences processed
-                        }
-                    } else {
-                        ui.ucmCoreStatus.textContent = `ERROR: Wrong Essence! Expected '${systemState.ucm.targetSequence[systemState.ucm.currentSequenceIndex] || 'N/A'}'`;
-                        ui.ucmCoreReceiver.style.borderColor = 'var(--ucm-core-error)';
-                        ui.ucmCoreReceiver.style.boxShadow = `inset 0 0 40px var(--ucm-core-error), 0 0 30px var(--ucm-core-error)`;
-                        addLogEntry(`UCM: Essence '${essenceValue}' incorrect. Expected '${systemState.ucm.targetSequence[systemState.ucm.currentSequenceIndex]}'.`, 'critical');
-                        systemState.globalStability -= 12;
-                        systemState.ucm.score--; // Penalty
-                        
-                        // For this implementation, an incorrect drop means they lost the opportunity for that step.
-                        // We'll advance the currentSequenceIndex, forcing them to move on.
-                        draggedFragment.remove();
-                        systemState.ucm.currentSequenceIndex++;
-                        if (systemState.ucm.currentSequenceIndex === systemState.ucm.targetSequence.length) {
-                            checkUCMCompletion(); // All essences processed, even if some were wrong
-                        }
-                    }
-                    checkGlobalStability();
-                    setTimeout(() => { // Reset receiver visuals
-                        ui.ucmCoreReceiver.style.borderColor = 'var(--ucm-core-receiver-border)';
-                        ui.ucmCoreReceiver.style.boxShadow = `inset 0 0 40px var(--ucm-glow), 0 0 30px var(--ucm-glow)`;
-                        ui.ucmCoreStatus.textContent = 'Receiver Active';
-                    }, 1000);
-                }
-            });
-            addLogEntry('UCM: Essence convergence matrix online. Initiate fusion sequence.', 'event');
-        }
-
-        function checkUCMCompletion() {
-            if (systemState.ucm.currentSequenceIndex < systemState.ucm.targetSequence.length) {
-                ui.convergeEssenceBtn.disabled = true; // Still needs more essences
-                return;
-            }
-
-            ui.convergeEssenceBtn.disabled = false; // Enable button once all slots are 'processed'
-
-            let successRate = (systemState.ucm.score / systemState.ucm.targetSequence.length) * 100;
-            if (successRate >= 80) { // High success rate
-                ui.ucmManifestStatus.textContent = `Essence Convergence COMPLETE! Success rate: ${successRate.toFixed(0)}%. Core manifested.`;
-                ui.ucmManifestStatus.classList.add('success');
-                addLogEntry(`UCM: Essence convergence successful (${successRate.toFixed(0)}%). Global stability significantly boosted.`, 'success');
-                systemState.globalStability += 35;
-            } else {
-                ui.ucmManifestStatus.textContent = `Essence Convergence FAILED. Success rate: ${successRate.toFixed(0)}%. Core manifestation unstable.`;
-                ui.ucmManifestStatus.classList.add('fail');
-                addLogEntry(`UCM: Essence convergence failed (${successRate.toFixed(0)}%). Global stability decreased.`, 'critical');
-                triggerAnomalyAlert('UCM: Universal Core Manifestation failure! Fundamental reality instability.');
-                systemState.globalStability -= 30;
-            }
-            checkGlobalStability();
-            // Call endUCM to reset for next round but keep final status visible for a bit
-            setTimeout(endUCM, 5000);
-        }
-
-        function endUCM() {
-            systemState.ucm.active = false;
-            ui.convergeEssenceBtn.textContent = 'Converge Essence';
-            ui.convergeEssenceBtn.disabled = false;
-            ui.ucmEssenceFragments.innerHTML = '';
-            ui.ucmCoreReceiver.style.borderColor = 'var(--ucm-core-receiver-border)';
-            ui.ucmCoreReceiver.style.boxShadow = `inset 0 0 40px var(--ucm-glow), 0 0 30px var(--ucm-glow)`;
-            ui.ucmCoreStatus.textContent = 'Receiver Active';
-            // Clear status after reset
-            ui.ucmManifestStatus.classList.remove('success', 'fail');
-            ui.ucmManifestStatus.textContent = 'Awaiting essence convergence...';
-            addLogEntry('UCM: Essence convergence completed and reset.', 'event');
-        }
-
-        ui.convergeEssenceBtn.addEventListener('click', () => {
-            // The logic for checking completion and result is now handled in checkUCMCompletion
-            // This button primarily serves to *confirm* the overall result, if one wants to end early.
-            // But since auto-advancement on drop is implemented, this button would only be active AFTER a round is done.
-            // Let's make this button simply trigger a new round if one is active, otherwise just a final confirmation
-            if (systemState.ucm.active) {
-                addLogEntry("UCM: Initiating next convergence sequence.", 'info');
-            }
-            initUCM();
+            endCDW();
+            initCDW(); // Start a new round
         });
 
 
@@ -2225,6 +2082,17 @@
         function initializeWebLifeForm() {
             addLogEntry('Core systems initializing...', 'info');
             
-            initQDD(); // Start QDD on load
-            initAPS(); // Start APS on load
-            initCWP(); // Start
+            initTDS(); // Start TDS on load
+            initRGW(); // Start RGW on load
+            initPAFS(); // Start PAFS on load
+            initCDW(); // Start CDW on load
+
+            // Start periodic stability check
+            setInterval(checkGlobalStability, 5000); // Check every 5 seconds
+        }
+
+        // Initialize when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', initializeWebLifeForm);
+    </script>
+</body>
+</html>
