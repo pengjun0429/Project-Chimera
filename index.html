@@ -1549,6 +1549,7 @@
             ui.showSigilBtn.textContent = 'Start New Reconstruction';
             ui.showSigilBtn.disabled = false;
             ui.validateSigilBtn.disabled = true;
+            initDSR(); // Restart module for a new challenge
         }
 
         ui.showSigilBtn.addEventListener('click', showTargetSigil);
