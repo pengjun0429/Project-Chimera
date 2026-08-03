@@ -1602,7 +1602,9 @@
             const usedPositions = new Set(); // Store "x,y" strings for collision detection
             const addNodeAtRandomPos = (node, type, label, size = 7.5) => {
                 let x, y, posStr;
-                const nodeSizePx = size * parseFloat(getComputedStyle(document.documentElement).fontSize); // Convert rem to px
+                const nodeSizeRem = size;
+                const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+                const nodeSizePx = nodeSizeRem * remToPx; // Convert rem to px
                 const paddingPx = nodeSizePx * 2; // Nodes should be at least 2x their size apart in pixels
 
                 const networkAreaWidth = ui.sdcNetworkArea.offsetWidth;
@@ -1744,16 +1746,16 @@
                         canFlow = false;
                     }
 
-                    if (canFlow) {
+                    if (canFlow && !visited.has(nextNode.id)) { // Only flow if canFlow and not already visited
                         link.flowing = true; // Mark conduit visually as flowing
-                        if (!visited.has(nextNode.id)) {
-                            visited.add(nextNode.id);
-                            queue.push(nextNode);
-                            if (nextNode.type === 'satellite') {
-                                nextNode.connected = true;
-                                satellitesLinkedCount++;
-                            }
+                        visited.add(nextNode.id);
+                        queue.push(nextNode);
+                        if (nextNode.type === 'satellite') {
+                            nextNode.connected = true;
+                            satellitesLinkedCount++;
                         }
+                    } else if (canFlow && visited.has(nextNode.id)) {
+                        link.flowing = true; // If already visited but path is active, still show flow
                     }
                 });
             }
