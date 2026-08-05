@@ -592,7 +592,7 @@
             box-shadow: 0 0 45px var(--sdc-node-satellite);
             color: #222;
         }
-        .sdc-node.conduit.active {
+        .sdc-node.active { /* Renamed from .conduit.active for clarity */
             background: var(--sdc-node-active);
             border-color: var(--sdc-node-active);
             box-shadow: 0 0 50px var(--sdc-node-active);
@@ -743,7 +743,7 @@
         }
         .cdc-temporal-layer {
             position: absolute;
-            width: 100%;
+            width: 100%; /* Layers span full width, their content moves */
             height: 13rem; /* Height of each layer */
             background: rgba(0,0,0,0.45);
             border-bottom: 4px dashed rgba(255, 150, 255, 0.35);
@@ -753,10 +753,12 @@
             pointer-events: none; /* Only children are draggable */
             transition: background 0.35s ease;
             cursor: grab;
+            left: 0; /* Default left */
         }
         .cdc-temporal-layer.active {
             background: rgba(255, 150, 255, 0.15);
             border-color: var(--cdc-border);
+            box-shadow: 0 0 25px rgba(255, 150, 255, 0.5);
         }
         .cdc-chrono-anchor {
             position: absolute;
@@ -790,6 +792,7 @@
             height: 100%;
             background: var(--cdc-drift-zone-bg);
             border-right: 4px dashed var(--cdc-drift-line);
+            border-left: 4px dashed var(--cdc-drift-line);
             opacity: 0.85;
             pointer-events: none;
             z-index: 0;
@@ -1763,7 +1766,7 @@
             drawSDCNetwork(); // Redraw with new flow states
 
             const totalSatellites = systemState.sdc.satelliteNodes.length;
-            const linkagePercentage = (satellitesLinkedCount / totalSatellites) * 100;
+            const linkagePercentage = (totalSatellites > 0) ? (satellitesLinkedCount / totalSatellites) * 100 : 100;
 
             ui.sdcStatus.textContent = `Network flow: ${linkagePercentage >= 100 ? 'OPTIMAL' : 'SUB-OPTIMAL'}. Total satellite linkage: ${linkagePercentage.toFixed(0)}%`;
             
@@ -2046,6 +2049,39 @@
             const numLayers = 4; // Number of temporal layers
             const layerHeight = systemState.cdc.timelineHeight / numLayers;
 
+            // Generate drift zones first, as they are static targets
+            systemState.cdc.driftZones = [];
+            const zoneWidth = 0.1; // 10% of timeline width
+            const zoneCenterRatio = 0.5; // Center of the timeline
+            const zoneStartRatio = zoneCenterRatio - (zoneWidth / 2);
+            const zoneEndRatio = zoneCenterRatio + (zoneWidth / 2);
+
+            const driftZoneEl = document.createElement('div');
+            driftZoneEl.classList.add('cdc-drift-zone');
+            driftZoneEl.style.left = `${zoneStartRatio * 100}%`;
+            driftZoneEl.style.width = `${zoneWidth * 100}%`;
+            ui.cdcTimelineArea.appendChild(driftZoneEl);
+            // Add text label inside drift zone for clarity
+            const zoneLabel = document.createElement('span');
+            zoneLabel.textContent = `ALIGN ZONE`;
+            zoneLabel.style.position = 'absolute';
+            zoneLabel.style.top = '50%';
+            zoneLabel.style.left = '50%';
+            zoneLabel.style.transform = 'translate(-50%, -50%)';
+            zoneLabel.style.fontFamily = 'Share Tech Mono';
+            zoneLabel.style.fontSize = '1.8rem';
+            zoneLabel.style.color = 'rgba(255, 255, 255, 0.2)';
+            zoneLabel.style.pointerEvents = 'none';
+            driftZoneEl.appendChild(zoneLabel);
+
+            // This single drift zone applies to all layers for simplicity
+            systemState.cdc.driftZones.push({
+                startRatio: zoneStartRatio,
+                endRatio: zoneEndRatio,
+                element: driftZoneEl
+            });
+
+
             for (let i = 0; i < numLayers; i++) {
                 const layerEl = document.createElement('div');
                 layerEl.classList.add('cdc-temporal-layer');
@@ -2076,56 +2112,18 @@
                     currentLeft: initialXOffset * systemState.cdc.timelineWidth, // Pixels from timeline left
                     targetXRatio: correctXOffset, // Anchor's ideal X within its layer as ratio
                     anchorElement: anchorEl,
-                    driftZone: null // Will be set later
+                    driftZone: driftZoneEl // Point to the single drift zone
                 });
 
                 setupDraggableLayer(layerEl, i);
             }
-            generateCDCDriftZones();
             updateCDCDriftStatus();
             addLogEntry('CDC: Chronal Drift Compensator active. Align temporal anchors.', 'event');
         }
 
-        function generateCDCDriftZones() {
-            systemState.cdc.driftZones = [];
-            systemState.cdc.layers.forEach((layer, index) => {
-                // Drift zones are fixed positions within the overall timeline area (e.g., center 20%)
-                // For simplicity, let's say all anchors need to align to a common, specific horizontal zone.
-                // Let's make the drift zone the central 10% of the timeline area.
-                const zoneWidth = 0.1;
-                const zoneCenterRatio = 0.5; // Center of the timeline
-                const zoneStartRatio = zoneCenterRatio - (zoneWidth / 2);
-                const zoneEndRatio = zoneCenterRatio + (zoneWidth / 2);
-
-                const driftZoneEl = document.createElement('div');
-                driftZoneEl.classList.add('cdc-drift-zone');
-                driftZoneEl.style.left = `${zoneStartRatio * 100}%`;
-                driftZoneEl.style.width = `${zoneWidth * 100}%`;
-                ui.cdcTimelineArea.appendChild(driftZoneEl);
-                layer.driftZone = driftZoneEl;
-
-                // Add text label inside drift zone for clarity (optional, can be done with pseudo-elements too)
-                const zoneLabel = document.createElement('span');
-                zoneLabel.textContent = `ALIGN ZONE`;
-                zoneLabel.style.position = 'absolute';
-                zoneLabel.style.top = `${index * (systemState.cdc.timelineHeight / systemState.cdc.layers.length) + (systemState.cdc.timelineHeight / systemState.cdc.layers.length / 2) - 1.5}rem`;
-                zoneLabel.style.left = '50%';
-                zoneLabel.style.transform = 'translateX(-50%)';
-                zoneLabel.style.fontFamily = 'Share Tech Mono';
-                zoneLabel.style.fontSize = '1.8rem';
-                zoneLabel.style.color = 'rgba(255, 255, 255, 0.2)';
-                zoneLabel.style.pointerEvents = 'none';
-                driftZoneEl.appendChild(zoneLabel);
-
-
-                systemState.cdc.driftZones.push({
-                    layerId: layer.id,
-                    startRatio: zoneStartRatio,
-                    endRatio: zoneEndRatio,
-                    element: driftZoneEl
-                });
-            });
-        }
+        // function generateCDCDriftZones() { // This function is now merged into initCDC for simplicity with a single zone
+        //     // ... (removed, logic moved)
+        // }
 
         function setupDraggableLayer(layerEl, layerIndex) {
             let isDragging = false;
@@ -2152,11 +2150,24 @@
                 currentX = initialLayerLeft + dx;
 
                 // Clamp layer position within timeline bounds (0 to max left)
-                const maxLeft = systemState.cdc.timelineWidth - layerEl.offsetWidth; // If layers had dynamic width
-                const newLeftPx = clamp(currentX, -layerEl.offsetWidth * 0.5, systemState.cdc.timelineWidth * 1.2); // Allow slight overflow
+                // Allow layer to slide such that its anchor point can reach the edges of the timeline view.
+                // It's a bit tricky to perfectly clamp the layer itself while focusing on the anchor.
+                // For simplicity, let's clamp the layer's LEFT edge to allow the anchor to move within the view,
+                // roughly from -half_layer_width to timeline_width + half_layer_width.
+                const anchorEl = systemState.cdc.layers[layerIndex].anchorElement;
+                const anchorWidth = anchorEl.offsetWidth; // Assuming anchor is roughly square
+                const layerWidth = layerEl.offsetWidth;
+                const anchorRelativeXPx = systemState.cdc.layers[layerIndex].targetXRatio * layerWidth;
+                
+                // Calculate new layer.left such that the anchor's absolute position is `anchorAbsoluteXPx`
+                const newLayerLeftPx = clamp(
+                    currentX, 
+                    -anchorRelativeXPx, // Allows anchor to reach 0px absolute
+                    systemState.cdc.timelineWidth - anchorRelativeXPx // Allows anchor to reach timelineWidth absolute
+                );
 
-                layerEl.style.left = `${(newLeftPx / systemState.cdc.timelineWidth) * 100}%`;
-                systemState.cdc.layers[layerIndex].currentLeft = newLeftPx;
+                layerEl.style.left = `${(newLayerLeftPx / systemState.cdc.timelineWidth) * 100}%`;
+                systemState.cdc.layers[layerIndex].currentLeft = newLayerLeftPx;
                 updateCDCDriftStatus();
             });
 
@@ -2175,16 +2186,19 @@
             let alignedAnchors = 0;
             const timelinePxWidth = ui.cdcTimelineArea.offsetWidth;
             const tolerancePx = systemState.cdc.alignmentTolerance * timelinePxWidth;
-            const targetZoneStartPx = systemState.cdc.driftZones[0].startRatio * timelinePxWidth; // Assuming all layers align to same zone
-            const targetZoneEndPx = systemState.cdc.driftZones[0].endRatio * timelinePxWidth;
+            
+            // Assuming there's always at least one drift zone and all layers target it
+            const targetZone = systemState.cdc.driftZones[0];
+            const targetZoneStartPx = targetZone.startRatio * timelinePxWidth;
+            const targetZoneEndPx = targetZone.endRatio * timelinePxWidth;
 
             systemState.cdc.layers.forEach(layer => {
                 const layerCurrentLeftPx = layer.currentLeft;
                 const anchorRelativeXPx = layer.targetXRatio * layer.element.offsetWidth; // Anchor pos relative to layer's left
                 const anchorAbsoluteXPx = layerCurrentLeftPx + anchorRelativeXPx; // Anchor pos relative to timeline left
 
-                // Check if anchor is within the target drift zone
-                if (anchorAbsoluteXPx >= targetZoneStartPx && anchorAbsoluteXPx <= targetZoneEndPx) {
+                // Check if anchor is within the target drift zone with tolerance
+                if (anchorAbsoluteXPx >= (targetZoneStartPx - tolerancePx) && anchorAbsoluteXPx <= (targetZoneEndPx + tolerancePx)) {
                     layer.anchorElement.classList.add('target-aligned');
                     alignedAnchors++;
                 } else {
