@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v2.5.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v3.5.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v2.5.0) - Even brighter, deeper, more interactive */
+            /* Core Theme Colors (Hyper-Enhanced for 3.5 Gen / v3.5.0) - Even brighter, deeper, more interactive */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
@@ -25,7 +25,7 @@
             --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
-            /* Gen 2.5.0 NEW: Dynamic Sigil Reconstruction (DSR) */
+            /* Gen 3.5.0 NEW: Dynamic Sigil Reconstruction (DSR) */
             --dsr-bg: rgba(5, 5, 25, 0.99); /* Deep blue-violet */
             --dsr-border: rgba(100, 170, 255, 0.999); /* Bright cosmic blue */
             --dsr-text: #E8F8FF; /* Pale blue */
@@ -35,7 +35,7 @@
             --dsr-cell-target: rgba(0, 255, 150, 0.95);
             --dsr-cell-misplaced: rgba(255, 70, 70, 0.95);
 
-            /* Gen 2.5.0 NEW: Sub-Space Data Conduit (SDC) */
+            /* Gen 3.5.0 NEW: Sub-Space Data Conduit (SDC) */
             --sdc-bg: rgba(25, 5, 5, 0.99); /* Deep red-orange */
             --sdc-border: rgba(255, 120, 120, 0.999); /* Bright fiery red */
             --sdc-text: #FFF8E8; /* Pale orange */
@@ -47,7 +47,7 @@
             --sdc-conduit-color: rgba(255, 230, 230, 0.75);
             --sdc-conduit-flow: rgba(255, 170, 0, 0.95);
 
-            /* Gen 2.5.0 NEW: Hyper-Dimensional Projection Calibrator (HPC) */
+            /* Gen 3.5.0 NEW: Hyper-Dimensional Projection Calibrator (HPC) */
             --hpc-bg: rgba(5, 25, 5, 0.99); /* Deep green-cyan */
             --hpc-border: rgba(150, 255, 150, 0.999); /* Bright mint green */
             --hpc-text: #E8FFE8; /* Pale green */
@@ -58,7 +58,7 @@
             --hpc-osc-color2: #FF00FF;
             --hpc-osc-color3: #FFFF00;
 
-            /* Gen 2.5.0 NEW: Chronal Drift Compensator (CDC) */
+            /* Gen 3.5.0 NEW: Chronal Drift Compensator (CDC) */
             --cdc-bg: rgba(25, 5, 25, 0.99); /* Deep magenta-purple */
             --cdc-border: rgba(255, 150, 255, 0.999); /* Bright orchid */
             --cdc-text: #FFEFFE; /* Pale pink-purple */
@@ -69,7 +69,7 @@
             --cdc-drift-line: #FF7700;
             --cdc-drift-zone-bg: rgba(255, 0, 0, 0.15);
 
-            /* Gen 2.5.0 - Enhanced UI elements */
+            /* Gen 3.5.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 32px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -836,7 +836,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v2.5.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v3.5.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -4.5rem;
             left: 5.5rem;
@@ -947,7 +947,7 @@
         .btn-show-sigil:hover, .btn-validate-sigil:hover {
             background: rgba(100, 170, 255, 0.95);
             box-shadow: 0 0 90px var(--dsr-glow), inset 0 0 80px var(--dsr-glow);
-            transform: translateY(-28px) scale(1.6) translateZ(28px);
+            transform: translateY(-28px) scale(1.06) translateZ(28px); /* Slightly smaller scale increase for button groups */
         }
 
         .btn-initiate-flow {
@@ -958,7 +958,7 @@
         .btn-initiate-flow:hover {
             background: rgba(255, 120, 120, 0.95);
             box-shadow: 0 0 90px var(--sdc-glow), inset 0 0 80px var(--sdc-glow);
-            transform: translateY(-28px) scale(1.6) translateZ(28px);
+            transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
         .btn-calibrate-projection {
@@ -969,7 +969,7 @@
         .btn-calibrate-projection:hover {
             background: rgba(150, 255, 150, 0.95);
             box-shadow: 0 0 90px var(--hpc-glow), inset 0 0 80px var(--hpc-glow);
-            transform: translateY(-28px) scale(1.6) translateZ(28px);
+            transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
         .btn-compensate-drift {
@@ -980,7 +980,7 @@
         .btn-compensate-drift:hover {
             background: rgba(255, 150, 255, 0.95);
             box-shadow: 0 0 90px var(--cdc-glow), inset 0 0 80px var(--cdc-glow);
-            transform: translateY(-28px) scale(1.6) translateZ(28px);
+            transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
         .anomaly-alert {
@@ -1071,7 +1071,7 @@
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 2.5.0 Beta (2.5 Generation) // Operational since Cycle 3,141,592,654</p>
+        <p>Core System Interface // Version 3.5.0 Beta (3.5 Generation) // Operational since Cycle 3,141,592,654</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
@@ -1191,9 +1191,9 @@
 
         <div class="status-log-display" id="statusLog">
             <!-- Log entries will be inserted here by JS -->
-            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v2.5.0 Core Initialized.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v3.5.0 Core Initialized.</span></div>
             <div class="status-entry"><span class="status-value">[00:00:00.125]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 2.5 Generation control modules.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 3.5 Generation control modules.</span></div>
         </div>
 
         <div class="anomaly-alert" id="anomalyAlert">
@@ -1327,7 +1327,7 @@
         function checkGlobalStability() {
             systemState.globalStability = Math.max(0, Math.min(100, systemState.globalStability));
             // You can add visual feedback for global stability if needed, e.g., a global bar
-            if (systemState.globalStability < 40 && !systemState.anomalyActive) { // Lower threshold for 2.5 Gen
+            if (systemState.globalStability < 40 && !systemState.anomalyActive) { // Lower threshold for 3.5 Gen
                 triggerAnomalyAlert('Global stability critically low! Imminent system collapse predicted.');
             } else if (systemState.globalStability >= 60 && systemState.anomalyActive) {
                 // If stability recovers, resolve general anomaly alert (not specific event)
@@ -2207,7 +2207,7 @@
             });
 
             const totalAnchors = systemState.cdc.layers.length;
-            const alignmentPercentage = (alignedAnchors / totalAnchors) * 100;
+            const alignmentPercentage = (totalAnchors > 0) ? (alignedAnchors / totalAnchors) * 100 : 100;
             
             ui.cdcDriftStatus.textContent = `Temporal Deviation: ${alignmentPercentage.toFixed(0)}% Aligned.`;
 
@@ -2267,4 +2267,4 @@
         checkGlobalStability();
     </script>
 </body>
-</html>
+</html><ctrl63>
