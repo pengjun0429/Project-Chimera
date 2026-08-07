@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v3.5.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v4.0.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 3.5 Gen / v3.5.0) - Even brighter, deeper, more interactive */
+            /* Core Theme Colors (Hyper-Enhanced for 4.0 Gen / v4.0.0) - Even brighter, deeper, more interactive */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.008); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
+            --frosted-bg: rgba(255, 255, 255, 0.005); /* Ultra-transparent, hyper-ethereal, slightly more visible, deepens on interaction */
             --text-color: #E0FFFF; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.999); /* More visible, shimmering border */
@@ -25,51 +25,49 @@
             --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
             --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
 
-            /* Gen 3.5.0 NEW: Dynamic Sigil Reconstruction (DSR) */
-            --dsr-bg: rgba(5, 5, 25, 0.99); /* Deep blue-violet */
-            --dsr-border: rgba(100, 170, 255, 0.999); /* Bright cosmic blue */
-            --dsr-text: #E8F8FF; /* Pale blue */
-            --dsr-glow: rgba(100, 170, 255, 0.999);
-            --dsr-cell-empty: rgba(0, 0, 60, 0.75);
-            --dsr-cell-filled: rgba(100, 170, 255, 0.95);
-            --dsr-cell-target: rgba(0, 255, 150, 0.95);
-            --dsr-cell-misplaced: rgba(255, 70, 70, 0.95);
+            /* Gen 4.0.0 NEW: Quantum Entanglement Stabilizer (QES) */
+            --qes-bg: rgba(10, 10, 30, 0.99); /* Deep blue-violet */
+            --qes-border: rgba(150, 200, 255, 0.999); /* Bright cosmic blue */
+            --qes-text: #E8F8FF; /* Pale blue */
+            --qes-glow: rgba(150, 200, 255, 0.999);
+            --qes-particle-state0: rgba(0, 0, 80, 0.75);
+            --qes-particle-state1: rgba(150, 200, 255, 0.95);
+            --qes-particle-hover: rgba(180, 220, 255, 0.95);
+            --qes-particle-active-glow: rgba(150, 200, 255, 0.9);
+            --qes-particle-entangled-glow: rgba(255, 100, 255, 0.9);
 
-            /* Gen 3.5.0 NEW: Sub-Space Data Conduit (SDC) */
-            --sdc-bg: rgba(25, 5, 5, 0.99); /* Deep red-orange */
-            --sdc-border: rgba(255, 120, 120, 0.999); /* Bright fiery red */
-            --sdc-text: #FFF8E8; /* Pale orange */
-            --sdc-glow: rgba(255, 120, 120, 0.999);
-            --sdc-node-inactive: rgba(50, 0, 0, 0.85);
-            --sdc-node-active: rgba(255, 120, 120, 0.95);
-            --sdc-node-hub: rgba(0, 220, 255, 0.95);
-            --sdc-node-satellite: rgba(255, 220, 0, 0.95);
-            --sdc-conduit-color: rgba(255, 230, 230, 0.75);
-            --sdc-conduit-flow: rgba(255, 170, 0, 0.95);
+            /* Gen 4.0.0 NEW: Gravitational Singularity Harmonizer (GSH) */
+            --gsh-bg: rgba(30, 10, 10, 0.99); /* Deep red-orange */
+            --gsh-border: rgba(255, 150, 150, 0.999); /* Bright fiery red */
+            --gsh-text: #FFF8E8; /* Pale orange */
+            --gsh-glow: rgba(255, 150, 150, 0.999);
+            --gsh-mass-point: rgba(255, 220, 0, 0.95);
+            --gsh-probe: rgba(0, 220, 255, 0.95);
+            --gsh-orbit-zone: rgba(0, 255, 150, 0.15);
+            --gsh-path: rgba(255, 255, 255, 0.3);
 
-            /* Gen 3.5.0 NEW: Hyper-Dimensional Projection Calibrator (HPC) */
-            --hpc-bg: rgba(5, 25, 5, 0.99); /* Deep green-cyan */
-            --hpc-border: rgba(150, 255, 150, 0.999); /* Bright mint green */
-            --hpc-text: #E8FFE8; /* Pale green */
-            --hpc-glow: rgba(150, 255, 150, 0.999);
-            --hpc-projection-bg: rgba(0, 0, 0, 0.95);
-            --hpc-slider-thumb: rgba(230, 255, 50, 1.0);
-            --hpc-osc-color1: #00FFFF;
-            --hpc-osc-color2: #FF00FF;
-            --hpc-osc-color3: #FFFF00;
+            /* Gen 4.0.0 NEW: Psionic Resonance Synthesizer (PRS) */
+            --prs-bg: rgba(10, 30, 10, 0.99); /* Deep green-cyan */
+            --prs-border: rgba(180, 255, 180, 0.999); /* Bright mint green */
+            --prs-text: #E8FFE8; /* Pale green */
+            --prs-glow: rgba(180, 255, 180, 0.999);
+            --prs-ring-color: rgba(0, 0, 0, 0.95);
+            --prs-modulator-color: rgba(230, 255, 50, 1.0);
+            --prs-waveform-color1: #00FFFF;
+            --prs-waveform-color2: #FF00FF;
+            --prs-waveform-color3: #FFFF00;
 
-            /* Gen 3.5.0 NEW: Chronal Drift Compensator (CDC) */
-            --cdc-bg: rgba(25, 5, 25, 0.99); /* Deep magenta-purple */
-            --cdc-border: rgba(255, 150, 255, 0.999); /* Bright orchid */
-            --cdc-text: #FFEFFE; /* Pale pink-purple */
-            --cdc-glow: rgba(255, 150, 255, 0.999);
-            --cdc-timeline-bg: rgba(0, 0, 0, 0.95);
-            --cdc-anchor-point: #B0FFB0;
-            --cdc-anchor-active: #FFD700;
-            --cdc-drift-line: #FF7700;
-            --cdc-drift-zone-bg: rgba(255, 0, 0, 0.15);
+            /* Gen 4.0.0 NEW: Reality Fabric Reweaving (RFR) */
+            --rfr-bg: rgba(30, 10, 30, 0.99); /* Deep magenta-purple */
+            --rfr-border: rgba(255, 180, 255, 0.999); /* Bright orchid */
+            --rfr-text: #FFEFFE; /* Pale pink-purple */
+            --rfr-glow: rgba(255, 180, 255, 0.999);
+            --rfr-node-start: #B0FFB0;
+            --rfr-node-end: #FFD700;
+            --rfr-line-color: #FF7700;
+            --rfr-error-color: #FF0000;
 
-            /* Gen 3.5.0 - Enhanced UI elements */
+            /* Gen 4.0.0 - Enhanced UI elements */
             --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 32px rgba(255, 165, 0, 1.0); /* Stronger shadow */
             --info-color: #C0A0E0; /* Lighter Medium Purple */
@@ -114,7 +112,7 @@
             height: 2400vh;
             background: linear-gradient(
                 550deg, /* New angle, more subtle shift */
-                #000000 0%, var(--dsr-bg) 0.5%, var(--sdc-bg) 1.0%, var(--hpc-bg) 1.5%, var(--cdc-bg) 2.0%, #000018 2.5%, #000028 3.0%, #000018 3.5%, #000008 4.0%, #000000 4.5%,
+                #000000 0%, var(--qes-bg) 0.5%, var(--gsh-bg) 1.0%, var(--prs-bg) 1.5%, var(--rfr-bg) 2.0%, #000018 2.5%, #000028 3.0%, #000018 3.5%, #000008 4.0%, #000000 4.5%,
                 #180000 5.0%, #280000 5.5%, #380000 6.0%, #480000 6.5%, #380000 7.0%, #280000 7.5%, #180000 8.0%, #080000 8.5%, #000000 9.0%,
                 #001800 9.5%, #002800 10.0%, #003800 10.5%, #004800 11.0%, #005800 11.5%, #004800 12.0%, #003800 12.5%, #002800 13.0%, #001800 13.5%, #000000 14.0%,
                 #181800 14.5%, #282800 15.0%, #383800 15.5%, #484800 16.0%, #585800 16.5%, #484800 17.0%, #383800 17.5%, #282800 18.0%, #181800 18.5%, #000000 19.0%,
@@ -156,10 +154,10 @@
                 rgba(0, 255, 255, 0.999) 0%, /* primary glow accent */
                 rgba(255, 0, 255, 0.998) 8%, /* secondary glow accent */
                 rgba(0, 255, 0, 0.998) 16%, /* tertiary glow accent */
-                var(--dsr-border) 24%, /* DSR accent */
-                var(--sdc-border) 32%, /* SDC accent */
-                var(--hpc-border) 40%, /* HPC accent */
-                var(--cdc-border) 48%, /* CDC accent */
+                var(--qes-border) 24%, /* QES accent */
+                var(--gsh-border) 32%, /* GSH accent */
+                var(--prs-border) 40%, /* PRS accent */
+                var(--rfr-border) 48%, /* RFR accent */
                 rgba(50, 255, 150, 0.999) 56%, /* Generic glow */
                 rgba(110, 90, 210, 0.999) 64%, /* Generic glow */
                 rgba(0, 255, 255, 0.999) 72%,
@@ -291,7 +289,7 @@
             position: absolute;
             inset: -100px; /* More overflow */
             border-radius: calc(15.0rem + 100px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--dsr-border), var(--sdc-border), var(--hpc-border), var(--cdc-border), #00FFFF, #55FF55, #FF5555, #5555FF); /* Even more vibrant border glow colors, includes new module colors */
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qes-border), var(--gsh-border), var(--prs-border), var(--rfr-border), #00FFFF, #55FF55, #FF5555, #5555FF); /* Even more vibrant border glow colors, includes new module colors */
             background-size: 2200% 2200%; /* Larger background for smoother animation */
             animation: borderGlow 900s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
             filter: blur(130px) brightness(1.2); /* Stronger blur */
@@ -369,25 +367,25 @@
             background: var(--console-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .dynamic-sigil-reconstructor {
-            background: var(--dsr-bg);
-            border-color: var(--dsr-border);
-            box-shadow: inset 0 0 85px var(--dsr-glow), 0 0 120px var(--dsr-glow);
+        .quantum-entanglement-stabilizer {
+            background: var(--qes-bg);
+            border-color: var(--qes-border);
+            box-shadow: inset 0 0 85px var(--qes-glow), 0 0 120px var(--qes-glow);
         }
-        .sub-space-data-conduit {
-            background: var(--sdc-bg);
-            border-color: var(--sdc-border);
-            box-shadow: inset 0 0 85px var(--sdc-glow), 0 0 120px var(--sdc-glow);
+        .gravitational-singularity-harmonizer {
+            background: var(--gsh-bg);
+            border-color: var(--gsh-border);
+            box-shadow: inset 0 0 85px var(--gsh-glow), 0 0 120px var(--gsh-glow);
         }
-        .hyper-dimensional-calibrator {
-            background: var(--hpc-bg);
-            border-color: var(--hpc-border);
-            box-shadow: inset 0 0 85px var(--hpc-glow), 0 0 120px var(--hpc-glow);
+        .psionic-resonance-synthesizer {
+            background: var(--prs-bg);
+            border-color: var(--prs-border);
+            box-shadow: inset 0 0 85px var(--prs-glow), 0 0 120px var(--prs-glow);
         }
-        .chronal-drift-compensator {
-            background: var(--cdc-bg);
-            border-color: var(--cdc-border);
-            box-shadow: inset 0 0 85px var(--cdc-glow), 0 0 120px var(--cdc-glow);
+        .reality-fabric-reweaving {
+            background: var(--rfr-bg);
+            border-color: var(--rfr-border);
+            box-shadow: inset 0 0 85px var(--rfr-glow), 0 0 120px var(--rfr-glow);
         }
 
         .module-base::after {
@@ -422,25 +420,25 @@
             text-transform: uppercase;
         }
         /* Specific overrides for new modules normal label elements */
-        .dynamic-sigil-reconstructor > .module-label {
-            color: var(--dsr-text);
-            border-color: var(--dsr-border);
-            box-shadow: 0 0 60px var(--dsr-glow);
+        .quantum-entanglement-stabilizer > .module-label {
+            color: var(--qes-text);
+            border-color: var(--qes-border);
+            box-shadow: 0 0 60px var(--qes-glow);
         }
-        .sub-space-data-conduit > .module-label {
-            color: var(--sdc-text);
-            border-color: var(--sdc-border);
-            box-shadow: 0 0 60px var(--sdc-glow);
+        .gravitational-singularity-harmonizer > .module-label {
+            color: var(--gsh-text);
+            border-color: var(--gsh-border);
+            box-shadow: 0 0 60px var(--gsh-glow);
         }
-        .hyper-dimensional-calibrator > .module-label {
-            color: var(--hpc-text);
-            border-color: var(--hpc-border);
-            box-shadow: 0 0 60px var(--hpc-glow);
+        .psionic-resonance-synthesizer > .module-label {
+            color: var(--prs-text);
+            border-color: var(--prs-border);
+            box-shadow: 0 0 60px var(--prs-glow);
         }
-        .chronal-drift-compensator > .module-label {
-            color: var(--cdc-text);
-            border-color: var(--cdc-border);
-            box-shadow: 0 0 60px var(--cdc-glow);
+        .reality-fabric-reweaving > .module-label {
+            color: var(--rfr-text);
+            border-color: var(--rfr-border);
+            box-shadow: 0 0 60px var(--rfr-glow);
         }
 
 
@@ -469,27 +467,27 @@
             line-height: 3.0;
         }
         
-        /* DSR Specific - Dynamic Sigil Reconstruction */
-        .dsr-grid-area {
+        /* QES Specific - Quantum Entanglement Stabilizer */
+        .qes-grid-area {
             position: relative;
             background: var(--console-bg);
-            border: 18px solid var(--dsr-border);
+            border: 18px solid var(--qes-border);
             border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--dsr-glow);
+            box-shadow: inset 0 0 65px var(--qes-glow);
             width: 100%;
             max-width: 80rem; /* Fixed max width for grid aspect ratio */
             aspect-ratio: 1 / 1; /* Keep it square */
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5x5 grid */
-            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr); /* 4x4 grid */
+            grid-template-rows: repeat(4, 1fr);
             gap: 3.0rem;
             padding: 3.0rem;
         }
-        .dsr-grid-cell {
-            background-color: var(--dsr-cell-empty);
-            border: 9px solid var(--dsr-border);
-            border-radius: 2.0rem;
+        .qes-particle {
+            background-color: var(--qes-particle-state0);
+            border: 9px solid var(--qes-border);
+            border-radius: 50%; /* Circular particles */
             cursor: pointer;
             transition: all 0.28s ease-in-out;
             position: relative;
@@ -499,319 +497,255 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 2.8rem;
             color: rgba(255,255,255,0.45);
-            text-shadow: 0 0 15px rgba(100, 170, 255, 0.35);
+            text-shadow: 0 0 15px rgba(150, 200, 255, 0.35);
             font-weight: bold;
             transform: translateZ(5px);
         }
-        .dsr-grid-cell:hover {
-            box-shadow: 0 0 40px var(--dsr-glow);
+        .qes-particle:hover {
+            box-shadow: 0 0 40px var(--qes-particle-hover);
             transform: scale(1.08) translateZ(10px);
         }
-        .dsr-grid-cell.filled {
-            background-color: var(--dsr-cell-filled);
-            box-shadow: 0 0 55px var(--dsr-glow);
-            color: var(--dsr-text);
-            text-shadow: 0 0 30px var(--dsr-glow);
+        .qes-particle.state-1 {
+            background-color: var(--qes-particle-state1);
+            box-shadow: 0 0 55px var(--qes-particle-active-glow);
+            color: var(--qes-text);
+            text-shadow: 0 0 30px var(--qes-particle-active-glow);
             transform: scale(1.12) translateZ(15px);
         }
-        .dsr-grid-cell.target-display { /* When target is shown */
-            background-color: var(--dsr-cell-target);
-            border-color: var(--dsr-cell-target);
-            box-shadow: 0 0 60px var(--dsr-cell-target);
+        .qes-particle.entangled-pulse {
+            animation: entangledPulse 0.8s ease-in-out infinite alternate;
         }
-        .dsr-grid-cell.misplaced { /* For validation feedback */
-            background-color: var(--dsr-cell-misplaced);
-            border-color: var(--dsr-cell-misplaced);
-            box-shadow: 0 0 60px var(--dsr-cell-misplaced);
+        @keyframes entangledPulse {
+            from { box-shadow: 0 0 30px var(--qes-particle-entangled-glow); }
+            to { box-shadow: 0 0 70px var(--qes-particle-entangled-glow); }
         }
-        .dsr-status {
+        .qes-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 2.2rem;
-            color: var(--dsr-text);
-            text-shadow: 0 0 35px var(--dsr-glow);
+            color: var(--qes-text);
+            text-shadow: 0 0 35px var(--qes-glow);
             margin-top: 4.0rem;
             line-height: 3.2;
             padding: 3.0rem;
             background: rgba(0,0,0,0.999);
-            border: 15px solid var(--dsr-border);
+            border: 15px solid var(--qes-border);
             border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--dsr-border);
+            box-shadow: 0 0 45px var(--qes-border);
             text-align: center;
         }
-        .dsr-controls {
+        .qes-controls {
             display: flex;
             justify-content: center;
             gap: 4.5rem;
             margin-top: 4.5rem;
         }
 
-
-        /* SDC Specific - Sub-Space Data Conduit */
-        .sdc-network-area {
+        /* GSH Specific - Gravitational Singularity Harmonizer */
+        .gsh-simulation-area {
             position: relative;
             background: var(--console-bg);
-            border: 18px solid var(--sdc-border);
+            border: 18px solid var(--gsh-border);
             border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--sdc-glow);
+            box-shadow: inset 0 0 65px var(--gsh-glow);
             width: 100%;
             height: 65rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
         }
-        .sdc-node {
+        .gsh-simulation-canvas {
             position: absolute;
-            width: 7.5rem;
-            height: 7.5rem;
-            border-radius: 50%;
-            background: var(--sdc-node-inactive);
-            border: 9px solid rgba(255, 120, 120, 0.45);
-            box-shadow: 0 0 28px rgba(255, 120, 120, 0.35);
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: rgba(255,255,255,0.5);
-            font-weight: 700;
-            text-shadow: 0 0 12px rgba(255, 120, 120, 0.35);
-            z-index: 10; /* Ensure nodes are above conduits */
-        }
-        .sdc-node.hub {
-            background: var(--sdc-node-hub);
-            border-color: var(--sdc-node-hub);
-            box-shadow: 0 0 45px var(--sdc-node-hub);
-            color: white;
-        }
-        .sdc-node.satellite {
-            background: var(--sdc-node-satellite);
-            border-color: var(--sdc-node-satellite);
-            box-shadow: 0 0 45px var(--sdc-node-satellite);
-            color: #222;
-        }
-        .sdc-node.active { /* Renamed from .conduit.active for clarity */
-            background: var(--sdc-node-active);
-            border-color: var(--sdc-node-active);
-            box-shadow: 0 0 50px var(--sdc-node-active);
-            color: var(--sdc-text);
-            transform: scale(1.15) translateZ(10px);
-        }
-        .sdc-node:hover:not(.hub):not(.satellite) {
-            transform: scale(1.2) translateZ(12px);
-            box-shadow: 0 0 40px var(--sdc-glow);
-        }
-        .sdc-conduit {
-            position: absolute;
-            height: 8px; /* Thicker conduit */
-            background: var(--sdc-conduit-color);
-            transform-origin: left center;
-            transition: background 0.6s ease, box-shadow 0.6s ease;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 1;
         }
-        .sdc-conduit.flowing {
-            background: var(--sdc-conduit-flow);
-            box-shadow: 0 0 25px var(--sdc-conduit-flow);
-        }
-        .sdc-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--sdc-text);
-            text-shadow: 0 0 35px var(--sdc-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 15px solid var(--sdc-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--sdc-border);
-            text-align: center;
-        }
-
-        /* HPC Specific - Hyper-Dimensional Projection Calibrator */
-        .hpc-projection-area {
-            display: flex;
-            flex-direction: column;
-            gap: 4.0rem;
-            align-items: center;
-        }
-        .hpc-projection-canvas {
-            background: var(--hpc-projection-bg);
-            border: 18px solid var(--hpc-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--hpc-glow);
-            width: 100%;
-            height: 50rem; /* Fixed height for canvas */
-        }
-        .hpc-controls {
-            display: flex;
-            flex-direction: column;
-            gap: 3.0rem;
-            width: 95%;
-            margin-top: 3.5rem;
-        }
-        .hpc-param-group {
-            border: 8px solid rgba(150, 255, 150, 0.45);
-            border-radius: 2.5rem;
-            padding: 3.0rem 3.5rem;
-            background: rgba(0,0,0,0.8);
-            box-shadow: inset 0 0 30px rgba(150, 255, 150, 0.4);
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-        .hpc-param-group h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: var(--hpc-text);
-            text-shadow: 0 0 30px var(--hpc-glow);
-            margin: 0 0 2.5rem 0;
-            border-bottom: 4px solid var(--hpc-border);
-            padding-bottom: 1.8rem;
-            letter-spacing: 0.18rem;
-        }
-        .hpc-slider-group {
-            display: flex;
-            align-items: center;
-            gap: 3.0rem;
-        }
-        .hpc-slider-group label {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: var(--hpc-text);
-            text-shadow: 0 0 25px var(--hpc-glow);
-            min-width: 13rem;
-            text-align: right;
-        }
-        .hpc-control-slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 2.0rem;
-            background: rgba(0, 0, 0, 0.8);
-            outline: none;
-            border-radius: 1.2rem;
-            border: 6px solid var(--hpc-border);
-            box-shadow: inset 0 0 18px rgba(0, 255, 0, 0.6);
-        }
-        .hpc-control-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 4.0rem;
-            height: 4.0rem;
-            background: var(--hpc-slider-thumb);
-            border-radius: 50%;
-            cursor: grab;
-            border: 9px solid var(--hpc-border);
-            box-shadow: 0 0 35px var(--hpc-glow);
-            transition: all 0.28s ease;
-        }
-        .hpc-control-slider::-webkit-slider-thumb:active {
-            cursor: grabbing;
-        }
-        .hpc-control-slider::-webkit-slider-thumb:hover {
-            transform: scale(1.25);
-            box-shadow: 0 0 50px var(--hpc-glow);
-        }
-        .hpc-coherence-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--hpc-text);
-            text-shadow: 0 0 35px var(--hpc-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 15px solid var(--hpc-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--hpc-border);
-            text-align: center;
-        }
-
-        /* CDC Specific - Chronal Drift Compensator */
-        .cdc-timeline-area {
-            background: var(--cdc-timeline-bg);
-            border: 18px solid var(--cdc-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--cdc-glow);
-            width: 100%;
-            height: 55rem;
-            position: relative;
-            cursor: grab;
-            overflow: hidden; /* Ensure nodes stay within bounds */
-        }
-        .cdc-temporal-layer {
+        .gsh-mass-point {
             position: absolute;
-            width: 100%; /* Layers span full width, their content moves */
-            height: 13rem; /* Height of each layer */
-            background: rgba(0,0,0,0.45);
-            border-bottom: 4px dashed rgba(255, 150, 255, 0.35);
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            pointer-events: none; /* Only children are draggable */
-            transition: background 0.35s ease;
-            cursor: grab;
-            left: 0; /* Default left */
-        }
-        .cdc-temporal-layer.active {
-            background: rgba(255, 150, 255, 0.15);
-            border-color: var(--cdc-border);
-            box-shadow: 0 0 25px rgba(255, 150, 255, 0.5);
-        }
-        .cdc-chrono-anchor {
-            position: absolute;
-            width: 7.0rem;
-            height: 7.0rem;
-            background: var(--cdc-anchor-point);
-            border: 8px solid var(--cdc-border);
+            width: 8.0rem;
+            height: 8.0rem;
             border-radius: 50%;
+            background: var(--gsh-mass-point);
+            border: 9px solid var(--gsh-border);
+            box-shadow: 0 0 40px var(--gsh-glow);
             cursor: grab;
-            z-index: 10;
-            box-shadow: 0 0 28px var(--cdc-glow);
-            transition: background-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease, border-color 0.28s ease;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
-            color: rgba(0,0,0,0.85);
-            font-weight: bold;
-            text-shadow: 0 0 15px rgba(255,255,255,0.6);
-            pointer-events: auto; /* Make nodes draggable */
+            color: #222;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0,0,0,0.3);
+            z-index: 10;
         }
-        .cdc-chrono-anchor.target-aligned {
-            background: var(--cdc-anchor-active);
-            box-shadow: 0 0 50px var(--cdc-glow);
-            transform: scale(1.22);
-            border-color: var(--cdc-anchor-active);
+        .gsh-mass-point:active {
+            cursor: grabbing;
         }
-        .cdc-drift-zone {
-            position: absolute;
-            height: 100%;
-            background: var(--cdc-drift-zone-bg);
-            border-right: 4px dashed var(--cdc-drift-line);
-            border-left: 4px dashed var(--cdc-drift-line);
-            opacity: 0.85;
-            pointer-events: none;
-            z-index: 0;
-            transition: opacity 0.5s ease;
+        .gsh-mass-point:hover {
+            box-shadow: 0 0 60px var(--gsh-glow);
+            transform: scale(1.1);
         }
-        .cdc-drift-status {
+        .gsh-status {
             font-family: 'Share Tech Mono', monospace;
             font-size: 2.2rem;
-            color: var(--cdc-text);
-            text-shadow: 0 0 35px var(--cdc-glow);
+            color: var(--gsh-text);
+            text-shadow: 0 0 35px var(--gsh-glow);
             margin-top: 4.0rem;
             line-height: 3.2;
             padding: 3.0rem;
             background: rgba(0,0,0,0.999);
-            border: 15px solid var(--cdc-border);
+            border: 15px solid var(--gsh-border);
             border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--cdc-border);
+            box-shadow: 0 0 45px var(--gsh-border);
             text-align: center;
         }
+        .gsh-controls {
+            display: flex;
+            justify-content: center;
+            gap: 4.5rem;
+            margin-top: 4.5rem;
+        }
+
+        /* PRS Specific - Psionic Resonance Synthesizer */
+        .prs-synthesizer-area {
+            position: relative;
+            background: var(--console-bg);
+            border: 18px solid var(--prs-border);
+            border-radius: 3.5rem;
+            box-shadow: inset 0 0 65px var(--prs-glow);
+            width: 100%;
+            max-width: 80rem;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .prs-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+        }
+        .prs-modulator {
+            position: absolute;
+            width: 6.0rem;
+            height: 6.0rem;
+            border-radius: 50%;
+            background: var(--prs-modulator-color);
+            border: 8px solid var(--prs-border);
+            box-shadow: 0 0 35px var(--prs-glow);
+            cursor: grab;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            z-index: 10;
+        }
+        .prs-modulator:active {
+            cursor: grabbing;
+        }
+        .prs-modulator:hover {
+            box-shadow: 0 0 50px var(--prs-glow);
+            transform: scale(1.15);
+        }
+        .prs-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.2rem;
+            color: var(--prs-text);
+            text-shadow: 0 0 35px var(--prs-glow);
+            margin-top: 4.0rem;
+            line-height: 3.2;
+            padding: 3.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 15px solid var(--prs-border);
+            border-radius: 2.5rem;
+            box-shadow: 0 0 45px var(--prs-border);
+            text-align: center;
+        }
+        .prs-controls {
+            display: flex;
+            justify-content: center;
+            gap: 4.5rem;
+            margin-top: 4.5rem;
+        }
+
+        /* RFR Specific - Reality Fabric Reweaving */
+        .rfr-reweaving-area {
+            position: relative;
+            background: var(--console-bg);
+            border: 18px solid var(--rfr-border);
+            border-radius: 3.5rem;
+            box-shadow: inset 0 0 65px var(--rfr-glow);
+            width: 100%;
+            max-width: 80rem;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5x5 grid of potential nodes */
+            grid-template-rows: repeat(5, 1fr);
+            gap: 0; /* No gap for this one, nodes are positioned */
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .rfr-node {
+            position: absolute;
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: 8px solid var(--rfr-border);
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+        .rfr-node.start-node {
+            background-color: var(--rfr-node-start);
+            color: #222;
+            box-shadow: 0 0 30px var(--rfr-node-start);
+        }
+        .rfr-node.end-node {
+            background-color: var(--rfr-node-end);
+            color: #222;
+            box-shadow: 0 0 30px var(--rfr-node-end);
+        }
+        .rfr-node.active-drawing {
+            box-shadow: 0 0 60px var(--rfr-glow), inset 0 0 30px var(--rfr-glow);
+            transform: scale(1.15);
+        }
+        .rfr-node:hover:not(.active-drawing) {
+             transform: scale(1.08);
+             box-shadow: 0 0 45px var(--rfr-glow);
+        }
+        .rfr-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 5; /* Below nodes, above background */
+        }
+        .rfr-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.2rem;
+            color: var(--rfr-text);
+            text-shadow: 0 0 35px var(--rfr-glow);
+            margin-top: 4.0rem;
+            line-height: 3.2;
+            padding: 3.0rem;
+            background: rgba(0,0,0,0.999);
+            border: 15px solid var(--rfr-border);
+            border-radius: 2.5rem;
+            box-shadow: 0 0 45px var(--rfr-border);
+            text-align: center;
+        }
+        .rfr-controls {
+            display: flex;
+            justify-content: center;
+            gap: 4.5rem;
+            margin-top: 4.5rem;
+        }
+
 
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
@@ -836,7 +770,7 @@
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v3.5.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v4.0.0'; /* Simplified label for actual log content */
             position: absolute;
             top: -4.5rem;
             left: 5.5rem;
@@ -939,47 +873,47 @@
         }
         
         /* Specific button styles for new modules */
-        .btn-show-sigil, .btn-validate-sigil {
-            color: var(--dsr-glow);
-            box-shadow: 0 0 70px var(--dsr-glow);
-            border-color: var(--dsr-glow);
+        .btn-stabilize-entanglement {
+            color: var(--qes-glow);
+            box-shadow: 0 0 70px var(--qes-glow);
+            border-color: var(--qes-glow);
         }
-        .btn-show-sigil:hover, .btn-validate-sigil:hover {
-            background: rgba(100, 170, 255, 0.95);
-            box-shadow: 0 0 90px var(--dsr-glow), inset 0 0 80px var(--dsr-glow);
-            transform: translateY(-28px) scale(1.06) translateZ(28px); /* Slightly smaller scale increase for button groups */
-        }
-
-        .btn-initiate-flow {
-            color: var(--sdc-glow);
-            box-shadow: 0 0 70px var(--sdc-glow);
-            border-color: var(--sdc-glow);
-        }
-        .btn-initiate-flow:hover {
-            background: rgba(255, 120, 120, 0.95);
-            box-shadow: 0 0 90px var(--sdc-glow), inset 0 0 80px var(--sdc-glow);
+        .btn-stabilize-entanglement:hover {
+            background: rgba(150, 200, 255, 0.95);
+            box-shadow: 0 0 90px var(--qes-glow), inset 0 0 80px var(--qes-glow);
             transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
-        .btn-calibrate-projection {
-            color: var(--hpc-glow);
-            box-shadow: 0 0 70px var(--hpc-glow);
-            border-color: var(--hpc-glow);
+        .btn-harmonize-singularity {
+            color: var(--gsh-glow);
+            box-shadow: 0 0 70px var(--gsh-glow);
+            border-color: var(--gsh-glow);
         }
-        .btn-calibrate-projection:hover {
-            background: rgba(150, 255, 150, 0.95);
-            box-shadow: 0 0 90px var(--hpc-glow), inset 0 0 80px var(--hpc-glow);
+        .btn-harmonize-singularity:hover {
+            background: rgba(255, 150, 150, 0.95);
+            box-shadow: 0 0 90px var(--gsh-glow), inset 0 0 80px var(--gsh-glow);
             transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
-        .btn-compensate-drift {
-            color: var(--cdc-glow);
-            box-shadow: 0 0 70px var(--cdc-glow);
-            border-color: var(--cdc-glow);
+        .btn-synthesize-resonance {
+            color: var(--prs-glow);
+            box-shadow: 0 0 70px var(--prs-glow);
+            border-color: var(--prs-glow);
         }
-        .btn-compensate-drift:hover {
-            background: rgba(255, 150, 255, 0.95);
-            box-shadow: 0 0 90px var(--cdc-glow), inset 0 0 80px var(--cdc-glow);
+        .btn-synthesize-resonance:hover {
+            background: rgba(180, 255, 180, 0.95);
+            box-shadow: 0 0 90px var(--prs-glow), inset 0 0 80px var(--prs-glow);
+            transform: translateY(-28px) scale(1.06) translateZ(28px);
+        }
+
+        .btn-reweave-fabric {
+            color: var(--rfr-glow);
+            box-shadow: 0 0 70px var(--rfr-glow);
+            border-color: var(--rfr-glow);
+        }
+        .btn-reweave-fabric:hover {
+            background: rgba(255, 180, 255, 0.95);
+            box-shadow: 0 0 90px var(--rfr-glow), inset 0 0 80px var(--rfr-glow);
             transform: translateY(-28px) scale(1.06) translateZ(28px);
         }
 
@@ -1071,129 +1005,73 @@
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 3.5.0 Beta (3.5 Generation) // Operational since Cycle 3,141,592,654</p>
+        <p>Core System Interface // Version 4.0.0 Alpha (4.0 Generation) // Operational since Cycle 3,141,592,654</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
-            <!-- Dynamic Sigil Reconstruction (DSR) - NEW Module -->
-            <div class="module-base dynamic-sigil-reconstructor">
-                <div class="module-label">Dynamic Sigil Reconstruction (DSR)</div>
+            <!-- Quantum Entanglement Stabilizer (QES) - NEW Module -->
+            <div class="module-base quantum-entanglement-stabilizer">
+                <div class="module-label">Quantum Entanglement Stabilizer (QES)</div>
                 <div class="param-group">
-                    <label class="param-label">Reconstruct Temporal Sigil <br><span>Observe the target sigil (will flash briefly), then click cells to recreate it.</span></label>
-                    <div class="dsr-grid-area" id="dsrGridArea">
+                    <label class="param-label">Stabilize Entangled Particles <br><span>Click particles to toggle their state. Entangled partners will also toggle. Align all particles to the target state.</span></label>
+                    <div class="qes-grid-area" id="qesGridArea">
                         <!-- Grid cells will be dynamically inserted here by JS -->
                     </div>
-                    <p class="dsr-status" id="dsrStatus">Awaiting sigil pattern initialization...</p>
-                    <div class="dsr-controls">
-                        <button class="action-button btn-show-sigil" id="showSigilBtn">Show Target Sigil</button>
-                        <button class="action-button btn-validate-sigil" id="validateSigilBtn" disabled>Validate Reconstruction</button>
+                    <p class="qes-status" id="qesStatus">Awaiting entanglement matrix initialization...</p>
+                    <div class="qes-controls">
+                        <button class="action-button btn-stabilize-entanglement" id="stabilizeEntanglementBtn" disabled>Stabilize Entanglement</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Sub-Space Data Conduit (SDC) - NEW Module -->
-            <div class="module-base sub-space-data-conduit">
-                <div class="module-label">Sub-Space Data Conduit (SDC)</div>
+            <!-- Gravitational Singularity Harmonizer (GSH) - NEW Module -->
+            <div class="module-base gravitational-singularity-harmonizer">
+                <div class="module-label">Gravitational Singularity Harmonizer (GSH)</div>
                 <div class="param-group">
-                    <label class="param-label">Establish Data Flow <br><span>Click conduit nodes to activate pathways and route sub-space energy from the Central Hub to all Satellite Relays.</span></label>
-                    <div class="sdc-network-area" id="sdcNetworkArea">
-                        <!-- Nodes and conduits dynamically inserted/drawn by JS -->
+                    <label class="param-label">Harmonize Gravitational Field <br><span>Drag mass points to guide the central probe into a stable orbit within the target zone.</span></label>
+                    <div class="gsh-simulation-area" id="gshSimulationArea">
+                        <canvas class="gsh-simulation-canvas" id="gshSimulationCanvas"></canvas>
+                        <!-- Mass points dynamically inserted by JS -->
                     </div>
                 </div>
-                <p class="sdc-status" id="sdcStatus">Network flow: Offline. Total satellite linkage: 0%</p>
-                <button class="action-button btn-initiate-flow" id="initiateFlowBtn" disabled>Initiate Sub-Space Flow</button>
+                <p class="gsh-status" id="gshStatus">Orbital Stability: 0%. Probe: Drifting.</p>
+                <button class="action-button btn-harmonize-singularity" id="harmonizeSingularityBtn" disabled>Harmonize Singularity</button>
             </div>
 
-            <!-- Hyper-Dimensional Projection Calibrator (HPC) - NEW Module -->
-            <div class="module-base hyper-dimensional-calibrator">
-                <div class="module-label">Hyper-Dimensional Projection Calibrator (HPC)</div>
+            <!-- Psionic Resonance Synthesizer (PRS) - NEW Module -->
+            <div class="module-base psionic-resonance-synthesizer">
+                <div class="module-label">Psionic Resonance Synthesizer (PRS)</div>
                 <div class="param-group">
-                    <label class="param-label">Calibrate Hyper-Projection <br><span>Adjust oscillation parameters to align the geometric projection to the target coherence state. Target coherence (95%) is indicated by the outline.</span></label>
-                    <div class="hpc-projection-area">
-                        <canvas id="hpcProjectionCanvas" class="hpc-projection-canvas"></canvas>
-                        <div class="hpc-controls">
-                            <div class="hpc-param-group">
-                                <h3>Oscillation Field 1 (<span style="color:var(--hpc-osc-color1);">Cyan</span>)</h3>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcAmp1">Amplitude:</label>
-                                    <input type="range" id="hpcAmp1" class="hpc-control-slider" min="0.0" max="1.0" step="0.01" value="0.5">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcFreq1">Frequency:</label>
-                                    <input type="range" id="hpcFreq1" class="hpc-control-slider" min="0.1" max="5.0" step="0.01" value="1.0">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcPhase1">Phase:</label>
-                                    <input type="range" id="hpcPhase1" class="hpc-control-slider" min="0.0" max="6.28" step="0.01" value="0.0">
-                                </div>
-                            </div>
-                            <div class="hpc-param-group">
-                                <h3>Oscillation Field 2 (<span style="color:var(--hpc-osc-color2);">Magenta</span>)</h3>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcAmp2">Amplitude:</label>
-                                    <input type="range" id="hpcAmp2" class="hpc-control-slider" min="0.0" max="1.0" step="0.01" value="0.3">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcFreq2">Frequency:</label>
-                                    <input type="range" id="hpcFreq2" class="hpc-control-slider" min="0.1" max="5.0" step="0.01" value="2.0">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcPhase2">Phase:</label>
-                                    <input type="range" id="hpcPhase2" class="hpc-control-slider" min="0.0" max="6.28" step="0.01" value="0.0">
-                                </div>
-                            </div>
-                            <div class="hpc-param-group">
-                                <h3>Oscillation Field 3 (<span style="color:var(--hpc-osc-color3);">Yellow</span>)</h3>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcAmp3">Amplitude:</label>
-                                    <input type="range" id="hpcAmp3" class="hpc-control-slider" min="0.0" max="1.0" step="0.01" value="0.2">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcFreq3">Frequency:</label>
-                                    <input type="range" id="hpcFreq3" class="hpc-control-slider" min="0.1" max="5.0" step="0.01" value="3.0">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcPhase3">Phase:</label>
-                                    <input type="range" id="hpcPhase3" class="hpc-control-slider" min="0.0" max="6.28" step="0.01" value="0.0">
-                                </div>
-                            </div>
-                            <div class="hpc-param-group">
-                                <h3>Global Coherence Modulators</h3>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcScale">Scale:</label>
-                                    <input type="range" id="hpcScale" class="hpc-control-slider" min="0.5" max="2.0" step="0.01" value="1.0">
-                                </div>
-                                <div class="hpc-slider-group">
-                                    <label for="hpcRotation">Rotation:</label>
-                                    <input type="range" id="hpcRotation" class="hpc-control-slider" min="0.0" max="6.28" step="0.01" value="0.0">
-                                </div>
-                            </div>
-                        </div>
+                    <label class="param-label">Synthesize Psionic Resonance <br><span>Adjust the frequency modulators on each ring to match the target resonance signature. Listen for coherence.</span></label>
+                    <div class="prs-synthesizer-area" id="prsSynthesizerArea">
+                        <canvas class="prs-canvas" id="prsCanvas"></canvas>
+                        <!-- Modulators dynamically inserted by JS -->
                     </div>
                 </div>
-                <p class="hpc-coherence-status" id="hpcCoherenceStatus">Coherence: 0%</p>
-                <button class="action-button btn-calibrate-projection" id="calibrateProjectionBtn" disabled>Calibrate Projection</button>
+                <p class="prs-status" id="prsStatus">Resonance Coherence: 0%</p>
+                <button class="action-button btn-synthesize-resonance" id="synthesizeResonanceBtn" disabled>Synthesize Resonance</button>
             </div>
 
-            <!-- Chronal Drift Compensator (CDC) - NEW Module -->
-            <div class="module-base chronal-drift-compensator">
-                <div class="module-label">Chronal Drift Compensator (CDC)</div>
+            <!-- Reality Fabric Reweaving (RFR) - NEW Module -->
+            <div class="module-base reality-fabric-reweaving">
+                <div class="module-label">Reality Fabric Reweaving (RFR)</div>
                 <div class="param-group">
-                    <label class="param-label">Compensate Chronal Drift <br><span>Drag temporal layers horizontally to align chrono-anchor points (represented by 'A' through 'D') within their target drift zones.</span></label>
-                    <div class="cdc-timeline-area" id="cdcTimelineArea">
-                        <!-- Temporal layers and anchor points dynamically inserted by JS -->
+                    <label class="param-label">Reweave Reality Fabric <br><span>Connect matching pairs of fabric threads (nodes) by drawing lines. Lines cannot cross other lines.</span></label>
+                    <div class="rfr-reweaving-area" id="rfrReweavingArea">
+                        <canvas class="rfr-canvas" id="rfrCanvas"></canvas>
+                        <!-- Nodes dynamically inserted by JS -->
                     </div>
                 </div>
-                <p class="cdc-drift-status" id="cdcDriftStatus">Temporal Deviation: Critical.</p>
-                <button class="action-button btn-compensate-drift" id="compensateDriftBtn" disabled>Compensate Drift</button>
+                <p class="rfr-status" id="rfrStatus">Threads Connected: 0/0. Intersections: 0.</p>
+                <button class="action-button btn-reweave-fabric" id="reweaveFabricBtn" disabled>Reweave Fabric</button>
             </div>
         </div>
 
         <div class="status-log-display" id="statusLog">
             <!-- Log entries will be inserted here by JS -->
-            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v3.5.0 Core Initialized.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v4.0.0 Core Initialized.</span></div>
             <div class="status-entry"><span class="status-value">[00:00:00.125]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 3.5 Generation control modules.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 4.0 Generation control modules.</span></div>
         </div>
 
         <div class="anomaly-alert" id="anomalyAlert">
@@ -1217,98 +1095,75 @@
             resourceAnomalyEvent: document.getElementById('resourceAnomalyEvent'),
             acknowledgeAnomalyBtn: document.getElementById('acknowledgeAnomaly'),
             
-            // DSR
-            dsrGridArea: document.getElementById('dsrGridArea'),
-            dsrStatus: document.getElementById('dsrStatus'),
-            showSigilBtn: document.getElementById('showSigilBtn'),
-            validateSigilBtn: document.getElementById('validateSigilBtn'),
+            // QES
+            qesGridArea: document.getElementById('qesGridArea'),
+            qesStatus: document.getElementById('qesStatus'),
+            stabilizeEntanglementBtn: document.getElementById('stabilizeEntanglementBtn'),
 
-            // SDC
-            sdcNetworkArea: document.getElementById('sdcNetworkArea'),
-            sdcStatus: document.getElementById('sdcStatus'),
-            initiateFlowBtn: document.getElementById('initiateFlowBtn'),
+            // GSH
+            gshSimulationArea: document.getElementById('gshSimulationArea'),
+            gshSimulationCanvas: document.getElementById('gshSimulationCanvas'),
+            gshStatus: document.getElementById('gshStatus'),
+            harmonizeSingularityBtn: document.getElementById('harmonizeSingularityBtn'),
 
-            // HPC
-            hpcProjectionCanvas: document.getElementById('hpcProjectionCanvas'),
-            hpcAmp1: document.getElementById('hpcAmp1'),
-            hpcFreq1: document.getElementById('hpcFreq1'),
-            hpcPhase1: document.getElementById('hpcPhase1'),
-            hpcAmp2: document.getElementById('hpcAmp2'),
-            hpcFreq2: document.getElementById('hpcFreq2'),
-            hpcPhase2: document.getElementById('hpcPhase2'),
-            hpcAmp3: document.getElementById('hpcAmp3'),
-            hpcFreq3: document.getElementById('hpcFreq3'),
-            hpcPhase3: document.getElementById('hpcPhase3'),
-            hpcScale: document.getElementById('hpcScale'),
-            hpcRotation: document.getElementById('hpcRotation'),
-            hpcCoherenceStatus: document.getElementById('hpcCoherenceStatus'),
-            calibrateProjectionBtn: document.getElementById('calibrateProjectionBtn'),
+            // PRS
+            prsSynthesizerArea: document.getElementById('prsSynthesizerArea'),
+            prsCanvas: document.getElementById('prsCanvas'),
+            prsStatus: document.getElementById('prsStatus'),
+            synthesizeResonanceBtn: document.getElementById('synthesizeResonanceBtn'),
 
-            // CDC
-            cdcTimelineArea: document.getElementById('cdcTimelineArea'),
-            cdcDriftStatus: document.getElementById('cdcDriftStatus'),
-            compensateDriftBtn: document.getElementById('compensateDriftBtn'),
+            // RFR
+            rfrReweavingArea: document.getElementById('rfrReweavingArea'),
+            rfrCanvas: document.getElementById('rfrCanvas'),
+            rfrStatus: document.getElementById('rfrStatus'),
+            reweaveFabricBtn: document.getElementById('reweaveFabricBtn'),
         };
 
         let systemState = {
             globalStability: 100, // Represented as a percentage
             anomalyActive: false,
-            // DSR state (Dynamic Sigil Reconstruction)
-            dsr: {
+            // QES state (Quantum Entanglement Stabilizer)
+            qes: {
                 active: false,
-                gridSize: 5,
-                targetSigil: [], // 2D array of 0s and 1s
-                userSigil: [], // 2D array of 0s and 1s
-                cells: [], // DOM elements
-                revealTimeout: null,
-                inputAllowed: false,
-                reconstructionAttempts: 0,
-                maxAttempts: 3,
+                gridSize: 4, // 4x4 grid
+                particles: [], // [{id, x, y, state:0/1, element, partners:[]}]
+                targetPattern: [], // 2D array of 0s and 1s
+                stabilizationThreshold: 90, // % correct for success
             },
-            // SDC state (Sub-Space Data Conduit)
-            sdc: {
+            // GSH state (Gravitational Singularity Harmonizer)
+            gsh: {
                 active: false,
-                hubNode: null,
-                satelliteNodes: [], // [{id, x, y, connected:false, requiredFlow}]
-                conduitNodes: [], // [{id, x, y, active:false, element, neighbors:[]}]
-                links: [], // [{from, to, element, flowing:false}] for visual lines
-                flowCanvas: null, // Canvas for flow animations
-                flowCtx: null,
-                networkInitialized: false,
-            },
-            // HPC state (Hyper-Dimensional Projection Calibrator)
-            hpc: {
-                active: false,
-                targetProjection: {
-                    osc1: { amp: 0.7, freq: 1.8, phase: 0.2 },
-                    osc2: { amp: 0.4, freq: 3.2, phase: 1.5 },
-                    osc3: { amp: 0.2, freq: 2.5, phase: 0.8 },
-                    scale: 1.2,
-                    rotation: 0.5
-                },
-                userProjection: {
-                    osc1: { amp: 0.5, freq: 1.0, phase: 0.0 },
-                    osc2: { amp: 0.3, freq: 2.0, phase: 0.0 },
-                    osc3: { amp: 0.2, freq: 3.0, phase: 0.0 },
-                    scale: 1.0,
-                    rotation: 0.0
-                },
-                coherence: 0, // 0-100%
                 ctx: null,
                 animationFrame: null,
+                massPoints: [], // [{id, x, y, mass, element}]
+                probe: { x: 0, y: 0, vx: 0, vy: 0, radius: 10 },
+                targetOrbitZone: { x: 0.5, y: 0.5, innerRadius: 0.1, outerRadius: 0.2 }, // normalized
+                GRAVITATIONAL_CONSTANT: 1000, // Scale for canvas
+                simulationTimeStep: 0.1,
+                stabilityScore: 0, // 0-100%
             },
-            // CDC state (Chronal Drift Compensator)
-            cdc: {
+            // PRS state (Psionic Resonance Synthesizer)
+            prs: {
                 active: false,
-                layers: [], // [{id, yPos, correctX, currentX, element}]
-                anchorPoints: ['A', 'B', 'C', 'D'], // Fixed anchor points to distribute
-                timelineWidth: 0,
-                timelineHeight: 0,
-                draggedLayer: null,
-                dragStartX: 0, // Mouse X at start of drag
-                layerStartLeft: 0, // Layer left position at start of drag
-                alignmentTolerance: 0.03, // Percentage of timeline width for alignment
-                driftZones: [], // [{layerId, startRatio, endRatio, message}]
+                ctx: null,
+                animationFrame: null,
+                numRings: 3,
+                modulators: [], // [{id, ringIndex, angle:radians, element, isDragging}]
+                targetResonance: [], // [{ringIndex, angle:radians}]
+                coherence: 0, // 0-100%
+                audioContext: null,
+                oscillators: [],
+                ringRadii: [],
+            },
+            // RFR state (Reality Fabric Reweaving)
+            rfr: {
+                active: false,
+                ctx: null,
+                nodes: [], // [{id, x, y, type:'start'/'end', pairId, element, connectedTo:null}]
+                pairs: [], // [{startNodeId, endNodeId}]
+                drawnLines: [], // [{start:{x,y}, end:{x,y}, color}]
+                currentDrawing: null, // {startNode, mouseX, mouseY}
+                isDrawing: false,
             }
         };
 
@@ -1327,7 +1182,7 @@
         function checkGlobalStability() {
             systemState.globalStability = Math.max(0, Math.min(100, systemState.globalStability));
             // You can add visual feedback for global stability if needed, e.g., a global bar
-            if (systemState.globalStability < 40 && !systemState.anomalyActive) { // Lower threshold for 3.5 Gen
+            if (systemState.globalStability < 40 && !systemState.anomalyActive) {
                 triggerAnomalyAlert('Global stability critically low! Imminent system collapse predicted.');
             } else if (systemState.globalStability >= 60 && systemState.anomalyActive) {
                 // If stability recovers, resolve general anomaly alert (not specific event)
@@ -1383,883 +1238,1067 @@
             return Math.max(min, Math.min(value, max));
         }
 
-        // --- DYNAMIC SIGIL RECONSTRUCTION (DSR) ---
-        function initDSR() {
-            systemState.dsr.active = true;
-            systemState.dsr.inputAllowed = false;
-            systemState.dsr.reconstructionAttempts = 0;
-            ui.dsrGridArea.innerHTML = '';
-            ui.dsrStatus.textContent = 'Awaiting sigil pattern initialization...';
-            ui.showSigilBtn.textContent = 'Show Target Sigil';
-            ui.showSigilBtn.disabled = false;
-            ui.validateSigilBtn.disabled = true;
+        // --- QUANTUM ENTANGLEMENT STABILIZER (QES) ---
+        function initQES() {
+            systemState.qes.active = true;
+            ui.qesGridArea.innerHTML = '';
+            ui.qesStatus.textContent = 'Awaiting entanglement matrix initialization...';
+            ui.stabilizeEntanglementBtn.disabled = true;
 
-            const gridSize = systemState.dsr.gridSize;
-            systemState.dsr.cells = [];
-            systemState.dsr.userSigil = Array(gridSize).fill(0).map(() => Array(gridSize).fill(0));
+            const gridSize = systemState.qes.gridSize;
+            systemState.qes.particles = [];
+            systemState.qes.targetPattern = Array(gridSize).fill(0).map(() => Array(gridSize).fill(0));
 
+            const particleElements = [];
             for (let y = 0; y < gridSize; y++) {
-                const row = [];
                 for (let x = 0; x < gridSize; x++) {
+                    const id = `qes-${x}-${y}`;
                     const cellEl = document.createElement('div');
-                    cellEl.classList.add('dsr-grid-cell');
+                    cellEl.classList.add('qes-particle');
+                    cellEl.setAttribute('data-id', id);
                     cellEl.setAttribute('data-x', x);
                     cellEl.setAttribute('data-y', y);
-                    cellEl.addEventListener('click', () => clickDSRCell(x, y));
-                    ui.dsrGridArea.appendChild(cellEl);
-                    row.push(cellEl);
-                }
-                systemState.dsr.cells.push(row);
-            }
-            generateDSRTargetSigil();
-            addLogEntry('DSR: Dynamic Sigil Reconstruction module ready. Initialize a target sigil.', 'event');
-        }
-
-        function generateDSRTargetSigil() {
-            const gridSize = systemState.dsr.gridSize;
-            systemState.dsr.targetSigil = Array(gridSize).fill(0).map(() => Array(gridSize).fill(0));
-            // Generate a more complex, random pattern (25-75% filled)
-            const numFilled = Math.floor(Math.random() * (gridSize * gridSize * 0.5)) + (gridSize * gridSize * 0.25);
-            const allCoords = [];
-            for(let y=0; y<gridSize; y++) {
-                for(let x=0; x<gridSize; x++) {
-                    allCoords.push({x,y});
+                    cellEl.addEventListener('click', () => clickQESParticle(id));
+                    ui.qesGridArea.appendChild(cellEl);
+                    particleElements.push({ id, x, y, state: 0, element: cellEl, partners: [] });
                 }
             }
-            shuffleArray(allCoords);
-            for(let i=0; i<numFilled; i++) {
-                const {x, y} = allCoords[i];
-                systemState.dsr.targetSigil[y][x] = 1;
-            }
-            addLogEntry('DSR: New target sigil pattern generated.', 'info');
+            systemState.qes.particles = particleElements;
+            generateQESPatternAndEntanglements();
+            renderQESParticles();
+            updateQESStatus();
+            addLogEntry('QES: Quantum Entanglement Stabilizer module ready. Begin stabilization.', 'event');
         }
 
-        async function showTargetSigil() {
-            ui.showSigilBtn.disabled = true;
-            ui.validateSigilBtn.disabled = true;
-            systemState.dsr.inputAllowed = false;
-            ui.dsrStatus.textContent = 'Observing target sigil...';
+        function generateQESPatternAndEntanglements() {
+            const gridSize = systemState.qes.gridSize;
+            const allParticleIds = systemState.qes.particles.map(p => p.id);
+            shuffleArray(allParticleIds);
 
-            // Clear user's current sigil view
-            systemState.dsr.cells.forEach((row, y) => {
-                row.forEach((cellEl, x) => {
-                    cellEl.classList.remove('filled', 'misplaced');
-                    systemState.dsr.userSigil[y][x] = 0;
-                });
-            });
+            // Generate random target pattern (e.g., 50-70% 1s)
+            const numTargetOn = Math.floor(Math.random() * (gridSize * gridSize * 0.2)) + (gridSize * gridSize * 0.5);
+            const flatTarget = Array(gridSize * gridSize).fill(0);
+            for (let i = 0; i < numTargetOn; i++) flatTarget[i] = 1;
+            shuffleArray(flatTarget);
 
-            await new Promise(r => setTimeout(r, 1200)); // Initial delay
-
-            // Display target sigil
-            systemState.dsr.cells.forEach((row, y) => {
-                row.forEach((cellEl, x) => {
-                    if (systemState.dsr.targetSigil[y][x] === 1) {
-                        cellEl.classList.add('target-display');
-                    }
-                });
-            });
-
-            addLogEntry('DSR: Target sigil revealed.', 'info');
-            await new Promise(r => setTimeout(r, 3500)); // Display duration
-
-            // Hide target sigil
-            systemState.dsr.cells.forEach((row, y) => {
-                row.forEach((cellEl, x) => {
-                    cellEl.classList.remove('target-display');
-                });
-            });
-            addLogEntry('DSR: Target sigil hidden. Begin reconstruction.', 'info');
-            ui.dsrStatus.textContent = 'Reconstruct the sigil!';
-            systemState.dsr.inputAllowed = true;
-            ui.validateSigilBtn.disabled = false;
-        }
-
-        function clickDSRCell(x, y) {
-            if (!systemState.dsr.active || !systemState.dsr.inputAllowed) return;
-
-            const cellEl = systemState.dsr.cells[y][x];
-            if (systemState.dsr.userSigil[y][x] === 0) {
-                systemState.dsr.userSigil[y][x] = 1;
-                cellEl.classList.add('filled');
-            } else {
-                systemState.dsr.userSigil[y][x] = 0;
-                cellEl.classList.remove('filled');
-            }
-            cellEl.classList.remove('misplaced'); // Remove error class on interaction
-            // addLogEntry(`DSR: Cell (${x},${y}) toggled to ${systemState.dsr.userSigil[y][x]}.`, 'info'); // Too verbose
-        }
-
-        async function validateDSR() {
-            if (!systemState.dsr.active || !systemState.dsr.inputAllowed) return;
-
-            ui.validateSigilBtn.disabled = true;
-            ui.showSigilBtn.disabled = true;
-            systemState.dsr.inputAllowed = false;
-            systemState.dsr.reconstructionAttempts++;
-
-            let correctCells = 0;
-            const gridSize = systemState.dsr.gridSize;
-
+            let k = 0;
             for (let y = 0; y < gridSize; y++) {
                 for (let x = 0; x < gridSize; x++) {
-                    const userVal = systemState.dsr.userSigil[y][x];
-                    const targetVal = systemState.dsr.targetSigil[y][x];
-                    const cellEl = systemState.dsr.cells[y][x];
-
-                    if (userVal === targetVal) {
-                        correctCells++;
-                        cellEl.classList.remove('misplaced');
-                    } else {
-                        cellEl.classList.add('misplaced'); // Highlight incorrect
-                    }
+                    systemState.qes.targetPattern[y][x] = flatTarget[k++];
+                    systemState.qes.particles.find(p => p.x === x && p.y === y).state = Math.random() < 0.5 ? 0 : 1; // Random initial state
                 }
             }
 
-            const totalCells = gridSize * gridSize;
-            const accuracy = (correctCells / totalCells) * 100;
-            
-            if (accuracy >= 90) { // High accuracy required
-                ui.dsrStatus.textContent = `Reconstruction Success! Accuracy: ${accuracy.toFixed(0)}%. Sigil harmonized.`;
-                addLogEntry(`DSR: Sigil reconstruction successful! Accuracy: ${accuracy.toFixed(0)}%. Stability increased.`, 'success');
-                systemState.globalStability += 25;
-                endDSR(true);
-            } else {
-                ui.dsrStatus.textContent = `Reconstruction Failed! Accuracy: ${accuracy.toFixed(0)}%. Attempt ${systemState.dsr.reconstructionAttempts}/${systemState.dsr.maxAttempts}.`;
-                addLogEntry(`DSR: Sigil reconstruction failed. Accuracy: ${accuracy.toFixed(0)}%. Stability decreased.`, 'warning');
-                systemState.globalStability -= 12;
-                if (systemState.dsr.reconstructionAttempts >= systemState.dsr.maxAttempts) {
-                    addLogEntry(`DSR: Max attempts reached. Sigil corruption imminent.`, 'critical');
-                    triggerAnomalyAlert('DSR: Sigil corruption detected! Reality integrity at risk.');
-                    systemState.globalStability -= 30;
-                    endDSR(false);
-                } else {
-                    await new Promise(r => setTimeout(r, 2500)); // Show errors briefly
-                    systemState.dsr.cells.forEach((row) => row.forEach(cellEl => cellEl.classList.remove('misplaced')));
-                    systemState.dsr.inputAllowed = true;
-                    ui.showSigilBtn.disabled = false;
-                    ui.validateSigilBtn.disabled = false;
+            // Create random entanglements (each particle has 1-2 partners)
+            systemState.qes.particles.forEach(p => p.partners = []); // Clear old partners
+            const potentialPartners = [...systemState.qes.particles];
+            shuffleArray(potentialPartners);
+
+            systemState.qes.particles.forEach(p => {
+                const numPartners = Math.floor(Math.random() * 2) + 1; // 1 to 2 partners
+                for (let i = 0; i < numPartners; i++) {
+                    let partner;
+                    do {
+                        partner = potentialPartners[Math.floor(Math.random() * potentialPartners.length)];
+                    } while (partner.id === p.id || p.partners.includes(partner.id) || partner.partners.includes(p.id)); // Avoid self and duplicates
+
+                    p.partners.push(partner.id);
+                    // Ensure entanglement is bidirectional for simpler logic, but not necessarily symmetric in count
+                    if (!partner.partners.includes(p.id)) {
+                        partner.partners.push(p.id);
+                    }
                 }
+            });
+            addLogEntry('QES: New entanglement matrix generated with target pattern.', 'info');
+        }
+
+        function renderQESParticles() {
+            systemState.qes.particles.forEach(p => {
+                p.element.classList.toggle('state-1', p.state === 1);
+                // For debug, display partner IDs
+                // p.element.textContent = p.partners.length > 0 ? p.partners.map(id => id.split('-')[1]).join(',') : '';
+                // p.element.textContent = p.state;
+            });
+        }
+
+        function clickQESParticle(id) {
+            if (!systemState.qes.active) return;
+            const clickedParticle = systemState.qes.particles.find(p => p.id === id);
+            if (!clickedParticle) return;
+
+            // Toggle clicked particle
+            clickedParticle.state = 1 - clickedParticle.state;
+            clickedParticle.element.classList.add('entangled-pulse');
+            setTimeout(() => clickedParticle.element.classList.remove('entangled-pulse'), 800);
+
+            // Toggle entangled partners
+            clickedParticle.partners.forEach(partnerId => {
+                const partner = systemState.qes.particles.find(p => p.id === partnerId);
+                if (partner) {
+                    partner.state = 1 - partner.state;
+                    partner.element.classList.add('entangled-pulse');
+                    setTimeout(() => partner.element.classList.remove('entangled-pulse'), 800);
+                }
+            });
+
+            renderQESParticles();
+            updateQESStatus();
+            addLogEntry(`QES: Particle ${id} toggled. Entangled states propagated.`, 'info');
+        }
+
+        function updateQESStatus() {
+            let correctCount = 0;
+            const gridSize = systemState.qes.gridSize;
+            systemState.qes.particles.forEach(p => {
+                if (p.state === systemState.qes.targetPattern[p.y][p.x]) {
+                    correctCount++;
+                }
+            });
+
+            const totalParticles = gridSize * gridSize;
+            const alignment = (correctCount / totalParticles) * 100;
+
+            ui.qesStatus.textContent = `Particle Alignment: ${alignment.toFixed(0)}%. ${correctCount}/${totalParticles} stabilized.`;
+
+            if (alignment >= systemState.qes.stabilizationThreshold) {
+                ui.stabilizeEntanglementBtn.disabled = false;
+                addLogEntry('QES: Entanglement matrix highly aligned! Ready for stabilization.', 'success');
+            } else {
+                ui.stabilizeEntanglementBtn.disabled = true;
             }
             checkGlobalStability();
         }
 
-        function endDSR(success) {
-            systemState.dsr.active = false;
-            systemState.dsr.inputAllowed = false;
-            systemState.dsr.cells.forEach((row) => row.forEach(cellEl => {
-                cellEl.classList.remove('filled', 'target-display', 'misplaced');
-            }));
-            ui.showSigilBtn.textContent = 'Start New Reconstruction';
-            ui.showSigilBtn.disabled = false;
-            ui.validateSigilBtn.disabled = true;
-            initDSR(); // Restart module for a new challenge
-        }
-
-        ui.showSigilBtn.addEventListener('click', showTargetSigil);
-        ui.validateSigilBtn.addEventListener('click', validateDSR);
-        initDSR(); // Initial setup
-
-
-        // --- SUB-SPACE DATA CONDUIT (SDC) ---
-        function initSDC() {
-            systemState.sdc.active = true;
-            ui.sdcNetworkArea.innerHTML = ''; // Clear existing
-            ui.sdcStatus.textContent = 'Network flow: Offline. Total satellite linkage: 0%';
-            ui.initiateFlowBtn.disabled = true;
-            systemState.sdc.networkInitialized = false;
-
-            const canvas = document.createElement('canvas');
-            canvas.style.position = 'absolute';
-            canvas.style.top = '0';
-            canvas.style.left = '0';
-            canvas.style.width = '100%';
-            canvas.style.height = '100%';
-            ui.sdcNetworkArea.appendChild(canvas);
-            systemState.sdc.flowCanvas = canvas;
-            systemState.sdc.flowCtx = canvas.getContext('2d');
-            resizeSDCCanvas();
-
-            generateSDCNetwork();
-            addLogEntry('SDC: Sub-Space Data Conduit module ready. Establish flow to satellites.', 'event');
-        }
-
-        function resizeSDCCanvas() {
-            if (systemState.sdc.flowCanvas) {
-                systemState.sdc.flowCanvas.width = ui.sdcNetworkArea.offsetWidth;
-                systemState.sdc.flowCanvas.height = ui.sdcNetworkArea.offsetHeight;
-                if (systemState.sdc.active) drawSDCNetwork();
-            }
-        }
-        window.addEventListener('resize', resizeSDCCanvas);
-
-
-        function generateSDCNetwork() {
-            systemState.sdc.hubNode = { id: 'HUB', x: 0.5, y: 0.5, type: 'hub', element: null }; // Normalized coords
-            systemState.sdc.satelliteNodes = [];
-            systemState.sdc.conduitNodes = [];
-            systemState.sdc.links = [];
-
-            const numSatellites = Math.floor(Math.random() * 2) + 3; // 3-4 satellites
-            const numConduits = Math.floor(Math.random() * 4) + 6; // 6-9 conduits
-
-            const usedPositions = new Set(); // Store "x,y" strings for collision detection
-            const addNodeAtRandomPos = (node, type, label, size = 7.5) => {
-                let x, y, posStr;
-                const nodeSizeRem = size;
-                const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-                const nodeSizePx = nodeSizeRem * remToPx; // Convert rem to px
-                const paddingPx = nodeSizePx * 2; // Nodes should be at least 2x their size apart in pixels
-
-                const networkAreaWidth = ui.sdcNetworkArea.offsetWidth;
-                const networkAreaHeight = ui.sdcNetworkArea.offsetHeight;
-
-                do {
-                    // Generate random positions ensuring enough space for padding
-                    x = Math.random() * (networkAreaWidth - 2 * paddingPx) + paddingPx;
-                    y = Math.random() * (networkAreaHeight - 2 * paddingPx) + paddingPx;
-                    
-                    posStr = `${x.toFixed(0)},${y.toFixed(0)}`; // Use rounded px for collision check
-
-                    let collision = false;
-                    for (const existingPos of usedPositions) {
-                        const [ex, ey] = existingPos.split(',').map(Number);
-                        const distance = Math.sqrt((x - ex)**2 + (y - ey)**2);
-                        if (distance < paddingPx) { // Collision if distance is less than padding
-                            collision = true;
-                            break;
-                        }
-                    }
-                    if (!collision) usedPositions.add(posStr);
-                    else posStr = null; // Mark as collision, retry
-                } while (posStr === null);
-                
-                const nodeEl = document.createElement('div');
-                nodeEl.classList.add('sdc-node', type);
-                nodeEl.setAttribute('data-id', label);
-                nodeEl.textContent = label;
-                nodeEl.style.left = `${(x / networkAreaWidth) * 100}%`;
-                nodeEl.style.top = `${(y / networkAreaHeight) * 100}%`;
-                nodeEl.style.transform = `translate(-50%, -50%)`;
-                ui.sdcNetworkArea.appendChild(nodeEl);
-                
-                node.x = x / networkAreaWidth; node.y = y / networkAreaHeight; node.element = nodeEl;
-                return node;
-            };
-
-            systemState.sdc.hubNode = addNodeAtRandomPos(systemState.sdc.hubNode, 'hub', 'HUB');
-
-            for (let i = 0; i < numSatellites; i++) {
-                const satNode = addNodeAtRandomPos({ id: `S${i+1}`, type: 'satellite', connected: false }, 'satellite', `S${i+1}`);
-                systemState.sdc.satelliteNodes.push(satNode);
-            }
-
-            for (let i = 0; i < numConduits; i++) {
-                const conduitNode = addNodeAtRandomPos({ id: `C${i+1}`, type: 'conduit', active: false, element: null, neighbors: [] }, 'conduit', `C${i+1}`);
-                conduitNode.element.addEventListener('click', () => toggleSDCConduit(conduitNode));
-                systemState.sdc.conduitNodes.push(conduitNode);
-            }
-
-            // Create connections (simplified: each node connects to 2-3 others, randomly)
-            const allNodes = [systemState.sdc.hubNode, ...systemState.sdc.satelliteNodes, ...systemState.sdc.conduitNodes];
-            allNodes.forEach(nodeA => {
-                const potentialNeighbors = allNodes.filter(nodeB => nodeA !== nodeB);
-                shuffleArray(potentialNeighbors);
-                const numConnections = Math.floor(Math.random() * 2) + 2; // 2-3 connections
-                for (let i = 0; i < numConnections && i < potentialNeighbors.length; i++) {
-                    const nodeB = potentialNeighbors[i];
-                    // Prevent duplicate links (undirected graph)
-                    const existingLink = systemState.sdc.links.some(l => 
-                        (l.from.id === nodeA.id && l.to.id === nodeB.id) || (l.from.id === nodeB.id && l.to.id === nodeA.id)
-                    );
-                    if (!existingLink) {
-                        systemState.sdc.links.push({ from: nodeA, to: nodeB, element: null, flowing: false });
-                        if (!nodeA.neighbors) nodeA.neighbors = [];
-                        if (!nodeB.neighbors) nodeB.neighbors = [];
-                        nodeA.neighbors.push(nodeB);
-                        nodeB.neighbors.push(nodeA);
-                    }
+        function stabilizeEntanglement() {
+            if (!systemState.qes.active || ui.stabilizeEntanglementBtn.disabled) return;
+            
+            let correctCount = 0;
+            const gridSize = systemState.qes.gridSize;
+            systemState.qes.particles.forEach(p => {
+                if (p.state === systemState.qes.targetPattern[p.y][p.x]) {
+                    correctCount++;
                 }
             });
-            drawSDCNetwork();
-            systemState.sdc.networkInitialized = true;
-            updateSDCFlow(); // Initial flow calculation
-        }
+            const totalParticles = gridSize * gridSize;
+            const alignment = (correctCount / totalParticles) * 100;
 
-        function drawSDCNetwork() {
-            if (!systemState.sdc.flowCtx || !systemState.sdc.networkInitialized) return;
-
-            const ctx = systemState.sdc.flowCtx;
-            const canvasWidth = systemState.sdc.flowCanvas.width;
-            const canvasHeight = systemState.sdc.flowCanvas.height;
-
-            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-
-            systemState.sdc.links.forEach(link => {
-                const fromX = link.from.x * canvasWidth;
-                const fromY = link.from.y * canvasHeight;
-                const toX = link.to.x * canvasWidth;
-                const toY = link.to.y * canvasHeight;
-
-                ctx.beginPath();
-                ctx.moveTo(fromX, fromY);
-                ctx.lineTo(toX, toY);
-                ctx.strokeStyle = link.flowing ? 'var(--sdc-conduit-flow)' : 'var(--sdc-conduit-color)';
-                ctx.lineWidth = link.flowing ? 8 : 4;
-                ctx.shadowColor = link.flowing ? 'var(--sdc-conduit-flow)' : 'transparent';
-                ctx.shadowBlur = link.flowing ? 15 : 0;
-                ctx.lineCap = 'round';
-                ctx.stroke();
-            });
-        }
-
-        function toggleSDCConduit(node) {
-            if (!systemState.sdc.active) return;
-            node.active = !node.active;
-            if (node.active) {
-                node.element.classList.add('active');
-                addLogEntry(`SDC: Conduit ${node.id} activated.`, 'info');
-            } else {
-                node.element.classList.remove('active');
-                addLogEntry(`SDC: Conduit ${node.id} deactivated.`, 'info');
-            }
-            updateSDCFlow();
-        }
-
-        function updateSDCFlow() {
-            // Reset all link states
-            systemState.sdc.links.forEach(link => { link.flowing = false; });
-            systemState.sdc.satelliteNodes.forEach(sat => sat.connected = false);
-
-            const queue = [systemState.sdc.hubNode];
-            const visited = new Set();
-            visited.add(systemState.sdc.hubNode.id);
-
-            let satellitesLinkedCount = 0;
-
-            while (queue.length > 0) {
-                const currentNode = queue.shift();
-
-                const neighbors = systemState.sdc.links.filter(link => link.from.id === currentNode.id || link.to.id === currentNode.id);
-
-                neighbors.forEach(link => {
-                    const nextNode = (link.from.id === currentNode.id) ? link.to : link.from;
-                    
-                    let canFlow = true;
-                    if (nextNode.type === 'conduit' && !nextNode.active) {
-                        canFlow = false;
-                    }
-
-                    if (canFlow && !visited.has(nextNode.id)) { // Only flow if canFlow and not already visited
-                        link.flowing = true; // Mark conduit visually as flowing
-                        visited.add(nextNode.id);
-                        queue.push(nextNode);
-                        if (nextNode.type === 'satellite') {
-                            nextNode.connected = true;
-                            satellitesLinkedCount++;
-                        }
-                    } else if (canFlow && visited.has(nextNode.id)) {
-                        link.flowing = true; // If already visited but path is active, still show flow
-                    }
-                });
-            }
-
-            drawSDCNetwork(); // Redraw with new flow states
-
-            const totalSatellites = systemState.sdc.satelliteNodes.length;
-            const linkagePercentage = (totalSatellites > 0) ? (satellitesLinkedCount / totalSatellites) * 100 : 100;
-
-            ui.sdcStatus.textContent = `Network flow: ${linkagePercentage >= 100 ? 'OPTIMAL' : 'SUB-OPTIMAL'}. Total satellite linkage: ${linkagePercentage.toFixed(0)}%`;
-            
-            if (linkagePercentage >= 100) { // All satellites must be connected
-                ui.initiateFlowBtn.disabled = false;
-                addLogEntry('SDC: All satellite relays connected and optimal flow achieved!', 'success');
-            } else {
-                ui.initiateFlowBtn.disabled = true;
-            }
-            checkGlobalStability();
-        }
-
-        function endSDC(success) {
-            systemState.sdc.active = false;
-            ui.initiateFlowBtn.textContent = 'Initiate Sub-Space Flow';
-            ui.initiateFlowBtn.disabled = false;
-            ui.sdcNetworkArea.innerHTML = ''; // Clear the network
-            if (success) {
-                addLogEntry('SDC: Sub-space data flow successfully initiated. Global stability increased.', 'success');
+            if (alignment >= systemState.qes.stabilizationThreshold) {
+                addLogEntry('QES: Entanglement successfully stabilized! Global stability increased.', 'success');
                 systemState.globalStability += 28;
+                endQES(true);
             } else {
-                addLogEntry('SDC: Sub-space data flow failed. Global stability decreased.', 'critical');
-                triggerAnomalyAlert('SDC: Data conduit collapse! Inter-dimensional communications severed.');
-                systemState.globalStability -= 35;
-            }
-            checkGlobalStability();
-            initSDC(); // Start a new round
-        }
-
-        ui.initiateFlowBtn.addEventListener('click', () => {
-            if (!systemState.sdc.active || ui.initiateFlowBtn.disabled) return;
-            endSDC(true);
-        });
-        initSDC(); // Initial setup
-
-
-        // --- HYPER-DIMENSIONAL PROJECTION CALIBRATOR (HPC) ---
-        function initHPC() {
-            systemState.hpc.active = true;
-            systemState.hpc.ctx = ui.hpcProjectionCanvas.getContext('2d');
-            resizeHPCCanvas();
-            
-            // Randomize target projection parameters
-            systemState.hpc.targetProjection = {
-                osc1: { amp: parseFloat((Math.random() * 0.4 + 0.5).toFixed(2)), freq: parseFloat((Math.random() * 1.5 + 0.5).toFixed(2)), phase: parseFloat((Math.random() * 6.28).toFixed(2)) },
-                osc2: { amp: parseFloat((Math.random() * 0.3 + 0.3).toFixed(2)), freq: parseFloat((Math.random() * 2.0 + 1.0).toFixed(2)), phase: parseFloat((Math.random() * 6.28).toFixed(2)) },
-                osc3: { amp: parseFloat((Math.random() * 0.2 + 0.1).toFixed(2)), freq: parseFloat((Math.random() * 2.5 + 1.5).toFixed(2)), phase: parseFloat((Math.random() * 6.28).toFixed(2)) },
-                scale: parseFloat((Math.random() * 0.8 + 0.8).toFixed(2)), // 0.8 to 1.6
-                rotation: parseFloat((Math.random() * 6.28).toFixed(2)) // 0 to 2PI
-            };
-            
-            // Reset user projection to defaults for challenge
-            systemState.hpc.userProjection = {
-                osc1: { amp: 0.5, freq: 1.0, phase: 0.0 },
-                osc2: { amp: 0.3, freq: 2.0, phase: 0.0 },
-                osc3: { amp: 0.2, freq: 3.0, phase: 0.0 },
-                scale: 1.0,
-                rotation: 0.0
-            };
-
-            // Set slider values to user defaults
-            ui.hpcAmp1.value = systemState.hpc.userProjection.osc1.amp;
-            ui.hpcFreq1.value = systemState.hpc.userProjection.osc1.freq;
-            ui.hpcPhase1.value = systemState.hpc.userProjection.osc1.phase;
-            ui.hpcAmp2.value = systemState.hpc.userProjection.osc2.amp;
-            ui.hpcFreq2.value = systemState.hpc.userProjection.osc2.freq;
-            ui.hpcPhase2.value = systemState.hpc.userProjection.osc2.phase;
-            ui.hpcAmp3.value = systemState.hpc.userProjection.osc3.amp;
-            ui.hpcFreq3.value = systemState.hpc.userProjection.osc3.freq;
-            ui.hpcPhase3.value = systemState.hpc.userProjection.osc3.phase;
-            ui.hpcScale.value = systemState.hpc.userProjection.scale;
-            ui.hpcRotation.value = systemState.hpc.userProjection.rotation;
-
-            attachHPCSliderListeners();
-            updateHPCProjection(); // Draw initial projection
-            systemState.hpc.animationFrame = requestAnimationFrame(animateHPCProjection);
-            addLogEntry('HPC: Hyper-Dimensional Projection Calibrator ready. Align projection.', 'event');
-        }
-
-        function resizeHPCCanvas() {
-            if (ui.hpcProjectionCanvas) {
-                ui.hpcProjectionCanvas.width = ui.hpcProjectionCanvas.offsetWidth;
-                ui.hpcProjectionCanvas.height = ui.hpcProjectionCanvas.offsetHeight;
-                if (systemState.hpc.active) drawProjection();
-            }
-        }
-        window.addEventListener('resize', resizeHPCCanvas);
-
-        function attachHPCSliderListeners() {
-            const sliders = [ui.hpcAmp1, ui.hpcFreq1, ui.hpcPhase1, ui.hpcAmp2, ui.hpcFreq2, ui.hpcPhase2, ui.hpcAmp3, ui.hpcFreq3, ui.hpcPhase3, ui.hpcScale, ui.hpcRotation];
-            sliders.forEach(slider => slider.addEventListener('input', updateHPCProjection));
-            ui.calibrateProjectionBtn.addEventListener('click', calibrateProjection);
-        }
-
-        function updateHPCProjection() {
-            if (!systemState.hpc.active) return;
-            systemState.hpc.userProjection = {
-                osc1: { amp: parseFloat(ui.hpcAmp1.value), freq: parseFloat(ui.hpcFreq1.value), phase: parseFloat(ui.hpcPhase1.value) },
-                osc2: { amp: parseFloat(ui.hpcAmp2.value), freq: parseFloat(ui.hpcFreq2.value), phase: parseFloat(ui.hpcPhase2.value) },
-                osc3: { amp: parseFloat(ui.hpcAmp3.value), freq: parseFloat(ui.hpcFreq3.value), phase: parseFloat(ui.hpcPhase3.value) },
-                scale: parseFloat(ui.hpcScale.value),
-                rotation: parseFloat(ui.hpcRotation.value)
-            };
-            calculateCoherence();
-            drawProjection();
-        }
-
-        function animateHPCProjection(time) {
-            drawProjection(time / 1000); // Pass time for dynamic phase shift
-            systemState.hpc.animationFrame = requestAnimationFrame(animateHPCProjection);
-        }
-
-        function drawProjection(time = 0) {
-            const ctx = systemState.hpc.ctx;
-            const canvas = ui.hpcProjectionCanvas;
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const maxRadius = Math.min(centerX, centerY) * 0.7; // Max radius for the shape
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw Target Projection Outline (Subtle Glow)
-            ctx.save();
-            ctx.translate(centerX, centerY);
-            ctx.rotate(systemState.hpc.targetProjection.rotation);
-            ctx.scale(systemState.hpc.targetProjection.scale, systemState.hpc.targetProjection.scale);
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(150, 255, 150, 0.3)`; // Target outline color
-            ctx.lineWidth = 5;
-            ctx.shadowColor = `var(--hpc-glow)`;
-            ctx.shadowBlur = 20;
-
-            for (let i = 0; i <= 360; i++) {
-                const angle = i * (Math.PI / 180);
-                const x = Math.cos(angle * systemState.hpc.targetProjection.osc1.freq + systemState.hpc.targetProjection.osc1.phase + time * 0.1) * maxRadius * systemState.hpc.targetProjection.osc1.amp +
-                          Math.cos(angle * systemState.hpc.targetProjection.osc2.freq + systemState.hpc.targetProjection.osc2.phase + time * 0.15) * maxRadius * systemState.hpc.targetProjection.osc2.amp +
-                          Math.cos(angle * systemState.hpc.targetProjection.osc3.freq + systemState.hpc.targetProjection.osc3.phase + time * 0.2) * maxRadius * systemState.hpc.targetProjection.osc3.amp;
-                const y = Math.sin(angle * systemState.hpc.targetProjection.osc1.freq + systemState.hpc.targetProjection.osc1.phase + time * 0.1) * maxRadius * systemState.hpc.targetProjection.osc1.amp +
-                          Math.sin(angle * systemState.hpc.targetProjection.osc2.freq + systemState.hpc.targetProjection.osc2.phase + time * 0.15) * maxRadius * systemState.hpc.targetProjection.osc2.amp +
-                          Math.sin(angle * systemState.hpc.targetProjection.osc3.freq + systemState.hpc.targetProjection.osc3.phase + time * 0.2) * maxRadius * systemState.hpc.targetProjection.osc3.amp;
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.stroke();
-            ctx.restore();
-
-            // Draw User Projection (Vibrant)
-            ctx.save();
-            ctx.translate(centerX, centerY);
-            ctx.rotate(systemState.hpc.userProjection.rotation);
-            ctx.scale(systemState.hpc.userProjection.scale, systemState.hpc.userProjection.scale);
-            
-            const userProj = systemState.hpc.userProjection;
-
-            // Layer 1
-            ctx.beginPath();
-            ctx.strokeStyle = `var(--hpc-osc-color1)`;
-            ctx.lineWidth = 6;
-            ctx.shadowColor = `var(--hpc-osc-color1)`;
-            ctx.shadowBlur = 15;
-            for (let i = 0; i <= 360; i++) {
-                const angle = i * (Math.PI / 180);
-                const x = Math.cos(angle * userProj.osc1.freq + userProj.osc1.phase + time * 0.1) * maxRadius * userProj.osc1.amp;
-                const y = Math.sin(angle * userProj.osc1.freq + userProj.osc1.phase + time * 0.1) * maxRadius * userProj.osc1.amp;
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.stroke();
-
-            // Layer 2
-            ctx.beginPath();
-            ctx.strokeStyle = `var(--hpc-osc-color2)`;
-            ctx.lineWidth = 4;
-            ctx.shadowColor = `var(--hpc-osc-color2)`;
-            ctx.shadowBlur = 12;
-            for (let i = 0; i <= 360; i++) {
-                const angle = i * (Math.PI / 180);
-                const x = Math.cos(angle * userProj.osc2.freq + userProj.osc2.phase + time * 0.15) * maxRadius * userProj.osc2.amp;
-                const y = Math.sin(angle * userProj.osc2.freq + userProj.osc2.phase + time * 0.15) * maxRadius * userProj.osc2.amp;
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.stroke();
-
-            // Layer 3
-            ctx.beginPath();
-            ctx.strokeStyle = `var(--hpc-osc-color3)`;
-            ctx.lineWidth = 3;
-            ctx.shadowColor = `var(--hpc-osc-color3)`;
-            ctx.shadowBlur = 10;
-            for (let i = 0; i <= 360; i++) {
-                const angle = i * (Math.PI / 180);
-                const x = Math.cos(angle * userProj.osc3.freq + userProj.osc3.phase + time * 0.2) * maxRadius * userProj.osc3.amp;
-                const y = Math.sin(angle * userProj.osc3.freq + userProj.osc3.phase + time * 0.2) * maxRadius * userProj.osc3.amp;
-                if (i === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.stroke();
-
-            ctx.restore();
-            ctx.shadowBlur = 0; // Reset shadow for other drawings
-        }
-
-        function calculateCoherence() {
-            const target = systemState.hpc.targetProjection;
-            const user = systemState.hpc.userProjection;
-
-            let diff = 0;
-            diff += Math.abs(user.osc1.amp - target.osc1.amp);
-            diff += Math.abs(user.osc1.freq - target.osc1.freq);
-            diff += Math.abs(user.osc1.phase - target.osc1.phase);
-            diff += Math.abs(user.osc2.amp - target.osc2.amp);
-            diff += Math.abs(user.osc2.freq - target.osc2.freq);
-            diff += Math.abs(user.osc2.phase - target.osc2.phase);
-            diff += Math.abs(user.osc3.amp - target.osc3.amp);
-            diff += Math.abs(user.osc3.freq - target.osc3.freq);
-            diff += Math.abs(user.osc3.phase - target.osc3.phase);
-            diff += Math.abs(user.scale - target.scale) * 2; // Scale has more impact
-            diff += Math.abs(user.rotation - target.rotation) * 1.5; // Rotation also significant
-
-            // Normalize difference to a 0-1 range (adjust maxDiff based on parameter ranges)
-            const maxDiff = (1 * 3) + (5 * 3) + (6.28 * 3) + (1.5 * 2) + (6.28 * 1.5); // Rough sum of max possible diffs
-            let coherence = 100 - ((diff / maxDiff) * 100);
-            coherence = clamp(coherence, 0, 100);
-
-            systemState.hpc.coherence = coherence;
-            ui.hpcCoherenceStatus.textContent = `Coherence: ${coherence.toFixed(1)}%`;
-
-            if (coherence >= 95) { // High coherence required for calibration
-                ui.calibrateProjectionBtn.disabled = false;
-            } else {
-                ui.calibrateProjectionBtn.disabled = true;
-            }
-        }
-
-        function calibrateProjection() {
-            if (systemState.hpc.coherence >= 95) {
-                addLogEntry('HPC: Hyper-Projection calibrated successfully! Global stability increased.', 'success');
-                systemState.globalStability += 30;
-                endHPC(true);
-            } else {
-                addLogEntry('HPC: Coherence too low for calibration. Re-adjust parameters.', 'warning');
+                addLogEntry('QES: Entanglement stabilization failed. Re-evaluate particle states.', 'warning');
                 systemState.globalStability -= 15;
             }
             checkGlobalStability();
         }
 
-        function endHPC(success) {
-            systemState.hpc.active = false;
-            if (systemState.hpc.animationFrame) cancelAnimationFrame(systemState.hpc.animationFrame);
-            ui.calibrateProjectionBtn.textContent = 'Calibrate Projection';
-            ui.calibrateProjectionBtn.disabled = true;
-            if (!success) { // Failed calibration will reset module
-                addLogEntry('HPC: Projection calibration failed. Reinitializing module.', 'critical');
-                triggerAnomalyAlert('HPC: Projection drift detected! Reality distortions increasing.');
+        function endQES(success) {
+            systemState.qes.active = false;
+            ui.stabilizeEntanglementBtn.textContent = 'Stabilize Entanglement';
+            ui.stabilizeEntanglementBtn.disabled = true;
+            if (!success) {
+                addLogEntry('QES: Entanglement collapse! Reality coherence severely degraded.', 'critical');
+                triggerAnomalyAlert('QES: Entanglement field destabilized! Reality coherence at risk.');
+                systemState.globalStability -= 35;
+            }
+            checkGlobalStability();
+            initQES(); // Start a new round
+        }
+        ui.stabilizeEntanglementBtn.addEventListener('click', stabilizeEntanglement);
+        initQES(); // Initial setup
+
+        // --- GRAVITATIONAL SINGULARITY HARMONIZER (GSH) ---
+        function initGSH() {
+            systemState.gsh.active = true;
+            systemState.gsh.ctx = ui.gshSimulationCanvas.getContext('2d');
+            resizeGSHCanvas();
+
+            // Clear previous mass points
+            ui.gshSimulationArea.querySelectorAll('.gsh-mass-point').forEach(el => el.remove());
+            systemState.gsh.massPoints = [];
+            
+            // Initial probe position and velocity
+            systemState.gsh.probe = {
+                x: ui.gshSimulationCanvas.width / 2,
+                y: ui.gshSimulationCanvas.height / 2,
+                vx: (Math.random() - 0.5) * 5, // Small random velocity
+                vy: (Math.random() - 0.5) * 5,
+                radius: 10,
+                path: []
+            };
+
+            // Generate 3-4 random mass points
+            const numMassPoints = Math.floor(Math.random() * 2) + 3; // 3 to 4 points
+            for (let i = 0; i < numMassPoints; i++) {
+                const mpId = `mass-${i}`;
+                const massEl = document.createElement('div');
+                massEl.classList.add('gsh-mass-point');
+                massEl.setAttribute('data-id', mpId);
+                massEl.textContent = `M${i+1}`;
+                ui.gshSimulationArea.appendChild(massEl);
+
+                const massPoint = {
+                    id: mpId,
+                    x: Math.random() * ui.gshSimulationCanvas.width * 0.8 + ui.gshSimulationCanvas.width * 0.1,
+                    y: Math.random() * ui.gshSimulationCanvas.height * 0.8 + ui.gshSimulationCanvas.height * 0.1,
+                    mass: Math.random() * 200 + 100, // Random mass
+                    element: massEl,
+                    isDragging: false,
+                };
+                massEl.style.left = `${massPoint.x}px`;
+                massEl.style.top = `${massPoint.y}px`;
+                massEl.style.transform = `translate(-50%, -50%)`;
+                systemState.gsh.massPoints.push(massPoint);
+                setupDraggableMassPoint(massPoint);
+            }
+
+            // Target orbit zone (randomized within the central area)
+            systemState.gsh.targetOrbitZone = {
+                x: 0.4 + Math.random() * 0.2, // 0.4-0.6
+                y: 0.4 + Math.random() * 0.2,
+                innerRadius: 0.08 + Math.random() * 0.05, // 8-13%
+                outerRadius: 0.15 + Math.random() * 0.08, // 15-23%
+            };
+
+            ui.gshStatus.textContent = 'Orbital Stability: 0%. Probe: Drifting.';
+            ui.harmonizeSingularityBtn.disabled = true;
+            
+            if (systemState.gsh.animationFrame) cancelAnimationFrame(systemState.gsh.animationFrame);
+            systemState.gsh.animationFrame = requestAnimationFrame(animateGSHSimulation);
+            addLogEntry('GSH: Gravitational Singularity Harmonizer ready. Guide the probe.', 'event');
+        }
+
+        function resizeGSHCanvas() {
+            if (ui.gshSimulationCanvas) {
+                ui.gshSimulationCanvas.width = ui.gshSimulationCanvas.offsetWidth;
+                ui.gshSimulationCanvas.height = ui.gshSimulationCanvas.offsetHeight;
+            }
+        }
+        window.addEventListener('resize', resizeGSHCanvas);
+
+        function setupDraggableMassPoint(massPoint) {
+            let initialMouseX, initialMouseY, initialPointX, initialPointY;
+
+            massPoint.element.addEventListener('mousedown', (e) => {
+                massPoint.isDragging = true;
+                initialMouseX = e.clientX;
+                initialMouseY = e.clientY;
+                initialPointX = massPoint.x;
+                initialPointY = massPoint.y;
+                massPoint.element.style.cursor = 'grabbing';
+            });
+
+            ui.gshSimulationArea.addEventListener('mousemove', (e) => {
+                if (!massPoint.isDragging) return;
+
+                const dx = e.clientX - initialMouseX;
+                const dy = e.clientY - initialMouseY;
+
+                massPoint.x = clamp(initialPointX + dx, massPoint.element.offsetWidth / 2, ui.gshSimulationCanvas.width - massPoint.element.offsetWidth / 2);
+                massPoint.y = clamp(initialPointY + dy, massPoint.element.offsetHeight / 2, ui.gshSimulationCanvas.height - massPoint.element.offsetHeight / 2);
+                
+                massPoint.element.style.left = `${massPoint.x}px`;
+                massPoint.element.style.top = `${massPoint.y}px`;
+                
+                resetGSHProbe(); // Reset probe motion when mass points are moved
+                updateGSHStatus();
+            });
+
+            ui.gshSimulationArea.addEventListener('mouseup', () => {
+                if (massPoint.isDragging) {
+                    massPoint.isDragging = false;
+                    massPoint.element.style.cursor = 'grab';
+                }
+            });
+            ui.gshSimulationArea.addEventListener('mouseleave', () => { // If mouse leaves element while dragging
+                if (massPoint.isDragging) {
+                    massPoint.isDragging = false;
+                    massPoint.element.style.cursor = 'grab';
+                }
+            });
+        }
+
+        function resetGSHProbe() {
+            systemState.gsh.probe.x = ui.gshSimulationCanvas.width / 2;
+            systemState.gsh.probe.y = ui.gshSimulationCanvas.height / 2;
+            systemState.gsh.probe.vx = (Math.random() - 0.5) * 5;
+            systemState.gsh.probe.vy = (Math.random() - 0.5) * 5;
+            systemState.gsh.probe.path = [];
+        }
+
+        function animateGSHSimulation(time) {
+            const ctx = systemState.gsh.ctx;
+            const canvas = ui.gshSimulationCanvas;
+            const probe = systemState.gsh.probe;
+            const massPoints = systemState.gsh.massPoints;
+            const dt = systemState.gsh.simulationTimeStep; // Fixed time step
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw target orbit zone
+            ctx.beginPath();
+            const zoneX = systemState.gsh.targetOrbitZone.x * canvas.width;
+            const zoneY = systemState.gsh.targetOrbitZone.y * canvas.height;
+            const innerR = systemState.gsh.targetOrbitZone.innerRadius * Math.min(canvas.width, canvas.height);
+            const outerR = systemState.gsh.targetOrbitZone.outerRadius * Math.min(canvas.width, canvas.height);
+            
+            ctx.arc(zoneX, zoneY, outerR, 0, Math.PI * 2);
+            ctx.arc(zoneX, zoneY, innerR, 0, Math.PI * 2, true); // Inner ring for 'donut' shape
+            ctx.fillStyle = 'var(--gsh-orbit-zone)';
+            ctx.fill();
+            ctx.strokeStyle = 'rgba(0, 255, 150, 0.5)';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Calculate net force on probe
+            let Fx = 0, Fy = 0;
+            massPoints.forEach(mp => {
+                const dx = mp.x - probe.x;
+                const dy = mp.y - probe.y;
+                const distSq = dx*dx + dy*dy;
+                const dist = Math.sqrt(distSq);
+
+                if (dist > 1) { // Avoid division by zero/huge force when very close
+                    const force = systemState.gsh.GRAVITATIONAL_CONSTANT * mp.mass / distSq;
+                    Fx += force * (dx / dist);
+                    Fy += force * (dy / dist);
+                }
+            });
+
+            // Update probe velocity and position
+            probe.vx += Fx * dt;
+            probe.vy += Fy * dt;
+            probe.x += probe.vx * dt;
+            probe.y += probe.vy * dt;
+
+            // Collision with canvas edges (bounce)
+            if (probe.x < 0 || probe.x > canvas.width) probe.vx *= -1;
+            if (probe.y < 0 || probe.y > canvas.height) probe.vy *= -1;
+            probe.x = clamp(probe.x, 0, canvas.width);
+            probe.y = clamp(probe.y, 0, canvas.height);
+
+            // Store path for drawing
+            probe.path.push({ x: probe.x, y: probe.y });
+            if (probe.path.length > 200) probe.path.shift(); // Keep path history limited
+
+            // Draw probe path
+            ctx.beginPath();
+            ctx.strokeStyle = 'var(--gsh-path)';
+            ctx.lineWidth = 2;
+            ctx.lineJoin = 'round';
+            if (probe.path.length > 1) {
+                ctx.moveTo(probe.path[0].x, probe.path[0].y);
+                for (let i = 1; i < probe.path.length; i++) {
+                    ctx.lineTo(probe.path[i].x, probe.path[i].y);
+                }
+            }
+            ctx.stroke();
+
+            // Draw probe
+            ctx.beginPath();
+            ctx.arc(probe.x, probe.y, probe.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'var(--gsh-probe)';
+            ctx.shadowColor = 'var(--gsh-probe)';
+            ctx.shadowBlur = 20;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // Update status & request next frame
+            updateGSHStatus();
+            systemState.gsh.animationFrame = requestAnimationFrame(animateGSHSimulation);
+        }
+
+        function updateGSHStatus() {
+            const probe = systemState.gsh.probe;
+            const canvas = ui.gshSimulationCanvas;
+            const zoneX = systemState.gsh.targetOrbitZone.x * canvas.width;
+            const zoneY = systemState.gsh.targetOrbitZone.y * canvas.height;
+            const innerR = systemState.gsh.targetOrbitZone.innerRadius * Math.min(canvas.width, canvas.height);
+            const outerR = systemState.gsh.targetOrbitZone.outerRadius * Math.min(canvas.width, canvas.height);
+
+            const distFromZoneCenter = Math.sqrt(Math.pow(probe.x - zoneX, 2) + Math.pow(probe.y - zoneY, 2));
+
+            let probeStatus = 'Drifting';
+            let stabilityScore = 0;
+
+            if (distFromZoneCenter >= innerR && distFromZoneCenter <= outerR) {
+                probeStatus = 'In Orbit Zone';
+                const speed = Math.sqrt(probe.vx * probe.vx + probe.vy * probe.vy);
+                // More complex stability could check for consistent speed/radius/period
+                // For simplicity, if it's in the zone, it's pretty stable.
+                stabilityScore = 70 + (Math.random() * 30); // Random high score if in zone
+                stabilityScore = clamp(stabilityScore, 0, 100);
+            } else {
+                stabilityScore = 0;
+            }
+
+            systemState.gsh.stabilityScore = stabilityScore;
+            ui.gshStatus.textContent = `Orbital Stability: ${stabilityScore.toFixed(0)}%. Probe: ${probeStatus}.`;
+
+            if (stabilityScore >= 95) { // Requires high stability
+                ui.harmonizeSingularityBtn.disabled = false;
+                addLogEntry('GSH: Probe achieved stable orbit! Ready for harmonization.', 'success');
+            } else {
+                ui.harmonizeSingularityBtn.disabled = true;
+            }
+            checkGlobalStability();
+        }
+
+        function harmonizeSingularity() {
+            if (!systemState.gsh.active || ui.harmonizeSingularityBtn.disabled) return;
+            
+            if (systemState.gsh.stabilityScore >= 95) {
+                addLogEntry('GSH: Gravitational field successfully harmonized! Global stability increased.', 'success');
+                systemState.globalStability += 30;
+                endGSH(true);
+            } else {
+                addLogEntry('GSH: Singularity harmonization failed. Field unstable.', 'warning');
+                systemState.globalStability -= 18;
+            }
+            checkGlobalStability();
+        }
+
+        function endGSH(success) {
+            systemState.gsh.active = false;
+            if (systemState.gsh.animationFrame) cancelAnimationFrame(systemState.gsh.animationFrame);
+            ui.harmonizeSingularityBtn.textContent = 'Harmonize Singularity';
+            ui.harmonizeSingularityBtn.disabled = true;
+            ui.gshSimulationArea.querySelectorAll('.gsh-mass-point').forEach(el => el.remove());
+            if (!success) {
+                addLogEntry('GSH: Gravitational field collapsed! Space-time distortions escalating.', 'critical');
+                triggerAnomalyAlert('GSH: Singularity instability detected! Space-time fabric tearing.');
                 systemState.globalStability -= 40;
             }
             checkGlobalStability();
-            initHPC(); // Start a new round
+            initGSH(); // Start a new round
         }
+        ui.harmonizeSingularityBtn.addEventListener('click', harmonizeSingularity);
+        initGSH(); // Initial setup
 
-        initHPC(); // Initial setup
-
-
-        // --- CHRONAL DRIFT COMPENSATOR (CDC) ---
-        function initCDC() {
-            systemState.cdc.active = true;
-            ui.cdcTimelineArea.innerHTML = '';
-            ui.cdcDriftStatus.textContent = 'Temporal Deviation: Critical.';
-            ui.compensateDriftBtn.disabled = true;
-
-            systemState.cdc.timelineWidth = ui.cdcTimelineArea.offsetWidth;
-            systemState.cdc.timelineHeight = ui.cdcTimelineArea.offsetHeight;
-
-            systemState.cdc.layers = [];
-            const numLayers = 4; // Number of temporal layers
-            const layerHeight = systemState.cdc.timelineHeight / numLayers;
-
-            // Generate drift zones first, as they are static targets
-            systemState.cdc.driftZones = [];
-            const zoneWidth = 0.1; // 10% of timeline width
-            const zoneCenterRatio = 0.5; // Center of the timeline
-            const zoneStartRatio = zoneCenterRatio - (zoneWidth / 2);
-            const zoneEndRatio = zoneCenterRatio + (zoneWidth / 2);
-
-            const driftZoneEl = document.createElement('div');
-            driftZoneEl.classList.add('cdc-drift-zone');
-            driftZoneEl.style.left = `${zoneStartRatio * 100}%`;
-            driftZoneEl.style.width = `${zoneWidth * 100}%`;
-            ui.cdcTimelineArea.appendChild(driftZoneEl);
-            // Add text label inside drift zone for clarity
-            const zoneLabel = document.createElement('span');
-            zoneLabel.textContent = `ALIGN ZONE`;
-            zoneLabel.style.position = 'absolute';
-            zoneLabel.style.top = '50%';
-            zoneLabel.style.left = '50%';
-            zoneLabel.style.transform = 'translate(-50%, -50%)';
-            zoneLabel.style.fontFamily = 'Share Tech Mono';
-            zoneLabel.style.fontSize = '1.8rem';
-            zoneLabel.style.color = 'rgba(255, 255, 255, 0.2)';
-            zoneLabel.style.pointerEvents = 'none';
-            driftZoneEl.appendChild(zoneLabel);
-
-            // This single drift zone applies to all layers for simplicity
-            systemState.cdc.driftZones.push({
-                startRatio: zoneStartRatio,
-                endRatio: zoneEndRatio,
-                element: driftZoneEl
-            });
-
-
-            for (let i = 0; i < numLayers; i++) {
-                const layerEl = document.createElement('div');
-                layerEl.classList.add('cdc-temporal-layer');
-                layerEl.style.top = `${i * layerHeight}px`;
-                layerEl.style.height = `${layerHeight}px`;
-                layerEl.style.zIndex = `${i + 1}`;
-                ui.cdcTimelineArea.appendChild(layerEl);
-
-                // Random initial horizontal position for layer (0-70% from left)
-                const initialXOffset = Math.random() * 0.7; // As a ratio of width
-                layerEl.style.left = `${initialXOffset * 100}%`;
-
-                // Set initial random correct X position for this layer (relative to its own left)
-                const correctXOffset = Math.random() * 0.5 + 0.2; // 20-70% of layer width
-                const anchorLabel = systemState.cdc.anchorPoints[i];
-
-                const anchorEl = document.createElement('div');
-                anchorEl.classList.add('cdc-chrono-anchor');
-                anchorEl.textContent = anchorLabel;
-                anchorEl.style.left = `${correctXOffset * 100}%`; // Position relative to layer's content area
-                anchorEl.style.top = '50%';
-                anchorEl.style.transform = 'translate(-50%, -50%)';
-                layerEl.appendChild(anchorEl);
-
-                systemState.cdc.layers.push({
-                    id: `Layer${i+1}`,
-                    element: layerEl,
-                    currentLeft: initialXOffset * systemState.cdc.timelineWidth, // Pixels from timeline left
-                    targetXRatio: correctXOffset, // Anchor's ideal X within its layer as ratio
-                    anchorElement: anchorEl,
-                    driftZone: driftZoneEl // Point to the single drift zone
-                });
-
-                setupDraggableLayer(layerEl, i);
+        // --- PSIONIC RESONANCE SYNTHESIZER (PRS) ---
+        function initPRS() {
+            systemState.prs.active = true;
+            systemState.prs.ctx = ui.prsCanvas.getContext('2d');
+            resizePRSCanvas();
+            
+            // Audio Context setup
+            if (!systemState.prs.audioContext) {
+                systemState.prs.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                addLogEntry('PRS: Web Audio API initialized.', 'info');
             }
-            updateCDCDriftStatus();
-            addLogEntry('CDC: Chronal Drift Compensator active. Align temporal anchors.', 'event');
+            // Stop existing oscillators
+            systemState.prs.oscillators.forEach(osc => {
+                try { osc.stop(); osc.disconnect(); } catch (e) {}
+            });
+            systemState.prs.oscillators = [];
+
+            ui.prsSynthesizerArea.querySelectorAll('.prs-modulator').forEach(el => el.remove());
+            systemState.prs.modulators = [];
+            systemState.prs.targetResonance = [];
+
+            const canvas = ui.prsCanvas;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const maxOuterRadius = Math.min(centerX, centerY) * 0.8;
+            const ringSpacing = maxOuterRadius / systemState.prs.numRings;
+            systemState.prs.ringRadii = [];
+
+            for (let i = 0; i < systemState.prs.numRings; i++) {
+                const radius = (i + 1) * ringSpacing;
+                systemState.prs.ringRadii.push(radius);
+
+                // Random target angle for this ring
+                const targetAngle = Math.random() * Math.PI * 2;
+                systemState.prs.targetResonance.push({ ringIndex: i, angle: targetAngle });
+
+                // Create modulator DOM element
+                const modulatorId = `modulator-${i}`;
+                const modulatorEl = document.createElement('div');
+                modulatorEl.classList.add('prs-modulator');
+                modulatorEl.setAttribute('data-id', modulatorId);
+                modulatorEl.setAttribute('data-ring', i);
+                ui.prsSynthesizerArea.appendChild(modulatorEl);
+
+                // Initial position (random, but close to target for a starting point)
+                const initialAngle = targetAngle + (Math.random() - 0.5) * 1.5; // +/- 0.75 radians from target
+                const modulator = {
+                    id: modulatorId,
+                    ringIndex: i,
+                    angle: initialAngle,
+                    element: modulatorEl,
+                    isDragging: false,
+                    radius: radius, // Store radius for positioning
+                };
+                systemState.prs.modulators.push(modulator);
+                positionPRSModulator(modulator);
+                setupDraggablePRSModulator(modulator);
+
+                // Setup oscillator for this ring
+                const oscillator = systemState.prs.audioContext.createOscillator();
+                oscillator.type = 'sine'; // Can vary type: 'sine', 'square', 'sawtooth', 'triangle'
+                oscillator.frequency.setValueAtTime(440 + i * 220, systemState.prs.audioContext.currentTime); // Base frequencies
+                const gainNode = systemState.prs.audioContext.createGain();
+                gainNode.gain.setValueAtTime(0.01, systemState.prs.audioContext.currentTime); // Start quiet
+                oscillator.connect(gainNode).connect(systemState.prs.audioContext.destination);
+                oscillator.start();
+                systemState.prs.oscillators.push({ osc: oscillator, gain: gainNode });
+            }
+
+            ui.prsStatus.textContent = 'Resonance Coherence: 0%';
+            ui.synthesizeResonanceBtn.disabled = true;
+
+            if (systemState.prs.animationFrame) cancelAnimationFrame(systemState.prs.animationFrame);
+            systemState.prs.animationFrame = requestAnimationFrame(animatePRSSynthesizer);
+            addLogEntry('PRS: Psionic Resonance Synthesizer active. Align frequency modulators.', 'event');
         }
 
-        // function generateCDCDriftZones() { // This function is now merged into initCDC for simplicity with a single zone
-        //     // ... (removed, logic moved)
-        // }
+        function resizePRSCanvas() {
+            if (ui.prsCanvas) {
+                ui.prsCanvas.width = ui.prsCanvas.offsetWidth;
+                ui.prsCanvas.height = ui.prsCanvas.offsetHeight;
+                if (systemState.prs.active) {
+                    // Recalculate modulator positions and ring radii
+                    const canvas = ui.prsCanvas;
+                    const centerX = canvas.width / 2;
+                    const centerY = canvas.height / 2;
+                    const maxOuterRadius = Math.min(centerX, centerY) * 0.8;
+                    const ringSpacing = maxOuterRadius / systemState.prs.numRings;
+                    systemState.prs.ringRadii = [];
+                    systemState.prs.modulators.forEach((mod, i) => {
+                        const radius = (i + 1) * ringSpacing;
+                        mod.radius = radius;
+                        positionPRSModulator(mod);
+                    });
+                    drawPRSSynthesizer();
+                }
+            }
+        }
+        window.addEventListener('resize', resizePRSCanvas);
 
-        function setupDraggableLayer(layerEl, layerIndex) {
-            let isDragging = false;
-            let currentX;
-            let initialMouseX;
-            let initialLayerLeft;
+        function positionPRSModulator(modulator) {
+            const canvas = ui.prsCanvas;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            const x = centerX + Math.cos(modulator.angle) * modulator.radius;
+            const y = centerY + Math.sin(modulator.angle) * modulator.radius;
+            
+            modulator.element.style.left = `${x}px`;
+            modulator.element.style.top = `${y}px`;
+            modulator.element.style.transform = `translate(-50%, -50%)`;
+        }
 
-            layerEl.style.pointerEvents = 'auto'; // Make layer itself draggable
+        function setupDraggablePRSModulator(modulator) {
+            let initialMouseX, initialMouseY;
+            let currentAngle;
 
-            layerEl.addEventListener('mousedown', (e) => {
-                if (!systemState.cdc.active) return;
-                isDragging = true;
-                systemState.cdc.draggedLayer = systemState.cdc.layers[layerIndex];
+            modulator.element.addEventListener('mousedown', (e) => {
+                modulator.isDragging = true;
                 initialMouseX = e.clientX;
-                initialLayerLeft = parseFloat(layerEl.style.left) / 100 * systemState.cdc.timelineWidth; // Convert % to px
-                layerEl.style.cursor = 'grabbing';
-                layerEl.classList.add('active'); // Highlight dragged layer
+                initialMouseY = e.clientY;
+                modulator.element.style.cursor = 'grabbing';
             });
 
-            ui.cdcTimelineArea.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                
-                const dx = e.clientX - initialMouseX;
-                currentX = initialLayerLeft + dx;
+            ui.prsSynthesizerArea.addEventListener('mousemove', (e) => {
+                if (!modulator.isDragging) return;
 
-                // Clamp layer position within timeline bounds (0 to max left)
-                // Allow layer to slide such that its anchor point can reach the edges of the timeline view.
-                // It's a bit tricky to perfectly clamp the layer itself while focusing on the anchor.
-                // For simplicity, let's clamp the layer's LEFT edge to allow the anchor to move within the view,
-                // roughly from -half_layer_width to timeline_width + half_layer_width.
-                const anchorEl = systemState.cdc.layers[layerIndex].anchorElement;
-                const anchorWidth = anchorEl.offsetWidth; // Assuming anchor is roughly square
-                const layerWidth = layerEl.offsetWidth;
-                const anchorRelativeXPx = systemState.cdc.layers[layerIndex].targetXRatio * layerWidth;
-                
-                // Calculate new layer.left such that the anchor's absolute position is `anchorAbsoluteXPx`
-                const newLayerLeftPx = clamp(
-                    currentX, 
-                    -anchorRelativeXPx, // Allows anchor to reach 0px absolute
-                    systemState.cdc.timelineWidth - anchorRelativeXPx // Allows anchor to reach timelineWidth absolute
-                );
+                const canvas = ui.prsCanvas;
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
 
-                layerEl.style.left = `${(newLayerLeftPx / systemState.cdc.timelineWidth) * 100}%`;
-                systemState.cdc.layers[layerIndex].currentLeft = newLayerLeftPx;
-                updateCDCDriftStatus();
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                // Calculate angle from center to mouse position
+                currentAngle = Math.atan2(mouseY - centerY, mouseX - centerX);
+                modulator.angle = currentAngle;
+                positionPRSModulator(modulator);
+                updatePRSStatus();
             });
 
-            ui.cdcTimelineArea.addEventListener('mouseup', () => {
-                if (isDragging) {
-                    isDragging = false;
-                    systemState.cdc.draggedLayer = null;
-                    layerEl.style.cursor = 'grab';
-                    layerEl.classList.remove('active');
-                    updateCDCDriftStatus();
+            ui.prsSynthesizerArea.addEventListener('mouseup', () => {
+                if (modulator.isDragging) {
+                    modulator.isDragging = false;
+                    modulator.element.style.cursor = 'grab';
+                }
+            });
+            ui.prsSynthesizerArea.addEventListener('mouseleave', () => {
+                if (modulator.isDragging) {
+                    modulator.isDragging = false;
+                    modulator.element.style.cursor = 'grab';
                 }
             });
         }
 
-        function updateCDCDriftStatus() {
-            let alignedAnchors = 0;
-            const timelinePxWidth = ui.cdcTimelineArea.offsetWidth;
-            const tolerancePx = systemState.cdc.alignmentTolerance * timelinePxWidth;
-            
-            // Assuming there's always at least one drift zone and all layers target it
-            const targetZone = systemState.cdc.driftZones[0];
-            const targetZoneStartPx = targetZone.startRatio * timelinePxWidth;
-            const targetZoneEndPx = targetZone.endRatio * timelinePxWidth;
+        function animatePRSSynthesizer(time) {
+            drawPRSSynthesizer(time / 1000);
+            updatePRSAudio();
+            systemState.prs.animationFrame = requestAnimationFrame(animatePRSSynthesizer);
+        }
 
-            systemState.cdc.layers.forEach(layer => {
-                const layerCurrentLeftPx = layer.currentLeft;
-                const anchorRelativeXPx = layer.targetXRatio * layer.element.offsetWidth; // Anchor pos relative to layer's left
-                const anchorAbsoluteXPx = layerCurrentLeftPx + anchorRelativeXPx; // Anchor pos relative to timeline left
+        function drawPRSSynthesizer(time = 0) {
+            const ctx = systemState.prs.ctx;
+            const canvas = ui.prsCanvas;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
 
-                // Check if anchor is within the target drift zone with tolerance
-                if (anchorAbsoluteXPx >= (targetZoneStartPx - tolerancePx) && anchorAbsoluteXPx <= (targetZoneEndPx + tolerancePx)) {
-                    layer.anchorElement.classList.add('target-aligned');
-                    alignedAnchors++;
-                } else {
-                    layer.anchorElement.classList.remove('target-aligned');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw rings
+            systemState.prs.ringRadii.forEach((radius, i) => {
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = 'var(--prs-ring-color)';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                // Draw target resonance marker
+                const targetMod = systemState.prs.targetResonance.find(t => t.ringIndex === i);
+                if (targetMod) {
+                    const tx = centerX + Math.cos(targetMod.angle) * radius;
+                    const ty = centerY + Math.sin(targetMod.angle) * radius;
+                    ctx.beginPath();
+                    ctx.arc(tx, ty, 15, 0, Math.PI * 2); // Small target circle
+                    ctx.strokeStyle = 'rgba(180, 255, 180, 0.5)';
+                    ctx.lineWidth = 5;
+                    ctx.shadowColor = 'var(--prs-glow)';
+                    ctx.shadowBlur = 10;
+                    ctx.stroke();
+                    ctx.shadowBlur = 0;
+                }
+
+                // Draw waveforms/resonance patterns based on modulator position
+                const modulator = systemState.prs.modulators.find(m => m.ringIndex === i);
+                if (modulator) {
+                    ctx.beginPath();
+                    let waveformColor;
+                    if (i === 0) waveformColor = 'var(--prs-waveform-color1)';
+                    else if (i === 1) waveformColor = 'var(--prs-waveform-color2)';
+                    else waveformColor = 'var(--prs-waveform-color3)';
+
+                    ctx.strokeStyle = waveformColor;
+                    ctx.lineWidth = 4;
+                    ctx.shadowColor = waveformColor;
+                    ctx.shadowBlur = 15;
+
+                    const numPoints = 100;
+                    for (let j = 0; j <= numPoints; j++) {
+                        const angleOffset = (j / numPoints) * Math.PI * 2;
+                        const waveAmp = 10 + Math.sin(angleOffset * 5 + time * (i+1) + modulator.angle * 2) * 5; // Dynamic wave
+                        const x = centerX + Math.cos(angleOffset) * (radius + waveAmp);
+                        const y = centerY + Math.sin(angleOffset) * (radius + waveAmp);
+                        if (j === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.closePath();
+                    ctx.stroke();
+                    ctx.shadowBlur = 0;
+                }
+            });
+        }
+
+        function updatePRSAudio() {
+            systemState.prs.modulators.forEach((mod, i) => {
+                const targetMod = systemState.prs.targetResonance.find(t => t.ringIndex === i);
+                if (!targetMod) return;
+
+                const { osc, gain } = systemState.prs.oscillators[i];
+                if (!osc || !gain) return;
+
+                const angleDiff = Math.abs(mod.angle - targetMod.angle);
+                const normalizedDiff = Math.min(angleDiff, Math.PI * 2 - angleDiff); // Shortest angular distance
+                
+                // Adjust frequency slightly based on angle for tonal feedback
+                const freqRange = 50; // Max frequency shift
+                const freqShift = Math.sin(normalizedDiff / (Math.PI / 2)) * freqRange; // Shift based on closeness to target
+                osc.frequency.setValueAtTime(440 + i * 220 + freqShift, systemState.prs.audioContext.currentTime);
+
+                // Adjust gain (volume) based on alignment (louder when closer)
+                const maxVolume = 0.15;
+                const minVolume = 0.01;
+                const alignmentFactor = 1 - (normalizedDiff / Math.PI); // 1 when aligned, 0 when opposite
+                const volume = minVolume + (maxVolume - minVolume) * alignmentFactor;
+                gain.gain.setValueAtTime(volume, systemState.prs.audioContext.currentTime);
+            });
+        }
+
+        function updatePRSStatus() {
+            let totalCoherence = 0;
+            systemState.prs.modulators.forEach(mod => {
+                const targetMod = systemState.prs.targetResonance.find(t => t.ringIndex === mod.ringIndex);
+                if (targetMod) {
+                    const angleDiff = Math.abs(mod.angle - targetMod.angle);
+                    const normalizedDiff = Math.min(angleDiff, Math.PI * 2 - angleDiff);
+                    const coherenceForMod = 100 - (normalizedDiff / Math.PI) * 100;
+                    totalCoherence += clamp(coherenceForMod, 0, 100);
                 }
             });
 
-            const totalAnchors = systemState.cdc.layers.length;
-            const alignmentPercentage = (totalAnchors > 0) ? (alignedAnchors / totalAnchors) * 100 : 100;
-            
-            ui.cdcDriftStatus.textContent = `Temporal Deviation: ${alignmentPercentage.toFixed(0)}% Aligned.`;
+            const overallCoherence = totalCoherence / systemState.prs.numRings;
+            systemState.prs.coherence = overallCoherence;
+            ui.prsStatus.textContent = `Resonance Coherence: ${overallCoherence.toFixed(1)}%`;
 
-            if (alignmentPercentage >= 100) {
-                ui.compensateDriftBtn.disabled = false;
+            if (overallCoherence >= 95) {
+                ui.synthesizeResonanceBtn.disabled = false;
+                addLogEntry('PRS: Resonance signature highly coherent! Ready for synthesis.', 'success');
             } else {
-                ui.compensateDriftBtn.disabled = true;
+                ui.synthesizeResonanceBtn.disabled = true;
             }
             checkGlobalStability();
         }
 
-        function compensateDrift() {
-            if (!systemState.cdc.active || ui.compensateDriftBtn.disabled) return;
-            
-            if (ui.cdcDriftStatus.textContent.includes("100% Aligned")) {
-                addLogEntry('CDC: Chronal drift compensated! Temporal stability restored. Global stability increased.', 'success');
-                systemState.globalStability += 35;
-                endCDC(true);
+        function synthesizeResonance() {
+            if (!systemState.prs.active || ui.synthesizeResonanceBtn.disabled) return;
+
+            if (systemState.prs.coherence >= 95) {
+                addLogEntry('PRS: Psionic resonance successfully synthesized! Global stability increased.', 'success');
+                systemState.globalStability += 32;
+                endPRS(true);
             } else {
-                addLogEntry('CDC: Chronal compensation failed. Recalibrate layers.', 'warning');
+                addLogEntry('PRS: Resonance synthesis failed. Signature unstable.', 'warning');
                 systemState.globalStability -= 20;
             }
             checkGlobalStability();
         }
 
-        function endCDC(success) {
-            systemState.cdc.active = false;
-            systemState.cdc.layers.forEach(layer => {
-                layer.anchorElement.classList.remove('target-aligned');
-                // Remove listeners - need to refactor setupDraggableLayer to return cleanup function or use event delegation
-                // For simplicity, just reset position
-                layer.element.style.left = '0%'; 
+        function endPRS(success) {
+            systemState.prs.active = false;
+            if (systemState.prs.animationFrame) cancelAnimationFrame(systemState.prs.animationFrame);
+            systemState.prs.oscillators.forEach(osc => {
+                try { osc.osc.stop(); osc.osc.disconnect(); } catch (e) {}
             });
-            ui.compensateDriftBtn.textContent = 'Compensate Drift';
-            ui.compensateDriftBtn.disabled = true;
-
-            // Clear drift zones visually
-            systemState.cdc.driftZones.forEach(zone => {
-                if(zone.element && zone.element.parentNode) zone.element.parentNode.removeChild(zone.element);
-            });
-            systemState.cdc.driftZones = []; // Clear array
+            systemState.prs.oscillators = [];
+            ui.synthesizeResonanceBtn.textContent = 'Synthesize Resonance';
+            ui.synthesizeResonanceBtn.disabled = true;
+            ui.prsSynthesizerArea.querySelectorAll('.prs-modulator').forEach(el => el.remove());
 
             if (!success) {
-                addLogEntry('CDC: Chronal compensation failure. Timeline fracture detected.', 'critical');
-                triggerAnomalyAlert('CDC: Timeline instability detected! Potential paradox imminent.');
+                addLogEntry('PRS: Resonance field destabilized! Psionic backlash detected.', 'critical');
+                triggerAnomalyAlert('PRS: Psionic field unstable! Reality perception distorted.');
+                systemState.globalStability -= 42;
+            }
+            checkGlobalStability();
+            initPRS(); // Start a new round
+        }
+        ui.synthesizeResonanceBtn.addEventListener('click', synthesizeResonance);
+        initPRS(); // Initial setup
+
+        // --- REALITY FABRIC REWEAVING (RFR) ---
+        function initRFR() {
+            systemState.rfr.active = true;
+            systemState.rfr.ctx = ui.rfrCanvas.getContext('2d');
+            resizeRFRCanvas();
+
+            ui.rfrReweavingArea.querySelectorAll('.rfr-node').forEach(el => el.remove());
+            systemState.rfr.nodes = [];
+            systemState.rfr.pairs = [];
+            systemState.rfr.drawnLines = [];
+            systemState.rfr.currentDrawing = null;
+            systemState.rfr.isDrawing = false;
+            
+            generateRFRNodesAndPairs();
+            drawRFR();
+            updateRFRStatus();
+
+            ui.reweaveFabricBtn.disabled = true;
+            ui.rfrReweavingArea.addEventListener('mousemove', handleRFRMouseMove);
+            ui.rfrReweavingArea.addEventListener('mouseup', handleRFRMouseUp);
+            addLogEntry('RFR: Reality Fabric Reweaving module ready. Connect the threads.', 'event');
+        }
+
+        function resizeRFRCanvas() {
+            if (ui.rfrCanvas) {
+                ui.rfrCanvas.width = ui.rfrReweavingArea.offsetWidth;
+                ui.rfrCanvas.height = ui.rfrReweavingArea.offsetHeight;
+                if (systemState.rfr.active) drawRFR();
+            }
+        }
+        window.addEventListener('resize', resizeRFRCanvas);
+
+        function generateRFRNodesAndPairs() {
+            const gridCells = [];
+            for (let y = 0; y < 5; y++) {
+                for (let x = 0; x < 5; x++) {
+                    gridCells.push({ x, y });
+                }
+            }
+            shuffleArray(gridCells);
+
+            const numPairs = 3 + Math.floor(Math.random() * 2); // 3-4 pairs
+            let currentNodeId = 0;
+            const nodeLabels = ['A', 'B', 'C', 'D'];
+
+            for (let i = 0; i < numPairs; i++) {
+                if (gridCells.length < 2) break; // Not enough space for a pair
+
+                const startCell = gridCells.pop();
+                const endCell = gridCells.pop();
+
+                const startNode = {
+                    id: `node-${currentNodeId++}`,
+                    x: startCell.x,
+                    y: startCell.y,
+                    type: 'start',
+                    pairId: i,
+                    label: nodeLabels[i],
+                    element: null,
+                    connectedTo: null,
+                };
+                const endNode = {
+                    id: `node-${currentNodeId++}`,
+                    x: endCell.x,
+                    y: endCell.y,
+                    type: 'end',
+                    pairId: i,
+                    label: nodeLabels[i],
+                    element: null,
+                    connectedTo: null,
+                };
+
+                systemState.rfr.nodes.push(startNode, endNode);
+                systemState.rfr.pairs.push({ startNodeId: startNode.id, endNodeId: endNode.id });
+            }
+
+            systemState.rfr.nodes.forEach(node => {
+                const nodeEl = document.createElement('div');
+                nodeEl.classList.add('rfr-node', `${node.type}-node`);
+                nodeEl.setAttribute('data-id', node.id);
+                nodeEl.textContent = node.label;
+                nodeEl.style.left = `${(node.x + 0.5) / 5 * 100}%`;
+                nodeEl.style.top = `${(node.y + 0.5) / 5 * 100}%`;
+                nodeEl.style.transform = `translate(-50%, -50%)`;
+                nodeEl.addEventListener('mousedown', (e) => handleRFRMouseDown(e, node.id));
+                ui.rfrReweavingArea.appendChild(nodeEl);
+                node.element = nodeEl;
+            });
+            addLogEntry(`RFR: ${numPairs} fabric thread pairs generated.`, 'info');
+        }
+
+        function getNodePositionInCanvas(node) {
+            const rect = ui.rfrReweavingArea.getBoundingClientRect();
+            const nodeRect = node.element.getBoundingClientRect();
+            return {
+                x: nodeRect.left + nodeRect.width / 2 - rect.left,
+                y: nodeRect.top + nodeRect.height / 2 - rect.top
+            };
+        }
+
+        function handleRFRMouseDown(e, nodeId) {
+            if (!systemState.rfr.active || systemState.rfr.isDrawing) return;
+            const clickedNode = systemState.rfr.nodes.find(n => n.id === nodeId);
+            if (!clickedNode || clickedNode.type !== 'start' || clickedNode.connectedTo) return; // Only start from unconnected start nodes
+
+            systemState.rfr.isDrawing = true;
+            systemState.rfr.currentDrawing = {
+                startNode: clickedNode,
+                mouseX: e.clientX - ui.rfrCanvas.getBoundingClientRect().left,
+                mouseY: e.clientY - ui.rfrCanvas.getBoundingClientRect().top
+            };
+            clickedNode.element.classList.add('active-drawing');
+            drawRFR();
+        }
+
+        function handleRFRMouseMove(e) {
+            if (!systemState.rfr.active || !systemState.rfr.isDrawing) return;
+            systemState.rfr.currentDrawing.mouseX = e.clientX - ui.rfrCanvas.getBoundingClientRect().left;
+            systemState.rfr.currentDrawing.mouseY = e.clientY - ui.rfrCanvas.getBoundingClientRect().top;
+            drawRFR();
+        }
+
+        function handleRFRMouseUp(e) {
+            if (!systemState.rfr.active || !systemState.rfr.isDrawing) return;
+
+            const endX = e.clientX - ui.rfrCanvas.getBoundingClientRect().left;
+            const endY = e.clientY - ui.rfrCanvas.getBoundingClientRect().top;
+
+            let targetNode = null;
+            // Check if mouse released over a valid end node
+            for (const node of systemState.rfr.nodes) {
+                if (node.type === 'end' && !node.connectedTo && node.pairId === systemState.rfr.currentDrawing.startNode.pairId) {
+                    const pos = getNodePositionInCanvas(node);
+                    const dist = Math.sqrt(Math.pow(endX - pos.x, 2) + Math.pow(endY - pos.y, 2));
+                    if (dist < node.element.offsetWidth / 2) { // Within node radius
+                        targetNode = node;
+                        break;
+                    }
+                }
+            }
+
+            if (targetNode) {
+                const startPos = getNodePositionInCanvas(systemState.rfr.currentDrawing.startNode);
+                const endPos = getNodePositionInCanvas(targetNode);
+                const newLine = { start: startPos, end: endPos };
+
+                if (!checkIntersection(newLine, systemState.rfr.drawnLines)) {
+                    systemState.rfr.drawnLines.push(newLine);
+                    systemState.rfr.currentDrawing.startNode.connectedTo = targetNode.id;
+                    targetNode.connectedTo = systemState.rfr.currentDrawing.startNode.id;
+                    addLogEntry(`RFR: Thread ${systemState.rfr.currentDrawing.startNode.label} connected.`, 'info');
+                } else {
+                    addLogEntry(`RFR: Thread ${systemState.rfr.currentDrawing.startNode.label} tried to cross other threads. Intersection avoided.`, 'warning');
+                    systemState.globalStability -= 5; // Minor penalty for intersection
+                }
+            }
+            
+            systemState.rfr.currentDrawing.startNode.element.classList.remove('active-drawing');
+            systemState.rfr.isDrawing = false;
+            systemState.rfr.currentDrawing = null;
+            drawRFR();
+            updateRFRStatus();
+            checkGlobalStability();
+        }
+
+        function checkIntersection(newLine, existingLines) {
+            const p1 = newLine.start;
+            const q1 = newLine.end;
+
+            for (const existingLine of existingLines) {
+                const p2 = existingLine.start;
+                const q2 = existingLine.end;
+
+                if (doIntersect(p1, q1, p2, q2)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Helper functions for line intersection (from geometry algorithms)
+        function orientation(p, q, r) {
+            const val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+            if (val === 0) return 0; // Collinear
+            return (val > 0) ? 1 : 2; // Clockwise or Counterclockwise
+        }
+
+        function onSegment(p, q, r) {
+            return (q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x) &&
+                    q.y <= Math.max(p.y, r.y) && q.y >= Math.min(p.y, r.y));
+        }
+
+        function doIntersect(p1, q1, p2, q2) {
+            // Special case: If segments share an endpoint, they don't "cross"
+            if ((p1.x === p2.x && p1.y === p2.y) || (p1.x === q2.x && p1.y === q2.y) ||
+                (q1.x === p2.x && q1.y === p2.y) || (q1.x === q2.x && q1.y === q2.y)) {
+                return false;
+            }
+
+            const o1 = orientation(p1, q1, p2);
+            const o2 = orientation(p1, q1, q2);
+            const o3 = orientation(p2, q2, p1);
+            const o4 = orientation(p2, q2, q1);
+
+            // General case
+            if (o1 !== 0 && o1 !== o2 && o3 !== 0 && o3 !== o4) return true;
+
+            // Special Cases
+            // p1, q1 and p2 are collinear and p2 lies on segment p1q1
+            if (o1 === 0 && onSegment(p1, p2, q1)) return true;
+            // p1, q1 and q2 are collinear and q2 lies on segment p1q1
+            if (o2 === 0 && onSegment(p1, q2, q1)) return true;
+            // p2, q2 and p1 are collinear and p1 lies on segment p2q2
+            if (o3 === 0 && onSegment(p2, p1, q2)) return true;
+            // p2, q2 and q1 are collinear and q1 lies on segment p2q2
+            if (o4 === 0 && onSegment(p2, q1, q2)) return true;
+
+            return false; // Doesn't fall in any of the above cases
+        }
+
+
+        function drawRFR() {
+            const ctx = systemState.rfr.ctx;
+            const canvas = ui.rfrCanvas;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw existing lines
+            systemState.rfr.drawnLines.forEach(line => {
+                ctx.beginPath();
+                ctx.moveTo(line.start.x, line.start.y);
+                ctx.lineTo(line.end.x, line.end.y);
+                ctx.strokeStyle = 'var(--rfr-line-color)';
+                ctx.lineWidth = 10;
+                ctx.lineCap = 'round';
+                ctx.shadowColor = 'var(--rfr-glow)';
+                ctx.shadowBlur = 15;
+                ctx.stroke();
+            });
+
+            // Draw current drawing line if active
+            if (systemState.rfr.isDrawing && systemState.rfr.currentDrawing) {
+                const startPos = getNodePositionInCanvas(systemState.rfr.currentDrawing.startNode);
+                ctx.beginPath();
+                ctx.moveTo(startPos.x, startPos.y);
+                ctx.lineTo(systemState.rfr.currentDrawing.mouseX, systemState.rfr.currentDrawing.mouseY);
+                ctx.strokeStyle = 'var(--rfr-line-color)';
+                ctx.lineWidth = 10;
+                ctx.lineCap = 'round';
+                ctx.shadowColor = 'var(--rfr-glow)';
+                ctx.shadowBlur = 15;
+                ctx.stroke();
+            }
+            ctx.shadowBlur = 0; // Reset shadow
+        }
+
+        function updateRFRStatus() {
+            let connectedCount = 0;
+            let intersections = 0; // Intersection check is done during drawing for now
+
+            systemState.rfr.nodes.forEach(node => {
+                if (node.type === 'start' && node.connectedTo) {
+                    connectedCount++;
+                }
+            });
+
+            ui.rfrStatus.textContent = `Threads Connected: ${connectedCount}/${systemState.rfr.pairs.length}. Intersections: ${intersections}.`;
+
+            if (connectedCount === systemState.rfr.pairs.length && intersections === 0) {
+                ui.reweaveFabricBtn.disabled = false;
+                addLogEntry('RFR: All fabric threads connected without intersection! Ready for reweaving.', 'success');
+            } else {
+                ui.reweaveFabricBtn.disabled = true;
+            }
+            checkGlobalStability();
+        }
+
+        function reweaveFabric() {
+            if (!systemState.rfr.active || ui.reweaveFabricBtn.disabled) return;
+            
+            let connectedCount = 0;
+            systemState.rfr.nodes.forEach(node => {
+                if (node.type === 'start' && node.connectedTo) {
+                    connectedCount++;
+                }
+            });
+
+            if (connectedCount === systemState.rfr.pairs.length) { // Assuming no intersections could be drawn to get here
+                addLogEntry('RFR: Reality fabric successfully rewoven! Global stability increased.', 'success');
+                systemState.globalStability += 35;
+                endRFR(true);
+            } else {
+                addLogEntry('RFR: Fabric reweaving failed. Threads incomplete.', 'warning');
+                systemState.globalStability -= 22;
+            }
+            checkGlobalStability();
+        }
+
+        function endRFR(success) {
+            systemState.rfr.active = false;
+            ui.reweaveFabricBtn.textContent = 'Reweave Fabric';
+            ui.reweaveFabricBtn.disabled = true;
+            ui.rfrReweavingArea.removeEventListener('mousemove', handleRFRMouseMove);
+            ui.rfrReweavingArea.removeEventListener('mouseup', handleRFRMouseUp);
+            ui.rfrReweavingArea.querySelectorAll('.rfr-node').forEach(el => el.remove());
+            if (!success) {
+                addLogEntry('RFR: Fabric reweaving catastrophic failure! Multiversal schism detected.', 'critical');
+                triggerAnomalyAlert('RFR: Reality fabric torn! Existential threat imminent.');
                 systemState.globalStability -= 45;
             }
             checkGlobalStability();
-            initCDC(); // Start a new round
+            initRFR(); // Start a new round
         }
-        ui.compensateDriftBtn.addEventListener('click', compensateDrift);
-        initCDC(); // Initial setup
+        ui.reweaveFabricBtn.addEventListener('click', reweaveFabric);
+        initRFR(); // Initial setup
         
         // Initial setup for general anomaly checking interval
         setInterval(checkGlobalStability, 5000); // Check stability every 5 seconds
@@ -2267,4 +2306,4 @@
         checkGlobalStability();
     </script>
 </body>
-</html><ctrl63>
+</html>
