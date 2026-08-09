@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v2.5.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v3.0.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 2.5 Gen / v2.5.0) - More raw, electric, direct interaction focus */
+            /* Core Theme Colors (Hyper-Enhanced for 3rd Gen / v3.0.0) - More raw, electric, direct interaction focus */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.008); /* Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
-            --text-color: #E0FFFF; /* Even lighter text for hyper-readability */
+            --frosted-bg: rgba(255, 255, 255, 0.005); /* Even Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
+            --text-color: #E8FFFF; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.999); /* More visible, shimmering border */
             --console-bg: rgba(0, 0, 0, 0.999); /* Absolute black for console depth */
@@ -20,62 +20,50 @@
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
             --critical-color: #FF0000; /* Pure Red, highly urgent */
 
-            /* Stability Bar Colors (Now resource specific) - Kept for general status if needed */
-            --stability-good: linear-gradient(90deg, #33FF77 0%, #00E050 100%); /* Brighter, deeper green */
-            --stability-warning: linear-gradient(90deg, #FFFF55 0%, #FFB000 100%); /* Radiant Gold to DarkOrange */
-            --stability-critical: linear-gradient(90deg, #FF5050 0%, #C00000 100%); /* Bright Red to Deeper Red */
+            /* Gen 3.0.0 NEW: Chronal Drift Calibrator (CDC) */
+            --cdc-bg: rgba(20, 20, 10, 0.99); /* Deep gold-brown */
+            --cdc-border: rgba(255, 220, 100, 0.999); /* Bright antique gold */
+            --cdc-text: #FFFAE0; /* Pale cream */
+            --cdc-glow: rgba(255, 220, 100, 0.999);
+            --cdc-particle: rgba(255, 255, 0, 0.95); /* Yellow for time particles */
+            --cdc-target-zone: rgba(0, 255, 255, 0.15); /* Cyan for target capture */
+            --cdc-pulse: rgba(0, 255, 255, 0.7); /* Cyan pulse */
 
-            /* Gen 2.5.0 NEW: Quantum Entanglement Sequencer (QES) */
-            --qes-bg: rgba(10, 10, 30, 0.99); /* Deep blue-violet */
-            --qes-border: rgba(150, 200, 255, 0.999); /* Bright cosmic blue */
-            --qes-text: #E8F8FF; /* Pale blue */
-            --qes-glow: rgba(150, 200, 255, 0.999);
-            --qes-particle-off: rgba(0, 0, 80, 0.75);
-            --qes-particle-on: rgba(150, 200, 255, 0.95);
-            --qes-particle-sequence: rgba(255, 255, 0, 0.95); /* Yellow for sequence highlight */
-            --qes-particle-user-correct: rgba(0, 255, 0, 0.95); /* Green for correct user input */
-            --qes-particle-user-wrong: rgba(255, 0, 0, 0.95); /* Red for wrong user input */
-            --qes-entangled-pulse: rgba(255, 100, 255, 0.9); /* Magenta for entangled pulse */
+            /* Gen 3.0.0 NEW: Neural Network Rewiring (NNR) */
+            --nnr-bg: rgba(10, 20, 30, 0.99); /* Deep blue-grey */
+            --nnr-border: rgba(100, 200, 255, 0.999); /* Bright sky blue */
+            --nnr-text: #E0F8FF; /* Pale blue */
+            --nnr-glow: rgba(100, 200, 255, 0.999);
+            --nnr-node-off: rgba(50, 50, 70, 0.8);
+            --nnr-node-on: rgba(150, 200, 255, 0.95);
+            --nnr-connection-path: rgba(0, 255, 180, 0.6); /* Mint green path */
+            --nnr-signal-glow: rgba(0, 255, 180, 0.9);
 
-            /* Gen 2.5.0 NEW: Gravitational Anomaly Generator (GSH) */
-            --gsh-bg: rgba(30, 10, 10, 0.99); /* Deep red-orange */
-            --gsh-border: rgba(255, 150, 150, 0.999); /* Bright fiery red */
-            --gsh-text: #FFF8E8; /* Pale orange */
-            --gsh-glow: rgba(255, 150, 150, 0.999);
-            --gsh-probe: rgba(0, 220, 255, 0.95);
-            --gsh-target-zone: rgba(0, 255, 150, 0.15);
-            --gsh-pulse: rgba(255, 255, 0, 0.7); /* Yellow for anomaly pulse */
-            --gsh-drift-field: rgba(50, 50, 50, 0.05); /* Subtle grey field for drift */
-            --gsh-mass-point: rgba(255, 220, 0, 0.95); /* Existing mass points could be dynamic now */
+            /* Gen 3.0.0 NEW: Ethereal Resonance Harmonizer (ERH) */
+            --erh-bg: rgba(20, 10, 20, 0.99); /* Deep purple-pink */
+            --erh-border: rgba(255, 100, 200, 0.999); /* Bright fuchsia */
+            --erh-text: #FFEFF5; /* Pale pink */
+            --erh-glow: rgba(255, 100, 200, 0.999);
+            --erh-target-freq: #FFFF00; /* Yellow target */
+            --erh-user-freq: #00FFFF; /* Cyan user wave */
+            --erh-stable-zone: rgba(0, 255, 0, 0.2); /* Green stability zone */
+            --erh-modulator-handle: rgba(255, 100, 200, 1.0);
 
-            /* Gen 2.5.0 NEW: Psionic Waveform Synthesizer (PRS) */
-            --prs-bg: rgba(10, 30, 10, 0.99); /* Deep green-cyan */
-            --prs-border: rgba(180, 255, 180, 0.999); /* Bright mint green */
-            --prs-text: #E8FFE8; /* Pale green */
-            --prs-glow: rgba(180, 255, 180, 0.999);
-            --prs-target-wave: #FFFF00; /* Yellow for target waveform */
-            --prs-user-wave: #00FFFF; /* Cyan for user's combined waveform */
-            --prs-modulator-handle: rgba(230, 255, 50, 1.0);
-            --prs-component-wave1: #FF00FF;
-            --prs-component-wave2: #00FF00;
-            --prs-component-wave3: #FF8000;
+            /* Gen 3.0.0 NEW: Dimensional Gateway Constructor (DGC) */
+            --dgc-bg: rgba(10, 30, 10, 0.99); /* Deep emerald-green */
+            --dgc-border: rgba(100, 255, 100, 0.999); /* Bright lime green */
+            --dgc-text: #EFFFEF; /* Pale green */
+            --dgc-glow: rgba(100, 255, 100, 0.999);
+            --dgc-conduit-off: #303030;
+            --dgc-conduit-on: #00FF00;
+            --dgc-gateway-target: rgba(255, 255, 0, 0.2); /* Yellow for target area */
+            --dgc-active-flux: rgba(0, 255, 255, 0.8); /* Cyan for active flux */
 
-            /* Gen 2.5.0 NEW: Reality Fabric Pattern Weaver (RFR) */
-            --rfr-bg: rgba(30, 10, 30, 0.99); /* Deep magenta-purple */
-            --rfr-border: rgba(255, 180, 255, 0.999); /* Bright orchid */
-            --rfr-text: #FFEFFE; /* Pale pink-purple */
-            --rfr-glow: rgba(255, 180, 255, 0.999);
-            --rfr-node-default: #404040;
-            --rfr-node-selected: #FFD700; /* Gold for selected node/row/col */
-            --rfr-node-highlight: #00FFFF; /* Cyan for target highlight */
-            --rfr-node-error: #FF0000;
-            --rfr-pattern-line: #B0FFB0; /* Light green for completed pattern line */
-
-            /* Gen 2.5.0 - Enhanced UI elements */
-            --event-color: #FFA500; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 32px rgba(255, 165, 0, 1.0); /* Stronger shadow */
-            --info-color: #C0A0E0; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 25px rgba(192, 160, 224, 0.9); /* Stronger shadow */
+            /* Gen 3.0.0 - Enhanced UI elements */
+            --event-color: #FFB000; /* Brighter Orange, slightly more yellow */
+            --event-text-shadow: 0 0 40px rgba(255, 176, 0, 1.0); /* Stronger shadow */
+            --info-color: #E0C0FF; /* Lighter Medium Purple */
+            --info-text-shadow: 0 0 35px rgba(224, 192, 255, 0.9); /* Stronger shadow */
             --log-glitch-color: #FF00FF;
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
@@ -101,22 +89,22 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 1.9rem; /* Scaled up for readability */
-            line-height: 2.5; /* Increased line height */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="5.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.3); opacity: 0.1;} 50% {transform: scale(1.4); opacity: 1;} 100% {transform: scale(0.3); opacity: 0.1;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes spin-rev {from {transform: rotate(0deg);} to {transform: rotate(-360deg);}} .pulsing-core {animation: pulse 0.7s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;} .outer-ring{animation:spin 1.5s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.5s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}.glowing-parts-rev {animation:spin-rev 1.2s linear infinite;}</style></defs><g transform="translate(12 12) scale(1.5) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts outer-ring" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts glowing-parts-rev" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 40 40, auto;
+            font-size: 2.2rem; /* Scaled up for readability */
+            line-height: 2.8; /* Increased line height */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="8.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.2); opacity: 0.1;} 50% {transform: scale(1.6); opacity: 1;} 100% {transform: scale(0.2); opacity: 0.1;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes spin-rev {from {transform: rotate(0deg);} to {transform: rotate(-360deg);}} .pulsing-core {animation: pulse 0.6s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;} .outer-ring{animation:spin 1.8s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.4s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}.glowing-parts-rev {animation:spin-rev 1.5s linear infinite;}</style></defs><g transform="translate(12 12) scale(1.8) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts outer-ring" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts glowing-parts-rev" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 48 48, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -1500vh; /* Even larger area */
-            left: -1500vw;
-            width: 3000vw;
-            height: 3000vh;
+            top: -2000vh; /* Even larger area */
+            left: -2000vw;
+            width: 4000vw;
+            height: 4000vh;
             background: linear-gradient(
-                750deg, /* New angle, more subtle shift */
-                #000000 0%, var(--qes-bg) 0.3%, var(--gsh-bg) 0.6%, var(--prs-bg) 0.9%, var(--rfr-bg) 1.2%, #000018 1.5%, #000028 1.8%, #000018 2.1%, #000008 2.4%, #000000 2.7%,
+                900deg, /* New angle, more subtle shift */
+                #000000 0%, var(--cdc-bg) 0.3%, var(--nnr-bg) 0.6%, var(--erh-bg) 0.9%, var(--dgc-bg) 1.2%, #000018 1.5%, #000028 1.8%, #000018 2.1%, #000008 2.4%, #000000 2.7%,
                 #180000 3.0%, #280000 3.3%, #380000 3.6%, #480000 3.9%, #380000 4.2%, #280000 4.5%, #180000 4.8%, #080000 5.1%, #000000 5.4%,
                 #001800 5.7%, #002800 6.0%, #003800 6.3%, #004800 6.6%, #005800 6.9%, #004800 7.2%, #003800 7.5%, #002800 7.8%, #001800 8.1%, #000000 8.4%,
                 #181800 8.7%, #282800 9.0%, #383800 9.3%, #484800 9.6%, #585800 9.9%, #484800 10.2%, #383800 10.5%, #282800 10.8%, #181800 11.1%, #000000 11.4%,
@@ -137,11 +125,11 @@
                 #180000 55.2%, #280000 55.5%, #380000 55.8%, #480000 56.1%, #580000 56.4%, #480000 56.7%, #380000 57.0%, #280000 57.3%, #180000 57.6%, #000000 57.9%,
                 #000000 58.2%, #001800 58.5%, #002800 58.8%, #003800 59.1%, #004800 59.4%, #005800 59.7%, #004800 60%
             );
-            background-size: 25000% 25000%; /* Larger background for smoother animation */
-            animation: fluidBackground1 2400s ease-in-out infinite alternate, rotateBackground 3000s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 30000% 30000%; /* Larger background for smoother animation */
+            animation: fluidBackground1 3600s ease-in-out infinite alternate, rotateBackground 4500s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(2000px) opacity(0.999) saturate(300%) hue-rotate(25deg) contrast(2.0); /* Stronger blur, almost opaque, color shift, more contrast */
-            transform: rotate(-1200deg) scale(40.0) perspective(3000px) translateZ(-500px); /* Larger scale, more rotation, added perspective, depth */
+            filter: blur(2500px) opacity(0.9999) saturate(400%) hue-rotate(35deg) contrast(3.0); /* Stronger blur, almost opaque, color shift, more contrast */
+            transform: rotate(-1500deg) scale(50.0) perspective(4000px) translateZ(-600px); /* Larger scale, more rotation, added perspective, depth */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -149,54 +137,54 @@
         body::after {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -1200vh;
-            left: -1200vw;
-            width: 2400vw;
-            height: 2400vh;
+            top: -1500vh;
+            left: -1500vw;
+            width: 3000vw;
+            height: 3000vh;
             background: linear-gradient(
-                -720deg, /* Different angle */
+                -850deg, /* Different angle */
                 rgba(0, 255, 255, 0.999) 0%, /* primary glow accent */
                 rgba(255, 0, 255, 0.998) 10%, /* secondary glow accent */
                 rgba(0, 255, 0, 0.998) 20%, /* tertiary glow accent */
-                var(--qes-border) 30%, /* QES accent */
-                var(--gsh-border) 40%, /* GSH accent */
-                var(--prs-border) 50%, /* PRS accent */
-                var(--rfr-border) 60%, /* RFR accent */
+                var(--cdc-border) 30%, /* CDC accent */
+                var(--nnr-border) 40%, /* NNR accent */
+                var(--erh-border) 50%, /* ERH accent */
+                var(--dgc-border) 60%, /* DGC accent */
                 rgba(50, 255, 150, 0.999) 70%, /* Generic glow */
                 rgba(110, 90, 210, 0.999) 80%, /* Generic glow */
                 rgba(0, 255, 255, 0.999) 90%,
                 rgba(255, 120, 0, 0.999) 100%
             );
-            background-size: 18000% 18000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 1600s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite, rotateBackgroundReversed 1800s ease-out infinite; /* Even longer animations */
+            background-size: 20000% 20000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 2400s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite, rotateBackgroundReversed 2700s ease-out infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(1600px) opacity(0.998) contrast(2.0) saturate(250%) hue-rotate(-45deg); /* Stronger blur, more opaque, color shift, contrast */
+            filter: blur(2000px) opacity(0.999) contrast(3.0) saturate(300%) hue-rotate(-55deg); /* Stronger blur, more opaque, color shift, contrast */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(1000deg) scale(30.0) perspective(2500px) translateZ(-400px); /* Larger scale, more rotation, added perspective */
+            transform: rotate(1300deg) scale(40.0) perspective(3500px) translateZ(-500px); /* Larger scale, more rotation, added perspective */
         }
 
         /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus, on container for better isolation) */
         .container::before { 
             content: '';
             position: absolute; /* Use absolute relative to container */
-            top: -1000vh;
-            left: -1000vw;
-            width: 2000vw;
-            height: 2000vh;
+            top: -1200vh;
+            left: -1200vw;
+            width: 2400vw;
+            height: 2400vh;
             background: radial-gradient(
-                circle at 80% 20%, /* Shifted center for dynamic feel */
-                rgba(200, 255, 255, 0.99) 0%, /* Lighter blue core */
-                rgba(255, 200, 255, 0.88) 10%, /* Lighter Pinkish transition */
-                rgba(255, 255, 200, 0.78) 20%, /* Lighter Greenish transition */
-                rgba(200, 255, 255, 0.68) 30%, /* Back to blue */
+                circle at 70% 30%, /* Shifted center for dynamic feel */
+                rgba(220, 255, 255, 0.99) 0%, /* Lighter blue core */
+                rgba(255, 220, 255, 0.95) 10%, /* Lighter Pinkish transition */
+                rgba(255, 255, 220, 0.85) 20%, /* Lighter Greenish transition */
+                rgba(220, 255, 255, 0.75) 30%, /* Back to blue */
                 rgba(0, 0, 0, 0.0) 50% /* Fading to transparent */
             );
-            background-size: 12000% 12000%;
-            animation: fluidBackground3 1000s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite alternate, rotateBackgroundSlow 1500s ease-in-out infinite;
+            background-size: 15000% 15000%;
+            animation: fluidBackground3 1500s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite alternate, rotateBackgroundSlow 2200s ease-in-out infinite;
             z-index: -1;
-            filter: blur(1200px) opacity(0.95) brightness(1.5) saturate(150%);
+            filter: blur(1500px) opacity(0.98) brightness(1.8) saturate(180%) contrast(1.2);
             mix-blend-mode: screen; /* Additive, bright effect */
-            transform: rotate(-900deg) scale(25.0) perspective(2000px) translateZ(-300px);
+            transform: rotate(-1100deg) scale(35.0) perspective(2800px) translateZ(-400px);
             border-radius: inherit; /* Inherit container's border radius */
             pointer-events: none; /* Don't block interaction */
         }
@@ -210,23 +198,23 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.45; /* More subtle noise, slightly more visible for 2.5 gen "raw" feel */
+            opacity: 0.6; /* More subtle noise, slightly more visible for 2.5 gen "raw" feel */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.8) contrast(25.0) brightness(20.0) saturate(60%); /* Subtle color and contrast */
-            animation: slightDrift 100s linear infinite alternate, subtlePulse 3s linear infinite alternate; /* Faster animations for more "active" noise */
+            filter: grayscale(0.7) contrast(30.0) brightness(25.0) saturate(70%); /* Subtle color and contrast */
+            animation: slightDrift 150s linear infinite alternate, subtlePulse 2s linear infinite alternate; /* Faster animations for more "active" noise */
         }
 
         @keyframes subtlePulse {
-            0% { opacity: 0.45; }
-            50% { opacity: 0.50; }
-            100% { opacity: 0.45; }
+            0% { opacity: 0.6; }
+            50% { opacity: 0.65; }
+            100% { opacity: 0.6; }
         }
 
         @keyframes slightDrift {
             0% { transform: translate(0, 0); }
-            100% { transform: translate(5%, 5%); } /* More drift */
+            100% { transform: translate(7%, 7%); } /* More drift */
         }
 
         @keyframes fluidBackground1 {
@@ -247,55 +235,55 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-1200deg) scale(40.0) perspective(3000px) translateZ(-500px); }
-            to { transform: rotate(1200deg) scale(40.0) perspective(3000px) translateZ(-500px); }
+            from { transform: rotate(-1500deg) scale(50.0) perspective(4000px) translateZ(-600px); }
+            to { transform: rotate(1500deg) scale(50.0) perspective(4000px) translateZ(-600px); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(1000deg) scale(30.0) perspective(2500px) translateZ(-400px); }
-            to { transform: rotate(-1000deg) scale(30.0) perspective(2500px) translateZ(-400px); }
+            from { transform: rotate(1300deg) scale(40.0) perspective(3500px) translateZ(-500px); }
+            to { transform: rotate(-1300deg) scale(40.0) perspective(3500px) translateZ(-500px); }
         }
         
         @keyframes rotateBackgroundSlow {
-            from { transform: rotate(-900deg) scale(25.0) perspective(2000px) translateZ(-300px); }
-            to { transform: rotate(900deg) scale(25.0) perspective(2000px) translateZ(-300px); }
+            from { transform: rotate(-1100deg) scale(35.0) perspective(2800px) translateZ(-400px); }
+            to { transform: rotate(1100deg) scale(35.0) perspective(2800px) translateZ(-400px); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 3200px; /* Wider for more content */
-            padding: 13.0rem; /* More padding */
+            max-width: 3600px; /* Wider for more content */
+            padding: 16.0rem; /* More padding */
             background: var(--frosted-bg);
-            border: 85px solid var(--border-color); /* Thicker border */
-            border-radius: 15.0rem; /* Even more rounded */
-            backdrop-filter: blur(200px) saturate(2500%) brightness(2000%) contrast(20.0) hue-rotate(10deg); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(200px) saturate(2500%) brightness(2000%) contrast(20.0) hue-rotate(10deg);
+            border: 100px solid var(--border-color); /* Thicker border */
+            border-radius: 18.0rem; /* Even more rounded */
+            backdrop-filter: blur(250px) saturate(3000%) brightness(2500%) contrast(25.0) hue-rotate(15deg); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(250px) saturate(3000%) brightness(2500%) contrast(25.0) hue-rotate(15deg);
             box-shadow:
-                0 160px 400px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 500px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 250px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
-                inset 0 0 280px var(--primary-glow); /* Even more inner glow */
+                0 200px 500px rgba(0, 0, 0, 0.999), /* Deeper shadow */
+                0 0 600px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 300px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
+                inset 0 0 350px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 13.0rem; /* Increased gap between sections */
-            animation: fadeInScale 6.0s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 2.8s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 16.0rem; /* Increased gap between sections */
+            animation: fadeInScale 7.0s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 3.0s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
-        .container > .border-glow::after { /* Animated border glow - Renamed to ::after to allow ::before for layer 3 background */
+        .container > .border-glow::after { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -100px; /* More overflow */
-            border-radius: calc(15.0rem + 100px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--qes-border), var(--gsh-border), var(--prs-border), var(--rfr-border), #00FFFF, #55FF55, #FF5555, #5555FF); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 2500% 2500%; /* Larger background for smoother animation */
-            animation: borderGlow 1200s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
-            filter: blur(150px) brightness(1.3) saturate(180%); /* Stronger blur */
+            inset: -120px; /* More overflow */
+            border-radius: calc(18.0rem + 120px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--cdc-border), var(--nnr-border), var(--erh-border), var(--dgc-border), #00FFFF, #55FF55, #FF5555, #5555FF); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 3000% 3000%; /* Larger background for smoother animation */
+            animation: borderGlow 1500s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
+            filter: blur(180px) brightness(1.5) saturate(200%) contrast(1.5); /* Stronger blur */
             z-index: -2; /* Ensure it's behind the container, but above layer 3 background */
-            opacity: 0.999; /* Stronger glow */
+            opacity: 0.9999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
             pointer-events: none;
         }
@@ -306,32 +294,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.1) translateY(200px) perspective(3000px) rotateX(80deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(3000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.08) translateY(250px) perspective(4000px) rotateX(90deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(4000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 11.0rem; /* Scaled up for impact */
+            font-size: 13.0rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 120px var(--primary-glow), 0 0 150px rgba(0, 255, 255, 0.999);
-            margin-bottom: 7.0rem;
-            letter-spacing: 0.9rem;
+            text-shadow: 0 0 150px var(--primary-glow), 0 0 180px rgba(0, 255, 255, 0.999);
+            margin-bottom: 9.0rem;
+            letter-spacing: 1.2rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(60px); /* Lift heading slightly in 3D space */
+            transform: translateZ(80px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -3.5rem;
+            bottom: -4.5rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 160%; /* Wider underline */
-            height: 1.8rem; /* Thicker underline */
+            width: 180%; /* Wider underline */
+            height: 2.2rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 80px var(--primary-glow);
+            box-shadow: 0 0 100px var(--primary-glow);
         }
 
         p {
@@ -339,16 +327,16 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.998;
-            font-size: 2.3rem; /* Larger paragraph text */
-            line-height: 2.6; /* Increased line height */
-            transform: translateZ(42px);
+            font-size: 2.8rem; /* Larger paragraph text */
+            line-height: 3.0; /* Increased line height */
+            transform: translateZ(50px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 13.0rem; /* Increased gap */
-            margin: 8.0rem 0;
+            gap: 16.0rem; /* Increased gap */
+            margin: 10.0rem 0;
             position: relative;
         }
 
@@ -356,37 +344,37 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 7.0rem;
+            gap: 9.0rem;
             text-align: left;
-            padding: 8.0rem;
-            border-radius: 7.0rem;
-            border: 28px solid var(--primary-glow); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 85px rgba(0, 255, 255, 0.999), 0 0 120px rgba(0, 255, 255, 0.999); /* More inner shadow */
+            padding: 10.0rem;
+            border-radius: 9.0rem;
+            border: 35px solid var(--primary-glow); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 100px rgba(0, 255, 255, 0.999), 0 0 150px rgba(0, 255, 255, 0.999); /* More inner shadow */
             position: relative;
-            transform: translateZ(45px);
+            transform: translateZ(55px);
             overflow: hidden;
             background: var(--console-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .quantum-entanglement-sequencer {
-            background: var(--qes-bg);
-            border-color: var(--qes-border);
-            box-shadow: inset 0 0 85px var(--qes-glow), 0 0 120px var(--qes-glow);
+        .chronal-drift-calibrator {
+            background: var(--cdc-bg);
+            border-color: var(--cdc-border);
+            box-shadow: inset 0 0 100px var(--cdc-glow), 0 0 150px var(--cdc-glow);
         }
-        .gravitational-anomaly-generator {
-            background: var(--gsh-bg);
-            border-color: var(--gsh-border);
-            box-shadow: inset 0 0 85px var(--gsh-glow), 0 0 120px var(--gsh-glow);
+        .neural-network-rewiring {
+            background: var(--nnr-bg);
+            border-color: var(--nnr-border);
+            box-shadow: inset 0 0 100px var(--nnr-glow), 0 0 150px var(--nnr-glow);
         }
-        .psionic-waveform-synthesizer {
-            background: var(--prs-bg);
-            border-color: var(--prs-border);
-            box-shadow: inset 0 0 85px var(--prs-glow), 0 0 120px var(--prs-glow);
+        .ethereal-resonance-harmonizer {
+            background: var(--erh-bg);
+            border-color: var(--erh-border);
+            box-shadow: inset 0 0 100px var(--erh-glow), 0 0 150px var(--erh-glow);
         }
-        .reality-fabric-pattern-weaver {
-            background: var(--rfr-bg);
-            border-color: var(--rfr-border);
-            box-shadow: inset 0 0 85px var(--rfr-glow), 0 0 120px var(--rfr-glow);
+        .dimensional-gateway-constructor {
+            background: var(--dgc-bg);
+            border-color: var(--dgc-border);
+            box-shadow: inset 0 0 100px var(--dgc-glow), 0 0 150px var(--dgc-glow);
         }
 
         .module-base::after {
@@ -396,7 +384,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.999) 0%, transparent 85%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.999) 0%, transparent 90%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -404,459 +392,423 @@
 
         .module-base > .module-label { /* Renamed from ::before to a normal element for easier styling and JS interaction */
             position: absolute;
-            top: -5.5rem; /* Slightly higher */
-            left: 7.0rem;
-            font-size: 3.8rem; /* Larger label */
+            top: -6.5rem; /* Slightly higher */
+            left: 8.0rem;
+            font-size: 4.5rem; /* Larger label */
             color: var(--text-color); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.999);
-            padding: 2.8rem 3.5rem;
-            border-radius: 3.2rem;
+            padding: 3.5rem 4.0rem;
+            border-radius: 4.0rem;
             font-weight: 700;
-            letter-spacing: 0.4rem;
-            transform: translateY(-50%) translateZ(35px); /* Lift more */
+            letter-spacing: 0.5rem;
+            transform: translateY(-50%) translateZ(45px); /* Lift more */
             opacity: 1.0;
-            border: 20px solid var(--text-color); /* Default border, will be overridden */
-            box-shadow: 0 0 60px var(--text-color); /* Stronger glow */
+            border: 25px solid var(--text-color); /* Default border, will be overridden */
+            box-shadow: 0 0 70px var(--text-color); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules normal label elements */
-        .quantum-entanglement-sequencer > .module-label {
-            color: var(--qes-text);
-            border-color: var(--qes-border);
-            box-shadow: 0 0 60px var(--qes-glow);
+        .chronal-drift-calibrator > .module-label {
+            color: var(--cdc-text);
+            border-color: var(--cdc-border);
+            box-shadow: 0 0 70px var(--cdc-glow);
         }
-        .gravitational-anomaly-generator > .module-label {
-            color: var(--gsh-text);
-            border-color: var(--gsh-border);
-            box-shadow: 0 0 60px var(--gsh-glow);
+        .neural-network-rewiring > .module-label {
+            color: var(--nnr-text);
+            border-color: var(--nnr-border);
+            box-shadow: 0 0 70px var(--nnr-glow);
         }
-        .psionic-waveform-synthesizer > .module-label {
-            color: var(--prs-text);
-            border-color: var(--prs-border);
-            box-shadow: 0 0 60px var(--prs-glow);
+        .ethereal-resonance-harmonizer > .module-label {
+            color: var(--erh-text);
+            border-color: var(--erh-border);
+            box-shadow: 0 0 70px var(--erh-glow);
         }
-        .reality-fabric-pattern-weaver > .module-label {
-            color: var(--rfr-text);
-            border-color: var(--rfr-border);
-            box-shadow: 0 0 60px var(--rfr-glow);
+        .dimensional-gateway-constructor > .module-label {
+            color: var(--dgc-text);
+            border-color: var(--dgc-border);
+            box-shadow: 0 0 70px var(--dgc-glow);
         }
 
 
         .param-group {
-            margin-bottom: 6.0rem;
+            margin-bottom: 7.0rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem; /* Larger */
+            font-size: 4.0rem; /* Larger */
             color: var(--accent-color);
-            letter-spacing: 0.4rem;
+            letter-spacing: 0.5rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 60px rgba(0, 255, 255, 0.999); /* Stronger shadow */
-            margin-bottom: 4.0rem;
+            text-shadow: 0 0 70px rgba(0, 255, 255, 0.999); /* Stronger shadow */
+            margin-bottom: 5.0rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 2.3rem; /* Slightly larger sub-info */
+            font-size: 2.8rem; /* Slightly larger sub-info */
             opacity: 0.99;
             color: var(--text-color);
-            margin-top: 2.8rem;
+            margin-top: 3.5rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 3.0;
+            line-height: 3.5;
         }
         
-        /* QES Specific - Quantum Entanglement Sequencer */
-        .qes-grid-area {
+        /* CDC Specific - Chronal Drift Calibrator */
+        .cdc-calibration-area {
             position: relative;
             background: var(--console-bg);
-            border: 18px solid var(--qes-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--qes-glow);
+            border: 22px solid var(--cdc-border);
+            border-radius: 4.0rem;
+            box-shadow: inset 0 0 80px var(--cdc-glow);
             width: 100%;
-            max-width: 80rem; /* Fixed max width for grid aspect ratio */
-            aspect-ratio: 1 / 1; /* Keep it square */
+            max-width: 90rem;
+            height: 60rem;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4x4 grid */
-            grid-template-rows: repeat(4, 1fr);
-            gap: 3.0rem;
-            padding: 3.0rem;
-        }
-        .qes-particle {
-            background-color: var(--qes-particle-off);
-            border: 9px solid var(--qes-border);
-            border-radius: 50%; /* Circular particles */
-            cursor: pointer;
-            transition: all 0.28s ease-in-out;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: rgba(255,255,255,0.45);
-            text-shadow: 0 0 15px rgba(150, 200, 255, 0.35);
-            font-weight: bold;
-            transform: translateZ(5px);
-        }
-        .qes-particle:hover {
-            box-shadow: 0 0 40px var(--qes-particle-on);
-            transform: scale(1.08) translateZ(10px);
-        }
-        .qes-particle.active { /* For sequence playback */
-            background-color: var(--qes-particle-sequence);
-            box-shadow: 0 0 55px var(--qes-particle-sequence);
-            color: var(--qes-text);
-            text-shadow: 0 0 30px var(--qes-particle-sequence);
-            transform: scale(1.12) translateZ(15px);
-        }
-        .qes-particle.user-correct {
-            background-color: var(--qes-particle-user-correct);
-            box-shadow: 0 0 55px var(--qes-particle-user-correct);
-            color: var(--qes-text);
-            text-shadow: 0 0 30px var(--qes-particle-user-correct);
-        }
-        .qes-particle.user-wrong {
-            background-color: var(--qes-particle-user-wrong);
-            box-shadow: 0 0 55px var(--qes-particle-user-wrong);
-            color: var(--qes-text);
-            text-shadow: 0 0 30px var(--qes-particle-user-wrong);
-        }
-        .qes-entangled-pulse { /* For visual feedback on entangled partners */
-            animation: qesEntangledPulse 0.4s ease-out forwards;
-        }
-        @keyframes qesEntangledPulse {
-            0% { transform: scale(1.0); box-shadow: 0 0 0px var(--qes-entangled-pulse); }
-            50% { transform: scale(1.2); box-shadow: 0 0 40px var(--qes-entangled-pulse); }
-            100% { transform: scale(1.0); box-shadow: 0 0 0px var(--qes-entangled-pulse); }
-        }
-        .qes-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--qes-text);
-            text-shadow: 0 0 35px var(--qes-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 15px solid var(--qes-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--qes-border);
-            text-align: center;
-        }
-        .qes-controls {
-            display: flex;
-            justify-content: center;
-            gap: 4.5rem;
-            margin-top: 4.5rem;
-        }
-
-        /* GSH Specific - Gravitational Anomaly Generator */
-        .gsh-simulation-area {
-            position: relative;
-            background: var(--console-bg);
-            border: 18px solid var(--gsh-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--gsh-glow);
-            width: 100%;
-            height: 65rem;
             overflow: hidden;
-            cursor: crosshair; /* Indicate clickable area */
+            cursor: pointer;
         }
-        .gsh-simulation-canvas {
+        .cdc-canvas {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: 1;
         }
-        .gsh-status {
+        .cdc-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--gsh-text);
-            text-shadow: 0 0 35px var(--gsh-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
+            font-size: 2.6rem;
+            color: var(--cdc-text);
+            text-shadow: 0 0 45px var(--cdc-glow);
+            margin-top: 5.0rem;
+            line-height: 3.5;
+            padding: 3.5rem;
             background: rgba(0,0,0,0.999);
-            border: 15px solid var(--gsh-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--gsh-border);
+            border: 18px solid var(--cdc-border);
+            border-radius: 3.0rem;
+            box-shadow: 0 0 55px var(--cdc-border);
             text-align: center;
         }
-        .gsh-controls {
+        .cdc-controls {
             display: flex;
             justify-content: center;
-            gap: 4.5rem;
-            margin-top: 4.5rem;
-        }
-        /* Anomaly pulse animation */
-        @keyframes anomalyPulseFade {
-            0% { transform: scale(0.1); opacity: 1; box-shadow: 0 0 0px var(--gsh-pulse); }
-            100% { transform: scale(1.5); opacity: 0; box-shadow: 0 0 50px var(--gsh-pulse); }
-        }
-        .gsh-anomaly-pulse {
-            position: absolute;
-            border-radius: 50%;
-            background-color: var(--gsh-pulse);
-            opacity: 0; /* Starts hidden */
-            animation: anomalyPulseFade 1.0s forwards;
-            pointer-events: none;
-            z-index: 5;
+            gap: 5.0rem;
+            margin-top: 5.0rem;
         }
 
-
-        /* PRS Specific - Psionic Waveform Synthesizer */
-        .prs-synthesizer-area {
+        /* NNR Specific - Neural Network Rewiring */
+        .nnr-network-area {
             position: relative;
             background: var(--console-bg);
-            border: 18px solid var(--prs-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--prs-glow);
+            border: 22px solid var(--nnr-border);
+            border-radius: 4.0rem;
+            box-shadow: inset 0 0 80px var(--nnr-glow);
             width: 100%;
-            max-width: 80rem;
-            aspect-ratio: 1 / 1;
+            max-width: 90rem;
+            aspect-ratio: 16 / 9; /* Wider aspect ratio for network visualization */
             margin: 0 auto;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            gap: 3rem;
         }
-        .prs-canvas {
-            position: relative;
-            width: 100%;
-            height: calc(100% - 15rem); /* Make space for sliders below */
+        .nnr-canvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 1;
         }
-        .prs-modulator-group {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            width: 100%;
-            max-width: 70rem;
-            padding: 0 2rem;
-        }
-        .prs-modulator-controls {
+        .nnr-node { /* Example node style */
+            position: absolute;
+            width: 6.0rem;
+            height: 6.0rem;
+            border-radius: 50%;
+            background-color: var(--nnr-node-off);
+            border: 8px solid var(--nnr-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform: translateZ(5px);
             display: flex;
             align-items: center;
-            gap: 2rem;
-            color: var(--prs-text);
+            justify-content: center;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2rem;
+            font-size: 2.0rem;
+            color: rgba(255,255,255,0.4);
+            text-shadow: 0 0 10px rgba(100, 200, 255, 0.2);
         }
-        .prs-modulator-controls label {
-            width: 8rem;
-            text-align: right;
-            text-shadow: 0 0 10px var(--prs-glow);
+        .nnr-node:hover {
+            transform: scale(1.1) translateZ(10px);
+            box-shadow: 0 0 30px var(--nnr-glow);
         }
-        .prs-modulator-controls input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: calc(100% - 10rem);
-            height: 1.5rem;
-            background: rgba(180, 255, 180, 0.2);
-            outline: none;
-            border-radius: 1rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: inset 0 0 10px rgba(180, 255, 180, 0.5);
+        .nnr-node.active {
+            background-color: var(--nnr-node-on);
+            box-shadow: 0 0 45px var(--nnr-signal-glow);
+            color: var(--nnr-text);
+            text-shadow: 0 0 20px var(--nnr-signal-glow);
+            transform: scale(1.15) translateZ(15px);
         }
-        .prs-modulator-controls input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            background: var(--prs-modulator-handle);
-            border: 5px solid var(--prs-border);
-            cursor: grab;
-            box-shadow: 0 0 20px var(--prs-glow);
-            transition: all 0.2s ease;
-        }
-        .prs-modulator-controls input[type="range"]::-webkit-slider-thumb:active {
-            cursor: grabbing;
-            box-shadow: 0 0 35px var(--prs-glow);
-            transform: scale(1.1);
-        }
-        .prs-modulator-controls input[type="range"]::-moz-range-thumb {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            background: var(--prs-modulator-handle);
-            border: 5px solid var(--prs-border);
-            cursor: grab;
-            box-shadow: 0 0 20px var(--prs-glow);
-            transition: all 0.2s ease;
-        }
-        .prs-modulator-controls input[type="range"]::-moz-range-thumb:active {
-            cursor: grabbing;
-            box-shadow: 0 0 35px var(--prs-glow);
-            transform: scale(1.1);
-        }
-
-        .prs-status {
+        .nnr-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--prs-text);
-            text-shadow: 0 0 35px var(--prs-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
+            font-size: 2.6rem;
+            color: var(--nnr-text);
+            text-shadow: 0 0 45px var(--nnr-glow);
+            margin-top: 5.0rem;
+            line-height: 3.5;
+            padding: 3.5rem;
             background: rgba(0,0,0,0.999);
-            border: 15px solid var(--prs-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--prs-border);
+            border: 18px solid var(--nnr-border);
+            border-radius: 3.0rem;
+            box-shadow: 0 0 55px var(--nnr-border);
             text-align: center;
         }
-        .prs-controls {
+        .nnr-controls {
             display: flex;
             justify-content: center;
-            gap: 4.5rem;
-            margin-top: 4.5rem;
+            gap: 5.0rem;
+            margin-top: 5.0rem;
         }
 
-        /* RFR Specific - Reality Fabric Pattern Weaver */
-        .rfr-reweaving-area {
+        /* ERH Specific - Ethereal Resonance Harmonizer */
+        .erh-harmonizer-area {
             position: relative;
             background: var(--console-bg);
-            border: 18px solid var(--rfr-border);
-            border-radius: 3.5rem;
-            box-shadow: inset 0 0 65px var(--rfr-glow);
+            border: 22px solid var(--erh-border);
+            border-radius: 4.0rem;
+            box-shadow: inset 0 0 80px var(--erh-glow);
+            width: 100%;
+            max-width: 90rem;
+            aspect-ratio: 16 / 10;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+        }
+        .erh-canvas {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 20rem); /* Make space for sliders below */
+            z-index: 1;
+        }
+        .erh-modulator-group {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
             width: 100%;
             max-width: 80rem;
+            padding: 0 3rem;
+        }
+        .erh-modulator-controls {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            color: var(--erh-text);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.4rem;
+        }
+        .erh-modulator-controls label {
+            width: 9rem;
+            text-align: right;
+            text-shadow: 0 0 12px var(--erh-glow);
+        }
+        .erh-modulator-controls input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: calc(100% - 12rem);
+            height: 1.8rem;
+            background: rgba(255, 100, 200, 0.2);
+            outline: none;
+            border-radius: 1.2rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: inset 0 0 12px rgba(255, 100, 200, 0.5);
+        }
+        .erh-modulator-controls input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: var(--erh-modulator-handle);
+            border: 6px solid var(--erh-border);
+            cursor: grab;
+            box-shadow: 0 0 25px var(--erh-glow);
+            transition: all 0.25s ease;
+        }
+        .erh-modulator-controls input[type="range"]::-webkit-slider-thumb:active {
+            cursor: grabbing;
+            box-shadow: 0 0 40px var(--erh-glow);
+            transform: scale(1.12);
+        }
+        .erh-modulator-controls input[type="range"]::-moz-range-thumb {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: var(--erh-modulator-handle);
+            border: 6px solid var(--erh-border);
+            cursor: grab;
+            box-shadow: 0 0 25px var(--erh-glow);
+            transition: all 0.25s ease;
+        }
+        .erh-modulator-controls input[type="range"]::-moz-range-thumb:active {
+            cursor: grabbing;
+            box-shadow: 0 0 40px var(--erh-glow);
+            transform: scale(1.12);
+        }
+        .erh-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.6rem;
+            color: var(--erh-text);
+            text-shadow: 0 0 45px var(--erh-glow);
+            margin-top: 5.0rem;
+            line-height: 3.5;
+            padding: 3.5rem;
+            background: rgba(0,0,0,0.999);
+            border: 18px solid var(--erh-border);
+            border-radius: 3.0rem;
+            box-shadow: 0 0 55px var(--erh-border);
+            text-align: center;
+        }
+        .erh-controls {
+            display: flex;
+            justify-content: center;
+            gap: 5.0rem;
+            margin-top: 5.0rem;
+        }
+
+        /* DGC Specific - Dimensional Gateway Constructor */
+        .dgc-gateway-area {
+            position: relative;
+            background: var(--console-bg);
+            border: 22px solid var(--dgc-border);
+            border-radius: 4.0rem;
+            box-shadow: inset 0 0 80px var(--dgc-glow);
+            width: 100%;
+            max-width: 90rem;
             aspect-ratio: 1 / 1;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5x5 grid of potential nodes */
-            grid-template-rows: repeat(5, 1fr);
-            gap: 0; /* No gap for this one, nodes are positioned */
-            padding: 2rem;
+            grid-template-columns: repeat(4, 1fr); /* 4x4 grid for conduit pieces */
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding: 3.0rem;
             box-sizing: border-box;
             overflow: hidden;
         }
-        .rfr-node-wrapper {
-            position: relative;
+        .dgc-conduit-piece {
             width: 100%;
             height: 100%;
+            background-color: var(--dgc-conduit-off);
+            border: 8px solid var(--dgc-border);
+            border-radius: 2.0rem;
+            cursor: grab;
+            transition: all 0.3s ease;
+            position: relative;
+            transform: translateZ(5px);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 10;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.2rem;
+            color: rgba(255,255,255,0.4);
+            text-shadow: 0 0 10px rgba(100, 255, 100, 0.2);
         }
-        .rfr-node {
-            width: 8.0rem;
-            height: 8.0rem;
-            border-radius: 1.5rem; /* Slightly squared for pattern contrast */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: 8px solid var(--rfr-border);
-            background-color: var(--rfr-node-default);
-            color: var(--rfr-text);
-            box-shadow: 0 0 20px rgba(255, 180, 255, 0.3);
-            transition: all 0.2s ease;
+        .dgc-conduit-piece:hover {
+            transform: scale(1.05) translateZ(10px);
+            box-shadow: 0 0 30px var(--dgc-glow);
         }
-        .rfr-node:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 45px var(--rfr-glow);
+        .dgc-conduit-piece.active {
+            background-color: var(--dgc-conduit-on);
+            box-shadow: 0 0 45px var(--dgc-glow);
+            color: var(--dgc-text);
+            text-shadow: 0 0 20px var(--dgc-glow);
+            transform: scale(1.1) translateZ(15px);
         }
-        .rfr-node.active-tile {
-            background-color: var(--rfr-node-selected);
-            color: #222;
-            box-shadow: 0 0 60px var(--rfr-node-selected);
-            transform: scale(1.15);
-        }
-        .rfr-canvas {
+        .dgc-canvas {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: 5; /* Below nodes, above background */
-            pointer-events: none; /* Only nodes interact */
+            pointer-events: none; /* Only conduits interact */
         }
-        .rfr-status {
+        .dgc-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: var(--rfr-text);
-            text-shadow: 0 0 35px var(--rfr-glow);
-            margin-top: 4.0rem;
-            line-height: 3.2;
-            padding: 3.0rem;
+            font-size: 2.6rem;
+            color: var(--dgc-text);
+            text-shadow: 0 0 45px var(--dgc-glow);
+            margin-top: 5.0rem;
+            line-height: 3.5;
+            padding: 3.5rem;
             background: rgba(0,0,0,0.999);
-            border: 15px solid var(--rfr-border);
-            border-radius: 2.5rem;
-            box-shadow: 0 0 45px var(--rfr-border);
+            border: 18px solid var(--dgc-border);
+            border-radius: 3.0rem;
+            box-shadow: 0 0 55px var(--dgc-border);
             text-align: center;
         }
-        .rfr-controls {
+        .dgc-controls {
             display: flex;
             justify-content: center;
-            gap: 4.5rem;
-            margin-top: 4.5rem;
+            gap: 5.0rem;
+            margin-top: 5.0rem;
         }
-
 
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
             font-family: 'Share Tech Mono', monospace; /* Changed to Share Tech Mono for log aesthetic */
-            font-size: 2.1rem; /* Larger */
-            padding: 5.5rem;
-            border: 16px solid var(--border-color);
-            border-radius: 5.5rem; /* More rounded */
-            background: rgba(0, 10, 20, 0.99); /* Deep ocean blue, almost black */
-            box-shadow: inset 0 0 45px rgba(0, 255, 255, 0.999), inset 0 0 50px rgba(0, 255, 255, 0.999); /* More inner shadow */
+            font-size: 2.4rem; /* Larger */
+            padding: 6.5rem;
+            border: 20px solid var(--border-color);
+            border-radius: 6.5rem; /* More rounded */
+            background: rgba(0, 15, 25, 0.99); /* Deep ocean blue, almost black */
+            box-shadow: inset 0 0 55px rgba(0, 255, 255, 0.999), inset 0 0 60px rgba(0, 255, 255, 0.999); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 1.5s ease;
-            line-height: 2.6; /* Slightly tighter line height for monospace log */
-            letter-spacing: 0.18rem;
+            transition: all 1.8s ease;
+            line-height: 2.8; /* Slightly tighter line height for monospace log */
+            letter-spacing: 0.2rem;
             color: var(--primary-glow);
-            text-shadow: 0 0 35px rgba(0, 255, 255, 0.999); /* Stronger shadow */
+            text-shadow: 0 0 40px rgba(0, 255, 255, 0.999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(25px);
+            transform: translateZ(30px);
             overflow: hidden;
-            max-height: 60rem; /* Slightly taller log */
+            max-height: 70rem; /* Slightly taller log */
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v2.5.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v3.0.0'; /* Simplified label for actual log content */
             position: absolute;
-            top: -4.5rem;
-            left: 5.5rem;
-            font-size: 3.2rem;
+            top: -5.5rem;
+            left: 6.5rem;
+            font-size: 3.8rem;
             color: var(--accent-color);
             background: rgba(0, 0, 0, 0.999);
-            padding: 2.2rem 2.8rem;
-            border-radius: 2.8rem;
+            padding: 2.5rem 3.0rem;
+            border-radius: 3.2rem;
             font-weight: 700;
-            letter-spacing: 0.3rem;
-            transform: translateY(-50%) translateZ(30px);
+            letter-spacing: 0.35rem;
+            transform: translateY(-50%) translateZ(35px);
             opacity: 1.0;
-            border: 16px solid var(--accent-color);
-            box-shadow: 0 0 50px var(--accent-color);
+            border: 20px solid var(--accent-color);
+            box-shadow: 0 0 60px var(--accent-color);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 1.8rem;
+            margin-bottom: 2.0rem;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 1.8rem;
+            margin-right: 2.0rem;
             opacity: 0.998;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 30px var(--primary-glow);
+            text-shadow: 0 0 35px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -869,57 +821,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 30px var(--log-glitch-color);
-            animation: textGlitch 0.002s infinite steps(1); /* Faster glitch */
+            text-shadow: 0 0 35px var(--log-glitch-color);
+            animation: textGlitch 0.001s infinite steps(1); /* Even Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(18px) skewX(75deg); opacity: 0.01;}
-            40% { transform: translateX(-18px) skewX(-75deg); opacity: 0.03;}
-            60% { transform: translateX(16px) skewX(72deg); opacity: 0.06;}
-            80% { transform: translateX(-16px) skewX(-72deg); opacity: 0.04;}
+            20% { transform: translateX(20px) skewX(80deg); opacity: 0.01;}
+            40% { transform: translateX(-20px) skewX(-80deg); opacity: 0.03;}
+            60% { transform: translateX(18px) skewX(78deg); opacity: 0.06;}
+            80% { transform: translateX(-18px) skewX(-78deg); opacity: 0.04;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2rem; /* Larger button text */
-            padding: 3.2rem 4.5rem; /* Larger padding */
-            border-radius: 4.0rem;
+            font-size: 3.5rem; /* Larger button text */
+            padding: 3.5rem 5.0rem; /* Larger padding */
+            border-radius: 4.5rem;
             border: none;
             cursor: pointer;
-            transition: all 1.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 2.0s ease-in-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-            margin-top: 5.0rem;
+            transition: all 1.8s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 2.5s ease-in-out, transform 1.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            margin-top: 6.0rem;
             text-transform: uppercase;
-            letter-spacing: 0.4rem;
+            letter-spacing: 0.5rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(70,0,95,0.999)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(80,0,105,0.999)); /* Dark base */
             color: var(--text-color);
-            border: 25px solid var(--border-color); /* Thicker border */
-            transform: translateZ(35px); /* Lift more */
+            border: 30px solid var(--border-color); /* Thicker border */
+            transform: translateZ(40px); /* Lift more */
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -32px;
-            border-radius: 4.0rem;
-            border: 32px solid transparent;
+            inset: -38px;
+            border-radius: 4.5rem;
+            border: 38px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(50px); /* Stronger blur */
-            opacity: 0.999;
-            transition: opacity 1.5s ease, filter 1.5s ease;
-            animation: buttonBorderRotate 30s linear infinite; /* Slower rotation */
+            filter: blur(60px); /* Stronger blur */
+            opacity: 0.9999;
+            transition: opacity 1.8s ease, filter 1.8s ease;
+            animation: buttonBorderRotate 40s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(65px); /* Even stronger blur on hover */
+            filter: blur(75px); /* Even stronger blur on hover */
         }
 
         @keyframes buttonBorderRotate {
@@ -929,64 +881,64 @@
         }
         
         /* Specific button styles for new modules */
-        .btn-start-sequence {
-            color: var(--qes-glow);
-            box-shadow: 0 0 70px var(--qes-glow);
-            border-color: var(--qes-glow);
+        .btn-calibrate-drift {
+            color: var(--cdc-glow);
+            box-shadow: 0 0 80px var(--cdc-glow);
+            border-color: var(--cdc-glow);
         }
-        .btn-start-sequence:hover {
-            background: rgba(150, 200, 255, 0.95);
-            box-shadow: 0 0 90px var(--qes-glow), inset 0 0 80px var(--qes-glow);
-            transform: translateY(-28px) scale(1.06) translateZ(28px);
-        }
-
-        .btn-engage-stabilizers {
-            color: var(--gsh-glow);
-            box-shadow: 0 0 70px var(--gsh-glow);
-            border-color: var(--gsh-glow);
-        }
-        .btn-engage-stabilizers:hover {
-            background: rgba(255, 150, 150, 0.95);
-            box-shadow: 0 0 90px var(--gsh-glow), inset 0 0 80px var(--gsh-glow);
-            transform: translateY(-28px) scale(1.06) translateZ(28px);
+        .btn-calibrate-drift:hover {
+            background: rgba(255, 220, 100, 0.95);
+            box-shadow: 0 0 100px var(--cdc-glow), inset 0 0 90px var(--cdc-glow);
+            transform: translateY(-32px) scale(1.08) translateZ(32px);
         }
 
-        .btn-synthesize-signature {
-            color: var(--prs-glow);
-            box-shadow: 0 0 70px var(--prs-glow);
-            border-color: var(--prs-glow);
+        .btn-rewire-network {
+            color: var(--nnr-glow);
+            box-shadow: 0 0 80px var(--nnr-glow);
+            border-color: var(--nnr-glow);
         }
-        .btn-synthesize-signature:hover {
-            background: rgba(180, 255, 180, 0.95);
-            box-shadow: 0 0 90px var(--prs-glow), inset 0 0 80px var(--prs-glow);
-            transform: translateY(-28px) scale(1.06) translateZ(28px);
+        .btn-rewire-network:hover {
+            background: rgba(100, 200, 255, 0.95);
+            box-shadow: 0 0 100px var(--nnr-glow), inset 0 0 90px var(--nnr-glow);
+            transform: translateY(-32px) scale(1.08) translateZ(32px);
         }
 
-        .btn-lock-fabric {
-            color: var(--rfr-glow);
-            box-shadow: 0 0 70px var(--rfr-glow);
-            border-color: var(--rfr-glow);
+        .btn-harmonize-resonance {
+            color: var(--erh-glow);
+            box-shadow: 0 0 80px var(--erh-glow);
+            border-color: var(--erh-glow);
         }
-        .btn-lock-fabric:hover {
-            background: rgba(255, 180, 255, 0.95);
-            box-shadow: 0 0 90px var(--rfr-glow), inset 0 0 80px var(--rfr-glow);
-            transform: translateY(-28px) scale(1.06) translateZ(28px);
+        .btn-harmonize-resonance:hover {
+            background: rgba(255, 100, 200, 0.95);
+            box-shadow: 0 0 100px var(--erh-glow), inset 0 0 90px var(--erh-glow);
+            transform: translateY(-32px) scale(1.08) translateZ(32px);
+        }
+
+        .btn-construct-gateway {
+            color: var(--dgc-glow);
+            box-shadow: 0 0 80px var(--dgc-glow);
+            border-color: var(--dgc-glow);
+        }
+        .btn-construct-gateway:hover {
+            background: rgba(100, 255, 100, 0.95);
+            box-shadow: 0 0 100px var(--dgc-glow), inset 0 0 90px var(--dgc-glow);
+            transform: translateY(-32px) scale(1.08) translateZ(32px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 28px solid var(--anomaly-border);
-            border-radius: 5.0rem;
-            padding: 5.0rem;
-            margin-top: 6.0rem;
+            border: 35px solid var(--anomaly-border);
+            border-radius: 6.0rem;
+            padding: 6.0rem;
+            margin-top: 7.0rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 3.5rem;
-            text-shadow: 0 0 60px var(--anomaly-color);
-            animation: pulseWarning 0.1s infinite alternate; /* Faster pulse */
-            transform: translateZ(30px);
+            font-size: 4.0rem;
+            text-shadow: 0 0 70px var(--anomaly-color);
+            animation: pulseWarning 0.08s infinite alternate; /* Even Faster pulse */
+            transform: translateZ(35px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 2.5s ease-out;
+            transition: opacity 3.0s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -994,8 +946,8 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 55px var(--anomaly-color), inset 0 0 45px var(--anomaly-color); }
-            to { box-shadow: 0 0 95px var(--anomaly-color), inset 0 0 85px var(--anomaly-color); }
+            from { box-shadow: 0 0 65px var(--anomaly-color), inset 0 0 55px var(--anomaly-color); }
+            to { box-shadow: 0 0 105px var(--anomaly-color), inset 0 0 95px var(--anomaly-color); }
         }
 
         /* NEW: Resource Anomaly Event Overlay */
@@ -1006,128 +958,129 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
             background: var(--anomaly-event-bg);
-            border: 25px solid var(--anomaly-event-border);
-            border-radius: 4.5rem;
-            padding: 6.0rem;
+            border: 30px solid var(--anomaly-event-border);
+            border-radius: 5.5rem;
+            padding: 7.0rem;
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 50px var(--anomaly-event-border);
-            box-shadow: 0 0 90px var(--anomaly-event-border);
+            text-shadow: 0 0 60px var(--anomaly-event-border);
+            box-shadow: 0 0 100px var(--anomaly-event-border);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.9s ease-out, visibility 0s linear 0.9s;
+            transition: opacity 1.0s ease-out, visibility 0s linear 1.0s;
             max-width: 90%;
-            transform: translate(-50%, -50%) scale(0.35);
+            transform: translate(-50%, -50%) scale(0.3);
         }
         .resource-anomaly-event.active {
             opacity: 1;
             visibility: visible;
-            transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: opacity 1.0s ease-out, transform 1.0s cubic-bezier(0.2, 0.8, 0.2, 1);
             transform: translate(-50%, -50%) scale(1);
         }
         .resource-anomaly-event h2 {
-            font-size: 5.5rem;
-            margin-bottom: 4.0rem;
+            font-size: 6.0rem;
+            margin-bottom: 5.0rem;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 52px var(--anomaly-event-border);
-            letter-spacing: 0.3rem;
+            text-shadow: 0 0 62px var(--anomaly-event-border);
+            letter-spacing: 0.4rem;
         }
         .resource-anomaly-event p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8rem;
-            margin-bottom: 4.5rem;
-            line-height: 3.8;
+            font-size: 3.2rem;
+            margin-bottom: 5.5rem;
+            line-height: 4.0;
             color: var(--anomaly-event-text);
         }
         .resource-anomaly-event button {
             background: var(--anomaly-event-border);
             color: var(--anomaly-event-bg);
             border: none;
-            padding: 2.8rem 4.8rem;
-            border-radius: 3.5rem;
+            padding: 3.2rem 5.5rem;
+            border-radius: 4.0rem;
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.0rem;
+            font-size: 3.5rem;
             cursor: pointer;
-            box-shadow: 0 0 50px var(--anomaly-event-border);
-            transition: all 0.4s ease;
+            box-shadow: 0 0 60px var(--anomaly-event-border);
+            transition: all 0.5s ease;
         }
         .resource-anomaly-event button:hover {
-            box-shadow: 0 0 70px var(--anomaly-event-border);
-            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 0 80px var(--anomaly-event-border);
+            transform: translateY(-18px) scale(1.06);
         }
     </style>
 </head>
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 2.5.0 Alpha (2.5 Generation) // Operational since Cycle 3,141,592,654</p>
+        <p>Core System Interface // Version 3.0.0 Alpha (3rd Generation) // Operational since Cycle 3,141,592,654</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
-            <!-- Quantum Entanglement Sequencer (QES) - NEW Module LOGIC -->
-            <div class="module-base quantum-entanglement-sequencer">
-                <div class="module-label">Quantum Entanglement Sequencer (QES)</div>
+            <!-- Chronal Drift Calibrator (CDC) - NEW Module -->
+            <div class="module-base chronal-drift-calibrator">
+                <div class="module-label">Chronal Drift Calibrator (CDC)</div>
                 <div class="param-group">
-                    <label class="param-label">Replicate Entangled Sequences <br><span>Observe the flashing particle sequence and replicate it by clicking the correct particles. Entangled partners will flash simultaneously.</span></label>
-                    <div class="qes-grid-area" id="qesGridArea">
-                        <!-- Grid cells will be dynamically inserted here by JS -->
+                    <label class="param-label">Synchronize Temporal Flux <br><span>Capture drifting Chronal Particles within designated temporal zones by clicking the calibration field. Maintain stable time flow.</span></label>
+                    <div class="cdc-calibration-area" id="cdcCalibrationArea">
+                        <canvas class="cdc-canvas" id="cdcCanvas"></canvas>
+                        <!-- Temporal Particles and Zones dynamically inserted/drawn by JS -->
                     </div>
-                    <p class="qes-status" id="qesStatus">Initiating sequence playback...</p>
-                    <div class="qes-controls">
-                        <button class="action-button btn-start-sequence" id="startSequenceBtn">Start Sequence</button>
+                    <p class="cdc-status" id="cdcStatus">Temporal Flux: Uncalibrated. Sync: 0%</p>
+                    <div class="cdc-controls">
+                        <button class="action-button btn-calibrate-drift" id="calibrateDriftBtn">Calibrate Chronal Drift</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Gravitational Anomaly Generator (GSH) - NEW Module LOGIC -->
-            <div class="module-base gravitational-anomaly-generator">
-                <div class="module-label">Gravitational Anomaly Generator (GSH)</div>
+            <!-- Neural Network Rewiring (NNR) - NEW Module -->
+            <div class="module-base neural-network-rewiring">
+                <div class="module-label">Neural Network Rewiring (NNR)</div>
                 <div class="param-group">
-                    <label class="param-label">Generate Anomalies to Stabilize Probe <br><span>Click anywhere on the field to generate temporary gravitational anomalies. Guide the drifting probe into the target stabilization point.</span></label>
-                    <div class="gsh-simulation-area" id="gshSimulationArea">
-                        <canvas class="gsh-simulation-canvas" id="gshSimulationCanvas"></canvas>
-                        <!-- Anomalies (pulses) dynamically inserted by JS -->
+                    <label class="param-label">Activate Cognitive Pathways <br><span>Click to toggle neural nodes. Activate the target output nodes by rewiring the network connections.</span></label>
+                    <div class="nnr-network-area" id="nnrNetworkArea">
+                        <canvas class="nnr-canvas" id="nnrCanvas"></canvas>
+                        <!-- Neural Nodes and connections dynamically drawn/inserted by JS -->
                     </div>
                 </div>
-                <p class="gsh-status" id="gshStatus">Probe Status: Drifting. Target: Unengaged.</p>
-                <button class="action-button btn-engage-stabilizers" id="engageStabilizersBtn" disabled>Engage Stabilizers</button>
+                <p class="nnr-status" id="nnrStatus">Network State: Dormant. Signal Flow: Disrupted.</p>
+                <button class="action-button btn-rewire-network" id="rewireNetworkBtn" disabled>Rewire Network</button>
             </div>
 
-            <!-- Psionic Waveform Synthesizer (PRS) - NEW Module LOGIC -->
-            <div class="module-base psionic-waveform-synthesizer">
-                <div class="module-label">Psionic Waveform Synthesizer (PRS)</div>
+            <!-- Ethereal Resonance Harmonizer (ERH) - NEW Module -->
+            <div class="module-base ethereal-resonance-harmonizer">
+                <div class="module-label">Ethereal Resonance Harmonizer (ERH)</div>
                 <div class="param-group">
-                    <label class="param-label">Synthesize Target Waveform <br><span>Adjust amplitude, frequency, and phase of component waves to match the target composite waveform.</span></label>
-                    <canvas class="prs-canvas" id="prsCanvas"></canvas>
-                    <div class="prs-modulator-group" id="prsModulatorGroup">
+                    <label class="param-label">Achieve Ethereal Resonance <br><span>Adjust the frequency and amplitude modulators to match the elusive Ethereal Resonance Signature.</span></label>
+                    <canvas class="erh-canvas" id="erhCanvas"></canvas>
+                    <div class="erh-modulator-group" id="erhModulatorGroup">
                         <!-- Modulator sliders dynamically inserted here by JS -->
                     </div>
                 </div>
-                <p class="prs-status" id="prsStatus">Waveform Coherence: 0%</p>
-                <button class="action-button btn-synthesize-signature" id="synthesizeSignatureBtn" disabled>Synthesize Signature</button>
+                <p class="erh-status" id="erhStatus">Resonance Coherence: 0%</p>
+                <button class="action-button btn-harmonize-resonance" id="harmonizeResonanceBtn" disabled>Harmonize Resonance</button>
             </div>
 
-            <!-- Reality Fabric Pattern Weaver (RFR) - NEW Module LOGIC -->
-            <div class="module-base reality-fabric-pattern-weaver">
-                <div class="module-label">Reality Fabric Pattern Weaver (RFR)</div>
+            <!-- Dimensional Gateway Constructor (DGC) - NEW Module -->
+            <div class="module-base dimensional-gateway-constructor">
+                <div class="module-label">Dimensional Gateway Constructor (DGC)</div>
                 <div class="param-group">
-                    <label class="param-label">Weave Fabric Pattern <br><span>Slide rows and columns to align the nodes into the hidden target pattern.</span></label>
-                    <div class="rfr-reweaving-area" id="rfrReweavingArea">
-                        <canvas class="rfr-canvas" id="rfrCanvas"></canvas>
-                        <!-- Nodes and slide controls dynamically inserted by JS -->
+                    <label class="param-label">Assemble Gateway Configuration <br><span>Rotate and position conduit pieces to complete the target dimensional gateway pattern.</span></label>
+                    <div class="dgc-gateway-area" id="dgcGatewayArea">
+                        <canvas class="dgc-canvas" id="dgcCanvas"></canvas>
+                        <!-- Conduit pieces dynamically inserted by JS -->
                     </div>
                 </div>
-                <p class="rfr-status" id="rfrStatus">Pattern Alignment: 0%</p>
-                <button class="action-button btn-lock-fabric" id="lockFabricBtn" disabled>Lock Fabric</button>
+                <p class="dgc-status" id="dgcStatus">Gateway Integrity: 0%</p>
+                <button class="action-button btn-construct-gateway" id="constructGatewayBtn" disabled>Construct Gateway</button>
             </div>
         </div>
 
         <div class="status-log-display" id="statusLog">
             <!-- Log entries will be inserted here by JS -->
-            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v2.5.0 Core Initialized.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.125]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.342]</span> <span class="status-info">Displaying 2.5 Generation experimental control modules.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v3.0.0 Core Initialized.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.150]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
+            <div class="status-entry"><span class="status-value">[00:00:00.400]</span> <span class="status-info">Displaying 3rd Generation experimental control modules.</span></div>
         </div>
 
         <div class="anomaly-alert" id="anomalyAlert">
@@ -1151,88 +1104,85 @@
             resourceAnomalyEvent: document.getElementById('resourceAnomalyEvent'),
             acknowledgeAnomalyBtn: document.getElementById('acknowledgeAnomaly'),
             
-            // QES
-            qesGridArea: document.getElementById('qesGridArea'),
-            qesStatus: document.getElementById('qesStatus'),
-            startSequenceBtn: document.getElementById('startSequenceBtn'),
+            // CDC
+            cdcCalibrationArea: document.getElementById('cdcCalibrationArea'),
+            cdcCanvas: document.getElementById('cdcCanvas'),
+            cdcStatus: document.getElementById('cdcStatus'),
+            calibrateDriftBtn: document.getElementById('calibrateDriftBtn'),
 
-            // GSH
-            gshSimulationArea: document.getElementById('gshSimulationArea'),
-            gshSimulationCanvas: document.getElementById('gshSimulationCanvas'),
-            gshStatus: document.getElementById('gshStatus'),
-            engageStabilizersBtn: document.getElementById('engageStabilizersBtn'),
+            // NNR
+            nnrNetworkArea: document.getElementById('nnrNetworkArea'),
+            nnrCanvas: document.getElementById('nnrCanvas'),
+            nnrStatus: document.getElementById('nnrStatus'),
+            rewireNetworkBtn: document.getElementById('rewireNetworkBtn'),
 
-            // PRS
-            prsSynthesizerArea: document.getElementById('prsSynthesizerArea'),
-            prsCanvas: document.getElementById('prsCanvas'),
-            prsModulatorGroup: document.getElementById('prsModulatorGroup'),
-            prsStatus: document.getElementById('prsStatus'),
-            synthesizeSignatureBtn: document.getElementById('synthesizeSignatureBtn'),
+            // ERH
+            erhHarmonizerArea: document.getElementById('erhHarmonizerArea'),
+            erhCanvas: document.getElementById('erhCanvas'),
+            erhModulatorGroup: document.getElementById('erhModulatorGroup'),
+            erhStatus: document.getElementById('erhStatus'),
+            harmonizeResonanceBtn: document.getElementById('harmonizeResonanceBtn'),
 
-            // RFR
-            rfrReweavingArea: document.getElementById('rfrReweavingArea'),
-            rfrCanvas: document.getElementById('rfrCanvas'),
-            rfrStatus: document.getElementById('rfrStatus'),
-            lockFabricBtn: document.getElementById('lockFabricBtn'),
+            // DGC
+            dgcGatewayArea: document.getElementById('dgcGatewayArea'),
+            dgcCanvas: document.getElementById('dgcCanvas'),
+            dgcStatus: document.getElementById('dgcStatus'),
+            constructGatewayBtn: document.getElementById('constructGatewayBtn'),
         };
 
         let systemState = {
             globalStability: 100, // Represented as a percentage
             anomalyActive: false,
-            // QES state (Quantum Entanglement Sequencer)
-            qes: {
+            // CDC state (Chronal Drift Calibrator)
+            cdc: {
                 active: false,
-                gridSize: 4, // 4x4 grid
-                particles: [], // [{id, x, y, element, partners:[]}]
-                sequence: [], // IDs of particles in the sequence
-                userSequence: [], // User's input
-                sequenceLength: 3, // Initial sequence length
-                playingSequence: false,
+                ctx: null,
+                animationFrame: null,
+                particles: [], // [{x, y, vx, vy, radius, captured}]
+                temporalZones: [], // [{x, y, radius, active, requiredCaptures}]
+                captureCount: 0,
+                requiredCaptures: 5,
+                driftFactor: 0.8, // How fast particles drift
+                coherence: 0, // 0-100%
+            },
+            // NNR state (Neural Network Rewiring)
+            nnr: {
+                active: false,
+                ctx: null,
+                gridSize: 3, // 3x3 grid for nodes
+                nodes: [], // [{id, x, y, active, connections:[]}]
+                targetOutputNodes: [], // IDs of nodes that need to be active
+                connections: [], // [{from, to, active}]
+                signalPath: [], // The active path of the signal
+                signalPropagating: false,
                 level: 1,
             },
-            // GSH state (Gravitational Anomaly Generator)
-            gsh: {
+            // ERH state (Ethereal Resonance Harmonizer)
+            erh: {
                 active: false,
                 ctx: null,
                 animationFrame: null,
-                probe: { x: 0, y: 0, vx: 0, vy: 0, radius: 10 },
-                targetPoint: { x: 0, y: 0, radius: 25 },
-                anomalies: [], // [{x, y, strength, createdAt, element}]
-                massPoints: [], // Dynamic mass points
-                GRAVITATIONAL_CONSTANT: 2000, // Scale for canvas
-                PULSE_STRENGTH: 500000, // How strong a click pulse is
-                PULSE_DURATION: 1000, // ms for pulse to fade
-                simulationTimeStep: 0.1,
-                stabilityScore: 0, // 0-100% (time in target)
-                timeInTarget: 0, // ms
-                requiredTimeInTarget: 2000, // ms
-                driftSpeed: 0.2, // speed of background mass points
-            },
-            // PRS state (Psionic Waveform Synthesizer)
-            prs: {
-                active: false,
-                ctx: null,
-                animationFrame: null,
-                numComponentWaves: 3,
+                numModulators: 4, // More modulators than PRS for complexity
                 modulators: [], // [{id, type, value, element}]
-                targetWaveform: { samples: [], sumEquation: '' }, // Pre-calculated target
-                componentWaves: [], // [{amplitude, frequency, phase}]
+                targetSignature: { samples: [], equation: '' }, // Pre-calculated target
+                userWaveform: { samples: [], equation: '' }, // User's combined wave
                 coherence: 0, // 0-100%
-                audioContext: null,
-                oscillator: null, // Single oscillator for combined wave
+                audioContext: null, // Optional: for actual audio feedback
+                oscillators: [], // Separate oscillators for component waves
+                analyserNode: null,
+                frequencyBinData: null,
             },
-            // RFR state (Reality Fabric Pattern Weaver)
-            rfr: {
+            // DGC state (Dimensional Gateway Constructor)
+            dgc: {
                 active: false,
                 ctx: null,
-                gridSize: 5, // 5x5 grid
-                nodes: [], // [{id, x, y, symbol, element}]
-                targetPattern: [], // Array of {x,y} for nodes to highlight
-                currentGrid: [], // 2D array of symbols
-                solvedPattern: [], // Final solved pattern
-                shiftInProgress: false, // Prevent rapid shifting
-                shiftDuration: 300, // ms
+                gridSize: 4, // 4x4 grid for conduit pieces
+                conduitPieces: [], // [{id, x, y, rotation, type, element}]
+                targetPattern: [], // Expected rotations/types for success
+                currentConfiguration: [], // Current state of pieces
                 alignment: 0, // %
+                draggingPiece: null, // Current dragged piece
+                dragOffset: { x: 0, y: 0 },
             }
         };
 
@@ -1258,7 +1208,7 @@
                    resolveAnomalyAlert();
                 }
             }
-            if (systemState.globalStability > 70 && !systemState.anomalyActive && Math.random() < 0.005) { // 0.5% chance every few seconds
+            if (systemState.globalStability > 70 && !systemState.anomalyActive && Math.random() < 0.003) { // 0.3% chance every few seconds
                 triggerResourceAnomalyEvent();
             }
         }
@@ -1288,7 +1238,7 @@
             ui.resourceAnomalyEvent.classList.remove('active');
             systemState.anomalyActive = false;
             addLogEntry('Resource anomaly acknowledged. Diverting consciousness resources.', 'event');
-            systemState.globalStability -= 20;
+            systemState.globalStability -= 25; // More impactful
             checkGlobalStability();
         });
 
@@ -1312,514 +1262,487 @@
             };
         }
 
-        // --- QUANTUM ENTANGLEMENT SEQUENCER (QES) ---
-        function initQES() {
-            systemState.qes.active = true;
-            ui.qesGridArea.innerHTML = '';
-            ui.qesStatus.textContent = 'Ready for sequence L1. Press START.';
-            ui.startSequenceBtn.disabled = false;
-            ui.startSequenceBtn.textContent = 'Start Sequence';
+        // --- CHRONAL DRIFT CALIBRATOR (CDC) ---
+        function initCDC() {
+            systemState.cdc.active = true;
+            systemState.cdc.ctx = ui.cdcCanvas.getContext('2d');
+            resizeCDCCanvas();
 
-            const gridSize = systemState.qes.gridSize;
-            systemState.qes.particles = [];
-            systemState.qes.userSequence = [];
-            systemState.qes.sequence = [];
-            systemState.qes.playingSequence = false;
-            systemState.qes.level = 1;
+            systemState.cdc.particles = [];
+            systemState.cdc.temporalZones = [];
+            systemState.cdc.captureCount = 0;
+            systemState.cdc.coherence = 0;
 
-            const particleElements = [];
-            for (let y = 0; y < gridSize; y++) {
-                for (let x = 0; x < gridSize; x++) {
-                    const id = `qes-${x}-${y}`;
-                    const cellEl = document.createElement('div');
-                    cellEl.classList.add('qes-particle');
-                    cellEl.setAttribute('data-id', id);
-                    cellEl.setAttribute('data-x', x);
-                    cellEl.setAttribute('data-y', y);
-                    cellEl.addEventListener('click', () => clickQESParticle(id));
-                    ui.qesGridArea.appendChild(cellEl);
-                    particleElements.push({ id, x, y, element: cellEl, partners: [] });
-                }
-            }
-            systemState.qes.particles = particleElements;
-            generateQESEntanglements();
-            addLogEntry('QES: Quantum Entanglement Sequencer ready. Level 1.', 'event');
+            generateCDCParticles();
+            generateCDCTemporalZones();
+            
+            ui.cdcStatus.textContent = 'Temporal Flux: Uncalibrated. Sync: 0%';
+            ui.calibrateDriftBtn.disabled = true;
+
+            if (systemState.cdc.animationFrame) cancelAnimationFrame(systemState.cdc.animationFrame);
+            systemState.cdc.animationFrame = requestAnimationFrame(animateCDCCalibration);
+
+            ui.cdcCalibrationArea.addEventListener('click', clickCDCCalibration);
+            addLogEntry('CDC: Chronal Drift Calibrator online. Temporal stabilization required.', 'event');
         }
 
-        function generateQESEntanglements() {
-            const allParticleIds = systemState.qes.particles.map(p => p.id);
-            systemState.qes.particles.forEach(p => p.partners = []); // Clear old partners
+        function resizeCDCCanvas() {
+            if (ui.cdcCanvas) {
+                ui.cdcCanvas.width = ui.cdcCanvas.offsetWidth;
+                ui.cdcCanvas.height = ui.cdcCanvas.offsetHeight;
+                if (systemState.cdc.active) drawCDCCalibration();
+            }
+        }
+        window.addEventListener('resize', resizeCDCCanvas);
 
-            // Each particle has 0-2 partners (allowing some isolated particles)
-            systemState.qes.particles.forEach(p => {
-                const numPartners = Math.floor(Math.random() * 3); // 0, 1, or 2 partners
-                for (let i = 0; i < numPartners; i++) {
-                    let partner;
-                    do {
-                        partner = systemState.qes.particles[Math.floor(Math.random() * systemState.qes.particles.length)];
-                    } while (partner.id === p.id || p.partners.includes(partner.id) || partner.partners.includes(p.id));
+        function generateCDCParticles() {
+            const canvas = ui.cdcCanvas;
+            systemState.cdc.particles = [];
+            for (let i = 0; i < 10; i++) {
+                systemState.cdc.particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 20 * systemState.cdc.driftFactor,
+                    vy: (Math.random() - 0.5) * 20 * systemState.cdc.driftFactor,
+                    radius: 12 + Math.random() * 8,
+                    captured: false,
+                    id: `particle-${i}`
+                });
+            }
+            addLogEntry('CDC: Chronal particles instantiated.', 'info');
+        }
 
-                    p.partners.push(partner.id);
-                    if (!partner.partners.includes(p.id)) {
-                        partner.partners.push(p.id);
+        function generateCDCTemporalZones() {
+            const canvas = ui.cdcCanvas;
+            systemState.cdc.temporalZones = [];
+            for (let i = 0; i < 3; i++) {
+                systemState.cdc.temporalZones.push({
+                    x: canvas.width * (0.2 + Math.random() * 0.6),
+                    y: canvas.height * (0.2 + Math.random() * 0.6),
+                    radius: 40 + Math.random() * 20,
+                    active: false, // Will activate periodically
+                    id: `zone-${i}`,
+                    requiredCaptures: 1 + Math.floor(Math.random() * 2) // 1 or 2 particles per zone
+                });
+            }
+            addLogEntry('CDC: Temporal calibration zones established.', 'info');
+        }
+
+        function drawCDCCalibration() {
+            const ctx = systemState.cdc.ctx;
+            const canvas = ui.cdcCanvas;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw temporal zones
+            systemState.cdc.temporalZones.forEach(zone => {
+                ctx.beginPath();
+                ctx.arc(zone.x, zone.y, zone.radius, 0, Math.PI * 2);
+                ctx.fillStyle = zone.active ? 'var(--cdc-target-zone)' : 'rgba(0, 255, 255, 0.05)';
+                ctx.strokeStyle = zone.active ? 'var(--cdc-pulse)' : 'rgba(0, 255, 255, 0.2)';
+                ctx.lineWidth = 4;
+                ctx.shadowColor = zone.active ? 'var(--cdc-pulse)' : 'transparent';
+                ctx.shadowBlur = zone.active ? 20 : 0;
+                ctx.fill();
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            });
+
+            // Draw particles
+            systemState.cdc.particles.forEach(p => {
+                if (p.captured) return;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'var(--cdc-particle)';
+                ctx.shadowColor = 'var(--cdc-particle)';
+                ctx.shadowBlur = 15;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            });
+        }
+
+        function animateCDCCalibration() {
+            const dt = 0.5; // Simplified time step
+            const canvas = ui.cdcCanvas;
+
+            systemState.cdc.particles.forEach(p => {
+                if (p.captured) return;
+                p.x += p.vx * dt;
+                p.y += p.y * dt;
+
+                // Bounce off walls
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                p.x = clamp(p.x, 0, canvas.width);
+                p.y = clamp(p.y, 0, canvas.height);
+            });
+
+            // Randomly activate zones
+            if (Math.random() < 0.01) { // 1% chance per frame to toggle a zone
+                const zone = systemState.cdc.temporalZones[Math.floor(Math.random() * systemState.cdc.temporalZones.length)];
+                zone.active = !zone.active;
+            }
+
+            drawCDCCalibration();
+            updateCDCStatus();
+            systemState.cdc.animationFrame = requestAnimationFrame(animateCDCCalibration);
+        }
+
+        function clickCDCCalibration(e) {
+            const pos = getCanvasMousePos(ui.cdcCanvas, e);
+            let capturedThisClick = 0;
+
+            systemState.cdc.particles.forEach(p => {
+                if (p.captured) return;
+                const dist = Math.sqrt(Math.pow(p.x - pos.x, 2) + Math.pow(p.y - pos.y, 2));
+                if (dist < p.radius * 1.5) { // Click close enough to capture
+                    let inActiveZone = false;
+                    systemState.cdc.temporalZones.forEach(zone => {
+                        if (zone.active) {
+                            const zoneDist = Math.sqrt(Math.pow(p.x - zone.x, 2) + Math.pow(p.y - zone.y, 2));
+                            if (zoneDist < zone.radius && zone.requiredCaptures > 0) {
+                                p.captured = true;
+                                zone.requiredCaptures--;
+                                systemState.cdc.captureCount++;
+                                capturedThisClick++;
+                                addLogEntry(`CDC: Chronal Particle ${p.id} captured in active zone ${zone.id}.`, 'info');
+                                systemState.globalStability += 5;
+                                inActiveZone = true;
+                            }
+                        }
+                    });
+                    if (!inActiveZone) {
+                        addLogEntry(`CDC: Chronal Particle ${p.id} captured outside active zone! Temporal flux destabilized.`, 'warning');
+                        systemState.globalStability -= 5;
                     }
                 }
             });
-            addLogEntry('QES: New entanglement matrix generated.', 'info');
+            if (capturedThisClick > 0) checkGlobalStability();
         }
 
-        function generateQESSequence() {
-            systemState.qes.sequence = [];
-            const availableParticles = systemState.qes.particles.map(p => p.id);
-            for (let i = 0; i < systemState.qes.sequenceLength; i++) {
-                systemState.qes.sequence.push(availableParticles[Math.floor(Math.random() * availableParticles.length)]);
+        function updateCDCStatus() {
+            const totalParticles = systemState.cdc.particles.length;
+            const captured = systemState.cdc.particles.filter(p => p.captured).length;
+            systemState.cdc.coherence = (captured / totalParticles) * 100;
+
+            ui.cdcStatus.textContent = `Temporal Flux: ${systemState.cdc.coherence.toFixed(1)}% Coherent. Captured: ${captured}/${totalParticles}`;
+
+            if (systemState.cdc.coherence >= 80) { // 80% or more captured for win
+                ui.calibrateDriftBtn.disabled = false;
+                addLogEntry('CDC: Sufficient chronal particles stabilized. Ready for calibration.', 'success');
+            } else {
+                ui.calibrateDriftBtn.disabled = true;
             }
-            addLogEntry(`QES: Generated sequence of length ${systemState.qes.sequenceLength}.`, 'info');
         }
 
-        async function playQESSequence() {
-            if (systemState.qes.playingSequence) return;
-            systemState.qes.playingSequence = true;
-            ui.startSequenceBtn.disabled = true;
-            ui.qesGridArea.style.pointerEvents = 'none'; // Disable input during playback
-            systemState.qes.userSequence = [];
-            ui.qesStatus.textContent = 'Observe the sequence...';
-            addLogEntry('QES: Playing sequence...', 'info');
+        ui.calibrateDriftBtn.addEventListener('click', () => {
+            if (!systemState.cdc.active || ui.calibrateDriftBtn.disabled) return;
+            addLogEntry('CDC: Chronal drift calibration engaged! Time-space continuum stabilized.', 'success');
+            systemState.globalStability += 35;
+            checkGlobalStability();
+            endCDC(true);
+        });
 
-            // Reset all particles visually
-            systemState.qes.particles.forEach(p => {
-                p.element.classList.remove('active', 'user-correct', 'user-wrong');
-                p.element.classList.remove('qes-entangled-pulse'); // Remove animation class
+        function endCDC(success) {
+            systemState.cdc.active = false;
+            if (systemState.cdc.animationFrame) cancelAnimationFrame(systemState.cdc.animationFrame);
+            ui.cdcCalibrationArea.removeEventListener('click', clickCDCCalibration);
+            if (!success) {
+                addLogEntry('CDC: Chronal calibration failed! Temporal anomalies spreading.', 'critical');
+                triggerAnomalyAlert('CDC: Time-space continuum unstable! Chronal collapse imminent.');
+                systemState.globalStability -= 45;
+            }
+            checkGlobalStability();
+            initCDC(); // Reset for next round
+        }
+        initCDC();
+
+        // --- NEURAL NETWORK REWIRING (NNR) ---
+        function initNNR() {
+            systemState.nnr.active = true;
+            systemState.nnr.ctx = ui.nnrCanvas.getContext('2d');
+            resizeNNRCanvas();
+
+            systemState.nnr.nodes = [];
+            systemState.nnr.connections = [];
+            systemState.nnr.signalPath = [];
+            systemState.nnr.signalPropagating = false;
+            systemState.nnr.level = 1;
+
+            generateNNRNetwork();
+            ui.nnrStatus.textContent = 'Network State: Dormant. Signal Flow: Disrupted.';
+            ui.rewireNetworkBtn.disabled = true;
+
+            // Remove existing node elements and re-create for proper event listeners
+            ui.nnrNetworkArea.querySelectorAll('.nnr-node').forEach(node => node.remove());
+            systemState.nnr.nodes.forEach(node => {
+                const nodeEl = document.createElement('div');
+                nodeEl.classList.add('nnr-node');
+                nodeEl.setAttribute('data-id', node.id);
+                nodeEl.style.left = `${node.x}%`;
+                nodeEl.style.top = `${node.y}%`;
+                nodeEl.style.transform = `translate(-50%, -50%) translateZ(5px)`; // Center based on percentage
+                nodeEl.textContent = node.id.split('-')[1]; // Display node number
+                nodeEl.addEventListener('click', () => toggleNNRNode(node.id));
+                ui.nnrNetworkArea.appendChild(nodeEl);
+                node.element = nodeEl;
             });
 
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Small delay before start
+            if (systemState.nnr.animationFrame) cancelAnimationFrame(systemState.nnr.animationFrame);
+            systemState.nnr.animationFrame = requestAnimationFrame(animateNNRNetwork);
 
-            for (let i = 0; i < systemState.qes.sequence.length; i++) {
-                const particleId = systemState.qes.sequence[i];
-                const particle = systemState.qes.particles.find(p => p.id === particleId);
-
-                if (particle) {
-                    // Flash the primary particle
-                    particle.element.classList.add('active');
-                    particle.element.classList.add('qes-entangled-pulse'); // Add animation class
-                    
-                    // Flash entangled partners simultaneously
-                    particle.partners.forEach(partnerId => {
-                        const partner = systemState.qes.particles.find(p => p.id === partnerId);
-                        if (partner) {
-                            partner.element.classList.add('active');
-                            partner.element.classList.add('qes-entangled-pulse'); // Add animation class
-                        }
-                    });
-
-                    await new Promise(resolve => setTimeout(resolve, 700 - (systemState.qes.level * 20))); // Show for a bit, faster with levels
-                    
-                    // Turn off primary particle
-                    particle.element.classList.remove('active');
-                    particle.element.classList.remove('qes-entangled-pulse');
-                    
-                    // Turn off entangled partners
-                    particle.partners.forEach(partnerId => {
-                        const partner = systemState.qes.particles.find(p => p.id === partnerId);
-                        if (partner) {
-                            partner.element.classList.remove('active');
-                            partner.element.classList.remove('qes-entangled-pulse');
-                        }
-                    });
-
-                    await new Promise(resolve => setTimeout(resolve, 300 - (systemState.qes.level * 10))); // Pause between flashes, faster with levels
-                }
-            }
-
-            ui.qesStatus.textContent = 'Now replicate the sequence!';
-            ui.qesGridArea.style.pointerEvents = 'auto'; // Enable input
-            systemState.qes.playingSequence = false;
-            addLogEntry('QES: Sequence playback complete. Awaiting user input.', 'info');
+            addLogEntry('NNR: Neural Network active. Ready for cognitive pathway activation.', 'event');
         }
 
-        function clickQESParticle(id) {
-            if (systemState.qes.playingSequence) return;
-
-            const clickedParticle = systemState.qes.particles.find(p => p.id === id);
-            if (!clickedParticle) return;
-
-            systemState.qes.userSequence.push(id);
-            addLogEntry(`QES: User input: ${id}.`, 'info');
-
-            const currentStep = systemState.qes.userSequence.length - 1;
-            const correctId = systemState.qes.sequence[currentStep];
-
-            // Visual feedback for click
-            clickedParticle.element.classList.add('active');
-            clickedParticle.element.classList.add('qes-entangled-pulse');
-            setTimeout(() => {
-                clickedParticle.element.classList.remove('active');
-                clickedParticle.element.classList.remove('qes-entangled-pulse');
-            }, 500); // Flash briefly for feedback
-
-            if (id === correctId) {
-                clickedParticle.element.classList.add('user-correct');
-                addLogEntry('QES: Correct input!', 'info');
-                if (systemState.qes.userSequence.length === systemState.qes.sequence.length) {
-                    // Sequence complete and correct
-                    addLogEntry(`QES: Sequence L${systemState.qes.level} successfully replicated!`, 'success');
-                    systemState.globalStability += (15 + systemState.qes.level * 2);
-                    systemState.qes.level++;
-                    systemState.qes.sequenceLength++;
-                    ui.startSequenceBtn.disabled = false;
-                    ui.startSequenceBtn.textContent = `Start Sequence L${systemState.qes.level}`;
-                    ui.qesStatus.textContent = `Sequence L${systemState.qes.level - 1} complete! Next level ready.`;
-                    // Reset particles for next round
-                    systemState.qes.particles.forEach(p => p.element.classList.remove('active', 'user-correct', 'user-wrong'));
-                    generateQESSequence();
-                }
-            } else {
-                // Wrong input
-                clickedParticle.element.classList.add('user-wrong');
-                addLogEntry(`QES: Incorrect input! Sequence failed (L${systemState.qes.level}).`, 'critical');
-                systemState.globalStability -= (20 + systemState.qes.level * 3);
-                triggerAnomalyAlert(`QES: Quantum sequence corrupted (L${systemState.qes.level})! Data divergence detected.`);
-                // Reset for retry
-                systemState.qes.userSequence = [];
-                systemState.qes.particles.forEach(p => p.element.classList.remove('active', 'user-correct', 'user-wrong'));
-                ui.startSequenceBtn.disabled = false;
-                ui.startSequenceBtn.textContent = `Retry Sequence L${systemState.qes.level}`;
-                ui.qesStatus.textContent = `Sequence failed. Try again L${systemState.qes.level}.`;
+        function resizeNNRCanvas() {
+            if (ui.nnrCanvas) {
+                ui.nnrCanvas.width = ui.nnrCanvas.offsetWidth;
+                ui.nnrCanvas.height = ui.nnrCanvas.offsetHeight;
+                if (systemState.nnr.active) drawNNRNetwork();
             }
+        }
+        window.addEventListener('resize', resizeNNRCanvas);
+
+        function generateNNRNetwork() {
+            const gridSize = systemState.nnr.gridSize;
+            systemState.nnr.nodes = [];
+            systemState.nnr.connections = [];
+            systemState.nnr.targetOutputNodes = [];
+
+            // Create nodes in a grid-like fashion (using percentages for responsive positioning)
+            const margin = 15;
+            const step = (100 - 2 * margin) / (gridSize - 1);
+
+            for (let r = 0; r < gridSize; r++) {
+                for (let c = 0; c < gridSize; c++) {
+                    const id = `node-${r * gridSize + c}`;
+                    const x = margin + c * step;
+                    const y = margin + r * step;
+                    systemState.nnr.nodes.push({ id, x, y, active: false, connections: [], element: null });
+                }
+            }
+
+            // Create connections (randomly, but ensuring connectivity)
+            const allNodes = systemState.nnr.nodes.map(n => n.id);
+            for (let i = 0; i < allNodes.length; i++) {
+                const currentNode = systemState.nnr.nodes.find(n => n.id === allNodes[i]);
+                const numConnections = Math.floor(Math.random() * 2) + 1; // 1 or 2 connections per node
+
+                for (let j = 0; j < numConnections; j++) {
+                    let targetNodeId;
+                    do {
+                        targetNodeId = allNodes[Math.floor(Math.random() * allNodes.length)];
+                    } while (targetNodeId === currentNode.id || currentNode.connections.includes(targetNodeId));
+
+                    currentNode.connections.push(targetNodeId);
+                    // Add connection to list (undirected for now, can be directed later)
+                    systemState.nnr.connections.push({ from: currentNode.id, to: targetNodeId, active: false });
+                }
+            }
+
+            // Define random target output nodes (at least one, usually 2-3)
+            const numTargetOutputs = Math.floor(Math.random() * 2) + 1;
+            shuffleArray(allNodes);
+            systemState.nnr.targetOutputNodes = allNodes.slice(0, numTargetOutputs);
+            addLogEntry(`NNR: Network generated. Target output nodes: ${systemState.nnr.targetOutputNodes.join(', ')}.`, 'info');
+        }
+
+        function drawNNRNetwork() {
+            const ctx = systemState.nnr.ctx;
+            const canvas = ui.nnrCanvas;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw connections
+            systemState.nnr.connections.forEach(conn => {
+                const fromNode = systemState.nnr.nodes.find(n => n.id === conn.from);
+                const toNode = systemState.nnr.nodes.find(n => n.id === conn.to);
+                if (!fromNode || !toNode) return;
+
+                const fromX = fromNode.x / 100 * canvas.width;
+                const fromY = fromNode.y / 100 * canvas.height;
+                const toX = toNode.x / 100 * canvas.width;
+                const toY = toNode.y / 100 * canvas.height;
+
+                ctx.beginPath();
+                ctx.moveTo(fromX, fromY);
+                ctx.lineTo(toX, toY);
+                ctx.strokeStyle = conn.active ? 'var(--nnr-signal-glow)' : 'var(--nnr-connection-path)';
+                ctx.lineWidth = conn.active ? 8 : 4;
+                ctx.shadowColor = conn.active ? 'var(--nnr-signal-glow)' : 'transparent';
+                ctx.shadowBlur = conn.active ? 15 : 0;
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            });
+        }
+
+        function animateNNRNetwork() {
+            drawNNRNetwork(); // Redraw connections with active states
+
+            // Update node visual active states
+            systemState.nnr.nodes.forEach(node => {
+                if (node.element) {
+                    node.element.classList.toggle('active', node.active);
+                }
+            });
+
+            updateNNRStatus();
+            systemState.nnr.animationFrame = requestAnimationFrame(animateNNRNetwork);
+        }
+
+        function toggleNNRNode(nodeId) {
+            const node = systemState.nnr.nodes.find(n => n.id === nodeId);
+            if (!node) return;
+
+            node.active = !node.active;
+            addLogEntry(`NNR: Node ${nodeId} toggled to ${node.active}.`, 'info');
+
+            // Propagate signal
+            systemState.nnr.signalPath = [];
+            systemState.nnr.connections.forEach(conn => conn.active = false); // Reset active connections
+
+            if (node.active) {
+                propagateNNRSignal(nodeId);
+            } else {
+                // If a node is deactivated, all downstream signals should also deactivate
+                // For simplicity here, we reset all connections and re-propagate from all active nodes
+                systemState.nnr.nodes.forEach(n => {
+                    if (n.active) propagateNNRSignal(n.id);
+                });
+            }
+            checkNNRCompletion();
             checkGlobalStability();
         }
 
-        ui.startSequenceBtn.addEventListener('click', () => {
-            if (systemState.qes.sequence.length === 0 || systemState.qes.userSequence.length > 0) {
-                 generateQESSequence(); // Generate new sequence if first time or previous attempt failed.
-            }
-            playQESSequence();
-        });
-        initQES();
+        function propagateNNRSignal(startNodeId) {
+            const queue = [startNodeId];
+            const visited = new Set();
 
-        // --- GRAVITATIONAL ANOMALY GENERATOR (GSH) ---
-        function initGSH() {
-            systemState.gsh.active = true;
-            systemState.gsh.ctx = ui.gshSimulationCanvas.getContext('2d');
-            resizeGSHCanvas();
+            while (queue.length > 0) {
+                const currentId = queue.shift();
+                if (visited.has(currentId)) continue;
+                visited.add(currentId);
 
-            systemState.gsh.anomalies = [];
-            systemState.gsh.massPoints = [];
-            systemState.gsh.timeInTarget = 0;
+                const currentNode = systemState.nnr.nodes.find(n => n.id === currentId);
+                if (!currentNode) continue;
 
-            resetGSHProbeAndTarget();
-            generateGSHMassPoints();
-            
-            ui.gshStatus.textContent = 'Probe Status: Drifting. Target: Unengaged.';
-            ui.engageStabilizersBtn.disabled = true;
-            
-            if (systemState.gsh.animationFrame) cancelAnimationFrame(systemState.gsh.animationFrame);
-            systemState.gsh.animationFrame = requestAnimationFrame(animateGSHSimulation);
-
-            ui.gshSimulationArea.addEventListener('click', createGSHAnomaly);
-            addLogEntry('GSH: Gravitational Anomaly Generator ready. Stabilize the probe.', 'event');
-        }
-
-        function resizeGSHCanvas() {
-            if (ui.gshSimulationCanvas) {
-                ui.gshSimulationCanvas.width = ui.gshSimulationCanvas.offsetWidth;
-                ui.gshSimulationCanvas.height = ui.gshSimulationCanvas.offsetHeight;
-            }
-        }
-        window.addEventListener('resize', resizeGSHCanvas);
-
-        function resetGSHProbeAndTarget() {
-            const canvas = ui.gshSimulationCanvas;
-            const startEdge = Math.floor(Math.random() * 4); // 0:top, 1:right, 2:bottom, 3:left
-            let startX, startY, startVx, startVy;
-
-            const speed = 5 + Math.random() * 5; // Initial speed
-
-            switch (startEdge) {
-                case 0: // Top
-                    startX = Math.random() * canvas.width;
-                    startY = -50; // Off-screen
-                    startVx = (Math.random() - 0.5) * speed;
-                    startVy = speed;
-                    break;
-                case 1: // Right
-                    startX = canvas.width + 50;
-                    startY = Math.random() * canvas.height;
-                    startVx = -speed;
-                    startVy = (Math.random() - 0.5) * speed;
-                    break;
-                case 2: // Bottom
-                    startX = Math.random() * canvas.width;
-                    startY = canvas.height + 50;
-                    startVx = (Math.random() - 0.5) * speed;
-                    startVy = -speed;
-                    break;
-                case 3: // Left
-                    startX = -50; // Off-screen
-                    startY = Math.random() * canvas.height;
-                    startVx = speed;
-                    startVy = (Math.random() - 0.5) * speed;
-                    break;
-            }
-
-            systemState.gsh.probe = {
-                x: startX, y: startY,
-                vx: startVx, vy: startVy,
-                radius: 10
-            };
-
-            systemState.gsh.targetPoint = {
-                x: canvas.width * (0.3 + Math.random() * 0.4), // 30-70% width
-                y: canvas.height * (0.3 + Math.random() * 0.4), // 30-70% height
-                radius: 25
-            };
-        }
-
-        function generateGSHMassPoints() {
-            const canvas = ui.gshSimulationCanvas;
-            const numMassPoints = Math.floor(Math.random() * 3) + 2; // 2 to 4 points
-            systemState.gsh.massPoints = [];
-            for (let i = 0; i < numMassPoints; i++) {
-                systemState.gsh.massPoints.push({
-                    id: `mass-${i}`,
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    mass: Math.random() * 50 + 50, // Smaller masses for background drift
-                    vx: (Math.random() - 0.5) * systemState.gsh.driftSpeed,
-                    vy: (Math.random() - 0.5) * systemState.gsh.driftSpeed,
+                currentNode.connections.forEach(connectedNodeId => {
+                    const connection = systemState.nnr.connections.find(c =>
+                        (c.from === currentId && c.to === connectedNodeId) ||
+                        (c.from === connectedNodeId && c.to === currentId)
+                    );
+                    if (connection) {
+                        connection.active = true; // Mark connection as active
+                        // If connection activates, also activate the connected node visually for a moment
+                        const targetNode = systemState.nnr.nodes.find(n => n.id === connectedNodeId);
+                        if (targetNode && !targetNode.active) { // Only temporarily flash if not user-activated
+                             targetNode.element.classList.add('active');
+                             setTimeout(() => targetNode.element.classList.remove('active'), 300);
+                        }
+                    }
+                    if (!visited.has(connectedNodeId)) {
+                        queue.push(connectedNodeId);
+                    }
                 });
             }
         }
 
-        function createGSHAnomaly(e) {
-            if (!systemState.gsh.active) return;
-            const pos = getCanvasMousePos(ui.gshSimulationCanvas, e);
-            const anomalyEl = document.createElement('div');
-            anomalyEl.classList.add('gsh-anomaly-pulse');
-            anomalyEl.style.width = anomalyEl.style.height = '100px'; // Initial size for animation
-            anomalyEl.style.left = `${pos.x}px`;
-            anomalyEl.style.top = `${pos.y}px`;
-            anomalyEl.style.transform = `translate(-50%, -50%) scale(0.1)`; // Center it
-            ui.gshSimulationArea.appendChild(anomalyEl);
 
-            systemState.gsh.anomalies.push({
-                x: pos.x,
-                y: pos.y,
-                strength: systemState.gsh.PULSE_STRENGTH,
-                createdAt: performance.now(),
-                element: anomalyEl,
+        function checkNNRCompletion() {
+            const allTargetActive = systemState.nnr.targetOutputNodes.every(targetId => {
+                const node = systemState.nnr.nodes.find(n => n.id === targetId);
+                return node && node.active;
             });
-            addLogEntry(`GSH: Anomaly pulse generated at (${pos.x.toFixed(0)}, ${pos.y.toFixed(0)}).`, 'info');
+
+            if (allTargetActive) {
+                addLogEntry('NNR: All target output nodes activated!', 'success');
+                ui.rewireNetworkBtn.disabled = false;
+            } else {
+                ui.rewireNetworkBtn.disabled = true;
+            }
         }
 
-        function animateGSHSimulation(time) {
-            const ctx = systemState.gsh.ctx;
-            const canvas = ui.gshSimulationCanvas;
-            const probe = systemState.gsh.probe;
-            const dt = systemState.gsh.simulationTimeStep;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw target point
-            ctx.beginPath();
-            ctx.arc(systemState.gsh.targetPoint.x, systemState.gsh.targetPoint.y, systemState.gsh.targetPoint.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'var(--gsh-target-zone)';
-            ctx.strokeStyle = 'rgba(0, 255, 150, 0.5)';
-            ctx.lineWidth = 3;
-            ctx.fill();
-            ctx.stroke();
-
-            // Update and draw mass points (now drifting)
-            systemState.gsh.massPoints.forEach(mp => {
-                mp.x += mp.vx * dt;
-                mp.y += mp.vy * dt;
-
-                // Bounce off edges
-                if (mp.x < 0 || mp.x > canvas.width) mp.vx *= -1;
-                if (mp.y < 0 || mp.y > canvas.height) mp.vy *= -1;
-                mp.x = clamp(mp.x, 0, canvas.width);
-                mp.y = clamp(mp.y, 0, canvas.height);
-
-                ctx.beginPath();
-                ctx.arc(mp.x, mp.y, 15, 0, Math.PI * 2);
-                ctx.fillStyle = 'var(--gsh-mass-point)';
-                ctx.shadowColor = 'var(--gsh-mass-point)';
-                ctx.shadowBlur = 10;
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            });
-
-            // Calculate net force on probe
-            let Fx = 0, Fy = 0;
-            const allGravitationalSources = [...systemState.gsh.massPoints, ...systemState.gsh.anomalies];
-
-            allGravitationalSources.forEach(source => {
-                const dx = source.x - probe.x;
-                const dy = source.y - probe.y;
-                const distSq = dx*dx + dy*dy;
-                const dist = Math.sqrt(distSq);
-
-                if (dist > 5) { // Avoid division by zero/huge force when very close
-                    let force = systemState.gsh.GRAVITATIONAL_CONSTANT * source.mass / distSq;
-                    if (source.createdAt) { // This is an anomaly (pulse)
-                        const age = time - source.createdAt;
-                        const decayFactor = 1 - (age / systemState.gsh.PULSE_DURATION);
-                        if (decayFactor <= 0) return; // Anomaly has faded
-                        force = (source.strength * decayFactor) / distSq; // Anomaly strength decays
-                    }
-                    Fx += force * (dx / dist);
-                    Fy += force * (dy / dist);
-                }
-            });
-
-            // Update probe velocity and position
-            probe.vx += Fx * dt;
-            probe.vy += Fy * dt;
-            probe.x += probe.vx * dt;
-            probe.y += probe.vy * dt;
-
-            // Remove faded anomalies
-            systemState.gsh.anomalies = systemState.gsh.anomalies.filter(anomaly => {
-                const age = time - anomaly.createdAt;
-                if (age > systemState.gsh.PULSE_DURATION) {
-                    anomaly.element.remove();
-                    return false;
-                }
-                return true;
-            });
-
-            // Boundary conditions (if probe leaves screen, reset)
-            if (probe.x < -50 || probe.x > canvas.width + 50 || probe.y < -50 || probe.y > canvas.height + 50) {
-                addLogEntry('GSH: Probe escaped simulation boundaries! Resetting.', 'warning');
-                systemState.globalStability -= 10;
-                resetGSHProbeAndTarget();
-                systemState.gsh.timeInTarget = 0;
-            }
-
-            // Draw probe
-            ctx.beginPath();
-            ctx.arc(probe.x, probe.y, probe.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'var(--gsh-probe)';
-            ctx.shadowColor = 'var(--gsh-probe)';
-            ctx.shadowBlur = 20;
-            ctx.fill();
-            ctx.shadowBlur = 0;
-
-            updateGSHStatus(dt);
-            systemState.gsh.animationFrame = requestAnimationFrame(animateGSHSimulation);
-        }
-
-        function updateGSHStatus(dt) {
-            const probe = systemState.gsh.probe;
-            const target = systemState.gsh.targetPoint;
-            const distFromTarget = Math.sqrt(Math.pow(probe.x - target.x, 2) + Math.pow(probe.y - target.y, 2));
-
-            let probeStatus = 'Drifting';
-            if (distFromTarget < target.radius) {
-                probeStatus = 'Stabilizing';
-                systemState.gsh.timeInTarget += dt * 10; // Convert simulation dt to real ms approx
-            } else {
-                systemState.gsh.timeInTarget = Math.max(0, systemState.gsh.timeInTarget - dt * 5); // Decay quickly if out of target
-            }
-
-            systemState.gsh.stabilityScore = clamp((systemState.gsh.timeInTarget / systemState.gsh.requiredTimeInTarget) * 100, 0, 100);
-            
-            ui.gshStatus.textContent = `Probe Status: ${probeStatus}. Stabilization: ${systemState.gsh.stabilityScore.toFixed(1)}% (${(systemState.gsh.timeInTarget / 1000).toFixed(1)}s / ${(systemState.gsh.requiredTimeInTarget / 1000).toFixed(1)}s)`;
-
-            if (systemState.gsh.stabilityScore >= 100) {
-                ui.engageStabilizersBtn.disabled = false;
-                addLogEntry('GSH: Probe stabilized within target! Ready to engage stabilizers.', 'success');
-            } else {
-                ui.engageStabilizersBtn.disabled = true;
-            }
+        ui.rewireNetworkBtn.addEventListener('click', () => {
+            if (!systemState.nnr.active || ui.rewireNetworkBtn.disabled) return;
+            addLogEntry('NNR: Neural network successfully rewired! Cognitive pathways aligned.', 'success');
+            systemState.globalStability += 40;
             checkGlobalStability();
-        }
+            endNNR(true);
+        });
 
-        function engageStabilizers() {
-            if (!systemState.gsh.active || ui.engageStabilizersBtn.disabled) return;
-            
-            if (systemState.gsh.stabilityScore >= 100) {
-                addLogEntry('GSH: Gravitational stabilizers engaged! Global stability increased.', 'success');
-                systemState.globalStability += 30;
-                endGSH(true);
-            } else {
-                addLogEntry('GSH: Stabilization failed. Probe drifting.', 'warning');
-                systemState.globalStability -= 18;
-            }
-            checkGlobalStability();
-        }
-
-        function endGSH(success) {
-            systemState.gsh.active = false;
-            if (systemState.gsh.animationFrame) cancelAnimationFrame(systemState.gsh.animationFrame);
-            ui.engageStabilizersBtn.textContent = 'Engage Stabilizers';
-            ui.engageStabilizersBtn.disabled = true;
-            ui.gshSimulationArea.removeEventListener('click', createGSHAnomaly);
-            systemState.gsh.anomalies.forEach(a => a.element.remove());
+        function endNNR(success) {
+            systemState.nnr.active = false;
+            if (systemState.nnr.animationFrame) cancelAnimationFrame(systemState.nnr.animationFrame);
+            ui.nnrNetworkArea.querySelectorAll('.nnr-node').forEach(node => node.removeEventListener('click', toggleNNRNode));
             if (!success) {
-                addLogEntry('GSH: Gravitational field collapsed! Space-time distortions escalating.', 'critical');
-                triggerAnomalyAlert('GSH: Singularity instability detected! Space-time fabric tearing.');
-                systemState.globalStability -= 40;
+                addLogEntry('NNR: Network rewiring failed! Cognitive matrix instability detected.', 'critical');
+                triggerAnomalyAlert('NNR: Neural pathways fractured! Sentience degradation imminent.');
+                systemState.globalStability -= 50;
             }
             checkGlobalStability();
-            initGSH(); // Start a new round
+            initNNR(); // Reset for next round
         }
-        ui.engageStabilizersBtn.addEventListener('click', engageStabilizers);
-        initGSH();
+        initNNR();
 
-        // --- PSIONIC WAVEFORM SYNTHESIZER (PRS) ---
-        function initPRS() {
-            systemState.prs.active = true;
-            systemState.prs.ctx = ui.prsCanvas.getContext('2d');
-            resizePRSCanvas();
+        // --- ETHEREAL RESONANCE HARMONIZER (ERH) ---
+        function initERH() {
+            systemState.erh.active = true;
+            systemState.erh.ctx = ui.erhCanvas.getContext('2d');
+            resizeERHCanvas();
             
-            // Audio Context setup
-            if (!systemState.prs.audioContext) {
-                systemState.prs.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                addLogEntry('PRS: Web Audio API initialized.', 'info');
+            // Audio Context setup (if not already running)
+            if (!systemState.erh.audioContext) {
+                systemState.erh.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                addLogEntry('ERH: Web Audio API initialized.', 'info');
             }
-            // Stop existing oscillator
-            if (systemState.prs.oscillator) {
-                try { systemState.prs.oscillator.stop(); systemState.prs.oscillator.disconnect(); } catch (e) {}
-            }
-            systemState.prs.oscillator = null; // Will create a new one for combined waveform
 
-            ui.prsModulatorGroup.innerHTML = '';
-            systemState.prs.modulators = [];
-            systemState.prs.componentWaves = [];
-            systemState.prs.coherence = 0;
+            // Stop existing oscillators and clear them
+            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
+            systemState.erh.oscillators = [];
+            if (systemState.erh.analyserNode) systemState.erh.analyserNode.disconnect();
+            
+            // Create a GainNode to control the master volume of all component waves
+            systemState.erh.masterGain = systemState.erh.audioContext.createGain();
+            systemState.erh.masterGain.connect(systemState.erh.audioContext.destination);
+            systemState.erh.masterGain.gain.value = 0.05; // Keep it low
 
-            generatePRSTargetWaveform();
-            generatePRSComponentWaves();
-            setupPRSModulators();
+            systemState.erh.analyserNode = systemState.erh.audioContext.createAnalyser();
+            systemState.erh.analyserNode.fftSize = 2048;
+            systemState.erh.analyserNode.connect(systemState.erh.masterGain);
+            systemState.erh.frequencyBinData = new Uint8Array(systemState.erh.analyserNode.frequencyBinCount);
 
-            ui.prsStatus.textContent = 'Waveform Coherence: 0%';
-            ui.synthesizeSignatureBtn.disabled = true;
+            ui.erhModulatorGroup.innerHTML = '';
+            systemState.erh.modulators = [];
+            systemState.erh.coherence = 0;
 
-            if (systemState.prs.animationFrame) cancelAnimationFrame(systemState.prs.animationFrame);
-            systemState.prs.animationFrame = requestAnimationFrame(animatePRSSynthesizer);
-            addLogEntry('PRS: Psionic Waveform Synthesizer active. Match the signature.', 'event');
+            generateERHTargetSignature();
+            setupERHModulators();
+
+            ui.erhStatus.textContent = 'Resonance Coherence: 0%';
+            ui.harmonizeResonanceBtn.disabled = true;
+
+            if (systemState.erh.animationFrame) cancelAnimationFrame(systemState.erh.animationFrame);
+            systemState.erh.animationFrame = requestAnimationFrame(animateERHHarmonizer);
+            addLogEntry('ERH: Ethereal Resonance Harmonizer online. Detect subtle frequencies.', 'event');
         }
 
-        function resizePRSCanvas() {
-            if (ui.prsCanvas) {
-                ui.prsCanvas.width = ui.prsCanvas.offsetWidth;
-                ui.prsCanvas.height = ui.prsCanvas.offsetHeight;
-                if (systemState.prs.active) drawPRSSynthesizer();
+        function resizeERHCanvas() {
+            if (ui.erhCanvas) {
+                ui.erhCanvas.width = ui.erhCanvas.offsetWidth;
+                ui.erhCanvas.height = ui.erhCanvas.offsetHeight;
+                if (systemState.erh.active) drawERHHarmonizer();
             }
         }
-        window.addEventListener('resize', resizePRSCanvas);
+        window.addEventListener('resize', resizeERHCanvas);
 
-        function generatePRSTargetWaveform() {
+        function generateERHTargetSignature() {
             const numSamples = 500;
             const targetSamples = new Float32Array(numSamples);
             let equationParts = [];
 
-            // Generate 2-3 random base component waves for the target
-            const numTargetComponents = Math.floor(Math.random() * 2) + 2; // 2 or 3 components
+            // Generate 3-4 random base component waves for the target
+            const numTargetComponents = Math.floor(Math.random() * 2) + 3; // 3 or 4 components
             for (let i = 0; i < numTargetComponents; i++) {
-                const amp = 0.3 + Math.random() * 0.4; // 0.3 to 0.7
-                const freq = 1 + Math.random() * 3; // 1 to 4 Hz (cycles across screen)
+                const amp = 0.2 + Math.random() * 0.3; // 0.2 to 0.5
+                const freq = 1 + Math.random() * 4; // 1 to 5 Hz (cycles across screen)
                 const phase = Math.random() * Math.PI * 2;
                 const type = Math.random() < 0.5 ? 'sin' : 'cos';
 
@@ -1829,3 +1752,411 @@
                     const t = (j / numSamples) * Math.PI * 2; // Normalize t from 0 to 2pi
                     let value;
                     if (type === 'sin') value = amp * Math.sin(freq * t + phase);
+                    else value = amp * Math.cos(freq * t + phase);
+                    targetSamples[j] += value;
+                }
+            }
+            systemState.erh.targetSignature = { samples: targetSamples, equation: equationParts.join(' + ') };
+            addLogEntry('ERH: New Ethereal Resonance Signature generated.', 'info');
+        }
+
+        function setupERHModulators() {
+            systemState.erh.modulators = [];
+            const modulatorTypes = ['Amplitude', 'Frequency', 'Phase', 'Type']; // New 'Type' modulator for wave type
+
+            for (let i = 0; i < systemState.erh.numModulators; i++) {
+                const modId = `erh-mod-${i}`;
+                const modulatorType = modulatorTypes[i % modulatorTypes.length]; // Cycle through types
+
+                const controlDiv = document.createElement('div');
+                controlDiv.classList.add('erh-modulator-controls');
+
+                const label = document.createElement('label');
+                label.setAttribute('for', modId);
+                label.textContent = `${modulatorType} ${i+1}:`;
+                controlDiv.appendChild(label);
+
+                let input;
+                if (modulatorType === 'Type') {
+                    input = document.createElement('select');
+                    input.id = modId;
+                    input.innerHTML = `<option value="sine">Sine</option><option value="square">Square</option><option value="triangle">Triangle</option><option value="sawtooth">Sawtooth</option>`;
+                    input.value = Math.random() < 0.5 ? 'sine' : 'square';
+                } else {
+                    input = document.createElement('input');
+                    input.type = 'range';
+                    input.id = modId;
+                    input.min = 0;
+                    input.max = 100;
+                    input.value = 50;
+                }
+                
+                input.addEventListener('input', updateERHWaveform);
+                controlDiv.appendChild(input);
+                ui.erhModulatorGroup.appendChild(controlDiv);
+
+                systemState.erh.modulators.push({
+                    id: modId,
+                    type: modulatorType,
+                    element: input,
+                    value: input.value,
+                    index: i // Keep track of its component wave index
+                });
+            }
+            updateERHWaveform(); // Initial draw
+        }
+
+        function updateERHWaveform() {
+            systemState.erh.modulators.forEach(mod => {
+                mod.value = mod.element.value;
+            });
+
+            const numSamples = 500;
+            const userSamples = new Float32Array(numSamples).fill(0);
+            
+            // Create a new set of oscillators for current user settings
+            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
+            systemState.erh.oscillators = [];
+
+            for (let i = 0; i < systemState.erh.numModulators; i++) {
+                const ampMod = systemState.erh.modulators.find(m => m.type === 'Amplitude' && m.index === i);
+                const freqMod = systemState.erh.modulators.find(m => m.type === 'Frequency' && m.index === i);
+                const phaseMod = systemState.erh.modulators.find(m => m.type === 'Phase' && m.index === i);
+                const typeMod = systemState.erh.modulators.find(m => m.type === 'Type' && m.index === i);
+
+                const amplitude = ampMod ? parseFloat(ampMod.value) / 100 * 0.7 : 0.5; // Scale to reasonable range
+                const frequency = freqMod ? parseFloat(freqMod.value) / 100 * 5 + 1 : 2; // 1-6 Hz
+                const phase = phaseMod ? parseFloat(phaseMod.value) / 100 * Math.PI * 2 : 0;
+                const waveType = typeMod ? typeMod.value : 'sine';
+
+                // For visual waveform
+                for (let j = 0; j < numSamples; j++) {
+                    const t = (j / numSamples) * Math.PI * 2;
+                    let value;
+                    if (waveType === 'sine') value = amplitude * Math.sin(frequency * t + phase);
+                    else if (waveType === 'square') value = amplitude * Math.sign(Math.sin(frequency * t + phase));
+                    else if (waveType === 'triangle') value = amplitude * (2 / Math.PI) * Math.asin(Math.sin(frequency * t + phase));
+                    else if (waveType === 'sawtooth') value = amplitude * (1 - (2 * (frequency * t + phase) / (2 * Math.PI * Math.floor((frequency * t + phase) / (2 * Math.PI) + 0.5))));
+                    userSamples[j] += value;
+                }
+
+                // For audio feedback
+                const oscillator = systemState.erh.audioContext.createOscillator();
+                oscillator.type = waveType;
+                oscillator.frequency.setValueAtTime(100 + frequency * 50, systemState.erh.audioContext.currentTime); // Map screen freq to audible range
+                const gainNode = systemState.erh.audioContext.createGain();
+                gainNode.gain.setValueAtTime(amplitude * 0.1, systemState.erh.audioContext.currentTime); // Smaller gain for individual waves
+                oscillator.connect(gainNode);
+                gainNode.connect(systemState.erh.analyserNode); // Connect to analyser
+                oscillator.start();
+                systemState.erh.oscillators.push(oscillator);
+            }
+            systemState.erh.userWaveform.samples = userSamples;
+            drawERHHarmonizer();
+            calculateERHCoherence();
+        }
+
+        function calculateERHCoherence() {
+            const targetSamples = systemState.erh.targetSignature.samples;
+            const userSamples = systemState.erh.userWaveform.samples;
+            
+            if (!targetSamples || !userSamples || targetSamples.length !== userSamples.length) {
+                systemState.erh.coherence = 0;
+                return;
+            }
+
+            let totalDifference = 0;
+            let maxPossibleDifference = 0;
+            for (let i = 0; i < targetSamples.length; i++) {
+                totalDifference += Math.abs(targetSamples[i] - userSamples[i]);
+                maxPossibleDifference += Math.abs(targetSamples[i]) + Math.abs(userSamples[i]); // Max possible diff if one is +max and other -max
+            }
+            // Normalize coherence between 0 and 100, where 100 is perfect match
+            let coherence = 0;
+            if (maxPossibleDifference > 0) {
+                coherence = (1 - (totalDifference / maxPossibleDifference)) * 100;
+            }
+            systemState.erh.coherence = clamp(coherence, 0, 100);
+
+            ui.erhStatus.textContent = `Resonance Coherence: ${systemState.erh.coherence.toFixed(1)}%`;
+            if (systemState.erh.coherence > 90) { // 90% match for success
+                ui.harmonizeResonanceBtn.disabled = false;
+                addLogEntry('ERH: Ethereal Resonance detected! Signature match imminent.', 'success');
+            } else {
+                ui.harmonizeResonanceBtn.disabled = true;
+            }
+            checkGlobalStability();
+        }
+
+
+        function drawERHHarmonizer() {
+            const ctx = systemState.erh.ctx;
+            const canvas = ui.erhCanvas;
+            const targetSamples = systemState.erh.targetSignature.samples;
+            const userSamples = systemState.erh.userWaveform.samples;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const midY = canvas.height / 2;
+            const scaleY = canvas.height / 2; // Scale waveform to fit canvas height
+
+            // Draw stable zone indicator
+            ctx.beginPath();
+            ctx.rect(0, midY - scaleY * 0.05, canvas.width, scaleY * 0.1); // +/- 5% around midline
+            ctx.fillStyle = 'var(--erh-stable-zone)';
+            ctx.fill();
+
+            // Draw target waveform
+            if (targetSamples && targetSamples.length > 0) {
+                ctx.beginPath();
+                ctx.strokeStyle = 'var(--erh-target-freq)';
+                ctx.lineWidth = 5;
+                ctx.shadowColor = 'var(--erh-target-freq)';
+                ctx.shadowBlur = 20;
+                for (let i = 0; i < targetSamples.length; i++) {
+                    const x = (i / targetSamples.length) * canvas.width;
+                    const y = midY - targetSamples[i] * scaleY * 0.8; // Scale amplitude
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            }
+
+            // Draw user's combined waveform
+            if (userSamples && userSamples.length > 0) {
+                ctx.beginPath();
+                ctx.strokeStyle = 'var(--erh-user-freq)';
+                ctx.lineWidth = 4;
+                ctx.shadowColor = 'var(--erh-user-freq)';
+                ctx.shadowBlur = 15;
+                for (let i = 0; i < userSamples.length; i++) {
+                    const x = (i / userSamples.length) * canvas.width;
+                    const y = midY - userSamples[i] * scaleY * 0.8;
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            }
+
+            // Optional: Draw real-time frequency analysis (spectrogram style)
+            if (systemState.erh.analyserNode && systemState.erh.frequencyBinData) {
+                systemState.erh.analyserNode.getByteFrequencyData(systemState.erh.frequencyBinData);
+                const bufferLength = systemState.erh.analyserNode.frequencyBinCount;
+                const barWidth = (canvas.width / bufferLength) * 2.5; // bars are thicker
+
+                for (let i = 0; i < bufferLength; i++) {
+                    const barHeight = systemState.erh.frequencyBinData[i] * 0.8; // Scale to canvas
+                    ctx.fillStyle = `rgba(0, 255, 255, ${barHeight / 255 * 0.3 + 0.1})`; // Fading cyan
+                    ctx.fillRect(i * barWidth, canvas.height - barHeight, barWidth, barHeight);
+                }
+            }
+        }
+
+        ui.harmonizeResonanceBtn.addEventListener('click', () => {
+            if (!systemState.erh.active || ui.harmonizeResonanceBtn.disabled) return;
+            addLogEntry('ERH: Ethereal Resonance Signature acquired! Harmonic stability achieved.', 'success');
+            systemState.globalStability += 45;
+            checkGlobalStability();
+            endERH(true);
+        });
+
+        function endERH(success) {
+            systemState.erh.active = false;
+            if (systemState.erh.animationFrame) cancelAnimationFrame(systemState.erh.animationFrame);
+            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
+            systemState.erh.oscillators = [];
+            if (systemState.erh.analyserNode) systemState.erh.analyserNode.disconnect();
+            if (systemState.erh.masterGain) systemState.erh.masterGain.disconnect();
+
+            if (!success) {
+                addLogEntry('ERH: Resonance harmonization failed! Ethereal energy dissipating.', 'critical');
+                triggerAnomalyAlert('ERH: Harmonic distortion detected! Reality fabric unraveling.');
+                systemState.globalStability -= 55;
+            }
+            checkGlobalStability();
+            initERH(); // Reset for next round
+        }
+        initERH();
+
+
+        // --- DIMENSIONAL GATEWAY CONSTRUCTOR (DGC) ---
+        function initDGC() {
+            systemState.dgc.active = true;
+            systemState.dgc.ctx = ui.dgcCanvas.getContext('2d');
+            resizeDGCCanvas();
+
+            systemState.dgc.conduitPieces = [];
+            systemState.dgc.targetPattern = [];
+            systemState.dgc.alignment = 0;
+
+            generateDGCPieces();
+            generateDGCTargetPattern();
+            
+            ui.dgcGatewayArea.querySelectorAll('.dgc-conduit-piece').forEach(piece => piece.remove()); // Clear old elements
+            systemState.dgc.conduitPieces.forEach(piece => {
+                const pieceEl = document.createElement('div');
+                pieceEl.classList.add('dgc-conduit-piece');
+                pieceEl.setAttribute('data-id', piece.id);
+                // Randomly assign a visual type or symbol for the piece
+                pieceEl.textContent = piece.type; // e.g., 'I', 'L', 'T', '+'
+                pieceEl.style.transform = `rotate(${piece.rotation}deg) translateZ(5px)`;
+                pieceEl.addEventListener('click', (e) => rotateDGCConduit(e, piece.id));
+                ui.dgcGatewayArea.appendChild(pieceEl);
+                piece.element = pieceEl;
+            });
+            
+            ui.dgcStatus.textContent = 'Gateway Integrity: 0%';
+            ui.constructGatewayBtn.disabled = true;
+
+            // No animation frame needed, it's click-based rendering for now.
+            drawDGCCanvas();
+            checkDGCAlignment();
+
+            addLogEntry('DGC: Dimensional Gateway Constructor activated. Assemble the matrix.', 'event');
+        }
+
+        function resizeDGCCanvas() {
+            if (ui.dgcCanvas) {
+                ui.dgcCanvas.width = ui.dgcCanvas.offsetWidth;
+                ui.dgcCanvas.height = ui.dgcCanvas.offsetHeight;
+                if (systemState.dgc.active) drawDGCCanvas();
+            }
+        }
+        window.addEventListener('resize', resizeDGCCanvas);
+
+        function generateDGCPieces() {
+            const gridSize = systemState.dgc.gridSize;
+            const pieceTypes = ['I', 'L', 'T', '+', 'O']; // I-shape, L-shape, T-shape, Cross, Empty/Core
+
+            systemState.dgc.conduitPieces = [];
+            for (let i = 0; i < gridSize * gridSize; i++) {
+                const type = pieceTypes[Math.floor(Math.random() * pieceTypes.length)];
+                systemState.dgc.conduitPieces.push({
+                    id: `piece-${i}`,
+                    index: i,
+                    type: type,
+                    rotation: Math.floor(Math.random() * 4) * 90, // 0, 90, 180, 270 degrees
+                    element: null,
+                });
+            }
+            addLogEntry('DGC: Conduit pieces randomized and placed.', 'info');
+        }
+
+        function generateDGCTargetPattern() {
+            // Define a simple target pattern (e.g., all 'I' pieces aligned vertically/horizontally)
+            systemState.dgc.targetPattern = systemState.dgc.conduitPieces.map(piece => {
+                let targetType = 'I'; // Most pieces target to 'I'
+                let targetRotation = 0; // Vertical 'I'
+                if (Math.random() < 0.3) targetRotation = 90; // Some horizontal 'I'
+                if (Math.random() < 0.1) targetType = 'O'; // Some empty spots
+                return { id: piece.id, type: targetType, rotation: targetRotation };
+            });
+            addLogEntry('DGC: Target gateway pattern established.', 'info');
+        }
+
+        function drawDGCCanvas() {
+            const ctx = systemState.dgc.ctx;
+            const canvas = ui.dgcCanvas;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const gridSpacing = {
+                width: canvas.width / systemState.dgc.gridSize,
+                height: canvas.height / systemState.dgc.gridSize
+            };
+
+            // Draw target pattern overlay (subtle)
+            systemState.dgc.targetPattern.forEach((target, index) => {
+                const col = index % systemState.dgc.gridSize;
+                const row = Math.floor(index / systemState.dgc.gridSize);
+                const x = col * gridSpacing.width + gridSpacing.width / 2;
+                const y = row * gridSpacing.height + gridSpacing.height / 2;
+
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(target.rotation * Math.PI / 180);
+                
+                ctx.strokeStyle = 'var(--dgc-gateway-target)';
+                ctx.lineWidth = 3;
+
+                // Draw based on target type
+                if (target.type === 'I') {
+                    ctx.beginPath();
+                    ctx.moveTo(0, -gridSpacing.height / 4);
+                    ctx.lineTo(0, gridSpacing.height / 4);
+                    ctx.stroke();
+                } else if (target.type === 'L') {
+                    ctx.beginPath();
+                    ctx.moveTo(0, gridSpacing.height / 4);
+                    ctx.lineTo(0, 0);
+                    ctx.lineTo(gridSpacing.width / 4, 0);
+                    ctx.stroke();
+                }
+                // ... other shapes if needed
+
+                ctx.restore();
+            });
+        }
+
+        function rotateDGCConduit(e, pieceId) {
+            const piece = systemState.dgc.conduitPieces.find(p => p.id === pieceId);
+            if (!piece) return;
+
+            piece.rotation = (piece.rotation + 90) % 360;
+            piece.element.style.transform = `rotate(${piece.rotation}deg) translateZ(15px)`;
+            piece.element.classList.add('active');
+            setTimeout(() => piece.element.classList.remove('active'), 300);
+
+            addLogEntry(`DGC: Conduit ${piece.id} rotated to ${piece.rotation}deg.`, 'info');
+            checkDGCAlignment();
+            checkGlobalStability();
+        }
+
+        function checkDGCAlignment() {
+            let matches = 0;
+            systemState.dgc.conduitPieces.forEach(currentPiece => {
+                const targetPiece = systemState.dgc.targetPattern.find(t => t.id === currentPiece.id);
+                if (targetPiece && currentPiece.type === targetPiece.type && currentPiece.rotation === targetPiece.rotation) {
+                    matches++;
+                }
+            });
+
+            systemState.dgc.alignment = (matches / systemState.dgc.conduitPieces.length) * 100;
+            ui.dgcStatus.textContent = `Gateway Integrity: ${systemState.dgc.alignment.toFixed(1)}%`;
+
+            if (systemState.dgc.alignment >= 90) { // 90% match for success
+                ui.constructGatewayBtn.disabled = false;
+                addLogEntry('DGC: Gateway pattern fully aligned! Ready for construction.', 'success');
+            } else {
+                ui.constructGatewayBtn.disabled = true;
+            }
+        }
+
+        ui.constructGatewayBtn.addEventListener('click', () => {
+            if (!systemState.dgc.active || ui.constructGatewayBtn.disabled) return;
+            addLogEntry('DGC: Dimensional gateway constructed! Inter-reality pathways open.', 'success');
+            systemState.globalStability += 50;
+            checkGlobalStability();
+            endDGC(true);
+        });
+
+        function endDGC(success) {
+            systemState.dgc.active = false;
+            ui.dgcGatewayArea.querySelectorAll('.dgc-conduit-piece').forEach(piece => piece.removeEventListener('click', rotateDGCConduit));
+            if (!success) {
+                addLogEntry('DGC: Gateway construction failed! Dimensional rifts opening.', 'critical');
+                triggerAnomalyAlert('DGC: Gateway matrix unstable! Reality tear detected.');
+                systemState.globalStability -= 60;
+            }
+            checkGlobalStability();
+            initDGC(); // Reset for next round
+        }
+        initDGC();
+
+        // Initial check on load
+        checkGlobalStability();
+
+    </script>
+</body>
+</html>
