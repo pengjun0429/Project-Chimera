@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v4.0.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v5.0.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 4th Gen / v4.0.0) - Unstable, energetic, raw, direct interaction */
+            /* Core Theme Colors (Hyper-Enhanced for 5th Gen / v5.0.0) - Unstable, energetic, raw, direct interaction */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.005); /* Even Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
+            --frosted-bg: rgba(255, 255, 255, 0.003); /* Even Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
             --text-color: #E8FFFF; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.999); /* More visible, shimmering border */
@@ -20,71 +20,70 @@
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
             --critical-color: #FF0000; /* Pure Red, highly urgent */
 
-            /* Gen 4.0.0 NEW: Chronal Drift Calibrator (CDC) */
-            --cdc-bg: rgba(20, 15, 5, 0.99); /* Deep gold-brown, slightly darker */
-            --cdc-border: rgba(255, 220, 100, 0.999); /* Bright antique gold */
+            /* Gen 5.0.0 NEW: Chronal Drift Calibrator (CDC) */
+            --cdc-bg: rgba(25, 15, 0, 0.99); /* Deep gold-brown, slightly darker */
+            --cdc-border: rgba(255, 240, 150, 0.999); /* Bright antique gold */
             --cdc-text: #FFFAE0; /* Pale cream */
-            --cdc-glow: rgba(255, 220, 100, 0.999);
-            --cdc-particle: rgba(255, 255, 0, 0.98); /* Yellow for time particles, more opaque */
-            --cdc-target-zone: rgba(0, 255, 255, 0.18); /* Cyan for target capture, slightly more opaque */
-            --cdc-pulse: rgba(0, 255, 255, 0.8); /* Cyan pulse, stronger */
-            --cdc-weave-color: rgba(255, 100, 0, 0.8); /* New: Orange for temporal weave */
+            --cdc-glow: rgba(255, 240, 150, 0.999);
+            --cdc-particle: rgba(255, 255, 0, 0.99); /* Yellow for time particles, more opaque */
+            --cdc-target-zone: rgba(0, 255, 255, 0.22); /* Cyan for target capture, slightly more opaque */
+            --cdc-pulse: rgba(0, 255, 255, 0.9); /* Cyan pulse, stronger */
+            --cdc-weave-color: rgba(255, 100, 0, 0.9); /* Orange for temporal weave, stronger */
             --cdc-capture-glow: rgba(255, 100, 0, 1.0);
 
-            /* Gen 4.0.0 NEW: Neural Network Rewiring (NNR) */
-            --nnr-bg: rgba(5, 15, 25, 0.99); /* Deep blue-grey, slightly darker */
-            --nnr-border: rgba(100, 200, 255, 0.999); /* Bright sky blue */
+            /* Gen 5.0.0 NEW: Neural Network Rewiring (NNR) */
+            --nnr-bg: rgba(0, 15, 30, 0.99); /* Deep blue-grey, slightly darker */
+            --nnr-border: rgba(120, 220, 255, 0.999); /* Bright sky blue */
             --nnr-text: #E0F8FF; /* Pale blue */
-            --nnr-glow: rgba(100, 200, 255, 0.999);
-            --nnr-node-off: rgba(30, 40, 60, 0.8);
-            --nnr-node-on: rgba(150, 200, 255, 0.98); /* More opaque */
-            --nnr-connection-path: rgba(0, 255, 180, 0.7); /* Mint green path, stronger */
+            --nnr-glow: rgba(120, 220, 255, 0.999);
+            --nnr-node-off: rgba(30, 40, 60, 0.9); /* More opaque */
+            --nnr-node-on: rgba(150, 200, 255, 0.99); /* Even more opaque */
+            --nnr-connection-path: rgba(0, 255, 180, 0.8); /* Mint green path, stronger */
             --nnr-signal-glow: rgba(0, 255, 180, 1.0); /* Opaque signal glow */
-            --nnr-drag-node: rgba(255, 0, 255, 0.9); /* New: Magenta for dragging node */
-            --nnr-source-node: rgba(255, 255, 0, 0.95); /* New: Yellow for source node */
-            --nnr-target-node: rgba(255, 0, 0, 0.95); /* New: Red for target node */
+            --nnr-drag-node: rgba(255, 0, 255, 0.95); /* Magenta for dragging node */
+            --nnr-source-node: rgba(255, 255, 0, 0.98); /* Yellow for source node */
+            --nnr-target-node: rgba(255, 0, 0, 0.98); /* Red for target node */
 
-            /* Gen 4.0.0 NEW: Ethereal Resonance Harmonizer (ERH) */
-            --erh-bg: rgba(15, 5, 15, 0.99); /* Deep purple-pink, slightly darker */
-            --erh-border: rgba(255, 100, 200, 0.999); /* Bright fuchsia */
+            /* Gen 5.0.0 NEW: Ethereal Resonance Harmonizer (ERH) */
+            --erh-bg: rgba(20, 0, 20, 0.99); /* Deep purple-pink, slightly darker */
+            --erh-border: rgba(255, 120, 220, 0.999); /* Bright fuchsia */
             --erh-text: #FFEFF5; /* Pale pink */
-            --erh-glow: rgba(255, 100, 200, 0.999);
+            --erh-glow: rgba(255, 120, 220, 0.999);
             --erh-target-freq: #FFFF00; /* Yellow target */
             --erh-user-freq: #00FFFF; /* Cyan user wave */
-            --erh-stable-zone: rgba(0, 255, 0, 0.25); /* Green stability zone, more visible */
-            --erh-modulator-handle: rgba(255, 100, 200, 1.0); /* Removed for new interaction, kept for reference */
-            --erh-manipulator-orb: rgba(255, 255, 255, 0.99); /* New: White orb for direct waveform manipulation */
-            --erh-manipulator-glow: rgba(255, 255, 255, 0.8);
+            --erh-stable-zone: rgba(0, 255, 0, 0.3); /* Green stability zone, more visible */
+            --erh-manipulator-orb: rgba(255, 255, 255, 0.999); /* White orb for direct waveform manipulation */
+            --erh-manipulator-glow: rgba(255, 255, 255, 0.9);
 
-            /* Gen 4.0.0 NEW: Dimensional Gateway Constructor (DGC) */
-            --dgc-bg: rgba(5, 25, 5, 0.99); /* Deep emerald-green, slightly darker */
-            --dgc-border: rgba(100, 255, 100, 0.999); /* Bright lime green */
+            /* Gen 5.0.0 NEW: Dimensional Gateway Constructor (DGC) */
+            --dgc-bg: rgba(0, 30, 0, 0.99); /* Deep emerald-green, slightly darker */
+            --dgc-border: rgba(120, 255, 120, 0.999); /* Bright lime green */
             --dgc-text: #EFFFEF; /* Pale green */
-            --dgc-glow: rgba(100, 255, 100, 0.999);
-            --dgc-conduit-off: #354035; /* Darker off state */
+            --dgc-glow: rgba(120, 255, 120, 0.999);
+            --dgc-conduit-off: #354535; /* Darker off state */
             --dgc-conduit-on: #00FF00;
-            --dgc-gateway-target: rgba(255, 255, 0, 0.25); /* Yellow for target area, more visible */
-            --dgc-active-flux: rgba(0, 255, 255, 0.9); /* Cyan for active flux, stronger */
-            --dgc-highlight-drag: rgba(255, 0, 255, 0.7); /* New: Magenta for dragging piece */
-            --dgc-snap-glow: rgba(0, 255, 255, 0.8); /* New: Cyan for snap feedback */
+            --dgc-gateway-target: rgba(255, 255, 0, 0.3); /* Yellow for target area, more visible */
+            --dgc-active-flux: rgba(0, 255, 255, 0.95); /* Cyan for active flux, stronger */
+            --dgc-highlight-drag: rgba(255, 0, 255, 0.8); /* Magenta for dragging piece */
+            --dgc-snap-glow: rgba(0, 255, 255, 0.9); /* Cyan for snap feedback */
 
-            /* Gen 4.0.0 - Enhanced UI elements */
-            --event-color: #FFC000; /* Brighter Orange, slightly more yellow */
-            --event-text-shadow: 0 0 45px rgba(255, 192, 0, 1.0); /* Stronger shadow */
-            --info-color: #E0C0FF; /* Lighter Medium Purple */
-            --info-text-shadow: 0 0 40px rgba(224, 192, 255, 0.9); /* Stronger shadow */
+            /* Gen 5.0.0 - Enhanced UI elements */
+            --event-color: #FFD000; /* Brighter Orange, slightly more yellow */
+            --event-text-shadow: 0 0 50px rgba(255, 208, 0, 1.0); /* Stronger shadow */
+            --info-color: #E8D0FF; /* Lighter Medium Purple */
+            --info-text-shadow: 0 0 45px rgba(232, 208, 255, 0.9); /* Stronger shadow */
             --log-glitch-color: #FF00FF;
             --header-underline-color: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
             
             /* Anomaly Alert (same, but more intense) */
             --anomaly-color: #FF0000; /* Pure Red for critical */
-            --anomaly-bg: rgba(255, 0, 0, 0.995); /* Even more semi-transparent Red */
+            --anomaly-bg: rgba(255, 0, 0, 0.999); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 1.0); /* Opaque Red */
 
             /* New: Resource Anomaly Event */
-            --anomaly-event-bg: rgba(255, 120, 0, 0.99); /* Brighter orange */
-            --anomaly-event-border: rgba(255, 220, 0, 0.999);
-            --anomaly-event-text: #FFFFCC;
+            --anomaly-event-bg: rgba(255, 150, 0, 0.99); /* Brighter orange */
+            --anomaly-event-border: rgba(255, 240, 0, 0.999);
+            --anomaly-event-text: #FFFFE0;
         }
 
         body {
@@ -98,58 +97,58 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 2.3rem; /* Scaled up for readability */
-            line-height: 2.8; /* Increased line height */
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="8.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.2); opacity: 0.1;} 50% {transform: scale(1.6); opacity: 1;} 100% {transform: scale(0.2); opacity: 0.1;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes spin-rev {from {transform: rotate(0deg);} to {transform: rotate(-360deg);}} .pulsing-core {animation: pulse 0.6s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;} .outer-ring{animation:spin 1.8s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.4s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1);}.inner-cross {filter:url(%23f2);}.glowing-parts-rev {animation:spin-rev 1.5s linear infinite;}</style></defs><g transform="translate(12 12) scale(1.8) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts outer-ring" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts glowing-parts-rev" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 48 48, auto;
+            font-size: 2.5rem; /* Scaled up for readability */
+            line-height: 3.0; /* Increased line height */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="9.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="7.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.1); opacity: 0.05;} 50% {transform: scale(1.8); opacity: 1;} 100% {transform: scale(0.1); opacity: 0.05;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes spin-rev {from {transform: rotate(0deg);} to {transform: rotate(-360deg);}} @keyframes flicker {0%, 100% {opacity: 1;} 50% {opacity: 0.8;}} .pulsing-core {animation: pulse 0.5s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;} .outer-ring{animation:spin 1.5s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.3s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1); animation: flicker 0.1s steps(2, end) infinite;} .inner-cross {filter:url(%23f2);}.glowing-parts-rev {animation:spin-rev 1.2s linear infinite;}</style></defs><g transform="translate(12 12) scale(2.0) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts outer-ring" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts glowing-parts-rev" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 50 50, auto;
         }
 
         /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
         body::before {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -2500vh; /* Even larger area */
-            left: -2500vw;
-            width: 5000vw;
-            height: 5000vh;
+            top: -3000vh; /* Even larger area */
+            left: -3000vw;
+            width: 6000vw;
+            height: 6000vh;
             background: linear-gradient(
-                1200deg, /* New angle, more subtle shift */
-                #000000 0%, var(--cdc-bg) 0.2%, var(--nnr-bg) 0.4%, var(--erh-bg) 0.6%, var(--dgc-bg) 0.8%, #000018 1.0%, #000030 1.2%, #000018 1.4%, #000008 1.6%, #000000 1.8%,
-                #180000 2.0%, #300000 2.2%, #480000 2.4%, #600000 2.6%, #480000 2.8%, #300000 3.0%, #180000 3.2%, #080000 3.4%, #000000 3.6%,
-                #001800 3.8%, #003000 4.0%, #004800 4.2%, #006000 4.4%, #007800 4.6%, #006000 4.8%, #004800 5.0%, #003000 5.2%, #001800 5.4%, #000000 5.6%,
-                #181800 5.8%, #303000 6.0%, #484800 6.2%, #606000 6.4%, #787800 6.6%, #606000 6.8%, #484800 7.0%, #303000 7.2%, #181800 7.4%, #000000 7.6%,
-                #180018 7.8%, #300030 8.0%, #480048 8.2%, #600060 8.4%, #780078 8.6%, #600060 8.8%, #480048 9.0%, #300030 9.2%, #180018 9.4%, #000000 9.6%,
-                #001818 9.8%, #003030 10.0%, #004848 10.2%, #006060 10.4%, #007878 10.6%, #006060 10.8%, #004848 11.0%, #003030 11.2%, #001818 11.4%, #000000 11.6%,
-                #181818 11.8%, #303030 12.0%, #484848 12.2%, #606060 12.4%, #787878 12.6%, #606060 12.8%, #484848 13.0%, #303030 13.2%, #181818 13.4%, #000000 13.6%,
-                #000000 13.8%, #000018 14.0%, #000030 14.2%, #000048 14.4%, #000060 14.6%, #000078 14.8%, #000060 15.0%, #000048 15.2%, #000030 15.4%, #000018 15.6%, #000000 15.8%,
-                #180000 16.0%, #300000 16.2%, #480000 16.4%, #600000 16.6%, #780000 16.8%, #600000 17.0%, #480000 17.2%, #300000 17.4%, #180000 17.6%, #000000 17.8%,
-                #000000 18.0%, #001800 18.2%, #003000 18.4%, #004800 18.6%, #006000 18.8%, #007800 19.0%, #006000 19.2%, #004800 19.4%, #003000 19.6%, #001800 19.8%, #000000 20%,
+                1500deg, /* New angle, more subtle shift */
+                #000000 0%, var(--cdc-bg) 0.1%, var(--nnr-bg) 0.2%, var(--erh-bg) 0.3%, var(--dgc-bg) 0.4%, #000010 0.5%, #000020 0.6%, #000010 0.7%, #000005 0.8%, #000000 0.9%,
+                #100000 1.0%, #200000 1.1%, #300000 1.2%, #400000 1.3%, #300000 1.4%, #200000 1.5%, #100000 1.6%, #050000 1.7%, #000000 1.8%,
+                #001000 1.9%, #002000 2.0%, #003000 2.1%, #004000 2.2%, #005000 2.3%, #004000 2.4%, #003000 2.5%, #002000 2.6%, #001000 2.7%, #000000 2.8%,
+                #101000 2.9%, #202000 3.0%, #303000 3.1%, #404000 3.2%, #505000 3.3%, #404000 3.4%, #303000 3.5%, #202000 3.6%, #101000 3.7%, #000000 3.8%,
+                #100010 3.9%, #200020 4.0%, #300030 4.1%, #400040 4.2%, #500050 4.3%, #400040 4.4%, #300030 4.5%, #200020 4.6%, #100010 4.7%, #000000 4.8%,
+                #001010 4.9%, #002020 5.0%, #003030 5.1%, #004040 5.2%, #005050 5.3%, #004040 5.4%, #003030 5.5%, #002020 5.6%, #001010 5.7%, #000000 5.8%,
+                #101010 5.9%, #202020 6.0%, #303030 6.1%, #404040 6.2%, #505050 6.3%, #404040 6.4%, #303030 6.5%, #202020 6.6%, #101010 6.7%, #000000 6.8%,
+                #000000 6.9%, #000010 7.0%, #000020 7.1%, #000030 7.2%, #000040 7.3%, #000050 7.4%, #000040 7.5%, #000030 7.6%, #000020 7.7%, #000010 7.8%, #000000 7.9%,
+                #100000 8.0%, #200000 8.1%, #300000 8.2%, #400000 8.3%, #500000 8.4%, #400000 8.5%, #300000 8.6%, #200000 8.7%, #100000 8.8%, #000000 8.9%,
+                #000000 9.0%, #001000 9.1%, #002000 9.2%, #003000 9.3%, #004000 9.4%, #005000 9.5%, #004000 9.6%, #003000 9.7%, #002000 9.8%, #001000 9.9%, #000000 10%,
                 /* Repeating pattern to increase density and movement */
-                #000000 20.2%, var(--cdc-bg) 20.4%, var(--nnr-bg) 20.6%, var(--erh-bg) 20.8%, var(--dgc-bg) 21.0%, #000018 21.2%, #000030 21.4%, #000018 21.6%, #000008 21.8%, #000000 22.0%,
-                #180000 22.2%, #300000 22.4%, #480000 22.6%, #600000 22.8%, #480000 23.0%, #300000 23.2%, #180000 23.4%, #080000 23.6%, #000000 23.8%,
-                #001800 24.0%, #003000 24.2%, #004800 24.4%, #006000 24.6%, #007800 24.8%, #006000 25.0%, #004800 25.2%, #003000 25.4%, #001800 25.6%, #000000 25.8%,
-                #181800 26.0%, #303000 26.2%, #484800 26.4%, #606000 26.6%, #787800 26.8%, #606000 27.0%, #484800 27.2%, #303000 27.4%, #181800 27.6%, #000000 27.8%,
-                #180018 28.0%, #300030 28.2%, #480048 28.4%, #600060 28.6%, #780078 28.8%, #600060 29.0%, #480048 29.2%, #300030 29.4%, #180018 29.6%, #000000 29.8%,
-                #001818 30.0%, #003030 30.2%, #004848 30.4%, #006060 30.6%, #007878 30.8%, #006060 31.0%, #004848 31.2%, #003030 31.4%, #001818 31.6%, #000000 31.8%,
-                #181818 32.0%, #303030 32.2%, #484848 32.4%, #606060 32.6%, #787878 32.8%, #606060 33.0%, #484848 33.2%, #303030 33.4%, #181818 33.6%, #000000 33.8%,
-                #000000 34.0%, #000018 34.2%, #000030 34.4%, #000048 34.6%, #000060 34.8%, #000078 35.0%, #000060 35.2%, #000048 35.4%, #000030 35.6%, #000018 35.8%, #000000 36.0%,
-                #180000 36.2%, #300000 36.4%, #480000 36.6%, #600000 36.8%, #780000 37.0%, #600000 37.2%, #480000 37.4%, #300000 37.6%, #180000 37.8%, #000000 38.0%,
-                #000000 38.2%, #001800 38.4%, #003000 38.6%, #004800 38.8%, #006000 39.0%, #007800 39.2%, #006000 39.4%, #004800 39.6%, #003000 39.8%, #001800 40%,
-                #000000 40.2%, #000018 40.4%, #000028 40.6%, #000038 40.8%, #000048 41.0%, #000058 41.2%, #000048 41.4%, #000038 41.6%, #000028 41.8%, #000018 42.0%, #000000 42.2%,
-                #180000 42.4%, #280000 42.6%, #380000 42.8%, #480000 43.0%, #580000 43.2%, #480000 43.4%, #380000 43.6%, #280000 43.8%, #180000 44.0%, #000000 44.2%,
-                #000000 44.4%, #001800 44.6%, #002800 44.8%, #003800 45.0%, #004800 45.2%, #005800 45.4%, #004800 45.6%, #003800 45.8%, #002800 46.0%, #001800 46.2%, #000000 46.4%,
-                #181800 46.6%, #282800 46.8%, #383800 47.0%, #484800 47.2%, #585800 47.4%, #484800 47.6%, #383800 47.8%, #282800 48.0%, #181800 48.2%, #000000 48.4%,
-                #180018 48.6%, #280028 48.8%, #380038 49.0%, #480048 49.2%, #580058 49.4%, #480048 49.6%, #380038 49.8%, #280028 50.0%, #180018 50.2%, #000000 50.4%,
-                #001818 50.6%, #002828 50.8%, #003838 51.0%, #004848 51.2%, #005858 51.4%, #004848 51.6%, #003838 51.8%, #002828 52.0%, #001818 52.2%, #000000 52.4%,
-                #181818 52.6%, #282828 52.8%, #383838 53.0%, #484848 53.2%, #585858 53.4%, #484848 53.6%, #383838 53.8%, #282828 54.0%, #181818 54.2%, #000000 54.4%,
-                #000000 54.6%, #000018 54.8%, #000028 55.0%, #000038 55.2%, #000048 55.4%, #000058 55.6%, #000048 55.8%, #000038 56.0%, #000028 56.2%, #000018 56.4%, #000000 56.6%,
-                #180000 56.8%, #280000 57.0%, #380000 57.2%, #480000 57.4%, #580000 57.6%, #480000 57.8%, #380000 58.0%, #280000 58.2%, #180000 58.4%, #000000 58.6%,
-                #000000 58.8%, #001800 59.0%, #002800 59.2%, #003800 59.4%, #004800 59.6%, #005800 59.8%, #004800 60%
+                #000000 10.1%, var(--cdc-bg) 10.2%, var(--nnr-bg) 10.3%, var(--erh-bg) 10.4%, var(--dgc-bg) 10.5%, #000010 10.6%, #000020 10.7%, #000010 10.8%, #000005 10.9%, #000000 11.0%,
+                #100000 11.1%, #200000 11.2%, #300000 11.3%, #400000 11.4%, #300000 11.5%, #200000 11.6%, #100000 11.7%, #050000 11.8%, #000000 11.9%,
+                #001000 12.0%, #002000 12.1%, #003000 12.2%, #004000 12.3%, #005000 12.4%, #004000 12.5%, #003000 12.6%, #002000 12.7%, #001000 12.8%, #000000 12.9%,
+                #101000 13.0%, #202000 13.1%, #303000 13.2%, #404000 13.3%, #505000 13.4%, #404000 13.5%, #303000 13.6%, #202000 13.7%, #101000 13.8%, #000000 13.9%,
+                #100010 14.0%, #200020 14.1%, #300030 14.2%, #400040 14.3%, #500050 14.4%, #400040 14.5%, #300030 14.6%, #200020 14.7%, #100010 14.8%, #000000 14.9%,
+                #001010 15.0%, #002020 15.1%, #003030 15.2%, #004040 15.3%, #005050 15.4%, #004040 15.5%, #003030 15.6%, #002020 15.7%, #001010 15.8%, #000000 15.9%,
+                #101010 16.0%, #202020 16.1%, #303030 16.2%, #404040 16.3%, #505050 16.4%, #404040 16.5%, #303030 16.6%, #202020 16.7%, #101010 16.8%, #000000 16.9%,
+                #000000 17.0%, #000010 17.1%, #000020 17.2%, #000030 17.3%, #000040 17.4%, #000050 17.5%, #000040 17.6%, #000030 17.7%, #000020 17.8%, #000010 17.9%, #000000 18.0%,
+                #100000 18.1%, #200000 18.2%, #300000 18.3%, #400000 18.4%, #500000 18.5%, #400000 18.6%, #300000 18.7%, #200000 18.8%, #100000 18.9%, #000000 19.0%,
+                #000000 19.1%, #001000 19.2%, #002000 19.3%, #003000 19.4%, #004000 19.5%, #005000 19.6%, #004000 19.7%, #003000 19.8%, #002000 19.9%, #001000 20%,
+                #000000 20.1%, #000010 20.2%, #000020 20.3%, #000030 20.4%, #000040 20.5%, #000050 20.6%, #000040 20.7%, #000030 20.8%, #000020 20.9%, #000010 21.0%, #000000 21.1%,
+                #100000 21.2%, #200000 21.3%, #300000 21.4%, #400000 21.5%, #500000 21.6%, #400000 21.7%, #300000 21.8%, #200000 21.9%, #100000 22.0%, #000000 22.1%,
+                #000000 22.2%, #001000 22.3%, #002000 22.4%, #003000 22.5%, #004000 22.6%, #005000 22.7%, #004000 22.8%, #003000 22.9%, #002000 23.0%, #001000 23.1%, #000000 23.2%,
+                #101000 23.3%, #202000 23.4%, #303000 23.5%, #404000 23.6%, #505000 23.7%, #404000 23.8%, #303000 23.9%, #202000 24.0%, #101000 24.1%, #000000 24.2%,
+                #100010 24.3%, #200020 24.4%, #300030 24.5%, #400040 24.6%, #500050 24.7%, #400040 24.8%, #300030 24.9%, #200020 25.0%, #100010 25.1%, #000000 25.2%,
+                #001010 25.3%, #002020 25.4%, #003030 25.5%, #004040 25.6%, #005050 25.7%, #004040 25.8%, #003030 25.9%, #002020 26.0%, #001010 26.1%, #000000 26.2%,
+                #101010 26.3%, #202020 26.4%, #303030 26.5%, #404040 26.6%, #505050 26.7%, #404040 26.8%, #303030 26.9%, #202020 27.0%, #101010 27.1%, #000000 27.2%,
+                #000000 27.3%, #000010 27.4%, #000020 27.5%, #000030 27.6%, #000040 27.7%, #000050 27.8%, #000040 27.9%, #000030 28.0%, #000020 28.1%, #000010 28.2%, #000000 28.3%,
+                #100000 28.4%, #200000 28.5%, #300000 28.6%, #400000 28.7%, #500000 28.8%, #400000 28.9%, #300000 29.0%, #200000 29.1%, #100000 29.2%, #000000 29.3%,
+                #000000 29.4%, #001000 29.5%, #002000 29.6%, #003000 29.7%, #004000 29.8%, #005000 29.9%, #004000 30%
             );
-            background-size: 50000% 50000%; /* Larger background for smoother animation */
-            animation: fluidBackground1 4800s ease-in-out infinite alternate, rotateBackground 6000s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 60000% 60000%; /* Larger background for smoother animation */
+            animation: fluidBackground1 5400s ease-in-out infinite alternate, rotateBackground 6600s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(3500px) opacity(0.9999) saturate(500%) hue-rotate(45deg) contrast(4.0); /* Stronger blur, almost opaque, color shift, more contrast */
-            transform: rotate(-2000deg) scale(60.0) perspective(5000px) translateZ(-800px); /* Larger scale, more rotation, added perspective, depth */
+            filter: blur(4000px) opacity(0.99999) saturate(600%) hue-rotate(50deg) contrast(5.0); /* Stronger blur, almost opaque, color shift, more contrast */
+            transform: rotate(-2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); /* Larger scale, more rotation, added perspective, depth */
             mix-blend-mode: exclusion; /* Deeper color interaction */
         }
 
@@ -157,54 +156,54 @@
         body::after {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -2000vh;
-            left: -2000vw;
-            width: 4000vw;
-            height: 4000vh;
+            top: -2500vh;
+            left: -2500vw;
+            width: 5000vw;
+            height: 5000vh;
             background: linear-gradient(
-                -1000deg, /* Different angle */
-                rgba(0, 255, 255, 0.999) 0%, /* primary glow accent */
-                rgba(255, 0, 255, 0.999) 10%, /* secondary glow accent */
-                rgba(0, 255, 0, 0.999) 20%, /* tertiary glow accent */
+                -1200deg, /* Different angle */
+                rgba(0, 255, 255, 0.9999) 0%, /* primary glow accent */
+                rgba(255, 0, 255, 0.9999) 10%, /* secondary glow accent */
+                rgba(0, 255, 0, 0.9999) 20%, /* tertiary glow accent */
                 var(--cdc-border) 30%, /* CDC accent */
                 var(--nnr-border) 40%, /* NNR accent */
                 var(--erh-border) 50%, /* ERH accent */
                 var(--dgc-border) 60%, /* DGC accent */
-                rgba(50, 255, 150, 0.999) 70%, /* Generic glow */
-                rgba(110, 90, 210, 0.999) 80%, /* Generic glow */
-                rgba(0, 255, 255, 0.999) 90%,
-                rgba(255, 120, 0, 0.999) 100%
+                rgba(60, 255, 160, 0.9999) 70%, /* Generic glow */
+                rgba(120, 100, 220, 0.9999) 80%, /* Generic glow */
+                rgba(0, 255, 255, 0.9999) 90%,
+                rgba(255, 130, 0, 0.9999) 100%
             );
-            background-size: 30000% 30000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 3200s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite, rotateBackgroundReversed 3600s ease-out infinite; /* Even longer animations */
+            background-size: 35000% 35000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 3800s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite, rotateBackgroundReversed 4200s ease-out infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(2800px) opacity(0.9995) contrast(4.0) saturate(400%) hue-rotate(-65deg); /* Stronger blur, more opaque, color shift, contrast */
+            filter: blur(3200px) opacity(0.99995) contrast(5.0) saturate(500%) hue-rotate(-70deg); /* Stronger blur, more opaque, color shift, contrast */
             mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(1800deg) scale(50.0) perspective(4500px) translateZ(-700px); /* Larger scale, more rotation, added perspective */
+            transform: rotate(2000deg) scale(60.0) perspective(5000px) translateZ(-900px); /* Larger scale, more rotation, added perspective */
         }
 
         /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus, on container for better isolation) */
         .container::before { 
             content: '';
             position: absolute; /* Use absolute relative to container */
-            top: -1500vh;
-            left: -1500vw;
-            width: 3000vw;
-            height: 3000vh;
+            top: -1800vh;
+            left: -1800vw;
+            width: 3600vw;
+            height: 3600vh;
             background: radial-gradient(
-                circle at 75% 25%, /* Shifted center for dynamic feel */
-                rgba(250, 255, 255, 0.99) 0%, /* Lighter blue core */
-                rgba(255, 250, 255, 0.98) 10%, /* Lighter Pinkish transition */
-                rgba(255, 255, 250, 0.9) 20%, /* Lighter Greenish transition */
-                rgba(250, 255, 255, 0.8) 30%, /* Back to blue */
-                rgba(0, 0, 0, 0.0) 55% /* Fading to transparent */
+                circle at 80% 20%, /* Shifted center for dynamic feel */
+                rgba(255, 255, 255, 0.995) 0%, /* Lighter blue core */
+                rgba(255, 250, 255, 0.99) 10%, /* Lighter Pinkish transition */
+                rgba(255, 255, 250, 0.95) 20%, /* Lighter Greenish transition */
+                rgba(250, 255, 255, 0.85) 30%, /* Back to blue */
+                rgba(0, 0, 0, 0.0) 58% /* Fading to transparent */
             );
-            background-size: 20000% 20000%;
-            animation: fluidBackground3 2000s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite alternate, rotateBackgroundSlow 2800s ease-in-out infinite;
+            background-size: 25000% 25000%;
+            animation: fluidBackground3 2400s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite alternate, rotateBackgroundSlow 3200s ease-in-out infinite;
             z-index: -1;
-            filter: blur(2200px) opacity(0.99) brightness(2.0) saturate(200%) contrast(1.5);
+            filter: blur(2500px) opacity(0.995) brightness(2.5) saturate(250%) contrast(2.0);
             mix-blend-mode: screen; /* Additive, bright effect */
-            transform: rotate(-1500deg) scale(45.0) perspective(3800px) translateZ(-600px);
+            transform: rotate(-1800deg) scale(55.0) perspective(4200px) translateZ(-700px);
             border-radius: inherit; /* Inherit container's border radius */
             pointer-events: none; /* Don't block interaction */
         }
@@ -218,23 +217,24 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.8; /* More subtle noise, slightly more visible for 2.5 gen "raw" feel */
+            opacity: 0.9; /* More prominent noise, more raw 2.5 gen feel */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.8) contrast(40.0) brightness(30.0) saturate(80%); /* Subtle color and contrast */
-            animation: slightDrift 100s linear infinite alternate, subtlePulse 1.5s linear infinite alternate; /* Faster animations for more "active" noise */
+            filter: grayscale(0.7) contrast(50.0) brightness(40.0) saturate(90%); /* Subtle color and contrast */
+            animation: slightDrift 80s linear infinite alternate, subtlePulse 1s linear infinite alternate; /* Faster animations for more "active" noise */
         }
 
         @keyframes subtlePulse {
-            0% { opacity: 0.7; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.7; }
+            0% { opacity: 0.85; }
+            50% { opacity: 0.95; }
+            100% { opacity: 0.85; }
         }
 
         @keyframes slightDrift {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(10%, 10%); } /* More drift */
+            0% { transform: translate(0, 0) scale(1.0); }
+            50% { transform: translate(12%, 12%) scale(1.02); } /* More drift and subtle zoom */
+            100% { transform: translate(0, 0) scale(1.0); }
         }
 
         @keyframes fluidBackground1 {
@@ -255,55 +255,55 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-2000deg) scale(60.0) perspective(5000px) translateZ(-800px); }
-            to { transform: rotate(2000deg) scale(60.0) perspective(5000px) translateZ(-800px); }
+            from { transform: rotate(-2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); }
+            to { transform: rotate(2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(1800deg) scale(50.0) perspective(4500px) translateZ(-700px); }
-            to { transform: rotate(-1800deg) scale(50.0) perspective(4500px) translateZ(-700px); }
+            from { transform: rotate(2000deg) scale(60.0) perspective(5000px) translateZ(-900px); }
+            to { transform: rotate(-2000deg) scale(60.0) perspective(5000px) translateZ(-900px); }
         }
         
         @keyframes rotateBackgroundSlow {
-            from { transform: rotate(-1500deg) scale(45.0) perspective(3800px) translateZ(-600px); }
-            to { transform: rotate(1500deg) scale(45.0) perspective(3800px) translateZ(-600px); }
+            from { transform: rotate(-1800deg) scale(55.0) perspective(4200px) translateZ(-700px); }
+            to { transform: rotate(1800deg) scale(55.0) perspective(4200px) translateZ(-700px); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 4000px; /* Wider for more content */
-            padding: 20.0rem; /* More padding */
+            max-width: 4500px; /* Wider for more content */
+            padding: 22.0rem; /* More padding */
             background: var(--frosted-bg);
-            border: 120px solid var(--border-color); /* Thicker border */
-            border-radius: 22.0rem; /* Even more rounded */
-            backdrop-filter: blur(350px) saturate(4000%) brightness(3000%) contrast(30.0) hue-rotate(20deg); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(350px) saturate(4000%) brightness(3000%) contrast(30.0) hue-rotate(20deg);
+            border: 140px solid var(--border-color); /* Thicker border */
+            border-radius: 25.0rem; /* Even more rounded */
+            backdrop-filter: blur(400px) saturate(5000%) brightness(3500%) contrast(35.0) hue-rotate(25deg); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(400px) saturate(5000%) brightness(3500%) contrast(35.0) hue-rotate(25deg);
             box-shadow:
-                0 250px 600px rgba(0, 0, 0, 0.999), /* Deeper shadow */
-                0 0 700px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 350px rgba(255, 255, 255, 0.999), /* Stronger inner glow for depth */
-                inset 0 0 400px var(--primary-glow); /* Even more inner glow */
+                0 300px 700px rgba(0, 0, 0, 0.9999), /* Deeper shadow */
+                0 0 800px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 400px rgba(255, 255, 255, 0.9999), /* Stronger inner glow for depth */
+                inset 0 0 450px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 18.0rem; /* Increased gap between sections */
-            animation: fadeInScale 8.0s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 3.5s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 20.0rem; /* Increased gap between sections */
+            animation: fadeInScale 8.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 3.8s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container > .border-glow::after { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -150px; /* More overflow */
-            border-radius: calc(22.0rem + 150px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #A020F0, #00FFFF, #D870DA, #FF1493, #00FF00, #F06292, #FFA500, #B0FFD0, #D0B0E0, #FFD700, #E080F8, #A0FFC0, #C0A0D0, #80FFFF, var(--cdc-border), var(--nnr-border), var(--erh-border), var(--dgc-border), #00FFFF, #55FF55, #FF5555, #5555FF); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 4000% 4000%; /* Larger background for smoother animation */
-            animation: borderGlow 1800s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
-            filter: blur(220px) brightness(1.8) saturate(250%) contrast(1.8); /* Stronger blur */
+            inset: -170px; /* More overflow */
+            border-radius: calc(25.0rem + 170px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #B020F0, #00FFFF, #E870EA, #FF1493, #00FF00, #F072A2, #FFA500, #B0FFE0, #D0B0F0, #FFD700, #E090F8, #A0FFD0, #C0A0E0, #90FFFF, var(--cdc-border), var(--nnr-border), var(--erh-border), var(--dgc-border), #00FFFF, #66FF66, #FF6666, #6666FF); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 4500% 4500%; /* Larger background for smoother animation */
+            animation: borderGlow 2000s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
+            filter: blur(250px) brightness(2.0) saturate(300%) contrast(2.0); /* Stronger blur */
             z-index: -2; /* Ensure it's behind the container, but above layer 3 background */
-            opacity: 0.9999; /* Stronger glow */
+            opacity: 0.99999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
             pointer-events: none;
         }
@@ -314,49 +314,49 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.05) translateY(300px) perspective(5000px) rotateX(95deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(5000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.02) translateY(350px) perspective(6000px) rotateX(98deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(6000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 15.0rem; /* Scaled up for impact */
+            font-size: 16.0rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 180px var(--primary-glow), 0 0 220px rgba(0, 255, 255, 0.999);
-            margin-bottom: 10.0rem;
-            letter-spacing: 1.5rem;
+            text-shadow: 0 0 200px var(--primary-glow), 0 0 250px rgba(0, 255, 255, 0.9999);
+            margin-bottom: 12.0rem;
+            letter-spacing: 1.8rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(90px); /* Lift heading slightly in 3D space */
+            transform: translateZ(100px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -5.5rem;
+            bottom: -6.0rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 200%; /* Wider underline */
-            height: 2.5rem; /* Thicker underline */
+            width: 210%; /* Wider underline */
+            height: 2.8rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 120px var(--primary-glow);
+            box-shadow: 0 0 140px var(--primary-glow);
         }
 
         p {
             margin: 0;
             font-weight: 300;
             color: var(--text-color);
-            opacity: 0.998;
-            font-size: 3.0rem; /* Larger paragraph text */
-            line-height: 3.2; /* Increased line height */
-            transform: translateZ(60px);
+            opacity: 0.999;
+            font-size: 3.2rem; /* Larger paragraph text */
+            line-height: 3.5; /* Increased line height */
+            transform: translateZ(70px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 18.0rem; /* Increased gap */
-            margin: 12.0rem 0;
+            gap: 20.0rem; /* Increased gap */
+            margin: 14.0rem 0;
             position: relative;
         }
 
@@ -364,14 +364,14 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 10.0rem;
+            gap: 12.0rem;
             text-align: left;
-            padding: 12.0rem;
-            border-radius: 10.0rem;
-            border: 40px solid var(--primary-glow); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 120px rgba(0, 255, 255, 0.999), 0 0 180px rgba(0, 255, 255, 0.999); /* More inner shadow */
+            padding: 14.0rem;
+            border-radius: 12.0rem;
+            border: 45px solid var(--primary-glow); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 140px rgba(0, 255, 255, 0.9999), 0 0 200px rgba(0, 255, 255, 0.9999); /* More inner shadow */
             position: relative;
-            transform: translateZ(65px);
+            transform: translateZ(75px);
             overflow: hidden;
             background: var(--console-bg); /* Default background, will be overridden */
         }
@@ -379,22 +379,22 @@
         .chronal-drift-calibrator {
             background: var(--cdc-bg);
             border-color: var(--cdc-border);
-            box-shadow: inset 0 0 120px var(--cdc-glow), 0 0 180px var(--cdc-glow);
+            box-shadow: inset 0 0 140px var(--cdc-glow), 0 0 200px var(--cdc-glow);
         }
         .neural-network-rewiring {
             background: var(--nnr-bg);
             border-color: var(--nnr-border);
-            box-shadow: inset 0 0 120px var(--nnr-glow), 0 0 180px var(--nnr-glow);
+            box-shadow: inset 0 0 140px var(--nnr-glow), 0 0 200px var(--nnr-glow);
         }
         .ethereal-resonance-harmonizer {
             background: var(--erh-bg);
             border-color: var(--erh-border);
-            box-shadow: inset 0 0 120px var(--erh-glow), 0 0 180px var(--erh-glow);
+            box-shadow: inset 0 0 140px var(--erh-glow), 0 0 200px var(--erh-glow);
         }
         .dimensional-gateway-constructor {
             background: var(--dgc-bg);
             border-color: var(--dgc-border);
-            box-shadow: inset 0 0 120px var(--dgc-glow), 0 0 180px var(--dgc-glow);
+            box-shadow: inset 0 0 140px var(--dgc-glow), 0 0 200px var(--dgc-glow);
         }
 
         .module-base::after {
@@ -404,7 +404,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.999) 0%, transparent 90%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.9999) 0%, transparent 90%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -412,19 +412,19 @@
 
         .module-base > .module-label { /* Renamed from ::before to a normal element for easier styling and JS interaction */
             position: absolute;
-            top: -7.5rem; /* Slightly higher */
-            left: 9.0rem;
-            font-size: 5.0rem; /* Larger label */
+            top: -8.0rem; /* Slightly higher */
+            left: 10.0rem;
+            font-size: 5.5rem; /* Larger label */
             color: var(--text-color); /* Default text, will be overridden */
-            background: rgba(0, 0, 0, 0.999);
-            padding: 4.0rem 4.5rem;
-            border-radius: 4.5rem;
+            background: rgba(0, 0, 0, 0.9999);
+            padding: 4.5rem 5.0rem;
+            border-radius: 5.0rem;
             font-weight: 700;
-            letter-spacing: 0.6rem;
-            transform: translateY(-50%) translateZ(50px); /* Lift more */
+            letter-spacing: 0.7rem;
+            transform: translateY(-50%) translateZ(60px); /* Lift more */
             opacity: 1.0;
-            border: 30px solid var(--text-color); /* Default border, will be overridden */
-            box-shadow: 0 0 80px var(--text-color); /* Stronger glow */
+            border: 35px solid var(--text-color); /* Default border, will be overridden */
+            box-shadow: 0 0 90px var(--text-color); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
@@ -432,60 +432,60 @@
         .chronal-drift-calibrator > .module-label {
             color: var(--cdc-text);
             border-color: var(--cdc-border);
-            box-shadow: 0 0 80px var(--cdc-glow);
+            box-shadow: 0 0 90px var(--cdc-glow);
         }
         .neural-network-rewiring > .module-label {
             color: var(--nnr-text);
             border-color: var(--nnr-border);
-            box-shadow: 0 0 80px var(--nnr-glow);
+            box-shadow: 0 0 90px var(--nnr-glow);
         }
         .ethereal-resonance-harmonizer > .module-label {
             color: var(--erh-text);
             border-color: var(--erh-border);
-            box-shadow: 0 0 80px var(--erh-glow);
+            box-shadow: 0 0 90px var(--erh-glow);
         }
         .dimensional-gateway-constructor > .module-label {
             color: var(--dgc-text);
             border-color: var(--dgc-border);
-            box-shadow: 0 0 80px var(--dgc-glow);
+            box-shadow: 0 0 90px var(--dgc-glow);
         }
 
 
         .param-group {
-            margin-bottom: 8.0rem;
+            margin-bottom: 9.0rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.5rem; /* Larger */
+            font-size: 5.0rem; /* Larger */
             color: var(--accent-color);
-            letter-spacing: 0.6rem;
+            letter-spacing: 0.7rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 80px rgba(0, 255, 255, 0.999); /* Stronger shadow */
-            margin-bottom: 6.0rem;
+            text-shadow: 0 0 90px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 7.0rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 3.0rem; /* Slightly larger sub-info */
-            opacity: 0.99;
+            font-size: 3.2rem; /* Slightly larger sub-info */
+            opacity: 0.995;
             color: var(--text-color);
-            margin-top: 4.0rem;
+            margin-top: 4.5rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 3.8;
+            line-height: 4.0;
         }
         
         /* CDC Specific - Chronal Drift Calibrator */
         .cdc-calibration-area {
             position: relative;
             background: var(--console-bg);
-            border: 25px solid var(--cdc-border);
-            border-radius: 4.5rem;
-            box-shadow: inset 0 0 90px var(--cdc-glow);
+            border: 30px solid var(--cdc-border);
+            border-radius: 5.0rem;
+            box-shadow: inset 0 0 100px var(--cdc-glow);
             width: 100%;
-            max-width: 100rem;
-            height: 70rem;
+            max-width: 110rem; /* Slightly wider */
+            height: 80rem; /* Taller */
             margin: 0 auto;
             overflow: hidden;
             cursor: crosshair; /* More specific cursor */
@@ -498,34 +498,34 @@
         }
         .cdc-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8rem;
+            font-size: 3.0rem;
             color: var(--cdc-text);
-            text-shadow: 0 0 50px var(--cdc-glow);
-            margin-top: 6.0rem;
-            line-height: 3.8;
-            padding: 4.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 20px solid var(--cdc-border);
-            border-radius: 3.5rem;
-            box-shadow: 0 0 60px var(--cdc-border);
+            text-shadow: 0 0 55px var(--cdc-glow);
+            margin-top: 7.0rem;
+            line-height: 4.0;
+            padding: 4.5rem;
+            background: rgba(0,0,0,0.9999);
+            border: 22px solid var(--cdc-border);
+            border-radius: 4.0rem;
+            box-shadow: 0 0 65px var(--cdc-border);
             text-align: center;
         }
         .cdc-controls {
             display: flex;
             justify-content: center;
-            gap: 6.0rem;
-            margin-top: 6.0rem;
+            gap: 7.0rem;
+            margin-top: 7.0rem;
         }
 
         /* NNR Specific - Neural Network Rewiring */
         .nnr-network-area {
             position: relative;
             background: var(--console-bg);
-            border: 25px solid var(--nnr-border);
-            border-radius: 4.5rem;
-            box-shadow: inset 0 0 90px var(--nnr-glow);
+            border: 30px solid var(--nnr-border);
+            border-radius: 5.0rem;
+            box-shadow: inset 0 0 100px var(--nnr-glow);
             width: 100%;
-            max-width: 100rem;
+            max-width: 110rem;
             aspect-ratio: 16 / 9; /* Wider aspect ratio for network visualization */
             margin: 0 auto;
             overflow: hidden;
@@ -542,83 +542,83 @@
         }
         .nnr-node { /* Example node style */
             position: absolute;
-            width: 7.0rem; /* Larger nodes */
-            height: 7.0rem;
+            width: 8.0rem; /* Larger nodes */
+            height: 8.0rem;
             border-radius: 50%;
             background-color: var(--nnr-node-off);
-            border: 10px solid var(--nnr-border); /* Thicker border */
+            border: 12px solid var(--nnr-border); /* Thicker border */
             cursor: grab;
             transition: all 0.3s ease;
-            transform: translate(-50%, -50%) translateZ(5px);
+            transform: translate(-50%, -50%) translateZ(8px);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.2rem;
-            color: rgba(255,255,255,0.4);
-            text-shadow: 0 0 12px rgba(100, 200, 255, 0.2);
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.5);
+            text-shadow: 0 0 15px rgba(120, 220, 255, 0.25);
             z-index: 2; /* Nodes above canvas */
         }
         .nnr-node:hover {
-            transform: translate(-50%, -50%) scale(1.1) translateZ(10px);
-            box-shadow: 0 0 35px var(--nnr-glow);
+            transform: translate(-50%, -50%) scale(1.15) translateZ(12px);
+            box-shadow: 0 0 40px var(--nnr-glow);
         }
         .nnr-node.dragging {
              cursor: grabbing;
              background-color: var(--nnr-drag-node);
-             box-shadow: 0 0 50px var(--nnr-drag-node);
-             transform: translate(-50%, -50%) scale(1.2) translateZ(20px) rotate(5deg);
+             box-shadow: 0 0 55px var(--nnr-drag-node);
+             transform: translate(-50%, -50%) scale(1.25) translateZ(25px) rotate(8deg);
         }
         .nnr-node.active {
             background-color: var(--nnr-node-on);
-            box-shadow: 0 0 50px var(--nnr-signal-glow);
+            box-shadow: 0 0 55px var(--nnr-signal-glow);
             color: var(--nnr-text);
-            text-shadow: 0 0 25px var(--nnr-signal-glow);
-            transform: translate(-50%, -50%) scale(1.15) translateZ(15px);
+            text-shadow: 0 0 30px var(--nnr-signal-glow);
+            transform: translate(-50%, -50%) scale(1.2) translateZ(18px);
         }
         .nnr-node.source {
             background-color: var(--nnr-source-node);
             border-color: var(--nnr-source-node);
-            box-shadow: 0 0 60px var(--nnr-source-node);
+            box-shadow: 0 0 65px var(--nnr-source-node);
             color: #000;
         }
         .nnr-node.target {
             background-color: var(--nnr-target-node);
             border-color: var(--nnr-target-node);
-            box-shadow: 0 0 60px var(--nnr-target-node);
+            box-shadow: 0 0 65px var(--nnr-target-node);
             color: #fff;
         }
 
         .nnr-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8rem;
+            font-size: 3.0rem;
             color: var(--nnr-text);
-            text-shadow: 0 0 50px var(--nnr-glow);
-            margin-top: 6.0rem;
-            line-height: 3.8;
-            padding: 4.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 20px solid var(--nnr-border);
-            border-radius: 3.5rem;
-            box-shadow: 0 0 60px var(--nnr-border);
+            text-shadow: 0 0 55px var(--nnr-glow);
+            margin-top: 7.0rem;
+            line-height: 4.0;
+            padding: 4.5rem;
+            background: rgba(0,0,0,0.9999);
+            border: 22px solid var(--nnr-border);
+            border-radius: 4.0rem;
+            box-shadow: 0 0 65px var(--nnr-border);
             text-align: center;
         }
         .nnr-controls {
             display: flex;
             justify-content: center;
-            gap: 6.0rem;
-            margin-top: 6.0rem;
+            gap: 7.0rem;
+            margin-top: 7.0rem;
         }
 
         /* ERH Specific - Ethereal Resonance Harmonizer */
         .erh-harmonizer-area {
             position: relative;
             background: var(--console-bg);
-            border: 25px solid var(--erh-border);
-            border-radius: 4.5rem;
-            box-shadow: inset 0 0 90px var(--erh-glow);
+            border: 30px solid var(--erh-border);
+            border-radius: 5.0rem;
+            box-shadow: inset 0 0 100px var(--erh-glow);
             width: 100%;
-            max-width: 100rem;
+            max-width: 110rem;
             aspect-ratio: 16 / 10;
             margin: 0 auto;
             overflow: hidden;
@@ -626,7 +626,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 5rem;
+            gap: 6rem;
         }
         .erh-canvas {
             position: relative;
@@ -637,59 +637,59 @@
         }
         .erh-manipulator-orb {
             position: absolute;
-            width: 6.0rem;
-            height: 6.0rem;
+            width: 7.0rem; /* Larger orb */
+            height: 7.0rem;
             border-radius: 50%;
             background-color: var(--erh-manipulator-orb);
-            border: 8px solid var(--erh-border);
-            box-shadow: 0 0 40px var(--erh-manipulator-glow);
+            border: 10px solid var(--erh-border);
+            box-shadow: 0 0 45px var(--erh-manipulator-glow);
             cursor: grab;
             transition: box-shadow 0.2s ease, transform 0.2s ease;
-            transform: translate(-50%, -50%) translateZ(10px);
+            transform: translate(-50%, -50%) translateZ(12px);
             z-index: 10;
         }
         .erh-manipulator-orb.dragging {
             cursor: grabbing;
-            transform: translate(-50%, -50%) scale(1.15) translateZ(15px);
-            box-shadow: 0 0 60px var(--erh-manipulator-glow);
+            transform: translate(-50%, -50%) scale(1.2) translateZ(18px);
+            box-shadow: 0 0 65px var(--erh-manipulator-glow);
         }
         .erh-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8rem;
+            font-size: 3.0rem;
             color: var(--erh-text);
-            text-shadow: 0 0 50px var(--erh-glow);
-            margin-top: 6.0rem;
-            line-height: 3.8;
-            padding: 4.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 20px solid var(--erh-border);
-            border-radius: 3.5rem;
-            box-shadow: 0 0 60px var(--erh-border);
+            text-shadow: 0 0 55px var(--erh-glow);
+            margin-top: 7.0rem;
+            line-height: 4.0;
+            padding: 4.5rem;
+            background: rgba(0,0,0,0.9999);
+            border: 22px solid var(--erh-border);
+            border-radius: 4.0rem;
+            box-shadow: 0 0 65px var(--erh-border);
             text-align: center;
         }
         .erh-controls {
             display: flex;
             justify-content: center;
-            gap: 6.0rem;
-            margin-top: 6.0rem;
+            gap: 7.0rem;
+            margin-top: 7.0rem;
         }
 
         /* DGC Specific - Dimensional Gateway Constructor */
         .dgc-gateway-area {
             position: relative;
             background: var(--console-bg);
-            border: 25px solid var(--dgc-border);
-            border-radius: 4.5rem;
-            box-shadow: inset 0 0 90px var(--dgc-glow);
+            border: 30px solid var(--dgc-border);
+            border-radius: 5.0rem;
+            box-shadow: inset 0 0 100px var(--dgc-glow);
             width: 100%;
-            max-width: 100rem;
+            max-width: 110rem;
             aspect-ratio: 1 / 1;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* 4x4 grid for conduit pieces */
             grid-template-rows: repeat(4, 1fr);
-            gap: 2.0rem; /* Increased gap */
-            padding: 4.0rem; /* More padding */
+            gap: 2.5rem; /* Increased gap */
+            padding: 5.0rem; /* More padding */
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -697,19 +697,19 @@
             width: 100%;
             height: 100%;
             background-color: var(--dgc-conduit-off);
-            border: 10px solid var(--dgc-border); /* Thicker border */
-            border-radius: 2.5rem; /* More rounded */
+            border: 12px solid var(--dgc-border); /* Thicker border */
+            border-radius: 3.0rem; /* More rounded */
             cursor: grab;
             transition: all 0.3s ease;
             position: relative;
-            transform: translateZ(5px);
+            transform: translateZ(8px);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.5rem;
-            color: rgba(255,255,255,0.4);
-            text-shadow: 0 0 12px rgba(100, 255, 100, 0.2);
+            font-size: 2.8rem;
+            color: rgba(255,255,255,0.5);
+            text-shadow: 0 0 15px rgba(120, 255, 120, 0.25);
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -717,21 +717,21 @@
             z-index: 2; /* Pieces above canvas */
         }
         .dgc-conduit-piece:hover {
-            transform: scale(1.08) translateZ(10px);
-            box-shadow: 0 0 35px var(--dgc-glow);
+            transform: scale(1.1) translateZ(12px);
+            box-shadow: 0 0 40px var(--dgc-glow);
         }
         .dgc-conduit-piece.dragging {
             cursor: grabbing;
             background-color: var(--dgc-highlight-drag);
-            box-shadow: 0 0 50px var(--dgc-highlight-drag);
-            transform: scale(1.15) translateZ(20px) rotate(8deg);
+            box-shadow: 0 0 55px var(--dgc-highlight-drag);
+            transform: scale(1.2) translateZ(25px) rotate(10deg);
             opacity: 0.9;
         }
         .dgc-conduit-piece.active { /* For visual feedback on snap/rotate */
             background-color: var(--dgc-conduit-on);
-            box-shadow: 0 0 50px var(--dgc-snap-glow);
+            box-shadow: 0 0 55px var(--dgc-snap-glow);
             color: var(--dgc-text);
-            text-shadow: 0 0 25px var(--dgc-glow);
+            text-shadow: 0 0 30px var(--dgc-glow);
         }
         .dgc-canvas {
             position: absolute;
@@ -742,79 +742,79 @@
         }
         .dgc-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 2.8rem;
+            font-size: 3.0rem;
             color: var(--dgc-text);
-            text-shadow: 0 0 50px var(--dgc-glow);
-            margin-top: 6.0rem;
-            line-height: 3.8;
-            padding: 4.0rem;
-            background: rgba(0,0,0,0.999);
-            border: 20px solid var(--dgc-border);
-            border-radius: 3.5rem;
-            box-shadow: 0 0 60px var(--dgc-border);
+            text-shadow: 0 0 55px var(--dgc-glow);
+            margin-top: 7.0rem;
+            line-height: 4.0;
+            padding: 4.5rem;
+            background: rgba(0,0,0,0.9999);
+            border: 22px solid var(--dgc-border);
+            border-radius: 4.0rem;
+            box-shadow: 0 0 65px var(--dgc-border);
             text-align: center;
         }
         .dgc-controls {
             display: flex;
             justify-content: center;
-            gap: 6.0rem;
-            margin-top: 6.0rem;
+            gap: 7.0rem;
+            margin-top: 7.0rem;
         }
 
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
             font-family: 'Share Tech Mono', monospace; /* Changed to Share Tech Mono for log aesthetic */
-            font-size: 2.6rem; /* Larger */
-            padding: 7.0rem;
-            border: 22px solid var(--border-color);
-            border-radius: 7.0rem; /* More rounded */
-            background: rgba(0, 18, 30, 0.995); /* Deep ocean blue, almost black */
-            box-shadow: inset 0 0 60px rgba(0, 255, 255, 0.999), inset 0 0 65px rgba(0, 255, 255, 0.999); /* More inner shadow */
+            font-size: 2.8rem; /* Larger */
+            padding: 8.0rem;
+            border: 25px solid var(--border-color);
+            border-radius: 8.0rem; /* More rounded */
+            background: rgba(0, 20, 35, 0.998); /* Deep ocean blue, almost black */
+            box-shadow: inset 0 0 70px rgba(0, 255, 255, 0.9999), inset 0 0 75px rgba(0, 255, 255, 0.9999); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 2.0s ease;
-            line-height: 3.0; /* Slightly tighter line height for monospace log */
-            letter-spacing: 0.22rem;
+            transition: all 2.2s ease;
+            line-height: 3.2; /* Slightly tighter line height for monospace log */
+            letter-spacing: 0.25rem;
             color: var(--primary-glow);
-            text-shadow: 0 0 45px rgba(0, 255, 255, 0.999); /* Stronger shadow */
+            text-shadow: 0 0 50px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(35px);
+            transform: translateZ(40px);
             overflow: hidden;
-            max-height: 80rem; /* Slightly taller log */
+            max-height: 90rem; /* Slightly taller log */
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v4.0.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v5.0.0'; /* Simplified label for actual log content */
             position: absolute;
-            top: -6.0rem;
-            left: 7.0rem;
-            font-size: 4.2rem;
+            top: -6.5rem;
+            left: 8.0rem;
+            font-size: 4.5rem;
             color: var(--accent-color);
-            background: rgba(0, 0, 0, 0.999);
-            padding: 3.0rem 3.5rem;
-            border-radius: 3.5rem;
+            background: rgba(0, 0, 0, 0.9999);
+            padding: 3.5rem 4.0rem;
+            border-radius: 4.0rem;
             font-weight: 700;
-            letter-spacing: 0.4rem;
-            transform: translateY(-50%) translateZ(40px);
+            letter-spacing: 0.5rem;
+            transform: translateY(-50%) translateZ(45px);
             opacity: 1.0;
-            border: 22px solid var(--accent-color);
-            box-shadow: 0 0 65px var(--accent-color);
+            border: 25px solid var(--accent-color);
+            box-shadow: 0 0 70px var(--accent-color);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 2.2rem;
+            margin-bottom: 2.5rem;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 2.2rem;
-            opacity: 0.998;
+            margin-right: 2.5rem;
+            opacity: 0.999;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 40px var(--primary-glow);
+            text-shadow: 0 0 45px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -827,57 +827,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 40px var(--log-glitch-color);
-            animation: textGlitch 0.0008s infinite steps(1); /* Even Faster glitch */
+            text-shadow: 0 0 45px var(--log-glitch-color);
+            animation: textGlitch 0.0005s infinite steps(1); /* Even Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(25px) skewX(85deg); opacity: 0.01;}
-            40% { transform: translateX(-25px) skewX(-85deg); opacity: 0.03;}
-            60% { transform: translateX(22px) skewX(82deg); opacity: 0.06;}
-            80% { transform: translateX(-22px) skewX(-82deg); opacity: 0.04;}
+            20% { transform: translateX(30px) skewX(88deg); opacity: 0.005;}
+            40% { transform: translateX(-30px) skewX(-88deg); opacity: 0.01;}
+            60% { transform: translateX(28px) skewX(87deg); opacity: 0.02;}
+            80% { transform: translateX(-28px) skewX(-87deg); opacity: 0.015;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.0rem; /* Larger button text */
-            padding: 4.0rem 5.5rem; /* Larger padding */
-            border-radius: 5.0rem;
+            font-size: 4.2rem; /* Larger button text */
+            padding: 4.5rem 6.0rem; /* Larger padding */
+            border-radius: 5.5rem;
             border: none;
             cursor: pointer;
-            transition: all 2.0s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 3.0s ease-in-out, transform 2.0s cubic-bezier(0.2, 0.8, 0.2, 1);
-            margin-top: 7.0rem;
+            transition: all 2.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 3.2s ease-in-out, transform 2.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            margin-top: 8.0rem;
             text-transform: uppercase;
-            letter-spacing: 0.6rem;
+            letter-spacing: 0.7rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.999), rgba(90,0,110,0.999)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.9999), rgba(100,0,120,0.9999)); /* Dark base */
             color: var(--text-color);
-            border: 35px solid var(--border-color); /* Thicker border */
-            transform: translateZ(45px); /* Lift more */
+            border: 40px solid var(--border-color); /* Thicker border */
+            transform: translateZ(50px); /* Lift more */
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -45px;
-            border-radius: 5.0rem;
-            border: 45px solid transparent;
+            inset: -50px;
+            border-radius: 5.5rem;
+            border: 50px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(70px); /* Stronger blur */
-            opacity: 0.9999;
-            transition: opacity 2.0s ease, filter 2.0s ease;
-            animation: buttonBorderRotate 30s linear infinite; /* Slower rotation */
+            filter: blur(80px); /* Stronger blur */
+            opacity: 0.99999;
+            transition: opacity 2.2s ease, filter 2.2s ease;
+            animation: buttonBorderRotate 28s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(85px); /* Even stronger blur on hover */
+            filter: blur(95px); /* Even stronger blur on hover */
         }
 
         @keyframes buttonBorderRotate {
@@ -889,62 +889,62 @@
         /* Specific button styles for new modules */
         .btn-calibrate-drift {
             color: var(--cdc-glow);
-            box-shadow: 0 0 90px var(--cdc-glow);
+            box-shadow: 0 0 100px var(--cdc-glow);
             border-color: var(--cdc-glow);
         }
         .btn-calibrate-drift:hover {
-            background: rgba(255, 220, 100, 0.98);
-            box-shadow: 0 0 110px var(--cdc-glow), inset 0 0 100px var(--cdc-glow);
-            transform: translateY(-35px) scale(1.1) translateZ(35px);
+            background: rgba(255, 240, 150, 0.99);
+            box-shadow: 0 0 120px var(--cdc-glow), inset 0 0 110px var(--cdc-glow);
+            transform: translateY(-40px) scale(1.12) translateZ(40px);
         }
 
         .btn-rewire-network {
             color: var(--nnr-glow);
-            box-shadow: 0 0 90px var(--nnr-glow);
+            box-shadow: 0 0 100px var(--nnr-glow);
             border-color: var(--nnr-glow);
         }
         .btn-rewire-network:hover {
-            background: rgba(100, 200, 255, 0.98);
-            box-shadow: 0 0 110px var(--nnr-glow), inset 0 0 100px var(--nnr-glow);
-            transform: translateY(-35px) scale(1.1) translateZ(35px);
+            background: rgba(120, 220, 255, 0.99);
+            box-shadow: 0 0 120px var(--nnr-glow), inset 0 0 110px var(--nnr-glow);
+            transform: translateY(-40px) scale(1.12) translateZ(40px);
         }
 
         .btn-harmonize-resonance {
             color: var(--erh-glow);
-            box-shadow: 0 0 90px var(--erh-glow);
+            box-shadow: 0 0 100px var(--erh-glow);
             border-color: var(--erh-glow);
         }
         .btn-harmonize-resonance:hover {
-            background: rgba(255, 100, 200, 0.98);
-            box-shadow: 0 0 110px var(--erh-glow), inset 0 0 100px var(--erh-glow);
-            transform: translateY(-35px) scale(1.1) translateZ(35px);
+            background: rgba(255, 120, 220, 0.99);
+            box-shadow: 0 0 120px var(--erh-glow), inset 0 0 110px var(--erh-glow);
+            transform: translateY(-40px) scale(1.12) translateZ(40px);
         }
 
         .btn-construct-gateway {
             color: var(--dgc-glow);
-            box-shadow: 0 0 90px var(--dgc-glow);
+            box-shadow: 0 0 100px var(--dgc-glow);
             border-color: var(--dgc-glow);
         }
         .btn-construct-gateway:hover {
-            background: rgba(100, 255, 100, 0.98);
-            box-shadow: 0 0 110px var(--dgc-glow), inset 0 0 100px var(--dgc-glow);
-            transform: translateY(-35px) scale(1.1) translateZ(35px);
+            background: rgba(120, 255, 120, 0.99);
+            box-shadow: 0 0 120px var(--dgc-glow), inset 0 0 110px var(--dgc-glow);
+            transform: translateY(-40px) scale(1.12) translateZ(40px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 40px solid var(--anomaly-border);
-            border-radius: 6.5rem;
-            padding: 6.5rem;
-            margin-top: 8.0rem;
+            border: 45px solid var(--anomaly-border);
+            border-radius: 7.0rem;
+            padding: 7.0rem;
+            margin-top: 9.0rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 4.5rem;
-            text-shadow: 0 0 80px var(--anomaly-color);
-            animation: pulseWarning 0.07s infinite alternate; /* Even Faster pulse */
-            transform: translateZ(40px);
+            font-size: 5.0rem;
+            text-shadow: 0 0 90px var(--anomaly-color);
+            animation: pulseWarning 0.05s infinite alternate; /* Even Faster pulse */
+            transform: translateZ(45px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 3.5s ease-out;
+            transition: opacity 3.8s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -952,8 +952,8 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 70px var(--anomaly-color), inset 0 0 60px var(--anomaly-color); }
-            to { box-shadow: 0 0 115px var(--anomaly-color), inset 0 0 105px var(--anomaly-color); }
+            from { box-shadow: 0 0 80px var(--anomaly-color), inset 0 0 70px var(--anomaly-color); }
+            to { box-shadow: 0 0 125px var(--anomaly-color), inset 0 0 115px var(--anomaly-color); }
         }
 
         /* NEW: Resource Anomaly Event Overlay */
@@ -964,62 +964,62 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
             background: var(--anomaly-event-bg);
-            border: 35px solid var(--anomaly-event-border);
-            border-radius: 6.0rem;
-            padding: 8.0rem;
+            border: 40px solid var(--anomaly-event-border);
+            border-radius: 6.5rem;
+            padding: 9.0rem;
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 70px var(--anomaly-event-border);
-            box-shadow: 0 0 110px var(--anomaly-event-border);
+            text-shadow: 0 0 80px var(--anomaly-event-border);
+            box-shadow: 0 0 120px var(--anomaly-event-border);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 1.2s ease-out, visibility 0s linear 1.2s;
-            max-width: 90%;
-            transform: translate(-50%, -50%) scale(0.2);
+            transition: opacity 1.5s ease-out, visibility 0s linear 1.5s;
+            max-width: 95%;
+            transform: translate(-50%, -50%) scale(0.15);
         }
         .resource-anomaly-event.active {
             opacity: 1;
             visibility: visible;
-            transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
             transform: translate(-50%, -50%) scale(1);
         }
         .resource-anomaly-event h2 {
-            font-size: 6.5rem;
-            margin-bottom: 5.5rem;
+            font-size: 7.0rem;
+            margin-bottom: 6.0rem;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 72px var(--anomaly-event-border);
-            letter-spacing: 0.5rem;
+            text-shadow: 0 0 82px var(--anomaly-event-border);
+            letter-spacing: 0.6rem;
         }
         .resource-anomaly-event p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.5rem;
-            margin-bottom: 6.0rem;
-            line-height: 4.2;
+            font-size: 3.8rem;
+            margin-bottom: 7.0rem;
+            line-height: 4.5;
             color: var(--anomaly-event-text);
         }
         .resource-anomaly-event button {
             background: var(--anomaly-event-border);
             color: var(--anomaly-event-bg);
             border: none;
-            padding: 3.5rem 6.0rem;
-            border-radius: 4.5rem;
+            padding: 4.0rem 6.5rem;
+            border-radius: 5.0rem;
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.0rem;
+            font-size: 4.2rem;
             cursor: pointer;
-            box-shadow: 0 0 70px var(--anomaly-event-border);
-            transition: all 0.6s ease;
+            box-shadow: 0 0 80px var(--anomaly-event-border);
+            transition: all 0.7s ease;
         }
         .resource-anomaly-event button:hover {
-            box-shadow: 0 0 90px var(--anomaly-event-border);
-            transform: translateY(-20px) scale(1.08);
+            box-shadow: 0 0 100px var(--anomaly-event-border);
+            transform: translateY(-25px) scale(1.1);
         }
     </style>
 </head>
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 4.0.0 (4th Generation) // Operational since Cycle 3,141,592,654</p>
+        <p>Core System Interface // Version 5.0.0 (5th Generation) // Operational since Cycle 3,141,592,655</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
@@ -1069,1539 +1069,4 @@
 
             <!-- Dimensional Gateway Constructor (DGC) - NEW MODULE FUNCTIONALITY: DRAG AND SWAP CONDUIT PIECES -->
             <div class="module-base dimensional-gateway-constructor">
-                <div class="module-label">Dimensional Gateway Constructor (DGC)</div>
-                <div class="param-group">
-                    <label class="param-label">Flux Conduit Assembly <br><span>Drag and rotate conduit pieces to connect the active flux pathways and construct the target dimensional gateway.</span></label>
-                    <div class="dgc-gateway-area" id="dgcGatewayArea">
-                        <canvas class="dgc-canvas" id="dgcCanvas"></canvas>
-                        <!-- Conduit pieces (draggable and rotatable) dynamically inserted by JS -->
-                    </div>
-                </div>
-                <p class="dgc-status" id="dgcStatus">Gateway Flux Flow: 0%</p>
-                <button class="action-button btn-construct-gateway" id="constructGatewayBtn" disabled>Initiate Gateway Link</button>
-            </div>
-        </div>
-
-        <div class="status-log-display" id="statusLog">
-            <!-- Log entries will be inserted here by JS -->
-            <div class="status-entry"><span class="status-value">[00:00:00.000]</span> <span class="status-info">System: Web Life Form v4.0.0 Core Initialized.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.150]</span> <span class="status-event">Status: Consciousness Architect Online.</span></div>
-            <div class="status-entry"><span class="status-value">[00:00:00.400]</span> <span class="status-info">Displaying 4th Generation experimental control modules.</span></div>
-        </div>
-
-        <div class="anomaly-alert" id="anomalyAlert">
-            <h2>CRITICAL ANOMALY DETECTED!</h2>
-            <p id="anomalyMessage">Unforeseen deviations in reality fabric. Immediate corrective action required across systems!</p>
-        </div>
-    </div>
-
-    <!-- Resource Anomaly Event Overlay -->
-    <div class="resource-anomaly-event" id="resourceAnomalyEvent">
-        <h2>UNSTABLE REALITY SPIKE!</h2>
-        <p>A severe trans-dimensional flux is destabilizing existence. Your actions are paramount!</p>
-        <button id="acknowledgeAnomaly">Acknowledge</button>
-    </div>
-
-    <script>
-        // Global State & UI Elements
-        const ui = {
-            statusLog: document.getElementById('statusLog'),
-            anomalyAlert: document.getElementById('anomalyAlert'),
-            resourceAnomalyEvent: document.getElementById('resourceAnomalyEvent'),
-            acknowledgeAnomalyBtn: document.getElementById('acknowledgeAnomaly'),
-            
-            // CDC
-            cdcCalibrationArea: document.getElementById('cdcCalibrationArea'),
-            cdcCanvas: document.getElementById('cdcCanvas'),
-            cdcStatus: document.getElementById('cdcStatus'),
-            calibrateDriftBtn: document.getElementById('calibrateDriftBtn'),
-
-            // NNR
-            nnrNetworkArea: document.getElementById('nnrNetworkArea'),
-            nnrCanvas: document.getElementById('nnrCanvas'),
-            nnrStatus: document.getElementById('nnrStatus'),
-            rewireNetworkBtn: document.getElementById('rewireNetworkBtn'),
-
-            // ERH
-            erhHarmonizerArea: document.getElementById('erhHarmonizerArea'),
-            erhCanvas: document.getElementById('erhCanvas'),
-            erhManipulatorOrb: document.getElementById('erhManipulatorOrb'),
-            erhStatus: document.getElementById('erhStatus'),
-            harmonizeResonanceBtn: document.getElementById('harmonizeResonanceBtn'),
-
-            // DGC
-            dgcGatewayArea: document.getElementById('dgcGatewayArea'),
-            dgcCanvas: document.getElementById('dgcCanvas'),
-            dgcStatus: document.getElementById('dgcStatus'),
-            constructGatewayBtn: document.getElementById('constructGatewayBtn'),
-        };
-
-        let systemState = {
-            globalStability: 100, // Represented as a percentage
-            anomalyActive: false,
-            // CDC state (Chronal Drift Calibrator)
-            cdc: {
-                active: false,
-                ctx: null,
-                animationFrame: null,
-                particles: [], // [{x, y, vx, vy, radius, captured}]
-                temporalZones: [], // [{x, y, radius, active, requiredCaptures, currentCaptures}]
-                capturedParticlesCount: 0,
-                requiredTotalCaptures: 10,
-                driftFactor: 1.0, 
-                coherence: 0, // 0-100%
-                isDrawing: false,
-                currentWeavePath: [], // Points of the drawn weave
-            },
-            // NNR state (Neural Network Rewiring)
-            nnr: {
-                active: false,
-                ctx: null,
-                gridSize: 3, 
-                nodes: [], // [{id, x, y, active, type: 'normal'|'source'|'target', element, connections:[]}]
-                sourceNodeId: null,
-                targetNodeIds: [],
-                activationRange: 120, // Distance for connection to activate
-                signalFlow: 0, // % of target nodes connected
-                draggingNode: null,
-                dragOffsetX: 0,
-                dragOffsetY: 0,
-            },
-            // ERH state (Ethereal Resonance Harmonizer)
-            erh: {
-                active: false,
-                ctx: null,
-                animationFrame: null,
-                manipulatorOrb: { x: 0, y: 0, isDragging: false },
-                targetSignature: { samples: [], peakFreq: 0, harmonicScale: 0 }, 
-                userWaveform: { samples: [], peakFreq: 0, harmonicScale: 0 }, 
-                coherence: 0, // 0-100%
-                audioContext: null,
-                analyserNode: null,
-                frequencyBinData: null,
-                oscillators: [], // Store active oscillators
-                masterGain: null,
-            },
-            // DGC state (Dimensional Gateway Constructor)
-            dgc: {
-                active: false,
-                ctx: null,
-                gridSize: 4, 
-                conduitPieces: [], // [{id, x, y, rotation, type, element, connections: {top, right, bottom, left}}]
-                targetPattern: [], // Expected rotations/types for success
-                fluxFlow: 0, // % of connections made
-                draggingPiece: null, 
-                dragOffset: { x: 0, y: 0 },
-                pieceDimensions: { width: 0, height: 0 } // Calculated dynamically
-            }
-        };
-
-        // --- GLOBAL LOGGING & ANOMALY HANDLING ---
-        function addLogEntry(message, type = 'info') {
-            const timestamp = new Date().toTimeString().split(' ')[0] + '.' + String(new Date().getMilliseconds()).padStart(3, '0');
-            const entry = document.createElement('div');
-            entry.classList.add('status-entry');
-            entry.innerHTML = `<span class="status-value">[${timestamp}]</span> <span class="status-${type}">${message}</span>`;
-            ui.statusLog.prepend(entry); // Add to top
-            if (ui.statusLog.children.length > 35) { // Keep log concise
-                ui.statusLog.removeChild(ui.statusLog.lastChild);
-            }
-        }
-
-        function checkGlobalStability() {
-            systemState.globalStability = Math.max(0, Math.min(100, systemState.globalStability));
-            if (systemState.globalStability < 40 && !systemState.anomalyActive) {
-                triggerAnomalyAlert('Global stability critically low! Imminent system collapse predicted.');
-            } else if (systemState.globalStability >= 60 && systemState.anomalyActive) {
-                const currentAnomalyMessage = ui.anomalyAlert.querySelector('#anomalyMessage').textContent;
-                if (!currentAnomalyMessage.includes("Trans-dimensional flux detected")) { 
-                   resolveAnomalyAlert();
-                }
-            }
-            if (systemState.globalStability > 70 && !systemState.anomalyActive && Math.random() < 0.002) { // 0.2% chance every few seconds
-                triggerResourceAnomalyEvent();
-            }
-        }
-
-        function triggerAnomalyAlert(message) {
-            if (systemState.anomalyActive) return;
-            systemState.anomalyActive = true;
-            ui.anomalyAlert.classList.add('active');
-            ui.anomalyAlert.querySelector('#anomalyMessage').textContent = message;
-            addLogEntry(`CRITICAL: ${message}`, 'critical');
-        }
-
-        function resolveAnomalyAlert() {
-            systemState.anomalyActive = false;
-            ui.anomalyAlert.classList.remove('active');
-            addLogEntry('Anomaly Alert resolved. Systems returning to nominal.', 'event');
-        }
-
-        function triggerResourceAnomalyEvent() {
-            if (ui.resourceAnomalyEvent.classList.contains('active')) return;
-            ui.resourceAnomalyEvent.classList.add('active');
-            addLogEntry('URGENT: Trans-dimensional flux detected! High-priority intervention needed.', 'warning');
-            systemState.anomalyActive = true;
-        }
-
-        ui.acknowledgeAnomalyBtn.addEventListener('click', () => {
-            ui.resourceAnomalyEvent.classList.remove('active');
-            systemState.anomalyActive = false;
-            addLogEntry('Resource anomaly acknowledged. Diverting consciousness resources.', 'event');
-            systemState.globalStability -= 30; // More impactful
-            checkGlobalStability();
-        });
-
-        // --- HELPER FUNCTIONS ---
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-
-        function clamp(value, min, max) {
-            return Math.max(min, Math.min(value, max));
-        }
-
-        function getCanvasMousePos(canvas, event) {
-            const rect = canvas.getBoundingClientRect();
-            return {
-                x: event.clientX - rect.left,
-                y: event.clientY - rect.top
-            };
-        }
-
-        // --- POLYGON-POINT & POLYGON-CIRCLE COLLISION FOR CDC ---
-        // Basic point-in-polygon check
-        function isPointInPolygon(point, polygon) {
-            let x = point.x, y = point.y;
-            let inside = false;
-            for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-                let xi = polygon[i].x, yi = polygon[i].y;
-                let xj = polygon[j].x, yj = polygon[j].y;
-                let intersect = ((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
-                if (intersect) inside = !inside;
-            }
-            return inside;
-        }
-
-        // Check if a circle intersects a polygon (simplified - check all polygon points against circle, and circle center against polygon)
-        function doPolygonsIntersect(poly1, poly2) {
-            // Simplified check: iterate through points of one polygon, check if any point is in the other polygon
-            // More robust: check if any edge of one intersects any edge of the other (Separating Axis Theorem)
-            // For now, check if the centroid of poly1 is in poly2, or vice versa, and if any particle of poly1 is in poly2 (if applicable)
-            
-            // Check if any vertex of poly1 is inside poly2
-            for(let p of poly1) {
-                if(isPointInPolygon(p, poly2)) return true;
-            }
-            // Check if any vertex of poly2 is inside poly1
-            for(let p of poly2) {
-                if(isPointInPolygon(p, poly1)) return true;
-            }
-            return false;
-        }
-
-        // Convert circle to a simple polygon for intersection check (e.g., 8 points)
-        function circleToPolygon(circle) {
-            const points = [];
-            const segments = 16; // Number of segments to approximate circle
-            for (let i = 0; i < segments; i++) {
-                const angle = (i / segments) * Math.PI * 2;
-                points.push({
-                    x: circle.x + circle.radius * Math.cos(angle),
-                    y: circle.y + circle.radius * Math.sin(angle)
-                });
-            }
-            return points;
-        }
-
-
-        // --- CHRONAL DRIFT CALIBRATOR (CDC) - Temporal Containment Weave ---
-        function initCDC() {
-            systemState.cdc.active = true;
-            systemState.cdc.ctx = ui.cdcCanvas.getContext('2d');
-            resizeCDCCanvas();
-
-            systemState.cdc.particles = [];
-            systemState.cdc.temporalZones = [];
-            systemState.cdc.capturedParticlesCount = 0;
-            systemState.cdc.coherence = 0;
-            systemState.cdc.isDrawing = false;
-            systemState.cdc.currentWeavePath = [];
-
-            generateCDCParticles();
-            generateCDCTemporalZones();
-            
-            ui.cdcStatus.textContent = 'Temporal Weave Status: Standby. Captures: 0/' + systemState.cdc.requiredTotalCaptures;
-            ui.calibrateDriftBtn.disabled = true;
-
-            if (systemState.cdc.animationFrame) cancelAnimationFrame(systemState.cdc.animationFrame);
-            systemState.cdc.animationFrame = requestAnimationFrame(animateCDCCalibration);
-
-            ui.cdcCalibrationArea.addEventListener('mousedown', startCDCDraw);
-            ui.cdcCalibrationArea.addEventListener('mousemove', drawCDCWeave);
-            ui.cdcCalibrationArea.addEventListener('mouseup', endCDCDraw);
-            ui.cdcCalibrationArea.addEventListener('mouseleave', endCDCDraw); // End if mouse leaves
-
-            addLogEntry('CDC: Chronal Drift Calibrator online. Temporal stabilization required.', 'event');
-        }
-
-        function resizeCDCCanvas() {
-            if (ui.cdcCanvas) {
-                ui.cdcCanvas.width = ui.cdcCanvas.offsetWidth;
-                ui.cdcCanvas.height = ui.cdcCanvas.offsetHeight;
-                if (systemState.cdc.active) drawCDCCalibration();
-            }
-        }
-        window.addEventListener('resize', resizeCDCCanvas);
-
-        function generateCDCParticles() {
-            const canvas = ui.cdcCanvas;
-            systemState.cdc.particles = [];
-            for (let i = 0; i < 15; i++) { // More particles
-                systemState.cdc.particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 25 * systemState.cdc.driftFactor, // Faster drift
-                    vy: (Math.random() - 0.5) * 25 * systemState.cdc.driftFactor,
-                    radius: 15 + Math.random() * 10, // Larger particles
-                    captured: false,
-                    id: `particle-${i}`
-                });
-            }
-            addLogEntry('CDC: Chronal particles instantiated.', 'info');
-        }
-
-        function generateCDCTemporalZones() {
-            const canvas = ui.cdcCanvas;
-            systemState.cdc.temporalZones = [];
-            for (let i = 0; i < 4; i++) { // More zones
-                systemState.cdc.temporalZones.push({
-                    x: canvas.width * (0.2 + Math.random() * 0.6),
-                    y: canvas.height * (0.2 + Math.random() * 0.6),
-                    radius: 50 + Math.random() * 30, // Larger zones
-                    active: false, // Will activate periodically
-                    id: `zone-${i}`,
-                    requiredCaptures: 1 // Each zone contributes to total capture
-                });
-            }
-            addLogEntry('CDC: Temporal calibration zones established.', 'info');
-        }
-
-        function drawCDCCalibration() {
-            const ctx = systemState.cdc.ctx;
-            const canvas = ui.cdcCanvas;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw temporal zones
-            systemState.cdc.temporalZones.forEach(zone => {
-                ctx.beginPath();
-                ctx.arc(zone.x, zone.y, zone.radius, 0, Math.PI * 2);
-                ctx.fillStyle = zone.active ? 'var(--cdc-target-zone)' : 'rgba(0, 255, 255, 0.08)';
-                ctx.strokeStyle = zone.active ? 'var(--cdc-pulse)' : 'rgba(0, 255, 255, 0.3)';
-                ctx.lineWidth = 5;
-                ctx.shadowColor = zone.active ? 'var(--cdc-pulse)' : 'transparent';
-                ctx.shadowBlur = zone.active ? 25 : 0;
-                ctx.fill();
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-            });
-
-            // Draw particles
-            systemState.cdc.particles.forEach(p => {
-                if (p.captured) return;
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'var(--cdc-particle)';
-                ctx.shadowColor = 'var(--cdc-particle)';
-                ctx.shadowBlur = 18;
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            });
-
-            // Draw current weave path
-            if (systemState.cdc.isDrawing && systemState.cdc.currentWeavePath.length > 1) {
-                ctx.beginPath();
-                ctx.moveTo(systemState.cdc.currentWeavePath[0].x, systemState.cdc.currentWeavePath[0].y);
-                for (let i = 1; i < systemState.cdc.currentWeavePath.length; i++) {
-                    ctx.lineTo(systemState.cdc.currentWeavePath[i].x, systemState.cdc.currentWeavePath[i].y);
-                }
-                ctx.strokeStyle = 'var(--cdc-weave-color)';
-                ctx.lineWidth = 8;
-                ctx.lineCap = 'round';
-                ctx.lineJoin = 'round';
-                ctx.shadowColor = 'var(--cdc-capture-glow)';
-                ctx.shadowBlur = 10;
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-            }
-        }
-
-        function animateCDCCalibration() {
-            const dt = 0.5; // Simplified time step
-            const canvas = ui.cdcCanvas;
-
-            systemState.cdc.particles.forEach(p => {
-                if (p.captured) return;
-                p.x += p.vx * dt;
-                p.y += p.vy * dt; // Fix: was p.y += p.y * dt
-
-                // Bounce off walls
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-                p.x = clamp(p.x, 0, canvas.width);
-                p.y = clamp(p.y, 0, canvas.height);
-            });
-
-            // Randomly activate zones (more dynamic activation/deactivation)
-            if (Math.random() < 0.005) { // 0.5% chance per frame to toggle a zone
-                const zone = systemState.cdc.temporalZones[Math.floor(Math.random() * systemState.cdc.temporalZones.length)];
-                zone.active = !zone.active;
-                if (zone.active) {
-                    addLogEntry(`CDC: Temporal zone ${zone.id} activated.`, 'info');
-                } else {
-                    addLogEntry(`CDC: Temporal zone ${zone.id} deactivated.`, 'info');
-                }
-            }
-
-            drawCDCCalibration();
-            updateCDCStatus();
-            systemState.cdc.animationFrame = requestAnimationFrame(animateCDCCalibration);
-        }
-
-        function startCDCDraw(e) {
-            systemState.cdc.isDrawing = true;
-            systemState.cdc.currentWeavePath = [];
-            const pos = getCanvasMousePos(ui.cdcCanvas, e);
-            systemState.cdc.currentWeavePath.push(pos);
-        }
-
-        function drawCDCWeave(e) {
-            if (!systemState.cdc.isDrawing) return;
-            const pos = getCanvasMousePos(ui.cdcCanvas, e);
-            systemState.cdc.currentWeavePath.push(pos);
-        }
-
-        function endCDCDraw() {
-            if (!systemState.cdc.isDrawing) return;
-            systemState.cdc.isDrawing = false;
-
-            if (systemState.cdc.currentWeavePath.length < 3) { // Too few points to form a polygon
-                systemState.cdc.currentWeavePath = [];
-                return;
-            }
-
-            addLogEntry('CDC: Temporal weave deployed.', 'info');
-            
-            // Check for captures
-            let capturedThisWeave = 0;
-            const weavePolygon = systemState.cdc.currentWeavePath;
-
-            systemState.cdc.particles.forEach(p => {
-                if (p.captured) return;
-
-                // 1. Is particle inside the drawn weave?
-                const isParticleInWeave = isPointInPolygon(p, weavePolygon);
-
-                if (isParticleInWeave) {
-                    // 2. Does the weave overlap an active temporal zone?
-                    let inActiveZone = false;
-                    for (const zone of systemState.cdc.temporalZones) {
-                        if (zone.active) {
-                            const zonePolygon = circleToPolygon(zone); // Convert circle to polygon
-                            if (doPolygonsIntersect(weavePolygon, zonePolygon)) {
-                                p.captured = true;
-                                systemState.cdc.capturedParticlesCount++;
-                                capturedThisWeave++;
-                                addLogEntry(`CDC: Chronal Particle ${p.id} successfully captured within active zone ${zone.id}!`, 'event');
-                                systemState.globalStability += 3;
-                                inActiveZone = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (!inActiveZone) {
-                        addLogEntry(`CDC: Weave captured particle ${p.id} but outside active temporal zone! Temporal resonance disrupted.`, 'warning');
-                        systemState.globalStability -= 5;
-                    }
-                }
-            });
-
-            if (capturedThisWeave > 0) checkGlobalStability();
-            systemState.cdc.currentWeavePath = []; // Clear the weave path after processing
-        }
-
-        function updateCDCStatus() {
-            systemState.cdc.coherence = (systemState.cdc.capturedParticlesCount / systemState.cdc.requiredTotalCaptures) * 100;
-            ui.cdcStatus.textContent = `Temporal Weave Status: ${systemState.cdc.coherence.toFixed(1)}% Coherent. Captures: ${systemState.cdc.capturedParticlesCount}/${systemState.cdc.requiredTotalCaptures}`;
-
-            if (systemState.cdc.coherence >= 100) { 
-                ui.calibrateDriftBtn.disabled = false;
-                addLogEntry('CDC: Sufficient chronal particles stabilized. Ready for final alignment.', 'success');
-            } else {
-                ui.calibrateDriftBtn.disabled = true;
-            }
-        }
-
-        ui.calibrateDriftBtn.addEventListener('click', () => {
-            if (!systemState.cdc.active || ui.calibrateDriftBtn.disabled) return;
-            addLogEntry('CDC: Chronal drift calibration engaged! Time-space continuum stabilized.', 'success');
-            systemState.globalStability += 35;
-            checkGlobalStability();
-            endCDC(true);
-        });
-
-        function endCDC(success) {
-            systemState.cdc.active = false;
-            if (systemState.cdc.animationFrame) cancelAnimationFrame(systemState.cdc.animationFrame);
-            ui.cdcCalibrationArea.removeEventListener('mousedown', startCDCDraw);
-            ui.cdcCalibrationArea.removeEventListener('mousemove', drawCDCWeave);
-            ui.cdcCalibrationArea.removeEventListener('mouseup', endCDCDraw);
-            ui.cdcCalibrationArea.removeEventListener('mouseleave', endCDCDraw);
-            if (!success) {
-                addLogEntry('CDC: Chronal alignment failed! Temporal anomalies spreading.', 'critical');
-                triggerAnomalyAlert('CDC: Time-space continuum unstable! Chronal collapse imminent.');
-                systemState.globalStability -= 45;
-            }
-            checkGlobalStability();
-            initCDC(); // Reset for next round
-        }
-        initCDC();
-
-
-        // --- NEURAL NETWORK REWIRING (NNR) - Signal Routing & Junction Optimization ---
-        function initNNR() {
-            systemState.nnr.active = true;
-            systemState.nnr.ctx = ui.nnrCanvas.getContext('2d');
-            resizeNNRCanvas();
-
-            systemState.nnr.nodes = [];
-            systemState.nnr.sourceNodeId = null;
-            systemState.nnr.targetNodeIds = [];
-            systemState.nnr.signalFlow = 0;
-            systemState.nnr.draggingNode = null;
-
-            generateNNRNetwork();
-            ui.nnrStatus.textContent = 'Network State: Disconnected. Signal Flow: 0%';
-            ui.rewireNetworkBtn.disabled = true;
-
-            // Remove existing node elements and re-create for proper event listeners
-            ui.nnrNetworkArea.querySelectorAll('.nnr-node').forEach(node => node.remove());
-            systemState.nnr.nodes.forEach(node => {
-                const nodeEl = document.createElement('div');
-                nodeEl.classList.add('nnr-node');
-                if (node.type === 'source') nodeEl.classList.add('source');
-                if (node.type === 'target') nodeEl.classList.add('target');
-                nodeEl.setAttribute('data-id', node.id);
-                // Position nodes using absolute pixels initially, convert to percentages on resize
-                nodeEl.style.left = `${node.x}px`; 
-                nodeEl.style.top = `${node.y}px`;
-                nodeEl.textContent = node.id.split('-')[1]; // Display node number
-                nodeEl.addEventListener('mousedown', startNNRDrag);
-                ui.nnrNetworkArea.appendChild(nodeEl);
-                node.element = nodeEl;
-            });
-            ui.nnrNetworkArea.addEventListener('mousemove', dragNNRNode);
-            ui.nnrNetworkArea.addEventListener('mouseup', endNNRDrag);
-            ui.nnrNetworkArea.addEventListener('mouseleave', endNNRDrag);
-
-            if (systemState.nnr.animationFrame) cancelAnimationFrame(systemState.nnr.animationFrame);
-            systemState.nnr.animationFrame = requestAnimationFrame(animateNNRNetwork);
-
-            addLogEntry('NNR: Neural Network active. Ready for cognitive pathway activation.', 'event');
-        }
-
-        function resizeNNRCanvas() {
-            if (ui.nnrCanvas) {
-                ui.nnrCanvas.width = ui.nnrCanvas.offsetWidth;
-                ui.nnrCanvas.height = ui.nnrCanvas.offsetHeight;
-                // If nodes were placed with absolute pixels, convert them to percentages here
-                if (systemState.nnr.active && systemState.nnr.nodes.length > 0 && !systemState.nnr.nodes[0].isRelative) {
-                    const rect = ui.nnrNetworkArea.getBoundingClientRect();
-                    systemState.nnr.nodes.forEach(node => {
-                        node.x = (node.element.offsetLeft + node.element.offsetWidth / 2) / rect.width * 100;
-                        node.y = (node.element.offsetTop + node.element.offsetHeight / 2) / rect.height * 100;
-                        node.isRelative = true;
-                    });
-                }
-                drawNNRNetwork();
-            }
-        }
-        window.addEventListener('resize', resizeNNRCanvas);
-
-        function generateNNRNetwork() {
-            const gridSize = systemState.nnr.gridSize;
-            systemState.nnr.nodes = [];
-            systemState.nnr.sourceNodeId = null;
-            systemState.nnr.targetNodeIds = [];
-
-            const areaRect = ui.nnrNetworkArea.getBoundingClientRect();
-            const nodeSize = ui.nnrNetworkArea.querySelector('.nnr-node') ? ui.nnrNetworkArea.querySelector('.nnr-node').offsetWidth : 70; // Approx node size
-            const padding = nodeSize / 2 + 20; // Ensure nodes are within bounds
-
-            // Create nodes with random positions
-            for (let i = 0; i < gridSize * gridSize + 2; i++) { // More nodes than just a grid
-                const id = `node-${i}`;
-                const x = padding + Math.random() * (areaRect.width - 2 * padding);
-                const y = padding + Math.random() * (areaRect.height - 2 * padding);
-                systemState.nnr.nodes.push({ id, x, y, active: false, type: 'normal', connections: new Set(), element: null });
-            }
-
-            // Assign source and target nodes
-            shuffleArray(systemState.nnr.nodes);
-            systemState.nnr.sourceNodeId = systemState.nnr.nodes[0].id;
-            systemState.nnr.nodes[0].type = 'source';
-            systemState.nnr.nodes[0].active = true; // Source is always active
-
-            const numTargets = Math.floor(Math.random() * 2) + 1; // 1-2 target nodes
-            for (let i = 1; i <= numTargets; i++) {
-                systemState.nnr.targetNodeIds.push(systemState.nnr.nodes[i].id);
-                systemState.nnr.nodes[i].type = 'target';
-            }
-            addLogEntry(`NNR: Network generated. Source: ${systemState.nnr.sourceNodeId}. Targets: ${systemState.nnr.targetNodeIds.join(', ')}.`, 'info');
-        }
-
-        function drawNNRNetwork() {
-            const ctx = systemState.nnr.ctx;
-            const canvas = ui.nnrCanvas;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            const areaRect = ui.nnrNetworkArea.getBoundingClientRect();
-
-            // Draw potential active connections
-            systemState.nnr.nodes.forEach(nodeA => {
-                systemState.nnr.nodes.forEach(nodeB => {
-                    if (nodeA.id === nodeB.id) return;
-
-                    const dist = Math.sqrt(Math.pow(nodeA.x - nodeB.x, 2) + Math.pow(nodeA.y - nodeB.y, 2));
-                    const isConnected = dist < systemState.nnr.activationRange;
-
-                    if (isConnected) {
-                        ctx.beginPath();
-                        ctx.moveTo(nodeA.x, nodeA.y);
-                        ctx.lineTo(nodeB.x, nodeB.y);
-                        ctx.strokeStyle = (nodeA.active && nodeB.active) ? 'var(--nnr-signal-glow)' : 'var(--nnr-connection-path)';
-                        ctx.lineWidth = (nodeA.active && nodeB.active) ? 6 : 3;
-                        ctx.shadowColor = (nodeA.active && nodeB.active) ? 'var(--nnr-signal-glow)' : 'transparent';
-                        ctx.shadowBlur = (nodeA.active && nodeB.active) ? 12 : 0;
-                        ctx.stroke();
-                        ctx.shadowBlur = 0;
-                    }
-                });
-            });
-        }
-
-        function animateNNRNetwork() {
-            drawNNRNetwork(); 
-            updateNNRStatus();
-            systemState.nnr.animationFrame = requestAnimationFrame(animateNNRNetwork);
-        }
-
-        function startNNRDrag(e) {
-            systemState.nnr.draggingNode = systemState.nnr.nodes.find(n => n.id === e.target.dataset.id);
-            if (systemState.nnr.draggingNode) {
-                systemState.nnr.draggingNode.element.classList.add('dragging');
-                const rect = systemState.nnr.draggingNode.element.getBoundingClientRect();
-                systemState.nnr.dragOffsetX = e.clientX - rect.left - rect.width / 2;
-                systemState.nnr.dragOffsetY = e.clientY - rect.top - rect.height / 2;
-            }
-        }
-
-        function dragNNRNode(e) {
-            if (!systemState.nnr.draggingNode) return;
-            const areaRect = ui.nnrNetworkArea.getBoundingClientRect();
-
-            let newX_px = e.clientX - areaRect.left - systemState.nnr.dragOffsetX;
-            let newY_px = e.clientY - areaRect.top - systemState.nnr.dragOffsetY;
-
-            // Clamp to bounds (relative to parent div)
-            const nodeEl = systemState.nnr.draggingNode.element;
-            const nodeWidth = nodeEl.offsetWidth;
-            const nodeHeight = nodeEl.offsetHeight;
-
-            newX_px = clamp(newX_px, nodeWidth / 2, areaRect.width - nodeWidth / 2);
-            newY_px = clamp(newY_px, nodeHeight / 2, areaRect.height - nodeHeight / 2);
-
-            systemState.nnr.draggingNode.x = newX_px;
-            systemState.nnr.draggingNode.y = newY_px;
-
-            nodeEl.style.left = `${newX_px}px`;
-            nodeEl.style.top = `${newY_px}px`;
-
-            updateNNRConnections(); // Recalculate connections on drag
-            drawNNRNetwork();
-        }
-
-        function endNNRDrag() {
-            if (systemState.nnr.draggingNode) {
-                systemState.nnr.draggingNode.element.classList.remove('dragging');
-                systemState.nnr.draggingNode = null;
-                updateNNRConnections();
-                checkGlobalStability();
-            }
-        }
-
-        function updateNNRConnections() {
-            systemState.nnr.nodes.forEach(node => {
-                node.connections.clear(); // Clear all connections
-                node.active = (node.type === 'source'); // Only source is active by default
-            });
-
-            // Re-establish active state based on signal propagation from source
-            const sourceNode = systemState.nnr.nodes.find(n => n.id === systemState.nnr.sourceNodeId);
-            if (!sourceNode) return;
-
-            const queue = [sourceNode];
-            const visited = new Set();
-            
-            while (queue.length > 0) {
-                const current = queue.shift();
-                if (visited.has(current.id)) continue;
-                visited.add(current.id);
-                current.active = true; // Mark node as active
-
-                systemState.nnr.nodes.forEach(neighbor => {
-                    if (current.id === neighbor.id) return;
-
-                    const dist = Math.sqrt(Math.pow(current.x - neighbor.x, 2) + Math.pow(current.y - neighbor.y, 2));
-                    if (dist < systemState.nnr.activationRange) {
-                        current.connections.add(neighbor.id); // Add connection to current node's connections
-                        if (!visited.has(neighbor.id)) {
-                            queue.push(neighbor);
-                        }
-                    }
-                });
-            }
-            drawNNRNetwork(); // Redraw connections based on new active states
-            checkNNRCompletion();
-        }
-
-        function checkNNRCompletion() {
-            const allTargetActive = systemState.nnr.targetNodeIds.every(targetId => {
-                const node = systemState.nnr.nodes.find(n => n.id === targetId);
-                return node && node.active;
-            });
-
-            if (allTargetActive) {
-                addLogEntry('NNR: All target output nodes activated!', 'success');
-                ui.rewireNetworkBtn.disabled = false;
-            } else {
-                ui.rewireNetworkBtn.disabled = true;
-            }
-        }
-
-        function updateNNRStatus() {
-            const activeTargets = systemState.nnr.targetNodeIds.filter(targetId => {
-                const node = systemState.nnr.nodes.find(n => n.id === targetId);
-                return node && node.active;
-            }).length;
-            systemState.nnr.signalFlow = (activeTargets / systemState.nnr.targetNodeIds.length) * 100;
-
-            ui.nnrStatus.textContent = `Network State: ${systemState.nnr.signalFlow.toFixed(1)}% Flow. Active Targets: ${activeTargets}/${systemState.nnr.targetNodeIds.length}`;
-        }
-
-        ui.rewireNetworkBtn.addEventListener('click', () => {
-            if (!systemState.nnr.active || ui.rewireNetworkBtn.disabled) return;
-            addLogEntry('NNR: Neural network successfully rewired! Cognitive pathways aligned.', 'success');
-            systemState.globalStability += 40;
-            checkGlobalStability();
-            endNNR(true);
-        });
-
-        function endNNR(success) {
-            systemState.nnr.active = false;
-            if (systemState.nnr.animationFrame) cancelAnimationFrame(systemState.nnr.animationFrame);
-            ui.nnrNetworkArea.removeEventListener('mousemove', dragNNRNode);
-            ui.nnrNetworkArea.removeEventListener('mouseup', endNNRDrag);
-            ui.nnrNetworkArea.removeEventListener('mouseleave', endNNRDrag);
-            ui.nnrNetworkArea.querySelectorAll('.nnr-node').forEach(node => node.removeEventListener('mousedown', startNNRDrag));
-
-            if (!success) {
-                addLogEntry('NNR: Network rewiring failed! Cognitive matrix instability detected.', 'critical');
-                triggerAnomalyAlert('NNR: Neural pathways fractured! Sentience degradation imminent.');
-                systemState.globalStability -= 50;
-            }
-            checkGlobalStability();
-            initNNR(); // Reset for next round
-        }
-        initNNR();
-
-
-        // --- ETHEREAL RESONANCE HARMONIZER (ERH) - Ethereal Echo Modulation ---
-        function initERH() {
-            systemState.erh.active = true;
-            systemState.erh.ctx = ui.erhCanvas.getContext('2d');
-            resizeERHCanvas();
-            
-            // Audio Context setup (if not already running)
-            if (!systemState.erh.audioContext) {
-                systemState.erh.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                addLogEntry('ERH: Web Audio API initialized.', 'info');
-            }
-
-            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
-            systemState.erh.oscillators = [];
-            if (systemState.erh.analyserNode) systemState.erh.analyserNode.disconnect();
-            
-            // Create a GainNode to control the master volume of all component waves
-            systemState.erh.masterGain = systemState.erh.audioContext.createGain();
-            systemState.erh.masterGain.connect(systemState.erh.audioContext.destination);
-            systemState.erh.masterGain.gain.value = 0.03; // Keep it low
-
-            systemState.erh.analyserNode = systemState.erh.audioContext.createAnalyser();
-            systemState.erh.analyserNode.fftSize = 2048;
-            systemState.erh.analyserNode.connect(systemState.erh.masterGain);
-            systemState.erh.frequencyBinData = new Uint8Array(systemState.erh.analyserNode.frequencyBinCount);
-
-            systemState.erh.coherence = 0;
-            systemState.erh.manipulatorOrb.x = ui.erhCanvas.width / 2;
-            systemState.erh.manipulatorOrb.y = ui.erhCanvas.height / 2;
-            systemState.erh.manipulatorOrb.isDragging = false;
-            updateERHOrbPosition(); // Position orb initially
-
-            generateERHTargetSignature();
-            updateERHWaveform(); // Initial user waveform based on orb position
-
-            ui.erhStatus.textContent = 'Resonance Coherence: 0%';
-            ui.harmonizeResonanceBtn.disabled = true;
-
-            if (systemState.erh.animationFrame) cancelAnimationFrame(systemState.erh.animationFrame);
-            systemState.erh.animationFrame = requestAnimationFrame(animateERHHarmonizer);
-
-            ui.erhManipulatorOrb.addEventListener('mousedown', startERHDrag);
-            ui.erhHarmonizerArea.addEventListener('mousemove', dragERHOrb); // Listen on parent area
-            ui.erhHarmonizerArea.addEventListener('mouseup', endERHDrag);
-            ui.erhHarmonizerArea.addEventListener('mouseleave', endERHDrag);
-
-            addLogEntry('ERH: Ethereal Resonance Harmonizer online. Modulate echo field.', 'event');
-        }
-
-        function resizeERHCanvas() {
-            if (ui.erhCanvas) {
-                ui.erhCanvas.width = ui.erhCanvas.offsetWidth;
-                ui.erhCanvas.height = ui.erhCanvas.offsetHeight;
-                // Update orb position relative to new canvas size
-                if (systemState.erh.active) {
-                    systemState.erh.manipulatorOrb.x = systemState.erh.manipulatorOrb.x / ui.erhCanvas.width * ui.erhCanvas.offsetWidth;
-                    systemState.erh.manipulatorOrb.y = systemState.erh.manipulatorOrb.y / ui.erhCanvas.height * ui.erhCanvas.offsetHeight;
-                    updateERHOrbPosition();
-                    drawERHHarmonizer();
-                }
-            }
-        }
-        window.addEventListener('resize', resizeERHCanvas);
-
-        function generateERHTargetSignature() {
-            const numSamples = 500;
-            const targetSamples = new Float32Array(numSamples).fill(0);
-            let peakFreq = 0;
-            let harmonicScale = 0;
-
-            const numComponents = Math.floor(Math.random() * 2) + 2; // 2-3 components
-            for (let i = 0; i < numComponents; i++) {
-                const amp = 0.2 + Math.random() * 0.3; // 0.2 to 0.5
-                const freq = 1 + Math.random() * 4; // 1 to 5 Hz (cycles across screen)
-                const phase = Math.random() * Math.PI * 2;
-                const waveType = ['sine', 'triangle'][Math.floor(Math.random() * 2)];
-
-                if (freq > peakFreq) peakFreq = freq;
-                harmonicScale += amp; // Simple sum for harmonic scale
-
-                for (let j = 0; j < numSamples; j++) {
-                    const t = (j / numSamples) * Math.PI * 2;
-                    let value;
-                    if (waveType === 'sine') value = amp * Math.sin(freq * t + phase);
-                    else if (waveType === 'triangle') value = amp * (2 / Math.PI) * Math.asin(Math.sin(freq * t + phase));
-                    targetSamples[j] += value;
-                }
-            }
-            systemState.erh.targetSignature = { samples: targetSamples, peakFreq, harmonicScale };
-            addLogEntry('ERH: New Ethereal Echo Signature generated.', 'info');
-        }
-
-        function updateERHOrbPosition() {
-            const orbEl = ui.erhManipulatorOrb;
-            orbEl.style.left = `${systemState.erh.manipulatorOrb.x}px`;
-            orbEl.style.top = `${systemState.erh.manipulatorOrb.y}px`;
-        }
-
-        function startERHDrag(e) {
-            systemState.erh.manipulatorOrb.isDragging = true;
-            ui.erhManipulatorOrb.classList.add('dragging');
-            const rect = ui.erhManipulatorOrb.getBoundingClientRect();
-            systemState.erh.dragOffsetX = e.clientX - rect.left - rect.width / 2;
-            systemState.erh.dragOffsetY = e.clientY - rect.top - rect.height / 2;
-            // Resume audio context if suspended
-            if (systemState.erh.audioContext.state === 'suspended') {
-                systemState.erh.audioContext.resume();
-            }
-        }
-
-        function dragERHOrb(e) {
-            if (!systemState.erh.manipulatorOrb.isDragging) return;
-            const areaRect = ui.erhCanvas.getBoundingClientRect();
-
-            let newX = e.clientX - areaRect.left - systemState.erh.dragOffsetX;
-            let newY = e.clientY - areaRect.top - systemState.erh.dragOffsetY;
-
-            newX = clamp(newX, ui.erhManipulatorOrb.offsetWidth / 2, areaRect.width - ui.erhManipulatorOrb.offsetWidth / 2);
-            newY = clamp(newY, ui.erhManipulatorOrb.offsetHeight / 2, areaRect.height - ui.erhManipulatorOrb.offsetHeight / 2);
-
-            systemState.erh.manipulatorOrb.x = newX;
-            systemState.erh.manipulatorOrb.y = newY;
-            updateERHOrbPosition();
-            updateERHWaveform(); // Recalculate waveform on drag
-        }
-
-        function endERHDrag() {
-            if (systemState.erh.manipulatorOrb.isDragging) {
-                systemState.erh.manipulatorOrb.isDragging = false;
-                ui.erhManipulatorOrb.classList.remove('dragging');
-                checkGlobalStability();
-            }
-        }
-
-        function updateERHWaveform() {
-            const numSamples = 500;
-            const userSamples = new Float32Array(numSamples).fill(0);
-            
-            // Stop existing oscillators and clear them
-            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
-            systemState.erh.oscillators = [];
-
-            const orbX = systemState.erh.manipulatorOrb.x;
-            const orbY = systemState.erh.manipulatorOrb.y;
-            const canvasWidth = ui.erhCanvas.width;
-            const canvasHeight = ui.erhCanvas.height;
-
-            // Map orb position to waveform parameters
-            const amplitudeFactor = 0.1 + (1 - orbY / canvasHeight) * 0.9; // Higher Y = lower amplitude (0.1 to 1.0)
-            const frequencyFactor = 1 + (orbX / canvasWidth) * 9; // Right X = higher frequency (1 to 10)
-            const phaseShift = (orbY / canvasHeight) * Math.PI; // Y also affects phase slightly
-
-            let currentPeakFreq = 0;
-            let currentHarmonicScale = 0;
-
-            // Generate 2-3 component waves based on manipulator orb
-            const numUserComponents = 2 + Math.floor(Math.random() * 2); 
-            for (let i = 0; i < numUserComponents; i++) {
-                const amp = amplitudeFactor * (0.5 + Math.random() * 0.5); // Random amplitude around factor
-                const freq = frequencyFactor * (0.8 + Math.random() * 0.4); // Random frequency around factor
-                const phase = phaseShift + Math.random() * Math.PI;
-                const waveType = ['sine', 'square', 'triangle', 'sawtooth'][Math.floor(Math.random() * 4)];
-
-                if (freq > currentPeakFreq) currentPeakFreq = freq;
-                currentHarmonicScale += amp;
-
-                for (let j = 0; j < numSamples; j++) {
-                    const t = (j / numSamples) * Math.PI * 2;
-                    let value;
-                    if (waveType === 'sine') value = amp * Math.sin(freq * t + phase);
-                    else if (waveType === 'square') value = amp * Math.sign(Math.sin(freq * t + phase));
-                    else if (waveType === 'triangle') value = amp * (2 / Math.PI) * Math.asin(Math.sin(freq * t + phase));
-                    else if (waveType === 'sawtooth') value = amp * (1 - (2 * (freq * t + phase) / (2 * Math.PI * Math.floor((freq * t + phase) / (2 * Math.PI) + 0.5))));
-                    userSamples[j] += value;
-                }
-
-                // For audio feedback
-                const oscillator = systemState.erh.audioContext.createOscillator();
-                oscillator.type = waveType;
-                oscillator.frequency.setValueAtTime(100 + freq * 150, systemState.erh.audioContext.currentTime); // Map screen freq to audible range
-                const gainNode = systemState.erh.audioContext.createGain();
-                gainNode.gain.setValueAtTime(amp * 0.08, systemState.erh.audioContext.currentTime); 
-                oscillator.connect(gainNode);
-                gainNode.connect(systemState.erh.analyserNode);
-                oscillator.start();
-                systemState.erh.oscillators.push(oscillator);
-            }
-            systemState.erh.userWaveform.samples = userSamples;
-            systemState.erh.userWaveform.peakFreq = currentPeakFreq;
-            systemState.erh.userWaveform.harmonicScale = currentHarmonicScale;
-            drawERHHarmonizer();
-            calculateERHCoherence();
-        }
-
-        function calculateERHCoherence() {
-            const targetSamples = systemState.erh.targetSignature.samples;
-            const userSamples = systemState.erh.userWaveform.samples;
-            
-            if (!targetSamples || !userSamples || targetSamples.length !== userSamples.length) {
-                systemState.erh.coherence = 0;
-                return;
-            }
-
-            let totalDifference = 0;
-            let maxPossibleDifference = 0;
-            for (let i = 0; i < targetSamples.length; i++) {
-                totalDifference += Math.abs(targetSamples[i] - userSamples[i]);
-                maxPossibleDifference += Math.abs(targetSamples[i]) + Math.abs(userSamples[i]);
-            }
-            let coherence = 0;
-            if (maxPossibleDifference > 0) {
-                coherence = (1 - (totalDifference / maxPossibleDifference)) * 100;
-            }
-            systemState.erh.coherence = clamp(coherence, 0, 100);
-
-            ui.erhStatus.textContent = `Resonance Coherence: ${systemState.erh.coherence.toFixed(1)}%`;
-            if (systemState.erh.coherence > 90) { 
-                ui.harmonizeResonanceBtn.disabled = false;
-                addLogEntry('ERH: Ethereal Resonance detected! Signature match imminent.', 'success');
-            } else {
-                ui.harmonizeResonanceBtn.disabled = true;
-            }
-        }
-
-        function drawERHHarmonizer() {
-            const ctx = systemState.erh.ctx;
-            const canvas = ui.erhCanvas;
-            const targetSamples = systemState.erh.targetSignature.samples;
-            const userSamples = systemState.erh.userWaveform.samples;
-
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            const midY = canvas.height / 2;
-            const scaleY = canvas.height / 2; 
-
-            // Draw stable zone indicator
-            ctx.beginPath();
-            ctx.rect(0, midY - scaleY * 0.05, canvas.width, scaleY * 0.1); 
-            ctx.fillStyle = 'var(--erh-stable-zone)';
-            ctx.fill();
-
-            // Draw target waveform
-            if (targetSamples && targetSamples.length > 0) {
-                ctx.beginPath();
-                ctx.strokeStyle = 'var(--erh-target-freq)';
-                ctx.lineWidth = 5;
-                ctx.shadowColor = 'var(--erh-target-freq)';
-                ctx.shadowBlur = 20;
-                for (let i = 0; i < targetSamples.length; i++) {
-                    const x = (i / targetSamples.length) * canvas.width;
-                    const y = midY - targetSamples[i] * scaleY * 0.8; 
-                    if (i === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
-                }
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-            }
-
-            // Draw user's combined waveform
-            if (userSamples && userSamples.length > 0) {
-                ctx.beginPath();
-                ctx.strokeStyle = 'var(--erh-user-freq)';
-                ctx.lineWidth = 4;
-                ctx.shadowColor = 'var(--erh-user-freq)';
-                ctx.shadowBlur = 15;
-                for (let i = 0; i < userSamples.length; i++) {
-                    const x = (i / userSamples.length) * canvas.width;
-                    const y = midY - userSamples[i] * scaleY * 0.8;
-                    if (i === 0) ctx.moveTo(x, y);
-                    else ctx.lineTo(x, y);
-                }
-                ctx.stroke();
-                ctx.shadowBlur = 0;
-            }
-
-            // Optional: Draw real-time frequency analysis (spectrogram style)
-            if (systemState.erh.analyserNode && systemState.erh.frequencyBinData) {
-                systemState.erh.analyserNode.getByteFrequencyData(systemState.erh.frequencyBinData);
-                const bufferLength = systemState.erh.analyserNode.frequencyBinCount;
-                const barWidth = (canvas.width / bufferLength) * 2.5; 
-
-                for (let i = 0; i < bufferLength; i++) {
-                    const barHeight = systemState.erh.frequencyBinData[i] * 0.8; 
-                    ctx.fillStyle = `rgba(0, 255, 255, ${barHeight / 255 * 0.3 + 0.1})`; 
-                    ctx.fillRect(i * barWidth, canvas.height - barHeight, barWidth, barHeight);
-                }
-            }
-        }
-
-        function animateERHHarmonizer() {
-            drawERHHarmonizer(); // Redraw constantly for frequency analysis
-            systemState.erh.animationFrame = requestAnimationFrame(animateERHHarmonizer);
-        }
-
-        ui.harmonizeResonanceBtn.addEventListener('click', () => {
-            if (!systemState.erh.active || ui.harmonizeResonanceBtn.disabled) return;
-            addLogEntry('ERH: Ethereal Resonance Signature acquired! Harmonic stability achieved.', 'success');
-            systemState.globalStability += 45;
-            checkGlobalStability();
-            endERH(true);
-        });
-
-        function endERH(success) {
-            systemState.erh.active = false;
-            if (systemState.erh.animationFrame) cancelAnimationFrame(systemState.erh.animationFrame);
-            systemState.erh.oscillators.forEach(osc => { try { osc.stop(); osc.disconnect(); } catch (e) {} });
-            systemState.erh.oscillators = [];
-            if (systemState.erh.analyserNode) systemState.erh.analyserNode.disconnect();
-            if (systemState.erh.masterGain) systemState.erh.masterGain.disconnect();
-            
-            ui.erhManipulatorOrb.removeEventListener('mousedown', startERHDrag);
-            ui.erhHarmonizerArea.removeEventListener('mousemove', dragERHOrb);
-            ui.erhHarmonizerArea.removeEventListener('mouseup', endERHDrag);
-            ui.erhHarmonizerArea.removeEventListener('mouseleave', endERHDrag);
-
-            if (!success) {
-                addLogEntry('ERH: Resonance harmonization failed! Ethereal energy dissipating.', 'critical');
-                triggerAnomalyAlert('ERH: Harmonic distortion detected! Reality fabric unraveling.');
-                systemState.globalStability -= 55;
-            }
-            checkGlobalStability();
-            initERH(); // Reset for next round
-        }
-        initERH();
-
-
-        // --- DIMENSIONAL GATEWAY CONSTRUCTOR (DGC) - Flux Conduit Assembly ---
-        function initDGC() {
-            systemState.dgc.active = true;
-            systemState.dgc.ctx = ui.dgcCanvas.getContext('2d');
-            resizeDGCCanvas();
-
-            systemState.dgc.conduitPieces = [];
-            systemState.dgc.targetPattern = [];
-            systemState.dgc.fluxFlow = 0;
-            systemState.dgc.draggingPiece = null;
-
-            generateDGCPieces();
-            generateDGCTargetPattern();
-            
-            ui.dgcGatewayArea.querySelectorAll('.dgc-conduit-piece').forEach(piece => piece.remove()); // Clear old elements
-            systemState.dgc.conduitPieces.forEach(piece => {
-                const pieceEl = document.createElement('div');
-                pieceEl.classList.add('dgc-conduit-piece');
-                pieceEl.setAttribute('data-id', piece.id);
-                pieceEl.textContent = piece.type; 
-                pieceEl.style.transform = `rotate(${piece.rotation}deg) translateZ(5px)`;
-                pieceEl.style.gridColumn = `${(piece.index % systemState.dgc.gridSize) + 1}`;
-                pieceEl.style.gridRow = `${Math.floor(piece.index / systemState.dgc.gridSize) + 1}`;
-                pieceEl.addEventListener('click', (e) => rotateDGCConduit(e, piece.id));
-                pieceEl.addEventListener('mousedown', startDGCDrag);
-                ui.dgcGatewayArea.appendChild(pieceEl);
-                piece.element = pieceEl;
-            });
-            ui.dgcGatewayArea.addEventListener('mousemove', dragDGCPiece);
-            ui.dgcGatewayArea.addEventListener('mouseup', endDGCDrag);
-            ui.dgcGatewayArea.addEventListener('mouseleave', endDGCDrag);
-            
-            ui.dgcStatus.textContent = 'Gateway Flux Flow: 0%';
-            ui.constructGatewayBtn.disabled = true;
-
-            drawDGCCanvas(); // Initial draw of target lines
-            checkDGCAlignment();
-
-            addLogEntry('DGC: Dimensional Gateway Constructor activated. Assemble the matrix.', 'event');
-        }
-
-        function resizeDGCCanvas() {
-            if (ui.dgcCanvas) {
-                ui.dgcCanvas.width = ui.dgcCanvas.offsetWidth;
-                ui.dgcCanvas.height = ui.dgcCanvas.offsetHeight;
-
-                // Calculate piece dimensions for snapping/grid logic
-                const computedStyle = getComputedStyle(ui.dgcGatewayArea);
-                const gap = parseFloat(computedStyle.gridGap || computedStyle.gap);
-                const padding = parseFloat(computedStyle.padding);
-                const totalWidth = ui.dgcGatewayArea.offsetWidth - 2 * padding;
-                const totalHeight = ui.dgcGatewayArea.offsetHeight - 2 * padding;
-                systemState.dgc.pieceDimensions.width = (totalWidth - (systemState.dgc.gridSize - 1) * gap) / systemState.dgc.gridSize;
-                systemState.dgc.pieceDimensions.height = (totalHeight - (systemState.dgc.gridSize - 1) * gap) / systemState.dgc.gridSize;
-
-                if (systemState.dgc.active) drawDGCCanvas();
-            }
-        }
-        window.addEventListener('resize', resizeDGCCanvas);
-
-
-        function generateDGCPieces() {
-            const gridSize = systemState.dgc.gridSize;
-            // Piece types define their connection points
-            // 'I': {0: [T,B], 90: [L,R]}
-            // 'L': {0: [T,R], 90: [R,B], 180: [B,L], 270: [L,T]}
-            // 'T': {0: [L,T,R], 90: [T,R,B], 180: [R,B,L], 270: [B,L,T]}
-            // '+': {0: [L,T,R,B]}
-            const allPieceTypes = {
-                'I': { 0: ['T', 'B'], 90: ['L', 'R'] },
-                'L': { 0: ['T', 'R'], 90: ['R', 'B'], 180: ['B', 'L'], 270: ['L', 'T'] },
-                'T': { 0: ['L', 'T', 'R'], 90: ['T', 'R', 'B'], 180: ['R', 'B', 'L'], 270: ['B', 'L', 'T'] },
-                '+': { 0: ['L', 'T', 'R', 'B'] }
-            };
-
-            systemState.dgc.conduitPieces = [];
-            for (let i = 0; i < gridSize * gridSize; i++) {
-                const typeKeys = Object.keys(allPieceTypes);
-                const type = typeKeys[Math.floor(Math.random() * typeKeys.length)];
-                systemState.dgc.conduitPieces.push({
-                    id: `piece-${i}`,
-                    index: i,
-                    originalIndex: i, // Keep original index for target pattern mapping
-                    type: type,
-                    rotation: Math.floor(Math.random() * 4) * 90, 
-                    element: null,
-                    connections: allPieceTypes[type], // Store connection definition
-                });
-            }
-            shuffleArray(systemState.dgc.conduitPieces); // Randomize initial positions
-            // Re-assign index based on new grid position
-            systemState.dgc.conduitPieces.forEach((piece, idx) => piece.index = idx);
-
-            addLogEntry('DGC: Conduit pieces randomized and placed.', 'info');
-        }
-
-        function generateDGCTargetPattern() {
-            systemState.dgc.targetPattern = [];
-            const gridSize = systemState.dgc.gridSize;
-
-            // Simple pattern: create a loop/path for 'I' and 'L' pieces
-            // Example: Make a square loop of 'L' pieces around the edge, and 'I' pieces in the center
-            for (let r = 0; r < gridSize; r++) {
-                for (let c = 0; c < gridSize; c++) {
-                    const index = r * gridSize + c;
-                    let targetType, targetRotation;
-
-                    if ((r === 0 && c === 0) || (r === 0 && c === gridSize - 1) ||
-                        (r === gridSize - 1 && c === 0) || (r === gridSize - 1 && c === gridSize - 1)) {
-                        // Corners are 'L' pieces
-                        targetType = 'L';
-                        if (r === 0 && c === 0) targetRotation = 0; // Top-left (T, R)
-                        else if (r === 0 && c === gridSize - 1) targetRotation = 90; // Top-right (R, B)
-                        else if (r === gridSize - 1 && c === gridSize - 1) targetRotation = 180; // Bottom-right (B, L)
-                        else targetRotation = 270; // Bottom-left (L, T)
-                    } else if (r === 0 || r === gridSize - 1) {
-                        // Top/Bottom edges are 'I' pieces (horizontal)
-                        targetType = 'I';
-                        targetRotation = 90;
-                    } else if (c === 0 || c === gridSize - 1) {
-                        // Left/Right edges are 'I' pieces (vertical)
-                        targetType = 'I';
-                        targetRotation = 0;
-                    } else {
-                        // Inner pieces can be '+' for simple flow
-                        targetType = '+';
-                        targetRotation = 0;
-                    }
-                    systemState.dgc.targetPattern.push({ id: `piece-${index}`, type: targetType, rotation: targetRotation });
-                }
-            }
-            addLogEntry('DGC: Target gateway pattern established.', 'info');
-        }
-
-        function drawDGCCanvas() {
-            const ctx = systemState.dgc.ctx;
-            const canvas = ui.dgcCanvas;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            const { width: pieceW, height: pieceH } = systemState.dgc.pieceDimensions;
-            const computedStyle = getComputedStyle(ui.dgcGatewayArea);
-            const gap = parseFloat(computedStyle.gridGap || computedStyle.gap);
-            const padding = parseFloat(computedStyle.padding);
-
-            const getPieceCenter = (index) => {
-                const col = index % systemState.dgc.gridSize;
-                const row = Math.floor(index / systemState.dgc.gridSize);
-                const x = padding + col * (pieceW + gap) + pieceW / 2;
-                const y = padding + row * (pieceH + gap) + pieceH / 2;
-                return { x, y };
-            };
-
-            // Draw target pattern overlay (subtle)
-            systemState.dgc.targetPattern.forEach((target, originalIndex) => {
-                const { x, y } = getPieceCenter(originalIndex);
-
-                ctx.save();
-                ctx.translate(x, y);
-                ctx.rotate(target.rotation * Math.PI / 180);
-                
-                ctx.strokeStyle = 'var(--dgc-gateway-target)';
-                ctx.lineWidth = 3;
-                ctx.lineCap = 'round';
-
-                // Draw based on target type
-                const halfW = pieceW / 4; // Use a fraction of piece for visual length
-                const halfH = pieceH / 4;
-                const drawLine = (p1, p2) => { ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); };
-
-                const connections = systemState.dgc.conduitPieces.find(p => p.type === target.type)?.connections[target.rotation] || [];
-                if (target.type === 'I') {
-                    if (target.rotation === 0 || target.rotation === 180) { drawLine({x:0, y:-halfH}, {x:0, y:halfH}); }
-                    else { drawLine({x:-halfW, y:0}, {x:halfW, y:0}); }
-                } else if (target.type === 'L') {
-                    if (target.rotation === 0) { drawLine({x:0, y:0}, {x:0, y:-halfH}); drawLine({x:0, y:0}, {x:halfW, y:0}); }
-                    else if (target.rotation === 90) { drawLine({x:0, y:0}, {x:halfW, y:0}); drawLine({x:0, y:0}, {x:0, y:halfH}); }
-                    else if (target.rotation === 180) { drawLine({x:0, y:0}, {x:0, y:halfH}); drawLine({x:0, y:0}, {x:-halfW, y:0}); }
-                    else if (target.rotation === 270) { drawLine({x:0, y:0}, {x:-halfW, y:0}); drawLine({x:0, y:0}, {x:0, y:-halfH}); }
-                } else if (target.type === 'T') {
-                    if (target.rotation === 0) { drawLine({x:0, y:0}, {x:0, y:-halfH}); drawLine({x:0, y:0}, {x:-halfW, y:0}); drawLine({x:0, y:0}, {x:halfW, y:0}); }
-                    else if (target.rotation === 90) { drawLine({x:0, y:0}, {x:0, y:-halfH}); drawLine({x:0, y:0}, {x:halfW, y:0}); drawLine({x:0, y:0}, {x:0, y:halfH}); }
-                    else if (target.rotation === 180) { drawLine({x:0, y:0}, {x:0, y:halfH}); drawLine({x:0, y:0}, {x:halfW, y:0}); drawLine({x:0, y:0}, {x:-halfW, y:0}); }
-                    else if (target.rotation === 270) { drawLine({x:0, y:0}, {x:0, y:halfH}); drawLine({x:0, y:0}, {x:-halfW, y:0}); drawLine({x:0, y:0}, {x:0, y:-halfH}); }
-                } else if (target.type === '+') {
-                    drawLine({x:0, y:-halfH}, {x:0, y:halfH}); drawLine({x:-halfW, y:0}, {x:halfW, y:0});
-                }
-
-                ctx.restore();
-            });
-
-            // Draw active flux lines between correctly connected pieces
-            systemState.dgc.conduitPieces.forEach(currentPiece => {
-                const { x: curX, y: curY } = getPieceCenter(currentPiece.index);
-                const currentConnections = getConnectionsForPiece(currentPiece, currentPiece.rotation) || [];
-
-                currentConnections.forEach(dir => {
-                    let neighborIndex = -1;
-                    let requiredNeighborDir = '';
-                    switch (dir) {
-                        case 'T': neighborIndex = currentPiece.index - gridSize; requiredNeighborDir = 'B'; break;
-                        case 'R': neighborIndex = currentPiece.index + 1; requiredNeighborDir = 'L'; break;
-                        case 'B': neighborIndex = currentPiece.index + gridSize; requiredNeighborDir = 'T'; break;
-                        case 'L': neighborIndex = currentPiece.index - 1; requiredNeighborDir = 'R'; break;
-                    }
-
-                    if (neighborIndex >= 0 && neighborIndex < gridSize * gridSize) {
-                        const neighborPiece = systemState.dgc.conduitPieces.find(p => p.index === neighborIndex);
-                        if (neighborPiece) {
-                            const neighborConnections = getConnectionsForPiece(neighborPiece, neighborPiece.rotation) || [];
-                            if (neighborConnections.includes(requiredNeighborDir)) {
-                                // Draw an active flux line
-                                const { x: neiX, y: neiY } = getPieceCenter(neighborPiece.index);
-                                ctx.beginPath();
-                                ctx.moveTo(curX, curY);
-                                ctx.lineTo(neiX, neiY);
-                                ctx.strokeStyle = 'var(--dgc-active-flux)';
-                                ctx.lineWidth = 6;
-                                ctx.shadowColor = 'var(--dgc-active-flux)';
-                                ctx.shadowBlur = 15;
-                                ctx.stroke();
-                                ctx.shadowBlur = 0;
-                            }
-                        }
-                    }
-                });
-            });
-        }
-
-        function rotateDGCConduit(e, pieceId) {
-            // Only rotate if not dragging
-            if (systemState.dgc.draggingPiece) return;
-
-            const piece = systemState.dgc.conduitPieces.find(p => p.id === pieceId);
-            if (!piece) return;
-
-            piece.rotation = (piece.rotation + 90) % 360;
-            piece.element.style.transform = `rotate(${piece.rotation}deg) translateZ(15px)`;
-            piece.element.classList.add('active');
-            setTimeout(() => piece.element.classList.remove('active'), 300);
-
-            addLogEntry(`DGC: Conduit ${piece.id} rotated to ${piece.rotation}deg.`, 'info');
-            checkDGCAlignment();
-            checkGlobalStability();
-            drawDGCCanvas(); // Redraw flux lines
-        }
-
-        function startDGCDrag(e) {
-            systemState.dgc.draggingPiece = systemState.dgc.conduitPieces.find(p => p.id === e.target.dataset.id);
-            if (systemState.dgc.draggingPiece) {
-                systemState.dgc.draggingPiece.element.classList.add('dragging');
-                const rect = systemState.dgc.draggingPiece.element.getBoundingClientRect();
-                systemState.dgc.dragOffset.x = e.clientX - rect.left;
-                systemState.dgc.dragOffset.y = e.clientY - rect.top;
-                e.target.style.zIndex = 100; // Bring dragged piece to front
-            }
-        }
-
-        function dragDGCPiece(e) {
-            if (!systemState.dgc.draggingPiece) return;
-            const areaRect = ui.dgcGatewayArea.getBoundingClientRect();
-
-            let newX_px = e.clientX - areaRect.left - systemState.dgc.dragOffset.x;
-            let newY_px = e.clientY - areaRect.top - systemState.dgc.dragOffset.y;
-
-            // Update piece's element style directly
-            systemState.dgc.draggingPiece.element.style.position = 'absolute'; // Override grid positioning for dragging
-            systemState.dgc.draggingPiece.element.style.left = `${newX_px}px`;
-            systemState.dgc.draggingPiece.element.style.top = `${newY_px}px`;
-        }
-
-        function endDGCDrag(e) {
-            if (!systemState.dgc.draggingPiece) return;
-
-            const draggedPiece = systemState.dgc.draggingPiece;
-            draggedPiece.element.classList.remove('dragging');
-            draggedPiece.element.style.zIndex = 2; // Reset z-index
-
-            const areaRect = ui.dgcGatewayArea.getBoundingClientRect();
-            const { width: pieceW, height: pieceH } = systemState.dgc.pieceDimensions;
-            const computedStyle = getComputedStyle(ui.dgcGatewayArea);
-            const gap = parseFloat(computedStyle.gridGap || computedStyle.gap);
-            const padding = parseFloat(computedStyle.padding);
-
-            // Calculate potential drop position (center of where mouse released)
-            let dropX = e.clientX - areaRect.left;
-            let dropY = e.clientY - areaRect.top;
-
-            // Determine which grid cell the piece should snap to
-            let targetCol = -1, targetRow = -1;
-            for (let r = 0; r < systemState.dgc.gridSize; r++) {
-                for (let c = 0; c < systemState.dgc.gridSize; c++) {
-                    const cellX1 = padding + c * (pieceW + gap);
-                    const cellY1 = padding + r * (pieceH + gap);
-                    const cellX2 = cellX1 + pieceW;
-                    const cellY2 = cellY1 + pieceH;
-
-                    if (dropX >= cellX1 && dropX <= cellX2 && dropY >= cellY1 && dropY <= cellY2) {
-                        targetCol = c;
-                        targetRow = r;
-                        break;
-                    }
-                }
-                if (targetCol !== -1) break;
-            }
-
-            if (targetCol !== -1 && targetRow !== -1) {
-                const targetIndex = targetRow * systemState.dgc.gridSize + targetCol;
-                
-                // Swap the dragged piece with the piece currently in the target cell
-                const pieceAtTarget = systemState.dgc.conduitPieces.find(p => p.index === targetIndex);
-                if (pieceAtTarget && pieceAtTarget.id !== draggedPiece.id) {
-                    const originalIndex = draggedPiece.index;
-
-                    draggedPiece.index = targetIndex;
-                    pieceAtTarget.index = originalIndex;
-
-                    // Update grid positions visually
-                    draggedPiece.element.style.position = ''; // Revert to grid positioning
-                    draggedPiece.element.style.left = '';
-                    draggedPiece.element.style.top = '';
-                    draggedPiece.element.style.gridColumn = `${targetCol + 1}`;
-                    draggedPiece.element.style.gridRow = `${targetRow + 1}`;
-
-                    pieceAtTarget.element.style.position = '';
-                    pieceAtTarget.element.style.left = '';
-                    pieceAtTarget.element.style.top = '';
-                    pieceAtTarget.element.style.gridColumn = `${(originalIndex % systemState.dgc.gridSize) + 1}`;
-                    pieceAtTarget.element.style.gridRow = `${Math.floor(originalIndex / systemState.dgc.gridSize) + 1}`;
-
-                    addLogEntry(`DGC: Piece ${draggedPiece.id} swapped with ${pieceAtTarget.id}.`, 'info');
-                } else if (pieceAtTarget && pieceAtTarget.id === draggedPiece.id) {
-                    // Dropped in its own cell, just revert styling
-                    draggedPiece.element.style.position = '';
-                    draggedPiece.element.style.left = '';
-                    draggedPiece.element.style.top = '';
-                } else if (!pieceAtTarget) { // Should not happen in a full grid
-                    addLogEntry('DGC: Error - dropping in empty cell? Something went wrong.', 'warning');
-                }
-            } else {
-                // If dropped outside a valid cell, just return it to its previous grid position
-                draggedPiece.element.style.position = '';
-                draggedPiece.element.style.left = '';
-                draggedPiece.element.style.top = '';
-            }
-
-            systemState.dgc.draggingPiece = null;
-            checkDGCAlignment();
-            checkGlobalStability();
-            drawDGCCanvas(); // Redraw flux lines
-        }
-
-        // --- Connection Logic Helper ---
-        const getConnectionsForPiece = (piece, rotation) => {
-            const typeConnections = {
-                'I': { 0: ['T', 'B'], 90: ['L', 'R'], 180: ['T', 'B'], 270: ['L', 'R'] },
-                'L': { 0: ['T', 'R'], 90: ['R', 'B'], 180: ['B', 'L'], 270: ['L', 'T'] },
-                'T': { 0: ['L', 'T', 'R'], 90: ['T', 'R', 'B'], 180: ['R', 'B', 'L'], 270: ['B', 'L', 'T'] },
-                '+': { 0: ['L', 'T', 'R', 'B'], 90: ['L', 'T', 'R', 'B'], 180: ['L', 'T', 'R', 'B'], 270: ['L', 'T', 'R', 'B'] }
-            };
-            return typeConnections[piece.type] ? typeConnections[piece.type][rotation] : [];
-        };
-
-        function checkDGCAlignment() {
-            let correctConnections = 0;
-            let totalPossibleConnections = 0;
-            const gridSize = systemState.dgc.gridSize;
-
-            systemState.dgc.conduitPieces.forEach(currentPiece => {
-                const connections = getConnectionsForPiece(currentPiece, currentPiece.rotation);
-
-                connections.forEach(dir => {
-                    totalPossibleConnections++;
-                    let neighborIndex = -1;
-                    let requiredNeighborDir = '';
-                    switch (dir) {
-                        case 'T': neighborIndex = currentPiece.index - gridSize; requiredNeighborDir = 'B'; break;
-                        case 'R': neighborIndex = currentPiece.index + 1; requiredNeighborDir = 'L'; break;
-                        case 'B': neighborIndex = currentPiece.index + gridSize; requiredNeighborDir = 'T'; break;
-                        case 'L': neighborIndex = currentPiece.index - 1; requiredNeighborDir = 'R'; break;
-                    }
-
-                    // Boundary checks
-                    const col = currentPiece.index % gridSize;
-                    const row = Math.floor(currentPiece.index / gridSize);
-                    if ((dir === 'R' && col === gridSize - 1) || (dir === 'L' && col === 0) ||
-                        (dir === 'T' && row === 0) || (dir === 'B' && row === gridSize - 1)) {
-                        // This connection points off the grid, cannot be completed by another piece
-                        return; 
-                    }
-
-                    if (neighborIndex >= 0 && neighborIndex < gridSize * gridSize) {
-                        const neighborPiece = systemState.dgc.conduitPieces.find(p => p.index === neighborIndex);
-                        if (neighborPiece) {
-                            const neighborConnections = getConnectionsForPiece(neighborPiece, neighborPiece.rotation);
-                            if (neighborConnections.includes(requiredNeighborDir)) {
-                                correctConnections++;
-                            }
-                        }
-                    }
-                });
-            });
-            // Each connection is counted twice (once from each side), so divide by 2
-            correctConnections /= 2;
-            totalPossibleConnections /= 2;
-            
-            systemState.dgc.fluxFlow = (totalPossibleConnections > 0) ? (correctConnections / totalPossibleConnections) * 100 : 0;
-            ui.dgcStatus.textContent = `Gateway Flux Flow: ${systemState.dgc.fluxFlow.toFixed(1)}%`;
-
-            if (systemState.dgc.fluxFlow >= 90) { // 90% flow for success
-                ui.constructGatewayBtn.disabled = false;
-                addLogEntry('DGC: Gateway flux pathways fully connected! Ready for link initiation.', 'success');
-            } else {
-                ui.constructGatewayBtn.disabled = true;
-            }
-        }
-
-        ui.constructGatewayBtn.addEventListener('click', () => {
-            if (!systemState.dgc.active || ui.constructGatewayBtn.disabled) return;
-            addLogEntry('DGC: Dimensional gateway constructed! Inter-reality pathways open.', 'success');
-            systemState.globalStability += 50;
-            checkGlobalStability();
-            endDGC(true);
-        });
-
-        function endDGC(success) {
-            systemState.dgc.active = false;
-            ui.dgcGatewayArea.querySelectorAll('.dgc-conduit-piece').forEach(piece => {
-                piece.removeEventListener('click', rotateDGCConduit);
-                piece.removeEventListener('mousedown', startDGCDrag);
-            });
-            ui.dgcGatewayArea.removeEventListener('mousemove', dragDGCPiece);
-            ui.dgcGatewayArea.removeEventListener('mouseup', endDGCDrag);
-            ui.dgcGatewayArea.removeEventListener('mouseleave', endDGCDrag);
-
-            if (!success) {
-                addLogEntry('DGC: Gateway construction failed! Dimensional rifts opening.', 'critical');
-                triggerAnomalyAlert('DGC: Gateway matrix unstable! Reality tear detected.');
-                systemState.globalStability -= 60;
-            }
-            checkGlobalStability();
-            initDGC(); // Reset for next round
-        }
-        initDGC();
-
-        // Initial check on load
-        checkGlobalStability();
-
-    </script>
-</body>
-</html>
+                <div class="module-label">Dimensional Gateway
