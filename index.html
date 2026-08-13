@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v5.0.0</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v5.5.0</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 5th Gen / v5.0.0) - Unstable, energetic, raw, direct interaction */
+            /* Core Theme Colors (Hyper-Enhanced for 5.5th Gen / v5.5.0) - Unstable, energetic, raw, evolving interaction */
             --primary-glow: rgba(0, 255, 255, 1.0); /* Pure Electric Cyan-blue glow, ultra-intense */
             --secondary-glow: rgba(255, 0, 255, 1.0); /* Pure Magenta glow, hyper-ethereal */
             --tertiary-glow: rgba(0, 255, 0, 1.0); /* Pure Glowing Green, hyper-sharp */
-            --frosted-bg: rgba(255, 255, 255, 0.003); /* Even Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
+            --frosted-bg: rgba(255, 255, 255, 0.001); /* Even Ultra-transparent, hyper-ethereal, slightly more visible, deeper on interaction */
             --text-color: #E8FFFF; /* Even lighter text for hyper-readability */
             --accent-color: #00FFFF; /* Ultra-bright Electric Cyan accent */
             --border-color: rgba(255, 255, 255, 0.999); /* More visible, shimmering border */
@@ -20,54 +20,39 @@
             --warning-color: #FFFF00; /* Radiant Yellow, even more urgent */
             --critical-color: #FF0000; /* Pure Red, highly urgent */
 
-            /* Gen 5.0.0 NEW: Chronal Drift Calibrator (CDC) */
-            --cdc-bg: rgba(25, 15, 0, 0.99); /* Deep gold-brown, slightly darker */
-            --cdc-border: rgba(255, 240, 150, 0.999); /* Bright antique gold */
-            --cdc-text: #FFFAE0; /* Pale cream */
-            --cdc-glow: rgba(255, 240, 150, 0.999);
-            --cdc-particle: rgba(255, 255, 0, 0.99); /* Yellow for time particles, more opaque */
-            --cdc-target-zone: rgba(0, 255, 255, 0.22); /* Cyan for target capture, slightly more opaque */
-            --cdc-pulse: rgba(0, 255, 255, 0.9); /* Cyan pulse, stronger */
-            --cdc-weave-color: rgba(255, 100, 0, 0.9); /* Orange for temporal weave, stronger */
-            --cdc-capture-glow: rgba(255, 100, 0, 1.0);
+            /* Gen 5.5.0 NEW: Chrono-Spatial Weave Synthesizer (CSWS) */
+            --csws-bg: rgba(10, 0, 20, 0.99); /* Deep indigo, slightly darker */
+            --csws-border: rgba(150, 0, 255, 0.999); /* Bright electric purple */
+            --csws-text: #F0E0FF; /* Pale lavender */
+            --csws-glow: rgba(150, 0, 255, 0.999);
+            --csws-cell-off: rgba(20, 0, 40, 0.9); /* Darker off state */
+            --csws-cell-active: rgba(200, 0, 255, 0.99); /* Bright purple active */
+            --csws-path: rgba(255, 100, 255, 0.9); /* Pinkish path */
+            --csws-anchor: rgba(255, 255, 0, 0.98); /* Yellow anchor */
+            --csws-energy-flow: rgba(0, 255, 255, 0.95); /* Cyan energy flow */
 
-            /* Gen 5.0.0 NEW: Neural Network Rewiring (NNR) */
-            --nnr-bg: rgba(0, 15, 30, 0.99); /* Deep blue-grey, slightly darker */
-            --nnr-border: rgba(120, 220, 255, 0.999); /* Bright sky blue */
-            --nnr-text: #E0F8FF; /* Pale blue */
-            --nnr-glow: rgba(120, 220, 255, 0.999);
-            --nnr-node-off: rgba(30, 40, 60, 0.9); /* More opaque */
-            --nnr-node-on: rgba(150, 200, 255, 0.99); /* Even more opaque */
-            --nnr-connection-path: rgba(0, 255, 180, 0.8); /* Mint green path, stronger */
-            --nnr-signal-glow: rgba(0, 255, 180, 1.0); /* Opaque signal glow */
-            --nnr-drag-node: rgba(255, 0, 255, 0.95); /* Magenta for dragging node */
-            --nnr-source-node: rgba(255, 255, 0, 0.98); /* Yellow for source node */
-            --nnr-target-node: rgba(255, 0, 0, 0.98); /* Red for target node */
+            /* Gen 5.5.0 NEW: Quantum Anomaly Resonator (QAR) */
+            --qar-bg: rgba(0, 20, 10, 0.99); /* Deep forest green, slightly darker */
+            --qar-border: rgba(0, 255, 100, 0.999); /* Bright mint green */
+            --qar-text: #E0FFF0; /* Pale aquamarine */
+            --qar-glow: rgba(0, 255, 100, 0.999);
+            --qar-anomaly-core: rgba(255, 0, 0, 0.9); /* Red anomaly core */
+            --qar-resonator-base: rgba(0, 50, 25, 0.9); /* Dark green resonator base */
+            --qar-resonator-active: rgba(0, 255, 180, 0.99); /* Bright teal active */
+            --qar-match-glow: rgba(255, 255, 0, 1.0); /* Yellow match glow */
 
-            /* Gen 5.0.0 NEW: Ethereal Resonance Harmonizer (ERH) */
-            --erh-bg: rgba(20, 0, 20, 0.99); /* Deep purple-pink, slightly darker */
-            --erh-border: rgba(255, 120, 220, 0.999); /* Bright fuchsia */
-            --erh-text: #FFEFF5; /* Pale pink */
-            --erh-glow: rgba(255, 120, 220, 0.999);
-            --erh-target-freq: #FFFF00; /* Yellow target */
-            --erh-user-freq: #00FFFF; /* Cyan user wave */
-            --erh-stable-zone: rgba(0, 255, 0, 0.3); /* Green stability zone, more visible */
-            --erh-manipulator-orb: rgba(255, 255, 255, 0.999); /* White orb for direct waveform manipulation */
-            --erh-manipulator-glow: rgba(255, 255, 255, 0.9);
+            /* Gen 5.5.0 NEW: Dimensional Flux Harmonizer (DFH) */
+            --dfh-bg: rgba(20, 10, 0, 0.99); /* Deep burnt orange, slightly darker */
+            --dfh-border: rgba(255, 150, 0, 0.999); /* Bright orange */
+            --dfh-text: #FFF0E0; /* Pale peach */
+            --dfh-glow: rgba(255, 150, 0, 0.999);
+            --dfh-conduit-off: rgba(40, 20, 0, 0.9); /* Darker off state */
+            --dfh-conduit-on: rgba(255, 180, 0, 0.99); /* Bright orange on state */
+            --dfh-flow-path: rgba(0, 255, 255, 0.9); /* Cyan flow path */
+            --dfh-source: rgba(0, 255, 0, 0.98); /* Green source */
+            --dfh-destination: rgba(255, 0, 0, 0.98); /* Red destination */
 
-            /* Gen 5.0.0 NEW: Dimensional Gateway Constructor (DGC) */
-            --dgc-bg: rgba(0, 30, 0, 0.99); /* Deep emerald-green, slightly darker */
-            --dgc-border: rgba(120, 255, 120, 0.999); /* Bright lime green */
-            --dgc-text: #EFFFEF; /* Pale green */
-            --dgc-glow: rgba(120, 255, 120, 0.999);
-            --dgc-conduit-off: #354535; /* Darker off state */
-            --dgc-conduit-on: #00FF00;
-            --dgc-gateway-target: rgba(255, 255, 0, 0.3); /* Yellow for target area, more visible */
-            --dgc-active-flux: rgba(0, 255, 255, 0.95); /* Cyan for active flux, stronger */
-            --dgc-highlight-drag: rgba(255, 0, 255, 0.8); /* Magenta for dragging piece */
-            --dgc-snap-glow: rgba(0, 255, 255, 0.9); /* Cyan for snap feedback */
-
-            /* Gen 5.0.0 - Enhanced UI elements */
+            /* Gen 5.5.0 - Enhanced UI elements */
             --event-color: #FFD000; /* Brighter Orange, slightly more yellow */
             --event-text-shadow: 0 0 50px rgba(255, 208, 0, 1.0); /* Stronger shadow */
             --info-color: #E8D0FF; /* Lighter Medium Purple */
@@ -80,7 +65,7 @@
             --anomaly-bg: rgba(255, 0, 0, 0.999); /* Even more semi-transparent Red */
             --anomaly-border: rgba(255, 0, 0, 1.0); /* Opaque Red */
 
-            /* New: Resource Anomaly Event */
+            /* Resource Anomaly Event */
             --anomaly-event-bg: rgba(255, 150, 0, 0.99); /* Brighter orange */
             --anomaly-event-border: rgba(255, 240, 0, 0.999);
             --anomaly-event-text: #FFFFE0;
@@ -97,113 +82,112 @@
             min-height: 100vh;
             overflow: hidden;
             position: relative;
-            font-size: 2.5rem; /* Scaled up for readability */
-            line-height: 3.0; /* Increased line height */
+            font-size: 2.7rem; /* Scaled up for readability */
+            line-height: 3.2; /* Increased line height */
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><defs><filter id="f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="9.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><filter id="f2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="7.0" /><feOffset dx="0" dy="0" result="offsetblur" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter><style>@keyframes pulse {0% {transform: scale(0.1); opacity: 0.05;} 50% {transform: scale(1.8); opacity: 1;} 100% {transform: scale(0.1); opacity: 0.05;}} @keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}} @keyframes spin-rev {from {transform: rotate(0deg);} to {transform: rotate(-360deg);}} @keyframes flicker {0%, 100% {opacity: 1;} 50% {opacity: 0.8;}} .pulsing-core {animation: pulse 0.5s infinite cubic-bezier(0.4, 0, 0.6, 1) alternate;} .outer-ring{animation:spin 1.5s linear infinite; transform-origin: center center;}.inner-star{animation:pulse 0.3s infinite ease-out reverse;}.glowing-parts {filter:url(%23f1); animation: flicker 0.1s steps(2, end) infinite;} .inner-cross {filter:url(%23f2);}.glowing-parts-rev {animation:spin-rev 1.2s linear infinite;}</style></defs><g transform="translate(12 12) scale(2.0) translate(-12 -12)" class="cursor-base"><path fill="%2300FFFF" class="glowing-parts outer-ring" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="9" fill="%23FF00FF" class="glowing-parts pulsing-core"/><path fill="%2300FFFF" class="glowing-parts glowing-parts-rev" d="M12 0L7 9l-9 3 9 3 5 9 5-9 9-3-9-3zM12 24l-5-9 9-3-9-3-5-9-5 9-9 3 9 3z"/><path fill="%23FFFF00" class="inner-cross" d="M11 4h2v16h-2zm-8 7h16v2h-16z"/><circle cx="12" cy="12" r="5" fill="%23FFFFFF" class="glowing-parts inner-star"/></g></svg>') 50 50, auto;
         }
 
-        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, exclusion blend) */
+        /* Dynamic Fluid Background - Layer 1 (More complex gradient, slower, deeper colors, more intricate rotation, more blur, hard-light blend) */
         body::before {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -3000vh; /* Even larger area */
-            left: -3000vw;
-            width: 6000vw;
-            height: 6000vh;
+            top: -4000vh; /* Even larger area */
+            left: -4000vw;
+            width: 8000vw;
+            height: 8000vh;
             background: linear-gradient(
-                1500deg, /* New angle, more subtle shift */
-                #000000 0%, var(--cdc-bg) 0.1%, var(--nnr-bg) 0.2%, var(--erh-bg) 0.3%, var(--dgc-bg) 0.4%, #000010 0.5%, #000020 0.6%, #000010 0.7%, #000005 0.8%, #000000 0.9%,
-                #100000 1.0%, #200000 1.1%, #300000 1.2%, #400000 1.3%, #300000 1.4%, #200000 1.5%, #100000 1.6%, #050000 1.7%, #000000 1.8%,
-                #001000 1.9%, #002000 2.0%, #003000 2.1%, #004000 2.2%, #005000 2.3%, #004000 2.4%, #003000 2.5%, #002000 2.6%, #001000 2.7%, #000000 2.8%,
-                #101000 2.9%, #202000 3.0%, #303000 3.1%, #404000 3.2%, #505000 3.3%, #404000 3.4%, #303000 3.5%, #202000 3.6%, #101000 3.7%, #000000 3.8%,
-                #100010 3.9%, #200020 4.0%, #300030 4.1%, #400040 4.2%, #500050 4.3%, #400040 4.4%, #300030 4.5%, #200020 4.6%, #100010 4.7%, #000000 4.8%,
-                #001010 4.9%, #002020 5.0%, #003030 5.1%, #004040 5.2%, #005050 5.3%, #004040 5.4%, #003030 5.5%, #002020 5.6%, #001010 5.7%, #000000 5.8%,
-                #101010 5.9%, #202020 6.0%, #303030 6.1%, #404040 6.2%, #505050 6.3%, #404040 6.4%, #303030 6.5%, #202020 6.6%, #101010 6.7%, #000000 6.8%,
-                #000000 6.9%, #000010 7.0%, #000020 7.1%, #000030 7.2%, #000040 7.3%, #000050 7.4%, #000040 7.5%, #000030 7.6%, #000020 7.7%, #000010 7.8%, #000000 7.9%,
-                #100000 8.0%, #200000 8.1%, #300000 8.2%, #400000 8.3%, #500000 8.4%, #400000 8.5%, #300000 8.6%, #200000 8.7%, #100000 8.8%, #000000 8.9%,
-                #000000 9.0%, #001000 9.1%, #002000 9.2%, #003000 9.3%, #004000 9.4%, #005000 9.5%, #004000 9.6%, #003000 9.7%, #002000 9.8%, #001000 9.9%, #000000 10%,
+                1700deg, /* New angle, more subtle shift */
+                #000000 0%, var(--csws-bg) 0.1%, var(--qar-bg) 0.2%, var(--dfh-bg) 0.3%, #000015 0.4%, #000025 0.5%, #000015 0.6%, #000008 0.7%, #000000 0.8%,
+                #150000 0.9%, #250000 1.0%, #350000 1.1%, #450000 1.2%, #350000 1.3%, #250000 1.4%, #150000 1.5%, #080000 1.6%, #000000 1.7%,
+                #001500 1.8%, #002500 1.9%, #003500 2.0%, #004500 2.1%, #005500 2.2%, #004500 2.3%, #003500 2.4%, #002500 2.5%, #001500 2.6%, #000000 2.7%,
+                #151500 2.8%, #252500 2.9%, #353500 3.0%, #454500 3.1%, #555500 3.2%, #454500 3.3%, #353500 3.4%, #252500 3.5%, #151500 3.6%, #000000 3.7%,
+                #150015 3.8%, #250025 3.9%, #350035 4.0%, #450045 4.1%, #550055 4.2%, #450045 4.3%, #350035 4.4%, #250025 4.5%, #150015 4.6%, #000000 4.7%,
+                #001515 4.8%, #002525 4.9%, #003535 5.0%, #004545 5.1%, #005555 5.2%, #004545 5.3%, #003535 5.4%, #002525 5.5%, #001515 5.6%, #000000 5.7%,
+                #151515 5.8%, #252525 5.9%, #353535 6.0%, #454545 6.1%, #555555 6.2%, #454545 6.3%, #353535 6.4%, #252525 6.5%, #151515 6.6%, #000000 6.7%,
+                #000000 6.8%, #000015 6.9%, #000025 7.0%, #000035 7.1%, #000045 7.2%, #000055 7.3%, #000045 7.4%, #000035 7.5%, #000025 7.6%, #000015 7.7%, #000000 7.8%,
+                #150000 7.9%, #250000 8.0%, #350000 8.1%, #450000 8.2%, #550000 8.3%, #450000 8.4%, #350000 8.5%, #250000 8.6%, #150000 8.7%, #080000 8.8%, #000000 8.9%,
+                #000000 8.9%, #001500 9.0%, #002500 9.1%, #003500 9.2%, #004500 9.3%, #005500 9.4%, #004500 9.5%, #003500 9.6%, #002500 9.7%, #001500 9.8%, #000000 9.9%,
                 /* Repeating pattern to increase density and movement */
-                #000000 10.1%, var(--cdc-bg) 10.2%, var(--nnr-bg) 10.3%, var(--erh-bg) 10.4%, var(--dgc-bg) 10.5%, #000010 10.6%, #000020 10.7%, #000010 10.8%, #000005 10.9%, #000000 11.0%,
-                #100000 11.1%, #200000 11.2%, #300000 11.3%, #400000 11.4%, #300000 11.5%, #200000 11.6%, #100000 11.7%, #050000 11.8%, #000000 11.9%,
-                #001000 12.0%, #002000 12.1%, #003000 12.2%, #004000 12.3%, #005000 12.4%, #004000 12.5%, #003000 12.6%, #002000 12.7%, #001000 12.8%, #000000 12.9%,
-                #101000 13.0%, #202000 13.1%, #303000 13.2%, #404000 13.3%, #505000 13.4%, #404000 13.5%, #303000 13.6%, #202000 13.7%, #101000 13.8%, #000000 13.9%,
-                #100010 14.0%, #200020 14.1%, #300030 14.2%, #400040 14.3%, #500050 14.4%, #400040 14.5%, #300030 14.6%, #200020 14.7%, #100010 14.8%, #000000 14.9%,
-                #001010 15.0%, #002020 15.1%, #003030 15.2%, #004040 15.3%, #005050 15.4%, #004040 15.5%, #003030 15.6%, #002020 15.7%, #001010 15.8%, #000000 15.9%,
-                #101010 16.0%, #202020 16.1%, #303030 16.2%, #404040 16.3%, #505050 16.4%, #404040 16.5%, #303030 16.6%, #202020 16.7%, #101010 16.8%, #000000 16.9%,
-                #000000 17.0%, #000010 17.1%, #000020 17.2%, #000030 17.3%, #000040 17.4%, #000050 17.5%, #000040 17.6%, #000030 17.7%, #000020 17.8%, #000010 17.9%, #000000 18.0%,
-                #100000 18.1%, #200000 18.2%, #300000 18.3%, #400000 18.4%, #500000 18.5%, #400000 18.6%, #300000 18.7%, #200000 18.8%, #100000 18.9%, #000000 19.0%,
-                #000000 19.1%, #001000 19.2%, #002000 19.3%, #003000 19.4%, #004000 19.5%, #005000 19.6%, #004000 19.7%, #003000 19.8%, #002000 19.9%, #001000 20%,
-                #000000 20.1%, #000010 20.2%, #000020 20.3%, #000030 20.4%, #000040 20.5%, #000050 20.6%, #000040 20.7%, #000030 20.8%, #000020 20.9%, #000010 21.0%, #000000 21.1%,
-                #100000 21.2%, #200000 21.3%, #300000 21.4%, #400000 21.5%, #500000 21.6%, #400000 21.7%, #300000 21.8%, #200000 21.9%, #100000 22.0%, #000000 22.1%,
-                #000000 22.2%, #001000 22.3%, #002000 22.4%, #003000 22.5%, #004000 22.6%, #005000 22.7%, #004000 22.8%, #003000 22.9%, #002000 23.0%, #001000 23.1%, #000000 23.2%,
-                #101000 23.3%, #202000 23.4%, #303000 23.5%, #404000 23.6%, #505000 23.7%, #404000 23.8%, #303000 23.9%, #202000 24.0%, #101000 24.1%, #000000 24.2%,
-                #100010 24.3%, #200020 24.4%, #300030 24.5%, #400040 24.6%, #500050 24.7%, #400040 24.8%, #300030 24.9%, #200020 25.0%, #100010 25.1%, #000000 25.2%,
-                #001010 25.3%, #002020 25.4%, #003030 25.5%, #004040 25.6%, #005050 25.7%, #004040 25.8%, #003030 25.9%, #002020 26.0%, #001010 26.1%, #000000 26.2%,
-                #101010 26.3%, #202020 26.4%, #303030 26.5%, #404040 26.6%, #505050 26.7%, #404040 26.8%, #303030 26.9%, #202020 27.0%, #101010 27.1%, #000000 27.2%,
-                #000000 27.3%, #000010 27.4%, #000020 27.5%, #000030 27.6%, #000040 27.7%, #000050 27.8%, #000040 27.9%, #000030 28.0%, #000020 28.1%, #000010 28.2%, #000000 28.3%,
-                #100000 28.4%, #200000 28.5%, #300000 28.6%, #400000 28.7%, #500000 28.8%, #400000 28.9%, #300000 29.0%, #200000 29.1%, #100000 29.2%, #000000 29.3%,
-                #000000 29.4%, #001000 29.5%, #002000 29.6%, #003000 29.7%, #004000 29.8%, #005000 29.9%, #004000 30%
+                #000000 10.0%, var(--csws-bg) 10.1%, var(--qar-bg) 10.2%, var(--dfh-bg) 10.3%, #000015 10.4%, #000025 10.5%, #000015 10.6%, #000008 10.7%, #000000 10.8%,
+                #150000 10.9%, #250000 11.0%, #350000 11.1%, #450000 11.2%, #350000 11.3%, #250000 11.4%, #150000 11.5%, #080000 11.6%, #000000 11.7%,
+                #001500 11.8%, #002500 11.9%, #003500 12.0%, #004500 12.1%, #005500 12.2%, #004500 12.3%, #003500 12.4%, #002500 12.5%, #001500 12.6%, #000000 12.7%,
+                #151500 12.8%, #252500 12.9%, #353500 13.0%, #454500 13.1%, #555500 13.2%, #454500 13.3%, #353500 13.4%, #252500 13.5%, #151500 13.6%, #000000 13.7%,
+                #150015 13.8%, #250025 13.9%, #350035 14.0%, #450045 14.1%, #550055 14.2%, #450045 14.3%, #350035 14.4%, #250025 14.5%, #150015 14.6%, #000000 14.7%,
+                #001515 14.8%, #002525 14.9%, #003535 15.0%, #004545 15.1%, #005555 15.2%, #004545 15.3%, #003535 15.4%, #002525 15.5%, #001515 15.6%, #000000 15.7%,
+                #151515 15.8%, #252525 15.9%, #353535 16.0%, #454545 16.1%, #555555 16.2%, #454545 16.3%, #353535 16.4%, #252525 16.5%, #151515 16.6%, #000000 16.7%,
+                #000000 16.8%, #000015 16.9%, #000025 17.0%, #000035 17.1%, #000045 17.2%, #000055 17.3%, #000045 17.4%, #000035 17.5%, #000025 17.6%, #000015 17.7%, #000000 17.8%,
+                #150000 17.9%, #250000 18.0%, #350000 18.1%, #450000 18.2%, #550000 18.3%, #450000 18.4%, #350000 18.5%, #250000 18.6%, #150000 18.7%, #080000 18.8%, #000000 18.9%,
+                #000000 18.9%, #001500 19.0%, #002500 19.1%, #003500 19.2%, #004500 19.3%, #005500 19.4%, #004500 19.5%, #003500 19.6%, #002500 19.7%, #001500 19.8%, #000000 19.9%,
+                #000000 20.0%, #000015 20.1%, #000025 20.2%, #000035 20.3%, #000045 20.4%, #000055 20.5%, #000045 20.6%, #000035 20.7%, #000025 20.8%, #000015 20.9%, #000000 21.0%,
+                #150000 21.1%, #250000 21.2%, #350000 21.3%, #450000 21.4%, #550000 21.5%, #450000 21.6%, #350000 21.7%, #250000 21.8%, #150000 21.9%, #080000 22.0%, #000000 22.1%,
+                #000000 22.1%, #001500 22.2%, #002500 22.3%, #003500 22.4%, #004500 22.5%, #005500 22.6%, #004500 22.7%, #003500 22.8%, #002500 22.9%, #001500 23.0%, #000000 23.1%,
+                #151500 23.2%, #252500 23.3%, #353500 23.4%, #454500 23.5%, #555500 23.6%, #454500 23.7%, #353500 23.8%, #252500 23.9%, #151500 24.0%, #000000 24.1%,
+                #150015 24.2%, #250025 24.3%, #350035 24.4%, #450045 24.5%, #550055 24.6%, #450045 24.7%, #350035 24.8%, #250025 24.9%, #150015 25.0%, #000000 25.1%,
+                #001515 25.2%, #002525 25.3%, #003535 25.4%, #004545 25.5%, #005555 25.6%, #004545 25.7%, #003535 25.8%, #002525 25.9%, #001515 26.0%, #000000 26.1%,
+                #151515 26.2%, #252525 26.3%, #353535 26.4%, #454545 26.5%, #555555 26.6%, #454545 26.7%, #353535 26.8%, #252525 26.9%, #151515 27.0%, #000000 27.1%,
+                #000000 27.2%, #000015 27.3%, #000025 27.4%, #000035 27.5%, #000045 27.6%, #000055 27.7%, #000045 27.8%, #000035 27.9%, #000025 28.0%, #000015 28.1%, #000000 28.2%,
+                #150000 28.3%, #250000 28.4%, #350000 28.5%, #450000 28.6%, #550000 28.7%, #450000 28.8%, #350000 28.9%, #250000 29.0%, #150000 29.1%, #080000 29.2%, #000000 29.3%,
+                #000000 29.3%, #001500 29.4%, #002500 29.5%, #003500 29.6%, #004500 29.7%, #005500 29.8%, #004500 29.9%, #003500 30%
             );
-            background-size: 60000% 60000%; /* Larger background for smoother animation */
-            animation: fluidBackground1 5400s ease-in-out infinite alternate, rotateBackground 6600s linear infinite; /* Even longer animations, new color shifts */
+            background-size: 80000% 80000%; /* Larger background for smoother animation */
+            animation: fluidBackground1 6000s ease-in-out infinite alternate, rotateBackground 7200s linear infinite; /* Even longer animations, new color shifts */
             z-index: -3;
-            filter: blur(4000px) opacity(0.99999) saturate(600%) hue-rotate(50deg) contrast(5.0); /* Stronger blur, almost opaque, color shift, more contrast */
-            transform: rotate(-2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); /* Larger scale, more rotation, added perspective, depth */
-            mix-blend-mode: exclusion; /* Deeper color interaction */
+            filter: blur(5000px) opacity(0.99999) saturate(700%) hue-rotate(60deg) contrast(6.0); /* Stronger blur, almost opaque, color shift, more contrast */
+            transform: rotate(-3000deg) scale(80.0) perspective(7000px) translateZ(-1200px); /* Larger scale, more rotation, added perspective, depth */
+            mix-blend-mode: hard-light; /* Deeper color interaction */
         }
 
         /* Dynamic Fluid Background - Layer 2 (Faster, more subtle, different direction, accent colors, more diffuse, soft-light blend) */
         body::after {
             content: '';
             position: fixed; /* Use fixed for proper viewport coverage */
-            top: -2500vh;
-            left: -2500vw;
-            width: 5000vw;
-            height: 5000vh;
+            top: -3000vh;
+            left: -3000vw;
+            width: 6000vw;
+            height: 6000vh;
             background: linear-gradient(
-                -1200deg, /* Different angle */
+                -1500deg, /* Different angle */
                 rgba(0, 255, 255, 0.9999) 0%, /* primary glow accent */
                 rgba(255, 0, 255, 0.9999) 10%, /* secondary glow accent */
                 rgba(0, 255, 0, 0.9999) 20%, /* tertiary glow accent */
-                var(--cdc-border) 30%, /* CDC accent */
-                var(--nnr-border) 40%, /* NNR accent */
-                var(--erh-border) 50%, /* ERH accent */
-                var(--dgc-border) 60%, /* DGC accent */
-                rgba(60, 255, 160, 0.9999) 70%, /* Generic glow */
-                rgba(120, 100, 220, 0.9999) 80%, /* Generic glow */
+                var(--csws-border) 30%, /* CSWS accent */
+                var(--qar-border) 40%, /* QAR accent */
+                var(--dfh-border) 50%, /* DFH accent */
+                rgba(80, 255, 180, 0.9999) 70%, /* Generic glow */
+                rgba(140, 120, 240, 0.9999) 80%, /* Generic glow */
                 rgba(0, 255, 255, 0.9999) 90%,
-                rgba(255, 130, 0, 0.9999) 100%
+                rgba(255, 150, 20, 0.9999) 100%
             );
-            background-size: 35000% 35000%; /* Even larger background for smoother animation */
-            animation: fluidBackground2 3800s cubic-bezier(0.6, 0.4, 0.4, 0.6) infinite, rotateBackgroundReversed 4200s ease-out infinite; /* Even longer animations */
+            background-size: 40000% 40000%; /* Even larger background for smoother animation */
+            animation: fluidBackground2 4200s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite, rotateBackgroundReversed 4800s ease-out infinite; /* Even longer animations */
             z-index: -2;
-            filter: blur(3200px) opacity(0.99995) contrast(5.0) saturate(500%) hue-rotate(-70deg); /* Stronger blur, more opaque, color shift, contrast */
-            mix-blend-mode: color-dodge; /* More ethereal, additive accenting */
-            transform: rotate(2000deg) scale(60.0) perspective(5000px) translateZ(-900px); /* Larger scale, more rotation, added perspective */
+            filter: blur(3800px) opacity(0.99995) contrast(6.0) saturate(600%) hue-rotate(-80deg); /* Stronger blur, more opaque, color shift, contrast */
+            mix-blend-mode: soft-light; /* More ethereal, additive accenting */
+            transform: rotate(2200deg) scale(65.0) perspective(5500px) translateZ(-1000px); /* Larger scale, more rotation, added perspective */
         }
 
         /* Dynamic Fluid Background - Layer 3 (Fastest, most ethereal, different direction, central focus, on container for better isolation) */
         .container::before { 
             content: '';
             position: absolute; /* Use absolute relative to container */
-            top: -1800vh;
-            left: -1800vw;
-            width: 3600vw;
-            height: 3600vh;
+            top: -2000vh;
+            left: -2000vw;
+            width: 4000vw;
+            height: 4000vh;
             background: radial-gradient(
-                circle at 80% 20%, /* Shifted center for dynamic feel */
-                rgba(255, 255, 255, 0.995) 0%, /* Lighter blue core */
-                rgba(255, 250, 255, 0.99) 10%, /* Lighter Pinkish transition */
-                rgba(255, 255, 250, 0.95) 20%, /* Lighter Greenish transition */
-                rgba(250, 255, 255, 0.85) 30%, /* Back to blue */
-                rgba(0, 0, 0, 0.0) 58% /* Fading to transparent */
+                circle at 85% 15%, /* Shifted center for dynamic feel */
+                rgba(255, 255, 255, 0.997) 0%, /* Lighter blue core */
+                rgba(255, 250, 255, 0.995) 10%, /* Lighter Pinkish transition */
+                rgba(255, 255, 250, 0.97) 20%, /* Lighter Greenish transition */
+                rgba(250, 255, 255, 0.90) 30%, /* Back to blue */
+                rgba(0, 0, 0, 0.0) 60% /* Fading to transparent */
             );
-            background-size: 25000% 25000%;
-            animation: fluidBackground3 2400s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite alternate, rotateBackgroundSlow 3200s ease-in-out infinite;
+            background-size: 28000% 28000%;
+            animation: fluidBackground3 2800s cubic-bezier(0.8, 0.2, 0.2, 0.8) infinite alternate, rotateBackgroundSlow 3500s ease-in-out infinite;
             z-index: -1;
-            filter: blur(2500px) opacity(0.995) brightness(2.5) saturate(250%) contrast(2.0);
+            filter: blur(3000px) opacity(0.998) brightness(3.0) saturate(300%) contrast(2.5);
             mix-blend-mode: screen; /* Additive, bright effect */
-            transform: rotate(-1800deg) scale(55.0) perspective(4200px) translateZ(-700px);
+            transform: rotate(-2000deg) scale(60.0) perspective(4500px) translateZ(-800px);
             border-radius: inherit; /* Inherit container's border radius */
             pointer-events: none; /* Don't block interaction */
         }
@@ -217,23 +201,23 @@
             width: 100%;
             height: 100%;
             background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5cllPAAAABJURFRFNjY2ZmZmJCQkMDAwAAAA////CgB25wAAABxJRU5ErkJggg==') repeat; /* Slightly different noise pattern if possible */
-            opacity: 0.9; /* More prominent noise, more raw 2.5 gen feel */
+            opacity: 0.95; /* More prominent noise, more raw 2.5 gen feel */
             pointer-events: none;
             z-index: 9999;
             mix-blend-mode: overlay; /* Overlay for subtle texture */
-            filter: grayscale(0.7) contrast(50.0) brightness(40.0) saturate(90%); /* Subtle color and contrast */
-            animation: slightDrift 80s linear infinite alternate, subtlePulse 1s linear infinite alternate; /* Faster animations for more "active" noise */
+            filter: grayscale(0.8) contrast(60.0) brightness(50.0) saturate(95%); /* Subtle color and contrast */
+            animation: slightDrift 70s linear infinite alternate, subtlePulse 0.8s linear infinite alternate; /* Faster animations for more "active" noise */
         }
 
         @keyframes subtlePulse {
-            0% { opacity: 0.85; }
-            50% { opacity: 0.95; }
-            100% { opacity: 0.85; }
+            0% { opacity: 0.90; }
+            50% { opacity: 0.97; }
+            100% { opacity: 0.90; }
         }
 
         @keyframes slightDrift {
             0% { transform: translate(0, 0) scale(1.0); }
-            50% { transform: translate(12%, 12%) scale(1.02); } /* More drift and subtle zoom */
+            50% { transform: translate(15%, 15%) scale(1.03); } /* More drift and subtle zoom */
             100% { transform: translate(0, 0) scale(1.0); }
         }
 
@@ -255,53 +239,53 @@
         }
 
         @keyframes rotateBackground {
-            from { transform: rotate(-2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); }
-            to { transform: rotate(2500deg) scale(70.0) perspective(6000px) translateZ(-1000px); }
+            from { transform: rotate(-3000deg) scale(80.0) perspective(7000px) translateZ(-1200px); }
+            to { transform: rotate(3000deg) scale(80.0) perspective(7000px) translateZ(-1200px); }
         }
 
         @keyframes rotateBackgroundReversed {
-            from { transform: rotate(2000deg) scale(60.0) perspective(5000px) translateZ(-900px); }
-            to { transform: rotate(-2000deg) scale(60.0) perspective(5000px) translateZ(-900px); }
+            from { transform: rotate(2200deg) scale(65.0) perspective(5500px) translateZ(-1000px); }
+            to { transform: rotate(-2200deg) scale(65.0) perspective(5500px) translateZ(-1000px); }
         }
         
         @keyframes rotateBackgroundSlow {
-            from { transform: rotate(-1800deg) scale(55.0) perspective(4200px) translateZ(-700px); }
-            to { transform: rotate(1800deg) scale(55.0) perspective(4200px) translateZ(-700px); }
+            from { transform: rotate(-2000deg) scale(60.0) perspective(4500px) translateZ(-800px); }
+            to { transform: rotate(2000deg) scale(60.0) perspective(4500px) translateZ(-800px); }
         }
 
         .container {
             position: relative;
             z-index: 10;
-            max-width: 4500px; /* Wider for more content */
-            padding: 22.0rem; /* More padding */
+            max-width: 4800px; /* Wider for more content */
+            padding: 25.0rem; /* More padding */
             background: var(--frosted-bg);
-            border: 140px solid var(--border-color); /* Thicker border */
-            border-radius: 25.0rem; /* Even more rounded */
-            backdrop-filter: blur(400px) saturate(5000%) brightness(3500%) contrast(35.0) hue-rotate(25deg); /* Stronger blur, saturation, brightness, and contrast */
-            -webkit-backdrop-filter: blur(400px) saturate(5000%) brightness(3500%) contrast(35.0) hue-rotate(25deg);
+            border: 150px solid var(--border-color); /* Thicker border */
+            border-radius: 28.0rem; /* Even more rounded */
+            backdrop-filter: blur(500px) saturate(7000%) brightness(4000%) contrast(40.0) hue-rotate(30deg); /* Stronger blur, saturation, brightness, and contrast */
+            -webkit-backdrop-filter: blur(500px) saturate(7000%) brightness(4000%) contrast(40.0) hue-rotate(30deg);
             box-shadow:
-                0 300px 700px rgba(0, 0, 0, 0.9999), /* Deeper shadow */
-                0 0 800px var(--primary-glow), /* Stronger outer glow */
-                inset 0 0 400px rgba(255, 255, 255, 0.9999), /* Stronger inner glow for depth */
-                inset 0 0 450px var(--primary-glow); /* Even more inner glow */
+                0 350px 800px rgba(0, 0, 0, 0.9999), /* Deeper shadow */
+                0 0 900px var(--primary-glow), /* Stronger outer glow */
+                inset 0 0 500px rgba(255, 255, 255, 0.9999), /* Stronger inner glow for depth */
+                inset 0 0 550px var(--primary-glow); /* Even more inner glow */
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 20.0rem; /* Increased gap between sections */
-            animation: fadeInScale 8.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
-            transition: all 3.8s ease-out; /* Smooth transitions for potential dynamic changes */
+            gap: 22.0rem; /* Increased gap between sections */
+            animation: fadeInScale 9.0s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; /* Longer, smoother animation */
+            transition: all 4.0s ease-out; /* Smooth transitions for potential dynamic changes */
             transform-style: preserve-3d; /* For subtle 3D effects */
         }
 
         .container > .border-glow::after { /* Animated border glow */
             content: '';
             position: absolute;
-            inset: -170px; /* More overflow */
-            border-radius: calc(25.0rem + 170px);
-            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #B020F0, #00FFFF, #E870EA, #FF1493, #00FF00, #F072A2, #FFA500, #B0FFE0, #D0B0F0, #FFD700, #E090F8, #A0FFD0, #C0A0E0, #90FFFF, var(--cdc-border), var(--nnr-border), var(--erh-border), var(--dgc-border), #00FFFF, #66FF66, #FF6666, #6666FF); /* Even more vibrant border glow colors, includes new module colors */
-            background-size: 4500% 4500%; /* Larger background for smoother animation */
-            animation: borderGlow 2000s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
-            filter: blur(250px) brightness(2.0) saturate(300%) contrast(2.0); /* Stronger blur */
+            inset: -180px; /* More overflow */
+            border-radius: calc(28.0rem + 180px);
+            background: linear-gradient(45deg, #00FFFF, #FF00FF, #FFFF00, #B020F0, #00FFFF, #E870EA, #FF1493, #00FF00, #F072A2, #FFA500, #B0FFE0, #D0B0F0, #FFD700, #E090F8, #A0FFD0, #C0A0E0, #90FFFF, var(--csws-border), var(--qar-border), var(--dfh-border), #00FFFF, #66FF66, #FF6666, #6666FF); /* Even more vibrant border glow colors, includes new module colors */
+            background-size: 5000% 5000%; /* Larger background for smoother animation */
+            animation: borderGlow 2200s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate; /* Slower animation */
+            filter: blur(300px) brightness(2.5) saturate(350%) contrast(2.5); /* Stronger blur */
             z-index: -2; /* Ensure it's behind the container, but above layer 3 background */
             opacity: 0.99999; /* Stronger glow */
             mix-blend-mode: screen; /* Additive glow */
@@ -314,32 +298,32 @@
         }
 
         @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.02) translateY(350px) perspective(6000px) rotateX(98deg); }
-            to { opacity: 1; transform: scale(1) translateY(0) perspective(6000px) rotateX(0deg); }
+            from { opacity: 0; transform: scale(0.01) translateY(400px) perspective(7000px) rotateX(100deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) perspective(7000px) rotateX(0deg); }
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 16.0rem; /* Scaled up for impact */
+            font-size: 18.0rem; /* Scaled up for impact */
             color: var(--accent-color);
-            text-shadow: 0 0 200px var(--primary-glow), 0 0 250px rgba(0, 255, 255, 0.9999);
-            margin-bottom: 12.0rem;
-            letter-spacing: 1.8rem;
+            text-shadow: 0 0 220px var(--primary-glow), 0 0 280px rgba(0, 255, 255, 0.9999);
+            margin-bottom: 14.0rem;
+            letter-spacing: 2.0rem;
             line-height: 1.0;
             position: relative;
-            transform: translateZ(100px); /* Lift heading slightly in 3D space */
+            transform: translateZ(110px); /* Lift heading slightly in 3D space */
         }
 
         h1::after { /* Underline effect */
             content: '';
             position: absolute;
-            bottom: -6.0rem;
+            bottom: -7.0rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 210%; /* Wider underline */
-            height: 2.8rem; /* Thicker underline */
+            width: 220%; /* Wider underline */
+            height: 3.0rem; /* Thicker underline */
             background: var(--header-underline-color);
-            box-shadow: 0 0 140px var(--primary-glow);
+            box-shadow: 0 0 150px var(--primary-glow);
         }
 
         p {
@@ -347,16 +331,16 @@
             font-weight: 300;
             color: var(--text-color);
             opacity: 0.999;
-            font-size: 3.2rem; /* Larger paragraph text */
-            line-height: 3.5; /* Increased line height */
-            transform: translateZ(70px);
+            font-size: 3.5rem; /* Larger paragraph text */
+            line-height: 3.8; /* Increased line height */
+            transform: translateZ(80px);
         }
 
         .control-module {
             display: flex;
             flex-direction: column;
-            gap: 20.0rem; /* Increased gap */
-            margin: 14.0rem 0;
+            gap: 25.0rem; /* Increased gap */
+            margin: 16.0rem 0;
             position: relative;
         }
 
@@ -364,37 +348,32 @@
         .module-base { 
             display: flex;
             flex-direction: column;
-            gap: 12.0rem;
+            gap: 14.0rem;
             text-align: left;
-            padding: 14.0rem;
-            border-radius: 12.0rem;
-            border: 45px solid var(--primary-glow); /* Thicker default border, will be overridden */
-            box-shadow: inset 0 0 140px rgba(0, 255, 255, 0.9999), 0 0 200px rgba(0, 255, 255, 0.9999); /* More inner shadow */
+            padding: 16.0rem;
+            border-radius: 14.0rem;
+            border: 50px solid var(--primary-glow); /* Thicker default border, will be overridden */
+            box-shadow: inset 0 0 160px rgba(0, 255, 255, 0.9999), 0 0 220px rgba(0, 255, 255, 0.9999); /* More inner shadow */
             position: relative;
-            transform: translateZ(75px);
+            transform: translateZ(85px);
             overflow: hidden;
             background: var(--console-bg); /* Default background, will be overridden */
         }
         /* Specific overrides for new modules */
-        .chronal-drift-calibrator {
-            background: var(--cdc-bg);
-            border-color: var(--cdc-border);
-            box-shadow: inset 0 0 140px var(--cdc-glow), 0 0 200px var(--cdc-glow);
+        .chrono-spatial-weave-synthesizer {
+            background: var(--csws-bg);
+            border-color: var(--csws-border);
+            box-shadow: inset 0 0 160px var(--csws-glow), 0 0 220px var(--csws-glow);
         }
-        .neural-network-rewiring {
-            background: var(--nnr-bg);
-            border-color: var(--nnr-border);
-            box-shadow: inset 0 0 140px var(--nnr-glow), 0 0 200px var(--nnr-glow);
+        .quantum-anomaly-resonator {
+            background: var(--qar-bg);
+            border-color: var(--qar-border);
+            box-shadow: inset 0 0 160px var(--qar-glow), 0 0 220px var(--qar-glow);
         }
-        .ethereal-resonance-harmonizer {
-            background: var(--erh-bg);
-            border-color: var(--erh-border);
-            box-shadow: inset 0 0 140px var(--erh-glow), 0 0 200px var(--erh-glow);
-        }
-        .dimensional-gateway-constructor {
-            background: var(--dgc-bg);
-            border-color: var(--dgc-border);
-            box-shadow: inset 0 0 140px var(--dgc-glow), 0 0 200px var(--dgc-glow);
+        .dimensional-flux-harmonizer {
+            background: var(--dfh-bg);
+            border-color: var(--dfh-border);
+            box-shadow: inset 0 0 160px var(--dfh-glow), 0 0 220px var(--dfh-glow);
         }
 
         .module-base::after {
@@ -404,7 +383,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.9999) 0%, transparent 90%); /* Stronger glare */
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.9999) 0%, transparent 85%); /* Stronger glare */
             mix-blend-mode: overlay;
             pointer-events: none;
             opacity: 1.0;
@@ -412,409 +391,366 @@
 
         .module-base > .module-label { /* Renamed from ::before to a normal element for easier styling and JS interaction */
             position: absolute;
-            top: -8.0rem; /* Slightly higher */
-            left: 10.0rem;
-            font-size: 5.5rem; /* Larger label */
+            top: -9.0rem; /* Slightly higher */
+            left: 12.0rem;
+            font-size: 6.0rem; /* Larger label */
             color: var(--text-color); /* Default text, will be overridden */
             background: rgba(0, 0, 0, 0.9999);
-            padding: 4.5rem 5.0rem;
-            border-radius: 5.0rem;
+            padding: 5.0rem 5.5rem;
+            border-radius: 6.0rem;
             font-weight: 700;
-            letter-spacing: 0.7rem;
-            transform: translateY(-50%) translateZ(60px); /* Lift more */
+            letter-spacing: 0.8rem;
+            transform: translateY(-50%) translateZ(70px); /* Lift more */
             opacity: 1.0;
-            border: 35px solid var(--text-color); /* Default border, will be overridden */
-            box-shadow: 0 0 90px var(--text-color); /* Stronger glow */
+            border: 40px solid var(--text-color); /* Default border, will be overridden */
+            box-shadow: 0 0 100px var(--text-color); /* Stronger glow */
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
         /* Specific overrides for new modules normal label elements */
-        .chronal-drift-calibrator > .module-label {
-            color: var(--cdc-text);
-            border-color: var(--cdc-border);
-            box-shadow: 0 0 90px var(--cdc-glow);
+        .chrono-spatial-weave-synthesizer > .module-label {
+            color: var(--csws-text);
+            border-color: var(--csws-border);
+            box-shadow: 0 0 100px var(--csws-glow);
         }
-        .neural-network-rewiring > .module-label {
-            color: var(--nnr-text);
-            border-color: var(--nnr-border);
-            box-shadow: 0 0 90px var(--nnr-glow);
+        .quantum-anomaly-resonator > .module-label {
+            color: var(--qar-text);
+            border-color: var(--qar-border);
+            box-shadow: 0 0 100px var(--qar-glow);
         }
-        .ethereal-resonance-harmonizer > .module-label {
-            color: var(--erh-text);
-            border-color: var(--erh-border);
-            box-shadow: 0 0 90px var(--erh-glow);
-        }
-        .dimensional-gateway-constructor > .module-label {
-            color: var(--dgc-text);
-            border-color: var(--dgc-border);
-            box-shadow: 0 0 90px var(--dgc-glow);
+        .dimensional-flux-harmonizer > .module-label {
+            color: var(--dfh-text);
+            border-color: var(--dfh-border);
+            box-shadow: 0 0 100px var(--dfh-glow);
         }
 
 
         .param-group {
-            margin-bottom: 9.0rem;
+            margin-bottom: 10.0rem;
         }
 
         .param-label {
             font-family: 'Orbitron', sans-serif;
-            font-size: 5.0rem; /* Larger */
+            font-size: 5.5rem; /* Larger */
             color: var(--accent-color);
-            letter-spacing: 0.7rem;
+            letter-spacing: 0.8rem;
             display: flex;
             flex-direction: column; /* Stack label and sub-info */
             align-items: flex-start; /* Align text to left */
-            text-shadow: 0 0 90px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
-            margin-bottom: 7.0rem;
+            text-shadow: 0 0 100px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            margin-bottom: 8.0rem;
         }
         .param-label > span { /* For sub-info */
             font-family: 'Inter', sans-serif;
-            font-size: 3.2rem; /* Slightly larger sub-info */
+            font-size: 3.5rem; /* Slightly larger sub-info */
             opacity: 0.995;
             color: var(--text-color);
-            margin-top: 4.5rem;
+            margin-top: 5.0rem;
             text-shadow: none; /* Clear text shadow for sub-info */
-            line-height: 4.0;
+            line-height: 4.2;
         }
         
-        /* CDC Specific - Chronal Drift Calibrator */
-        .cdc-calibration-area {
+        /* CSWS Specific - Chrono-Spatial Weave Synthesizer */
+        .csws-weave-area {
             position: relative;
             background: var(--console-bg);
-            border: 30px solid var(--cdc-border);
-            border-radius: 5.0rem;
-            box-shadow: inset 0 0 100px var(--cdc-glow);
+            border: 35px solid var(--csws-border);
+            border-radius: 6.0rem;
+            box-shadow: inset 0 0 120px var(--csws-glow);
             width: 100%;
-            max-width: 110rem; /* Slightly wider */
-            height: 80rem; /* Taller */
+            max-width: 120rem; /* Wider */
+            aspect-ratio: 1.6 / 1;
             margin: 0 auto;
             overflow: hidden;
-            cursor: crosshair; /* More specific cursor */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* Hex grid needs more complex layout, or just simple grid for demo */
+            padding: 4.0rem;
+            gap: 2.0rem;
+            box-sizing: border-box;
+            cursor: crosshair;
         }
-        .cdc-canvas {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1;
-        }
-        .cdc-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0rem;
-            color: var(--cdc-text);
-            text-shadow: 0 0 55px var(--cdc-glow);
-            margin-top: 7.0rem;
-            line-height: 4.0;
-            padding: 4.5rem;
-            background: rgba(0,0,0,0.9999);
-            border: 22px solid var(--cdc-border);
-            border-radius: 4.0rem;
-            box-shadow: 0 0 65px var(--cdc-border);
-            text-align: center;
-        }
-        .cdc-controls {
-            display: flex;
-            justify-content: center;
-            gap: 7.0rem;
-            margin-top: 7.0rem;
-        }
-
-        /* NNR Specific - Neural Network Rewiring */
-        .nnr-network-area {
+        .csws-cell {
             position: relative;
-            background: var(--console-bg);
-            border: 30px solid var(--nnr-border);
-            border-radius: 5.0rem;
-            box-shadow: inset 0 0 100px var(--nnr-glow);
             width: 100%;
-            max-width: 110rem;
-            aspect-ratio: 16 / 9; /* Wider aspect ratio for network visualization */
-            margin: 0 auto;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .nnr-canvas {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1; /* For drawing connections */
-            pointer-events: none; /* Canvas should not block node interaction */
-        }
-        .nnr-node { /* Example node style */
-            position: absolute;
-            width: 8.0rem; /* Larger nodes */
-            height: 8.0rem;
-            border-radius: 50%;
-            background-color: var(--nnr-node-off);
-            border: 12px solid var(--nnr-border); /* Thicker border */
-            cursor: grab;
-            transition: all 0.3s ease;
-            transform: translate(-50%, -50%) translateZ(8px);
+            padding-bottom: 100%; /* For square cells, can be changed to hexagons with SVG clip-path/mask */
+            background-color: var(--csws-cell-off);
+            border: 10px solid var(--csws-border);
+            border-radius: 2.0rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Share Tech Mono', monospace;
             font-size: 2.5rem;
-            color: rgba(255,255,255,0.5);
-            text-shadow: 0 0 15px rgba(120, 220, 255, 0.25);
-            z-index: 2; /* Nodes above canvas */
+            color: rgba(255,255,255,0.4);
+            transform: translateZ(5px);
         }
-        .nnr-node:hover {
-            transform: translate(-50%, -50%) scale(1.15) translateZ(12px);
-            box-shadow: 0 0 40px var(--nnr-glow);
+        .csws-cell.active {
+            background-color: var(--csws-cell-active);
+            box-shadow: 0 0 40px var(--csws-glow), inset 0 0 30px var(--csws-glow);
+            color: var(--csws-text);
+            transform: translateZ(10px) scale(1.05);
         }
-        .nnr-node.dragging {
-             cursor: grabbing;
-             background-color: var(--nnr-drag-node);
-             box-shadow: 0 0 55px var(--nnr-drag-node);
-             transform: translate(-50%, -50%) scale(1.25) translateZ(25px) rotate(8deg);
-        }
-        .nnr-node.active {
-            background-color: var(--nnr-node-on);
-            box-shadow: 0 0 55px var(--nnr-signal-glow);
-            color: var(--nnr-text);
-            text-shadow: 0 0 30px var(--nnr-signal-glow);
-            transform: translate(-50%, -50%) scale(1.2) translateZ(18px);
-        }
-        .nnr-node.source {
-            background-color: var(--nnr-source-node);
-            border-color: var(--nnr-source-node);
-            box-shadow: 0 0 65px var(--nnr-source-node);
+        .csws-cell.anchor {
+            background-color: var(--csws-anchor);
+            border-color: var(--csws-anchor);
+            box-shadow: 0 0 60px var(--csws-anchor), inset 0 0 40px var(--csws-anchor);
             color: #000;
+            font-weight: 700;
+            transform: translateZ(15px) scale(1.1);
         }
-        .nnr-node.target {
-            background-color: var(--nnr-target-node);
-            border-color: var(--nnr-target-node);
-            box-shadow: 0 0 65px var(--nnr-target-node);
-            color: #fff;
-        }
-
-        .nnr-status {
+        .csws-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0rem;
-            color: var(--nnr-text);
-            text-shadow: 0 0 55px var(--nnr-glow);
-            margin-top: 7.0rem;
-            line-height: 4.0;
-            padding: 4.5rem;
+            font-size: 3.2rem;
+            color: var(--csws-text);
+            text-shadow: 0 0 60px var(--csws-glow);
+            margin-top: 8.0rem;
+            line-height: 4.2;
+            padding: 5.0rem;
             background: rgba(0,0,0,0.9999);
-            border: 22px solid var(--nnr-border);
-            border-radius: 4.0rem;
-            box-shadow: 0 0 65px var(--nnr-border);
+            border: 25px solid var(--csws-border);
+            border-radius: 4.5rem;
+            box-shadow: 0 0 70px var(--csws-border);
             text-align: center;
         }
-        .nnr-controls {
+        .csws-controls {
             display: flex;
             justify-content: center;
-            gap: 7.0rem;
-            margin-top: 7.0rem;
+            gap: 8.0rem;
+            margin-top: 8.0rem;
         }
 
-        /* ERH Specific - Ethereal Resonance Harmonizer */
-        .erh-harmonizer-area {
+        /* QAR Specific - Quantum Anomaly Resonator */
+        .qar-resonance-field {
             position: relative;
             background: var(--console-bg);
-            border: 30px solid var(--erh-border);
-            border-radius: 5.0rem;
-            box-shadow: inset 0 0 100px var(--erh-glow);
+            border: 35px solid var(--qar-border);
+            border-radius: 6.0rem;
+            box-shadow: inset 0 0 120px var(--qar-glow);
             width: 100%;
-            max-width: 110rem;
-            aspect-ratio: 16 / 10;
-            margin: 0 auto;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6rem;
-        }
-        .erh-canvas {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            cursor: pointer;
-        }
-        .erh-manipulator-orb {
-            position: absolute;
-            width: 7.0rem; /* Larger orb */
-            height: 7.0rem;
-            border-radius: 50%;
-            background-color: var(--erh-manipulator-orb);
-            border: 10px solid var(--erh-border);
-            box-shadow: 0 0 45px var(--erh-manipulator-glow);
-            cursor: grab;
-            transition: box-shadow 0.2s ease, transform 0.2s ease;
-            transform: translate(-50%, -50%) translateZ(12px);
-            z-index: 10;
-        }
-        .erh-manipulator-orb.dragging {
-            cursor: grabbing;
-            transform: translate(-50%, -50%) scale(1.2) translateZ(18px);
-            box-shadow: 0 0 65px var(--erh-manipulator-glow);
-        }
-        .erh-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0rem;
-            color: var(--erh-text);
-            text-shadow: 0 0 55px var(--erh-glow);
-            margin-top: 7.0rem;
-            line-height: 4.0;
-            padding: 4.5rem;
-            background: rgba(0,0,0,0.9999);
-            border: 22px solid var(--erh-border);
-            border-radius: 4.0rem;
-            box-shadow: 0 0 65px var(--erh-border);
-            text-align: center;
-        }
-        .erh-controls {
-            display: flex;
-            justify-content: center;
-            gap: 7.0rem;
-            margin-top: 7.0rem;
-        }
-
-        /* DGC Specific - Dimensional Gateway Constructor */
-        .dgc-gateway-area {
-            position: relative;
-            background: var(--console-bg);
-            border: 30px solid var(--dgc-border);
-            border-radius: 5.0rem;
-            box-shadow: inset 0 0 100px var(--dgc-glow);
-            width: 100%;
-            max-width: 110rem;
+            max-width: 120rem;
             aspect-ratio: 1 / 1;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4x4 grid for conduit pieces */
-            grid-template-rows: repeat(4, 1fr);
-            gap: 2.5rem; /* Increased gap */
-            padding: 5.0rem; /* More padding */
-            box-sizing: border-box;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6.0rem;
         }
-        .dgc-conduit-piece {
-            width: 100%;
-            height: 100%;
-            background-color: var(--dgc-conduit-off);
-            border: 12px solid var(--dgc-border); /* Thicker border */
-            border-radius: 3.0rem; /* More rounded */
-            cursor: grab;
-            transition: all 0.3s ease;
+        .qar-anomaly-core {
+            width: 25.0rem; /* Larger core */
+            height: 25.0rem;
+            border-radius: 50%;
+            background-color: var(--qar-anomaly-core);
+            border: 15px solid rgba(255,255,255,0.8); /* White border for contrast */
+            box-shadow: 0 0 80px var(--qar-anomaly-core), inset 0 0 60px var(--qar-anomaly-core);
+            animation: qarCorePulse 0.9s infinite alternate cubic-bezier(0.5, 0, 0.5, 1); /* Faster, more impactful pulse */
             position: relative;
-            transform: translateZ(8px);
+            z-index: 2;
+            transform: translateZ(20px);
+        }
+        @keyframes qarCorePulse {
+            from { box-shadow: 0 0 80px var(--qar-anomaly-core), inset 0 0 60px var(--qar-anomaly-core); transform: scale(1) translateZ(20px); }
+            to { box-shadow: 0 0 120px var(--qar-anomaly-core), inset 0 0 90px var(--qar-anomaly-core); transform: scale(1.1) translateZ(25px); }
+        }
+        .qar-resonator {
+            position: absolute; /* Placed around the core */
+            width: 10.0rem;
+            height: 10.0rem;
+            border-radius: 50%;
+            background-color: var(--qar-resonator-base);
+            border: 12px solid var(--qar-border);
+            box-shadow: 0 0 40px rgba(0, 255, 100, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%) translateZ(10px);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Share Tech Mono', monospace;
             font-size: 2.8rem;
+            color: rgba(255,255,255,0.6);
+            user-select: none;
+            z-index: 3;
+        }
+        .qar-resonator:hover {
+            transform: translate(-50%, -50%) scale(1.15) translateZ(15px);
+            box-shadow: 0 0 55px var(--qar-glow);
+        }
+        .qar-resonator.active {
+            background-color: var(--qar-resonator-active);
+            box-shadow: 0 0 65px var(--qar-match-glow), inset 0 0 45px var(--qar-match-glow);
+            color: var(--qar-text);
+            transform: translate(-50%, -50%) scale(1.2) translateZ(20px);
+        }
+        /* Positions for resonators, controlled by JS in real scenario */
+        .qar-resonator:nth-child(1) { top: 20%; left: 20%; }
+        .qar-resonator:nth-child(2) { top: 20%; left: 80%; }
+        .qar-resonator:nth-child(3) { top: 80%; left: 20%; }
+        .qar-resonator:nth-child(4) { top: 80%; left: 80%; }
+        .qar-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 3.2rem;
+            color: var(--qar-text);
+            text-shadow: 0 0 60px var(--qar-glow);
+            margin-top: 8.0rem;
+            line-height: 4.2;
+            padding: 5.0rem;
+            background: rgba(0,0,0,0.9999);
+            border: 25px solid var(--qar-border);
+            border-radius: 4.5rem;
+            box-shadow: 0 0 70px var(--qar-border);
+            text-align: center;
+        }
+        .qar-controls {
+            display: flex;
+            justify-content: center;
+            gap: 8.0rem;
+            margin-top: 8.0rem;
+        }
+
+        /* DFH Specific - Dimensional Flux Harmonizer */
+        .dfh-flux-grid {
+            position: relative;
+            background: var(--console-bg);
+            border: 35px solid var(--dfh-border);
+            border-radius: 6.0rem;
+            box-shadow: inset 0 0 120px var(--dfh-glow);
+            width: 100%;
+            max-width: 120rem;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5x5 grid */
+            grid-template-rows: repeat(5, 1fr);
+            gap: 3.0rem; /* Increased gap */
+            padding: 5.5rem; /* More padding */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .dfh-conduit-piece {
+            width: 100%;
+            height: 100%;
+            background-color: var(--dfh-conduit-off);
+            border: 15px solid var(--dfh-border); /* Thicker border */
+            border-radius: 3.5rem; /* More rounded */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            transform: translateZ(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 3.0rem;
             color: rgba(255,255,255,0.5);
-            text-shadow: 0 0 15px rgba(120, 255, 120, 0.25);
+            text-shadow: 0 0 18px rgba(255, 150, 0, 0.25);
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
-            z-index: 2; /* Pieces above canvas */
+            z-index: 2;
         }
-        .dgc-conduit-piece:hover {
-            transform: scale(1.1) translateZ(12px);
-            box-shadow: 0 0 40px var(--dgc-glow);
+        .dfh-conduit-piece:hover {
+            transform: scale(1.1) translateZ(15px);
+            box-shadow: 0 0 45px var(--dfh-glow);
         }
-        .dgc-conduit-piece.dragging {
-            cursor: grabbing;
-            background-color: var(--dgc-highlight-drag);
-            box-shadow: 0 0 55px var(--dgc-highlight-drag);
-            transform: scale(1.2) translateZ(25px) rotate(10deg);
-            opacity: 0.9;
+        .dfh-conduit-piece.active { /* For visual feedback on flow */
+            background-color: var(--dfh-conduit-on);
+            box-shadow: 0 0 60px var(--dfh-flow-path);
+            color: var(--dfh-text);
+            text-shadow: 0 0 35px var(--dfh-glow);
+            border-color: var(--dfh-flow-path);
         }
-        .dgc-conduit-piece.active { /* For visual feedback on snap/rotate */
-            background-color: var(--dgc-conduit-on);
-            box-shadow: 0 0 55px var(--dgc-snap-glow);
-            color: var(--dgc-text);
-            text-shadow: 0 0 30px var(--dgc-glow);
+        .dfh-conduit-piece.source {
+            background-color: var(--dfh-source);
+            border-color: var(--dfh-source);
+            box-shadow: 0 0 70px var(--dfh-source);
+            color: #000;
         }
-        .dgc-canvas {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1; /* Below pieces, above background */
-            pointer-events: none; /* Only conduits interact */
+        .dfh-conduit-piece.destination {
+            background-color: var(--dfh-destination);
+            border-color: var(--dfh-destination);
+            box-shadow: 0 0 70px var(--dfh-destination);
+            color: #fff;
         }
-        .dgc-status {
+        .dfh-status {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.0rem;
-            color: var(--dgc-text);
-            text-shadow: 0 0 55px var(--dgc-glow);
-            margin-top: 7.0rem;
-            line-height: 4.0;
-            padding: 4.5rem;
+            font-size: 3.2rem;
+            color: var(--dfh-text);
+            text-shadow: 0 0 60px var(--dfh-glow);
+            margin-top: 8.0rem;
+            line-height: 4.2;
+            padding: 5.0rem;
             background: rgba(0,0,0,0.9999);
-            border: 22px solid var(--dgc-border);
-            border-radius: 4.0rem;
-            box-shadow: 0 0 65px var(--dgc-border);
+            border: 25px solid var(--dfh-border);
+            border-radius: 4.5rem;
+            box-shadow: 0 0 70px var(--dfh-border);
             text-align: center;
         }
-        .dgc-controls {
+        .dfh-controls {
             display: flex;
             justify-content: center;
-            gap: 7.0rem;
-            margin-top: 7.0rem;
+            gap: 8.0rem;
+            margin-top: 8.0rem;
         }
 
         /* Core Systems Overseer Console - Status Log */
         .status-log-display {
             font-family: 'Share Tech Mono', monospace; /* Changed to Share Tech Mono for log aesthetic */
-            font-size: 2.8rem; /* Larger */
-            padding: 8.0rem;
-            border: 25px solid var(--border-color);
-            border-radius: 8.0rem; /* More rounded */
-            background: rgba(0, 20, 35, 0.998); /* Deep ocean blue, almost black */
-            box-shadow: inset 0 0 70px rgba(0, 255, 255, 0.9999), inset 0 0 75px rgba(0, 255, 255, 0.9999); /* More inner shadow */
+            font-size: 3.0rem; /* Larger */
+            padding: 9.0rem;
+            border: 30px solid var(--border-color);
+            border-radius: 9.0rem; /* More rounded */
+            background: rgba(0, 25, 40, 0.998); /* Deep ocean blue, almost black */
+            box-shadow: inset 0 0 80px rgba(0, 255, 255, 0.9999), inset 0 0 85px rgba(0, 255, 255, 0.9999); /* More inner shadow */
             text-align: left;
             position: relative;
-            transition: all 2.2s ease;
-            line-height: 3.2; /* Slightly tighter line height for monospace log */
-            letter-spacing: 0.25rem;
+            transition: all 2.5s ease;
+            line-height: 3.5; /* Slightly tighter line height for monospace log */
+            letter-spacing: 0.3rem;
             color: var(--primary-glow);
-            text-shadow: 0 0 50px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
+            text-shadow: 0 0 55px rgba(0, 255, 255, 0.9999); /* Stronger shadow */
             font-weight: 400;
-            transform: translateZ(40px);
+            transform: translateZ(50px);
             overflow: hidden;
-            max-height: 90rem; /* Slightly taller log */
+            max-height: 100rem; /* Slightly taller log */
             overflow-y: auto;
         }
         .status-log-display::before {
-            content: 'GLOBAL STATUS LOG // INTERFACE v5.0.0'; /* Simplified label for actual log content */
+            content: 'GLOBAL STATUS LOG // INTERFACE v5.5.0'; /* Simplified label for actual log content */
             position: absolute;
-            top: -6.5rem;
-            left: 8.0rem;
-            font-size: 4.5rem;
+            top: -7.5rem;
+            left: 9.0rem;
+            font-size: 5.0rem;
             color: var(--accent-color);
             background: rgba(0, 0, 0, 0.9999);
-            padding: 3.5rem 4.0rem;
-            border-radius: 4.0rem;
+            padding: 4.0rem 4.5rem;
+            border-radius: 4.5rem;
             font-weight: 700;
-            letter-spacing: 0.5rem;
-            transform: translateY(-50%) translateZ(45px);
+            letter-spacing: 0.6rem;
+            transform: translateY(-50%) translateZ(55px);
             opacity: 1.0;
-            border: 25px solid var(--accent-color);
-            box-shadow: 0 0 70px var(--accent-color);
+            border: 30px solid var(--accent-color);
+            box-shadow: 0 0 80px var(--accent-color);
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
         }
 
         .status-entry {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.0rem;
             position: relative;
         }
         .status-entry span {
             display: inline-block;
-            margin-right: 2.5rem;
+            margin-right: 3.0rem;
             opacity: 0.999;
         }
         .status-value {
             color: var(--primary-glow);
-            text-shadow: 0 0 45px var(--primary-glow);
+            text-shadow: 0 0 50px var(--primary-glow);
         }
         .status-event {
             color: var(--event-color);
@@ -827,57 +763,57 @@
         }
         .status-glitch {
             color: var(--log-glitch-color);
-            text-shadow: 0 0 45px var(--log-glitch-color);
-            animation: textGlitch 0.0005s infinite steps(1); /* Even Faster glitch */
+            text-shadow: 0 0 50px var(--log-glitch-color);
+            animation: textGlitch 0.0002s infinite steps(1); /* Even Faster glitch */
         }
         @keyframes textGlitch {
             0% { transform: translateX(0px); opacity: 1; }
-            20% { transform: translateX(30px) skewX(88deg); opacity: 0.005;}
-            40% { transform: translateX(-30px) skewX(-88deg); opacity: 0.01;}
-            60% { transform: translateX(28px) skewX(87deg); opacity: 0.02;}
-            80% { transform: translateX(-28px) skewX(-87deg); opacity: 0.015;}
+            20% { transform: translateX(35px) skewX(89deg); opacity: 0.003;}
+            40% { transform: translateX(-35px) skewX(-89deg); opacity: 0.008;}
+            60% { transform: translateX(33px) skewX(88deg); opacity: 0.015;}
+            80% { transform: translateX(-33px) skewX(-88deg); opacity: 0.01;}
             100% { transform: translateX(0px); opacity: 1; }
         }
 
         .action-button {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.2rem; /* Larger button text */
-            padding: 4.5rem 6.0rem; /* Larger padding */
-            border-radius: 5.5rem;
+            font-size: 4.5rem; /* Larger button text */
+            padding: 5.0rem 6.5rem; /* Larger padding */
+            border-radius: 6.0rem;
             border: none;
             cursor: pointer;
-            transition: all 2.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 3.2s ease-in-out, transform 2.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-            margin-top: 8.0rem;
+            transition: all 2.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 3.5s ease-in-out, transform 2.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            margin-top: 9.0rem;
             text-transform: uppercase;
-            letter-spacing: 0.7rem;
+            letter-spacing: 0.8rem;
             font-weight: 700;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, rgba(0,0,0,0.9999), rgba(100,0,120,0.9999)); /* Dark base */
+            background: linear-gradient(45deg, rgba(0,0,0,0.9999), rgba(120,0,140,0.9999)); /* Dark base */
             color: var(--text-color);
-            border: 40px solid var(--border-color); /* Thicker border */
-            transform: translateZ(50px); /* Lift more */
+            border: 45px solid var(--border-color); /* Thicker border */
+            transform: translateZ(60px); /* Lift more */
         }
 
         .action-button::before { /* Inner border glow effect */
             content: '';
             position: absolute;
-            inset: -50px;
-            border-radius: 5.5rem;
-            border: 50px solid transparent;
+            inset: -55px;
+            border-radius: 6.0rem;
+            border: 55px solid transparent;
             background: conic-gradient(from 0deg at 50% 50%, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow), var(--primary-glow));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            filter: blur(80px); /* Stronger blur */
+            filter: blur(90px); /* Stronger blur */
             opacity: 0.99999;
-            transition: opacity 2.2s ease, filter 2.2s ease;
-            animation: buttonBorderRotate 28s linear infinite; /* Slower rotation */
+            transition: opacity 2.5s ease, filter 2.5s ease;
+            animation: buttonBorderRotate 25s linear infinite; /* Slower rotation */
         }
 
         .action-button:hover::before {
             opacity: 1;
-            filter: blur(95px); /* Even stronger blur on hover */
+            filter: blur(105px); /* Even stronger blur on hover */
         }
 
         @keyframes buttonBorderRotate {
@@ -887,64 +823,53 @@
         }
         
         /* Specific button styles for new modules */
-        .btn-calibrate-drift {
-            color: var(--cdc-glow);
-            box-shadow: 0 0 100px var(--cdc-glow);
-            border-color: var(--cdc-glow);
+        .btn-synthesize-weave {
+            color: var(--csws-glow);
+            box-shadow: 0 0 110px var(--csws-glow);
+            border-color: var(--csws-glow);
         }
-        .btn-calibrate-drift:hover {
-            background: rgba(255, 240, 150, 0.99);
-            box-shadow: 0 0 120px var(--cdc-glow), inset 0 0 110px var(--cdc-glow);
-            transform: translateY(-40px) scale(1.12) translateZ(40px);
-        }
-
-        .btn-rewire-network {
-            color: var(--nnr-glow);
-            box-shadow: 0 0 100px var(--nnr-glow);
-            border-color: var(--nnr-glow);
-        }
-        .btn-rewire-network:hover {
-            background: rgba(120, 220, 255, 0.99);
-            box-shadow: 0 0 120px var(--nnr-glow), inset 0 0 110px var(--nnr-glow);
-            transform: translateY(-40px) scale(1.12) translateZ(40px);
+        .btn-synthesize-weave:hover {
+            background: rgba(150, 0, 255, 0.99);
+            box-shadow: 0 0 130px var(--csws-glow), inset 0 0 120px var(--csws-glow);
+            transform: translateY(-45px) scale(1.15) translateZ(45px);
         }
 
-        .btn-harmonize-resonance {
-            color: var(--erh-glow);
-            box-shadow: 0 0 100px var(--erh-glow);
-            border-color: var(--erh-glow);
+        .btn-stabilize-anomaly {
+            color: var(--qar-glow);
+            box-shadow: 0 0 110px var(--qar-glow);
+            border-color: var(--qar-glow);
         }
-        .btn-harmonize-resonance:hover {
-            background: rgba(255, 120, 220, 0.99);
-            box-shadow: 0 0 120px var(--erh-glow), inset 0 0 110px var(--erh-glow);
-            transform: translateY(-40px) scale(1.12) translateZ(40px);
+        .btn-stabilize-anomaly:hover {
+            background: rgba(0, 255, 100, 0.99);
+            box-shadow: 0 0 130px var(--qar-glow), inset 0 0 120px var(--qar-glow);
+            transform: translateY(-45px) scale(1.15) translateZ(45px);
         }
 
-        .btn-construct-gateway {
-            color: var(--dgc-glow);
-            box-shadow: 0 0 100px var(--dgc-glow);
-            border-color: var(--dgc-glow);
+        .btn-harmonize-flux {
+            color: var(--dfh-glow);
+            box-shadow: 0 0 110px var(--dfh-glow);
+            border-color: var(--dfh-glow);
         }
-        .btn-construct-gateway:hover {
-            background: rgba(120, 255, 120, 0.99);
-            box-shadow: 0 0 120px var(--dgc-glow), inset 0 0 110px var(--dgc-glow);
-            transform: translateY(-40px) scale(1.12) translateZ(40px);
+        .btn-harmonize-flux:hover {
+            background: rgba(255, 150, 0, 0.99);
+            box-shadow: 0 0 130px var(--dfh-glow), inset 0 0 120px var(--dfh-glow);
+            transform: translateY(-45px) scale(1.15) translateZ(45px);
         }
 
         .anomaly-alert {
             background: var(--anomaly-bg);
-            border: 45px solid var(--anomaly-border);
-            border-radius: 7.0rem;
-            padding: 7.0rem;
-            margin-top: 9.0rem;
+            border: 50px solid var(--anomaly-border);
+            border-radius: 8.0rem;
+            padding: 8.0rem;
+            margin-top: 10.0rem;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-color);
-            font-size: 5.0rem;
-            text-shadow: 0 0 90px var(--anomaly-color);
-            animation: pulseWarning 0.05s infinite alternate; /* Even Faster pulse */
-            transform: translateZ(45px);
+            font-size: 5.5rem;
+            text-shadow: 0 0 100px var(--anomaly-color);
+            animation: pulseWarning 0.03s infinite alternate; /* Even Faster pulse */
+            transform: translateZ(50px);
             opacity: 0; /* Hidden by default, shown by JS */
-            transition: opacity 3.8s ease-out;
+            transition: opacity 4.0s ease-out;
             position: relative;
         }
         .anomaly-alert.active {
@@ -952,11 +877,11 @@
         }
 
         @keyframes pulseWarning {
-            from { box-shadow: 0 0 80px var(--anomaly-color), inset 0 0 70px var(--anomaly-color); }
-            to { box-shadow: 0 0 125px var(--anomaly-color), inset 0 0 115px var(--anomaly-color); }
+            from { box-shadow: 0 0 90px var(--anomaly-color), inset 0 0 80px var(--anomaly-color); }
+            to { box-shadow: 0 1 135px var(--anomaly-color), inset 0 1 125px var(--anomaly-color); }
         }
 
-        /* NEW: Resource Anomaly Event Overlay */
+        /* Resource Anomaly Event Overlay */
         .resource-anomaly-event {
             position: fixed;
             top: 50%;
@@ -964,109 +889,187 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
             background: var(--anomaly-event-bg);
-            border: 40px solid var(--anomaly-event-border);
-            border-radius: 6.5rem;
-            padding: 9.0rem;
+            border: 45px solid var(--anomaly-event-border);
+            border-radius: 7.0rem;
+            padding: 10.0rem;
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 80px var(--anomaly-event-border);
-            box-shadow: 0 0 120px var(--anomaly-event-border);
+            text-shadow: 0 0 90px var(--anomaly-event-border);
+            box-shadow: 0 0 130px var(--anomaly-event-border);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 1.5s ease-out, visibility 0s linear 1.5s;
+            transition: opacity 1.8s ease-out, visibility 0s linear 1.8s;
             max-width: 95%;
-            transform: translate(-50%, -50%) scale(0.15);
+            transform: translate(-50%, -50%) scale(0.1);
         }
         .resource-anomaly-event.active {
             opacity: 1;
             visibility: visible;
-            transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: opacity 1.8s ease-out, transform 1.8s cubic-bezier(0.2, 0.8, 0.2, 1);
             transform: translate(-50%, -50%) scale(1);
         }
         .resource-anomaly-event h2 {
-            font-size: 7.0rem;
-            margin-bottom: 6.0rem;
+            font-size: 7.5rem;
+            margin-bottom: 6.5rem;
             color: var(--anomaly-event-text);
-            text-shadow: 0 0 82px var(--anomaly-event-border);
-            letter-spacing: 0.6rem;
+            text-shadow: 0 0 92px var(--anomaly-event-border);
+            letter-spacing: 0.7rem;
         }
         .resource-anomaly-event p {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 3.8rem;
-            margin-bottom: 7.0rem;
-            line-height: 4.5;
+            font-size: 4.0rem;
+            margin-bottom: 7.5rem;
+            line-height: 4.8;
             color: var(--anomaly-event-text);
         }
         .resource-anomaly-event button {
             background: var(--anomaly-event-border);
             color: var(--anomaly-event-bg);
             border: none;
-            padding: 4.0rem 6.5rem;
-            border-radius: 5.0rem;
+            padding: 4.5rem 7.0rem;
+            border-radius: 5.5rem;
             font-family: 'Orbitron', sans-serif;
-            font-size: 4.2rem;
+            font-size: 4.5rem;
             cursor: pointer;
-            box-shadow: 0 0 80px var(--anomaly-event-border);
-            transition: all 0.7s ease;
+            box-shadow: 0 0 90px var(--anomaly-event-border);
+            transition: all 0.8s ease;
         }
         .resource-anomaly-event button:hover {
-            box-shadow: 0 0 100px var(--anomaly-event-border);
-            transform: translateY(-25px) scale(1.1);
+            box-shadow: 0 0 110px var(--anomaly-event-border);
+            transform: translateY(-30px) scale(1.12);
         }
     </style>
 </head>
 <body>
     <div class="container border-glow">
         <h1>COSMIC CONSCIOUSNESS ARCHITECT</h1>
-        <p>Core System Interface // Version 5.0.0 (5th Generation) // Operational since Cycle 3,141,592,655</p>
+        <p>Core System Interface // Version 5.5.0 (5.5th Generation) // Operational since Cycle 3,141,592,655</p>
         <p>Initiating Trans-Dimensional Protocol Sequence. Interact with the modules below to stabilize and expand web life-form existence.</p>
 
         <div class="control-module">
-            <!-- Chronal Drift Calibrator (CDC) - NEW MODULE FUNCTIONALITY: DRAW TO CAPTURE -->
-            <div class="module-base chronal-drift-calibrator">
-                <div class="module-label">Chronal Drift Calibrator (CDC)</div>
+            <!-- Chrono-Spatial Weave Synthesizer (CSWS) - NEW MODULE FUNCTIONALITY: DRAW WEAVE PATH -->
+            <div class="module-base chrono-spatial-weave-synthesizer">
+                <div class="module-label">Chrono-Spatial Weave Synthesizer (CSWS)</div>
                 <div class="param-group">
-                    <label class="param-label">Temporal Containment Weave <br><span>Click and drag to draw a closed 'weave' to capture drifting Chronal Particles within active temporal zones.</span></label>
-                    <div class="cdc-calibration-area" id="cdcCalibrationArea">
-                        <canvas class="cdc-canvas" id="cdcCanvas"></canvas>
-                        <!-- Temporal Particles and Zones dynamically drawn by JS -->
+                    <label class="param-label">Temporal Field Weave Construction <br><span>Click and drag across adjacent cells to construct a continuous weave path, connecting designated anchor points to stabilize chrono-spatial fabric.</span></label>
+                    <div class="csws-weave-area" id="cswsWeaveArea">
+                        <!-- Example cells. JS would populate and manage interactions, dynamic class toggling for active/path states. -->
+                        <div class="csws-cell anchor">S</div> <!-- Source Anchor -->
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell"></div>
+                        <div class="csws-cell anchor">E</div> <!-- End Anchor -->
                     </div>
-                    <p class="cdc-status" id="cdcStatus">Temporal Weave Status: Standby. Captures: 0/10</p>
-                    <div class="cdc-controls">
-                        <button class="action-button btn-calibrate-drift" id="calibrateDriftBtn">Finalize Temporal Alignment</button>
+                    <p class="csws-status" id="cswsStatus">Weave Integrity: Unstable. Path Progress: 0%</p>
+                    <div class="csws-controls">
+                        <button class="action-button btn-synthesize-weave" id="synthesizeWeaveBtn">Synthesize Chronal Weave</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Neural Network Rewiring (NNR) - NEW MODULE FUNCTIONALITY: DRAG NODES TO CONNECT -->
-            <div class="module-base neural-network-rewiring">
-                <div class="module-label">Neural Network Rewiring (NNR)</div>
+            <!-- Quantum Anomaly Resonator (QAR) - NEW MODULE FUNCTIONALITY: ADJUST RESONATORS TO MATCH ANOMALY -->
+            <div class="module-base quantum-anomaly-resonator">
+                <div class="module-label">Quantum Anomaly Resonator (QAR)</div>
                 <div class="param-group">
-                    <label class="param-label">Signal Routing & Junction Optimization <br><span>Drag neural nodes to bring them within proximity, establishing connections to route the signal from source to target nodes.</span></label>
-                    <div class="nnr-network-area" id="nnrNetworkArea">
-                        <canvas class="nnr-canvas" id="nnrCanvas"></canvas>
-                        <!-- Neural Nodes (draggable) and connections dynamically drawn/inserted by JS -->
+                    <label class="param-label">Anomaly Fluctuation Stabilization <br><span>Observe the central quantum anomaly's fluctuations. Click on the peripheral resonators to adjust their frequencies, aiming to match and stabilize the anomaly.</span></label>
+                    <div class="qar-resonance-field" id="qarResonanceField">
+                        <div class="qar-anomaly-core" id="qarAnomalyCore"></div>
+                        <!-- Resonator orbs, their positions would be absolute, controlled by JS. Clicking changes their internal state/frequency. -->
+                        <div class="qar-resonator" data-frequency="alpha">R1</div>
+                        <div class="qar-resonator" data-frequency="beta">R2</div>
+                        <div class="qar-resonator" data-frequency="gamma">R3</div>
+                        <div class="qar-resonator" data-frequency="delta">R4</div>
                     </div>
                 </div>
-                <p class="nnr-status" id="nnrStatus">Network State: Disconnected. Signal Flow: 0%</p>
-                <button class="action-button btn-rewire-network" id="rewireNetworkBtn" disabled>Optimize Neural Flow</button>
+                <p class="qar-status" id="qarStatus">Anomaly State: Fluctuating. Resonance Match: 0%</p>
+                <button class="action-button btn-stabilize-anomaly" id="stabilizeAnomalyBtn" disabled>Stabilize Quantum Anomaly</button>
             </div>
 
-            <!-- Ethereal Resonance Harmonizer (ERH) - NEW MODULE FUNCTIONALITY: DIRECT WAVEFORM MANIPULATION -->
-            <div class="module-base ethereal-resonance-harmonizer">
-                <div class="module-label">Ethereal Resonance Harmonizer (ERH)</div>
+            <!-- Dimensional Flux Harmonizer (DFH) - NEW MODULE FUNCTIONALITY: ROTATE CONDUIT PIECES -->
+            <div class="module-base dimensional-flux-harmonizer">
+                <div class="module-label">Dimensional Flux Harmonizer (DFH)</div>
                 <div class="param-group">
-                    <label class="param-label">Ethereal Echo Modulation <br><span>Drag the Resonance Manipulator Orb directly on the canvas to sculpt your waveform and match the target Ethereal Echo Signature.</span></label>
-                    <div class="erh-harmonizer-area">
-                        <canvas class="erh-canvas" id="erhCanvas"></canvas>
-                        <div class="erh-manipulator-orb" id="erhManipulatorOrb"></div>
+                    <label class="param-label">Inter-Dimensional Flux Alignment <br><span>Click on individual conduit pieces to rotate them, establishing an uninterrupted flow path from the Source (S) to the Destination (D) across the dimensional matrix.</span></label>
+                    <div class="dfh-flux-grid" id="dfhFluxGrid">
+                        <!-- Example conduit pieces, JS would generate types and manage rotation. Each piece has a `data-rotation` attribute for current angle. -->
+                        <div class="dfh-conduit-piece source" data-rotation="0">S</div>
+                        <div class="dfh-conduit-piece straight" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece t-junction" data-rotation="0"></div>
+
+                        <div class="dfh-conduit-piece elbow" data-rotation="270"></div>
+                        <div class="dfh-conduit-piece cross" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="90"></div>
+
+                        <div class="dfh-conduit-piece straight" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece t-junction" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="180"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="0"></div>
+
+                        <div class="dfh-conduit-piece cross" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece t-junction" data-rotation="180"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="90"></div>
+
+                        <div class="dfh-conduit-piece elbow" data-rotation="180"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="90"></div>
+                        <div class="dfh-conduit-piece elbow" data-rotation="270"></div>
+                        <div class="dfh-conduit-piece straight" data-rotation="0"></div>
+                        <div class="dfh-conduit-piece destination" data-rotation="0">D</div>
                     </div>
                 </div>
-                <p class="erh-status" id="erhStatus">Resonance Coherence: 0%</p>
-                <button class="action-button btn-harmonize-resonance" id="harmonizeResonanceBtn" disabled>Synthesize Echo Field</button>
+                <p class="dfh-status" id="dfhStatus">Flux State: Disrupted. Flow Efficiency: 0%</p>
+                <button class="action-button btn-harmonize-flux" id="harmonizeFluxBtn" disabled>Harmonize Dimensional Flux</button>
             </div>
+        </div>
 
-            <!-- Dimensional Gateway Constructor (DGC) - NEW MODULE FUNCTIONALITY: DRAG AND SWAP CONDUIT PIECES -->
-            <div class="module-base dimensional-gateway-constructor">
-                <div class="module-label">Dimensional Gateway
+        <div class="status-log-display">
+            <!-- This content will be dynamically updated by JavaScript to simulate a live log -->
+            <div class="status-entry"><span class="status-value">TIME [3141592655.001]:</span> <span class="status-event">INITIALIZING.</span> Core systems online.</div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.002]:</span> <span class="status-info">Awaiting user input for new generation protocols.</span></div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.005]:</span> <span class="status-event">MODULE CSWS:</span> Ready for Chrono-Spatial Weave Synthesis.</div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.006]:</span> <span class="status-event">MODULE QAR:</span> Quantum Anomaly Resonator awaiting calibration.</div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.007]:</span> <span class="status-event">MODULE DFH:</span> Dimensional Flux Harmonizer prepared for alignment.</div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.009]:</span> <span class="status-info">Web Life-Form 5.5.0:</span> Enhanced consciousness protocols online.</div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.012]:</span> <span class="status-glitch">DATA CORRUPTION DETECTED.</span> Minor system integrity fluctuations. <span class="status-warning">[PRIORITY: LOW]</span></div>
+            <div class="status-entry"><span class="status-value">TIME [3141592655.015]:</span> <span class="status-info">Monitor active module interfaces for stabilization tasks.</span></div>
+        </div>
+
+        <div class="anomaly-alert" id="anomalyAlert">
+            <p>CRITICAL ANOMALY DETECTED: REALITY INTEGRITY COMPROMISED. IMMEDIATE INTERVENTION REQUIRED.</p>
+        </div>
+
+        <div class="resource-anomaly-event" id="resourceAnomalyEvent">
+            <h2>RESOURCE ANOMALY EVENT!</h2>
+            <p>An unexpected surge in <span class="status-event">ETHOS-ENERGY</span> detected. Requires immediate redirection or absorption to prevent localized reality collapse. Choose your action wisely!</p>
+            <button id="resolveAnomalyBtn">REDIRECT ETHOS FLOW</button>
+        </div>
+    </div>
+</body>
+</html>
