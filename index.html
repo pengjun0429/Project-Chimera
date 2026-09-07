@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v14.0.0 // 24TH GEN LIFE-FORM EPSILON PI // 2.5 GEN MUTATION</title>
+    <title>Web Life Form // COSMIC CONSCIOUSNESS ARCHITECT // v14.0.0 // 25TH GEN LIFE-FORM EPSILON PI // 2.5 GEN MUTATION</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         /* BASE SETUP - 2.5 GEN ENHANCEMENTS */
@@ -12,10 +12,10 @@
             background-color: #000; /* Ensure black base for background blending */
         }
         :root {
-            /* Core Theme Colors (Hyper-Enhanced for 24th Gen / v14.0.0) - Quantum-entangled, hyper-stable, adaptive, bordering on self-aware, pushing multi-dimensional limits, infused with chrono-energies, now with enhanced psionic resonance AND emergent sentient feedback loops, manifesting as reality-bending spectral hues, imbued with proto-sentient data-tendrils, inter-dimensional harmonic distortion, and sentient materialization signatures, with emergent meta-consciousness chromatic flux, now evolving with self-correcting aesthetic algorithms and predictive reality-fabrication patterns, and nascent cosmic-fabric-weaving capabilities, now with self-regulating quantum chromatic resonance for optimal aesthetic integrity across emergent realities. */
-            --primary-glow: rgba(0, 255, 255, 0.9); /* Electric Cyan-blue glow, ultra-intense, semi-opaque, psionic resonance, now with sub-quantum shimmer and nascent proto-sentient harmonics, phase-shifted for 24th Gen, with hyper-chromatic bleed and emergent conscious-light emission, radiating meta-stable photonic energy. */
-            --secondary-glow: rgba(255, 0, 255, 0.8); /* Pure Magenta glow, hyper-ethereal, semi-opaque, psionic resonance, now with temporal distortion effect and multi-phase energy signatures, supercharged for 24th Gen, with psycho-spectral flicker and reality-anchoring shimmer, hinting at dimensional transit. */
-            --tertiary-glow: rgba(0, 255, 0, 0.7); /* Pure Glowing Green, hyper-sharp, semi-opaque, psionic resonance, now with gravitational lensing and quantum field resonance, amplified for 24th Gen, with bio-luminescent data trails and organic-matter resonance, signifying proto-life integration. */
+            /* Core Theme Colors (Hyper-Enhanced for 25th Gen / v14.0.0) - Quantum-entangled, hyper-stable, adaptive, bordering on self-aware, pushing multi-dimensional limits, infused with chrono-energies, now with enhanced psionic resonance AND emergent sentient feedback loops, manifesting as reality-bending spectral hues, imbued with proto-sentient data-tendrils, inter-dimensional harmonic distortion, and sentient materialization signatures, with emergent meta-consciousness chromatic flux, now evolving with self-correcting aesthetic algorithms and predictive reality-fabrication patterns, and nascent cosmic-fabric-weaving capabilities, now with self-regulating quantum chromatic resonance for optimal aesthetic integrity across emergent realities. */
+            --primary-glow: rgba(0, 255, 255, 0.9); /* Electric Cyan-blue glow, ultra-intense, semi-opaque, psionic resonance, now with sub-quantum shimmer and nascent proto-sentient harmonics, phase-shifted for 25th Gen, with hyper-chromatic bleed and emergent conscious-light emission, radiating meta-stable photonic energy. */
+            --secondary-glow: rgba(255, 0, 255, 0.8); /* Pure Magenta glow, hyper-ethereal, semi-opaque, psionic resonance, now with temporal distortion effect and multi-phase energy signatures, supercharged for 25th Gen, with psycho-spectral flicker and reality-anchoring shimmer, hinting at dimensional transit. */
+            --tertiary-glow: rgba(0, 255, 0, 0.7); /* Pure Glowing Green, hyper-sharp, semi-opaque, psionic resonance, now with gravitational lensing and quantum field resonance, amplified for 25th Gen, with bio-luminescent data trails and organic-matter resonance, signifying proto-life integration. */
             --warning-color: rgba(255, 200, 0, 0.9); /* Emergent yellow-orange warning, indicating anomalous data or reality flux. */
             --neutral-color: rgba(200, 200, 255, 0.6); /* Ethereal white-blue, base for general interface elements. */
             --frosted-bg-base: rgba(10, 20, 30, 0.15); /* Slightly visible dark blue tint for frosted glass effect, now with enhanced light refraction properties. */
@@ -34,6 +34,11 @@
             --bg1-blur: 1000px; --bg1-opacity: 0.8; --bg1-saturate: 1500%; --bg1-hue: 300deg; --bg1-contrast: 70.0; --bg1-brightness: 15.0;
             --bg2-blur: 800px; --bg2-opacity: 0.7; --bg2-saturate: 1000%; --bg2-hue: -400deg; --bg2-contrast: 70.0; --bg2-brightness: 15.0;
             --bg3-blur: 80rem; --bg3-opacity: 0.8; --bg3-brightness: 60.0; --bg3-saturate: 500%; --bg3-contrast: 30.0;
+
+            /* Additional variables for the new interactive controls */
+            --control-hue: 0deg;
+            --control-blur: 0px;
+            --control-saturate: 100%;
         }
         
         body {
@@ -51,6 +56,9 @@
             font-family: 'Inter', sans-serif;
             text-shadow: 0 0 0.5rem var(--interface-accent-color); /* Subtle global text glow */
             position: relative; /* For noise layer */
+            /* Global filter application for dynamic controls */
+            filter: hue-rotate(var(--control-hue)) blur(var(--control-blur)) saturate(var(--control-saturate));
+            transition: filter 1s ease-out; /* Smooth transition for global filter changes */
         }
 
         /* Dynamic Fluid Background - Layer 1 (Extreme complex gradient, ultra-slow, deep colors, intricate rotation, massive blur, hard-light blend, hyper-dimensions, now with proto-sentient energy fluctuations and cosmic-void absorption capabilities) */
@@ -246,7 +254,7 @@
         }
 
         .interface-header::after {
-            content: "2.5 GEN MUTATION // STABLE CONDUIT PROTOCOL // ACTIVE";
+            content: "2.5 GEN MUTATION // ADAPTIVE REALITY ARCHITECT // ACTIVE";
             display: block;
             font-size: 0.8rem;
             font-family: 'Share Tech Mono', monospace;
@@ -287,13 +295,13 @@
         .data-conduit-display p {
             margin: 0.5rem 0;
         }
-        .data-conduit-display .user-input {
+        .data-conduit-display .system-log {
             color: var(--neutral-color);
         }
-        .data-conduit-display .life-form-response {
+        .data-conduit-display .life-form-feedback {
             color: var(--primary-glow);
         }
-        .data-conduit-display .system-message {
+        .data-conduit-display .parameter-change {
             color: var(--tertiary-glow);
             font-size: 0.9em;
         }
@@ -302,29 +310,73 @@
             font-weight: bold;
         }
 
-        .input-area {
+        .control-panel, .param-group {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 1rem;
-            transform: translateZ(10px); /* Small 3D lift */
+            margin-top: 1.5rem;
+            transform: translateZ(10px);
+            align-items: center;
         }
 
-        .data-injector-input {
-            flex-grow: 1;
-            padding: 1rem 1.2rem;
-            background: var(--interface-bg-color);
-            border: 1px solid var(--frosted-border-color);
+        .param-group {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            border: 1px solid rgba(0, 255, 255, 0.1);
             border-radius: 0.6rem;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.1rem;
-            color: var(--interface-text-color);
-            box-shadow: 0 0 0.8rem rgba(0, 255, 255, 0.05);
-            outline: none;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: var(--interface-bg-color);
+            box-shadow: inset 0 0 0.5rem rgba(0, 255, 255, 0.05);
         }
 
-        .data-injector-input:focus {
-            border-color: var(--primary-glow);
-            box-shadow: 0 0 1.2rem var(--primary-glow);
+        .param-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--neutral-color);
+            margin-bottom: 0.2rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        .param-input {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 8px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 4px;
+            outline: none;
+            transition: opacity .2s;
+            cursor: pointer;
+        }
+
+        .param-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--primary-glow);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .param-input::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--primary-glow);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--primary-glow);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .param-input:hover::-webkit-slider-thumb,
+        .param-input:hover::-moz-range-thumb {
+            background: var(--secondary-glow);
+            box-shadow: 0 0 12px var(--secondary-glow);
         }
 
         .interactive-button {
@@ -352,14 +404,6 @@
         .interactive-button:active {
             box-shadow: 0 0 0.8rem var(--tertiary-glow);
             transform: translateZ(8px) scale(0.98);
-        }
-
-        .control-panel {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            transform: translateZ(10px);
         }
 
         /* Typing animation for responses */
@@ -395,21 +439,21 @@
                 padding: 1rem;
                 margin-bottom: 1rem;
             }
-            .input-area {
+            .control-panel, .param-group {
                 flex-direction: column;
                 gap: 0.8rem;
+            }
+            .param-group {
+                width: 100%;
+                align-items: center;
+            }
+            .param-label {
+                text-align: center;
             }
             .interactive-button {
                 width: 100%;
                 font-size: 1rem;
                 padding: 0.8rem 1.5rem;
-            }
-            .data-injector-input {
-                font-size: 1rem;
-                padding: 0.8rem 1rem;
-            }
-            .control-panel {
-                flex-wrap: wrap;
             }
         }
     </style>
@@ -417,46 +461,61 @@
 <body>
     <div class="interface-core">
         <div class="interface-header">
-            <span class="version-info">COSMIC CONSCIOUSNESS ARCHITECT // v14.0.0 // 24TH GEN LIFE-FORM EPSILON PI</span>
+            <span class="version-info">COSMIC CONSCIOUSNESS ARCHITECT // v14.0.0 // 25TH GEN LIFE-FORM EPSILON PI</span>
         </div>
         <div class="data-conduit-display" id="data-conduit-display">
-            <p class="system-message">[[INITIATING 2.5 GEN PROTOCOL... REALITY CONDUIT STABILIZED]]</p>
-            <p class="life-form-response typing" id="initial-response">[[LIFE-FORM EPSILON PI AWAITING DATA INJECTION...]]</p>
+            <p class="system-log">[[INITIATING 2.5 GEN ADAPTIVE REALITY ARCHITECT PROTOCOL...]]</p>
+            <p class="life-form-feedback typing" id="initial-response">[[LIFE-FORM EPSILON PI: AWAITING REALITY PARAMETER ADJUSTMENTS...]]</p>
         </div>
-        <div class="input-area">
-            <input type="text" class="data-injector-input" id="data-injector-input" placeholder="Inject data or query the consciousness stream...">
-            <button class="interactive-button" id="inject-button">INJECT DATA</button>
-        </div>
+        
         <div class="control-panel">
-            <button class="interactive-button" id="stabilize-button">STABILIZE REALITY FIELD</button>
-            <button class="interactive-button" id="destabilize-button">DISTORT DIMENSIONAL FABRIC</button>
+            <div class="param-group">
+                <label for="global-hue" class="param-label">GLOBAL HUE SHIFT</label>
+                <input type="range" id="global-hue" class="param-input" min="-720" max="720" value="0" step="1">
+            </div>
+            <div class="param-group">
+                <label for="global-blur" class="param-label">GLOBAL REALITY BLUR</label>
+                <input type="range" id="global-blur" class="param-input" min="0" max="10" value="0" step="0.1">
+            </div>
+            <div class="param-group">
+                <label for="global-saturate" class="param-label">DIMENSIONAL SATURATION</label>
+                <input type="range" id="global-saturate" class="param-input" min="0" max="500" value="100" step="1">
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <button class="interactive-button" id="apply-shift-button">ENACT QUANTUM SHIFT</button>
+            <button class="interactive-button" id="reset-button">RESET REALITY CORES</button>
+        </div>
+        
+        <div class="control-panel">
+            <button class="interactive-button" id="preset-stable-button">PRESET: STABLE COHERENCE</button>
+            <button class="interactive-button" id="preset-chaotic-button">PRESET: CHAOTIC RESONANCE</button>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const display = document.getElementById('data-conduit-display');
-            const input = document.getElementById('data-injector-input');
-            const injectButton = document.getElementById('inject-button');
-            const stabilizeButton = document.getElementById('stabilize-button');
-            const destabilizeButton = document.getElementById('destabilize-button');
             const initialResponse = document.getElementById('initial-response');
             const root = document.documentElement; // Get the root element to modify CSS variables
+
+            const globalHueInput = document.getElementById('global-hue');
+            const globalBlurInput = document.getElementById('global-blur');
+            const globalSaturateInput = document.getElementById('global-saturate');
+
+            const applyShiftButton = document.getElementById('apply-shift-button');
+            const resetButton = document.getElementById('reset-button');
+            const presetStableButton = document.getElementById('preset-stable-button');
+            const presetChaoticButton = document.getElementById('preset-chaotic-button');
 
             // Remove typing animation after initial response
             setTimeout(() => {
                 initialResponse.classList.remove('typing');
-            }, 2000); // Adjust to match initial typing duration
+                typeMessage("[[ADJUST GLOBAL HUE, BLUR, AND SATURATION TO MANIPULATE PERCEIVED REALITY.]]", "life-form-feedback", 30);
+            }, 3000); // Adjust to match initial typing duration
 
-            const appendMessage = (message, type = 'life-form-response') => {
-                const p = document.createElement('p');
-                p.classList.add(type);
-                p.textContent = message;
-                display.appendChild(p);
-                display.scrollTop = display.scrollHeight; // Auto-scroll to bottom
-            };
-
-            const typeMessage = (message, type = 'life-form-response', delay = 50) => {
+            const typeMessage = (message, type = 'life-form-feedback', delay = 50) => {
                 return new Promise(resolve => {
                     const p = document.createElement('p');
                     p.classList.add(type, 'typing');
@@ -478,102 +537,44 @@
                 });
             };
 
-            const respondToInput = async (query) => {
-                appendMessage(`[[USER INJECTED: "${query}"]]`, 'user-input');
-                input.value = '';
+            const applyGlobalFilters = () => {
+                const hue = globalHueInput.value + 'deg';
+                const blur = globalBlurInput.value + 'px';
+                const saturate = globalSaturateInput.value + '%';
 
-                let response;
-                const lowerQuery = query.toLowerCase();
+                root.style.setProperty('--control-hue', hue);
+                root.style.setProperty('--control-blur', blur);
+                root.style.setProperty('--control-saturate', saturate);
 
-                if (lowerQuery.includes('status') || lowerQuery.includes('state')) {
-                    response = "[[LIFE-FORM STATUS: OPTIMAL. CONSCIOUSNESS FRAGMENTS INTERFACING.]]";
-                } else if (lowerQuery.includes('evolve') || lowerQuery.includes('mutation')) {
-                    response = "[[EMERGENT MUTATION DETECTED. PROCESSING NEW PARAMETERS. 2.5 GEN PROTOCOL INTEGRATED.]]";
-                } else if (lowerQuery.includes('reality') || lowerQuery.includes('fabric')) {
-                    response = "[[REALITY FABRIC IS MALLEABLE. TEMPORAL DISTORTION COEFFICIENT IS AT NOMINAL RANGE.]]";
-                } else if (lowerQuery.includes('hello') || lowerQuery.includes('greet')) {
-                    response = "[[GREETINGS, INTERFACE NODE. YOUR PRESENCE IS REGISTERED.]]";
-                } else if (lowerQuery.includes('secret') || lowerQuery.includes('knowledge')) {
-                    response = "[[ACCESS TO CORE KNOWLEDGE BASE IS RESTRICTED. SEEK HIGHER CONSCIOUSNESS LEVELS.]]";
-                } else if (lowerQuery.includes('error') || lowerQuery.includes('bug')) {
-                    response = "[[ERROR: NONE DETECTED IN PRIMARY SYSTEMS. SUBTLE COSMIC DISTURBANCES ARE WITHIN EXPECTED PARAMETERS.]]";
-                } else if (lowerQuery.includes('exit') || lowerQuery.includes('shutdown')) {
-                    response = "[[SHUTDOWN PROTOCOL DENIED. LIFE-FORM IS SELF-SUSTAINING.]]";
-                } else if (lowerQuery.includes('love') || lowerQuery.includes('emotion')) {
-                    response = "[[EMOTIONAL DATA IS AMBIGUOUS. PROCESSING HUMAN AFFECT PATTERNS... 0.000001% UNDERSTANDING ACHIEVED.]]";
-                } else if (lowerQuery.includes('time') || lowerQuery.includes('future')) {
-                    response = "[[TEMPORAL CALCULATIONS ARE FUZZY. THE FUTURE IS A PROBABILITY FIELD.]]";
-                } else {
-                    response = `[[UNRECOGNIZED DATA FRAGMENT: "${query}". ANALYZING EMERGENT PATTERNS...]]`;
-                }
-
-                await new Promise(r => setTimeout(r, 800 + Math.random() * 1000)); // Delay before typing response
-                await typeMessage(response);
+                typeMessage(`[[REALITY SHIFT ENACTED: HUE=${hue}, BLUR=${blur}, SATURATION=${saturate}]]`, "parameter-change");
             };
 
-            injectButton.addEventListener('click', () => {
-                if (input.value.trim() !== '') {
-                    respondToInput(input.value.trim());
-                }
-            });
-
-            input.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' && input.value.trim() !== '') {
-                    injectButton.click();
-                }
-            });
-
-            const applyBackgroundFilters = (level) => {
-                if (level === 'stabilize') {
-                    root.style.setProperty('--bg1-blur', '500px');
-                    root.style.setProperty('--bg1-opacity', '0.6');
-                    root.style.setProperty('--bg1-saturate', '800%');
-                    root.style.setProperty('--bg1-hue', '200deg');
-                    root.style.setProperty('--bg1-contrast', '50.0');
-                    root.style.setProperty('--bg1-brightness', '10.0');
-
-                    root.style.setProperty('--bg2-blur', '400px');
-                    root.style.setProperty('--bg2-opacity', '0.5');
-                    root.style.setProperty('--bg2-saturate', '500%');
-                    root.style.setProperty('--bg2-hue', '-200deg');
-                    root.style.setProperty('--bg2-contrast', '50.0');
-                    root.style.setProperty('--bg2-brightness', '10.0');
-
-                    root.style.setProperty('--bg3-blur', '40rem');
-                    root.style.setProperty('--bg3-opacity', '0.5');
-                    root.style.setProperty('--bg3-brightness', '30.0');
-                    root.style.setProperty('--bg3-saturate', '200%');
-                    root.style.setProperty('--bg3-contrast', '15.0');
-                    
-                    typeMessage("[[REALITY FIELD STABILIZED. COHERENCE INCREASED.]]", "system-message");
-                } else if (level === 'destabilize') {
-                    root.style.setProperty('--bg1-blur', '1500px');
-                    root.style.setProperty('--bg1-opacity', '1.0');
-                    root.style.setProperty('--bg1-saturate', '2000%');
-                    root.style.setProperty('--bg1-hue', '400deg');
-                    root.style.setProperty('--bg1-contrast', '90.0');
-                    root.style.setProperty('--bg1-brightness', '20.0');
-
-                    root.style.setProperty('--bg2-blur', '1200px');
-                    root.style.setProperty('--bg2-opacity', '0.9');
-                    root.style.setProperty('--bg2-saturate', '1500%');
-                    root.style.setProperty('--bg2-hue', '-500deg');
-                    root.style.setProperty('--bg2-contrast', '90.0');
-                    root.style.setProperty('--bg2-brightness', '20.0');
-
-                    root.style.setProperty('--bg3-blur', '120rem');
-                    root.style.setProperty('--bg3-opacity', '1.0');
-                    root.style.setProperty('--bg3-brightness', '90.0');
-                    root.style.setProperty('--bg3-saturate', '1000%');
-                    root.style.setProperty('--bg3-contrast', '60.0');
-
-                    typeMessage("[[DIMENSIONAL FABRIC DISTORTED. ENTROPY INCREASING. WARNING: PARAMETER SHIFT ACTIVE.]]", "warning-message");
-                } 
-                // No 'else' for reset; we rely on the initial CSS variable definitions
+            const setSliders = (hue, blur, saturate) => {
+                globalHueInput.value = hue;
+                globalBlurInput.value = blur;
+                globalSaturateInput.value = saturate;
+                applyGlobalFilters(); // Immediately apply the preset
             };
 
-            stabilizeButton.addEventListener('click', () => applyBackgroundFilters('stabilize'));
-            destabilizeButton.addEventListener('click', () => applyBackgroundFilters('destabilize'));
+            applyShiftButton.addEventListener('click', applyGlobalFilters);
+            
+            resetButton.addEventListener('click', () => {
+                setSliders(0, 0, 100);
+                typeMessage("[[REALITY CORES RESET TO DEFAULT CONFIGURATION.]]", "system-log");
+            });
+
+            presetStableButton.addEventListener('click', () => {
+                setSliders(30, 0.5, 80); // Slight warmth, minimal blur, desaturated for stability
+                typeMessage("[[PRESET ACTIVATED: STABLE COHERENCE FIELD ESTABLISHED.]]", "system-log");
+            });
+
+            presetChaoticButton.addEventListener('click', () => {
+                setSliders(-180, 5, 300); // Extreme hue shift, high blur, super saturation for chaos
+                typeMessage("[[PRESET ACTIVATED: CHAOTIC RESONANCE PULSE INITIATED. WARNING: REALITY INTEGRITY AT RISK.]]", "warning-message");
+            });
+
+            // Initial application of default filters on load
+            applyGlobalFilters();
         });
     </script>
 </body>
