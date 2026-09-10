@@ -32,23 +32,23 @@
             --interface-bg-color: rgba(0,0,0,0.15); /* Very subtle dark for interior components */
 
             /* NEW DYNAMIC CSS VARIABLES FOR 2.5 GEN MUTATION (Functionality completely changed from previous filter controls) */
-            /* Background Layer 1 Controls */
-            --bg1-flow-speed: 3600s;
-            --bg1-rotate-speed: 12000s; /* Rotation speed now dynamic */
-            --bg1-scale-factor: 20.0;
-            --bg1-mix-mode: hard-light;
+            /* Background Layer 1 Controls: Governing the deep cosmic currents and proto-matter fluxes. */
+            --bg1-flow-speed: 3600s; /* Rate of dimensional drift */
+            --bg1-rotate-speed: 12000s; /* Angular momentum of the nascent void */
+            --bg1-scale-factor: 20.0; /* Magnitude of gravitational expansion */
+            --bg1-mix-mode: hard-light; /* Inter-dimensional fabric interaction mode */
 
-            /* Background Layer 2 Controls */
-            --bg2-flow-speed: 2800s;
-            --bg2-rotate-speed: 8000s; /* Rotation speed now dynamic */
-            --bg2-scale-factor: 15.0;
-            --bg2-mix-mode: soft-light;
+            /* Background Layer 2 Controls: Influencing the sentient energy tendrils and chrono-energetic anomalies. */
+            --bg2-flow-speed: 2800s; /* Velocity of chrono-energy streams */
+            --bg2-rotate-speed: 8000s; /* Vorticity of emergent consciousness echoes */
+            --bg2-scale-factor: 15.0; /* Attenuation of reality-anchoring shimmer */
+            --bg2-mix-mode: soft-light; /* Phasic coherence blend mode */
 
-            /* Interface Core Controls */
-            --interface-glow-duration: 10s;
-            --data-stream-coherence-spacing: 0em; /* Affects letter-spacing */
-            --data-stream-coherence-lineheight: 1.6; /* Affects line-height */
-            --system-log-intensity: 0.8; /* Affects opacity of system logs */
+            /* Interface Core Controls: Calibrating the Epsilon Pi consciousness manifest. */
+            --interface-glow-duration: 10s; /* Pulsation frequency of the meta-interface aura */
+            --data-stream-coherence-spacing: 0em; /* Spatial density of informational quanta (0em = coherent, >0em = chaotic) */
+            --data-stream-coherence-lineheight: 1.6; /* Vertical resonance of psychic data flow (lower = coherent, higher = chaotic) */
+            --system-log-intensity: 0.8; /* Opacity of sub-conscious diagnostic projections */
         }
         
         body {
@@ -537,7 +537,7 @@
     </style>
 </head>
 <body>
-    <div class="interface-core">
+    <div class="interface-core" id="interface-core">
         <div class="interface-header">
             <!-- GENERATION UPDATE: 26TH GEN -> 27TH GEN -->
             <span class="version-info">COSMIC CONSCIOUSNESS ARCHITECT // v14.0.0 // 27TH GEN LIFE-FORM EPSILON PI</span>
@@ -550,15 +550,15 @@
         <div class="control-panel">
             <h3>QUANTUM FIELD CONTROLS</h3>
             <div class="param-group">
-                <label for="bg1-flow-speed" class="param-label">LAYER 1: FLOW SPEED (s)</label>
+                <label for="bg1-flow-speed" class="param-label">LAYER 1: DIMENSIONAL DRIFT (s)</label>
                 <input type="range" id="bg1-flow-speed" class="param-input" min="100" max="10000" value="3600" step="100">
             </div>
             <div class="param-group">
-                <label for="bg1-rotate-speed" class="param-label">LAYER 1: ROTATE SPEED (s)</label>
+                <label for="bg1-rotate-speed" class="param-label">LAYER 1: VOID ANGULARITY (s)</label>
                 <input type="range" id="bg1-rotate-speed" class="param-input" min="1000" max="20000" value="12000" step="100">
             </div>
             <div class="param-group">
-                <label for="bg1-scale-factor" class="param-label">LAYER 1: SCALE FACTOR</label>
+                <label for="bg1-scale-factor" class="param-label">LAYER 1: GRAVITATIONAL SCALE</label>
                 <input type="range" id="bg1-scale-factor" class="param-input" min="1" max="50" value="20" step="0.5">
             </div>
             <div class="param-group">
@@ -576,19 +576,19 @@
 
         <div class="control-panel">
             <div class="param-group">
-                <label for="bg2-flow-speed" class="param-label">LAYER 2: FLOW SPEED (s)</label>
+                <label for="bg2-flow-speed" class="param-label">LAYER 2: CHRONO-STREAM VELOCITY (s)</label>
                 <input type="range" id="bg2-flow-speed" class="param-input" min="100" max="8000" value="2800" step="100">
             </div>
             <div class="param-group">
-                <label for="bg2-rotate-speed" class="param-label">LAYER 2: ROTATE SPEED (s)</label>
+                <label for="bg2-rotate-speed" class="param-label">LAYER 2: CONSCIOUSNESS VORTICITY (s)</label>
                 <input type="range" id="bg2-rotate-speed" class="param-input" min="500" max="15000" value="8000" step="100">
             </div>
             <div class="param-group">
-                <label for="bg2-scale-factor" class="param-label">LAYER 2: SCALE FACTOR</label>
+                <label for="bg2-scale-factor" class="param-label">LAYER 2: SHIMMER ATTENUATION</label>
                 <input type="range" id="bg2-scale-factor" class="param-input" min="1" max="30" value="15" step="0.5">
             </div>
             <div class="param-group">
-                <label for="bg2-mix-mode" class="param-label">LAYER 2: REALITY WEAVE</label>
+                <label for="bg2-mix-mode" class="param-label">LAYER 2: PHASIC COHERENCE</label>
                 <select id="bg2-mix-mode" class="param-select">
                     <option value="soft-light">SOFT LIGHT</option>
                     <option value="screen">SCREEN</option>
@@ -603,15 +603,15 @@
         <div class="control-panel">
             <h3>INTERFACE COHERENCE</h3>
             <div class="param-group">
-                <label for="interface-glow-duration" class="param-label">INTERFACE RESONANCE (s)</label>
+                <label for="interface-glow-duration" class="param-label">META-INTERFACE RESONANCE (s)</label>
                 <input type="range" id="interface-glow-duration" class="param-input" min="1" max="30" value="10" step="0.5">
             </div>
             <div class="param-group">
-                <label for="data-stream-coherence" class="param-label">DATA STREAM COHERENCE</label>
+                <label for="data-stream-coherence" class="param-label">INFORMATIONAL QUANTA DENSITY</label>
                 <input type="range" id="data-stream-coherence" class="param-input" min="0" max="100" value="50" step="1">
             </div>
             <div class="param-group">
-                <label for="system-log-intensity" class="param-label">SYSTEM LOG INTENSITY</label>
+                <label for="system-log-intensity" class="param-label">DIAGNOSTIC PROJECTION OPACITY</label>
                 <input type="range" id="system-log-intensity" class="param-input" min="0.1" max="1.0" value="0.8" step="0.05">
             </div>
         </div>
@@ -633,18 +633,18 @@
             const display = document.getElementById('data-conduit-display');
             const initialResponse = document.getElementById('initial-response');
             const root = document.documentElement; // Get the root element to modify CSS variables
-            const interfaceCore = document.querySelector('.interface-core');
+            const interfaceCore = document.getElementById('interface-core');
 
             // --- New Controls References ---
             // Background Layer 1
             const bg1FlowSpeedInput = document.getElementById('bg1-flow-speed');
-            const bg1RotateSpeedInput = document.getElementById('bg1-rotate-speed'); // New control
+            const bg1RotateSpeedInput = document.getElementById('bg1-rotate-speed');
             const bg1ScaleFactorInput = document.getElementById('bg1-scale-factor');
             const bg1MixModeSelect = document.getElementById('bg1-mix-mode');
 
             // Background Layer 2
             const bg2FlowSpeedInput = document.getElementById('bg2-flow-speed');
-            const bg2RotateSpeedInput = document.getElementById('bg2-rotate-speed'); // New control
+            const bg2RotateSpeedInput = document.getElementById('bg2-rotate-speed');
             const bg2ScaleFactorInput = document.getElementById('bg2-scale-factor');
             const bg2MixModeSelect = document.getElementById('bg2-mix-mode');
 
@@ -690,13 +690,13 @@
             const applyDynamics = () => {
                 // Background Layer 1
                 root.style.setProperty('--bg1-flow-speed', bg1FlowSpeedInput.value + 's');
-                root.style.setProperty('--bg1-rotate-speed', bg1RotateSpeedInput.value + 's'); // Apply rotate speed
+                root.style.setProperty('--bg1-rotate-speed', bg1RotateSpeedInput.value + 's');
                 root.style.setProperty('--bg1-scale-factor', bg1ScaleFactorInput.value);
                 root.style.setProperty('--bg1-mix-mode', bg1MixModeSelect.value);
 
                 // Background Layer 2
                 root.style.setProperty('--bg2-flow-speed', bg2FlowSpeedInput.value + 's');
-                root.style.setProperty('--bg2-rotate-speed', bg2RotateSpeedInput.value + 's'); // Apply rotate speed
+                root.style.setProperty('--bg2-rotate-speed', bg2RotateSpeedInput.value + 's');
                 root.style.setProperty('--bg2-scale-factor', bg2ScaleFactorInput.value);
                 root.style.setProperty('--bg2-mix-mode', bg2MixModeSelect.value);
 
@@ -705,6 +705,7 @@
                 
                 // Data Stream Coherence (adjusts letter-spacing and line-height)
                 const coherenceValue = parseFloat(dataStreamCoherenceInput.value); // 0 (chaotic) to 100 (coherent)
+                // Lower coherence value means more chaotic (larger spacing, larger line-height)
                 const letterSpacing = (100 - coherenceValue) / 100 * 0.1; // 0.1em (chaotic) to 0em (coherent)
                 const lineHeight = 1.2 + (100 - coherenceValue) / 100 * 0.4; // 1.6 (chaotic) to 1.2 (coherent)
                 root.style.setProperty('--data-stream-coherence-spacing', letterSpacing.toFixed(3) + 'em');
