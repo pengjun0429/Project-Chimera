@@ -1349,7 +1349,7 @@
                 temporalResonanceFlux: { name: '--temporal-resonance-flux' },
                 synthesisCoherence: { name: '--synthesis-coherence', elem: document.getElementById('synthesisCoherenceValue') }, // Renamed from weaveQualityIndex
                 entropicCharge: { name: '--entropic-charge', elem: document.getElementById('entropicChargeValue') },
-                entropicBacklash: { name: '--entropic-backlash', elem: document.getElementById('entropicBacklashValue') },
+                entropicBacklash: { name.startsWith ? '--entropic-backlash' : '--entropic-backlash', elem: document.getElementById('entropicBacklashValue') }, // Ensure it's correctly referencing the elem
                 constructManifesting: { name: '--construct-manifesting' },
                 constructId: { name: '--construct-id' }
             };
